@@ -112,6 +112,7 @@ ${ESQUEMA}`, true);
   return { k, ev };
 }
 
+async function enParalelo(items, f, n = 3) { const res = []; for (let i = 0; i < items.length; i += n) { if (!cupo()) break; res.push(...await Promise.all(items.slice(i, i + n).map(x => f(x).catch(e => ({ error: e }))))); guardar() } return res }
 // ------------------------------------------------------------ WhatsApp (solo de 10 a 13 y de 17 a 22, hora de Argentina)
 function encolarWhatsApp(k, p, ev) {
   const link = p.fuente_principal?.url || (p.precios_mercados || []).find(m => m.url)?.url || (p.fuentes || [])[0]?.url || '';
@@ -165,11 +166,8 @@ async function procesarPedido(texto) {
     ronda++;
     const cands = (await proponer(Math.min(N - buenos + 4, 12), texto)).slice(0, N - buenos + 4);
     if (!cands.length) break;
-    for (const c of cands) {
-      if (!cupo() || buenos >= N) break;
-      try { const { ev } = await analizar(c.producto, 'pedido'); if (ev.veredicto === 'VENDER') buenos++ } catch (e) { registrar('error', c.producto + ': ' + e.message) }
-      guardar(); await esperar(3000);
-    }
+    const rs = await enParalelo(cands, async c => { try { return await analizar(c.producto, 'pedido') } catch (e) { registrar('error', c.producto + ': ' + e.message); return {} } });
+    buenos += rs.filter(r => r?.ev?.veredicto === 'VENDER').length;
   }
   registrar('pedido', `Pedido "${texto}": ${buenos} productos para vender`);
   return buenos;
@@ -266,6 +264,7 @@ function publicar() {
     productos: vend.map(p => { const { ev, ...resto } = p; return { ...resto, ev: { veredicto: ev.veredicto, puntaje: ev.puntaje, canales: ev.canales, ventas: ev.ventas, costo: ev.costo, precio: ev.precio, r: ev.r, w: ev.w, ms: ev.ms } } }),
     reglas: conoc('regla').slice(0, 30), lecciones: conoc('leccion').slice(0, 80), mejoras: conoc('mejora').slice(0, 30),
     capital: E.conocimiento.capital || null, informe: E.conocimiento.informe || null, actividad: E.actividad.slice(0, 40),
+    tarifas: { ml: CFG.ml, importacion: CFG.importacion, web: CFG.web, perfil: CFG.perfil, margen_minimo_pct: CFG.margen_minimo_pct, ml_ganancia_min_pct_costo: CFG.ml_ganancia_min_pct_costo, dolar_oficial: CFG.dolar_oficial },
     repo: env.GITHUB_REPOSITORY || '', notas: (E.notas || []).slice(-60),
     ia_claves: { g: env.GEMINI_KEY || '', q: env.GROQ_KEY || '' }
   };
@@ -296,7 +295,7 @@ async function vuelta() {
   } else {
     E.vuelta = (E.vuelta || 0) + 1;
     const tareas = [
-      ['explorar', 0, async () => { const c = await proponer(EST.productosPorVuelta + 1); let n = 0, ok = 0; for (const x of c.slice(0, EST.productosPorVuelta)) { if (!cupo()) break; try { const { ev } = await analizar(x.producto, 'exploracion'); n++; if (ev.veredicto === 'VENDER') ok++ } catch (e) { registrar('error', x.producto + ': ' + e.message) } guardar(); await esperar(3000) } if (n) registrar('exploracion', `Analicé ${n} productos nuevos; ${ok} cumplen tus reglas`) }],
+      ['explorar', 0, async () => { const c = await proponer(EST.productosPorVuelta + 2); const rs = await enParalelo(c.slice(0, EST.productosPorVuelta), async x => { try { return await analizar(x.producto, 'exploracion') } catch (e) { registrar('error', x.producto + ': ' + e.message); return {} } }); const n = rs.filter(r => r?.ev).length, ok = rs.filter(r => r?.ev?.veredicto === 'VENDER').length; if (n) registrar('exploracion', `Analicé ${n} productos nuevos; ${ok} cumplen tus reglas`) }],
       ['aprender', 4, aprender], ['videos', 12, videos], ['capital', 20, capital], ['informe', 20, informe], ['automejora', 24, autoMejora]
     ];
     for (const [k, h, f] of tareas) {
