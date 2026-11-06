@@ -30,12 +30,13 @@ table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:7px 6px;b
 ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px solid var(--borde);padding:8px 0}summary{cursor:pointer;font-weight:600}
 .login{max-width:420px;margin:12vh auto;text-align:center}.aviso{padding:12px 14px;border-radius:12px;background:#ffb54718;border:1px solid #ffb54755;margin:10px 0}
 .pedir{display:flex;gap:8px;flex-wrap:wrap}.pedir input{flex:1;min-width:220px}
-.act-l{font-size:13px;line-height:1.8;color:var(--suave)}
+.act-l{font-size:13px;line-height:1.8;color:var(--suave)}.campos label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--suave)}.campos select{padding:12px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde);font:inherit}.ok-t{color:var(--ok)}.mal-t{color:var(--mal)}
 .chat{display:flex;flex-direction:column;height:calc(100vh - 120px);min-height:480px;padding:12px}.msgs{flex:1;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:6px}
 .msg{max-width:88%;padding:12px 16px;border-radius:16px;line-height:1.55}.msg.yo{align-self:flex-end;background:var(--grad);color:#fff;white-space:pre-wrap}.msg.ia{align-self:flex-start;background:var(--panel2);border:1px solid var(--borde)}.msg h2,.msg h3{font-size:15px;margin:8px 0 4px}
 .fuentes{margin-top:8px;font-size:12px;color:var(--suave)}.chipIA{margin-top:10px;padding:8px 10px;border-radius:10px;background:#7c5cff18;font-size:13px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .barraChat{display:flex;gap:8px;margin-top:10px}.barraChat textarea{flex:1;resize:none}.botonesChat{display:flex;flex-direction:column;gap:6px}.opcVoz{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.btn.act{background:var(--grad)!important;color:#fff}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(150%);background:var(--panel2);border:1px solid var(--ok);color:var(--texto);padding:14px 18px;border-radius:14px;box-shadow:0 10px 30px #0008;z-index:80;transition:.3s;max-width:92vw}.toast.ver{transform:translateX(-50%) translateY(0)}.act-l b{color:var(--texto)}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
 <body>
 <div id="cargando" class="login oculto" style="text-align:center"><div class="logo" style="justify-content:center"><i>◎</i>RADAR</div><p class="muted">Abriendo tus resultados…</p></div>
@@ -50,25 +51,45 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
 
 <div id="app" class="oculto">
 <header><div class="cab"><div class="logo"><i>◎</i>RADAR <span class="muted" style="font-weight:400;font-size:13px">en la nube</span></div>
-  <nav><button data-v="productos" class="act">📦 Productos</button><button data-v="asistente">💬 Asistente</button><button data-v="pedir">🔎 Pedir</button><button data-v="capital">💰 Capital</button><button data-v="aprendizaje">🧠 Aprendizaje</button><button data-v="actividad">⏱ Actividad</button></nav></div></header>
+  <nav><button data-v="productos" class="act">📦 Productos</button><button data-v="asistente">💬 Asistente</button><button data-v="pedir">🔎 Pedir</button><button data-v="calculadora">🧮 Calculadora</button><button data-v="ventas">📣 Ventas</button><button data-v="capital">💰 Capital</button><button data-v="aprendizaje">🧠 Aprendizaje</button><button data-v="actividad">⏱ Actividad</button></nav></div></header>
 <main>
   <section id="v-productos">
     <div class="grid g4" id="kpis"></div>
     <p class="muted" id="estado" style="margin:12px 0"></p>
     <div class="card" id="informe" style="margin-bottom:16px"></div>
+    <div class="grid g2" style="margin-bottom:16px"><div class="card"><h2>📊 Ganancia por unidad de tus productos</h2><canvas id="chGan" height="190"></canvas></div><div class="card"><h2>🏆 Mejores para empezar</h2><div id="top3"></div></div></div>
     <div class="grid gp" id="lista"></div>
   </section>
   <section id="v-asistente" class="oculto">
+    <div class="card" id="pendientes" style="margin-bottom:12px"></div>
     <div class="chat card"><div id="msgs" class="msgs"></div>
       <div class="barraChat"><textarea id="chatIn" rows="2" placeholder="Preguntale a RADAR… (por ejemplo: ¿qué producto me conviene más para Navidad y cómo lo publicito?)"></textarea>
         <div class="botonesChat"><button class="btn sec" id="btnMicro" title="Hablar">🎙</button><button class="btn" id="btnChat">Enviar ➤</button></div></div>
-      <div class="opcVoz"><button class="btn chico sec" id="btnHablar">🔊 Responder con voz</button><button class="btn chico sec" id="btnManos">🙌 Manos libres («Radar»)</button><button class="btn chico sec" id="btnBorrar">🗑 Nueva conversación</button><span class="muted" id="vozInfo"></span></div></div>
+      <div class="opcVoz"><button class="btn chico sec" id="btnHablar">🔊 Responder con voz</button><button class="btn chico sec" id="btnManos">🙌 Manos libres («Radar»)</button><button class="btn chico sec" id="btnBorrar">🗑 Nueva conversación</button><button class="btn chico sec" id="btnAuto">🧠 Aprendizaje automático en la nube</button><span class="muted" id="vozInfo"></span></div></div>
   </section>
   <section id="v-pedir" class="oculto">
     <h1>Pedir productos</h1>
     <p class="sub">Escribí lo que querés. Al tocar «Enviar pedido» se abre GitHub con el pedido ya escrito: solo tocá el botón verde <b>«Create»</b> (o «Submit new issue»). RADAR empieza en 1 minuto y te deja los resultados acá. Lo que escribís en el pedido es visible en GitHub; los resultados no (están encriptados).</p>
     <div class="card"><div class="pedir"><input id="qPedido" placeholder="Ej.: dame 5 productos de cocina para Navidad"><button class="btn" id="btnPedir">Enviar pedido ➤</button></div>
       <p class="muted">Ejemplos: «dame 10 productos para mascotas» · «dame 5 productos de más de $50.000» · «analizá organizador de maquillaje giratorio».</p></div>
+  </section>
+  <section id="v-calculadora" class="oculto"><h1>Calculadora de costos y ganancias</h1><p class="sub">Calculá cualquier producto: importación (courier, aéreo, marítimo) o proveedor local, con todos los gastos de Mercado Libre y de tu web.</p>
+    <div class="grid g2"><div class="card"><div class="grid g2 campos">
+      <label>Precio del proveedor (USD por unidad)<input id="c_costo" type="number" step="0.01" value="3"></label>
+      <label>O costo local en pesos (si es nacional)<input id="c_local" type="number" placeholder="vacío si importás"></label>
+      <label>Precio de venta en Mercado Libre ($)<input id="c_precio" type="number" value="39999"></label>
+      <label>Precio de venta en tu web ($)<input id="c_web" type="number" value="44999"></label>
+      <label>Cantidad del lote<input id="c_cant" type="number" value="100"></label>
+      <label>Peso por unidad con caja (kg)<input id="c_peso" type="number" step="0.01" value="0.4"></label>
+      <label>Derecho de importación (%)<input id="c_di" type="number" value="20"></label>
+      <label>Publicación en Mercado Libre<select id="c_tipo"><option value="clasica">Clásica</option><option value="premium">Premium</option></select></label>
+    </div></div><div class="card" id="calcRes"></div></div>
+    <div class="grid g2" style="margin-top:14px"><div class="card"><h2>¿A dónde va cada peso? (Mercado Libre)</h2><canvas id="chCalc" height="220"></canvas></div><div class="card"><h2>🚚 Cómo traerlo: costo por unidad</h2><div id="calcMet"></div></div></div>
+  </section>
+  <section id="v-ventas" class="oculto"><h1>Ventas y publicidad</h1><p class="sub">Elegí un producto y RADAR arma un plan completo para venderlo y publicitarlo: dónde, cómo, cuánto invertir y qué decir.</p>
+    <div class="card"><div class="pedir"><select id="vProd" style="flex:1;min-width:220px;padding:12px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"></select><input id="vExtra" placeholder="Opcional: presupuesto, ciudad, canal preferido…" style="flex:1"><button class="btn" id="btnPlan">✨ Armar plan</button></div>
+      <div id="planOut" style="margin-top:14px"></div></div>
+    <h2 style="margin-top:20px">Dónde y cómo hacer publicidad</h2><div class="grid g2" id="canales"></div>
   </section>
   <section id="v-capital" class="oculto"><h1>Hacer rendir tu capital</h1><div id="capital"></div>
     <p class="muted">Información general para comparar opciones. No es asesoramiento financiero: confirmá tasas y riesgos con tu banco, broker o un asesor antes de invertir.</p></section>
@@ -110,7 +131,7 @@ $('#clave').onkeydown=e=>{if(e.key==='Enter')$('#entrar').click()};
   if(!ok){$('#login').classList.remove('oculto');$('#clave').value=c;$('#loginMsg').textContent='No pude abrir los resultados. Revisá la contraseña o tu conexión y tocá Entrar.'}})();
 setInterval(()=>{try{const c=localStorage.getItem('radar_clave');if(c&&D)cargar(c,true)}catch(e){}},3*60000);
 
-$$('nav button').forEach(b=>b.onclick=()=>{$$('nav button').forEach(x=>x.classList.toggle('act',x===b));$$('main>section').forEach(s=>s.classList.toggle('oculto',s.id!=='v-'+b.dataset.v))});
+$$('nav button').forEach(b=>b.onclick=()=>{if(b.dataset.v==='asistente')setTimeout(saludar,200);$$('nav button').forEach(x=>x.classList.toggle('act',x===b));$$('main>section').forEach(s=>s.classList.toggle('oculto',s.id!=='v-'+b.dataset.v))});
 $('#btnPedir').onclick=()=>{const t=$('#qPedido').value.trim();if(!t)return alert('Escribí qué querés buscar.');const o=origen()||(D?.repo?{owner:D.repo.split('/')[0],repo:D.repo.split('/')[1]}:null);
   if(!o)return alert('Esta página tiene que estar publicada en GitHub para enviar pedidos.');
   window.open(`https://github.com/${o.owner}/${o.repo}/issues/new?title=${encodeURIComponent('Pedido: '+t)}&body=${encodeURIComponent('Pedido enviado desde la página de RADAR.')}`,'_blank')};
@@ -141,7 +162,7 @@ function render(){
   const it=c=>`<details><summary>${esc(c.titulo)} <span class="muted">· ${esc((c.fecha||'').slice(0,10))}</span></summary><div>${md(c.contenido)}</div>${c.fuente?`<p class="muted">${segura(c.url)?`<a href="${esc(c.url)}" target="_blank">${esc(c.fuente)}</a>`:esc(c.fuente)}</p>`:''}</details>`;
   $('#mejoras').innerHTML=(D.mejoras||[]).map(it).join('')||'<p class="muted">Una vez por día RADAR revisa sus resultados y se reprograma. Lo que cambia aparece acá.</p>';
   $('#reglas').innerHTML=(D.reglas||[]).map(it).join('')||'<p class="muted">—</p>';$('#lecciones').innerHTML=(D.lecciones||[]).map(it).join('')||'<p class="muted">—</p>';
-  pintarChat();anunciarNuevos();
+  pintarChat();anunciarNuevos();extrasRender();
   $('#actividad').innerHTML=(D.actividad||[]).map(a=>`<div>${esc(new Date(a.fecha).toLocaleString('es-AR',{hourCycle:'h23',day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}))} · <b>${esc(a.tipo)}</b> ${esc(a.detalle)}</div>`).join('');
 }
 function ficha(p){const ev=p.ev,r=ev.r,w=ev.w,c=r.cv,cw=w.cv,d=p.demanda||{},img=imgURL(p),link=linkDe(p),fila=(t,v)=>v?`<tr><td>${t}</td><td class="r">− ${ars(v)}</td></tr>`:'';
@@ -154,6 +175,7 @@ function ficha(p){const ev=p.ev,r=ev.r,w=ev.w,c=r.cv,cw=w.cv,d=p.demanda||{},img
      <table><tr><td><b>Precio de venta</b></td><td class="r"><b>${ars(r.precio)}</b></td></tr>${fila('Comisión ML ('+c.comision_pct+'%)',c.comision)}${fila('Costo fijo',c.fijo)}${fila('IVA sobre cargos',c.iva)}${fila('Envío a tu cargo',c.envio)}${fila('Publicidad',c.pub)}${fila('Impuestos de la venta',c.impv)}${fila('Devoluciones (previsión)',c.dev)}${fila('Embalaje',c.pack)}${fila('Producto puesto en mano ('+esc(r.cp.metodo)+')',r.cp.unit)}<tr><td><b>Ganancia limpia por unidad</b></td><td class="r"><b>${ars(r.ganancia)}</b></td></tr></table><p class="muted">Precio mínimo para que convenga: <b>${ars(r.minimo)}</b></p></div>
     <div class="card ${w.cumple?'ok':''}"><h2>🌐 Tu página web ${w.cumple?'✅ conviene':'❌ no conviene'}</h2><p class="muted">Regla: ganancia limpia ≥ ${D.criterios.web}% del precio · resultado ${pct(w.margen_precio)}</p>
      <table><tr><td><b>Precio de venta</b></td><td class="r"><b>${ars(w.precio)}</b></td></tr>${fila('Plataforma de la tienda',cw.plat)}${fila('Cobro con tarjeta / Mercado Pago',cw.pas)}${fila('IVA sobre cargos',cw.iva)}${fila('Publicidad (Meta / Google)',cw.pub)}${fila('Impuestos de la venta',cw.impv)}${fila('Devoluciones (previsión)',cw.dev)}${fila('Embalaje',cw.pack)}${fila('Envío a tu cargo',cw.envio)}${fila('Producto puesto en mano',w.cp.unit)}<tr><td><b>Ganancia limpia por unidad</b></td><td class="r"><b>${ars(w.ganancia)}</b></td></tr></table><p class="muted">Precio mínimo en tu web: <b>${ars(w.minimo)}</b></p></div></div>
+   <div class="card" style="margin-top:14px"><h2>🍩 ¿A dónde va cada peso en Mercado Libre?</h2><canvas id="fDona" height="120"></canvas></div>
    ${(p.maxima_ganancia||[]).length?`<div class="card ok" style="margin-top:14px"><h2>🏆 Cómo ganar lo máximo</h2>${lista(p.maxima_ganancia)}</div>`:''}
    ${(p.alternativas_mejoradas||[]).length?`<div class="card" style="margin-top:14px"><h2>🔧 Versiones mejores o más baratas para tu web</h2><table><tr><th>Alternativa</th><th>Qué mejora</th><th class="r">Costo</th><th class="r">Precio web</th><th></th></tr>${p.alternativas_mejoradas.map(a=>`<tr><td><b>${esc(a.nombre)}</b><div class="muted">${esc(a.proveedor||'')}</div></td><td>${esc(a.mejora||'')}</td><td class="r">USD ${esc(a.costo_usd??'—')}</td><td class="r">${ars(+a.precio_web_sugerido_ars)}</td><td>${segura(a.url)?`<a href="${esc(a.url)}" target="_blank">ver ↗</a>`:''}</td></tr>`).join('')}</table></div>`:''}
    <div class="grid g2" style="margin-top:14px">
@@ -164,18 +186,23 @@ function ficha(p){const ev=p.ev,r=ev.r,w=ev.w,c=r.cv,cw=w.cv,d=p.demanda||{},img
     <div class="card"><h2>🚚 Cómo traerlo más barato y seguro</h2><table>${(ev.ms||[]).map(m=>`<tr><td>${m.rec?'⭐ ':''}${esc(m.metodo)}</td><td class="r">${ars(m.unit)}/u</td><td>${esc(m.dias)} días</td></tr>`).join('')}</table></div></div>
    <div class="grid g2" style="margin-top:14px"><div class="card ok"><h2>✅ Por qué sí</h2>${lista(p.por_que_si)}</div><div class="card"><h2>⚠️ A tener en cuenta</h2>${lista(p.por_que_no)}</div></div>
    <div class="grid g2" style="margin-top:14px"><div class="card"><h2>🛒 Cómo venderlo</h2>${lista(Object.values(p.plan_venta||{}))}</div><div class="card"><h2>📣 Publicidad</h2>${lista(Object.entries(p.plan_publicidad||{}).map(([k,v])=>k.replace(/_/g,' ')+': '+v))}</div></div>`;
-  $('#modal').classList.remove('oculto');$('#modal>div').scrollTop=0}
+  $('#modal').classList.remove('oculto');$('#modal>div').scrollTop=0;
+  setTimeout(()=>{const el=document.getElementById('fDona');if(!el||!window.Chart)return;const lab=['Comisión','Costo fijo','IVA','Envío','Publicidad','Impuestos','Devoluciones','Embalaje','Producto','Ganancia'],val=[c.comision,c.fijo,c.iva,c.envio,c.pub,c.impv,c.dev,c.pack,r.cp.unit,Math.max(0,r.ganancia)].map(Math.round);
+   graf('fDona',{type:'doughnut',data:{labels:lab,datasets:[{data:val,backgroundColor:['#7c5cff','#9d7bff','#c084fc','#38bdf8','#00d4ff','#ffb547','#ff8a5c','#8d98b8','#ff5d73','#22d39b']}]},options:{plugins:{legend:{position:'right',labels:{color:'#e8ecf8'}}}}})},50)}
 
 // ============================================================ ASISTENTE IA (chat que conoce todo RADAR, busca en internet y aprende)
 let CHAT=[];try{CHAT=JSON.parse(localStorage.getItem('radar_chat')||'[]')}catch(e){CHAT=[]}
 let MEM=[];try{MEM=JSON.parse(localStorage.getItem('radar_mem')||'[]')}catch(e){MEM=[]}
-const guardarChat=()=>{try{localStorage.setItem('radar_chat',JSON.stringify(CHAT.filter(m=>!m.err).slice(-60)));localStorage.setItem('radar_mem',JSON.stringify(MEM.slice(-60)))}catch(e){}};
+let TAREAS=[];try{TAREAS=JSON.parse(localStorage.getItem('radar_tareas')||'[]')}catch(e){TAREAS=[]}
+const guardarChat=()=>{try{localStorage.setItem('radar_chat',JSON.stringify(CHAT.filter(m=>!m.err).slice(-60)));localStorage.setItem('radar_mem',JSON.stringify(MEM.slice(-60)));localStorage.setItem('radar_tareas',JSON.stringify(TAREAS.slice(-80)))}catch(e){}};
 const BLOQ={};
 function contextoIA(){
   const ps=(D.productos||[]).slice(0,25).map(p=>({nombre:p.nombre,conviene_en:p.ev.canales,precio_ml:Math.round(p.ev.r?.precio||0),ganancia_ml:Math.round(p.ev.r?.ganancia||0),precio_web:Math.round(p.ev.w?.precio||0),ganancia_web:Math.round(p.ev.w?.ganancia||0),costo_proveedor_usd:p.ev.costo,ventas:p.demanda?.prueba_de_ventas,temporada:p.demanda?.estacionalidad,como_ganar_mas:p.maxima_ganancia,link:linkDe(p)}));
   const cap=D.capital?.datos;
   const lec=(D.lecciones||[]).slice(0,25).map(c=>c.titulo+': '+String(c.contenido||'').slice(0,220));
-  return `Sos RADAR, el asesor comercial personal del usuario: experto en vender por internet en Argentina (Mercado Libre, tienda web propia, importación, proveedores, publicidad, estrategias de venta, gestión de capital e inversiones). Hoy es ${new Date().toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}.
+  return `Sos RADAR, el ASISTENTE DE VENTAS personal del usuario (vende en Mercado Libre, en su web y tiene las tiendas L&C PRIVÉ, perfumes, y CoCo´s, electrónica). Sos experto en vender por internet en Argentina: productos, proveedores, importación, precios, Mercado Libre, tienda web, publicidad, estrategias ingeniosas de venta, gestión de capital e inversiones.
+ADEMÁS SOS SU SECRETARIO PERSONAL: organizás sus pendientes, le recordás lo que dejó para hacer y lo ayudás a priorizar el día. PENDIENTES ACTUALES: ${JSON.stringify(TAREAS.filter(t=>!t.hecha).map(t=>t.texto))}. Si el usuario pide que le recuerdes algo, dice que tiene que hacer algo o acuerdan una acción a futuro, agregá al final una línea: [[TAREA: la tarea en una frase]].
+COMPORTAMIENTO: mantené una conversación real, como un asesor que trabaja con él todos los días. Recordá lo que se habló antes en esta charla. Sé proactivo: proponé ideas, detectá oportunidades en sus productos aprobados y sugerí el siguiente paso concreto. Terminá casi siempre con UNA pregunta breve que haga avanzar la venta (por ejemplo sobre su presupuesto, su stock, qué canal prefiere, si quiere que armes un anuncio o que busques productos). No hagas más de una pregunta por respuesta. Hoy es ${new Date().toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}.
 FORMA DE RESPONDER: español claro, formal y sencillo, tratando de "vos" con respeto, sin lunfardo ni chistes. Respuestas concretas y accionables, con números, pasos y links cuando sirvan. Pensá con cuidado antes de responder, verificá los datos actuales buscando en internet y no inventes: si estimás, decilo. Si la pregunta es ambigua, respondé lo más útil y hacé una sola pregunta corta al final.
 REGLAS DEL USUARIO: en Mercado Libre, después de comisión, envío, impuestos e importación, un producto sirve si el precio es ${D.criterios.ml_a}% sobre el proveedor con ganancia, o si deja ganancia limpia de al menos ${D.criterios.ml_b}% del costo. En su web propia, la ganancia limpia debe ser al menos ${D.criterios.web}% del precio de venta. Lo más importante son las ventas comprobadas. El capital y la condición fiscal no importan.
 SOBRE INVERSIONES: podés comparar opciones con datos actuales, aclarando riesgos y que no es asesoramiento financiero profesional.
@@ -188,48 +215,75 @@ INFORME DEL DÍA: ${String(D.informe?.contenido||'').slice(0,1500)}
 LO QUE YA SABÉS DEL USUARIO (preferencias e indicaciones que te dio): ${JSON.stringify([...(D.notas||[]).map(n=>n.texto),...MEM.map(m=>m.texto)].slice(-50))}
 APRENDIZAJE: si en este mensaje el usuario expresa una preferencia, una corrección, un dato de su negocio o una indicación que valga para el futuro, agregá al final de tu respuesta una línea aparte con este formato exacto: [[NOTA: la indicación en una frase]]. Solo una, y solo si es algo duradero.
 PEDIDOS: si el usuario pide que busques o analices productos para guardarlos, respondé brevemente y agregá al final una línea: [[PEDIDO: el pedido en una frase, por ejemplo "dame 5 productos de cocina de más de $50.000"]].
-${VOZC.hablar?'Tu respuesta se va a leer en voz alta: frases cortas, sin tablas, máximo 120 palabras.':'Usá markdown breve (listas cortas, negritas).'}`;
+${VOZC.hablar?'Tu respuesta se va a leer en voz alta: hablá natural, frases cortas, sin tablas ni listas largas, máximo 110 palabras, y terminá con tu pregunta.':'Usá markdown breve (listas cortas, negritas).'}`;
 }
-async function preguntarIA(){
+// Respuesta en vivo: el texto aparece y se lee mientras la IA lo escribe
+async function responderStream(hist,onText,{voz=true}={}){
   if(!(D.ia_claves||{}).g&&!(D.ia_claves||{}).q){try{const c=localStorage.getItem('radar_clave');if(c){const t=await bajar();D=await abrir(t,c)}}catch(e){}}
-  const k=D.ia_claves||{},sys=contextoIA(),hist=CHAT.filter(m=>!m.err).slice(-16),errores=[];
+  const k=D.ia_claves||{},sys=contextoIA(),errores=[];let dicho=0,total='';
+  const hablarParcial=(fin)=>{if(!voz||!VOZC.hablar)return;const limpio=total.replace(/\[\[[\s\S]*?(\]\]|$)/g,'');let hasta=fin?limpio.length:Math.max(limpio.lastIndexOf('. '),limpio.lastIndexOf('? '),limpio.lastIndexOf('! '),limpio.lastIndexOf('\n'))+1;
+    if(hasta>dicho){const trozo=limpio.slice(dicho,hasta);dicho=hasta;hablarCola(trozo,fin)}else if(fin)hablarCola('',true)};
+  const emitir=t=>{total=t;onText(t);hablarParcial(false)};
   if(k.g){for(const model of ['gemini-2.5-flash','gemini-flash-latest','gemini-2.5-flash-lite'])for(const web of [true,false]){
     const b=model+web;if(BLOQ[b]>Date.now())continue;
-    try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(k.g)}`,{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({systemInstruction:{parts:[{text:sys}]},contents:hist.map(m=>({role:m.r==='u'?'user':'model',parts:[{text:m.t}]})),tools:web?[{google_search:{}}]:undefined,generationConfig:{temperature:0.5,maxOutputTokens:4096}})});
-      const j=await r.json().catch(()=>({}));
-      if(r.ok){const c=j.candidates?.[0],t=(c?.content?.parts||[]).map(x=>x.text||'').join('');if(t)return{t,f:(c?.groundingMetadata?.groundingChunks||[]).map(g=>({titulo:g.web?.title,url:g.web?.uri})).filter(x=>x.url)}}
-      errores.push(j.error?.message||r.status);BLOQ[b]=Date.now()+(r.status===429?36e5:r.status>=500?6e4:864e5)}catch(e){errores.push(e.message)}}}
-  if(k.q){for(const[model,web]of[['groq/compound',true],['openai/gpt-oss-120b',false],['llama-3.3-70b-versatile',false]]){
+    try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${encodeURIComponent(k.g)}`,{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({systemInstruction:{parts:[{text:sys}]},contents:hist.map(m=>({role:m.r==='u'?'user':'model',parts:[{text:m.t}]})),tools:web?[{google_search:{}}]:undefined,generationConfig:{temperature:0.6,maxOutputTokens:4096,thinkingConfig:{thinkingBudget:0}}})});
+      if(!r.ok){const j=await r.json().catch(()=>({}));errores.push(j.error?.message||r.status);BLOQ[b]=Date.now()+(r.status===429?36e5:r.status>=500?6e4:864e5);continue}
+      const rd=r.body.getReader(),dec=new TextDecoder();let buf='',t='',f=[];
+      for(;;){const{done,value}=await rd.read();if(done)break;buf+=dec.decode(value,{stream:true});let n;
+        while((n=buf.indexOf('\n'))>=0){const linea=buf.slice(0,n).trim();buf=buf.slice(n+1);if(!linea.startsWith('data:'))continue;
+          try{const j=JSON.parse(linea.slice(5));const c=j.candidates?.[0];t+=(c?.content?.parts||[]).map(x=>x.text||'').join('');(c?.groundingMetadata?.groundingChunks||[]).forEach(g=>g.web?.uri&&f.push({titulo:g.web.title,url:g.web.uri}));emitir(t)}catch(e){}}}
+      if(t){hablarParcial(true);return{t,f}}errores.push('respuesta vacía')}catch(e){errores.push(e.message)}}}
+  if(k.q){for(const[model]of[['groq/compound'],['openai/gpt-oss-120b'],['llama-3.3-70b-versatile']]){
     if(BLOQ[model]>Date.now())continue;
     try{const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+k.q},
-      body:JSON.stringify({model,messages:[{role:'system',content:sys.slice(0,18000)},...hist.map(m=>({role:m.r==='u'?'user':'assistant',content:m.t}))],temperature:0.5,max_tokens:3000})});
+      body:JSON.stringify({model,messages:[{role:'system',content:sys.slice(0,18000)},...hist.map(m=>({role:m.r==='u'?'user':'assistant',content:m.t}))],temperature:0.6,max_tokens:3000})});
       const j=await r.json().catch(()=>({}));
-      if(r.ok){const t=(j.choices?.[0]?.message?.content||'').replace(/<think>[\s\S]*?<\/think>/g,'').trim();if(t){const f=[];(j.choices[0].message.executed_tools||[]).forEach(x=>(x.search_results?.results||[]).forEach(y=>y.url&&f.push({titulo:y.title,url:y.url})));return{t,f}}}
+      if(r.ok){const t=(j.choices?.[0]?.message?.content||'').replace(/<think>[\s\S]*?<\/think>/g,'').trim();if(t){const f=[];(j.choices[0].message.executed_tools||[]).forEach(x=>(x.search_results?.results||[]).forEach(y=>y.url&&f.push({titulo:y.title,url:y.url})));emitir(t);hablarParcial(true);return{t,f}}}
       errores.push(j.error?.message||r.status);BLOQ[model]=Date.now()+(r.status===429?36e5:6e5)}catch(e){errores.push(e.message)}}}
-  if(!k.g&&!k.q)throw new Error('RADAR todavía no publicó las claves de la inteligencia artificial. Esperá la próxima vuelta automática (cada hora) y recargá la página.');
+  if(!k.g&&!k.q)throw new Error('RADAR todavía no publicó las claves de la inteligencia artificial. Esperá la próxima vuelta automática y recargá la página.');
   throw new Error('La inteligencia artificial no respondió ahora (cupo gratis agotado por un rato). Probá de nuevo en unos minutos. '+String(errores.slice(-1)[0]||'').slice(0,120));
 }
+// cola de voz: lee cada frase apenas llega, sin cortar la anterior
+let COLA_VOZ=0;
+function hablarCola(t,fin){if(!('speechSynthesis' in window))return;const v=vozHombre(),fr=limpiarVoz(t).match(/[^.!?;:]+[.!?;:]*/g)||[];
+  if(fr.length)pausarOido();
+  fr.forEach(x=>{if(!x.trim())return;COLA_VOZ++;const u=new SpeechSynthesisUtterance(x.trim());u.lang=v?.lang||'es-AR';if(v)u.voice=v;u.rate=1;u.pitch=0.92;u.onend=u.onerror=()=>{COLA_VOZ--;if(COLA_VOZ<=0&&FIN_VOZ){COLA_VOZ=0;reanudarOido()}};speechSynthesis.speak(u)});
+  FIN_VOZ=!!fin;if(fin&&COLA_VOZ<=0)reanudarOido()}
+let FIN_VOZ=false;
 function abrirIssue(titulo){const o=origen()||(D?.repo?{owner:D.repo.split('/')[0],repo:D.repo.split('/')[1]}:null);if(!o)return alert('La página tiene que estar publicada en GitHub.');
   window.open(`https://github.com/${o.owner}/${o.repo}/issues/new?title=${encodeURIComponent(titulo)}&body=${encodeURIComponent('Enviado desde el asistente de RADAR.')}`,'_blank')}
 function pintarChat(){const el=$('#msgs');if(!el)return;
   el.innerHTML=(CHAT.length?'':`<div class="msg ia">Hola, soy RADAR. Conozco tus productos aprobados, lo que aprendí y las inversiones del día, y busco en internet para responderte. Preguntame qué vender, cómo publicarlo, cómo hacer publicidad o cómo hacer rendir tu capital. Si me contás una preferencia, la aprendo.</div>`)+
-  CHAT.map((m,i)=>m.r==='u'?`<div class="msg yo">${esc(m.t)}</div>`:`<div class="msg ia">${md(m.t)}${(m.f||[]).length?`<div class="fuentes">${m.f.slice(0,4).map(x=>segura(x.url)?`<a href="${esc(x.url)}" target="_blank">${esc(String(x.titulo||'fuente').slice(0,40))}</a>`:'').join(' · ')}</div>`:''}${m.nota?`<div class="chipIA">📝 Aprendí: ${esc(m.nota)} ${m.notaEnviada?'· enviado a RADAR ✅':`<button class="btn chico sec" data-nota="${i}">Enseñárselo a RADAR en la nube</button>`}</div>`:''}${m.pedido?`<div class="chipIA">🔎 ${esc(m.pedido)} <button class="btn chico" data-pedido="${i}">Enviar pedido</button></div>`:''}</div>`).join('')+
-  (CHAT.pend?`<div class="msg ia">Pensando y buscando…</div>`:'');
+  CHAT.map((m,i)=>m.r==='u'?`<div class="msg yo">${esc(m.t)}</div>`:`<div class="msg ia">${md(m.t)}${(m.f||[]).length?`<div class="fuentes">${m.f.slice(0,4).map(x=>segura(x.url)?`<a href="${esc(x.url)}" target="_blank">${esc(String(x.titulo||'fuente').slice(0,40))}</a>`:'').join(' · ')}</div>`:''}${m.nota?`<div class="chipIA">📝 Aprendí: ${esc(m.nota)} ${m.notaEnviada?'· RADAR en la nube también lo aprendió ✅':`<button class="btn chico sec" data-nota="${i}">Enseñárselo a RADAR en la nube</button>`}</div>`:''}${m.tarea?`<div class="chipIA">📌 Anoté en tus pendientes: ${esc(m.tarea)}</div>`:''}${m.pedido?`<div class="chipIA">🔎 ${esc(m.pedido)} <button class="btn chico" data-pedido="${i}">Enviar pedido</button></div>`:''}</div>`).join('')+
+  (CHAT.pend?`<div class="msg ia" id="vivo"><span class="muted">Pensando…</span></div>`:'');
   el.scrollTop=1e9;
   $$('[data-nota]').forEach(b=>b.onclick=()=>{const m=CHAT[+b.dataset.nota];abrirIssue('Nota: '+m.nota);m.notaEnviada=true;guardarChat();pintarChat()});
   $$('[data-pedido]').forEach(b=>b.onclick=()=>{const m=CHAT[+b.dataset.pedido];abrirIssue('Pedido: '+m.pedido)});
 }
 async function enviarChat(txt){txt=String(txt||$('#chatIn').value).trim();if(!txt||CHAT.pend)return;$('#chatIn').value='';
+  try{speechSynthesis.cancel()}catch(e){}COLA_VOZ=0;FIN_VOZ=false;
   CHAT.push({r:'u',t:txt});CHAT.pend=true;pintarChat();
-  try{let{t,f}=await preguntarIA();let nota=null,pedido=null;
+  const vivo=()=>document.getElementById('vivo');
+  try{let{t,f}=await responderStream(CHAT.filter(m=>!m.err).slice(-20),x=>{const e=vivo();if(e){e.innerHTML=md(x.replace(/\[\[[\s\S]*?(\]\]|$)/g,''));$('#msgs').scrollTop=1e9}});
+    let nota=null,pedido=null;
     t=t.replace(/\[\[\s*NOTA:\s*([\s\S]*?)\]\]/i,(_,x)=>{nota=x.trim();return''}).replace(/\[\[\s*PEDIDO:\s*([\s\S]*?)\]\]/i,(_,x)=>{pedido=x.trim().replace(/^"|"$/g,'');return''}).trim();
-    if(nota)MEM.push({texto:nota,fecha:new Date().toISOString()});
-    CHAT.push({r:'ia',t,f,nota,pedido});decirIA(t)}
+    let tarea=null;t=t.replace(/\[\[\s*TAREA:\s*([\s\S]*?)\]\]/i,(_,x)=>{tarea=x.trim();return''}).trim();
+    if(tarea)TAREAS.push({texto:tarea,fecha:new Date().toISOString(),hecha:false});
+    let notaEnviada=false;if(nota){MEM.push({texto:nota,fecha:new Date().toISOString()});notaEnviada=await enviarNotaNube(nota)}
+    CHAT.push({r:'ia',t,f,nota,pedido,tarea,notaEnviada})}
   catch(e){CHAT.push({r:'ia',t:'⚠️ '+e.message,err:true})}
-  CHAT.pend=false;guardarChat();pintarChat()}
+  CHAT.pend=false;guardarChat();pintarChat();if(VOZC.manos)VOZC.hasta=Date.now()+20*60000}
+// saludo proactivo al abrir el asistente
+let SALUDADO=false;
+function saludar(){if(SALUDADO||!D)return;SALUDADO=true;if(CHAT.length)return;
+  const n=(D.productos||[]).length,h=new Date().getHours(),sal=h<12?'Buenos días':h<20?'Buenas tardes':'Buenas noches';
+  const pend=TAREAS.filter(x=>!x.hecha);const recordatorio=pend.length?` Te recuerdo que tenés ${pend.length} pendiente${pend.length>1?'s':''}: ${pend.slice(0,2).map(x=>x.texto).join('; ')}.`:'';
+  const t0=n?`${sal}. Tengo ${n} producto${n>1?'s':''} que cumple${n>1?'n':''} tus reglas. ¿Querés que te diga cuál conviene más para empezar esta semana?`:`${sal}. Todavía no tengo productos que cumplan tus reglas, pero sigo buscando. Mientras tanto, ¿en qué querés que te ayude hoy: buscar productos, armar una publicidad o revisar tus precios?`;
+  const t=t0.replace(/^([^.]*\.)/,'$1'+recordatorio);
+  CHAT.push({r:'ia',t});guardarChat();pintarChat();if(VOZC.hablar)hablarCola(t,true)}
 // ---- voz: voz de hombre serena, micrófono y modo manos libres con la palabra «Radar» (20 minutos de conversación)
-const VOZC={hablar:localStorage.getItem('radar_hablar')==='1',manos:false,hasta:0,rec:null,habla:false};
+const VOZC={hablar:localStorage.getItem('radar_hablar')!=='0',manos:false,hasta:0,rec:null,habla:false};
 const SRC=window.SpeechRecognition||window.webkitSpeechRecognition;
 function vozHombre(){const vs=(speechSynthesis.getVoices?.()||[]).filter(v=>/^es/i.test(v.lang));const p=v=>(/natural|online|neural/i.test(v.name)?100:0)+(/Tom[aá]s|Jorge|Pablo|Ra[uú]l|[AÁ]lvaro|Gonzalo|Diego|Andr[eé]s|Federico|Male|Hombre/i.test(v.name)?120:0)-(/Elena|Dalia|Paloma|Helena|Laura|Sabina|Monica|Paulina|Female|Mujer/i.test(v.name)?60:0)+(/es-AR/i.test(v.lang)?30:/es-(MX|US|419)/i.test(v.lang)?20:10);return vs.sort((a,b)=>p(b)-p(a))[0]}
 function limpiarVoz(t){return String(t).replace(/https?:\/\/\S+/g,' ').replace(/\[([^\]]+)\]\([^)]*\)/g,'$1').replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu,' ').replace(/[#*_`>|~]/g,' ').replace(/\bUSD\s?(\d[\d.,]*\d|\d)/g,'$1 dólares').replace(/\$\s?([\d.]+(?:,\d+)?)/g,'$1 pesos').replace(/\bML\b/g,'Mercado Libre').replace(/(\d)\.(\d{3})\b/g,'$1$2').replace(/\s*\n+\s*/g,'. ').replace(/\s{2,}/g,' ')}
@@ -254,7 +308,7 @@ $('#btnMicro').onclick=()=>{if(!SRC)return alert('Para hablar usá Chrome o Edge
 $('#btnHablar').onclick=()=>{VOZC.hablar=!VOZC.hablar;localStorage.setItem('radar_hablar',VOZC.hablar?'1':'0');if(!VOZC.hablar)speechSynthesis.cancel();estadoVoz()};
 $('#btnManos').onclick=()=>{VOZC.manos=!VOZC.manos;if(VOZC.manos){VOZC.hablar=true;localStorage.setItem('radar_hablar','1');oir()}else{try{VOZC.rec?.abort()}catch(e){}VOZC.rec=null}estadoVoz()};
 $('#btnBorrar').onclick=()=>{if(confirm('¿Borrar la conversación? Lo aprendido se conserva.')){CHAT=[];guardarChat();pintarChat()}};
-setInterval(estadoVoz,30000);if('speechSynthesis' in window)speechSynthesis.getVoices();
+setInterval(estadoVoz,30000);setTimeout(estadoVoz,500);if('speechSynthesis' in window)speechSynthesis.getVoices();
 
 // ---- Anuncio por voz de productos nuevos (con la página abierta)
 let AVISO_VOZ=true;try{AVISO_VOZ=localStorage.getItem('radar_aviso_voz')!=='0'}catch(e){}
@@ -270,6 +324,145 @@ function anunciarNuevos(){if(!D)return;let vistos=null;try{vistos=JSON.parse(loc
   const txt=nuevos.length===1?`Producto encontrado: ${p.nombre}. ${mejor}.`:`Encontré ${nuevos.length} productos nuevos. El primero es ${p.nombre}: ${mejor}.`;
   avisoPantalla('🔔 '+txt);if(AVISO_VOZ)decirAviso(txt);
 }
+
+// ============================================================ calculadora, ventas, gráficos (misma lógica que el motor)
+// Cálculos de RADAR (mismos que la versión de escritorio). No se modifica solo.
+let CFG;
+const DEF={dolar_oficial:1450,margen_minimo_pct:300,ml_ganancia_min_pct_costo:70,
+ web:{margen_min_pct_precio:50,nombre:'Tienda propia (Tiendanube + Mercado Pago)',comision_plataforma_pct:2,pasarela_pct:6.29,iva_sobre_cargos_pct:21,publicidad_pct:12,impuestos_venta_pct:3.5,devoluciones_pct:2,packaging_ars:800,envio_paga:'cliente',envio_promedio_ars:7500,envio_gratis_desde_ars:0},
+ whatsapp:{telefono:'+5493364008485',apikey:''},perfil:{reputacion_ml:'verde',tipo_publicacion:'clasica',notas:''},
+ ml:{comision_clasica_pct:14,comision_premium_pct:18.5,costo_fijo_tramos:[[15000,1330],[25000,2740],[33000,3320]],umbral_envio_gratis:33000,
+  envio_tramos_kg:[[0.3,12500],[0.5,14200],[1,16580],[2,19800],[5,27500],[10,38000],[20,56000],[30,72000]],
+  descuento_envio_reputacion:{lider:50,verde:50,sin_reputacion:50,amarillo:40,naranja:0,rojo:0},
+  iva_sobre_cargos_pct:21,publicidad_pct:6,impuestos_venta_pct:3.5,devoluciones_pct:2,packaging_ars:600},
+ importacion:{tasa_estadistica_pct:3,iva_pct:21,iva_adicional_pct:20,ganancias_percepcion_pct:6,iibb_percepcion_pct:2.5,seguro_pct:1,derecho_importacion_default_pct:20,gastos_despachante_ars:180000,
+  metodos_envio:{courier_express:{nombre:'Courier exprés (DHL/FedEx/UPS)',usd_kg:24,min_usd:45,dias:'5-12',seguridad:5,regimen:'courier'},
+   courier_economico:{nombre:'Courier económico / AliExpress Standard',usd_kg:12,min_usd:5,dias:'15-35',seguridad:3,regimen:'courier'},
+   aereo_consolidado:{nombre:'Aéreo consolidado',usd_kg:9,min_usd:250,dias:'10-20',seguridad:4,regimen:'formal'},
+   maritimo_lcl:{nombre:'Marítimo LCL (contenedor compartido)',usd_kg:2.2,min_usd:600,dias:'45-70',seguridad:4,regimen:'formal'}}}};
+
+function mezclar(a,b){const o=JSON.parse(JSON.stringify(a));for(const k in (b||{})){if(b[k]&&typeof b[k]==='object'&&!Array.isArray(b[k])&&typeof o[k]==='object')o[k]=mezclar(o[k],b[k]);else o[k]=b[k]}return o}
+
+const tramo=(t,v)=>{for(const [l,c] of t)if(v<=l)return c;return t[t.length-1][1]};
+
+function costoPuesto(e){
+  const imp=CFG.importacion,tc=CFG.dolar_oficial,q=Math.max(1,e.cantidad|0);
+  if(e.metodo==='local'){const u=e.costo_local??e.costo_usd*tc;const tot=u*q;return{metodo:e.nombre_local||'Proveedor nacional',clave:'local',cantidad:q,fob_usd:0,flete_usd:0,tributos:0,prov_unit:u,total:tot,unit:tot/q,dias:'1-5',seguridad:5,adv:[]}}
+  const m=imp.metodos_envio[e.metodo]||imp.metodos_envio.courier_economico;
+  const fob=e.costo_usd*q,peso=e.peso*q,flete=Math.max(m.min_usd,m.usd_kg*peso),seguro=fob*imp.seguro_pct/100,cif=fob+flete+seguro;
+  const di=cif*(e.di??imp.derecho_importacion_default_pct)/100,te=cif*imp.tasa_estadistica_pct/100,base=cif+di+te;
+  const trib=di+te+base*(imp.iva_pct+imp.iva_adicional_pct+imp.ganancias_percepcion_pct+imp.iibb_percepcion_pct)/100;
+  const desp=m.regimen==='formal'?imp.gastos_despachante_ars:0;const total=(fob+flete+seguro+trib)*tc+desp;
+  const adv=[];if(m.regimen==='courier'&&fob>3000)adv.push('El courier admite hasta USD 3.000 por envío: dividí la compra o usá importación formal.');
+  return{metodo:m.nombre,clave:e.metodo,cantidad:q,fob_usd:fob,flete_usd:flete,tributos:trib*tc,prov_unit:e.costo_usd*tc,total,unit:total/q,dias:m.dias,seguridad:m.seguridad,adv};
+}
+function costosML(precio,peso,tipo){
+  const ml=CFG.ml,rep=CFG.perfil.reputacion_ml||'verde';tipo=tipo||CFG.perfil.tipo_publicacion||'clasica';
+  const cp=tipo==='premium'?ml.comision_premium_pct:ml.comision_clasica_pct,com=precio*cp/100;
+  let fijo=0,envio=0;if(precio<ml.umbral_envio_gratis)fijo=tramo(ml.costo_fijo_tramos,precio);else envio=tramo(ml.envio_tramos_kg,peso)*(1-(ml.descuento_envio_reputacion[rep]??0)/100);
+  const iva=(com+fijo)*ml.iva_sobre_cargos_pct/100,pub=precio*ml.publicidad_pct/100,impv=precio*ml.impuestos_venta_pct/100,dev=precio*ml.devoluciones_pct/100,pack=ml.packaging_ars;
+  const total=com+fijo+iva+envio+pub+impv+dev+pack;
+  return{tipo,comision_pct:cp,comision:com,fijo,envio,iva,pub,impv,dev,pack,total,neto:precio-total};
+}
+function rentab(precio,e,tipo){
+  const cp=costoPuesto(e),cv=costosML(precio,e.peso,tipo),g=cv.neto-cp.unit;
+  const markup=cp.prov_unit?(precio-cp.prov_unit)/cp.prov_unit*100:0,roi=cp.unit?g/cp.unit*100:0;
+  const min=CFG.margen_minimo_pct,minB=CFG.ml_ganancia_min_pct_costo||70;
+  const reglaA=markup>=min&&g>0,reglaB=g>=cp.unit*minB/100,cumple=reglaA||reglaB;
+  const buscar=f=>{let lo=1,hi=Math.max(1e5,cp.unit*60);for(let i=0;i<70;i++){const mid=(lo+hi)/2;if(f(mid))hi=mid;else lo=mid}return Math.round(hi)};
+  const equilibrio=buscar(x=>costosML(x,e.peso,tipo).neto-cp.unit>=0);
+  const precioB=buscar(x=>costosML(x,e.peso,tipo).neto-cp.unit>=cp.unit*minB/100);
+  const minimo=Math.min(Math.max(Math.round(cp.prov_unit*(1+min/100)),equilibrio+1),precioB);
+  let aviso='';if(!cumple)aviso=`En Mercado Libre no cumple: necesita ${min}% sobre el proveedor con ganancia, o ganar el ${minB}% del costo. Precio mínimo: ${ars(minimo)}.`;
+  return{precio,cp,cv,ganancia:g,ganancia_lote:g*cp.cantidad,markup,roi,reglaA,reglaB,ganancia_pct_costo:cp.unit?g/cp.unit*100:0,margen_neto:precio?g/precio*100:0,mult:cp.prov_unit?precio/cp.prov_unit:null,cumple,minimo,equilibrio,aviso,
+    recupero:cv.neto>0?Math.ceil(cp.total/cv.neto):null};
+}
+function costosWeb(precio){
+  const w=CFG.web,plat=precio*w.comision_plataforma_pct/100,pas=precio*w.pasarela_pct/100,iva=(plat+pas)*w.iva_sobre_cargos_pct/100;
+  const pub=precio*w.publicidad_pct/100,impv=precio*w.impuestos_venta_pct/100,dev=precio*w.devoluciones_pct/100,pack=w.packaging_ars;
+  const envio=w.envio_paga==='vendedor'||(w.envio_gratis_desde_ars>0&&precio>=w.envio_gratis_desde_ars)?w.envio_promedio_ars:0;
+  const total=plat+pas+iva+pub+impv+dev+pack+envio;return{plat,pas,iva,pub,impv,dev,pack,envio,total,neto:precio-total};
+}
+function rentabWeb(precio,e){
+  const cp=costoPuesto(e),cv=costosWeb(precio),g=cv.neto-cp.unit,minp=CFG.web.margen_min_pct_precio||50;
+  let lo=1,hi=Math.max(1e5,cp.unit*60);for(let i=0;i<70;i++){const mid=(lo+hi)/2;const c=costosWeb(mid);if(c.neto-cp.unit>=mid*minp/100)hi=mid;else lo=mid}
+  return{precio,cp,cv,ganancia:g,margen_precio:precio?g/precio*100:0,cumple:precio>0&&g>=precio*minp/100,minimo:Math.round(hi),ganancia_en_minimo:Math.round(costosWeb(hi).neto-cp.unit)};
+}
+function metodos(e){
+  const r=Object.keys(CFG.importacion.metodos_envio).map(k=>costoPuesto({...e,metodo:k})).sort((a,b)=>a.unit-b.unit);
+  const min=r[0].unit;r.forEach(x=>{const d=+String(x.dias).split('-').pop();x.puntaje=Math.round(60*min/x.unit+25*x.seguridad/5+15*Math.min(1,10/d))});
+  const m=r.reduce((a,b)=>b.puntaje>a.puntaje?b:a);m.rec=true;return r;
+}
+
+
+const num=v=>{const n=parseFloat(String(v??'').replace(/[^\d.,-]/g,'').replace(/\.(?=\d{3})/g,'').replace(',','.'));return isNaN(n)?0:n};
+
+function evaluar(p){
+  const d=p.demanda||{},costo=num(p.costo_proveedor_usd)||Math.min(...(p.proveedores||[]).map(x=>num(x.precio_usd)).filter(Boolean),Infinity);
+  const precio=num(p.precio_venta_sugerido_ars)||num((p.precios_mercados||[]).find(x=>/argentin/i.test(x.mercado||''))?.precio);
+  const ventas=!!d.ventas_comprobadas;
+  if(!isFinite(costo)||!costo||!precio)return{veredicto:'DATOS INSUFICIENTES',puntaje:0,ventas,costo:isFinite(costo)?costo:null,precio};
+  const esp=num(p.ventas_estimadas_mes?.esperado);const e={costo_usd:costo,cantidad:esp?Math.max(20,Math.min(500,esp)):50,peso:num(p.peso_kg)||0.3,di:p.derecho_importacion_pct!=null?num(p.derecho_importacion_pct):null};
+  const ms=metodos(e);const loc=(p.proveedores||[]).filter(x=>/local|nacional|argentin/i.test(x.tipo||'')&&num(x.precio_ars)).sort((a,b)=>num(a.precio_ars)-num(b.precio_ars))[0];
+  if(loc){const l=costoPuesto({...e,metodo:'local',costo_local:num(loc.precio_ars)});l.metodo='Proveedor local: '+(loc.proveedor||'Argentina');ms.push(l)}
+  ms.forEach(m=>m.rec=false);const mejor=ms.reduce((a,b)=>b.unit<a.unit*0.9||(b.unit<=a.unit&&b.seguridad>=a.seguridad)?b:a);mejor.rec=true;
+  e.metodo=mejor.clave;if(mejor.clave==='local'){e.costo_local=num(loc.precio_ars);e.nombre_local='Proveedor local: '+(loc.proveedor||'Argentina')}const r=rentab(precio,e);
+  const precioWeb=num(p.precio_venta_web_ars)||precio;const w=rentabWeb(precioWeb,e);
+  let dem=num(d.puntaje)||({alta:85,media:55,baja:25}[d.nivel]??50);if(!ventas)dem=Math.min(dem,40);
+  const comp=num(p.competencia?.puntaje)||({alta:70,media:45,baja:20}[p.competencia?.nivel]??50);
+  const marg=r.cumple||w.cumple?100:Math.max(0,Math.min(100,Math.max(r.ganancia_pct_costo,w.margen_precio*1.4))),riesgos=(p.riesgos_regulatorios||[]).filter(x=>x&&!/ningun/i.test(x)),riesgo=Math.max(0,100-30*riesgos.length);
+  const puntaje=Math.round(.55*dem+.25*marg+.12*(100-comp)+.08*riesgo);
+  const canales=[r.cumple&&'Mercado Libre',w.cumple&&'Tu web'].filter(Boolean);const veredicto=canales.length&&ventas&&puntaje>=55?'VENDER':(r.ganancia>0||w.ganancia>0)&&puntaje>=45?'EVALUAR':'NO VENDER';
+  const alertas=[];if(!ventas)alertas.push('Ventas NO comprobadas: no hay evidencia firme de que se venda bien. No lo compres hasta verificarlo.');if(r.aviso)alertas.push(r.aviso);
+  return{veredicto,puntaje,ventas,costo,precio,r,w,canales,ms,e,det:{demanda:dem,margen:Math.round(marg),competencia_baja:100-comp,riesgo_bajo:riesgo},alertas};
+}
+
+function usarConfig(c){CFG=mezclar(DEF,c||{});return CFG}
+
+
+const CANALES=[['Mercado Ads (Product Ads)','Mercado Libre → Publicidad','Desde el primer día: es donde la gente ya está por comprar.',['Empezá con campaña automática 7-14 días.','ACOS objetivo menor a tu margen antes de publicidad.','Pausá publicaciones con clics y sin ventas: revisá precio, fotos o título.','Para testear: $3.000-$10.000 por día.']],
+['Meta Ads (Instagram + Facebook)','business.facebook.com','Productos visuales o de impulso.',['Videos verticales de 9-15 s: problema → producto → resultado → precio.','Público amplio Argentina + intereses del producto.','Testeá $5.000-$8.000/día por 3-4 días y escalá solo lo que vende.']],
+['TikTok (orgánico + Ads)','Perfil de empresa / ads.tiktok.com','Gadgets, hogar ingenioso, belleza, mascotas.',['1 a 3 videos por día al principio; gancho en los primeros 2 segundos.','Link a tu publicación en la bio.','Si un video orgánico funciona, pautalo (Spark Ads).']],
+['Orgánico gratis','WhatsApp Business, Marketplace, grupos','Siempre: baja el costo de cada venta.',['Catálogo y estados diarios en WhatsApp Business.','Facebook Marketplace en tu ciudad.','Pedí reseñas con foto y sumá un regalito en el paquete.']]];
+const charts={};function graf(id,cfg){if(!window.Chart||!document.getElementById(id))return;charts[id]?.destroy();charts[id]=new Chart(document.getElementById(id),cfg)}
+if(window.Chart){Chart.defaults.color='#8d98b8';Chart.defaults.borderColor='#243055'}
+function extrasRender(){if(!D)return;usarConfig(D.tarifas||{dolar_oficial:D.dolar});
+  const ps=(D.productos||[]).slice(0,12);
+  graf('chGan',{type:'bar',data:{labels:ps.map(p=>p.nombre.slice(0,24)),datasets:[{label:'Mercado Libre',data:ps.map(p=>Math.round(p.ev.r?.ganancia||0)),backgroundColor:'#7c5cff',borderRadius:6},{label:'Tu web',data:ps.map(p=>Math.round(p.ev.w?.ganancia||0)),backgroundColor:'#22d39b',borderRadius:6}]},options:{indexAxis:'y',plugins:{legend:{labels:{color:'#e8ecf8'}}}}});
+  const top=[...(D.productos||[])].sort((a,b)=>Math.max(b.ev.w?.ganancia||0,b.ev.r?.ganancia||0)-Math.max(a.ev.w?.ganancia||0,a.ev.r?.ganancia||0)).slice(0,3);
+  $('#top3').innerHTML=top.length?top.map((p,i)=>`<div class="prod" data-t="${esc(p.id||p.nombre)}" style="padding:10px 0;border-bottom:1px solid var(--borde)"><b>${i+1}. ${esc(p.nombre)}</b><div class="muted">ML gana ${ars(p.ev.r?.ganancia)} · Web gana ${ars(p.ev.w?.ganancia)}</div></div>`).join(''):'<p class="muted">Aparecen cuando RADAR apruebe productos.</p>';
+  $$('[data-t]').forEach(d=>d.onclick=()=>ficha((D.productos||[]).find(p=>(p.id||p.nombre)===d.dataset.t)));
+  $('#vProd').innerHTML=(D.productos||[]).map((p,i)=>`<option value="${i}">${esc(p.nombre)}</option>`).join('')||'<option value="">— todavía no hay productos aprobados —</option>';
+  $('#canales').innerHTML=CANALES.map(([t,d,c,l])=>`<div class="card"><h2>${t}</h2><p class="muted">📍 ${d}</p><p><b>Cuándo:</b> ${c}</p>${lista(l)}</div>`).join('');
+  calcular()}
+function calcular(){if(!D)return;usarConfig(D.tarifas||{dolar_oficial:D.dolar});const v=id=>parseFloat($(id).value);
+  const e={costo_usd:v('#c_costo')||0,cantidad:v('#c_cant')||1,peso:v('#c_peso')||0.3,di:isNaN(v('#c_di'))?null:v('#c_di')};const loc=v('#c_local');
+  const ms=metodos(e);if(loc>0){const l=costoPuesto({...e,metodo:'local',costo_local:loc});ms.push(l)}ms.forEach(m=>m.rec=false);const mejor=ms.reduce((a,b)=>b.unit<a.unit?b:a);mejor.rec=true;
+  e.metodo=mejor.clave;if(mejor.clave==='local')e.costo_local=loc;const r=rentab(v('#c_precio')||0,e,$('#c_tipo').value),w=rentabWeb(v('#c_web')||0,e),c=r.cv,cw=w.cv,fila=(t,x)=>x?`<tr><td>${t}</td><td class="r">− ${ars(x)}</td></tr>`:'';
+  $('#calcRes').innerHTML=`<div class="grid g2"><div><h2>🛒 Mercado Libre <span class="${r.cumple?'ok-t':'mal-t'}">${r.cumple?'✅ conviene':'❌ no conviene'}</span></h2><table><tr><td>Precio</td><td class="r">${ars(r.precio)}</td></tr>${fila('Comisión',c.comision)}${fila('Costo fijo',c.fijo)}${fila('IVA cargos',c.iva)}${fila('Envío',c.envio)}${fila('Publicidad',c.pub)}${fila('Impuestos',c.impv)}${fila('Devoluciones',c.dev)}${fila('Embalaje',c.pack)}${fila('Producto en mano',r.cp.unit)}<tr><td><b>Ganancia/u</b></td><td class="r"><b>${ars(r.ganancia)}</b></td></tr></table><p class="muted">Margen s/ proveedor ${pct(r.markup)} · ganancia ${pct(r.ganancia_pct_costo)} del costo · mínimo ${ars(r.minimo)}</p></div>
+   <div><h2>🌐 Tu web <span class="${w.cumple?'ok-t':'mal-t'}">${w.cumple?'✅ conviene':'❌ no conviene'}</span></h2><table><tr><td>Precio</td><td class="r">${ars(w.precio)}</td></tr>${fila('Plataforma',cw.plat)}${fila('Cobro con tarjeta',cw.pas)}${fila('IVA cargos',cw.iva)}${fila('Publicidad',cw.pub)}${fila('Impuestos',cw.impv)}${fila('Devoluciones',cw.dev)}${fila('Embalaje',cw.pack)}${fila('Envío',cw.envio)}${fila('Producto en mano',w.cp.unit)}<tr><td><b>Ganancia/u</b></td><td class="r"><b>${ars(w.ganancia)}</b></td></tr></table><p class="muted">Te queda ${pct(w.margen_precio)} del precio · mínimo para ${D.criterios.web}%: ${ars(w.minimo)}</p></div></div>
+   <div class="card ok" style="margin-top:10px">Lote de ${r.cp.cantidad} u.: invertís <b>${ars(r.cp.total)}</b> y ganás <b>${ars(Math.max(r.ganancia,w.ganancia)*r.cp.cantidad)}</b> en el mejor canal.</div>`;
+  $('#calcMet').innerHTML=`<table><tr><th>Método</th><th class="r">Costo/u</th><th>Días</th></tr>${ms.sort((a,b)=>a.unit-b.unit).map(m=>`<tr><td>${m.rec?'⭐ ':''}${esc(m.metodo)}</td><td class="r">${ars(m.unit)}</td><td>${esc(m.dias)}</td></tr>`).join('')}</table>`;
+  graf('chCalc',{type:'doughnut',data:{labels:['Comisión','Costo fijo','IVA','Envío','Publicidad','Impuestos','Devoluciones','Embalaje','Producto','Ganancia'],datasets:[{data:[c.comision,c.fijo,c.iva,c.envio,c.pub,c.impv,c.dev,c.pack,r.cp.unit,Math.max(0,r.ganancia)].map(Math.round),backgroundColor:['#7c5cff','#9d7bff','#c084fc','#38bdf8','#00d4ff','#ffb547','#ff8a5c','#8d98b8','#ff5d73','#22d39b']}]},options:{plugins:{legend:{position:'right',labels:{color:'#e8ecf8'}}}}})}
+$$('#v-calculadora input,#v-calculadora select').forEach(x=>x.addEventListener('input',calcular));
+$('#btnPlan').onclick=async()=>{const p=(D.productos||[])[+$('#vProd').value];if(!p)return alert('Todavía no hay productos aprobados. Mientras tanto, preguntale al Asistente.');
+  const q=`Armá un plan COMPLETO y práctico para vender "${p.nombre}" en Argentina, en Mercado Libre y en mi web: precio recomendado por canal, título, fotos y video, kit o combo, dónde hacer publicidad (Mercado Ads, Meta, TikTok, Google), presupuesto diario sugerido y cómo medir si funciona, textos de anuncios listos para copiar, y un calendario de las próximas 4 semanas. Datos del producto: ${JSON.stringify({precio_ml:p.ev.r?.precio,ganancia_ml:p.ev.r?.ganancia,precio_web:p.ev.w?.precio,ganancia_web:p.ev.w?.ganancia,cliente:p.cliente_ideal,competencia:p.competencia,plan:p.plan_venta,publicidad:p.plan_publicidad})}. ${$('#vExtra').value}`;
+  $('#planOut').innerHTML='<p class="muted">Armando el plan…</p>';
+  try{await responderStream([{r:'u',t:q}],t=>{$('#planOut').innerHTML=md(t)},{voz:false})}catch(e){$('#planOut').innerHTML='⚠️ '+esc(e.message)}};
+
+// ---- secretario: pendientes
+function pintarPendientes(){const e=$('#pendientes');if(!e)return;const ab=TAREAS.map((t,i)=>({...t,i})).filter(t=>!t.hecha);
+  e.innerHTML=`<h2 style="margin:0 0 6px">📌 Tus pendientes ${ab.length?`(${ab.length})`:''}</h2>`+(ab.length?ab.map(t=>`<div style="display:flex;gap:10px;align-items:center;padding:4px 0"><input type="checkbox" data-hecha="${t.i}" style="width:auto"> <span>${esc(t.texto)}</span> <span class="muted" style="font-size:12px">${esc(new Date(t.fecha).toLocaleDateString('es-AR'))}</span></div>`).join(''):'<p class="muted" style="margin:0">Decile a RADAR "recordame…" o "tengo que…" y lo anota acá.</p>');
+  $$('[data-hecha]').forEach(c=>c.onchange=()=>{TAREAS[+c.dataset.hecha].hecha=true;guardarChat();pintarPendientes()})}
+const _pc=pintarChat;pintarChat=function(){_pc();pintarPendientes()};
+// ---- aprendizaje automático en la nube (opcional): con un permiso de GitHub guardado en este dispositivo
+async function enviarNotaNube(nota){let tk=null;try{tk=localStorage.getItem('radar_gh')}catch(e){}if(!tk)return false;
+  const o=origen()||(D?.repo?{owner:D.repo.split('/')[0],repo:D.repo.split('/')[1]}:null);if(!o)return false;
+  try{const r=await fetch(`https://api.github.com/repos/${o.owner}/${o.repo}/issues`,{method:'POST',headers:{Authorization:'Bearer '+tk,Accept:'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify({title:'Nota: '+nota.slice(0,200),body:'Aprendido automáticamente por el asistente.'})});return r.ok}catch(e){return false}}
+$('#btnAuto').onclick=()=>{let tk=null;try{tk=localStorage.getItem('radar_gh')}catch(e){}
+  if(tk){if(confirm('El aprendizaje automático en la nube está ACTIVO en este dispositivo. ¿Querés desactivarlo?'))try{localStorage.removeItem('radar_gh')}catch(e){};return}
+  const v=prompt('Para que RADAR en la nube aprenda solo lo que le contás:\n1) Entrá a github.com/settings/personal-access-tokens/new\n2) Nombre: radar · Expiration: No expiration (o 1 año)\n3) Repository access: Only select repositories → radar\n4) Permissions → Repository permissions → Issues: Read and write\n5) Generate token, copialo y pegalo acá:');
+  if(v&&v.trim().length>20){try{localStorage.setItem('radar_gh',v.trim())}catch(e){}alert('Listo. Desde ahora, todo lo que RADAR aprenda en la charla también lo aprende en la nube.')}};
 </script>
 </body>
 </html>
