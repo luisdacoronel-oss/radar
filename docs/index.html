@@ -34,7 +34,7 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
 .chat{display:flex;flex-direction:column;height:calc(100vh - 120px);min-height:480px;padding:12px}.msgs{flex:1;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:6px}
 .msg{max-width:88%;padding:12px 16px;border-radius:16px;line-height:1.55}.msg.yo{align-self:flex-end;background:var(--grad);color:#fff;white-space:pre-wrap}.msg.ia{align-self:flex-start;background:var(--panel2);border:1px solid var(--borde)}.msg h2,.msg h3{font-size:15px;margin:8px 0 4px}
 .fuentes{margin-top:8px;font-size:12px;color:var(--suave)}.chipIA{margin-top:10px;padding:8px 10px;border-radius:10px;background:#7c5cff18;font-size:13px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.barraChat{display:flex;gap:8px;margin-top:10px}.barraChat textarea{flex:1;resize:none}.botonesChat{display:flex;flex-direction:column;gap:6px}.opcVoz{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.btn.act{background:var(--grad)!important;color:#fff}.act-l b{color:var(--texto)}
+.barraChat{display:flex;gap:8px;margin-top:10px}.barraChat textarea{flex:1;resize:none}.botonesChat{display:flex;flex-direction:column;gap:6px}.opcVoz{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.btn.act{background:var(--grad)!important;color:#fff}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(150%);background:var(--panel2);border:1px solid var(--ok);color:var(--texto);padding:14px 18px;border-radius:14px;box-shadow:0 10px 30px #0008;z-index:80;transition:.3s;max-width:92vw}.toast.ver{transform:translateX(-50%) translateY(0)}.act-l b{color:var(--texto)}
 </style>
 </head>
 <body>
@@ -108,7 +108,7 @@ $('#clave').onkeydown=e=>{if(e.key==='Enter')$('#entrar').click()};
   if(!c)return;$('#login').classList.add('oculto');$('#cargando').classList.remove('oculto');
   const ok=await cargar(c,true);$('#cargando').classList.add('oculto');
   if(!ok){$('#login').classList.remove('oculto');$('#clave').value=c;$('#loginMsg').textContent='No pude abrir los resultados. Revisá la contraseña o tu conexión y tocá Entrar.'}})();
-setInterval(()=>{try{const c=localStorage.getItem('radar_clave');if(c&&D)cargar(c,true)}catch(e){}},10*60000);
+setInterval(()=>{try{const c=localStorage.getItem('radar_clave');if(c&&D)cargar(c,true)}catch(e){}},3*60000);
 
 $$('nav button').forEach(b=>b.onclick=()=>{$$('nav button').forEach(x=>x.classList.toggle('act',x===b));$$('main>section').forEach(s=>s.classList.toggle('oculto',s.id!=='v-'+b.dataset.v))});
 $('#btnPedir').onclick=()=>{const t=$('#qPedido').value.trim();if(!t)return alert('Escribí qué querés buscar.');const o=origen()||(D?.repo?{owner:D.repo.split('/')[0],repo:D.repo.split('/')[1]}:null);
@@ -124,7 +124,8 @@ const gimg=p=>'https://www.google.com/search?tbm=isch&q='+encodeURIComponent(p.n
 function render(){
   const t=D.totales||{};
   $('#kpis').innerHTML=[['Productos para vender',t.aprobados],['Productos revisados',t.analizados],['Dólar oficial',ars(D.dolar)],['Estrategia',`versión ${D.version_estrategia}`]].map(([l,v])=>`<div class="card kpi"><div class="l">${l}</div><div class="v">${v??'—'}</div></div>`).join('');
-  $('#estado').innerHTML=`🟢 RADAR trabaja solo cada hora en la nube. Última vuelta: <b>${hace(D.generado)}</b>. Avisos de WhatsApp: de ${(D.criterios.whatsapp||[]).map(([a,b])=>a+' a '+b).join(' y de ')} h${t.en_cola_whatsapp?` (${t.en_cola_whatsapp} esperando el horario)`:''}.`;
+  $('#estado').innerHTML=`<button class="btn chico sec ${AVISO_VOZ?'act':''}" id="btnAviso" style="margin-right:8px">🔔 Anunciar por voz: ${AVISO_VOZ?'sí':'no'}</button>🟢 RADAR trabaja solo cada hora en la nube. Última vuelta: <b>${hace(D.generado)}</b>. Avisos de WhatsApp: de ${(D.criterios.whatsapp||[]).map(([a,b])=>a+' a '+b).join(' y de ')} h${t.en_cola_whatsapp?` (${t.en_cola_whatsapp} esperando el horario)`:''}.`;
+  $('#btnAviso').onclick=()=>{AVISO_VOZ=!AVISO_VOZ;try{localStorage.setItem('radar_aviso_voz',AVISO_VOZ?'1':'0')}catch(e){}render();if(AVISO_VOZ)decirAviso('Listo. Cuando encuentre un producto nuevo te lo voy a anunciar.')};
   $('#informe').innerHTML=D.informe?`<h2>📰 ${esc(D.informe.titulo)}</h2><div>${md(D.informe.contenido)}</div>`:'<p class="muted">El informe del día aparece después de las primeras vueltas.</p>';
   $('#lista').innerHTML=(D.productos||[]).map((p,i)=>{const ev=p.ev,img=imgURL(p);return`<div class="card prod" data-i="${i}">
     ${img?`<img class="foto" src="${esc(img)}" referrerpolicy="no-referrer" loading="lazy" onerror="this.outerHTML='<div class=&quot;sinfoto&quot;>📦</div>'">`:'<div class="sinfoto">📦</div>'}
@@ -140,7 +141,7 @@ function render(){
   const it=c=>`<details><summary>${esc(c.titulo)} <span class="muted">· ${esc((c.fecha||'').slice(0,10))}</span></summary><div>${md(c.contenido)}</div>${c.fuente?`<p class="muted">${segura(c.url)?`<a href="${esc(c.url)}" target="_blank">${esc(c.fuente)}</a>`:esc(c.fuente)}</p>`:''}</details>`;
   $('#mejoras').innerHTML=(D.mejoras||[]).map(it).join('')||'<p class="muted">Una vez por día RADAR revisa sus resultados y se reprograma. Lo que cambia aparece acá.</p>';
   $('#reglas').innerHTML=(D.reglas||[]).map(it).join('')||'<p class="muted">—</p>';$('#lecciones').innerHTML=(D.lecciones||[]).map(it).join('')||'<p class="muted">—</p>';
-  pintarChat();
+  pintarChat();anunciarNuevos();
   $('#actividad').innerHTML=(D.actividad||[]).map(a=>`<div>${esc(new Date(a.fecha).toLocaleString('es-AR',{hourCycle:'h23',day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}))} · <b>${esc(a.tipo)}</b> ${esc(a.detalle)}</div>`).join('');
 }
 function ficha(p){const ev=p.ev,r=ev.r,w=ev.w,c=r.cv,cw=w.cv,d=p.demanda||{},img=imgURL(p),link=linkDe(p),fila=(t,v)=>v?`<tr><td>${t}</td><td class="r">− ${ars(v)}</td></tr>`:'';
@@ -254,6 +255,21 @@ $('#btnHablar').onclick=()=>{VOZC.hablar=!VOZC.hablar;localStorage.setItem('rada
 $('#btnManos').onclick=()=>{VOZC.manos=!VOZC.manos;if(VOZC.manos){VOZC.hablar=true;localStorage.setItem('radar_hablar','1');oir()}else{try{VOZC.rec?.abort()}catch(e){}VOZC.rec=null}estadoVoz()};
 $('#btnBorrar').onclick=()=>{if(confirm('¿Borrar la conversación? Lo aprendido se conserva.')){CHAT=[];guardarChat();pintarChat()}};
 setInterval(estadoVoz,30000);if('speechSynthesis' in window)speechSynthesis.getVoices();
+
+// ---- Anuncio por voz de productos nuevos (con la página abierta)
+let AVISO_VOZ=true;try{AVISO_VOZ=localStorage.getItem('radar_aviso_voz')!=='0'}catch(e){}
+function decirAviso(t){const antes=VOZC.hablar;VOZC.hablar=true;decirIA(t);VOZC.hablar=antes}
+function avisoPantalla(t){let d=document.getElementById('toast');if(!d){d=document.createElement('div');d.id='toast';d.className='toast';document.body.appendChild(d)}d.textContent=t;d.classList.add('ver');clearTimeout(d._t);d._t=setTimeout(()=>d.classList.remove('ver'),12000)}
+function anunciarNuevos(){if(!D)return;let vistos=null;try{vistos=JSON.parse(localStorage.getItem('radar_vistos')||'null')}catch(e){}
+  const ids=(D.productos||[]).map(p=>p.id||p.nombre);
+  if(!vistos){try{localStorage.setItem('radar_vistos',JSON.stringify(ids))}catch(e){}return}
+  const nuevos=(D.productos||[]).filter(p=>!vistos.includes(p.id||p.nombre));
+  if(!nuevos.length)return;
+  try{localStorage.setItem('radar_vistos',JSON.stringify([...new Set([...vistos,...ids])].slice(-500)))}catch(e){}
+  const p=nuevos[0],ev=p.ev,mejor=(ev.w?.cumple&&ev.w.ganancia>ev.r.ganancia)?`en tu web ganás ${ars(ev.w.ganancia)} por unidad`:`en Mercado Libre ganás ${ars(ev.r.ganancia)} por unidad`;
+  const txt=nuevos.length===1?`Producto encontrado: ${p.nombre}. ${mejor}.`:`Encontré ${nuevos.length} productos nuevos. El primero es ${p.nombre}: ${mejor}.`;
+  avisoPantalla('🔔 '+txt);if(AVISO_VOZ)decirAviso(txt);
+}
 </script>
 </body>
 </html>
