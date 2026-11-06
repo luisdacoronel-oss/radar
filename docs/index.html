@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>RADAR · Productos para vender</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a33;--panel2:#18223f;--borde:#243055;--texto:#e8ecf8;--suave:#8d98b8;--a1:#7c5cff;--a2:#00d4ff;--ok:#22d39b;--mal:#ff5d73;--grad:linear-gradient(135deg,#7c5cff,#00d4ff)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--texto);font-size:15px}
+a{color:var(--a2)}header{position:sticky;top:0;z-index:10;background:#0b1020ee;backdrop-filter:blur(8px);border-bottom:1px solid var(--borde)}
+.cab{max-width:1300px;margin:auto;padding:12px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px}.logo i{width:34px;height:34px;border-radius:10px;background:var(--grad);display:grid;place-items:center;font-style:normal;box-shadow:0 0 22px #7c5cff80}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}nav button{all:unset;cursor:pointer;padding:8px 13px;border-radius:10px;color:var(--suave)}nav button.act{background:var(--panel2);color:#fff;box-shadow:inset 0 -2px 0 var(--a1)}
+main{max-width:1300px;margin:auto;padding:20px 18px 80px}h1{font-size:24px;margin:0 0 6px}h2{font-size:16px;margin:0 0 10px}.sub,.muted{color:var(--suave)}
+.card{background:var(--panel);border:1px solid var(--borde);border-radius:16px;padding:16px}.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}.gp{grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+@media(max-width:800px){.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}nav{margin-left:0}}
+.kpi .l{color:var(--suave);font-size:12px;text-transform:uppercase;letter-spacing:.04em}.kpi .v{font-size:26px;font-weight:800;background:var(--grad);-webkit-background-clip:text;color:transparent}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:12px;background:var(--grad);color:#fff;font-weight:700;box-sizing:border-box}.btn.sec{background:var(--panel2);border:1px solid var(--borde)}.btn.chico{padding:7px 12px;font-size:13px}
+input,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid var(--borde);background:var(--panel2);color:var(--texto);font:inherit}
+.prod{display:flex;flex-direction:column;gap:10px;cursor:pointer;transition:.15s}.prod:hover{border-color:var(--a1);transform:translateY(-2px)}
+.foto{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:#fff}.sinfoto{width:100%;aspect-ratio:4/3;border-radius:12px;display:grid;place-items:center;background:var(--panel2);color:var(--suave);font-size:40px}
+.chip{display:inline-block;font-size:12px;padding:3px 9px;border-radius:9px;background:#22d39b22;color:var(--ok);margin:0 4px 4px 0}.chip.g{background:var(--panel2);color:var(--suave)}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:7px 6px;border-bottom:1px solid var(--borde);text-align:left;vertical-align:top}th{color:var(--suave);font-weight:600;font-size:12px}.r{text-align:right;white-space:nowrap}
+.ok{border-color:#22d39b77;background:linear-gradient(180deg,#22d39b10,transparent)}.oculto{display:none!important}
+.modal{position:fixed;inset:0;background:#000b;z-index:50;display:grid;place-items:center;padding:12px}.modal>div{background:var(--bg);border:1px solid var(--borde);border-radius:20px;max-width:1100px;width:100%;max-height:94vh;overflow:auto;padding:22px;position:relative}
+.cerrar{position:sticky;top:0;float:right;font-size:22px;cursor:pointer;background:var(--panel2);border-radius:10px;padding:2px 10px}
+ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px solid var(--borde);padding:8px 0}summary{cursor:pointer;font-weight:600}
+.login{max-width:420px;margin:12vh auto;text-align:center}.aviso{padding:12px 14px;border-radius:12px;background:#ffb54718;border:1px solid #ffb54755;margin:10px 0}
+.pedir{display:flex;gap:8px;flex-wrap:wrap}.pedir input{flex:1;min-width:220px}
+.act-l{font-size:13px;line-height:1.8;color:var(--suave)}.act-l b{color:var(--texto)}
+</style>
+</head>
+<body>
+<div id="login" class="login card">
+  <div class="logo" style="justify-content:center;margin-bottom:12px"><i>◎</i>RADAR</div>
+  <p class="muted">Tus resultados están encriptados. Escribí tu contraseña de RADAR (la misma que pusiste en GitHub como <b>RADAR_CLAVE</b>).</p>
+  <input id="clave" type="password" placeholder="Contraseña" autocomplete="current-password">
+  <p><label class="muted"><input type="checkbox" id="recordar" checked style="width:auto"> Recordarla en este dispositivo</label></p>
+  <button class="btn" id="entrar" style="width:100%;justify-content:center">Entrar</button>
+  <p id="loginMsg" class="muted"></p>
+</div>
+
+<div id="app" class="oculto">
+<header><div class="cab"><div class="logo"><i>◎</i>RADAR <span class="muted" style="font-weight:400;font-size:13px">en la nube</span></div>
+  <nav><button data-v="productos" class="act">📦 Productos</button><button data-v="pedir">🔎 Pedir</button><button data-v="capital">💰 Capital</button><button data-v="aprendizaje">🧠 Aprendizaje</button><button data-v="actividad">⏱ Actividad</button></nav></div></header>
+<main>
+  <section id="v-productos">
+    <div class="grid g4" id="kpis"></div>
+    <p class="muted" id="estado" style="margin:12px 0"></p>
+    <div class="card" id="informe" style="margin-bottom:16px"></div>
+    <div class="grid gp" id="lista"></div>
+  </section>
+  <section id="v-pedir" class="oculto">
+    <h1>Pedir productos</h1>
+    <p class="sub">Escribí lo que querés. Al tocar «Enviar pedido» se abre GitHub con el pedido ya escrito: solo tocá el botón verde <b>«Create»</b> (o «Submit new issue»). RADAR empieza en 1 minuto y te deja los resultados acá. Lo que escribís en el pedido es visible en GitHub; los resultados no (están encriptados).</p>
+    <div class="card"><div class="pedir"><input id="qPedido" placeholder="Ej.: dame 5 productos de cocina para Navidad"><button class="btn" id="btnPedir">Enviar pedido ➤</button></div>
+      <p class="muted">Ejemplos: «dame 10 productos para mascotas» · «dame 5 productos de más de $50.000» · «analizá organizador de maquillaje giratorio».</p></div>
+  </section>
+  <section id="v-capital" class="oculto"><h1>Hacer rendir tu capital</h1><div id="capital"></div>
+    <p class="muted">Información general para comparar opciones. No es asesoramiento financiero: confirmá tasas y riesgos con tu banco, broker o un asesor antes de invertir.</p></section>
+  <section id="v-aprendizaje" class="oculto"><h1>Lo que aprendió RADAR</h1>
+    <div class="grid g2"><div class="card"><h2>🛠 Mejoras que se aplicó solo</h2><div id="mejoras"></div></div><div class="card"><h2>📜 Reglas</h2><div id="reglas"></div></div></div>
+    <div class="card" style="margin-top:14px"><h2>📘 Lecciones (investigaciones y videos de YouTube)</h2><div id="lecciones"></div></div></section>
+  <section id="v-actividad" class="oculto"><h1>Actividad</h1><div class="card act-l" id="actividad"></div></section>
+</main>
+</div>
+<div class="modal oculto" id="modal"><div><span class="cerrar" id="cerrar">✕</span><div id="modalC"></div></div></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ars=n=>(n==null||!isFinite(n))?'—':'$'+Math.round(n).toLocaleString('es-AR');
+const pct=n=>(n==null||!isFinite(n))?'—':Math.round(n)+'%';
+const lista=a=>(a||[]).length?`<ul>${a.map(x=>`<li>${esc(typeof x==='object'?Object.values(x).join(' · '):x)}</li>`).join('')}</ul>`:'<p class="muted">—</p>';
+const md=t=>esc(t||'').replace(/^### (.*)$/gm,'<h3>$1</h3>').replace(/^## (.*)$/gm,'<h2>$1</h2>').replace(/^# (.*)$/gm,'<h2>$1</h2>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/^\s*[-*] (.*)$/gm,'<li>$1</li>').replace(/\n/g,'<br>');
+const segura=u=>/^https?:\/\//i.test(String(u||''))?String(u):'';
+let D=null;
+
+// dónde están los datos: se leen del repositorio para que estén siempre al día
+function origen(){const h=location.hostname,partes=location.pathname.split('/').filter(Boolean);
+  if(/\.github\.io$/.test(h)&&partes[0])return{owner:h.split('.')[0],repo:partes[0]};return null}
+async function bajar(){const o=origen(),urls=[];if(o)urls.push(`https://raw.githubusercontent.com/${o.owner}/${o.repo}/HEAD/docs/datos.enc?t=${Date.now()}`);urls.push('datos.enc?t='+Date.now());
+  for(const u of urls){try{const r=await fetch(u,{cache:'no-store'});if(r.ok)return await r.text()}catch(e){}}throw new Error('Todavía no hay resultados. RADAR los publica después de su primera vuelta (unos minutos).')}
+const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+async function abrir(texto,clave){const o=JSON.parse(texto),enc=new TextEncoder();
+  const base=await crypto.subtle.importKey('raw',enc.encode(clave),'PBKDF2',false,['deriveKey']);
+  const k=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(o.s),iterations:o.it||150000,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
+  const plano=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(o.iv)},k,b64(o.d));return JSON.parse(new TextDecoder().decode(plano))}
+async function cargar(clave,silencioso){try{const t=await bajar();D=await abrir(t,clave);$('#login').classList.add('oculto');$('#app').classList.remove('oculto');render();return true}
+  catch(e){if(!silencioso)$('#loginMsg').textContent=e.name==='OperationError'?'Contraseña incorrecta.':e.message;return false}}
+$('#entrar').onclick=async()=>{const c=$('#clave').value;$('#loginMsg').textContent='Abriendo…';if(await cargar(c)){if($('#recordar').checked)try{localStorage.setItem('radar_clave',c)}catch(e){}}};
+$('#clave').onkeydown=e=>{if(e.key==='Enter')$('#entrar').click()};
+try{const c=localStorage.getItem('radar_clave');if(c)cargar(c,true)}catch(e){}
+setInterval(()=>{try{const c=localStorage.getItem('radar_clave');if(c&&D)cargar(c,true)}catch(e){}},10*60000);
+
+$$('nav button').forEach(b=>b.onclick=()=>{$$('nav button').forEach(x=>x.classList.toggle('act',x===b));$$('main>section').forEach(s=>s.classList.toggle('oculto',s.id!=='v-'+b.dataset.v))});
+$('#btnPedir').onclick=()=>{const t=$('#qPedido').value.trim();if(!t)return alert('Escribí qué querés buscar.');const o=origen()||(D?.repo?{owner:D.repo.split('/')[0],repo:D.repo.split('/')[1]}:null);
+  if(!o)return alert('Esta página tiene que estar publicada en GitHub para enviar pedidos.');
+  window.open(`https://github.com/${o.owner}/${o.repo}/issues/new?title=${encodeURIComponent('Pedido: '+t)}&body=${encodeURIComponent('Pedido enviado desde la página de RADAR.')}`,'_blank')};
+$('#cerrar').onclick=()=>$('#modal').classList.add('oculto');$('#modal').onclick=e=>{if(e.target.id==='modal')$('#modal').classList.add('oculto')};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#modal').classList.add('oculto')});
+
+const hace=f=>{const m=Math.round((Date.now()-new Date(f))/60000);return m<60?`hace ${m} min`:m<1440?`hace ${Math.round(m/60)} h`:`hace ${Math.round(m/1440)} días`};
+const imgURL=p=>segura(p.imagen_url);
+const linkDe=p=>segura(p.fuente_principal?.url)||segura((p.precios_mercados||[]).find(m=>segura(m.url))?.url)||segura((p.fuentes||[])[0]?.url);
+const gimg=p=>'https://www.google.com/search?tbm=isch&q='+encodeURIComponent(p.nombre);
+function render(){
+  const t=D.totales||{};
+  $('#kpis').innerHTML=[['Productos para vender',t.aprobados],['Productos revisados',t.analizados],['Dólar oficial',ars(D.dolar)],['Estrategia',`versión ${D.version_estrategia}`]].map(([l,v])=>`<div class="card kpi"><div class="l">${l}</div><div class="v">${v??'—'}</div></div>`).join('');
+  $('#estado').innerHTML=`🟢 RADAR trabaja solo cada hora en la nube. Última vuelta: <b>${hace(D.generado)}</b>. Avisos de WhatsApp: de ${(D.criterios.whatsapp||[]).map(([a,b])=>a+' a '+b).join(' y de ')} h${t.en_cola_whatsapp?` (${t.en_cola_whatsapp} esperando el horario)`:''}.`;
+  $('#informe').innerHTML=D.informe?`<h2>📰 ${esc(D.informe.titulo)}</h2><div>${md(D.informe.contenido)}</div>`:'<p class="muted">El informe del día aparece después de las primeras vueltas.</p>';
+  $('#lista').innerHTML=(D.productos||[]).map((p,i)=>{const ev=p.ev,img=imgURL(p);return`<div class="card prod" data-i="${i}">
+    ${img?`<img class="foto" src="${esc(img)}" referrerpolicy="no-referrer" loading="lazy" onerror="this.outerHTML='<div class=&quot;sinfoto&quot;>📦</div>'">`:'<div class="sinfoto">📦</div>'}
+    <div><b>${esc(p.nombre)}</b><div style="margin-top:6px">${(ev.canales||[]).map(c=>`<span class="chip">✅ ${esc(c)}</span>`).join('')}${p.demanda?.unidades_vendidas_aprox?`<span class="chip g">${esc(p.demanda.unidades_vendidas_aprox)} vendidos</span>`:''}</div></div>
+    <table><tr><td>Mercado Libre</td><td class="r">${ars(ev.r?.precio)}</td><td class="r"><b>gana ${ars(ev.r?.ganancia)}</b></td></tr><tr><td>Tu web</td><td class="r">${ars(ev.w?.precio)}</td><td class="r"><b>gana ${ars(ev.w?.ganancia)}</b></td></tr></table>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="btn chico">Ver detalle</span>${linkDe(p)?`<a class="btn chico sec" href="${esc(linkDe(p))}" target="_blank" onclick="event.stopPropagation()">🔗 Donde lo encontré</a>`:''}</div></div>`}).join('')||'<div class="card"><p>Todavía no hay productos que cumplan tus reglas. RADAR sigue buscando cada hora y te avisa por WhatsApp cuando encuentre uno.</p></div>';
+  $$('.prod').forEach(c=>c.onclick=()=>ficha(D.productos[+c.dataset.i]));
+  // capital
+  const rp=(D.productos||[]).map(p=>{const ev=p.ev,web=ev.w?.cumple&&ev.w.ganancia>ev.r.ganancia,g=web?ev.w.ganancia:ev.r.ganancia,c=web?ev.w.cp.unit:ev.r.cp.unit,dias=(+String(ev.r.cp.dias||'30').split('-').pop()||30)+30,roi=c?g/c*100:0;return{n:p.nombre,canal:web?'Tu web':'Mercado Libre',roi,dias,mes:roi*30/dias}}).sort((a,b)=>b.mes-a.mes);
+  const cap=D.capital?.datos;
+  $('#capital').innerHTML=`<div class="card"><h2>📦 Reinvertir en tus productos</h2>${rp.length?`<table><tr><th>Producto</th><th>Mejor canal</th><th class="r">Ganancia por ciclo</th><th class="r">Días</th><th class="r">Rinde por mes</th></tr>${rp.map(x=>`<tr><td>${esc(x.n)}</td><td>${x.canal}</td><td class="r">${pct(x.roi)}</td><td class="r">${x.dias}</td><td class="r"><b>${pct(x.mes)}</b></td></tr>`).join('')}</table>`:'<p class="muted">Aparece cuando haya productos aprobados.</p>'}</div>
+   <div class="card" style="margin-top:14px"><h2>🏦 Alternativas de inversión hoy</h2>${cap?`<p>${esc(cap.resumen)}</p>${cap.inflacion_esperada?`<p class="muted">Inflación esperada: ${esc(cap.inflacion_esperada)}</p>`:''}<table><tr><th>Opción</th><th>Rendimiento</th><th>Riesgo</th><th>Liquidez</th><th>Cómo empezar</th></tr>${(cap.opciones||[]).map(o=>`<tr><td><b>${esc(o.nombre)}</b><div class="muted">${esc(o.conviene_si||'')}</div></td><td>${esc(o.rendimiento_aprox)}</td><td>${esc(o.riesgo)}</td><td>${esc(o.liquidez)}</td><td>${esc(o.como_empezar)}</td></tr>`).join('')}</table>${cap.estrategia_sugerida?`<div class="card ok" style="margin-top:10px"><b>Cómo repartir el capital:</b> ${esc(cap.estrategia_sugerida)}</div>`:''}<p class="muted">Datos ${hace(D.capital.fecha)}. ${(D.capital.fuentes||[]).slice(0,4).map(f=>segura(f.url)?`<a href="${esc(f.url)}" target="_blank">${esc(String(f.titulo||'fuente').slice(0,40))}</a>`:'').join(' · ')}</p>`:'<p class="muted">RADAR actualiza esto una vez por día.</p>'}</div>`;
+  const it=c=>`<details><summary>${esc(c.titulo)} <span class="muted">· ${esc((c.fecha||'').slice(0,10))}</span></summary><div>${md(c.contenido)}</div>${c.fuente?`<p class="muted">${segura(c.url)?`<a href="${esc(c.url)}" target="_blank">${esc(c.fuente)}</a>`:esc(c.fuente)}</p>`:''}</details>`;
+  $('#mejoras').innerHTML=(D.mejoras||[]).map(it).join('')||'<p class="muted">Una vez por día RADAR revisa sus resultados y se reprograma. Lo que cambia aparece acá.</p>';
+  $('#reglas').innerHTML=(D.reglas||[]).map(it).join('')||'<p class="muted">—</p>';$('#lecciones').innerHTML=(D.lecciones||[]).map(it).join('')||'<p class="muted">—</p>';
+  $('#actividad').innerHTML=(D.actividad||[]).map(a=>`<div>${esc(new Date(a.fecha).toLocaleString('es-AR'))} · <b>${esc(a.tipo)}</b> ${esc(a.detalle)}</div>`).join('');
+}
+function ficha(p){const ev=p.ev,r=ev.r,w=ev.w,c=r.cv,cw=w.cv,d=p.demanda||{},img=imgURL(p),link=linkDe(p),fila=(t,v)=>v?`<tr><td>${t}</td><td class="r">− ${ars(v)}</td></tr>`:'';
+  $('#modalC').innerHTML=`<div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+   <a href="${esc(link||gimg(p))}" target="_blank" style="flex:0 0 200px">${img?`<img class="foto" src="${esc(img)}" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;sinfoto&quot;>📷</div>'">`:'<div class="sinfoto">📷</div>'}</a>
+   <div style="flex:1;min-width:240px"><h1>${esc(p.nombre)}</h1><p class="muted">${esc(p.categoria||'')} · encontrado ${hace(p.creado)}</p><p>${esc(p.resumen||p.descripcion||'')}</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">${link?`<a class="btn" href="${esc(link)}" target="_blank">🔗 Ir a donde lo encontré${p.fuente_principal?.plataforma?': '+esc(p.fuente_principal.plataforma):''}</a>`:''}<a class="btn sec" href="${esc(gimg(p))}" target="_blank">📷 Más fotos</a></div></div></div>
+   <div class="grid g2" style="margin-top:16px">
+    <div class="card ${r.cumple?'ok':''}"><h2>🛒 Mercado Libre ${r.cumple?'✅ conviene':'❌ no conviene'}</h2><p class="muted">Regla A (${D.criterios.ml_a}% s/ proveedor): ${r.reglaA?'✅':'❌'} ${pct(r.markup)} · Regla B (ganancia ≥ ${D.criterios.ml_b}% del costo): ${r.reglaB?'✅':'❌'} ${pct(r.ganancia_pct_costo)}</p>
+     <table><tr><td><b>Precio de venta</b></td><td class="r"><b>${ars(r.precio)}</b></td></tr>${fila('Comisión ML ('+c.comision_pct+'%)',c.comision)}${fila('Costo fijo',c.fijo)}${fila('IVA sobre cargos',c.iva)}${fila('Envío a tu cargo',c.envio)}${fila('Publicidad',c.pub)}${fila('Impuestos de la venta',c.impv)}${fila('Devoluciones (previsión)',c.dev)}${fila('Embalaje',c.pack)}${fila('Producto puesto en mano ('+esc(r.cp.metodo)+')',r.cp.unit)}<tr><td><b>Ganancia limpia por unidad</b></td><td class="r"><b>${ars(r.ganancia)}</b></td></tr></table><p class="muted">Precio mínimo para que convenga: <b>${ars(r.minimo)}</b></p></div>
+    <div class="card ${w.cumple?'ok':''}"><h2>🌐 Tu página web ${w.cumple?'✅ conviene':'❌ no conviene'}</h2><p class="muted">Regla: ganancia limpia ≥ ${D.criterios.web}% del precio · resultado ${pct(w.margen_precio)}</p>
+     <table><tr><td><b>Precio de venta</b></td><td class="r"><b>${ars(w.precio)}</b></td></tr>${fila('Plataforma de la tienda',cw.plat)}${fila('Cobro con tarjeta / Mercado Pago',cw.pas)}${fila('IVA sobre cargos',cw.iva)}${fila('Publicidad (Meta / Google)',cw.pub)}${fila('Impuestos de la venta',cw.impv)}${fila('Devoluciones (previsión)',cw.dev)}${fila('Embalaje',cw.pack)}${fila('Envío a tu cargo',cw.envio)}${fila('Producto puesto en mano',w.cp.unit)}<tr><td><b>Ganancia limpia por unidad</b></td><td class="r"><b>${ars(w.ganancia)}</b></td></tr></table><p class="muted">Precio mínimo en tu web: <b>${ars(w.minimo)}</b></p></div></div>
+   ${(p.maxima_ganancia||[]).length?`<div class="card ok" style="margin-top:14px"><h2>🏆 Cómo ganar lo máximo</h2>${lista(p.maxima_ganancia)}</div>`:''}
+   ${(p.alternativas_mejoradas||[]).length?`<div class="card" style="margin-top:14px"><h2>🔧 Versiones mejores o más baratas para tu web</h2><table><tr><th>Alternativa</th><th>Qué mejora</th><th class="r">Costo</th><th class="r">Precio web</th><th></th></tr>${p.alternativas_mejoradas.map(a=>`<tr><td><b>${esc(a.nombre)}</b><div class="muted">${esc(a.proveedor||'')}</div></td><td>${esc(a.mejora||'')}</td><td class="r">USD ${esc(a.costo_usd??'—')}</td><td class="r">${ars(+a.precio_web_sugerido_ars)}</td><td>${segura(a.url)?`<a href="${esc(a.url)}" target="_blank">ver ↗</a>`:''}</td></tr>`).join('')}</table></div>`:''}
+   <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h2>💵 Precios en cada plataforma</h2><table>${(p.precios_mercados||[]).map(m=>`<tr><td>${esc(m.mercado)}${m.vendidos?`<div class="muted">${esc(m.vendidos)}</div>`:''}</td><td class="r">${esc(m.precio)} ${esc(m.moneda||'')}</td><td>${segura(m.url)?`<a href="${esc(m.url)}" target="_blank">ir ↗</a>`:''}</td></tr>`).join('')}</table></div>
+    <div class="card"><h2>🏭 Proveedores</h2><table>${(p.proveedores||[]).map(x=>`<tr><td>${/local|nacional|argentin/i.test(x.tipo||'')?'🇦🇷':'🌍'} ${esc(x.proveedor)}<div class="muted">${esc(x.plataforma||'')}${x.moq?' · mínimo '+esc(x.moq):''}</div></td><td class="r">${+x.precio_ars?ars(+x.precio_ars):'USD '+esc(x.precio_usd)}</td><td>${segura(x.url)?`<a href="${esc(x.url)}" target="_blank">ir ↗</a>`:''}</td></tr>`).join('')}</table></div></div>
+   <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h2>📈 Demanda</h2><p><b>Prueba de ventas:</b> ${esc(d.prueba_de_ventas||'—')}</p><p><b>Tendencia:</b> ${esc(d.tendencia||'—')}</p><p><b>Temporada:</b> ${esc(d.estacionalidad||'—')} ${(d.meses_pico||[]).length?'· pico: '+esc(d.meses_pico.join(', ')):''}</p><p><b>Qué busca la gente:</b> ${esc(d.busquedas||'—')}</p></div>
+    <div class="card"><h2>🚚 Cómo traerlo más barato y seguro</h2><table>${(ev.ms||[]).map(m=>`<tr><td>${m.rec?'⭐ ':''}${esc(m.metodo)}</td><td class="r">${ars(m.unit)}/u</td><td>${esc(m.dias)} días</td></tr>`).join('')}</table></div></div>
+   <div class="grid g2" style="margin-top:14px"><div class="card ok"><h2>✅ Por qué sí</h2>${lista(p.por_que_si)}</div><div class="card"><h2>⚠️ A tener en cuenta</h2>${lista(p.por_que_no)}</div></div>
+   <div class="grid g2" style="margin-top:14px"><div class="card"><h2>🛒 Cómo venderlo</h2>${lista(Object.values(p.plan_venta||{}))}</div><div class="card"><h2>📣 Publicidad</h2>${lista(Object.entries(p.plan_publicidad||{}).map(([k,v])=>k.replace(/_/g,' ')+': '+v))}</div></div>`;
+  $('#modal').classList.remove('oculto');$('#modal>div').scrollTop=0}
+</script>
+</body>
+</html>
