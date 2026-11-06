@@ -93,7 +93,15 @@ Incluí tendencia, estacionalidad y meses pico, qué busca la gente, quejas, reg
 ${CRITERIOS()}
 Devolvé SOLO un JSON con esta forma (números como números, sin texto extra):
 ${ESQUEMA}`, true);
-  const p = Array.isArray(datos) ? datos[0] : datos; if (!p || !p.nombre) throw new Error('análisis incompleto');
+  // acepta el análisis aunque venga envuelto o con otros nombres de campo
+  let p = Array.isArray(datos) ? datos[0] : datos;
+  if (p && typeof p === 'object' && !p.nombre && !p.precio_venta_sugerido_ars) {
+    const dentro = Object.values(p).filter(v => v && typeof v === 'object' && !Array.isArray(v)).sort((a, b) => Object.keys(b).length - Object.keys(a).length)[0];
+    if (dentro && Object.keys(dentro).length >= 5) p = dentro;
+  }
+  if (!p || typeof p !== 'object') throw new Error('análisis vacío');
+  p.nombre = p.nombre || p.producto || p.name || p.titulo || nombre;
+  if (!p.costo_proveedor_usd && !(p.proveedores || []).length) throw new Error('el análisis no trajo precio de proveedor');
   Object.assign(p, { fuentes: [...(p.fuentes || []), ...(fuentes || [])].slice(0, 15), origen, creado: ahora(), busqueda_web: web });
   let k = slug(p.nombre); if (E.productos[k]) k += '-' + id().slice(-4);
   E.productos[k] = p;
