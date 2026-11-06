@@ -79,7 +79,12 @@ ${cond ? 'Pedido del vendedor: ' + cond : extra}
 ${CRITERIOS()}
 Devolvé SOLO un JSON: lista de objetos {"producto":"nombre específico","motivo":"prueba de ventas encontrada"}.`, true);
   const ya = new Set(Object.values(E.productos).map(p => String(p.nombre).toLowerCase()));
-  return (Array.isArray(datos) ? datos : datos.productos || []).filter(x => x && x.producto && !ya.has(String(x.producto).toLowerCase()));
+  // acepta cualquier forma de lista que devuelva la IA
+  let lista = Array.isArray(datos) ? datos : (datos.productos || datos.items || datos.lista || datos.resultados || Object.values(datos).find(v => Array.isArray(v)) || []);
+  lista = lista.map(x => typeof x === 'string' ? { producto: x } : { ...x, producto: x.producto || x.nombre || x.name || x.titulo || x.product || x.title }).filter(x => x && x.producto);
+  const nuevos = lista.filter(x => !ya.has(String(x.producto).toLowerCase()));
+  if (!nuevos.length) registrar('exploracion', `La búsqueda devolvió ${lista.length} productos y ninguno nuevo`);
+  return nuevos;
 }
 async function analizar(nombre, origen) {
   const { datos, fuentes, web } = await ia.json(`Hacé un análisis MINUCIOSO del producto "${nombre}" para venderlo en Argentina en Mercado Libre y en una página web propia, comprándolo al proveedor más conveniente (internacional o local).
@@ -272,7 +277,7 @@ async function vuelta() {
   } else {
     E.vuelta = (E.vuelta || 0) + 1;
     const tareas = [
-      ['explorar', 0, async () => { const c = await proponer(EST.productosPorVuelta + 1); for (const x of c.slice(0, EST.productosPorVuelta)) { if (!cupo()) break; try { await analizar(x.producto, 'exploracion') } catch (e) { registrar('error', x.producto + ': ' + e.message) } guardar(); await esperar(3000) } }],
+      ['explorar', 0, async () => { const c = await proponer(EST.productosPorVuelta + 1); let n = 0, ok = 0; for (const x of c.slice(0, EST.productosPorVuelta)) { if (!cupo()) break; try { const { ev } = await analizar(x.producto, 'exploracion'); n++; if (ev.veredicto === 'VENDER') ok++ } catch (e) { registrar('error', x.producto + ': ' + e.message) } guardar(); await esperar(3000) } if (n) registrar('exploracion', `Analicé ${n} productos nuevos; ${ok} cumplen tus reglas`) }],
       ['aprender', 4, aprender], ['videos', 12, videos], ['capital', 20, capital], ['informe', 20, informe], ['automejora', 24, autoMejora]
     ];
     for (const [k, h, f] of tareas) {
