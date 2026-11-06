@@ -73,7 +73,7 @@ const ESQUEMA = `{"nombre","categoria","descripcion","peso_kg":número,"derecho_
 
 const mesActual = () => new Date().toLocaleDateString('es-AR', { month: 'long', timeZone: 'America/Argentina/Buenos_Aires' });
 
-async function proponer(n, cond) {
+async function proponer(n, cond, segundo) {
   const extra = EST.instruccionesBusqueda({ vuelta: E.vuelta, mes: mesActual(), aprobados: prods().filter(p => p.ev.veredicto === 'VENDER').map(p => p.nombre) });
   const { datos } = await ia.json(`Hacé una búsqueda EXHAUSTIVA y GLOBAL en internet de ${n} productos DISTINTOS para vender en Argentina (Mercado Libre y página web propia) que cumplan estos criterios. Mirá los más vendidos de Mercado Libre por categoría, Amazon Best Sellers y Movers & Shakers, AliExpress y Temu, TikTok Shop, tendencias de Google y lo que la gente busca en esta temporada (hoy es ${new Date().toLocaleDateString('es-AR')}). Incluí productos que venden más de 1000 unidades para los que se pueda conseguir una versión mejor o más barata.
 ${cond ? 'Pedido del vendedor: ' + cond : extra}
@@ -84,6 +84,7 @@ Devolvé SOLO un JSON: lista de objetos {"producto":"nombre específico","motivo
   let lista = Array.isArray(datos) ? datos : (datos.productos || datos.items || datos.lista || datos.resultados || Object.values(datos).find(v => Array.isArray(v)) || []);
   lista = lista.map(x => typeof x === 'string' ? { producto: x } : { ...x, producto: x.producto || x.nombre || x.name || x.titulo || x.product || x.title }).filter(x => x && x.producto);
   const nuevos = lista.filter(x => !ya.has(String(x.producto).toLowerCase()));
+  if (!nuevos.length && !segundo) { log('Búsqueda vacía, reintento de otra forma'); return proponer(Math.min(n, 8), (cond ? cond + '. ' : '') + 'Respondé SOLO con la lista JSON, sin texto antes ni después, sin citas entre corchetes. Si no encontrás evidencia exacta, igual proponé los productos más prometedores con ventas visibles en Mercado Libre.', true) }
   if (!nuevos.length) registrar('exploracion', `La búsqueda devolvió ${lista.length} productos y ninguno nuevo`);
   return nuevos;
 }
