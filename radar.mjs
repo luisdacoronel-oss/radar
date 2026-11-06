@@ -110,6 +110,16 @@ function horaArgentina() {
 const enHorario = () => { const t = horaArgentina(); return (config.whatsapp_horarios || [[10, 13], [17, 22]]).some(([a, b]) => t >= a * 60 && t <= b * 60) };
 async function enviarWhatsApp(txt) {
   if (!env.WA_TELEFONO || !env.WA_APIKEY) throw new Error('faltan WA_TELEFONO o WA_APIKEY');
+  // Opción GREEN-API (gratis, plan Developer): WA_APIKEY = green:ID_INSTANCIA:TOKEN  (o green:ID:TOKEN:https://xxxx.api.greenapi.com)
+  const g = String(env.WA_APIKEY).trim().match(/^green:(\d+):([^:]+)(?::(https?:\/\/.+))?$/i);
+  if (g) {
+    const base = (g[3] || 'https://api.green-api.com').replace(/\/$/, '');
+    const chatId = env.WA_TELEFONO.replace(/\D/g, '') + '@c.us';
+    if (env.MOCK) { E.wa_enviados = (E.wa_enviados || 0) + 1; return }
+    const r = await fetch(`${base}/waInstance${g[1]}/sendMessage/${g[2]}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chatId, message: txt }) });
+    const t = await r.text(); if (!r.ok || !/idMessage/.test(t)) throw new Error('Green-API respondió: ' + t.slice(0, 160));
+    return;
+  }
   const url = `https://api.callmebot.com/whatsapp.php?phone=${encodeURIComponent(env.WA_TELEFONO.replace(/[^\d+]/g, ''))}&text=${encodeURIComponent(txt)}&apikey=${encodeURIComponent(env.WA_APIKEY)}`;
   if (env.MOCK) { E.wa_enviados = (E.wa_enviados || 0) + 1; return }
   const r = await fetch(url); const t = await r.text();
