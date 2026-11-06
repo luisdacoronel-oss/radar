@@ -168,7 +168,7 @@ function ficha(p){const ev=p.ev,r=ev.r,w=ev.w,c=r.cv,cw=w.cv,d=p.demanda||{},img
 // ============================================================ ASISTENTE IA (chat que conoce todo RADAR, busca en internet y aprende)
 let CHAT=[];try{CHAT=JSON.parse(localStorage.getItem('radar_chat')||'[]')}catch(e){CHAT=[]}
 let MEM=[];try{MEM=JSON.parse(localStorage.getItem('radar_mem')||'[]')}catch(e){MEM=[]}
-const guardarChat=()=>{try{localStorage.setItem('radar_chat',JSON.stringify(CHAT.slice(-60)));localStorage.setItem('radar_mem',JSON.stringify(MEM.slice(-60)))}catch(e){}};
+const guardarChat=()=>{try{localStorage.setItem('radar_chat',JSON.stringify(CHAT.filter(m=>!m.err).slice(-60)));localStorage.setItem('radar_mem',JSON.stringify(MEM.slice(-60)))}catch(e){}};
 const BLOQ={};
 function contextoIA(){
   const ps=(D.productos||[]).slice(0,25).map(p=>({nombre:p.nombre,conviene_en:p.ev.canales,precio_ml:Math.round(p.ev.r?.precio||0),ganancia_ml:Math.round(p.ev.r?.ganancia||0),precio_web:Math.round(p.ev.w?.precio||0),ganancia_web:Math.round(p.ev.w?.ganancia||0),costo_proveedor_usd:p.ev.costo,ventas:p.demanda?.prueba_de_ventas,temporada:p.demanda?.estacionalidad,como_ganar_mas:p.maxima_ganancia,link:linkDe(p)}));
@@ -190,7 +190,8 @@ PEDIDOS: si el usuario pide que busques o analices productos para guardarlos, re
 ${VOZC.hablar?'Tu respuesta se va a leer en voz alta: frases cortas, sin tablas, máximo 120 palabras.':'Usá markdown breve (listas cortas, negritas).'}`;
 }
 async function preguntarIA(){
-  const k=D.ia_claves||{},sys=contextoIA(),hist=CHAT.slice(-16),errores=[];
+  if(!(D.ia_claves||{}).g&&!(D.ia_claves||{}).q){try{const c=localStorage.getItem('radar_clave');if(c){const t=await bajar();D=await abrir(t,c)}}catch(e){}}
+  const k=D.ia_claves||{},sys=contextoIA(),hist=CHAT.filter(m=>!m.err).slice(-16),errores=[];
   if(k.g){for(const model of ['gemini-2.5-flash','gemini-flash-latest','gemini-2.5-flash-lite'])for(const web of [true,false]){
     const b=model+web;if(BLOQ[b]>Date.now())continue;
     try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(k.g)}`,{method:'POST',headers:{'Content-Type':'application/json'},
@@ -224,7 +225,7 @@ async function enviarChat(txt){txt=String(txt||$('#chatIn').value).trim();if(!tx
     t=t.replace(/\[\[\s*NOTA:\s*([\s\S]*?)\]\]/i,(_,x)=>{nota=x.trim();return''}).replace(/\[\[\s*PEDIDO:\s*([\s\S]*?)\]\]/i,(_,x)=>{pedido=x.trim().replace(/^"|"$/g,'');return''}).trim();
     if(nota)MEM.push({texto:nota,fecha:new Date().toISOString()});
     CHAT.push({r:'ia',t,f,nota,pedido});decirIA(t)}
-  catch(e){CHAT.push({r:'ia',t:'⚠️ '+e.message})}
+  catch(e){CHAT.push({r:'ia',t:'⚠️ '+e.message,err:true})}
   CHAT.pend=false;guardarChat();pintarChat()}
 // ---- voz: voz de hombre serena, micrófono y modo manos libres con la palabra «Radar» (20 minutos de conversación)
 const VOZC={hablar:localStorage.getItem('radar_hablar')==='1',manos:false,hasta:0,rec:null,habla:false};
