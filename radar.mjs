@@ -53,6 +53,7 @@ const CRITERIOS = () => {
 5) El capital y la condición fiscal NO importan. Evitá ANMAT/ENACOM y marcas registradas.
 6) Compará en TODAS las plataformas: Mercado Libre Argentina, Amazon, AliExpress, Temu, Shein, eBay, Alibaba, 1688, DHgate, Made-in-China, CJ Dropshipping, Global Sources y proveedores/mayoristas LOCALES de Argentina.
 Notas del vendedor: ${CFG.perfil.notas || '—'}. Dólar oficial: ${CFG.dolar_oficial}.
+Indicaciones que el vendedor le dio a RADAR (respetarlas siempre): ${(E.notas || []).map(n => n.texto).slice(-30).join(' | ') || '—'}
 Ya analizados (no repetir): ${ps.map(p => p.nombre).slice(-150).join(' | ') || 'ninguno'}
 Aprobados hasta ahora: ${ps.filter(p => p.ev.veredicto === 'VENDER').map(p => p.nombre).slice(-30).join(' | ') || '—'}
 Reglas aprendidas: ${conoc('regla').slice(0, 20).map(c => c.titulo).join(' | ') || '—'}`;
@@ -264,7 +265,8 @@ function publicar() {
     productos: vend.map(p => { const { ev, ...resto } = p; return { ...resto, ev: { veredicto: ev.veredicto, puntaje: ev.puntaje, canales: ev.canales, ventas: ev.ventas, costo: ev.costo, precio: ev.precio, r: ev.r, w: ev.w, ms: ev.ms } } }),
     reglas: conoc('regla').slice(0, 30), lecciones: conoc('leccion').slice(0, 80), mejoras: conoc('mejora').slice(0, 30),
     capital: E.conocimiento.capital || null, informe: E.conocimiento.informe || null, actividad: E.actividad.slice(0, 40),
-    repo: env.GITHUB_REPOSITORY || ''
+    repo: env.GITHUB_REPOSITORY || '', notas: (E.notas || []).slice(-60),
+    ia_claves: { g: env.GEMINI_KEY || '', q: env.GROQ_KEY || '' }
   };
   fs.mkdirSync(R('docs'), { recursive: true });
   fs.writeFileSync(R('docs/datos.enc'), encriptar(salida, CLAVE));
@@ -279,6 +281,14 @@ async function vuelta() {
 
   if (env.EVENTO === 'issues' && env.PEDIDO_TITULO) {
     const cuerpo = String(env.PEDIDO_TEXTO || ''), texto = env.PEDIDO_TITULO + (/^Pedido enviado desde/i.test(cuerpo) ? '' : ' ' + cuerpo);
+    if (/^\s*nota\s*:/i.test(env.PEDIDO_TITULO)) {
+      const nota = env.PEDIDO_TITULO.replace(/^\s*nota\s*:\s*/i, '').trim().slice(0, 400);
+      E.notas = [...(E.notas || []), { texto: nota, fecha: ahora() }].slice(-60);
+      registrar('aprendizaje', 'Anoté tu indicación: ' + nota);
+      await github(`/issues/${env.PEDIDO_NUM}/comments`, 'POST', { body: '✅ Anotado. RADAR lo va a tener en cuenta en todas sus búsquedas.' });
+      await github(`/issues/${env.PEDIDO_NUM}`, 'PATCH', { state: 'closed' });
+      await despacharWhatsApp(); guardar(); return;
+    }
     let n = 0; try { n = await procesarPedido(texto) } catch (e) { registrar('error', 'pedido: ' + e.message) }
     await github(`/issues/${env.PEDIDO_NUM}/comments`, 'POST', { body: `✅ Listo. Encontré **${n}** producto(s) que conviene vender. Miralos en tu página: ${PAGINA}\n\n(Los detalles están encriptados: solo se ven con tu contraseña.)` });
     await github(`/issues/${env.PEDIDO_NUM}`, 'PATCH', { state: 'closed' });
