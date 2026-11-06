@@ -30,7 +30,11 @@ table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:7px 6px;b
 ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px solid var(--borde);padding:8px 0}summary{cursor:pointer;font-weight:600}
 .login{max-width:420px;margin:12vh auto;text-align:center}.aviso{padding:12px 14px;border-radius:12px;background:#ffb54718;border:1px solid #ffb54755;margin:10px 0}
 .pedir{display:flex;gap:8px;flex-wrap:wrap}.pedir input{flex:1;min-width:220px}
-.act-l{font-size:13px;line-height:1.8;color:var(--suave)}.act-l b{color:var(--texto)}
+.act-l{font-size:13px;line-height:1.8;color:var(--suave)}
+.chat{display:flex;flex-direction:column;height:calc(100vh - 120px);min-height:480px;padding:12px}.msgs{flex:1;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:6px}
+.msg{max-width:88%;padding:12px 16px;border-radius:16px;line-height:1.55}.msg.yo{align-self:flex-end;background:var(--grad);color:#fff;white-space:pre-wrap}.msg.ia{align-self:flex-start;background:var(--panel2);border:1px solid var(--borde)}.msg h2,.msg h3{font-size:15px;margin:8px 0 4px}
+.fuentes{margin-top:8px;font-size:12px;color:var(--suave)}.chipIA{margin-top:10px;padding:8px 10px;border-radius:10px;background:#7c5cff18;font-size:13px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.barraChat{display:flex;gap:8px;margin-top:10px}.barraChat textarea{flex:1;resize:none}.botonesChat{display:flex;flex-direction:column;gap:6px}.opcVoz{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.btn.act{background:var(--grad)!important;color:#fff}.act-l b{color:var(--texto)}
 </style>
 </head>
 <body>
@@ -46,13 +50,19 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
 
 <div id="app" class="oculto">
 <header><div class="cab"><div class="logo"><i>◎</i>RADAR <span class="muted" style="font-weight:400;font-size:13px">en la nube</span></div>
-  <nav><button data-v="productos" class="act">📦 Productos</button><button data-v="pedir">🔎 Pedir</button><button data-v="capital">💰 Capital</button><button data-v="aprendizaje">🧠 Aprendizaje</button><button data-v="actividad">⏱ Actividad</button></nav></div></header>
+  <nav><button data-v="productos" class="act">📦 Productos</button><button data-v="asistente">💬 Asistente</button><button data-v="pedir">🔎 Pedir</button><button data-v="capital">💰 Capital</button><button data-v="aprendizaje">🧠 Aprendizaje</button><button data-v="actividad">⏱ Actividad</button></nav></div></header>
 <main>
   <section id="v-productos">
     <div class="grid g4" id="kpis"></div>
     <p class="muted" id="estado" style="margin:12px 0"></p>
     <div class="card" id="informe" style="margin-bottom:16px"></div>
     <div class="grid gp" id="lista"></div>
+  </section>
+  <section id="v-asistente" class="oculto">
+    <div class="chat card"><div id="msgs" class="msgs"></div>
+      <div class="barraChat"><textarea id="chatIn" rows="2" placeholder="Preguntale a RADAR… (por ejemplo: ¿qué producto me conviene más para Navidad y cómo lo publicito?)"></textarea>
+        <div class="botonesChat"><button class="btn sec" id="btnMicro" title="Hablar">🎙</button><button class="btn" id="btnChat">Enviar ➤</button></div></div>
+      <div class="opcVoz"><button class="btn chico sec" id="btnHablar">🔊 Responder con voz</button><button class="btn chico sec" id="btnManos">🙌 Manos libres («Radar»)</button><button class="btn chico sec" id="btnBorrar">🗑 Nueva conversación</button><span class="muted" id="vozInfo"></span></div></div>
   </section>
   <section id="v-pedir" class="oculto">
     <h1>Pedir productos</h1>
@@ -130,6 +140,7 @@ function render(){
   const it=c=>`<details><summary>${esc(c.titulo)} <span class="muted">· ${esc((c.fecha||'').slice(0,10))}</span></summary><div>${md(c.contenido)}</div>${c.fuente?`<p class="muted">${segura(c.url)?`<a href="${esc(c.url)}" target="_blank">${esc(c.fuente)}</a>`:esc(c.fuente)}</p>`:''}</details>`;
   $('#mejoras').innerHTML=(D.mejoras||[]).map(it).join('')||'<p class="muted">Una vez por día RADAR revisa sus resultados y se reprograma. Lo que cambia aparece acá.</p>';
   $('#reglas').innerHTML=(D.reglas||[]).map(it).join('')||'<p class="muted">—</p>';$('#lecciones').innerHTML=(D.lecciones||[]).map(it).join('')||'<p class="muted">—</p>';
+  pintarChat();
   $('#actividad').innerHTML=(D.actividad||[]).map(a=>`<div>${esc(new Date(a.fecha).toLocaleString('es-AR',{hourCycle:'h23',day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}))} · <b>${esc(a.tipo)}</b> ${esc(a.detalle)}</div>`).join('');
 }
 function ficha(p){const ev=p.ev,r=ev.r,w=ev.w,c=r.cv,cw=w.cv,d=p.demanda||{},img=imgURL(p),link=linkDe(p),fila=(t,v)=>v?`<tr><td>${t}</td><td class="r">− ${ars(v)}</td></tr>`:'';
@@ -153,6 +164,95 @@ function ficha(p){const ev=p.ev,r=ev.r,w=ev.w,c=r.cv,cw=w.cv,d=p.demanda||{},img
    <div class="grid g2" style="margin-top:14px"><div class="card ok"><h2>✅ Por qué sí</h2>${lista(p.por_que_si)}</div><div class="card"><h2>⚠️ A tener en cuenta</h2>${lista(p.por_que_no)}</div></div>
    <div class="grid g2" style="margin-top:14px"><div class="card"><h2>🛒 Cómo venderlo</h2>${lista(Object.values(p.plan_venta||{}))}</div><div class="card"><h2>📣 Publicidad</h2>${lista(Object.entries(p.plan_publicidad||{}).map(([k,v])=>k.replace(/_/g,' ')+': '+v))}</div></div>`;
   $('#modal').classList.remove('oculto');$('#modal>div').scrollTop=0}
+
+// ============================================================ ASISTENTE IA (chat que conoce todo RADAR, busca en internet y aprende)
+let CHAT=[];try{CHAT=JSON.parse(localStorage.getItem('radar_chat')||'[]')}catch(e){CHAT=[]}
+let MEM=[];try{MEM=JSON.parse(localStorage.getItem('radar_mem')||'[]')}catch(e){MEM=[]}
+const guardarChat=()=>{try{localStorage.setItem('radar_chat',JSON.stringify(CHAT.slice(-60)));localStorage.setItem('radar_mem',JSON.stringify(MEM.slice(-60)))}catch(e){}};
+const BLOQ={};
+function contextoIA(){
+  const ps=(D.productos||[]).slice(0,25).map(p=>({nombre:p.nombre,conviene_en:p.ev.canales,precio_ml:Math.round(p.ev.r?.precio||0),ganancia_ml:Math.round(p.ev.r?.ganancia||0),precio_web:Math.round(p.ev.w?.precio||0),ganancia_web:Math.round(p.ev.w?.ganancia||0),costo_proveedor_usd:p.ev.costo,ventas:p.demanda?.prueba_de_ventas,temporada:p.demanda?.estacionalidad,como_ganar_mas:p.maxima_ganancia,link:linkDe(p)}));
+  const cap=D.capital?.datos;
+  const lec=(D.lecciones||[]).slice(0,25).map(c=>c.titulo+': '+String(c.contenido||'').slice(0,220));
+  return `Sos RADAR, el asesor comercial personal del usuario: experto en vender por internet en Argentina (Mercado Libre, tienda web propia, importación, proveedores, publicidad, estrategias de venta, gestión de capital e inversiones). Hoy es ${new Date().toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}.
+FORMA DE RESPONDER: español claro, formal y sencillo, tratando de "vos" con respeto, sin lunfardo ni chistes. Respuestas concretas y accionables, con números, pasos y links cuando sirvan. Pensá con cuidado antes de responder, verificá los datos actuales buscando en internet y no inventes: si estimás, decilo. Si la pregunta es ambigua, respondé lo más útil y hacé una sola pregunta corta al final.
+REGLAS DEL USUARIO: en Mercado Libre, después de comisión, envío, impuestos e importación, un producto sirve si el precio es ${D.criterios.ml_a}% sobre el proveedor con ganancia, o si deja ganancia limpia de al menos ${D.criterios.ml_b}% del costo. En su web propia, la ganancia limpia debe ser al menos ${D.criterios.web}% del precio de venta. Lo más importante son las ventas comprobadas. El capital y la condición fiscal no importan.
+SOBRE INVERSIONES: podés comparar opciones con datos actuales, aclarando riesgos y que no es asesoramiento financiero profesional.
+DÓLAR OFICIAL: ${D.dolar}.
+PRODUCTOS QUE RADAR APROBÓ: ${JSON.stringify(ps)}
+REGLAS APRENDIDAS: ${JSON.stringify((D.reglas||[]).slice(0,25).map(c=>c.titulo+': '+c.contenido))}
+LECCIONES RECIENTES: ${JSON.stringify(lec)}
+CAPITAL HOY: ${cap?JSON.stringify({resumen:cap.resumen,opciones:cap.opciones,estrategia:cap.estrategia_sugerida}):'sin datos'}
+INFORME DEL DÍA: ${String(D.informe?.contenido||'').slice(0,1500)}
+LO QUE YA SABÉS DEL USUARIO (preferencias e indicaciones que te dio): ${JSON.stringify([...(D.notas||[]).map(n=>n.texto),...MEM.map(m=>m.texto)].slice(-50))}
+APRENDIZAJE: si en este mensaje el usuario expresa una preferencia, una corrección, un dato de su negocio o una indicación que valga para el futuro, agregá al final de tu respuesta una línea aparte con este formato exacto: [[NOTA: la indicación en una frase]]. Solo una, y solo si es algo duradero.
+PEDIDOS: si el usuario pide que busques o analices productos para guardarlos, respondé brevemente y agregá al final una línea: [[PEDIDO: el pedido en una frase, por ejemplo "dame 5 productos de cocina de más de $50.000"]].
+${VOZC.hablar?'Tu respuesta se va a leer en voz alta: frases cortas, sin tablas, máximo 120 palabras.':'Usá markdown breve (listas cortas, negritas).'}`;
+}
+async function preguntarIA(){
+  const k=D.ia_claves||{},sys=contextoIA(),hist=CHAT.slice(-16),errores=[];
+  if(k.g){for(const model of ['gemini-2.5-flash','gemini-flash-latest','gemini-2.5-flash-lite'])for(const web of [true,false]){
+    const b=model+web;if(BLOQ[b]>Date.now())continue;
+    try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(k.g)}`,{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({systemInstruction:{parts:[{text:sys}]},contents:hist.map(m=>({role:m.r==='u'?'user':'model',parts:[{text:m.t}]})),tools:web?[{google_search:{}}]:undefined,generationConfig:{temperature:0.5,maxOutputTokens:4096}})});
+      const j=await r.json().catch(()=>({}));
+      if(r.ok){const c=j.candidates?.[0],t=(c?.content?.parts||[]).map(x=>x.text||'').join('');if(t)return{t,f:(c?.groundingMetadata?.groundingChunks||[]).map(g=>({titulo:g.web?.title,url:g.web?.uri})).filter(x=>x.url)}}
+      errores.push(j.error?.message||r.status);BLOQ[b]=Date.now()+(r.status===429?36e5:r.status>=500?6e4:864e5)}catch(e){errores.push(e.message)}}}
+  if(k.q){for(const[model,web]of[['groq/compound',true],['openai/gpt-oss-120b',false],['llama-3.3-70b-versatile',false]]){
+    if(BLOQ[model]>Date.now())continue;
+    try{const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+k.q},
+      body:JSON.stringify({model,messages:[{role:'system',content:sys.slice(0,18000)},...hist.map(m=>({role:m.r==='u'?'user':'assistant',content:m.t}))],temperature:0.5,max_tokens:3000})});
+      const j=await r.json().catch(()=>({}));
+      if(r.ok){const t=(j.choices?.[0]?.message?.content||'').replace(/<think>[\s\S]*?<\/think>/g,'').trim();if(t){const f=[];(j.choices[0].message.executed_tools||[]).forEach(x=>(x.search_results?.results||[]).forEach(y=>y.url&&f.push({titulo:y.title,url:y.url})));return{t,f}}}
+      errores.push(j.error?.message||r.status);BLOQ[model]=Date.now()+(r.status===429?36e5:6e5)}catch(e){errores.push(e.message)}}}
+  if(!k.g&&!k.q)throw new Error('RADAR todavía no publicó las claves de la inteligencia artificial. Esperá la próxima vuelta automática (cada hora) y recargá la página.');
+  throw new Error('La inteligencia artificial no respondió ahora (cupo gratis agotado por un rato). Probá de nuevo en unos minutos. '+String(errores.slice(-1)[0]||'').slice(0,120));
+}
+function abrirIssue(titulo){const o=origen()||(D?.repo?{owner:D.repo.split('/')[0],repo:D.repo.split('/')[1]}:null);if(!o)return alert('La página tiene que estar publicada en GitHub.');
+  window.open(`https://github.com/${o.owner}/${o.repo}/issues/new?title=${encodeURIComponent(titulo)}&body=${encodeURIComponent('Enviado desde el asistente de RADAR.')}`,'_blank')}
+function pintarChat(){const el=$('#msgs');if(!el)return;
+  el.innerHTML=(CHAT.length?'':`<div class="msg ia">Hola, soy RADAR. Conozco tus productos aprobados, lo que aprendí y las inversiones del día, y busco en internet para responderte. Preguntame qué vender, cómo publicarlo, cómo hacer publicidad o cómo hacer rendir tu capital. Si me contás una preferencia, la aprendo.</div>`)+
+  CHAT.map((m,i)=>m.r==='u'?`<div class="msg yo">${esc(m.t)}</div>`:`<div class="msg ia">${md(m.t)}${(m.f||[]).length?`<div class="fuentes">${m.f.slice(0,4).map(x=>segura(x.url)?`<a href="${esc(x.url)}" target="_blank">${esc(String(x.titulo||'fuente').slice(0,40))}</a>`:'').join(' · ')}</div>`:''}${m.nota?`<div class="chipIA">📝 Aprendí: ${esc(m.nota)} ${m.notaEnviada?'· enviado a RADAR ✅':`<button class="btn chico sec" data-nota="${i}">Enseñárselo a RADAR en la nube</button>`}</div>`:''}${m.pedido?`<div class="chipIA">🔎 ${esc(m.pedido)} <button class="btn chico" data-pedido="${i}">Enviar pedido</button></div>`:''}</div>`).join('')+
+  (CHAT.pend?`<div class="msg ia">Pensando y buscando…</div>`:'');
+  el.scrollTop=1e9;
+  $$('[data-nota]').forEach(b=>b.onclick=()=>{const m=CHAT[+b.dataset.nota];abrirIssue('Nota: '+m.nota);m.notaEnviada=true;guardarChat();pintarChat()});
+  $$('[data-pedido]').forEach(b=>b.onclick=()=>{const m=CHAT[+b.dataset.pedido];abrirIssue('Pedido: '+m.pedido)});
+}
+async function enviarChat(txt){txt=String(txt||$('#chatIn').value).trim();if(!txt||CHAT.pend)return;$('#chatIn').value='';
+  CHAT.push({r:'u',t:txt});CHAT.pend=true;pintarChat();
+  try{let{t,f}=await preguntarIA();let nota=null,pedido=null;
+    t=t.replace(/\[\[\s*NOTA:\s*([\s\S]*?)\]\]/i,(_,x)=>{nota=x.trim();return''}).replace(/\[\[\s*PEDIDO:\s*([\s\S]*?)\]\]/i,(_,x)=>{pedido=x.trim().replace(/^"|"$/g,'');return''}).trim();
+    if(nota)MEM.push({texto:nota,fecha:new Date().toISOString()});
+    CHAT.push({r:'ia',t,f,nota,pedido});decirIA(t)}
+  catch(e){CHAT.push({r:'ia',t:'⚠️ '+e.message})}
+  CHAT.pend=false;guardarChat();pintarChat()}
+// ---- voz: voz de hombre serena, micrófono y modo manos libres con la palabra «Radar» (20 minutos de conversación)
+const VOZC={hablar:localStorage.getItem('radar_hablar')==='1',manos:false,hasta:0,rec:null,habla:false};
+const SRC=window.SpeechRecognition||window.webkitSpeechRecognition;
+function vozHombre(){const vs=(speechSynthesis.getVoices?.()||[]).filter(v=>/^es/i.test(v.lang));const p=v=>(/natural|online|neural/i.test(v.name)?100:0)+(/Tom[aá]s|Jorge|Pablo|Ra[uú]l|[AÁ]lvaro|Gonzalo|Diego|Andr[eé]s|Federico|Male|Hombre/i.test(v.name)?120:0)-(/Elena|Dalia|Paloma|Helena|Laura|Sabina|Monica|Paulina|Female|Mujer/i.test(v.name)?60:0)+(/es-AR/i.test(v.lang)?30:/es-(MX|US|419)/i.test(v.lang)?20:10);return vs.sort((a,b)=>p(b)-p(a))[0]}
+function limpiarVoz(t){return String(t).replace(/https?:\/\/\S+/g,' ').replace(/\[([^\]]+)\]\([^)]*\)/g,'$1').replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu,' ').replace(/[#*_`>|~]/g,' ').replace(/\bUSD\s?(\d[\d.,]*\d|\d)/g,'$1 dólares').replace(/\$\s?([\d.]+(?:,\d+)?)/g,'$1 pesos').replace(/\bML\b/g,'Mercado Libre').replace(/(\d)\.(\d{3})\b/g,'$1$2').replace(/\s*\n+\s*/g,'. ').replace(/\s{2,}/g,' ')}
+function decirIA(t){if(!VOZC.hablar||!('speechSynthesis' in window))return;try{speechSynthesis.cancel();const v=vozHombre(),fr=limpiarVoz(t).match(/[^.!?;:]+[.!?;:]*/g)||[],tr=[];let b='';for(const f of fr){if((b+f).length>180&&b){tr.push(b);b=f}else b+=f}if(b.trim())tr.push(b);
+  if(!tr.length)return;pausarOido();tr.forEach((x,i)=>{const u=new SpeechSynthesisUtterance(x.trim());u.lang=v?.lang||'es-AR';if(v)u.voice=v;u.rate=0.95;u.pitch=0.92;if(i===tr.length-1){u.onend=reanudarOido;u.onerror=reanudarOido}speechSynthesis.speak(u)})}catch(e){}}
+function pausarOido(){VOZC.habla=true;const r=VOZC.rec;VOZC.rec=null;try{r?.abort()}catch(e){}}
+function reanudarOido(){VOZC.habla=false;if(VOZC.manos)setTimeout(oir,400)}
+function oir(){if(!SRC||!VOZC.manos||VOZC.rec||VOZC.habla)return;const r=new SRC();r.lang='es-AR';r.continuous=true;r.interimResults=false;
+  r.onresult=e=>{for(let i=e.resultIndex;i<e.results.length;i++)if(e.results[i].isFinal)frase(e.results[i][0].transcript)};
+  r.onerror=e=>{if(/not-allowed|service-not-allowed/.test(e.error)){VOZC.manos=false;estadoVoz();alert('Permití el micrófono en el navegador para usar la voz.')}};
+  r.onend=()=>{if(VOZC.rec===r)VOZC.rec=null;if(VOZC.manos&&!VOZC.habla)setTimeout(oir,350)};try{r.start();VOZC.rec=r}catch(e){}}
+function frase(t){t=String(t||'').trim();if(!t)return;const m=t.match(/\b(?:radar|rádar|radár|raidar)\b[\s,.:;!¡¿?]*(.*)$/i),abierta=Date.now()<VOZC.hasta;if(!m&&!abierta)return;
+  const q=(m?m[1]:t).trim();VOZC.hasta=Date.now()+20*60000;estadoVoz();if(!q){decirIA('Sí, te escucho.');return}
+  if(/^(silencio|basta|callate|cállate)\b/i.test(q)){speechSynthesis.cancel();reanudarOido();return}
+  VOZC.hablar=true;localStorage.setItem('radar_hablar','1');estadoVoz();enviarChat(q)}
+function estadoVoz(){const e=$('#vozInfo');if(!e)return;$('#btnHablar').classList.toggle('act',VOZC.hablar);$('#btnManos').classList.toggle('act',VOZC.manos);
+  e.textContent=!SRC?'La voz funciona en Chrome o Edge.':VOZC.manos?(Date.now()<VOZC.hasta?`Conversación abierta (${Math.ceil((VOZC.hasta-Date.now())/60000)} min). Hablá directamente.`:'Manos libres: decí «Radar» y tu pregunta.'):''}
+$('#btnChat').onclick=()=>enviarChat();$('#chatIn').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();enviarChat()}};
+$('#btnMicro').onclick=()=>{if(!SRC)return alert('Para hablar usá Chrome o Edge.');const r=new SRC();r.lang='es-AR';r.interimResults=true;let fin='';$('#btnMicro').classList.add('act');
+  r.onresult=e=>{let t='';for(const x of e.results){t+=x[0].transcript;if(x.isFinal)fin=t}$('#chatIn').value=t};r.onend=()=>{$('#btnMicro').classList.remove('act');if(fin.trim()){VOZC.hablar=true;localStorage.setItem('radar_hablar','1');estadoVoz();enviarChat(fin)}};
+  r.onerror=e=>{if(e.error==='not-allowed')alert('Permití el micrófono en el navegador.')};r.start()};
+$('#btnHablar').onclick=()=>{VOZC.hablar=!VOZC.hablar;localStorage.setItem('radar_hablar',VOZC.hablar?'1':'0');if(!VOZC.hablar)speechSynthesis.cancel();estadoVoz()};
+$('#btnManos').onclick=()=>{VOZC.manos=!VOZC.manos;if(VOZC.manos){VOZC.hablar=true;localStorage.setItem('radar_hablar','1');oir()}else{try{VOZC.rec?.abort()}catch(e){}VOZC.rec=null}estadoVoz()};
+$('#btnBorrar').onclick=()=>{if(confirm('¿Borrar la conversación? Lo aprendido se conserva.')){CHAT=[];guardarChat();pintarChat()}};
+setInterval(estadoVoz,30000);if('speechSynthesis' in window)speechSynthesis.getVoices();
 </script>
 </body>
 </html>
