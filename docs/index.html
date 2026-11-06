@@ -34,7 +34,7 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
 .chat{display:flex;flex-direction:column;height:calc(100vh - 120px);min-height:480px;padding:12px}.msgs{flex:1;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:6px}
 .msg{max-width:88%;padding:12px 16px;border-radius:16px;line-height:1.55}.msg.yo{align-self:flex-end;background:var(--grad);color:#fff;white-space:pre-wrap}.msg.ia{align-self:flex-start;background:var(--panel2);border:1px solid var(--borde)}.msg h2,.msg h3{font-size:15px;margin:8px 0 4px}
 .fuentes{margin-top:8px;font-size:12px;color:var(--suave)}.chipIA{margin-top:10px;padding:8px 10px;border-radius:10px;background:#7c5cff18;font-size:13px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.barraChat{display:flex;gap:8px;margin-top:10px}.barraChat textarea{flex:1;resize:none}.botonesChat{display:flex;flex-direction:column;gap:6px}.opcVoz{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.btn.act{background:var(--grad)!important;color:#fff}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(150%);background:var(--panel2);border:1px solid var(--ok);color:var(--texto);padding:14px 18px;border-radius:14px;box-shadow:0 10px 30px #0008;z-index:80;transition:.3s;max-width:92vw}.toast.ver{transform:translateX(-50%) translateY(0)}.act-l b{color:var(--texto)}
+.barraChat{display:flex;gap:8px;margin-top:10px}.barraChat textarea{flex:1;resize:none}.botonesChat{display:flex;flex-direction:column;gap:6px}.opcVoz{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.btn.act{background:var(--grad)!important;color:#fff}.selVoz{padding:7px 10px;border-radius:10px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde);font:inherit;font-size:13px;max-width:240px}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(150%);background:var(--panel2);border:1px solid var(--ok);color:var(--texto);padding:14px 18px;border-radius:14px;box-shadow:0 10px 30px #0008;z-index:80;transition:.3s;max-width:92vw}.toast.ver{transform:translateX(-50%) translateY(0)}.act-l b{color:var(--texto)}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
@@ -65,7 +65,7 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
     <div class="chat card"><div id="msgs" class="msgs"></div>
       <div class="barraChat"><textarea id="chatIn" rows="2" placeholder="Preguntale a RADAR… (por ejemplo: ¿qué producto me conviene más para Navidad y cómo lo publicito?)"></textarea>
         <div class="botonesChat"><button class="btn sec" id="btnMicro" title="Hablar">🎙</button><button class="btn" id="btnChat">Enviar ➤</button></div></div>
-      <div class="opcVoz"><button class="btn chico sec" id="btnHablar">🔊 Responder con voz</button><button class="btn chico sec" id="btnManos">🙌 Manos libres («Radar»)</button><button class="btn chico sec" id="btnBorrar">🗑 Nueva conversación</button><button class="btn chico sec" id="btnAuto">🧠 Aprendizaje automático en la nube</button><span class="muted" id="vozInfo"></span></div></div>
+      <div class="opcVoz"><button class="btn chico sec" id="btnHablar">🔊 Responder con voz</button><button class="btn chico sec" id="btnManos">🙌 Manos libres («Radar»)</button><button class="btn chico sec" id="btnBorrar">🗑 Nueva conversación</button><button class="btn chico sec" id="btnAuto">🧠 Aprendizaje automático en la nube</button><select id="selVoz" class="selVoz" title="Voz"></select><select id="selTono" class="selVoz" title="Tono"><option value="0.92">Tono normal</option><option value="0.8">Tono grave</option><option value="0.7">Tono muy grave</option></select><button class="btn chico sec" id="btnProbarVoz">▶ Probar voz</button><span class="muted" id="vozInfo"></span></div></div>
   </section>
   <section id="v-pedir" class="oculto">
     <h1>Pedir productos</h1>
@@ -248,7 +248,7 @@ async function responderStream(hist,onText,{voz=true}={}){
 let COLA_VOZ=0;
 function hablarCola(t,fin){if(!('speechSynthesis' in window))return;const v=vozHombre(),fr=limpiarVoz(t).match(/[^.!?;:]+[.!?;:]*/g)||[];
   if(fr.length)pausarOido();
-  fr.forEach(x=>{if(!x.trim())return;COLA_VOZ++;const u=new SpeechSynthesisUtterance(x.trim());u.lang=v?.lang||'es-AR';if(v)u.voice=v;u.rate=1;u.pitch=0.92;u.onend=u.onerror=()=>{COLA_VOZ--;if(COLA_VOZ<=0&&FIN_VOZ){COLA_VOZ=0;reanudarOido()}};speechSynthesis.speak(u)});
+  fr.forEach(x=>{if(!x.trim())return;COLA_VOZ++;const u=new SpeechSynthesisUtterance(x.trim());u.lang=v?.lang||'es-AR';if(v)u.voice=v;u.rate=1;u.pitch=TONO();u.onend=u.onerror=()=>{COLA_VOZ--;if(COLA_VOZ<=0&&FIN_VOZ){COLA_VOZ=0;reanudarOido()}};speechSynthesis.speak(u)});
   FIN_VOZ=!!fin;if(fin&&COLA_VOZ<=0)reanudarOido()}
 let FIN_VOZ=false;
 function abrirIssue(titulo){const o=origen()||(D?.repo?{owner:D.repo.split('/')[0],repo:D.repo.split('/')[1]}:null);if(!o)return alert('La página tiene que estar publicada en GitHub.');
@@ -285,10 +285,10 @@ function saludar(){if(SALUDADO||!D)return;SALUDADO=true;if(CHAT.length)return;
 // ---- voz: voz de hombre serena, micrófono y modo manos libres con la palabra «Radar» (20 minutos de conversación)
 const VOZC={hablar:localStorage.getItem('radar_hablar')!=='0',manos:false,hasta:0,rec:null,habla:false};
 const SRC=window.SpeechRecognition||window.webkitSpeechRecognition;
-function vozHombre(){const vs=(speechSynthesis.getVoices?.()||[]).filter(v=>/^es/i.test(v.lang));const p=v=>(/natural|online|neural/i.test(v.name)?100:0)+(/Tom[aá]s|Jorge|Pablo|Ra[uú]l|[AÁ]lvaro|Gonzalo|Diego|Andr[eé]s|Federico|Male|Hombre/i.test(v.name)?120:0)-(/Elena|Dalia|Paloma|Helena|Laura|Sabina|Monica|Paulina|Female|Mujer/i.test(v.name)?60:0)+(/es-AR/i.test(v.lang)?30:/es-(MX|US|419)/i.test(v.lang)?20:10);return vs.sort((a,b)=>p(b)-p(a))[0]}
+function vozHombre(){const vs=(speechSynthesis.getVoices?.()||[]).filter(v=>/^es/i.test(v.lang));let elegida=null;try{elegida=localStorage.getItem('radar_voz_cel')}catch(e){}const ve=vs.find(v=>v.name+'|'+v.lang===elegida);if(ve)return ve;const p=v=>(/natural|online|neural/i.test(v.name)?100:0)+(/Tom[aá]s|Jorge|Pablo|Ra[uú]l|[AÁ]lvaro|Gonzalo|Diego|Andr[eé]s|Federico|Male|Hombre/i.test(v.name)?120:0)-(/Elena|Dalia|Paloma|Helena|Laura|Sabina|Monica|Paulina|Female|Mujer/i.test(v.name)?60:0)+(/es-AR/i.test(v.lang)?30:/es-(MX|US|419)/i.test(v.lang)?20:10);return vs.sort((a,b)=>p(b)-p(a))[0]}
 function limpiarVoz(t){return String(t).replace(/https?:\/\/\S+/g,' ').replace(/\[([^\]]+)\]\([^)]*\)/g,'$1').replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu,' ').replace(/[#*_`>|~]/g,' ').replace(/\bUSD\s?(\d[\d.,]*\d|\d)/g,'$1 dólares').replace(/\$\s?([\d.]+(?:,\d+)?)/g,'$1 pesos').replace(/\bML\b/g,'Mercado Libre').replace(/(\d)\.(\d{3})\b/g,'$1$2').replace(/\s*\n+\s*/g,'. ').replace(/\s{2,}/g,' ')}
 function decirIA(t){if(!VOZC.hablar||!('speechSynthesis' in window))return;try{speechSynthesis.cancel();const v=vozHombre(),fr=limpiarVoz(t).match(/[^.!?;:]+[.!?;:]*/g)||[],tr=[];let b='';for(const f of fr){if((b+f).length>180&&b){tr.push(b);b=f}else b+=f}if(b.trim())tr.push(b);
-  if(!tr.length)return;pausarOido();tr.forEach((x,i)=>{const u=new SpeechSynthesisUtterance(x.trim());u.lang=v?.lang||'es-AR';if(v)u.voice=v;u.rate=0.95;u.pitch=0.92;if(i===tr.length-1){u.onend=reanudarOido;u.onerror=reanudarOido}speechSynthesis.speak(u)})}catch(e){}}
+  if(!tr.length)return;pausarOido();tr.forEach((x,i)=>{const u=new SpeechSynthesisUtterance(x.trim());u.lang=v?.lang||'es-AR';if(v)u.voice=v;u.rate=0.95;u.pitch=TONO();if(i===tr.length-1){u.onend=reanudarOido;u.onerror=reanudarOido}speechSynthesis.speak(u)})}catch(e){}}
 function pausarOido(){VOZC.habla=true;const r=VOZC.rec;VOZC.rec=null;try{r?.abort()}catch(e){}}
 function reanudarOido(){VOZC.habla=false;if(VOZC.manos)setTimeout(oir,400)}
 function oir(){if(!SRC||!VOZC.manos||VOZC.rec||VOZC.habla)return;const r=new SRC();r.lang='es-AR';r.continuous=true;r.interimResults=false;
@@ -463,6 +463,15 @@ $('#btnAuto').onclick=()=>{let tk=null;try{tk=localStorage.getItem('radar_gh')}c
   if(tk){if(confirm('El aprendizaje automático en la nube está ACTIVO en este dispositivo. ¿Querés desactivarlo?'))try{localStorage.removeItem('radar_gh')}catch(e){};return}
   const v=prompt('Para que RADAR en la nube aprenda solo lo que le contás:\n1) Entrá a github.com/settings/personal-access-tokens/new\n2) Nombre: radar · Expiration: No expiration (o 1 año)\n3) Repository access: Only select repositories → radar\n4) Permissions → Repository permissions → Issues: Read and write\n5) Generate token, copialo y pegalo acá:');
   if(v&&v.trim().length>20){try{localStorage.setItem('radar_gh',v.trim())}catch(e){}alert('Listo. Desde ahora, todo lo que RADAR aprenda en la charla también lo aprende en la nube.')}};
+
+// ---- elegir voz y tono (en el celular las voces no dicen si son de hombre o de mujer)
+const TONO=()=>{try{return +(localStorage.getItem('radar_tono')||0.92)}catch(e){return 0.92}};
+function llenarVoces(){const sel=$('#selVoz');if(!sel||!('speechSynthesis' in window))return;const vs=speechSynthesis.getVoices().filter(v=>/^es/i.test(v.lang));let el=null;try{el=localStorage.getItem('radar_voz_cel')}catch(e){}
+  sel.innerHTML='<option value="">Voz automática</option>'+vs.map((v,i)=>`<option value="${esc(v.name+'|'+v.lang)}" ${v.name+'|'+v.lang===el?'selected':''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('');$('#selTono').value=String(TONO())}
+if('speechSynthesis' in window){speechSynthesis.addEventListener?.('voiceschanged',llenarVoces);setTimeout(llenarVoces,800)}
+$('#selVoz').onchange=e=>{try{e.target.value?localStorage.setItem('radar_voz_cel',e.target.value):localStorage.removeItem('radar_voz_cel')}catch(x){}};
+$('#selTono').onchange=e=>{try{localStorage.setItem('radar_tono',e.target.value)}catch(x){}};
+$('#btnProbarVoz').onclick=()=>{try{speechSynthesis.cancel()}catch(e){}llenarVoces();hablarCola('Hola, soy RADAR, tu asistente de ventas. ¿Así te gusta cómo hablo?',true)};
 </script>
 </body>
 </html>
