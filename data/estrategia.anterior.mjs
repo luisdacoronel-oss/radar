@@ -1,9 +1,9 @@
-// CAMBIOS: Se priorizaron herramientas técnicas y accesorios automotrices de alta rotación con precios superiores a $50.000.
-export const VERSION = 3;
+// CAMBIOS: Se optimizó el foco en herramientas técnicas avanzadas y accesorios automotrices especializados con precios superiores a $80.000 para cumplir con los márgenes exigidos.
+export const VERSION = 4;
 
 export const categorias = [
-  'herramientas y auto', 'accesorios para vehículos', 'deportes y fitness', 'hogar y organización', 'mascotas',
-  'belleza y cuidado personal', 'tecnología y accesorios', 'jardín y exterior', 'regalos y temporada', 'bebés y niños'
+  'herramientas y auto', 'accesorios para vehículos', 'herramientas de diagnóstico', 'herramientas eléctricas',
+  'herramientas manuales', 'equipamiento de taller', 'seguridad y vigilancia', 'tecnología y accesorios'
 ];
 
 export const temas = [
@@ -24,5 +24,5 @@ export const productosPorVuelta = 2;
 
 export function instruccionesBusqueda(ctx) {
   const cat = categorias[(ctx.vuelta || 0) % categorias.length];
-  return `Esta vez concentrate en la categoría "${cat}". Buscá productos de precio superior a $50.000, enfocados en kits técnicos, herramientas manuales especializadas o accesorios de alta demanda comprobada en Mercado Libre Argentina. Considerá el contexto económico actual de Argentina (${ctx.mes}).`;
+  return `Esta vez concentrate en la categoría "${cat}". Buscá productos de precio superior a $80.000, enfocados estrictamente en kits técnicos de alta rotación, herramientas manuales especializadas, escáneres, boroscopios y accesorios automotrices con demanda comprobada en Mercado Libre Argentina. Considerá el contexto económico actual de Argentina (${ctx.mes}).`;
 }
