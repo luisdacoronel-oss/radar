@@ -34,7 +34,7 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
 .chat{display:flex;flex-direction:column;height:calc(100vh - 120px);min-height:480px;padding:12px}.msgs{flex:1;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:6px}
 .msg{max-width:88%;padding:12px 16px;border-radius:16px;line-height:1.55}.msg.yo{align-self:flex-end;background:var(--grad);color:#fff;white-space:pre-wrap}.msg.ia{align-self:flex-start;background:var(--panel2);border:1px solid var(--borde)}.msg h2,.msg h3{font-size:15px;margin:8px 0 4px}
 .fuentes{margin-top:8px;font-size:12px;color:var(--suave)}.chipIA{margin-top:10px;padding:8px 10px;border-radius:10px;background:#7c5cff18;font-size:13px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.barraChat{display:flex;gap:8px;margin-top:10px}.barraChat textarea{flex:1;resize:none}.botonesChat{display:flex;flex-direction:column;gap:6px}.opcVoz{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.btn.act{background:var(--grad)!important;color:#fff}.selVoz{padding:7px 10px;border-radius:10px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde);font:inherit;font-size:13px;max-width:240px}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(150%);background:var(--panel2);border:1px solid var(--ok);color:var(--texto);padding:14px 18px;border-radius:14px;box-shadow:0 10px 30px #0008;z-index:80;transition:.3s;max-width:92vw}.toast.ver{transform:translateX(-50%) translateY(0)}.act-l b{color:var(--texto)}
+.barraChat{display:flex;gap:8px;margin-top:10px}.barraChat textarea{flex:1;resize:none}.botonesChat{display:flex;flex-direction:column;gap:6px}.opcVoz{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.btn.act{background:var(--grad)!important;color:#fff}.liveInfo{margin-top:8px;padding:10px 14px;border-radius:12px;background:#22d39b18;border:1px solid #22d39b55;color:var(--ok);font-size:14px}#btnLive.enVivo{background:linear-gradient(135deg,#ff5d73,#ffb547)!important;animation:latido 1.4s infinite}@keyframes latido{50%{box-shadow:0 0 0 8px #ff5d7333}}.selVoz{padding:7px 10px;border-radius:10px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde);font:inherit;font-size:13px;max-width:240px}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(150%);background:var(--panel2);border:1px solid var(--ok);color:var(--texto);padding:14px 18px;border-radius:14px;box-shadow:0 10px 30px #0008;z-index:80;transition:.3s;max-width:92vw}.toast.ver{transform:translateX(-50%) translateY(0)}.act-l b{color:var(--texto)}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
@@ -65,7 +65,7 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
     <div class="chat card"><div id="msgs" class="msgs"></div>
       <div class="barraChat"><textarea id="chatIn" rows="2" placeholder="Preguntale a RADAR… (por ejemplo: ¿qué producto me conviene más para Navidad y cómo lo publicito?)"></textarea>
         <div class="botonesChat"><button class="btn sec" id="btnMicro" title="Hablar">🎙</button><button class="btn" id="btnChat">Enviar ➤</button></div></div>
-      <div class="opcVoz"><button class="btn chico sec" id="btnHablar">🔊 Responder con voz</button><button class="btn chico sec" id="btnManos">🙌 Manos libres («Radar»)</button><button class="btn chico sec" id="btnBorrar">🗑 Nueva conversación</button><button class="btn chico sec" id="btnAuto">🧠 Aprendizaje automático en la nube</button><select id="selVoz" class="selVoz" title="Voz"></select><select id="selTono" class="selVoz" title="Tono"><option value="0.92">Tono normal</option><option value="0.8">Tono grave</option><option value="0.7">Tono muy grave</option></select><button class="btn chico sec" id="btnProbarVoz">▶ Probar voz</button><span class="muted" id="vozInfo"></span></div></div>
+      <div class="opcVoz"><button class="btn chico" id="btnLive">🎧 Conversación en vivo</button><select id="selLive" class="selVoz" title="Voz en vivo"><option value="Charon">Voz: Charon (serena)</option><option value="Orus">Voz: Orus (firme)</option><option value="Algieba">Voz: Algieba (suave)</option><option value="Puck">Voz: Puck (animada)</option></select><button class="btn chico sec" id="btnHablar">🔊 Responder con voz</button><button class="btn chico sec" id="btnManos">🙌 Manos libres («Radar»)</button><button class="btn chico sec" id="btnBorrar">🗑 Nueva conversación</button><button class="btn chico sec" id="btnAuto">🧠 Aprendizaje automático en la nube</button><select id="selVoz" class="selVoz" title="Voz"></select><select id="selTono" class="selVoz" title="Tono"><option value="0.92">Tono normal</option><option value="0.8">Tono grave</option><option value="0.7">Tono muy grave</option></select><button class="btn chico sec" id="btnProbarVoz">▶ Probar voz</button><span class="muted" id="vozInfo"></span></div><div id="liveInfo" class="liveInfo oculto"></div></div>
   </section>
   <section id="v-pedir" class="oculto">
     <h1>Pedir productos</h1>
@@ -144,7 +144,7 @@ const linkDe=p=>segura(p.fuente_principal?.url)||segura((p.precios_mercados||[])
 const gimg=p=>'https://www.google.com/search?tbm=isch&q='+encodeURIComponent(p.nombre);
 function render(){
   const t=D.totales||{};
-  $('#kpis').innerHTML=[['Productos para vender',t.aprobados],['Productos revisados',t.analizados],['Dólar oficial',ars(D.dolar)],['Estrategia',`versión ${D.version_estrategia}`]].map(([l,v])=>`<div class="card kpi"><div class="l">${l}</div><div class="v">${v??'—'}</div></div>`).join('');
+  $('#kpis').innerHTML=[['Productos para vender',t.aprobados],['Analizados hoy',D.hoy?`${D.hoy.analizados} / ${D.hoy.objetivo}`:t.analizados],['Dólar oficial',ars(D.dolar)],['Estrategia',`versión ${D.version_estrategia}`]].map(([l,v])=>`<div class="card kpi"><div class="l">${l}</div><div class="v">${v??'—'}</div></div>`).join('');
   $('#estado').innerHTML=`<button class="btn chico sec ${AVISO_VOZ?'act':''}" id="btnAviso" style="margin-right:8px">🔔 Anunciar por voz: ${AVISO_VOZ?'sí':'no'}</button>🟢 RADAR trabaja solo cada hora en la nube. Última vuelta: <b>${hace(D.generado)}</b>. Avisos de WhatsApp: de ${(D.criterios.whatsapp||[]).map(([a,b])=>a+' a '+b).join(' y de ')} h${t.en_cola_whatsapp?` (${t.en_cola_whatsapp} esperando el horario)`:''}.`;
   $('#btnAviso').onclick=()=>{AVISO_VOZ=!AVISO_VOZ;try{localStorage.setItem('radar_aviso_voz',AVISO_VOZ?'1':'0')}catch(e){}render();if(AVISO_VOZ)decirAviso('Listo. Cuando encuentre un producto nuevo te lo voy a anunciar.')};
   $('#informe').innerHTML=D.informe?`<h2>📰 ${esc(D.informe.titulo)}</h2><div>${md(D.informe.contenido)}</div>`:'<p class="muted">El informe del día aparece después de las primeras vueltas.</p>';
@@ -224,10 +224,10 @@ async function responderStream(hist,onText,{voz=true}={}){
   const hablarParcial=(fin)=>{if(!voz||!VOZC.hablar)return;const limpio=total.replace(/\[\[[\s\S]*?(\]\]|$)/g,'');let hasta=fin?limpio.length:Math.max(limpio.lastIndexOf('. '),limpio.lastIndexOf('? '),limpio.lastIndexOf('! '),limpio.lastIndexOf('\n'))+1;
     if(hasta>dicho){const trozo=limpio.slice(dicho,hasta);dicho=hasta;hablarCola(trozo,fin)}else if(fin)hablarCola('',true)};
   const emitir=t=>{total=t;onText(t);hablarParcial(false)};
-  if(k.g){for(const model of ['gemini-2.5-flash','gemini-flash-latest','gemini-2.5-flash-lite'])for(const web of [true,false]){
+  if(k.g){const lista=await modelosChat(k.g);for(const model of lista)for(const web of [true,false]){
     const b=model+web;if(BLOQ[b]>Date.now())continue;
     try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${encodeURIComponent(k.g)}`,{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({systemInstruction:{parts:[{text:sys}]},contents:hist.map(m=>({role:m.r==='u'?'user':'model',parts:[{text:m.t}]})),tools:web?[{google_search:{}}]:undefined,generationConfig:{temperature:0.6,maxOutputTokens:4096,thinkingConfig:{thinkingBudget:0}}})});
+        body:JSON.stringify({systemInstruction:{parts:[{text:sys}]},contents:hist.map(m=>({role:m.r==='u'?'user':'model',parts:[{text:m.t}]})),tools:web?[{google_search:{}}]:undefined,generationConfig:{temperature:0.7,maxOutputTokens:6144}})});
       if(!r.ok){const j=await r.json().catch(()=>({}));errores.push(j.error?.message||r.status);BLOQ[b]=Date.now()+(r.status===429?36e5:r.status>=500?6e4:864e5);continue}
       const rd=r.body.getReader(),dec=new TextDecoder();let buf='',t='',f=[];
       for(;;){const{done,value}=await rd.read();if(done)break;buf+=dec.decode(value,{stream:true});let n;
@@ -472,6 +472,72 @@ if('speechSynthesis' in window){speechSynthesis.addEventListener?.('voiceschange
 $('#selVoz').onchange=e=>{try{e.target.value?localStorage.setItem('radar_voz_cel',e.target.value):localStorage.removeItem('radar_voz_cel')}catch(x){}};
 $('#selTono').onchange=e=>{try{localStorage.setItem('radar_tono',e.target.value)}catch(x){}};
 $('#btnProbarVoz').onclick=()=>{try{speechSynthesis.cancel()}catch(e){}llenarVoces();hablarCola('Hola, soy RADAR, tu asistente de ventas. ¿Así te gusta cómo hablo?',true)};
+
+// ============================================================ modelos: siempre el Flash más nuevo disponible en tu cuenta
+let MODELOS_CHAT=null,MODELOS_LIVE=null;
+const verModelo=n=>{const m=n.match(/gemini-(\d+(?:\.\d+)?)/);return m?parseFloat(m[1]):(/latest/.test(n)?2.9:0)};
+async function listaModelosGoogle(k){try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models?pageSize=300&key=${encodeURIComponent(k)}`);const j=await r.json();return j.models||[]}catch(e){return[]}}
+async function modelosChat(k){if(MODELOS_CHAT)return MODELOS_CHAT;const ms=(await listaModelosGoogle(k)).filter(m=>(m.supportedGenerationMethods||[]).includes('generateContent')).map(m=>m.name.replace('models/','')).filter(n=>/^gemini-/.test(n)&&/flash/.test(n)&&!/image|tts|live|audio|native|thinking|exp|8b|embedding|robotics|computer/.test(n));
+  const pref=n=>-verModelo(n)*10+(/lite/.test(n)?40:0)+(/preview/.test(n)?0.5:0)+(/\d{2}-\d{4}|\d{3,}$/.test(n)?1:0);
+  MODELOS_CHAT=[...new Set([...ms,'gemini-flash-latest','gemini-2.5-flash','gemini-flash-lite-latest'])].sort((a,b)=>pref(a)-pref(b)).slice(0,5);return MODELOS_CHAT}
+async function modelosLive(k){if(MODELOS_LIVE)return MODELOS_LIVE;const ms=(await listaModelosGoogle(k)).filter(m=>(m.supportedGenerationMethods||[]).includes('bidiGenerateContent')).map(m=>m.name.replace('models/','')).filter(n=>/live|native-audio/.test(n));
+  const pref=n=>-verModelo(n)*10+(/native-audio|live/.test(n)?0:5);
+  MODELOS_LIVE=[...new Set([...ms.sort((a,b)=>pref(a)-pref(b)),'gemini-3.1-flash-live-preview','gemini-2.5-flash-native-audio-preview-12-2025','gemini-2.5-flash-native-audio-preview-09-2025'])].slice(0,4);return MODELOS_LIVE}
+
+// ============================================================ CONVERSACIÓN EN VIVO (Gemini Live: voz natural, se puede interrumpir)
+const LIVE={ws:null,ctxIn:null,ctxOut:null,stream:null,proc:null,fuente:null,next:0,srcs:[],on:false,u:'',ia:''};
+function contextoLive(){return contextoIA().split('\n').filter(l=>!/^(APRENDIZAJE|PEDIDOS):/.test(l)).join('\n').replace(/Si el usuario pide que le recuerdes[^\n]*\[\[TAREA:[^\]]*\]\]\./,'')+
+  `\nCONVERSACIÓN POR VOZ EN VIVO: hablás en español de Argentina, con voz cálida, serena y clara de hombre, tono formal pero cercano, como una persona real en una llamada. Respuestas cortas y naturales (2 a 4 frases), sin leer listas ni símbolos, sin decir links. Si te interrumpen, dejá de hablar y escuchá. Hacé una pregunta por vez para mantener la conversación. Al empezar, saludá brevemente y preguntá en qué puede ayudarte hoy.`}
+const aB64=buf=>{let s='';const b=new Uint8Array(buf);for(let i=0;i<b.length;i+=0x8000)s+=String.fromCharCode.apply(null,b.subarray(i,i+0x8000));return btoa(s)};
+function liveInfo(t){const e=$('#liveInfo');if(!e)return;e.classList.toggle('oculto',!t);e.textContent=t||''}
+function intentarLive(k,model,formato,voz){return new Promise((ok,mal)=>{
+  const ws=new WebSocket(`wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent?key=${encodeURIComponent(k)}`);
+  let listo=false;const t=setTimeout(()=>{if(!listo){try{ws.close()}catch(e){}mal(new Error('sin respuesta'))}},9000);
+  ws.onopen=()=>{const sys={parts:[{text:contextoLive()}]},habla={voiceConfig:{prebuiltVoiceConfig:{voiceName:voz}}};
+    const setup=formato===1?{model:'models/'+model,generationConfig:{responseModalities:['AUDIO'],speechConfig:habla},systemInstruction:sys,tools:[{googleSearch:{}}],inputAudioTranscription:{},outputAudioTranscription:{}}
+      :formato===2?{model:'models/'+model,responseModalities:['AUDIO'],speechConfig:habla,systemInstruction:sys,tools:[{googleSearch:{}}],inputAudioTranscription:{},outputAudioTranscription:{}}
+      :{model:'models/'+model,generationConfig:{responseModalities:['AUDIO']},systemInstruction:sys};
+    ws.send(JSON.stringify({setup}))};
+  ws.onmessage=async ev=>{const txt=typeof ev.data==='string'?ev.data:await ev.data.text();let m;try{m=JSON.parse(txt)}catch(e){return}
+    if(m.setupComplete&&!listo){listo=true;clearTimeout(t);ws.onmessage=e=>liveMensaje(e);ok(ws)}};
+  ws.onclose=e=>{clearTimeout(t);if(!listo)mal(new Error(e.reason||('cerrado '+e.code)))};ws.onerror=()=>{}})}
+async function iniciarLive(){
+  if(LIVE.on)return detenerLive('Conversación terminada.');
+  if(!(D.ia_claves||{}).g)return alert('La conversación en vivo necesita la clave de Google. Esperá la próxima vuelta de RADAR y recargá.');
+  try{speechSynthesis.cancel()}catch(e){}
+  liveInfo('Conectando…');$('#btnLive').classList.add('enVivo');
+  try{LIVE.stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true,channelCount:1}})}
+  catch(e){$('#btnLive').classList.remove('enVivo');liveInfo('');return alert('Permití el micrófono para conversar en vivo.')}
+  const k=D.ia_claves.g,voz=$('#selLive').value||'Charon';let ws=null,err='';
+  for(const model of await modelosLive(k)){for(const f of [1,2,3]){try{ws=await intentarLive(k,model,f,voz);break}catch(e){err=e.message}}if(ws)break}
+  if(!ws){detenerLive();return alert('No pude abrir la conversación en vivo ahora ('+err+'). Usá el chat normal; probá de nuevo más tarde.')}
+  LIVE.ws=ws;LIVE.on=true;LIVE.u='';LIVE.ia='';
+  ws.onclose=()=>{if(LIVE.on)detenerLive('La conversación se cerró. Tocá 🎧 para seguir hablando.')};
+  LIVE.ctxOut=new (window.AudioContext||window.webkitAudioContext)({sampleRate:24000});LIVE.next=0;
+  LIVE.ctxIn=new (window.AudioContext||window.webkitAudioContext)({sampleRate:16000});
+  LIVE.fuente=LIVE.ctxIn.createMediaStreamSource(LIVE.stream);LIVE.proc=LIVE.ctxIn.createScriptProcessor(2048,1,1);
+  LIVE.proc.onaudioprocess=e=>{if(!LIVE.on||LIVE.ws?.readyState!==1)return;const x=e.inputBuffer.getChannelData(0),pcm=new Int16Array(x.length);for(let i=0;i<x.length;i++){const v=Math.max(-1,Math.min(1,x[i]));pcm[i]=v<0?v*0x8000:v*0x7fff}
+    LIVE.ws.send(JSON.stringify({realtimeInput:{audio:{data:aB64(pcm.buffer),mimeType:'audio/pcm;rate=16000'}}}))};
+  LIVE.fuente.connect(LIVE.proc);LIVE.proc.connect(LIVE.ctxIn.destination);
+  liveInfo('🟢 En vivo. Hablá con naturalidad; podés interrumpirlo cuando quieras. Tocá 🎧 otra vez para terminar.');
+  ws.send(JSON.stringify({realtimeInput:{text:'Hola'}}));
+}
+function reproducir(b){const ctx=LIVE.ctxOut;if(!ctx)return;const bin=atob(b),n=bin.length/2,dv=new DataView(new ArrayBuffer(bin.length));for(let i=0;i<bin.length;i++)dv.setUint8(i,bin.charCodeAt(i));
+  const buf=ctx.createBuffer(1,n,24000),ch=buf.getChannelData(0);for(let i=0;i<n;i++)ch[i]=dv.getInt16(i*2,true)/32768;
+  const s=ctx.createBufferSource();s.buffer=buf;s.connect(ctx.destination);const t=Math.max(LIVE.next,ctx.currentTime+0.03);s.start(t);LIVE.next=t+buf.duration;LIVE.srcs.push(s);s.onended=()=>{LIVE.srcs=LIVE.srcs.filter(x=>x!==s)}}
+async function liveMensaje(ev){const txt=typeof ev.data==='string'?ev.data:await ev.data.text();let m;try{m=JSON.parse(txt)}catch(e){return}
+  const sc=m.serverContent;if(!sc)return;
+  if(sc.interrupted){LIVE.srcs.forEach(s=>{try{s.stop()}catch(e){}});LIVE.srcs=[];LIVE.next=0}
+  (sc.modelTurn?.parts||[]).forEach(p=>{if(p.inlineData?.data&&/audio/.test(p.inlineData.mimeType||'audio'))reproducir(p.inlineData.data)});
+  if(sc.inputTranscription?.text)LIVE.u+=sc.inputTranscription.text;
+  if(sc.outputTranscription?.text){LIVE.ia+=sc.outputTranscription.text;liveInfo('🟢 En vivo · RADAR: '+LIVE.ia.slice(-160))}
+  if(sc.turnComplete||sc.generationComplete){if(LIVE.u.trim()||LIVE.ia.trim()){if(LIVE.u.trim())CHAT.push({r:'u',t:LIVE.u.trim()});if(LIVE.ia.trim())CHAT.push({r:'ia',t:LIVE.ia.trim()});guardarChat();pintarChat()}LIVE.u='';LIVE.ia=''}}
+function detenerLive(msg){LIVE.on=false;try{LIVE.ws?.close()}catch(e){}LIVE.ws=null;try{LIVE.proc?.disconnect();LIVE.fuente?.disconnect()}catch(e){}
+  LIVE.stream?.getTracks().forEach(t=>t.stop());LIVE.stream=null;try{LIVE.ctxIn?.close();LIVE.ctxOut?.close()}catch(e){}LIVE.ctxIn=LIVE.ctxOut=null;LIVE.srcs=[];
+  $('#btnLive').classList.remove('enVivo');liveInfo(msg||'');if(msg)setTimeout(()=>liveInfo(''),6000)}
+$('#btnLive').onclick=iniciarLive;
+try{const v=localStorage.getItem('radar_voz_live');if(v)$('#selLive').value=v}catch(e){}
+$('#selLive').onchange=e=>{try{localStorage.setItem('radar_voz_live',e.target.value)}catch(x){}};
 </script>
 </body>
 </html>
