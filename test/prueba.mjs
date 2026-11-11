@@ -12,9 +12,9 @@ export async function validarEstrategia(ruta) {
   const m = await import(pathToFileURL(ruta).href + '?v=' + Date.now());
   const listas = ['categorias', 'temas', 'temasVideo'];
   for (const l of listas) {
-    if (!Array.isArray(m[l]) || m[l].length < 3 || m[l].length > 40 || !m[l].every(x => typeof x === 'string' && x.length > 2 && x.length < 200)) throw new Error('lista inválida: ' + l);
+    if (!Array.isArray(m[l]) || m[l].length < (l === 'categorias' ? 8 : 3) || m[l].length > 40 || !m[l].every(x => typeof x === 'string' && x.length > 2 && x.length < 200)) throw new Error('lista inválida: ' + l);
   }
-  if (!Number.isInteger(m.productosPorVuelta) || m.productosPorVuelta < 1 || m.productosPorVuelta > 4) throw new Error('productosPorVuelta inválido');
+  if (!Number.isInteger(m.productosPorVuelta) || m.productosPorVuelta < 3 || m.productosPorVuelta > 6) throw new Error('productosPorVuelta inválido');
   if (typeof m.instruccionesBusqueda !== 'function') throw new Error('falta instruccionesBusqueda');
   for (let v = 0; v < 15; v++) {
     const t = m.instruccionesBusqueda({ vuelta: v, mes: 'noviembre', aprobados: [], descartados: [] });
