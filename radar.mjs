@@ -40,6 +40,9 @@ const marcar = k => { E.ultimos[k] = ahora() };
 const cupo = () => ia.usadas() < (config.max_consultas_ia_por_dia || 160) && hayTiempo();
 const prods = () => Object.entries(E.productos).map(([k, p]) => ({ id: k, ...p, ev: evaluar(p) }));
 const slug = t => String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || id();
+const hoyAR = () => new Date().toLocaleDateString('en-CA', { timeZone: 'America/Argentina/Buenos_Aires' });
+function contarHoy(ev) { if (!E.hoy || E.hoy.dia !== hoyAR()) E.hoy = { dia: hoyAR(), analizados: 0, aprobados: 0 }; E.hoy.analizados++; if (ev?.veredicto === 'VENDER') E.hoy.aprobados++ }
+const analizadosHoy = () => (E.hoy && E.hoy.dia === hoyAR()) ? E.hoy.analizados : 0;
 const conoc = tipo => Object.values(E.conocimiento).filter(c => c.tipo === tipo).sort((a, b) => a.fecha < b.fecha ? 1 : -1);
 
 // ------------------------------------------------------------ criterios y prompts
@@ -107,7 +110,7 @@ ${ESQUEMA}`, true);
   Object.assign(p, { fuentes: [...(p.fuentes || []), ...(fuentes || [])].slice(0, 15), origen, creado: ahora(), busqueda_web: web });
   let k = slug(p.nombre); if (E.productos[k]) k += '-' + id().slice(-4);
   E.productos[k] = p;
-  const ev = evaluar(p);
+  const ev = evaluar(p); contarHoy(ev);
   if (ev.veredicto === 'VENDER') { encolarWhatsApp(k, p, ev); registrar('oportunidad', 'Producto encontrado: ' + p.nombre) }
   return { k, ev };
 }
@@ -233,7 +236,7 @@ ${actual}
 \`\`\`
 Estos son tus resultados (v = veredicto; ml y web = ganancia por unidad en pesos): ${JSON.stringify(resumen)}
 ${CRITERIOS()}
-Analizá qué categorías, precios y tipos de producto dieron productos aprobados y cuáles fallaron. Reescribí el archivo COMPLETO para encontrar más productos que cumplan: reordená y cambiá categorías, temas de estudio y de video, y mejorá instruccionesBusqueda(ctx) (ctx tiene: vuelta, mes, aprobados). Reglas obligatorias: mismo formato y mismos nombres exportados (VERSION, categorias, temas, temasVideo, productosPorVuelta, instruccionesBusqueda); VERSION = ${(EST.VERSION || 1) + 1}; productosPorVuelta entre 1 y 3; sin import, fetch, process, eval ni temporizadores; solo texto y lógica simple. En la PRIMERA línea poné un comentario: // CAMBIOS: (resumen en una frase de lo que mejoraste).
+Analizá qué categorías, precios y tipos de producto dieron productos aprobados y cuáles fallaron. Reescribí el archivo COMPLETO para encontrar MÁS productos que cumplan. MUY IMPORTANTE: no te encierres en un solo rubro ni en un rango de precio angosto; mantené al menos 8 categorías variadas (podés reordenarlas por resultados) y explorá también rubros nuevos, porque el objetivo es analizar más de 50 productos por día con buena variedad: reordená y cambiá categorías, temas de estudio y de video, y mejorá instruccionesBusqueda(ctx) (ctx tiene: vuelta, mes, aprobados). Reglas obligatorias: mismo formato y mismos nombres exportados (VERSION, categorias, temas, temasVideo, productosPorVuelta, instruccionesBusqueda); VERSION = ${(EST.VERSION || 1) + 1}; productosPorVuelta entre 3 y 6; sin import, fetch, process, eval ni temporizadores; solo texto y lógica simple. En la PRIMERA línea poné un comentario: // CAMBIOS: (resumen en una frase de lo que mejoraste).
 Devolvé SOLO el archivo dentro de un bloque \`\`\`js.`);
   const m = r.text.match(/```(?:js|javascript)?\s*([\s\S]*?)```/); if (!m) throw new Error('no devolvió código');
   const nuevo = m[1].trim() + '\n', tmp = R('lib/estrategia.nueva.mjs');
@@ -260,7 +263,7 @@ function publicar() {
   const salida = {
     generado: ahora(), version_estrategia: EST.VERSION, dolar: CFG.dolar_oficial, ia_hoy: ia.usadas(),
     criterios: { ml_a: CFG.margen_minimo_pct, ml_b: CFG.ml_ganancia_min_pct_costo, web: CFG.web.margen_min_pct_precio, whatsapp: config.whatsapp_horarios },
-    totales: { analizados: ps.length, aprobados: vend.length, en_cola_whatsapp: E.cola_wa.length },
+    totales: { analizados: ps.length, aprobados: vend.length, en_cola_whatsapp: E.cola_wa.length }, hoy: { analizados: analizadosHoy(), aprobados: (E.hoy && E.hoy.dia === hoyAR()) ? E.hoy.aprobados : 0, objetivo: config.objetivo_productos_dia || 60 },
     productos: vend.map(p => { const { ev, ...resto } = p; return { ...resto, ev: { veredicto: ev.veredicto, puntaje: ev.puntaje, canales: ev.canales, ventas: ev.ventas, costo: ev.costo, precio: ev.precio, r: ev.r, w: ev.w, ms: ev.ms } } }),
     reglas: conoc('regla').slice(0, 30), lecciones: conoc('leccion').slice(0, 80), mejoras: conoc('mejora').slice(0, 30),
     capital: E.conocimiento.capital || null, informe: E.conocimiento.informe || null, actividad: E.actividad.slice(0, 40),
@@ -295,7 +298,18 @@ async function vuelta() {
   } else {
     E.vuelta = (E.vuelta || 0) + 1;
     const tareas = [
-      ['explorar', 0, async () => { const c = await proponer(EST.productosPorVuelta + 2); const rs = await enParalelo(c.slice(0, EST.productosPorVuelta), async x => { try { return await analizar(x.producto, 'exploracion') } catch (e) { registrar('error', x.producto + ': ' + e.message); return {} } }); const n = rs.filter(r => r?.ev).length, ok = rs.filter(r => r?.ev?.veredicto === 'VENDER').length; if (n) registrar('exploracion', `Analicé ${n} productos nuevos; ${ok} cumplen tus reglas`) }],
+      ['explorar', 0, async () => {
+        const objetivo = config.objetivo_productos_dia || 60, tope = Date.now() + (config.minutos_por_vuelta || 20) * 60000;
+        // reparte el objetivo del día entre las vueltas que quedan; si GitHub saltea vueltas, las siguientes trabajan más
+        const horaAR = horaArgentina() / 60, vueltasQuedan = Math.max(1, Math.ceil((24 - horaAR) * 2 * 0.6));
+        let meta = Math.max(EST.productosPorVuelta, Math.ceil((objetivo - analizadosHoy()) / vueltasQuedan)), n = 0, ok = 0, vacias = 0;
+        while (n < meta && analizadosHoy() < objetivo && Date.now() < tope && cupo() && vacias < 2) {
+          const c = await proponer(Math.min(8, meta - n + 2)); if (!c.length) { vacias++; continue }
+          const rs = await enParalelo(c.slice(0, Math.min(6, meta - n)), async x => { try { return await analizar(x.producto, 'exploracion') } catch (e) { registrar('error', x.producto + ': ' + e.message); return {} } });
+          n += rs.filter(r => r?.ev).length; ok += rs.filter(r => r?.ev?.veredicto === 'VENDER').length;
+        }
+        if (n) registrar('exploracion', `Analicé ${n} productos nuevos; ${ok} cumplen tus reglas (hoy: ${analizadosHoy()} de ${objetivo})`)
+      }],
       ['aprender', 4, aprender], ['videos', 12, videos], ['capital', 20, capital], ['informe', 20, informe], ['automejora', 24, autoMejora]
     ];
     for (const [k, h, f] of tareas) {

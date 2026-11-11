@@ -4,5 +4,7 @@
   "web": { "margen_min_pct_precio": 50, "envio_paga": "cliente" },
   "perfil": { "reputacion_ml": "verde", "tipo_publicacion": "clasica", "notas": "" },
   "whatsapp_horarios": [[10, 13], [17, 22]],
-  "max_consultas_ia_por_dia": 320
+  "max_consultas_ia_por_dia": 600,
+  "objetivo_productos_dia": 60,
+  "minutos_por_vuelta": 20
 }
