@@ -160,7 +160,7 @@
   "fecha": "2026-11-13",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 68264.296875,
+  "precio": 67887.171875,
   "tecnico": "COMPRAR",
   "senales": [
    "tendencia_alcista",
@@ -179,7 +179,7 @@
   "fecha": "2026-11-13",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1924.0400390625,
+  "precio": 1918.3199462890625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",

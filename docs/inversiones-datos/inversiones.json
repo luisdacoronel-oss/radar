@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T22:27:32.299Z",
+ "generado": "2026-11-13T23:24:19.037Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 829,
@@ -213,15 +213,6 @@
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
-   "nombre": "Bitcoin",
-   "tipo": "cripto (variable)",
-   "riesgo": "Alto",
-   "mensualPct": -15.8,
-   "realPct": null,
-   "donde": "Exchange",
-   "como": "Señal actual: COMPRAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
-  },
-  {
    "nombre": "Argentina (ETF ARGT)",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
@@ -229,6 +220,15 @@
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
+  },
+  {
+   "nombre": "Bitcoin",
+   "tipo": "cripto (variable)",
+   "riesgo": "Alto",
+   "mensualPct": -16.27,
+   "realPct": null,
+   "donde": "Exchange",
+   "como": "Señal actual: COMPRAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
    "nombre": "Pampa Energía",
@@ -243,7 +243,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.3,
+   "mensualPct": -19.54,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -53934,7 +53934,7 @@
       "time": "2026-11-13",
       "open": 357.9649963378906,
       "high": 360.8299865722656,
-      "low": 355.7550048828125,
+      "low": 355.7578125,
       "close": 356.2699890136719,
       "volume": 39099985
      }
@@ -73445,16 +73445,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 68264.296875,
-   "variacionDia": -4.32,
-   "variacion30d": -15.8,
+   "precio": 67887.171875,
+   "variacionDia": -4.84,
+   "variacion30d": -16.27,
    "puntaje": 40,
    "puntajeBase": 40,
    "accion": "COMPRAR",
-   "m20": 76586.18828125,
-   "m50": 80535.52734375,
-   "m200": 73035.4605859375,
-   "rsi": 25.00904514434221,
+   "m20": 76567.33203125,
+   "m50": 80527.98484375,
+   "m200": 73033.5749609375,
+   "rsi": 24.512997227568363,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -75939,9 +75939,9 @@
       "time": "2026-11-13",
       "open": 71371.765625,
       "high": 71386,
-      "low": 68052.4375,
-      "close": 68264.296875,
-      "volume": 43181064192
+      "low": 67841.7734375,
+      "close": 67887.171875,
+      "volume": 43400732672
      }
     ],
     "m20": [
@@ -77143,7 +77143,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 76586.1883
+      "value": 76567.332
      }
     ],
     "m50": [
@@ -78345,7 +78345,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 80535.5273
+      "value": 80527.9848
      }
     ],
     "m200": [
@@ -79547,7 +79547,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 73035.4606
+      "value": 73033.575
      }
     ],
     "rsi": [
@@ -80749,7 +80749,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 25.009
+      "value": 24.513
      }
     ]
    },
@@ -80790,16 +80790,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1924.0400390625,
-   "variacionDia": -4.6,
-   "variacion30d": -19.3,
+   "precio": 1918.3199462890625,
+   "variacionDia": -4.88,
+   "variacion30d": -19.54,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2215.9038269042967,
-   "m50": 2413.6395678710937,
-   "m200": 2147.2083447265627,
-   "rsi": 24.712341808608826,
+   "m20": 2215.617822265625,
+   "m50": 2413.525166015625,
+   "m200": 2147.1797442626953,
+   "rsi": 24.50426254564215,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -83280,8 +83280,8 @@
       "open": 2017.3367919921875,
       "high": 2017.3367919921875,
       "low": 1909.159912109375,
-      "close": 1924.0400390625,
-      "volume": 14921835520
+      "close": 1918.3199462890625,
+      "volume": 15300327424
      }
     ],
     "m20": [
@@ -84483,7 +84483,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2215.9038
+      "value": 2215.6178
      }
     ],
     "m50": [
@@ -85685,7 +85685,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2413.6396
+      "value": 2413.5252
      }
     ],
     "m200": [
@@ -86887,7 +86887,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2147.2083
+      "value": 2147.1797
      }
     ],
     "rsi": [
@@ -88089,7 +88089,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 24.7123
+      "value": 24.5043
      }
     ]
    },
@@ -88105,7 +88105,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1924.0400390625,
+    "entrada": 1918.3199462890625,
     "objetivo": 3078.16408203125,
     "stop": 1803.053955078125
    },
@@ -88518,9 +88518,9 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "La bolsa hoy: IBEX 35, Euro Dólar, Wall Street, IPC alemán y bonos - Investing.com España",
-   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOTlIcGtQMkVrSllIOXFjWXJaT1h4TnpBM0xtVGd4eFBxYzNDcl9zOENhMkFzVDN2ci1POXN5SzhYRnNqMEk2OUI5SXRrbkI1VEJ4YUVKRU5yV1NBeG1FUERuLVZzNUh6ZE8tdS1rTVFKLWFLRVBhd01FSkJvN1UtbXdNWklPaUxVcEM3WEhvcEMxNWYycG43dHB6OXlXV3hKRng5Q1NMTXoydnZWNXE4NF81emg4TEIxNGc?oc=5",
-   "fecha": "Wed, 11 Nov 2026 06:04:00 GMT",
+   "titulo": "Escándalo en Nvidia y fallas de Microsoft ‘presionan’ a Wall Street: ¿Cuánto caen las tecnológicas HOY? - El Financiero",
+   "enlace": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNM0xFaUtwakdVdXh2bnd5Q1ItaXF1MERUeVhqWDFCWGx0b3ByTHpPT0ZIb0pJZEl2bnZCeDVodS1Ma3V1MlpkNW9OaVE1QVN4bEN4VXpYaTQzVm5lVm5hLWprUmVHMENNVzJtazAxN1A4dHo5SklKRERGb2R4MkFrb2FRb01Ud3p1bEZxR25XWkgyTG5VQkw5VjFhSHM?oc=5",
+   "fecha": "Fri, 13 Nov 2026 16:50:05 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
