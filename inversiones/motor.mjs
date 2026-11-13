@@ -119,7 +119,8 @@ if (Array.isArray(ar?.fciU) && Array.isArray(ar?.fciP)) {
     const p = prev[f.fondo]; if (!p?.vcp || !f.vcp) return null;
     const dias = Math.max(1, (new Date(f.fecha) - new Date(p.fecha)) / 864e5);
     const m = Math.pow(f.vcp / p.vcp, 30 / dias) - 1;
-    return (m > 0 && m < 0.1) ? { fondo: f.fondo, m } : null;
+    // un money market real rinde entre 0,2 % y 4 % mensual: valores fuera de ese rango son errores de la fuente o fondos que no son de liquidez
+    return (m > 0.002 && m < 0.04 && !/balancead|renta plus|fcic|acciones|mixto/i.test(f.fondo)) ? { fondo: f.fondo, m } : null;
   }).filter(Boolean).sort((a, b) => b.m - a.m).slice(0, 3);
   for (const f of fondos) rend.push({ nombre: `FCI ${f.fondo}`, tipo: 'Money market (liquidez inmediata)', riesgo: 'Bajo', mensualPct: pct(f.m), realPct: pct(real(f.m)), donde: 'Su banco o broker', como: 'Suscribir el fondo; se rescata en el día.' });
 }
