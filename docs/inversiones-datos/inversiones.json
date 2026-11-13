@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T12:09:05.362Z",
+ "generado": "2026-11-13T13:27:27.208Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 829,
@@ -8,25 +8,25 @@
    "nombre": "Oficial",
    "compra": 1520,
    "venta": 1570,
-   "fecha": "2026-11-12T18:55:00.000Z"
+   "fecha": "2026-11-12T10:00:00.000Z"
   },
   "blue": {
    "nombre": "Blue",
    "compra": 1545,
    "venta": 1565,
-   "fecha": "2026-11-13T11:57:00.000Z"
+   "fecha": "2026-11-13T12:57:00.000Z"
   },
   "bolsa": {
    "nombre": "Bolsa",
    "compra": 1570.7,
    "venta": 1573.8,
-   "fecha": "2026-11-13T11:57:00.000Z"
+   "fecha": "2026-11-13T12:57:00.000Z"
   },
   "contadoconliqui": {
    "nombre": "Contado con liquidación",
    "compra": 1663.4,
    "venta": 1668.4,
-   "fecha": "2026-11-13T11:57:00.000Z"
+   "fecha": "2026-11-13T12:57:00.000Z"
   },
   "mayorista": {
    "nombre": "Mayorista",
@@ -36,15 +36,15 @@
   },
   "cripto": {
    "nombre": "Cripto",
-   "compra": 1668.63,
-   "venta": 1673.59,
-   "fecha": "2026-11-13T11:57:00.000Z"
+   "compra": 1669.16,
+   "venta": 1673.18,
+   "fecha": "2026-11-13T12:57:00.000Z"
   },
   "tarjeta": {
    "nombre": "Tarjeta",
    "compra": 1976,
    "venta": 2041,
-   "fecha": "2026-11-12T18:55:00.000Z"
+   "fecha": "2026-11-12T10:00:00.000Z"
   }
  },
  "rulos": [
@@ -59,10 +59,10 @@
   },
   {
    "nombre": "MEP → Cripto (USDT)",
-   "pasos": "Comprar dólares MEP a $1573.8 → vender como USDT en un exchange a $1668.63",
-   "brutoPct": 6.03,
-   "netoPct": 4.23,
-   "gananciaSobreCapital": 42255,
+   "pasos": "Comprar dólares MEP a $1573.8 → vender como USDT en un exchange a $1669.16",
+   "brutoPct": 6.06,
+   "netoPct": 4.26,
+   "gananciaSobreCapital": 42592,
    "conviene": true,
    "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
   },
@@ -86,10 +86,10 @@
   },
   {
    "nombre": "Cripto (USDT) → MEP",
-   "pasos": "Comprar dólares en USDT a $1673.59 → vender por MEP a $1570.7",
-   "brutoPct": -6.15,
-   "netoPct": -7.95,
-   "gananciaSobreCapital": -79479,
+   "pasos": "Comprar dólares en USDT a $1673.18 → vender por MEP a $1570.7",
+   "brutoPct": -6.12,
+   "netoPct": -7.92,
+   "gananciaSobreCapital": -79249,
    "conviene": false,
    "nota": "Camino inverso: comprar USDT con pesos y vender dólares MEP."
   }
@@ -207,7 +207,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -14.42,
+   "mensualPct": -14.64,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -225,7 +225,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -17.73,
+   "mensualPct": -17.95,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -22169,7 +22169,7 @@
      },
      {
       "quien": "groq",
-      "accion": "COMPRAR",
+      "accion": "VENDER",
       "peso": 1
      },
      {
@@ -22181,12 +22181,12 @@
    },
    "niveles": {
     "entrada": 6230,
-    "objetivo": 7965,
-    "stop": 5935
+    "objetivo": 6710.26,
+    "stop": 6710
    },
    "razonesIA": [
-    "Presenta extrema sobreventa técnica (RSI 24,3), pero la tendencia bajista local aconseja no precipitar entradas.",
-    "RSI muy bajo (24.3) y puntaje técnico positivo indican sobre‑venta; el nivel de retroceso 0.618 brinda objetivo razonable."
+    "Acumula una corrección mensual del 25,21% ingresando en zona de sobreventa técnica con un RSI de 24,3.",
+    "RSI 24, precios muy bajo de sus medias y retroceso bajista profundo"
    ]
   },
   {
@@ -29459,14 +29459,9 @@
     ]
    },
    "consenso": {
-    "accion": "COMPRAR",
-    "acuerdo": 0.5,
+    "accion": "ESPERAR",
+    "acuerdo": 1,
     "detalle": [
-     {
-      "quien": "groq",
-      "accion": "COMPRAR",
-      "peso": 1
-     },
      {
       "quien": "tecnico",
       "accion": "ESPERAR",
@@ -29476,12 +29471,9 @@
    },
    "niveles": {
     "entrada": 4205,
-    "objetivo": 5089,
-    "stop": 3900
+    "objetivo": 3664.8
    },
-   "razonesIA": [
-    "RSI 18.8 y puntaje técnico 25 señalan fuerte sobre‑venta; el retroceso 0.618 (5 088) funciona como resistencia."
-   ]
+   "razonesIA": []
   },
   {
    "nombre": "Banco Macro",
@@ -51419,6 +51411,11 @@
       "peso": 1
      },
      {
+      "quien": "groq",
+      "accion": "ESPERAR",
+      "peso": 1
+     },
+     {
       "quien": "tecnico",
       "accion": "ESPERAR",
       "peso": 1
@@ -51428,10 +51425,11 @@
    "niveles": {
     "entrada": 757.12,
     "objetivo": 799.31,
-    "stop": 730.5
+    "stop": 749.1
    },
    "razonesIA": [
-    "Consolida cerca de soportes clave en estructura alcista de largo plazo, pero afronta cautela de corto plazo."
+    "Conserva la estructura de tramo alcista a pesar de registrar una leve caída mensual del 1,62% y un RSI neutral de 48,5.",
+    "RSI neutro, cerca de la media de 200 días y en zona de retroceso 0.382‑0.236"
    ]
   },
   {
@@ -58767,11 +58765,11 @@
    "niveles": {
     "entrada": 354.88,
     "objetivo": 382.66,
-    "stop": 340
+    "stop": 339.16
    },
    "razonesIA": [
-    "Mantiene estructura alcista por encima de sus medias móviles con retorno positivo en los últimos 30 días.",
-    "Precio por encima de sus medias móviles, RSI en zona neutral‑alta y fibonaccis alcistas apuntan a nuevo impulso."
+    "Mantiene tendencia alcista cotizando por encima de sus medias móviles de 20, 50 y 200 días con un RSI de 59,7.",
+    "RSI saludable, precios sobre medias móviles y señal alcista en Fibonacci"
    ]
   },
   {
@@ -66088,11 +66086,6 @@
     "acuerdo": 1,
     "detalle": [
      {
-      "quien": "gemini",
-      "accion": "ESPERAR",
-      "peso": 1
-     },
-     {
       "quien": "tecnico",
       "accion": "ESPERAR",
       "peso": 1
@@ -66100,13 +66093,11 @@
     ]
    },
    "niveles": {
-    "entrada": 166.19,
-    "objetivo": 184.93,
-    "stop": 148.8
+    "entrada": 166.19000244140625,
+    "objetivo": 123.07696520996093,
+    "stop": 148.8000030517578
    },
-   "razonesIA": [
-    "Aunque el RSI de 26 indica fuerte sobreventa, la fuerza bajista exige aguardar señales de estabilización."
-   ]
+   "razonesIA": []
   },
   {
    "nombre": "Oro (GLD)",
@@ -73440,16 +73431,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 69386.1328125,
-   "variacionDia": -2.74,
-   "variacion30d": -14.42,
+   "precio": 69201.3984375,
+   "variacionDia": -3,
+   "variacion30d": -14.64,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 76642.280078125,
-   "m50": 80557.9640625,
-   "m200": 73041.069765625,
-   "rsi": 26.610929984843338,
+   "m20": 76633.043359375,
+   "m50": 80554.269375,
+   "m200": 73040.14609375,
+   "rsi": 26.333178853201403,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73523,7 +73514,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 27: zona de sobreventa, posible rebote."
+     "texto": "RSI en 26: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75930,8 +75921,8 @@
       "open": 71371.765625,
       "high": 71386,
       "low": 68052.4375,
-      "close": 69386.1328125,
-      "volume": 46573785088
+      "close": 69201.3984375,
+      "volume": 44979023872
      }
     ],
     "m20": [
@@ -77133,7 +77124,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 76642.2801
+      "value": 76633.0434
      }
     ],
     "m50": [
@@ -78335,7 +78326,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 80557.9641
+      "value": 80554.2694
      }
     ],
     "m200": [
@@ -79537,7 +79528,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 73041.0698
+      "value": 73040.1461
      }
     ],
     "rsi": [
@@ -80739,13 +80730,13 @@
      },
      {
       "time": "2026-11-13",
-      "value": 26.6109
+      "value": 26.3332
      }
     ]
    },
    "consenso": {
     "accion": "ESPERAR",
-    "acuerdo": 1,
+    "acuerdo": 0.6666666666666666,
     "detalle": [
      {
       "quien": "gemini",
@@ -80754,7 +80745,7 @@
      },
      {
       "quien": "groq",
-      "accion": "ESPERAR",
+      "accion": "COMPRAR",
       "peso": 1
      },
      {
@@ -80765,13 +80756,13 @@
     ]
    },
    "niveles": {
-    "entrada": 69340.76,
-    "objetivo": 77761.36,
-    "stop": 65000
+    "entrada": 69201.4,
+    "objetivo": 74795.17,
+    "stop": 67605.93
    },
    "razonesIA": [
-    "Comprime hacia el nivel retroceso Fibonacci de 0,786 con RSI en sobreventa, a la espera de confirmación de piso.",
-    "Aunque RSI indica sobre‑venta, el precio está bajo sus medias móviles y la volatilidad es alta; se espera confirmación antes de entrar."
+    "Presenta una caída mensual del 14,64% y un RSI sobrevendido de 26,3 dentro de un tramo alcista de mayor plazo.",
+    "RSI 26, sobre la media de 200 días y en retroceso 0.618, indica posible rebote"
    ]
   },
   {
@@ -80780,16 +80771,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1961.3499755859375,
-   "variacionDia": -2.75,
-   "variacion30d": -17.73,
+   "precio": 1956.2099609375,
+   "variacionDia": -3.01,
+   "variacion30d": -17.95,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2217.769323730469,
-   "m50": 2414.3857666015624,
-   "m200": 2147.39489440918,
-   "rsi": 26.161342624732,
+   "m20": 2217.512322998047,
+   "m50": 2414.2829663085936,
+   "m200": 2147.3691943359377,
+   "rsi": 25.951709194699106,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -83270,8 +83261,8 @@
       "open": 2017.3367919921875,
       "high": 2017.3367919921875,
       "low": 1909.159912109375,
-      "close": 1961.3499755859375,
-      "volume": 16279940096
+      "close": 1956.2099609375,
+      "volume": 15252855808
      }
     ],
     "m20": [
@@ -84473,7 +84464,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2217.7693
+      "value": 2217.5123
      }
     ],
     "m50": [
@@ -85675,7 +85666,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2414.3858
+      "value": 2414.283
      }
     ],
     "m200": [
@@ -86877,7 +86868,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2147.3949
+      "value": 2147.3692
      }
     ],
     "rsi": [
@@ -88079,7 +88070,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 26.1613
+      "value": 25.9517
      }
     ]
    },
@@ -88095,7 +88086,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1961.3499755859375,
+    "entrada": 1956.2099609375,
     "objetivo": 3078.16408203125,
     "stop": 1803.053955078125
    },
@@ -88107,7 +88098,7 @@
    "proveedor": "github",
    "nombre": "GitHub Models",
    "modelo": "openai/gpt-4.1-mini",
-   "ms": 604,
+   "ms": 118,
    "error": "fetch failed",
    "opinion": null,
    "confiabilidad": 1
@@ -88115,14 +88106,76 @@
   {
    "proveedor": "gemini",
    "nombre": "Google Gemini",
-   "modelo": "gemini-3.5-flash",
-   "ms": 194471,
+   "modelo": "gemini-3.6-flash",
+   "ms": 74812,
    "error": null,
    "opinion": {
-    "resumen": "El escenario actual refleja una marcada corrección en activos de renta variable y criptoactivos, sumada a la volatilidad local por bajas reservas y nuevas regulaciones de la CNV. Frente a una inflación mensual del 2,2%, los plazos fijos rinden tasas reales negativas (-0,22%), por lo que la liquidez debe gestionarse mediante instrumentos balanceados de bajo riesgo. Se recomienda cautela y posicionamiento selectivo en activos de calidad que conservan tendencia alcista.",
+    "resumen": "En un contexto de inflación mensual del 2,2% y riesgo país en 829 puntos, los plazos fijos tradicionales ofrecen retornos reales negativos del -0,22%. Destacan los fondos de bonos locales con rendimientos reales positivos del 1,68% y activos internacionales como Apple con subas del 3,48% en 30 días. Por su parte, la renta variable local y los criptoactivos muestran correcciones severas ubicándose en zonas de sobreventa.",
     "mejorOpcion": {
-     "nombre": "FCI HF Balanceado - Clase G",
-     "porque": "Ofrece un excelente rendimiento mensual del 9,12% (6,77% real frente a la inflación) manteniendo un perfil de riesgo bajo en un entorno de alta volatilidad."
+     "nombre": "FCI FBA Bonos Argentina A RP D.596",
+     "porque": "Ofrece un rendimiento mensual del 3,92% con un retorno real positivo del 1,68% frente a la inflación del 2,2%, manteniendo un perfil de riesgo bajo."
+    },
+    "activos": [
+     {
+      "nombre": "Apple",
+      "yahoo": "AAPL",
+      "accion": "COMPRAR",
+      "confianza": 75,
+      "entrada": 354.88,
+      "objetivo": 382.66,
+      "stop": 338.48,
+      "razon": "Mantiene tendencia alcista cotizando por encima de sus medias móviles de 20, 50 y 200 días con un RSI de 59,7."
+     },
+     {
+      "nombre": "S&P 500 (SPY)",
+      "yahoo": "SPY",
+      "accion": "ESPERAR",
+      "confianza": 60,
+      "entrada": 757.12,
+      "objetivo": 781.62,
+      "stop": 731.62,
+      "razon": "Conserva la estructura de tramo alcista a pesar de registrar una leve caída mensual del 1,62% y un RSI neutral de 48,5."
+     },
+     {
+      "nombre": "YPF",
+      "yahoo": "YPFD.BA",
+      "accion": "ESPERAR",
+      "confianza": 50,
+      "entrada": 6230,
+      "objetivo": 6710.26,
+      "stop": 5935,
+      "razon": "Acumula una corrección mensual del 25,21% ingresando en zona de sobreventa técnica con un RSI de 24,3."
+     },
+     {
+      "nombre": "Bitcoin",
+      "yahoo": "BTC-USD",
+      "accion": "ESPERAR",
+      "confianza": 55,
+      "entrada": 69201.4,
+      "objetivo": 74795.17,
+      "stop": 62226.58,
+      "razon": "Presenta una caída mensual del 14,64% y un RSI sobrevendido de 26,3 dentro de un tramo alcista de mayor plazo."
+     }
+    ],
+    "riesgos": [
+     "Rendimiento real negativo del -0,22% en depósitos a plazo fijo al rendir 1,97% frente a la inflación del 2,2%.",
+     "Elevada volatilidad en el mercado accionario argentino con caídas superiores al 18% en los últimos 30 días.",
+     "Costo elevado para la salida de divisas debido a la brecha del 5,2% entre el dólar MEP y el CCL."
+    ]
+   },
+   "confiabilidad": 1
+  },
+  {
+   "proveedor": "groq",
+   "nombre": "Groq",
+   "modelo": "openai/gpt-oss-120b",
+   "ms": 3903,
+   "error": null,
+   "opinion": {
+    "resumen": "El mercado muestra presión bajista en la mayoría de los activos locales, mientras que los instrumentos internacionales con fundamentos técnicos sólidos presentan oportunidades de compra. La inflación mensual del 2,2 % y el riesgo país elevado siguen generando incertidumbre, pero el dólar oficial‑MEP muestra una ligera brecha positiva. Se recomienda enfocarse en activos con RSI cercano a 60, precios por encima de sus medias móviles y soporte en retrocesos de Fibonacci.",
+    "mejorOpcion": {
+     "nombre": "Apple",
+     "porque": "RSI 59.7, cotiza sobre sus medias móviles de 20, 50 y 200 días y está en zona de soporte del retroceso de Fibonacci, con objetivo en la extensión 1.272"
     },
     "activos": [
      {
@@ -88133,127 +88186,45 @@
       "entrada": 354.88,
       "objetivo": 382.66,
       "stop": 339.16,
-      "razon": "Mantiene estructura alcista por encima de sus medias móviles con retorno positivo en los últimos 30 días."
+      "razon": "RSI saludable, precios sobre medias móviles y señal alcista en Fibonacci"
      },
      {
       "nombre": "S&P 500 (SPY)",
       "yahoo": "SPY",
       "accion": "ESPERAR",
-      "confianza": 65,
+      "confianza": 55,
       "entrada": 757.12,
       "objetivo": 799.31,
-      "stop": 730.5,
-      "razon": "Consolida cerca de soportes clave en estructura alcista de largo plazo, pero afronta cautela de corto plazo."
-     },
-     {
-      "nombre": "Nvidia",
-      "yahoo": "NVDA",
-      "accion": "ESPERAR",
-      "confianza": 50,
-      "entrada": 166.19,
-      "objetivo": 184.93,
-      "stop": 148.8,
-      "razon": "Aunque el RSI de 26 indica fuerte sobreventa, la fuerza bajista exige aguardar señales de estabilización."
-     },
-     {
-      "nombre": "YPF",
-      "yahoo": "YPFD.BA",
-      "accion": "ESPERAR",
-      "confianza": 45,
-      "entrada": 6230,
-      "objetivo": 6710.26,
-      "stop": 5935,
-      "razon": "Presenta extrema sobreventa técnica (RSI 24,3), pero la tendencia bajista local aconseja no precipitar entradas."
+      "stop": 749.1,
+      "razon": "RSI neutro, cerca de la media de 200 días y en zona de retroceso 0.382‑0.236"
      },
      {
       "nombre": "Bitcoin",
       "yahoo": "BTC-USD",
-      "accion": "ESPERAR",
-      "confianza": 50,
-      "entrada": 69340.76,
-      "objetivo": 77761.36,
-      "stop": 62226.58,
-      "razon": "Comprime hacia el nivel retroceso Fibonacci de 0,786 con RSI en sobreventa, a la espera de confirmación de piso."
-     }
-    ],
-    "riesgos": [
-     "Caída en las reservas internacionales del BCRA e incertidumbre en torno a la recalificación de mercado por MSCI.",
-     "Nuevas restricciones normativas de la CNV que impulsan la brecha y el costo del canje entre dólar MEP y CCL.",
-     "Persistencia del pesimismo y toma de ganancias en el sector tecnológico global y de criptoactivos."
-    ]
-   },
-   "confiabilidad": 1
-  },
-  {
-   "proveedor": "groq",
-   "nombre": "Groq",
-   "modelo": "openai/gpt-oss-120b",
-   "ms": 5735,
-   "error": null,
-   "opinion": {
-    "resumen": "El entorno macroeconómico argentino muestra alta inflación y riesgo país elevado, mientras que los spreads cambiarios siguen amplios y la bolsa local presenta tendencia bajista. Los fondos balanceados locales ofrecen rendimientos reales atractivos con bajo riesgo, y algunas acciones con RSI muy bajo y puntaje técnico positivo pueden presentar oportunidades de rebote. Se recomienda priorizar instrumentos de bajo riesgo y aprovechar oportunidades de compra en activos sobre‑vendidos con soporte técnico claro.",
-    "mejorOpcion": {
-     "nombre": "FCI HF Balanceado - Clase G",
-     "porque": "Rinde 6.77 % real mensual con riesgo bajo, supera la inflación mensual del 2.2 % y no está expuesto a la volatilidad cambiaria ni a la caída de los precios locales."
-    },
-    "activos": [
-     {
-      "nombre": "Apple",
-      "yahoo": "AAPL",
       "accion": "COMPRAR",
-      "confianza": 80,
-      "entrada": 354.88,
-      "objetivo": 380,
-      "stop": 340,
-      "razon": "Precio por encima de sus medias móviles, RSI en zona neutral‑alta y fibonaccis alcistas apuntan a nuevo impulso."
-     },
-     {
-      "nombre": "YPF",
-      "yahoo": "YPFD.BA",
-      "accion": "COMPRAR",
-      "confianza": 70,
-      "entrada": 6230,
-      "objetivo": 7965,
-      "stop": 5900,
-      "razon": "RSI muy bajo (24.3) y puntaje técnico positivo indican sobre‑venta; el nivel de retroceso 0.618 brinda objetivo razonable."
-     },
-     {
-      "nombre": "Pampa Energía",
-      "yahoo": "PAMP.BA",
-      "accion": "COMPRAR",
-      "confianza": 70,
-      "entrada": 4205,
-      "objetivo": 5089,
-      "stop": 3900,
-      "razon": "RSI 18.8 y puntaje técnico 25 señalan fuerte sobre‑venta; el retroceso 0.618 (5 088) funciona como resistencia."
-     },
-     {
-      "nombre": "Bitcoin",
-      "yahoo": "BTC-USD",
-      "accion": "ESPERAR",
       "confianza": 60,
-      "entrada": 69340.76,
-      "objetivo": 71828,
-      "stop": 65000,
-      "razon": "Aunque RSI indica sobre‑venta, el precio está bajo sus medias móviles y la volatilidad es alta; se espera confirmación antes de entrar."
+      "entrada": 69201.4,
+      "objetivo": 71828.98,
+      "stop": 67605.93,
+      "razon": "RSI 26, sobre la media de 200 días y en retroceso 0.618, indica posible rebote"
      },
      {
-      "nombre": "Merval",
-      "yahoo": "^MERV",
+      "nombre": "YPF",
+      "yahoo": "YPFD.BA",
       "accion": "VENDER",
-      "confianza": 65,
-      "entrada": 2848945,
-      "objetivo": 2600000,
-      "stop": 2950000,
-      "razon": "Precio bajo sus medias de 20 y 50 días, RSI en zona neutral‑baja y puntaje técnico -20 confirman tendencia bajista."
+      "confianza": 30,
+      "entrada": 6230,
+      "objetivo": 5935,
+      "stop": 6710,
+      "razon": "RSI 24, precios muy bajo de sus medias y retroceso bajista profundo"
      }
     ],
     "riesgos": [
-     "Elevado riesgo país (829 puntos) que puede afectar la percepción de inversores internacionales",
-     "Inflación mensual del 2.2 % que erosiona rendimientos reales",
-     "Amplios spreads entre el dólar oficial, MEP y blue que generan incertidumbre cambiaria",
-     "Volatilidad alta en criptomonedas y posibles restricciones regulatorias",
-     "Dependencia de la posible inclusión de Argentina en MSCI; una decisión adversa impactaría negativamente al Merval"
+     "Riesgo país elevado (829 puntos) que puede afectar la volatilidad de la moneda y los bonos",
+     "Inflación mensual del 2,2 % que erosiona el poder adquisitivo y presiona tasas de interés",
+     "Brecha cambiaria entre oficial, MEP y blue que genera incertidumbre en la conversión de activos",
+     "Alta volatilidad de criptoactivos y exposición a movimientos externos",
+     "Entorno político y regulatorio incierto que puede impactar decisiones de inversión"
     ]
    },
    "confiabilidad": 1
@@ -88268,48 +88239,38 @@
     "confianza": 75,
     "entrada": 354.88,
     "objetivo": 382.66,
-    "stop": 339.16,
-    "razon": "Mantiene estructura alcista por encima de sus medias móviles con retorno positivo en los últimos 30 días."
+    "stop": 338.48,
+    "razon": "Mantiene tendencia alcista cotizando por encima de sus medias móviles de 20, 50 y 200 días con un RSI de 59,7."
    },
    {
     "nombre": "S&P 500 (SPY)",
     "yahoo": "SPY",
     "accion": "ESPERAR",
-    "confianza": 65,
+    "confianza": 60,
     "entrada": 757.12,
-    "objetivo": 799.31,
-    "stop": 730.5,
-    "razon": "Consolida cerca de soportes clave en estructura alcista de largo plazo, pero afronta cautela de corto plazo."
-   },
-   {
-    "nombre": "Nvidia",
-    "yahoo": "NVDA",
-    "accion": "ESPERAR",
-    "confianza": 50,
-    "entrada": 166.19,
-    "objetivo": 184.93,
-    "stop": 148.8,
-    "razon": "Aunque el RSI de 26 indica fuerte sobreventa, la fuerza bajista exige aguardar señales de estabilización."
+    "objetivo": 781.62,
+    "stop": 731.62,
+    "razon": "Conserva la estructura de tramo alcista a pesar de registrar una leve caída mensual del 1,62% y un RSI neutral de 48,5."
    },
    {
     "nombre": "YPF",
     "yahoo": "YPFD.BA",
     "accion": "ESPERAR",
-    "confianza": 45,
+    "confianza": 50,
     "entrada": 6230,
     "objetivo": 6710.26,
     "stop": 5935,
-    "razon": "Presenta extrema sobreventa técnica (RSI 24,3), pero la tendencia bajista local aconseja no precipitar entradas."
+    "razon": "Acumula una corrección mensual del 25,21% ingresando en zona de sobreventa técnica con un RSI de 24,3."
    },
    {
     "nombre": "Bitcoin",
     "yahoo": "BTC-USD",
     "accion": "ESPERAR",
-    "confianza": 50,
-    "entrada": 69340.76,
-    "objetivo": 77761.36,
+    "confianza": 55,
+    "entrada": 69201.4,
+    "objetivo": 74795.17,
     "stop": 62226.58,
-    "razon": "Comprime hacia el nivel retroceso Fibonacci de 0,786 con RSI en sobreventa, a la espera de confirmación de piso."
+    "razon": "Presenta una caída mensual del 14,64% y un RSI sobrevendido de 26,3 dentro de un tramo alcista de mayor plazo."
    }
   ],
   "groq": [
@@ -88317,55 +88278,45 @@
     "nombre": "Apple",
     "yahoo": "AAPL",
     "accion": "COMPRAR",
-    "confianza": 80,
+    "confianza": 75,
     "entrada": 354.88,
-    "objetivo": 380,
-    "stop": 340,
-    "razon": "Precio por encima de sus medias móviles, RSI en zona neutral‑alta y fibonaccis alcistas apuntan a nuevo impulso."
+    "objetivo": 382.66,
+    "stop": 339.16,
+    "razon": "RSI saludable, precios sobre medias móviles y señal alcista en Fibonacci"
    },
    {
-    "nombre": "YPF",
-    "yahoo": "YPFD.BA",
-    "accion": "COMPRAR",
-    "confianza": 70,
-    "entrada": 6230,
-    "objetivo": 7965,
-    "stop": 5900,
-    "razon": "RSI muy bajo (24.3) y puntaje técnico positivo indican sobre‑venta; el nivel de retroceso 0.618 brinda objetivo razonable."
-   },
-   {
-    "nombre": "Pampa Energía",
-    "yahoo": "PAMP.BA",
-    "accion": "COMPRAR",
-    "confianza": 70,
-    "entrada": 4205,
-    "objetivo": 5089,
-    "stop": 3900,
-    "razon": "RSI 18.8 y puntaje técnico 25 señalan fuerte sobre‑venta; el retroceso 0.618 (5 088) funciona como resistencia."
+    "nombre": "S&P 500 (SPY)",
+    "yahoo": "SPY",
+    "accion": "ESPERAR",
+    "confianza": 55,
+    "entrada": 757.12,
+    "objetivo": 799.31,
+    "stop": 749.1,
+    "razon": "RSI neutro, cerca de la media de 200 días y en zona de retroceso 0.382‑0.236"
    },
    {
     "nombre": "Bitcoin",
     "yahoo": "BTC-USD",
-    "accion": "ESPERAR",
+    "accion": "COMPRAR",
     "confianza": 60,
-    "entrada": 69340.76,
-    "objetivo": 71828,
-    "stop": 65000,
-    "razon": "Aunque RSI indica sobre‑venta, el precio está bajo sus medias móviles y la volatilidad es alta; se espera confirmación antes de entrar."
+    "entrada": 69201.4,
+    "objetivo": 71828.98,
+    "stop": 67605.93,
+    "razon": "RSI 26, sobre la media de 200 días y en retroceso 0.618, indica posible rebote"
    },
    {
-    "nombre": "Merval",
-    "yahoo": "^MERV",
+    "nombre": "YPF",
+    "yahoo": "YPFD.BA",
     "accion": "VENDER",
-    "confianza": 65,
-    "entrada": 2848945,
-    "objetivo": 2600000,
-    "stop": 2950000,
-    "razon": "Precio bajo sus medias de 20 y 50 días, RSI en zona neutral‑baja y puntaje técnico -20 confirman tendencia bajista."
+    "confianza": 30,
+    "entrada": 6230,
+    "objetivo": 5935,
+    "stop": 6710,
+    "razon": "RSI 24, precios muy bajo de sus medias y retroceso bajista profundo"
    }
   ]
  },
- "opinionesFecha": "2026-11-13T11:24:36.247Z",
+ "opinionesFecha": "2026-11-13T13:27:27.208Z",
  "titulares": [
   {
    "titulo": "Riesgo país, bonos y acciones: así operó HOY el mercado en medio del feriado por la visita del papa León XIV - TN",
@@ -88445,6 +88396,13 @@
    "tema": "BCRA tasas plazo fijo"
   },
   {
+   "titulo": "Las tasas en pesos, dentro de una montaña rusa: el BCRA busca ahora plancharlas - El Cronista",
+   "enlace": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMmVxVmhwM3RKaEktdTNZbVg4QlZZSjRwVnNYcTNadV9mWm54WUJzY2FqNUsxR2NrbkVtQkZWejVFZDllMG43dEhMTHo3VzlMUnhIenNsbENoZUg1WlQzaVktS3M3bGN2T05wTnZacjJKbUgxMjdjVkxsa1Rmd19samJqLWNuTVdGUmJTSEJOT3N0T0ZBRHoyZC1lUllxSzVKTldUYWozUG1nVFliY0dRSlZQWDZxMWhCNGFFT3V30gHYAUFVX3lxTE1PdFl1TDAtNEczSXdYY1Atd1NIWUtlUVFFTEZubXkxX3FiM1d6YVBFQnc0MzR2Y3J5RHNab0pCNzViZ0JTMjZUdmk3WHJ0Tkg1cjFaWFh2a0JpZEtnQXNFeUQyV3RiLXh4dU5IczY0NUJidkk3TkJ4TVlfSVRhUHV4WS1VdkV2YVk0Y0s1VHA1ckgyckdwenFMQW5wU0pQRlltZldJWVg5LXBxeFpqV3hoaWtJOXB1WkxSa3R1WjRNRklza0I1Nl9vdGI3QmtmLTNudnZ2Tnk3QQ?oc=5",
+   "fecha": "Fri, 13 Nov 2026 12:55:49 GMT",
+   "fuente": "",
+   "tema": "BCRA tasas plazo fijo"
+  },
+  {
    "titulo": "Plazo fijo: cuál es la tasa que ofrece cada banco para depósitos de $1 millón a 30 días - Infobae",
    "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbnVfUW5OQnkyUkpJZDRRNFgxaUF4WnVpMDF0d3FVelM2R0VabzVOeGYxMEtVY1YtaG55ZXZzdktTLV9HZWJUUnJOdmFSSVZRbEdJUXZpSzdaWGZzRlRaZFVQbHh4SUZDb1hWaFlpTjgtSnVJMDJuNVh1Nzh6alptX2p6aVNEQU9LQ25BRmh5OXZpYXp3bVUzT0l2Ynp4YjdBbTBocWxaTVQwLWVuOXNjRG9wUm0wZzhrdkQtRWw3YUpYQ1p4eXE4WnB30gHkAUFVX3lxTE1wZFVkajdKZWhPN3NXdHNzbjVkVjBuQzBxc0VXUE1hQWJrdDBEQkdMZEYtcno3NUJXWUo4d0ZuS3VxQnJibkhoMmdZOTdTUGdiMERQT09Hal9NSThja1U4VnZJN0QyOFBUWWszWUI4aUIyQTBDQWVzSDBwYWVteUU0NjZxclFqS056TFRkZV9QMGpTbFFmbFZMWkh2MVBkRmJUOWI1OWZGQWZRa0ZvbnkyZWQ4bHdmakdrcG1ka2hjd3F2Zjg2MjZKNkxpNFg2eXZiVWRUejVyUDNwQXZXa1lvcWtiVQ?oc=5",
    "fecha": "Mon, 09 Nov 2026 14:26:00 GMT",
@@ -88462,13 +88420,6 @@
    "titulo": "Plazo fijo: la diferencia de ganancia entre bancos por invertir $4 millones a 30 días - MDZ Online",
    "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaTZaNzFXWVRlME5QWDMxS1dYXzBCVGxVVlRzeE5aQ0lGTHAxSENabDAyNEFRREw2ZXZQWjU2MUVnZU1raU81eXlDanhMd2d5UGtQY3oxeDhBSEFNbmxNZUs0cmZiOWdVSlh1dW4wQ19FdU1xWlFrUXZZZGc2ZWlHZTRVaW5BcVlZR0FOODl2YWRRUFFrTnZUSXVUOEpWcWs3NzFCTnpqZEhzbTRRaVZQTF9GNWtOb0hQdFdYYTZ5eFY1QUloLXBIdjBEdVFWb1ZPalB4bQ?oc=5",
    "fecha": "Thu, 12 Nov 2026 13:22:45 GMT",
-   "fuente": "",
-   "tema": "BCRA tasas plazo fijo"
-  },
-  {
-   "titulo": "Plazo fijo: los bancos que ofrecen tasas de hasta 24,25% a no clientes - MDZ Online",
-   "enlace": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVlFUZXQzTUtRb0VDaGxxcTl2MTdpMi13NThEb24tdXhhVFhkUHRaOTAzQ3NjRi16LWI0Y05hZV9ycHcwQ0lzcy10S24tWFY2cHdheDN5V3ZCenROc1JjTFVGRjdyR180V2RHbmZCZDBQR2xIOUVTT3JsS2huSm0tWlM1QTJsUXB2djk4aXo5MER0ejEyeXltNWhKbVhEd2xQd3pMUV9hUUpvQlE0bkFscV9CVF9qVU9ENnYwMXlBTQ?oc=5",
-   "fecha": "Tue, 10 Nov 2026 11:54:10 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
@@ -88515,6 +88466,13 @@
    "tema": "Wall Street hoy"
   },
   {
+   "titulo": "Wall Street: Preapertura con software, semiconductores y lujo bajo presión - Bitfinanzas",
+   "enlace": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB2dWlaRWx2cUtBcWJPQ2FJcDIzWHNLN2JtMmJNa2Y3eGgzc3h6VVhEY24yaVVDUjlWTUFna2pIODlYbDhMRzBfZjJYTldkOTd4SWdzcVYwS0puRmJ3YTRsUGNwaGNGemdQaDM5MEVVTHRweFBXakx2VDdXSms?oc=5",
+   "fecha": "Fri, 13 Nov 2026 12:29:42 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
    "titulo": "Wall Street sintió el impacto de la salida de Jensen Huang y las acciones de Nvidia se desplomaron - La Gaceta",
    "enlace": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOV3pNRmFwbXpGeUZaQUFrY1NvcTllLWI3a25xemFKdXNQQ2tyZjAtM0prSXAzczU5aWFCOEV0Q2hTX3hScDZSQzZ6TmxWZU9vRVlvd2pWdG9aRDgwbEFsQU91ZDV5U1BBbno2WEx4SzI5dnpjYWRvTVRDRkVWOC01M3N5bHdRVHRZSzFqSnhZU1JCVVBmdEViUjVoNDNoWFRPSTgxMWtqSXRvRVBsTGlCTUhRWnAxaEYtMW1zSjlmWU9sanRHS2FLOFZmNXfSAdIBQVVfeXFMUC1HRFl0cE1SMkt6RjRQM2w0bldvSVZTeHZFVTI1SV85VklZRG5PRHZVSkFpd09pOFZjVWRabVp3TXJ1ZUlQS1hmVDVBRmQweWdQN3c1YUlSTnBGd0w0QnhkTVFwVE4wdndKV2VQM1c5cVJjWUhDXzRkaV9xcl9zRHNDX29VUk5ab2NSRFgwS2pZOUJacWhvT051VFVYWVlUUkp4ZGs1WXZqWkg0YllzelpRUy0xVUFRTGhOejE1V0NscU9POWpUaEV4N09Hanl4cmd3?oc=5",
    "fecha": "Thu, 12 Nov 2026 15:33:21 GMT",
@@ -88532,13 +88490,6 @@
    "titulo": "La bolsa hoy: IBEX 35, Euro Dólar, Wall Street, IPC alemán y bonos - Investing.com España",
    "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOTlIcGtQMkVrSllIOXFjWXJaT1h4TnpBM0xtVGd4eFBxYzNDcl9zOENhMkFzVDN2ci1POXN5SzhYRnNqMEk2OUI5SXRrbkI1VEJ4YUVKRU5yV1NBeG1FUERuLVZzNUh6ZE8tdS1rTVFKLWFLRVBhd01FSkJvN1UtbXdNWklPaUxVcEM3WEhvcEMxNWYycG43dHB6OXlXV3hKRng5Q1NMTXoydnZWNXE4NF81emg4TEIxNGc?oc=5",
    "fecha": "Wed, 11 Nov 2026 06:04:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Wall Street: Preapertura con tecnología, lujo y criptoactivos bajo presión - Bitfinanzas",
-   "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMGxWWUxTcWVOSlZlWVhxajVLQkg4VHRacDZsbHdLYUJpdG9Ib3ZEa1dJbm5MMHQ5VUgwMVdMV3lzRXQ2dkJQenJGczF4aGtITzRTaDdVeExNWG1kS1lmRWpxaVRLS3AtYjNzdlRUTHdPOHJiam9mM29FSWhSd1Y5cHZ1TE55dmtCbHc?oc=5",
-   "fecha": "Thu, 12 Nov 2026 13:28:29 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88564,9 +88515,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Precio de Bitcoin hoy: retrocede 3,91% y cotiza por debajo de los USD 72.000 - Cripto247",
-   "enlace": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQd0o0Wms1VEhCTUhHYy1HSGtzOERKbUpjZTNsREdaLTZBb0t3eE8wbnBPZy05WmRxajZQQVVQd2ZhNXcyT2VLOEF6eVkwYmZNb2w3aTJzMXVlNkEtTExrTFd5eTl6dHhTUV9SVjBMcnUyalBMUTZFRlhEUlFmQXpjQVRacEs2Y3JjMVI4c3U1YzJuMXg5eUxFZC0xRjZvX3hwa19uLUdtUlo3NkpxZHdnOGZQMXlKT2M?oc=5",
-   "fecha": "Thu, 12 Nov 2026 20:16:45 GMT",
+   "titulo": "Precio de Bitcoin hoy 13 de noviembre: a cuánto opera en dólares, pesos argentinos y pesos mexicanos tras caer 4,86% - Cripto247",
+   "enlace": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOSHQ4aGlNWnJqSERGMVM5YWR1UW1FYm1HclBHdlVqRm1BSFdBS1pocGRrMDJNOEUzUDA2WnNvQUdPVWhuMGh1UlJwa01DUTFVa1V5ZE1mMFBuUzM2angtOUtqRWNWUlA4Tk9KQmRLXzFzYnRtaVlyQm9jZTFxU0lhLWVIOXhLVlJxT3I4MDFJckl1eFhoNUFLcUpjYl9BV2o4TFF5cnJzLXdQdGdRREtwZC1fT3VKcHgxenptelJnVTJOWkNhSXJOblhIQnptS3c0ZkZoenpZSzBwZ1JjS0JWMFExRk9oYUJpNGJtUjJmTjJlR1I2Mlhkcg?oc=5",
+   "fecha": "Fri, 13 Nov 2026 12:34:56 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
@@ -88578,9 +88529,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarin.com",
-   "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdS03LXh2b0hXYkEwTlNfQnJnaU9sUk1mWEI0Y0hUTHNUODZjS3pBM0d2OFlBZ1FidmVzLWlzODQ4Ulh2UmVtMUpiMGhPSThXQ2kzb2djdFJOUkk0TUxMOW1GZHhtMFlxRjRZOTlmay1keUN0dndTMEVpcWxLSEJhU0NXdWh2LXljVWhWSTlGaHdyWG9aQnVTVU5tTFlQTW1mMG14TTZvRFFxTEVfa3V3WEJR?oc=5",
-   "fecha": "Thu, 12 Nov 2026 21:30:40 GMT",
+   "titulo": "A cuánto habría llegado la inflación de octubre con el nuevo índice de precios que el Gobierno postergó - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOQ2laaWp4OHJXMWlxbFNKRTFMc1M3VEFGTl94a1ZnQThuMzJTOFJSclM2TUNWM0FXQXVYS09oc2xPV05fVS1XelZ3T2lFQk9Fd3VxLVVjM1ZDcG1IOEpMeWZkNFZTOGZHM3JBMHZ4azVGZTNnLU9GZTJqZjY2aUU3SW96VVlvS2hOb0pGX05faGIyWTR1SEtSZFlWZFV0MEh2bVRTSmpvM3ZHdEFTMUh2SWp4VXhscG1UclRZTS1uOXVyMjg2R3I0V09QNWRmRDVIU2NWcEJZVGpXdllLVUtwQV9B0gH8AUFVX3lxTE94MFh0dVgtS0JYTnFxOXdMbGd0R3R5cUNURUVKQW5vR25HMTJyVE5fQm1iMVF3dGFkZ2FYTWFmTWduS1pmQ0lQbmhmMU9oamMyQmlZUGRsbkh1c29HWms4TFdwam1qdFppcVZKMllaQ0psM1ZtNkFvdFlmb1R5eGJOOWZfQVNLelVadW45T3lnN1FvaDdnb05DRVg2RnhaWVNzbHpBSU54Wko2Tk9fdmVzc1dWeWZmZUlSU3NrOGhJblhUbU40aGxXS19kMUw1cklnWE9LMWJnV2dNMFBIN29uNlEyb3JLTnBDVFFSSC10YWxpOUFfWnJCODFaYg?oc=5",
+   "fecha": "Fri, 13 Nov 2026 12:08:00 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   },
@@ -88592,9 +88543,16 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "La inflación en octubre fue de 2,2% y acumuló 33,1% en los últimos doce meses - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxONlZ1a3dhUld2T05TUFlITDB0Z01pZTZqblNOYlBObTQxN0l3ZEM4MXU3eWU5RkdNZEYwZS1aeDBhbm91a1cxVDF5bFFLNm5zeW42eENKLXJtYTViWGEtX0ZHclFOUXBDMHN0dTNOSXpVR2wyNlRnQ3FsYnI2eUdNamJXX1gzTHRna05ybHNZQmUzeGh0Z3lENlpyTFR0dWtQWWxCMkJxNzVSRUtHVDNsaDE4UllmTjhEQmfSAdQBQVVfeXFMT0JZdVF3RjM2dF9VN0hjSFJFQk5WU3htQllweHEweFl5bkhxbkh0S2ZLVE4yOVY3UjJpVDJMSHE0TEI1NERBM0pvMENNTkE3NFBmR2MwOTVOenRFSlQ1R09Ra0ZGY1ZreVVrRW41VjVQUEtuZTdBci1HbGh0bmhadVRZeE1VUDVFV3hBOG5md1VWUjVuZjNNM1VFNzV5Ym9OSjBWcVNpNDViTTRwb2stR25uOUV2X0Yzckh4cUUwOF92UmRmcE5pXzVhR2xGYWNFM203Qm4?oc=5",
-   "fecha": "Thu, 12 Nov 2026 21:35:46 GMT",
+   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarin.com",
+   "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdS03LXh2b0hXYkEwTlNfQnJnaU9sUk1mWEI0Y0hUTHNUODZjS3pBM0d2OFlBZ1FidmVzLWlzODQ4Ulh2UmVtMUpiMGhPSThXQ2kzb2djdFJOUkk0TUxMOW1GZHhtMFlxRjRZOTlmay1keUN0dndTMEVpcWxLSEJhU0NXdWh2LXljVWhWSTlGaHdyWG9aQnVTVU5tTFlQTW1mMG14TTZvRFFxTEVfa3V3WEJR?oc=5",
+   "fecha": "Thu, 12 Nov 2026 21:30:40 GMT",
+   "fuente": "",
+   "tema": "inflación INDEC"
+  },
+  {
+   "titulo": "Así se actualizarán las bandas del dólar en diciembre de 2026, tras el dato de inflación de INDEC - TN",
+   "enlace": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOakVHVHNfTVJqNzFJV1czN2VDWlZfUXZvQkhfRmNSYVd5eGhKcWh5dzIxT1hjWVkzVWRBVk12eF9hdjBPNDMtQm1WN1lJYzFFcGJlOFNoU056MkhLdmM4WnVEaC1BN3hWa25fLWY0eEFwNVVnQTRxMm1UT3pGMEJyQWk0WUphVVBZVzRFeFA5aTV6cFBuNDQxMm5zQXRxQjgwMWpUVTh4aHlvT2MtZG9wRGU4RTRwYzlyaUNIWTJ6WDRkd0JLM2FRbUh5azF1ZWo4OFZlczRtX2o1eWdVb21Lb3htMkRpVW9IZmfSAf4BQVVfeXFMT2doTlNvRTBlSEJyWF9NdU5UbnhWOUFDRjFBMUVFUEIyWDJjbnlzMG1kakxQWnFFaWZhXy1QVEpLby11WmVsYWxfTUdqTkhEcVNHUFRmb0FUeE9VX2wwbFFGbFV1RUJFWVowdEZIcWtReVduUU1kX01uR3lZRV9Fcl8wWEhlQ3pFS1VVd0h1LUpwUi1LZ0cwWWNISlJLbWduSXpGRVdfRG4xRmVlZ3l0UDN3ZzZsY1BoYmdNT19jSUZrWU1UV2luQTlLVTZLV2FpSXdoaGwxc1VPSnAtLXpRaGtYUHQzQW9rSTE5WVZ4WHRIV0FIdFVvMVM4RlhfSkE?oc=5",
+   "fecha": "Fri, 13 Nov 2026 08:50:00 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   },
@@ -88602,13 +88560,6 @@
    "titulo": "Confirman un paro de subte para hoy; el Indec publica este jueves la inflación de octubre - La Nación",
    "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNdHpQd2RwU1F2VWJLSzdsU3hBQUJON1Z0dTRFd25Ma3NVUUtPOUg1TER6ZU50aFp5cVV1UW83TlEtRkZJcVE0VjFzWlhJLWFNMTdwYVNlZ2hBal9KQ212VkV2THc4MnJJZU9GUFZYOGk1OTNrNjRwbXY3UVNEb2JUai1DZnVyNlI1MkhIU1pVV2RSVkN2Y3FMa191cjFIY29Ca2ZfNWJtQmVFamt4ajcxcFU4OW1GVDd4YWJtR3c5dnk1ckNJLXg4UG45T2NnMEZoQ0RfcQ?oc=5",
    "fecha": "Thu, 12 Nov 2026 11:48:22 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
-   "titulo": "Tras conocer el dato del INDEC, el Gobierno explicó qué factores incidieron en la inflación de octubre - TN",
-   "enlace": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNa0RLX1VDdTZZUTZqQ1dDa1pXRHV0NzdqWFlVbTNLaW9NX1UyazhJNXE4bXlqWGVzN3NJUHJqY3hfUXVSODN3ZUFfbWViV0VNZHc4OVdaaWd4TlAtN2UxYWdhM1dTX0dfT3E1SjZ1SVNWN0w4anplSm5ZZUstRXozaTNENUwtaWNwTEcxRGp3ZVhyRkFZSVZCYWNlVUJCS0NNdHA0aGRoUzRzQk9NN2llanNrQUwyM1pLTEpEbU5mQ2RzQmlCbjBxalg2YnJrTmlaYXo0eG1Dc9IB6wFBVV95cUxQeU9ic2hBNGFNVEFBaFNBU2NVRGhmaGNQUGRwRXNJUEsxakJnS2NJcFJoQW5yUGtwdFlOellYNy1lR0tGTkE0Ym40YjVxb1Z0eWo3VEVVSnYzZEViamZLX0VLT2FKVnYzOF90RzE2YkhjZ1B0OUM5T2Z2UTJMVlV6ZURKOTI4Z2lJbUVNdmU1S1lTMENrM0dJVjRBdWZrQXZBUFRkUjJQLU5OZXVndURmVkxyVlVSTUhWY1h2VUJ5S3drZ3ZFb09nMkJsRDQ1cy1HRWFhaTRjNDZESlpzdEJhR21Xenlubm9KOUtR?oc=5",
-   "fecha": "Thu, 12 Nov 2026 19:30:43 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
