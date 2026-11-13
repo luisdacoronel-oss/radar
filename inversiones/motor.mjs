@@ -160,7 +160,18 @@ const SISTEMA = 'Usted es un analista financiero prudente que trabaja para un in
 let opiniones = [];
 const votosIA = {};
 const activosIA = proveedoresActivos(cfg.ia.proveedores);
-if (!SIM && activosIA.length) {
+// Las IAs se consultan cada 2 horas para no gastar el cupo gratuito que también usa RADAR de Ventas.
+// En los ciclos intermedios se reutilizan sus últimas opiniones; los datos de mercado sí se renuevan cada 30 minutos.
+const previo = leer('inversiones.json', null);
+const minutosDesdeIA = previo?.opinionesFecha ? (Date.now() - new Date(previo.opinionesFecha)) / 6e4 : Infinity;
+const hayOpinionesPrevias = previo?.opiniones?.some(o => !o.error);
+let opinionesFecha = previo?.opinionesFecha ?? null;
+if (!SIM && hayOpinionesPrevias && minutosDesdeIA < 115 && process.env.FORZAR_IA !== '1') {
+  opiniones = previo.opiniones;
+  Object.assign(votosIA, previo.votosIA || {});
+  console.log(`  · Opiniones de IA reutilizadas (de hace ${Math.round(minutosDesdeIA)} min)`);
+} else if (!SIM && activosIA.length) {
+  opinionesFecha = ahora;
   const resp = await consultarTodas(SISTEMA, [{ role: 'user', content: JSON.stringify(resumenParaIA) }], { json: true, proveedores: cfg.ia.proveedores });
   for (const r of resp) {
     const j = extraerJSON(r.texto);
@@ -199,7 +210,7 @@ guardar('aprendizaje.json', estado);
 const salida = {
   generado: ahora, simulacion: SIM,
   inflacionMensualPct: pct(inflMensual), riesgoPais: ar?.riesgo?.valor ?? null,
-  dolar, rulos, rendimientos: rend, activos, opiniones, titulares: titulares.slice(0, 40),
+  dolar, rulos, rendimientos: rend, activos, opiniones, votosIA, opinionesFecha, titulares: titulares.slice(0, 40),
   aprendizaje: {
     registros: historial.length,
     evaluaciones: Object.values(estado.proveedores ?? {}).reduce((t, s) => t + s.total, 0) + (estado.tecnico?.total ?? 0),

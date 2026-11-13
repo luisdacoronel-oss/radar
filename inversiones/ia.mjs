@@ -15,29 +15,33 @@
 const ALIAS = { GEMINI_API_KEY: 'GEMINI_KEY', GROQ_API_KEY: 'GROQ_KEY' };
 const env = (k, def) => (typeof process !== 'undefined' && (process.env[k] || (ALIAS[k] && process.env[ALIAS[k]]))) || def;
 
+// Cada proveedor tiene una lista de modelos de respaldo: si uno se retira o no está disponible,
+// se prueba el siguiente. Gemini y Groq además buscan solos los modelos vigentes.
 export const PROVEEDORES = {
   github: {
-    nombre: 'GitHub Models', clave: 'GITHUB_TOKEN', modelo: () => env('GITHUB_MODEL', 'openai/gpt-4.1-mini'),
-    url: 'https://models.github.ai/inference/chat/completions', tipo: 'openai',
+    nombre: 'GitHub Models', clave: 'GITHUB_TOKEN', tipo: 'openai',
+    urls: ['https://models.github.ai/inference/chat/completions', 'https://models.inference.ai.azure.com/chat/completions'],
+    modelos: () => [env('GITHUB_MODEL'), 'openai/gpt-4.1-mini', 'openai/gpt-4o-mini', 'gpt-4o-mini', 'meta/Llama-3.3-70B-Instruct'].filter(Boolean),
   },
   gemini: {
-    nombre: 'Google Gemini', clave: 'GEMINI_API_KEY', modelo: () => env('GEMINI_MODEL', 'gemini-2.5-flash'), tipo: 'gemini',
+    nombre: 'Google Gemini', clave: 'GEMINI_API_KEY', tipo: 'gemini',
+    modelos: () => [env('GEMINI_MODEL'), 'gemini-flash-latest', 'gemini-flash-lite-latest'].filter(Boolean),
   },
   groq: {
-    nombre: 'Groq (Llama)', clave: 'GROQ_API_KEY', modelo: () => env('GROQ_MODEL', 'llama-3.3-70b-versatile'),
-    url: 'https://api.groq.com/openai/v1/chat/completions', tipo: 'openai',
+    nombre: 'Groq', clave: 'GROQ_API_KEY', tipo: 'openai', urls: ['https://api.groq.com/openai/v1/chat/completions'],
+    modelos: () => [env('GROQ_MODEL'), 'openai/gpt-oss-120b', 'qwen/qwen3-32b', 'llama-3.3-70b-versatile', 'llama-3.1-8b-instant'].filter(Boolean),
   },
   openrouter: {
-    nombre: 'OpenRouter', clave: 'OPENROUTER_API_KEY', modelo: () => env('OPENROUTER_MODEL', 'meta-llama/llama-3.3-70b-instruct:free'),
-    url: 'https://openrouter.ai/api/v1/chat/completions', tipo: 'openai',
+    nombre: 'OpenRouter', clave: 'OPENROUTER_API_KEY', tipo: 'openai', urls: ['https://openrouter.ai/api/v1/chat/completions'],
+    modelos: () => [env('OPENROUTER_MODEL'), 'openrouter/free', 'meta-llama/llama-3.3-70b-instruct:free', 'deepseek/deepseek-chat-v3-0324:free'].filter(Boolean),
   },
   mistral: {
-    nombre: 'Mistral', clave: 'MISTRAL_API_KEY', modelo: () => env('MISTRAL_MODEL', 'mistral-small-latest'),
-    url: 'https://api.mistral.ai/v1/chat/completions', tipo: 'openai',
+    nombre: 'Mistral', clave: 'MISTRAL_API_KEY', tipo: 'openai', urls: ['https://api.mistral.ai/v1/chat/completions'],
+    modelos: () => [env('MISTRAL_MODEL'), 'mistral-small-latest', 'mistral-medium-latest', 'open-mistral-nemo'].filter(Boolean),
   },
   cerebras: {
-    nombre: 'Cerebras', clave: 'CEREBRAS_API_KEY', modelo: () => env('CEREBRAS_MODEL', 'llama-3.3-70b'),
-    url: 'https://api.cerebras.ai/v1/chat/completions', tipo: 'openai',
+    nombre: 'Cerebras', clave: 'CEREBRAS_API_KEY', tipo: 'openai', urls: ['https://api.cerebras.ai/v1/chat/completions'],
+    modelos: () => [env('CEREBRAS_MODEL'), 'gpt-oss-120b', 'llama-3.3-70b', 'qwen-3-32b', 'llama3.1-8b'].filter(Boolean),
   },
 };
 
@@ -45,38 +49,77 @@ export function proveedoresActivos(lista = Object.keys(PROVEEDORES)) {
   return lista.filter(id => PROVEEDORES[id] && env(PROVEEDORES[id].clave));
 }
 
+// Modelos vigentes, consultados al proveedor (se guardan en memoria durante la ejecución)
+const cacheModelos = {};
+async function modelosVigentes(id, clave) {
+  if (cacheModelos[id]) return cacheModelos[id];
+  let lista = [];
+  try {
+    if (id === 'gemini') {
+      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?pageSize=300&key=${clave}`, { signal: AbortSignal.timeout(15000) });
+      const j = await r.json();
+      const ver = n => parseFloat((n.match(/gemini-(\d+(?:\.\d+)?)/) || [])[1] || 0);
+      lista = (j.models || []).filter(m => (m.supportedGenerationMethods || []).includes('generateContent'))
+        .map(m => m.name.replace('models/', ''))
+        .filter(n => /^gemini-/.test(n) && /flash/.test(n) && !/image|tts|live|audio|native|thinking|exp|8b|embedding|robotics|computer/.test(n))
+        .sort((a, b) => (ver(b) - ver(a)) || (/lite/.test(a) - /lite/.test(b)) || (/preview/.test(a) - /preview/.test(b)));
+    } else if (id === 'groq') {
+      const r = await fetch('https://api.groq.com/openai/v1/models', { headers: { Authorization: `Bearer ${clave}` }, signal: AbortSignal.timeout(15000) });
+      const j = await r.json();
+      const ids = (j.data || []).map(m => m.id).filter(x => !/whisper|guard|tts|playai|compound|prompt/i.test(x));
+      lista = PROVEEDORES.groq.modelos().filter(m => ids.includes(m)).concat(ids.filter(x => /120b|70b|32b/.test(x)));
+    }
+  } catch {}
+  cacheModelos[id] = [...new Set([...PROVEEDORES[id].modelos(), ...lista])];
+  if (id === 'gemini') cacheModelos[id] = [...new Set([...(env('GEMINI_MODEL') ? [env('GEMINI_MODEL')] : []), ...lista, ...PROVEEDORES.gemini.modelos()])];
+  return cacheModelos[id];
+}
+
+async function intentar(id, modelo, url, clave, sistema, mensajes, json, temperatura, tiempo) {
+  const p = PROVEEDORES[id];
+  if (p.tipo === 'gemini') {
+    const body = {
+      systemInstruction: { parts: [{ text: sistema }] },
+      contents: mensajes.map(m => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })),
+      generationConfig: { temperature: temperatura, ...(json ? { responseMimeType: 'application/json' } : {}) },
+    };
+    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent?key=${clave}`,
+      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal: AbortSignal.timeout(tiempo) });
+    const t = await r.text(); let d; try { d = JSON.parse(t) } catch { throw Object.assign(new Error(`HTTP ${r.status}: ${t.slice(0, 120)}`), { status: r.status }) }
+    if (!r.ok) throw Object.assign(new Error(d?.error?.message || `HTTP ${r.status}`), { status: r.status });
+    return d.candidates?.[0]?.content?.parts?.map(x => x.text || '').join('') ?? '';
+  }
+  const body = { model: modelo, temperature: temperatura, messages: [{ role: 'system', content: sistema }, ...mensajes] };
+  if (json && (id === 'groq' || id === 'mistral')) body.response_format = { type: 'json_object' };
+  const headers = { 'Content-Type': 'application/json', Authorization: `Bearer ${clave}` };
+  if (id === 'openrouter') { headers['HTTP-Referer'] = 'https://github.com/radar'; headers['X-Title'] = 'RADAR'; }
+  const r = await fetch(url, { method: 'POST', headers, body: JSON.stringify(body), signal: AbortSignal.timeout(tiempo) });
+  const t = await r.text(); let d; try { d = JSON.parse(t) } catch { throw Object.assign(new Error(`HTTP ${r.status}: ${t.slice(0, 120)}`), { status: r.status }) }
+  if (!r.ok) throw Object.assign(new Error(d?.error?.message || JSON.stringify(d).slice(0, 200)), { status: r.status });
+  return (d.choices?.[0]?.message?.content ?? '').replace(/<think>[\s\S]*?<\/think>/g, '').trim();
+}
+
 async function llamar(id, sistema, mensajes, { json = false, temperatura = 0.3, tiempo = 60000 } = {}) {
   const p = PROVEEDORES[id];
   const clave = env(p.clave);
-  const modelo = p.modelo();
   const t0 = Date.now();
-  try {
-    let texto;
-    if (p.tipo === 'gemini') {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent?key=${clave}`;
-      const body = {
-        systemInstruction: { parts: [{ text: sistema }] },
-        contents: mensajes.map(m => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })),
-        generationConfig: { temperature: temperatura, ...(json ? { responseMimeType: 'application/json' } : {}) },
-      };
-      const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal: AbortSignal.timeout(tiempo) });
-      const d = await r.json();
-      if (!r.ok) throw new Error(d?.error?.message || `HTTP ${r.status}`);
-      texto = d.candidates?.[0]?.content?.parts?.map(x => x.text).join('') ?? '';
-    } else {
-      const body = { model: modelo, temperature: temperatura, messages: [{ role: 'system', content: sistema }, ...mensajes] };
-      if (json && id !== 'openrouter' && id !== 'github') body.response_format = { type: 'json_object' };
-      const headers = { 'Content-Type': 'application/json', Authorization: `Bearer ${clave}` };
-      if (id === 'openrouter') { headers['HTTP-Referer'] = 'https://github.com/radar'; headers['X-Title'] = 'RADAR'; }
-      const r = await fetch(p.url, { method: 'POST', headers, body: JSON.stringify(body), signal: AbortSignal.timeout(tiempo) });
-      const d = await r.json();
-      if (!r.ok) throw new Error(d?.error?.message || JSON.stringify(d).slice(0, 200));
-      texto = d.choices?.[0]?.message?.content ?? '';
+  const modelos = (await modelosVigentes(id, clave)).slice(0, 6);
+  const urls = p.urls || [null];
+  let ultimoError = '';
+  for (const modelo of modelos) {
+    for (const url of urls) {
+      try {
+        const texto = await intentar(id, modelo, url, clave, sistema, mensajes, json, temperatura, tiempo);
+        if (texto) return { proveedor: id, nombre: p.nombre, modelo, texto, ms: Date.now() - t0 };
+        ultimoError = 'respuesta vacía';
+      } catch (e) {
+        ultimoError = e.message;
+        if (e.status === 401) return { proveedor: id, nombre: p.nombre, modelo, error: 'clave inválida', ms: Date.now() - t0 };
+      }
+      if (Date.now() - t0 > tiempo * 2) break;
     }
-    return { proveedor: id, nombre: p.nombre, modelo, texto, ms: Date.now() - t0 };
-  } catch (e) {
-    return { proveedor: id, nombre: p.nombre, modelo, error: e.message, ms: Date.now() - t0 };
   }
+  return { proveedor: id, nombre: p.nombre, modelo: modelos[0], error: ultimoError.slice(0, 200), ms: Date.now() - t0 };
 }
 
 // Consulta todas las IA activas en paralelo
