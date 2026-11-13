@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T11:39:30.616Z",
+ "generado": "2026-11-13T12:09:05.362Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 829,
@@ -8,25 +8,25 @@
    "nombre": "Oficial",
    "compra": 1520,
    "venta": 1570,
-   "fecha": "2026-11-12T18:00:00.000Z"
+   "fecha": "2026-11-12T18:55:00.000Z"
   },
   "blue": {
    "nombre": "Blue",
    "compra": 1545,
    "venta": 1565,
-   "fecha": "2026-11-12T20:57:00.000Z"
+   "fecha": "2026-11-13T11:57:00.000Z"
   },
   "bolsa": {
    "nombre": "Bolsa",
    "compra": 1570.7,
    "venta": 1573.8,
-   "fecha": "2026-11-12T20:57:00.000Z"
+   "fecha": "2026-11-13T11:57:00.000Z"
   },
   "contadoconliqui": {
    "nombre": "Contado con liquidación",
    "compra": 1663.4,
    "venta": 1668.4,
-   "fecha": "2026-11-12T20:57:00.000Z"
+   "fecha": "2026-11-13T11:57:00.000Z"
   },
   "mayorista": {
    "nombre": "Mayorista",
@@ -36,15 +36,15 @@
   },
   "cripto": {
    "nombre": "Cripto",
-   "compra": 1661.27,
-   "venta": 1666.32,
-   "fecha": "2026-11-12T20:57:00.000Z"
+   "compra": 1668.63,
+   "venta": 1673.59,
+   "fecha": "2026-11-13T11:57:00.000Z"
   },
   "tarjeta": {
    "nombre": "Tarjeta",
    "compra": 1976,
    "venta": 2041,
-   "fecha": "2026-11-12T18:00:00.000Z"
+   "fecha": "2026-11-12T18:55:00.000Z"
   }
  },
  "rulos": [
@@ -59,10 +59,10 @@
   },
   {
    "nombre": "MEP → Cripto (USDT)",
-   "pasos": "Comprar dólares MEP a $1573.8 → vender como USDT en un exchange a $1661.27",
-   "brutoPct": 5.56,
-   "netoPct": 3.76,
-   "gananciaSobreCapital": 37579,
+   "pasos": "Comprar dólares MEP a $1573.8 → vender como USDT en un exchange a $1668.63",
+   "brutoPct": 6.03,
+   "netoPct": 4.23,
+   "gananciaSobreCapital": 42255,
    "conviene": true,
    "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
   },
@@ -86,10 +86,10 @@
   },
   {
    "nombre": "Cripto (USDT) → MEP",
-   "pasos": "Comprar dólares en USDT a $1666.32 → vender por MEP a $1570.7",
-   "brutoPct": -5.74,
-   "netoPct": -7.54,
-   "gananciaSobreCapital": -75384,
+   "pasos": "Comprar dólares en USDT a $1673.59 → vender por MEP a $1570.7",
+   "brutoPct": -6.15,
+   "netoPct": -7.95,
+   "gananciaSobreCapital": -79479,
    "conviene": false,
    "nota": "Camino inverso: comprar USDT con pesos y vender dólares MEP."
   }
@@ -207,7 +207,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -14.6,
+   "mensualPct": -14.42,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -225,7 +225,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -17.87,
+   "mensualPct": -17.73,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73440,16 +73440,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 69237.2265625,
-   "variacionDia": -2.95,
-   "variacion30d": -14.6,
+   "precio": 69386.1328125,
+   "variacionDia": -2.74,
+   "variacion30d": -14.42,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 76634.834765625,
-   "m50": 80554.9859375,
-   "m200": 73040.325234375,
-   "rsi": 26.38659289802871,
+   "m20": 76642.280078125,
+   "m50": 80557.9640625,
+   "m200": 73041.069765625,
+   "rsi": 26.610929984843338,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73523,7 +73523,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 26: zona de sobreventa, posible rebote."
+     "texto": "RSI en 27: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75930,8 +75930,8 @@
       "open": 71371.765625,
       "high": 71386,
       "low": 68052.4375,
-      "close": 69237.2265625,
-      "volume": 47051292672
+      "close": 69386.1328125,
+      "volume": 46573785088
      }
     ],
     "m20": [
@@ -77133,7 +77133,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 76634.8348
+      "value": 76642.2801
      }
     ],
     "m50": [
@@ -78335,7 +78335,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 80554.9859
+      "value": 80557.9641
      }
     ],
     "m200": [
@@ -79537,7 +79537,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 73040.3252
+      "value": 73041.0698
      }
     ],
     "rsi": [
@@ -80739,7 +80739,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 26.3866
+      "value": 26.6109
      }
     ]
    },
@@ -80780,16 +80780,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1957.97998046875,
-   "variacionDia": -2.92,
-   "variacion30d": -17.87,
+   "precio": 1961.3499755859375,
+   "variacionDia": -2.75,
+   "variacion30d": -17.73,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2217.6008239746093,
-   "m50": 2414.3183666992186,
-   "m200": 2147.378044433594,
-   "rsi": 26.023518417622142,
+   "m20": 2217.769323730469,
+   "m50": 2414.3857666015624,
+   "m200": 2147.39489440918,
+   "rsi": 26.161342624732,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -83270,8 +83270,8 @@
       "open": 2017.3367919921875,
       "high": 2017.3367919921875,
       "low": 1909.159912109375,
-      "close": 1957.97998046875,
-      "volume": 16651140096
+      "close": 1961.3499755859375,
+      "volume": 16279940096
      }
     ],
     "m20": [
@@ -84473,7 +84473,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2217.6008
+      "value": 2217.7693
      }
     ],
     "m50": [
@@ -85675,7 +85675,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2414.3184
+      "value": 2414.3858
      }
     ],
     "m200": [
@@ -86877,7 +86877,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2147.378
+      "value": 2147.3949
      }
     ],
     "rsi": [
@@ -88079,7 +88079,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 26.0235
+      "value": 26.1613
      }
     ]
    },
@@ -88095,7 +88095,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1957.97998046875,
+    "entrada": 1961.3499755859375,
     "objetivo": 3078.16408203125,
     "stop": 1803.053955078125
    },
@@ -88452,16 +88452,16 @@
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Plazo fijo: la diferencia de ganancia entre bancos por invertir $4 millones a 30 días - MDZ Online",
-   "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaTZaNzFXWVRlME5QWDMxS1dYXzBCVGxVVlRzeE5aQ0lGTHAxSENabDAyNEFRREw2ZXZQWjU2MUVnZU1raU81eXlDanhMd2d5UGtQY3oxeDhBSEFNbmxNZUs0cmZiOWdVSlh1dW4wQ19FdU1xWlFrUXZZZGc2ZWlHZTRVaW5BcVlZR0FOODl2YWRRUFFrTnZUSXVUOEpWcWs3NzFCTnpqZEhzbTRRaVZQTF9GNWtOb0hQdFdYYTZ5eFY1QUloLXBIdjBEdVFWb1ZPalB4bQ?oc=5",
-   "fecha": "Thu, 12 Nov 2026 13:22:45 GMT",
+   "titulo": "Plazos fijos hoy, 11 de noviembre 2026: qué bancos pagan más y cuánto se gana con $1 millón a 30 días - Diario Río Negro",
+   "enlace": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOeHM4Z0ViQVk1OHAtNTZNSmQwM1BPdEtWSnIwSFdvZVZraWo5SURkRzA4aWV6YllOSDRDajVSMzEwaGN3NzNyNVJIRzZHMlA0QnhBMFVSMHhVZ1lmQlpOdlVVSkdPa2FyeVB6NnNHZzBzZmEtUE1vM0hnbUx1X2o5NTZYN05mblZJWEVpWl9wWTJudVM0aTM3cDQtcy01WDNLVmpJVGswX0NBTWNrRzRmXzNOOFQyUmdHODNXbDRlZHZPYThpVjNsdjc4TmFTcWRpMU1ULWx6SWMtajZZ0gHkAUFVX3lxTE5fRi1JRVNScVlIRzQwU2JmRExZbjRQNkJLUjFCQk1wTFRmQUlmT0ZGa2VYWFZIUHYteTZTMTRBZHNuLTZpNlRYVWVVcGhpWHphd2gzR055R0NYS3NuUlhlMWRPelpjV1hRZ0JYdnRWbWJCZGVsQzVKbWh6NkVlNFY3VlVaTVpra3dqalU2dkdnbUY3QmNHMGZmdDRSbVZZQU1aT05JbzRxbWt3ZEQ4WkxxRlRNdG9hS1d1bC1Qc3BzMjJpeEpwaUVIR0MtQldpRFpzTVpHNWNiY252YkRyeUpxV2laWQ?oc=5",
+   "fecha": "Wed, 11 Nov 2026 15:29:56 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Plazos fijos hoy, 11 de noviembre 2026: qué bancos pagan más y cuánto se gana con $1 millón a 30 días - Diario Río Negro",
-   "enlace": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOeHM4Z0ViQVk1OHAtNTZNSmQwM1BPdEtWSnIwSFdvZVZraWo5SURkRzA4aWV6YllOSDRDajVSMzEwaGN3NzNyNVJIRzZHMlA0QnhBMFVSMHhVZ1lmQlpOdlVVSkdPa2FyeVB6NnNHZzBzZmEtUE1vM0hnbUx1X2o5NTZYN05mblZJWEVpWl9wWTJudVM0aTM3cDQtcy01WDNLVmpJVGswX0NBTWNrRzRmXzNOOFQyUmdHODNXbDRlZHZPYThpVjNsdjc4TmFTcWRpMU1ULWx6SWMtajZZ0gHkAUFVX3lxTE5fRi1JRVNScVlIRzQwU2JmRExZbjRQNkJLUjFCQk1wTFRmQUlmT0ZGa2VYWFZIUHYteTZTMTRBZHNuLTZpNlRYVWVVcGhpWHphd2gzR055R0NYS3NuUlhlMWRPelpjV1hRZ0JYdnRWbWJCZGVsQzVKbWh6NkVlNFY3VlVaTVpra3dqalU2dkdnbUY3QmNHMGZmdDRSbVZZQU1aT05JbzRxbWt3ZEQ4WkxxRlRNdG9hS1d1bC1Qc3BzMjJpeEpwaUVIR0MtQldpRFpzTVpHNWNiY252YkRyeUpxV2laWQ?oc=5",
-   "fecha": "Wed, 11 Nov 2026 15:29:56 GMT",
+   "titulo": "Plazo fijo: la diferencia de ganancia entre bancos por invertir $4 millones a 30 días - MDZ Online",
+   "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaTZaNzFXWVRlME5QWDMxS1dYXzBCVGxVVlRzeE5aQ0lGTHAxSENabDAyNEFRREw2ZXZQWjU2MUVnZU1raU81eXlDanhMd2d5UGtQY3oxeDhBSEFNbmxNZUs0cmZiOWdVSlh1dW4wQ19FdU1xWlFrUXZZZGc2ZWlHZTRVaW5BcVlZR0FOODl2YWRRUFFrTnZUSXVUOEpWcWs3NzFCTnpqZEhzbTRRaVZQTF9GNWtOb0hQdFdYYTZ5eFY1QUloLXBIdjBEdVFWb1ZPalB4bQ?oc=5",
+   "fecha": "Thu, 12 Nov 2026 13:22:45 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
@@ -88529,16 +88529,16 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Wall Street: Preapertura con tecnología, lujo y criptoactivos bajo presión - Bitfinanzas",
-   "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMGxWWUxTcWVOSlZlWVhxajVLQkg4VHRacDZsbHdLYUJpdG9Ib3ZEa1dJbm5MMHQ5VUgwMVdMV3lzRXQ2dkJQenJGczF4aGtITzRTaDdVeExNWG1kS1lmRWpxaVRLS3AtYjNzdlRUTHdPOHJiam9mM29FSWhSd1Y5cHZ1TE55dmtCbHc?oc=5",
-   "fecha": "Thu, 12 Nov 2026 13:28:29 GMT",
+   "titulo": "La bolsa hoy: IBEX 35, Euro Dólar, Wall Street, IPC alemán y bonos - Investing.com España",
+   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOTlIcGtQMkVrSllIOXFjWXJaT1h4TnpBM0xtVGd4eFBxYzNDcl9zOENhMkFzVDN2ci1POXN5SzhYRnNqMEk2OUI5SXRrbkI1VEJ4YUVKRU5yV1NBeG1FUERuLVZzNUh6ZE8tdS1rTVFKLWFLRVBhd01FSkJvN1UtbXdNWklPaUxVcEM3WEhvcEMxNWYycG43dHB6OXlXV3hKRng5Q1NMTXoydnZWNXE4NF81emg4TEIxNGc?oc=5",
+   "fecha": "Wed, 11 Nov 2026 06:04:00 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "La bolsa hoy: IBEX 35, Euro Dólar, Wall Street, IPC alemán y bonos - Investing.com España",
-   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOTlIcGtQMkVrSllIOXFjWXJaT1h4TnpBM0xtVGd4eFBxYzNDcl9zOENhMkFzVDN2ci1POXN5SzhYRnNqMEk2OUI5SXRrbkI1VEJ4YUVKRU5yV1NBeG1FUERuLVZzNUh6ZE8tdS1rTVFKLWFLRVBhd01FSkJvN1UtbXdNWklPaUxVcEM3WEhvcEMxNWYycG43dHB6OXlXV3hKRng5Q1NMTXoydnZWNXE4NF81emg4TEIxNGc?oc=5",
-   "fecha": "Wed, 11 Nov 2026 06:04:00 GMT",
+   "titulo": "Wall Street: Preapertura con tecnología, lujo y criptoactivos bajo presión - Bitfinanzas",
+   "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMGxWWUxTcWVOSlZlWVhxajVLQkg4VHRacDZsbHdLYUJpdG9Ib3ZEa1dJbm5MMHQ5VUgwMVdMV3lzRXQ2dkJQenJGczF4aGtITzRTaDdVeExNWG1kS1lmRWpxaVRLS3AtYjNzdlRUTHdPOHJiam9mM29FSWhSd1Y5cHZ1TE55dmtCbHc?oc=5",
+   "fecha": "Thu, 12 Nov 2026 13:28:29 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88606,9 +88606,9 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "El INDEC da a conocer la inflación de octubre: qué prevén los analistas - Filo News",
-   "enlace": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYXlGNWFqZmw2a3E1RC1Pb01JSXprdzlmam1jMU1lQlNkVDNxeEs1M0NPcXp3N1hNSFJEMnd1X25tSGxLeFY3UWVTM09IREFvMTU3VlI1MXpNOTMxLWkzc1YxRXJZc08wb3BOdGR5TWRFRWdIRE5EUVlLSHlSdVlmSXNrZmRHLU01Wm00NE82THFiUF9acl94dVM3dHhMQS0yeHNVY3BLTExTZGstbzVaUg?oc=5",
-   "fecha": "Thu, 12 Nov 2026 10:45:00 GMT",
+   "titulo": "Tras conocer el dato del INDEC, el Gobierno explicó qué factores incidieron en la inflación de octubre - TN",
+   "enlace": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNa0RLX1VDdTZZUTZqQ1dDa1pXRHV0NzdqWFlVbTNLaW9NX1UyazhJNXE4bXlqWGVzN3NJUHJqY3hfUXVSODN3ZUFfbWViV0VNZHc4OVdaaWd4TlAtN2UxYWdhM1dTX0dfT3E1SjZ1SVNWN0w4anplSm5ZZUstRXozaTNENUwtaWNwTEcxRGp3ZVhyRkFZSVZCYWNlVUJCS0NNdHA0aGRoUzRzQk9NN2llanNrQUwyM1pLTEpEbU5mQ2RzQmlCbjBxalg2YnJrTmlaYXo0eG1Dc9IB6wFBVV95cUxQeU9ic2hBNGFNVEFBaFNBU2NVRGhmaGNQUGRwRXNJUEsxakJnS2NJcFJoQW5yUGtwdFlOellYNy1lR0tGTkE0Ym40YjVxb1Z0eWo3VEVVSnYzZEViamZLX0VLT2FKVnYzOF90RzE2YkhjZ1B0OUM5T2Z2UTJMVlV6ZURKOTI4Z2lJbUVNdmU1S1lTMENrM0dJVjRBdWZrQXZBUFRkUjJQLU5OZXVndURmVkxyVlVSTUhWY1h2VUJ5S3drZ3ZFb09nMkJsRDQ1cy1HRWFhaTRjNDZESlpzdEJhR21Xenlubm9KOUtR?oc=5",
+   "fecha": "Thu, 12 Nov 2026 19:30:43 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
