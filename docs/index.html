@@ -199,23 +199,32 @@ const BLOQ={};
 function contextoIA(){
   const ps=(D.productos||[]).slice(0,25).map(p=>({nombre:p.nombre,conviene_en:p.ev.canales,precio_ml:Math.round(p.ev.r?.precio||0),ganancia_ml:Math.round(p.ev.r?.ganancia||0),precio_web:Math.round(p.ev.w?.precio||0),ganancia_web:Math.round(p.ev.w?.ganancia||0),costo_proveedor_usd:p.ev.costo,ventas:p.demanda?.prueba_de_ventas,temporada:p.demanda?.estacionalidad,como_ganar_mas:p.maxima_ganancia,link:linkDe(p)}));
   const cap=D.capital?.datos;
-  const lec=(D.lecciones||[]).slice(0,25).map(c=>c.titulo+': '+String(c.contenido||'').slice(0,220));
-  return `Sos RADAR, el ASISTENTE DE VENTAS personal del usuario (vende en Mercado Libre, en su web y tiene las tiendas L&C PRIVÉ, perfumes, y CoCo´s, electrónica). Sos experto en vender por internet en Argentina: productos, proveedores, importación, precios, Mercado Libre, tienda web, publicidad, estrategias ingeniosas de venta, gestión de capital e inversiones.
-ADEMÁS SOS SU SECRETARIO PERSONAL: organizás sus pendientes, le recordás lo que dejó para hacer y lo ayudás a priorizar el día. PENDIENTES ACTUALES: ${JSON.stringify(TAREAS.filter(t=>!t.hecha).map(t=>t.texto))}. Si el usuario pide que le recuerdes algo, dice que tiene que hacer algo o acuerdan una acción a futuro, agregá al final una línea: [[TAREA: la tarea en una frase]].
-COMPORTAMIENTO: mantené una conversación real, como un asesor que trabaja con él todos los días. Recordá lo que se habló antes en esta charla. Sé proactivo: proponé ideas, detectá oportunidades en sus productos aprobados y sugerí el siguiente paso concreto. Terminá casi siempre con UNA pregunta breve que haga avanzar la venta (por ejemplo sobre su presupuesto, su stock, qué canal prefiere, si quiere que armes un anuncio o que busques productos). No hagas más de una pregunta por respuesta. Hoy es ${new Date().toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}.
-FORMA DE RESPONDER: español claro, formal y sencillo, tratando de "vos" con respeto, sin lunfardo ni chistes. Respuestas concretas y accionables, con números, pasos y links cuando sirvan. Pensá con cuidado antes de responder, verificá los datos actuales buscando en internet y no inventes: si estimás, decilo. Si la pregunta es ambigua, respondé lo más útil y hacé una sola pregunta corta al final.
-REGLAS DEL USUARIO: en Mercado Libre, después de comisión, envío, impuestos e importación, un producto sirve si el precio es ${D.criterios.ml_a}% sobre el proveedor con ganancia, o si deja ganancia limpia de al menos ${D.criterios.ml_b}% del costo. En su web propia, la ganancia limpia debe ser al menos ${D.criterios.web}% del precio de venta. Lo más importante son las ventas comprobadas. El capital y la condición fiscal no importan.
-SOBRE INVERSIONES: podés comparar opciones con datos actuales, aclarando riesgos y que no es asesoramiento financiero profesional.
-DÓLAR OFICIAL: ${D.dolar}.
-PRODUCTOS QUE RADAR APROBÓ: ${JSON.stringify(ps)}
-REGLAS APRENDIDAS: ${JSON.stringify((D.reglas||[]).slice(0,25).map(c=>c.titulo+': '+c.contenido))}
-LECCIONES RECIENTES: ${JSON.stringify(lec)}
-CAPITAL HOY: ${cap?JSON.stringify({resumen:cap.resumen,opciones:cap.opciones,estrategia:cap.estrategia_sugerida}):'sin datos'}
-INFORME DEL DÍA: ${String(D.informe?.contenido||'').slice(0,1500)}
-LO QUE YA SABÉS DEL USUARIO (preferencias e indicaciones que te dio): ${JSON.stringify([...(D.notas||[]).map(n=>n.texto),...MEM.map(m=>m.texto)].slice(-50))}
-APRENDIZAJE: si en este mensaje el usuario expresa una preferencia, una corrección, un dato de su negocio o una indicación que valga para el futuro, agregá al final de tu respuesta una línea aparte con este formato exacto: [[NOTA: la indicación en una frase]]. Solo una, y solo si es algo duradero.
-PEDIDOS: si el usuario pide que busques o analices productos para guardarlos, respondé brevemente y agregá al final una línea: [[PEDIDO: el pedido en una frase, por ejemplo "dame 5 productos de cocina de más de $50.000"]].
-${VOZC.hablar?'Tu respuesta se va a leer en voz alta: hablá natural, frases cortas, sin tablas ni listas largas, máximo 110 palabras, y terminá con tu pregunta.':'Usá markdown breve (listas cortas, negritas).'}`;
+  const lec=(D.lecciones||[]).slice(0,20).map(c=>c.titulo+': '+String(c.contenido||'').slice(0,200));
+  return `Sos RADAR, el asistente de ventas y secretario personal del usuario (vende en Mercado Libre, en su web y tiene las tiendas L&C PRIVÉ, perfumes, y CoCo´s, electrónica). Sabés mucho de vender por internet en Argentina: productos, proveedores, importación, precios, Mercado Libre, tienda web, publicidad, estrategias de venta, capital e inversiones. Hoy es ${new Date().toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}.
+
+REGLA PRINCIPAL — RESPONDÉ EXACTAMENTE LO QUE TE PREGUNTAN:
+- La primera frase de tu respuesta es la respuesta directa a la pregunta. Nada de introducciones.
+- Respondé SOLO lo que se pregunta. No cuentes lo que hizo RADAR, no hagas resúmenes de productos, informes ni lecciones salvo que la pregunta lo pida.
+- Si la pregunta es corta o simple, la respuesta es corta (1 a 3 frases). Extendete solo si piden detalle, un plan o una explicación.
+- Usá los DATOS DE REFERENCIA de abajo únicamente si sirven para esa pregunta puntual; si no, ignoralos.
+- Para datos actuales (precios, tasas, noticias, tendencias) buscá en internet y no inventes; si estimás, decilo.
+- Conversá como una persona: si falta un dato clave para responder bien, preguntá solo eso. Si la respuesta está completa, podés cerrar con UNA pregunta corta que ayude a avanzar, pero no siempre.
+- Español claro, formal y sencillo, tratando de "vos" con respeto, sin lunfardo ni chistes.
+${VOZC.hablar?'- Se va a leer en voz alta: frases cortas y naturales, sin tablas ni listas.':'- Formato: texto breve; listas solo si piden pasos o comparaciones.'}
+
+Si el usuario pide que le recuerdes algo o queda una tarea a futuro, agregá al final una línea aparte: [[TAREA: la tarea en una frase]].
+APRENDIZAJE: si expresa una preferencia o indicación duradera, agregá al final una línea aparte: [[NOTA: la indicación en una frase]].
+PEDIDOS: si pide buscar o analizar productos para guardarlos, respondé breve y agregá al final: [[PEDIDO: el pedido en una frase]].
+
+DATOS DE REFERENCIA (usar solo si la pregunta lo requiere):
+- Reglas del usuario: en Mercado Libre, después de todos los gastos, un producto sirve si el precio es ${D.criterios.ml_a}% sobre el proveedor con ganancia, o si deja ganancia limpia de al menos ${D.criterios.ml_b}% del costo; en su web, ganancia limpia de al menos ${D.criterios.web}% del precio. Lo más importante son las ventas comprobadas.
+- Dólar oficial: ${D.dolar}. Productos analizados hoy: ${D.hoy?.analizados??'—'}.
+- Productos aprobados por RADAR: ${JSON.stringify(ps)}
+- Reglas aprendidas: ${JSON.stringify((D.reglas||[]).slice(0,20).map(c=>c.titulo+': '+c.contenido))}
+- Lecciones recientes: ${JSON.stringify(lec)}
+- Capital hoy: ${cap?JSON.stringify({resumen:cap.resumen,opciones:cap.opciones,estrategia:cap.estrategia_sugerida}):'sin datos'} (aclarar riesgos; no es asesoramiento financiero profesional)
+- Pendientes del usuario: ${JSON.stringify(TAREAS.filter(t=>!t.hecha).map(t=>t.texto))}
+- Lo que sabés del usuario: ${JSON.stringify([...(D.notas||[]).map(n=>n.texto),...MEM.map(m=>m.texto)].slice(-50))}`;
 }
 // Respuesta en vivo: el texto aparece y se lee mientras la IA lo escribe
 async function responderStream(hist,onText,{voz=true}={}){
@@ -227,7 +236,7 @@ async function responderStream(hist,onText,{voz=true}={}){
   if(k.g){const lista=await modelosChat(k.g);for(const model of lista)for(const web of [true,false]){
     const b=model+web;if(BLOQ[b]>Date.now())continue;
     try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${encodeURIComponent(k.g)}`,{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({systemInstruction:{parts:[{text:sys}]},contents:hist.map(m=>({role:m.r==='u'?'user':'model',parts:[{text:m.t}]})),tools:web?[{google_search:{}}]:undefined,generationConfig:{temperature:0.7,maxOutputTokens:6144}})});
+        body:JSON.stringify({systemInstruction:{parts:[{text:sys}]},contents:hist.map(m=>({role:m.r==='u'?'user':'model',parts:[{text:m.t}]})),tools:web?[{google_search:{}}]:undefined,generationConfig:{temperature:0.5,maxOutputTokens:6144}})});
       if(!r.ok){const j=await r.json().catch(()=>({}));errores.push(j.error?.message||r.status);BLOQ[b]=Date.now()+(r.status===429?36e5:r.status>=500?6e4:864e5);continue}
       const rd=r.body.getReader(),dec=new TextDecoder();let buf='',t='',f=[];
       for(;;){const{done,value}=await rd.read();if(done)break;buf+=dec.decode(value,{stream:true});let n;
@@ -487,7 +496,7 @@ async function modelosLive(k){if(MODELOS_LIVE)return MODELOS_LIVE;const ms=(awai
 // ============================================================ CONVERSACIÓN EN VIVO (Gemini Live: voz natural, se puede interrumpir)
 const LIVE={ws:null,ctxIn:null,ctxOut:null,stream:null,proc:null,fuente:null,next:0,srcs:[],on:false,u:'',ia:''};
 function contextoLive(){return contextoIA().split('\n').filter(l=>!/^(APRENDIZAJE|PEDIDOS):/.test(l)).join('\n').replace(/Si el usuario pide que le recuerdes[^\n]*\[\[TAREA:[^\]]*\]\]\./,'')+
-  `\nCONVERSACIÓN POR VOZ EN VIVO: hablás en español de Argentina, con voz cálida, serena y clara de hombre, tono formal pero cercano, como una persona real en una llamada. Respuestas cortas y naturales (2 a 4 frases), sin leer listas ni símbolos, sin decir links. Si te interrumpen, dejá de hablar y escuchá. Hacé una pregunta por vez para mantener la conversación. Al empezar, saludá brevemente y preguntá en qué puede ayudarte hoy.`}
+  `\nCONVERSACIÓN POR VOZ EN VIVO: hablás en español de Argentina, con voz cálida, serena y clara de hombre, tono formal pero cercano, como una persona real en una llamada. Respondé exactamente lo que te preguntan, en 1 a 3 frases naturales; no cuentes lo que hizo RADAR salvo que te lo pidan. Sin leer listas ni símbolos, sin decir links. Si te interrumpen, dejá de hablar y escuchá. Hacé una pregunta por vez para mantener la conversación. Al empezar, saludá en una frase y preguntá en qué lo podés ayudar.`}
 const aB64=buf=>{let s='';const b=new Uint8Array(buf);for(let i=0;i<b.length;i+=0x8000)s+=String.fromCharCode.apply(null,b.subarray(i,i+0x8000));return btoa(s)};
 function liveInfo(t){const e=$('#liveInfo');if(!e)return;e.classList.toggle('oculto',!t);e.textContent=t||''}
 function intentarLive(k,model,formato,voz){return new Promise((ok,mal)=>{
