@@ -5,7 +5,7 @@
   "minimoRuloNeto": 0.01,
   "horizonteEvaluacionDias": [5, 20],
   "activos": [
-    { "nombre": "Merval",            "yahoo": "^MERV",    "tradingview": "BCBA:IMV",      "tipo": "indice",  "moneda": "ARS" },
+    { "nombre": "Argentina (ETF ARGT)", "yahoo": "ARGT",   "tradingview": "AMEX:ARGT",     "tipo": "cedear",  "moneda": "USD" },
     { "nombre": "Grupo Galicia",     "yahoo": "GGAL.BA",  "tradingview": "BCBA:GGAL",     "tipo": "accion",  "moneda": "ARS" },
     { "nombre": "YPF",               "yahoo": "YPFD.BA",  "tradingview": "BCBA:YPFD",     "tipo": "accion",  "moneda": "ARS" },
     { "nombre": "Pampa Energía",     "yahoo": "PAMP.BA",  "tradingview": "BCBA:PAMP",     "tipo": "accion",  "moneda": "ARS" },

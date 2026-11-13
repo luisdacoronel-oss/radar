@@ -59,6 +59,8 @@ const activos = [];
 for (const a of cfg.activos) {
   const velas = velasPorActivo[a.yahoo];
   if (!velas || velas.length < 60) { activos.push({ ...a, error: 'sin datos suficientes' }); continue; }
+  const diasSinDatos = (Date.now() - new Date(velas.at(-1).time)) / 864e5;
+  if (!SIM && diasSinDatos > 7) { activos.push({ ...a, error: `la fuente no actualiza desde ${velas.at(-1).time}` }); continue; }
   const s = leerSenales(velas);
   // ajustar el puntaje con lo aprendido: cada señal pesa según su historial de aciertos
   const puntajeAjustado = Math.max(-100, Math.min(100, Math.round(
