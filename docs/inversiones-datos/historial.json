@@ -1,0 +1,177 @@
+[
+ {
+  "id": "2026-11-13|^MERV",
+  "fecha": "2026-11-13",
+  "yahoo": "^MERV",
+  "nombre": "Merval",
+  "precio": 2848945,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "bajo_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|GGAL.BA",
+  "fecha": "2026-11-13",
+  "yahoo": "GGAL.BA",
+  "nombre": "Grupo Galicia",
+  "precio": 4855,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|YPFD.BA",
+  "fecha": "2026-11-13",
+  "yahoo": "YPFD.BA",
+  "nombre": "YPF",
+  "precio": 6230,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|PAMP.BA",
+  "fecha": "2026-11-13",
+  "yahoo": "PAMP.BA",
+  "nombre": "Pampa Energía",
+  "precio": 4205,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|BMA.BA",
+  "fecha": "2026-11-13",
+  "yahoo": "BMA.BA",
+  "nombre": "Banco Macro",
+  "precio": 9285,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|MELI",
+  "fecha": "2026-11-13",
+  "yahoo": "MELI",
+  "nombre": "Mercado Libre",
+  "precio": 1475.0899658203125,
+  "tecnico": "VENDER",
+  "senales": [
+   "cruce_muerte",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|SPY",
+  "fecha": "2026-11-13",
+  "yahoo": "SPY",
+  "nombre": "S&P 500 (SPY)",
+  "precio": 757.1199951171875,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "fib_soporte"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|AAPL",
+  "fecha": "2026-11-13",
+  "yahoo": "AAPL",
+  "nombre": "Apple",
+  "precio": 354.8800048828125,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "sobre_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|NVDA",
+  "fecha": "2026-11-13",
+  "yahoo": "NVDA",
+  "nombre": "Nvidia",
+  "precio": 166.19000244140625,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|GLD",
+  "fecha": "2026-11-13",
+  "yahoo": "GLD",
+  "nombre": "Oro (GLD)",
+  "precio": 354.8900146484375,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|BTC-USD",
+  "fecha": "2026-11-13",
+  "yahoo": "BTC-USD",
+  "nombre": "Bitcoin",
+  "precio": 69365.046875,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-13|ETH-USD",
+  "fecha": "2026-11-13",
+  "yahoo": "ETH-USD",
+  "nombre": "Ethereum",
+  "precio": 1954.469970703125,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {},
+  "evaluado": {}
+ }
+]
