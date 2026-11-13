@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RADAR · Inversiones</title>
+<script src="https://unpkg.com/lightweight-charts@5.0.8/dist/lightweight-charts.standalone.production.js"></script>
+<style>
+  :root{--fondo:#0d1117;--panel:#161b22;--borde:#2a313c;--texto:#e6edf3;--suave:#8b949e;--verde:#2ea043;--rojo:#e5534b;--ambar:#d29922;--azul:#4c8dff;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--fondo);color:var(--texto);font-size:15px}
+  header{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--borde);background:var(--panel);position:sticky;top:0;z-index:5}
+  header h1{font-size:18px;margin:0;letter-spacing:.5px}
+  header h1 span{color:var(--azul)}
+  .estado{color:var(--suave);font-size:13px;margin-left:auto}
+  button{background:#21262d;color:var(--texto);border:1px solid var(--borde);border-radius:8px;padding:7px 12px;cursor:pointer;font-size:14px}
+  button:hover{border-color:var(--azul)}
+  nav{display:flex;gap:4px;padding:10px 20px;overflow-x:auto;border-bottom:1px solid var(--borde)}
+  nav button{border:none;background:none;color:var(--suave);padding:8px 12px;border-radius:6px;white-space:nowrap}
+  nav button.activo{background:#1f2937;color:var(--texto)}
+  main{padding:20px;max-width:1300px;margin:0 auto}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .tarjeta{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:16px}
+  .tarjeta h3{margin:0 0 8px;font-size:15px}
+  .grande{font-size:26px;font-weight:600}
+  .suave{color:var(--suave);font-size:13px}
+  .etq{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600}
+  .COMPRAR{background:rgba(46,160,67,.18);color:#56d364}
+  .VENDER{background:rgba(229,83,75,.18);color:#ff7b72}
+  .ESPERAR{background:rgba(210,153,34,.18);color:#e3b341}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--borde);vertical-align:top}
+  th{color:var(--suave);font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .pos{color:#56d364}.neg{color:#ff7b72}
+  .vista{display:none}.vista.activa{display:block}
+  select{background:#21262d;color:var(--texto);border:1px solid var(--borde);border-radius:8px;padding:7px 10px;font-size:14px}
+  #graficoRadar{height:560px;border:1px solid var(--borde);border-radius:12px;overflow:hidden}
+  #tv{height:620px;border:1px solid var(--borde);border-radius:12px;overflow:hidden;margin-top:14px}
+  .leyenda{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--suave);margin:10px 0}
+  .leyenda i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:5px}
+  .aviso{border-left:3px solid var(--ambar);background:rgba(210,153,34,.08);padding:10px 14px;border-radius:6px;font-size:13px;color:#d6c08a;margin:14px 0}
+  .barra{height:8px;background:#21262d;border-radius:4px;overflow:hidden}.barra>div{height:100%;background:var(--azul)}
+  ul{padding-left:20px;margin:6px 0}
+  a{color:var(--azul)}
+  .fila{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+</style>
+</head>
+<body>
+<header>
+  <h1><a href="./" style="color:inherit;text-decoration:none">RADAR</a> <span>· Inversiones</span></h1>
+  <button id="btnVoz" title="Escuchar el resumen">🔊 Escuchar resumen</button>
+  <button id="btnRecargar">↻ Actualizar</button>
+  <span class="estado" id="estado">Cargando…</span>
+</header>
+<nav id="menu">
+  <button data-v="resumen" class="activo">Resumen</button>
+  <button data-v="graficos">Gráficos</button>
+  <button data-v="rulos">Rulos</button>
+  <button data-v="rendimientos">Rendimientos</button>
+  <button data-v="consejo">Consejo de IAs</button>
+  <button data-v="aprendizaje">Aprendizaje</button>
+  <button data-v="noticias">Noticias</button>
+</nav>
+<main>
+  <section class="vista activa" id="v-resumen"></section>
+  <section class="vista" id="v-graficos">
+    <div class="fila">
+      <select id="selActivo"></select>
+      <span class="suave" id="lecturaActivo"></span>
+    </div>
+    <div class="leyenda">
+      <span><i style="background:#4c8dff"></i>Media 20</span>
+      <span><i style="background:#d29922"></i>Media 50</span>
+      <span><i style="background:#bc8cff"></i>Media 200</span>
+      <span><i style="background:#8b949e"></i>Retroceso Fibonacci</span>
+      <span><i style="background:#2ea043"></i>Extensión Fibonacci</span>
+      <span><i style="background:#e5534b"></i>RSI 14 (panel inferior)</span>
+    </div>
+    <div id="graficoRadar"></div>
+    <div id="nivelesActivo" class="grid" style="margin-top:14px"></div>
+    <h3 style="margin-top:24px">Gráfico en vivo de TradingView</h3>
+    <p class="suave">Incluye medias móviles de 20, 50 y 200 y RSI. Para Fibonacci, use la herramienta de la barra lateral izquierda (icono de Fibonacci); los niveles calculados por RADAR están en el gráfico de arriba.</p>
+    <div id="tv"></div>
+  </section>
+  <section class="vista" id="v-rulos"></section>
+  <section class="vista" id="v-rendimientos"></section>
+  <section class="vista" id="v-consejo"></section>
+  <section class="vista" id="v-aprendizaje"></section>
+  <section class="vista" id="v-noticias"></section>
+  <div class="aviso">RADAR ordena información y opiniones de varias IA para que usted decida. No es un asesor financiero matriculado: ninguna señal garantiza resultados. Verifique la normativa vigente antes de operar rulos.</div>
+</main>
+
+<script>
+// Origen de los datos: el archivo que genera el motor en la nube. Si abre este HTML desde su PC,
+// puede indicar la dirección "raw" de GitHub agregando ?datos=URL al final de la dirección.
+const URL_DATOS = new URLSearchParams(location.search).get('datos') || (()=>{try{return localStorage.getItem('radarDatos')}catch{return null}})() || 'inversiones-datos/inversiones.json';
+try{ if(new URLSearchParams(location.search).get('datos')) localStorage.setItem('radarDatos', URL_DATOS) }catch{}
+
+let D = null, grafico = null;
+const $ = s => document.querySelector(s);
+const n = (x, d=2) => x==null||isNaN(x) ? '—' : Number(x).toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const p = x => x==null ? '—' : `<span class="${x>=0?'pos':'neg'}">${x>=0?'+':''}${n(x)} %</span>`;
+const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const etq = a => `<span class="etq ${a}">${a==='COMPRAR'?'Comprar':a==='VENDER'?'Vender':'Esperar'}</span>`;
+const NOMBRE_IA = {github:'GitHub Models',gemini:'Google Gemini',groq:'Groq (Llama)',openrouter:'OpenRouter',mistral:'Mistral',cerebras:'Cerebras',tecnico:'Análisis técnico'};
+
+document.querySelectorAll('#menu button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('#menu button').forEach(x=>x.classList.toggle('activo', x===b));
+  document.querySelectorAll('.vista').forEach(v=>v.classList.toggle('activa', v.id==='v-'+b.dataset.v));
+  if (b.dataset.v==='graficos') dibujar();
+});
+
+async function cargar(){
+  $('#estado').textContent = 'Cargando…';
+  try{
+    const r = await fetch(URL_DATOS + (URL_DATOS.includes('?')?'&':'?') + 't=' + Date.now());
+    D = await r.json();
+    const f = new Date(D.generado);
+    $('#estado').textContent = `${D.simulacion?'DATOS DE PRUEBA · ':''}Actualizado ${f.toLocaleString('es-AR')} · IA activas: ${D.iaActivas.length}`;
+    pintar();
+  }catch(e){
+    $('#estado').textContent = 'No se pudieron leer los datos';
+    $('#v-resumen').innerHTML = `<div class="tarjeta"><h3>Sin datos todavía</h3><p class="suave">El motor en la nube aún no generó <code>docs/inversiones-datos/inversiones.json</code>, o este archivo se abrió fuera de GitHub Pages. Revise la pestaña Actions del repositorio. Detalle: ${esc(e.message)}</p></div>`;
+  }
+}
+
+function pintar(){
+  const act = D.activos.filter(a=>a.precio);
+  const compra = act.filter(a=>a.consenso?.accion==='COMPRAR').sort((a,b)=>b.consenso.acuerdo-a.consenso.acuerdo);
+  const venta = act.filter(a=>a.consenso?.accion==='VENDER');
+  const seguros = D.rendimientos.filter(r=>r.riesgo==='Bajo');
+  const ruloOk = D.rulos.filter(r=>r.conviene);
+  const op = D.opiniones.find(o=>o.opinion?.mejorOpcion);
+  const d = D.dolar||{};
+
+  // --- Resumen ---
+  $('#v-resumen').innerHTML = `
+  <div class="grid">
+    <div class="tarjeta"><h3>Dólar MEP</h3><div class="grande">$ ${n(d.bolsa?.venta,0)}</div><div class="suave">CCL $ ${n(d.contadoconliqui?.venta,0)} · Cripto $ ${n(d.cripto?.venta,0)} · Oficial $ ${n(d.oficial?.venta,0)}</div></div>
+    <div class="tarjeta"><h3>Inflación último mes</h3><div class="grande">${n(D.inflacionMensualPct)} %</div><div class="suave">Riesgo país: ${n(D.riesgoPais,0)} puntos</div></div>
+    <div class="tarjeta"><h3>Mejor opción de bajo riesgo</h3><div class="grande" style="font-size:18px">${esc(seguros[0]?.nombre||'—')}</div><div class="suave">${seguros[0]?`Rinde ${n(seguros[0].mensualPct)} % mensual · real ${n(seguros[0].realPct)} %`:''}</div></div>
+    <div class="tarjeta"><h3>Rulos que convienen hoy</h3><div class="grande">${ruloOk.length}</div><div class="suave">${ruloOk[0]?`${esc(ruloOk[0].nombre)}: ${n(ruloOk[0].netoPct)} % neto`:'Ninguno supera el mínimo configurado.'}</div></div>
+  </div>
+  ${op?`<div class="tarjeta" style="margin-top:14px"><h3>Lo que sugieren las IAs</h3><p>${esc(op.opinion.resumen||'')}</p><p><b>Mejor opción según ${esc(op.nombre)}:</b> ${esc(op.opinion.mejorOpcion.nombre)} — ${esc(op.opinion.mejorOpcion.porque)}</p><p class="suave">Vea la opinión de cada IA en "Consejo de IAs". La decisión final es suya.</p></div>`:''}
+  <div class="tarjeta" style="margin-top:14px"><h3>Activos con señal de compra (${compra.length})</h3>
+    ${tablaActivos(compra)}</div>
+  ${venta.length?`<div class="tarjeta" style="margin-top:14px"><h3>Activos con señal de venta (${venta.length})</h3>${tablaActivos(venta)}</div>`:''}`;
+
+  // --- Rulos ---
+  $('#v-rulos').innerHTML = `<div class="tarjeta"><h3>Rulos y arbitrajes del dólar</h3>
+   <p class="suave">Calculado sobre un capital de referencia, descontando comisiones estimadas por operación. Verde: supera el mínimo configurado.</p>
+   <table><tr><th>Operación</th><th>Cómo</th><th class="num">Bruto</th><th class="num">Neto</th><th class="num">Resultado s/ capital</th></tr>
+   ${D.rulos.map(r=>`<tr><td><b>${esc(r.nombre)}</b> ${r.conviene?'<span class="etq COMPRAR">Conviene</span>':''}</td><td>${esc(r.pasos)}<div class="suave">${esc(r.nota)}</div></td><td class="num">${p(r.brutoPct)}</td><td class="num">${p(r.netoPct)}</td><td class="num">$ ${n(r.gananciaSobreCapital,0)}</td></tr>`).join('')}
+   </table></div>`;
+
+  // --- Rendimientos ---
+  const fila = r => `<tr><td><b>${esc(r.nombre)}</b><div class="suave">${esc(r.tipo)}</div></td><td>${esc(r.riesgo)}</td><td class="num">${p(r.mensualPct)}</td><td class="num">${p(r.realPct)}</td><td>${esc(r.donde)}<div class="suave">${esc(r.como)}</div></td></tr>`;
+  const cab = '<tr><th>Alternativa</th><th>Riesgo</th><th class="num">Mensual</th><th class="num">Real (vs inflación)</th><th>Dónde y cómo</th></tr>';
+  $('#v-rendimientos').innerHTML = `
+   <div class="tarjeta"><h3>Rendimiento previsible (tasas)</h3><table>${cab}${seguros.map(fila).join('')}</table></div>
+   <div class="tarjeta" style="margin-top:14px"><h3>Rendimiento variable y mercadería</h3><p class="suave">Para acciones, CEDEARs y cripto se muestra lo que rindieron los últimos 30 días: es referencia, no promesa. La mercadería sale de RADAR de Ventas.</p><table>${cab}${D.rendimientos.filter(r=>r.riesgo!=='Bajo').map(fila).join('')}</table></div>`;
+
+  // --- Consejo ---
+  $('#v-consejo').innerHTML = `<div class="tarjeta"><h3>Votación por activo</h3><p class="suave">Cada IA y el análisis técnico votan. El voto pesa según cuánto acertó cada uno en el pasado.</p>
+   <table><tr><th>Activo</th><th>Decisión</th><th>Acuerdo</th><th>Votos</th><th class="num">Entrada</th><th class="num">Objetivo</th><th class="num">Stop</th></tr>
+   ${act.map(a=>`<tr><td><b>${esc(a.nombre)}</b></td><td>${etq(a.consenso.accion)}</td><td style="min-width:90px"><div class="barra"><div style="width:${Math.round(a.consenso.acuerdo*100)}%"></div></div><span class="suave">${Math.round(a.consenso.acuerdo*100)} %</span></td>
+   <td class="suave">${a.consenso.detalle.map(v=>`${NOMBRE_IA[v.quien]||v.quien}: ${v.accion.toLowerCase()}`).join('<br>')}</td>
+   <td class="num">${n(a.niveles.entrada)}</td><td class="num">${n(a.niveles.objetivo)}</td><td class="num">${n(a.niveles.stop)}</td></tr>`).join('')}</table></div>
+   <div class="grid" style="margin-top:14px">${D.opiniones.map(o=>`<div class="tarjeta"><h3>${esc(o.nombre)} <span class="suave">${esc(o.modelo)}</span></h3>
+     ${o.error?`<p class="neg">No respondió: ${esc(o.error)}</p>`:`<p>${esc(o.opinion?.resumen||'')}</p>${o.opinion?.mejorOpcion?`<p><b>Mejor opción:</b> ${esc(o.opinion.mejorOpcion.nombre)}</p>`:''}${o.opinion?.riesgos?.length?`<div class="suave">Riesgos:<ul>${o.opinion.riesgos.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}`}
+     <div class="suave">Confiabilidad aprendida: ${n(o.confiabilidad)} · ${o.ms} ms</div></div>`).join('') || '<div class="tarjeta"><p>Todavía no hay IAs activas. Vea el archivo LEEME para cargar las claves gratuitas.</p></div>'}</div>`;
+
+  // --- Aprendizaje ---
+  const ap = D.aprendizaje;
+  const filaAp = (k,s) => `<tr><td>${esc(NOMBRE_IA[k]||k.replace(/_/g,' '))}</td><td class="num">${s.aciertos??0} / ${s.total??0}</td><td class="num">${s.total?n(100*s.aciertos/s.total,0)+' %':'—'}</td><td class="num">${n(s.confiabilidad)}</td></tr>`;
+  $('#v-aprendizaje').innerHTML = `<div class="tarjeta"><h3>Cómo aprende RADAR</h3><p>Cada recomendación se guarda con el precio del día. A los ${'5 y 20'} días hábiles se compara con el precio real y se anota si acertó. Las IA y señales que más aciertan pesan más en las próximas decisiones. Confiabilidad 1,00 = neutral; por encima de 1 = acierta más de lo normal.</p>
+   <p class="suave">Recomendaciones guardadas: ${ap.registros} · Evaluaciones realizadas: ${ap.evaluaciones}</p></div>
+   <div class="grid" style="margin-top:14px">
+   <div class="tarjeta"><h3>IAs y análisis técnico</h3><table><tr><th>Fuente</th><th class="num">Aciertos</th><th class="num">%</th><th class="num">Peso</th></tr>${Object.entries(ap.proveedores).map(([k,s])=>filaAp(k,s)).join('')}${filaAp('tecnico',ap.tecnico)}</table></div>
+   <div class="tarjeta"><h3>Señales técnicas</h3><table><tr><th>Señal</th><th class="num">Aciertos</th><th class="num">%</th><th class="num">Peso</th></tr>${Object.entries(ap.senales).map(([k,s])=>filaAp(k,s)).join('') || '<tr><td colspan=4 class="suave">Aún sin evaluaciones: se completan a partir de los 5 días de funcionamiento.</td></tr>'}</table></div></div>`;
+
+  // --- Noticias ---
+  $('#v-noticias').innerHTML = `<div class="tarjeta"><h3>Últimos titulares que leyó RADAR</h3><table>${D.titulares.map(t=>`<tr><td><a href="${esc(t.enlace)}" target="_blank" rel="noopener">${esc(t.titulo)}</a><div class="suave">${esc(t.fuente)} · ${esc(t.tema)}</div></td></tr>`).join('')}</table></div>`;
+
+  // selector de gráficos
+  $('#selActivo').innerHTML = act.map(a=>`<option value="${esc(a.yahoo)}">${esc(a.nombre)}</option>`).join('');
+  if (document.querySelector('#v-graficos.activa')) dibujar();
+}
+
+function tablaActivos(lista){
+  if(!lista.length) return '<p class="suave">Ninguno por ahora.</p>';
+  return `<table><tr><th>Activo</th><th>Decisión</th><th class="num">Precio</th><th class="num">Día</th><th class="num">30 días</th><th class="num">RSI</th><th class="num">Objetivo</th><th class="num">Stop</th><th>Por qué</th></tr>
+  ${lista.map(a=>`<tr><td><b>${esc(a.nombre)}</b></td><td>${etq(a.consenso.accion)}</td><td class="num">${n(a.precio)}</td><td class="num">${p(a.variacionDia)}</td><td class="num">${p(a.variacion30d)}</td><td class="num">${n(a.rsi,0)}</td><td class="num">${n(a.niveles.objetivo)}</td><td class="num">${n(a.niveles.stop)}</td><td class="suave">${esc((a.razonesIA[0])||a.senales[0]?.texto||'')}</td></tr>`).join('')}</table>`;
+}
+
+function dibujar(){
+  if(!D) return;
+  const a = D.activos.find(x=>x.yahoo===$('#selActivo').value) || D.activos.find(x=>x.precio);
+  if(!a) return;
+  $('#lecturaActivo').innerHTML = `${etq(a.consenso.accion)} Puntaje técnico ${a.puntaje} · RSI ${n(a.rsi,0)} · Tramo ${a.fibonacci?.tendenciaTramo||'—'}`;
+  const cont = $('#graficoRadar');
+  if (grafico) { grafico.remove(); grafico = null; }
+  const LW = LightweightCharts;
+  grafico = LW.createChart(cont, {
+    autoSize:true, layout:{background:{color:'#161b22'},textColor:'#c9d1d9',panes:{separatorColor:'#2a313c'}},
+    grid:{vertLines:{color:'#1f252d'},horzLines:{color:'#1f252d'}}, timeScale:{borderColor:'#2a313c'}, rightPriceScale:{borderColor:'#2a313c'},
+    localization:{locale:'es-AR'}
+  });
+  const velas = grafico.addSeries(LW.CandlestickSeries,{upColor:'#2ea043',downColor:'#e5534b',borderVisible:false,wickUpColor:'#2ea043',wickDownColor:'#e5534b'});
+  velas.setData(a.grafico.velas.map(v=>({time:v.time,open:v.open,high:v.high,low:v.low,close:v.close})));
+  const linea = (datos,color) => { const s = grafico.addSeries(LW.LineSeries,{color,lineWidth:2,priceLineVisible:false,lastValueVisible:false,crosshairMarkerVisible:false}); s.setData(datos); };
+  linea(a.grafico.m20,'#4c8dff'); linea(a.grafico.m50,'#d29922'); linea(a.grafico.m200,'#bc8cff');
+  if (a.fibonacci){
+    a.fibonacci.retroceso.forEach(f=>velas.createPriceLine({price:f.precio,color:'#8b949e',lineWidth:1,lineStyle:2,axisLabelVisible:true,title:`Fib ${(f.nivel*100).toFixed(1)}%`}));
+    a.fibonacci.extension.forEach(f=>velas.createPriceLine({price:f.precio,color:'#2ea043',lineWidth:1,lineStyle:1,axisLabelVisible:true,title:`Ext ${(f.nivel*100).toFixed(1)}%`}));
+  }
+  const rsi = grafico.addSeries(LW.LineSeries,{color:'#e5534b',lineWidth:2,priceLineVisible:false},1);
+  rsi.setData(a.grafico.rsi);
+  rsi.createPriceLine({price:70,color:'#8b949e',lineWidth:1,lineStyle:2,title:'70'});
+  rsi.createPriceLine({price:30,color:'#8b949e',lineWidth:1,lineStyle:2,title:'30'});
+  try{ grafico.panes()[1].setHeight(140) }catch{}
+  grafico.timeScale().fitContent();
+
+  $('#nivelesActivo').innerHTML = `
+    <div class="tarjeta"><h3>Cuándo y a qué precio</h3><p>Entrada: <b>${n(a.niveles.entrada)}</b><br>Objetivo: <b>${n(a.niveles.objetivo)}</b><br>Stop (salida si baja): <b>${n(a.niveles.stop)}</b></p></div>
+    <div class="tarjeta"><h3>Lectura técnica</h3><ul>${a.senales.map(s=>`<li>${esc(s.texto)}</li>`).join('')}</ul></div>
+    <div class="tarjeta"><h3>Opinión de las IAs</h3>${a.razonesIA.length?`<ul>${a.razonesIA.map(r=>`<li>${esc(r)}</li>`).join('')}</ul>`:'<p class="suave">Sin opiniones para este activo.</p>'}<p class="suave">Dónde: ${a.tipo==='cripto'?'exchange de criptomonedas':'broker con cuenta comitente'}.</p></div>`;
+  tradingview(a.tradingview);
+}
+
+function tradingview(simbolo){
+  const tv = $('#tv'); tv.innerHTML = '';
+  const c = document.createElement('div'); c.className='tradingview-widget-container'; c.style.height='100%';
+  const w = document.createElement('div'); w.className='tradingview-widget-container__widget'; w.style.height='100%';
+  c.appendChild(w);
+  const s = document.createElement('script');
+  s.src='https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js'; s.async=true;
+  s.innerHTML = JSON.stringify({
+    autosize:true, symbol:simbolo, interval:'D', timezone:'America/Argentina/Buenos_Aires', theme:'dark', style:'1', locale:'es',
+    allow_symbol_change:true, hide_side_toolbar:false, withdateranges:true, details:true,
+    studies:[
+      {id:'MASimple@tv-basicstudies',inputs:{length:20}},
+      {id:'MASimple@tv-basicstudies',inputs:{length:50}},
+      {id:'MASimple@tv-basicstudies',inputs:{length:200}},
+      {id:'RSI@tv-basicstudies',inputs:{length:14}}
+    ]
+  });
+  c.appendChild(s); tv.appendChild(c);
+}
+
+$('#selActivo').onchange = dibujar;
+$('#btnRecargar').onclick = cargar;
+$('#btnVoz').onclick = () => {
+  if(!D || !('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const act = D.activos.filter(a=>a.precio);
+  const compra = act.filter(a=>a.consenso.accion==='COMPRAR').map(a=>a.nombre);
+  const seg = D.rendimientos.find(r=>r.riesgo==='Bajo');
+  const rulo = D.rulos.find(r=>r.conviene);
+  const texto = `Resumen de inversiones. El dólar MEP está en ${Math.round(D.dolar?.bolsa?.venta||0)} pesos. ` +
+    (seg?`La mejor opción de bajo riesgo es ${seg.nombre}, con un rendimiento mensual de ${n(seg.mensualPct)} por ciento. `:'') +
+    (rulo?`Hay un rulo conveniente: ${rulo.nombre}, con ${n(rulo.netoPct)} por ciento neto. `:'No hay rulos convenientes en este momento. ') +
+    (compra.length?`Con señal de compra: ${compra.join(', ')}. `:'No hay activos con señal clara de compra. ') + 'La decisión final es suya.';
+  const u = new SpeechSynthesisUtterance(texto); u.lang='es-AR'; u.rate=0.95; u.pitch=0.85;
+  const voces = speechSynthesis.getVoices().filter(v=>v.lang.startsWith('es'));
+  u.voice = voces.find(v=>/male|hombre|jorge|diego|pablo|enrique|raul|tomas|alvaro/i.test(v.name)) || voces[0] || null;
+  speechSynthesis.speak(u);
+};
+
+cargar();
+setInterval(cargar, 10*60*1000); // se refresca solo cada 10 minutos
+</script>
+</body>
+</html>
