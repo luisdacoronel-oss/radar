@@ -11,7 +11,9 @@
 //   CEREBRAS_API_KEY    → Cerebras          (cloud.cerebras.ai)
 // Los modelos se pueden cambiar con variables *_MODEL sin tocar el código.
 
-const env = (k, def) => (typeof process !== 'undefined' && process.env[k]) || def;
+// Acepta también los nombres de clave que RADAR ya usa (GEMINI_KEY, GROQ_KEY)
+const ALIAS = { GEMINI_API_KEY: 'GEMINI_KEY', GROQ_API_KEY: 'GROQ_KEY' };
+const env = (k, def) => (typeof process !== 'undefined' && (process.env[k] || (ALIAS[k] && process.env[ALIAS[k]]))) || def;
 
 export const PROVEEDORES = {
   github: {

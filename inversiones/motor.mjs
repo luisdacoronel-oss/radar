@@ -3,7 +3,7 @@
 // Corre en la nube (GitHub Actions) cada 30 minutos, las 24 horas.
 // 1) Trae cotizaciones, tasas, velas y noticias.  2) Calcula indicadores, rulos y rendimientos.
 // 3) Consulta al consejo de IAs gratuitas.  4) Evalúa aciertos pasados y aprende.
-// 5) Escribe datos/inversiones.json para el panel.
+// 5) Escribe docs/inversiones-datos/inversiones.json para el panel.
 // No envía mensajes de WhatsApp: los avisos siguen exactamente con la configuración actual de RADAR.
 //
 // Uso:  node inversiones/motor.mjs            (datos reales)
@@ -18,7 +18,8 @@ import { consultarTodas, extraerJSON, proveedoresActivos, PROVEEDORES } from './
 import * as A from './aprendizaje.mjs';
 
 const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATOS = path.join(RAIZ, 'datos');
+// Los resultados van dentro de docs/ porque GitHub Pages publica esa carpeta (igual que el resto de RADAR)
+const DATOS = path.join(RAIZ, 'docs', 'inversiones-datos');
 const SIM = process.env.SIMULAR === '1';
 const cfg = JSON.parse(fs.readFileSync(path.join(RAIZ, 'inversiones', 'config.json'), 'utf8'));
 fs.mkdirSync(DATOS, { recursive: true });
@@ -130,7 +131,7 @@ for (const a of activos.filter(x => x.precio && x.variacion30d != null)) {
   rend.push({ nombre: a.nombre, tipo: `${a.tipo} (variable)`, riesgo: a.tipo === 'cripto' ? 'Alto' : 'Medio/Alto', mensualPct: a.variacion30d, realPct: a.moneda === 'ARS' ? pct(real(a.variacion30d / 100)) : null, donde: a.tipo === 'cripto' ? 'Exchange' : 'Broker (cuenta comitente)', como: `Señal actual: ${a.accion}. El rendimiento mostrado es el de los últimos 30 días, no una garantía.` });
 }
 // Integración con RADAR de Ventas: si existe el archivo de productos, comparar mercadería con inversiones
-const productos = leer('productos.json', null);
+const productos = leer('productos.json', null); // opcional: docs/inversiones-datos/productos.json
 if (Array.isArray(productos)) {
   for (const p of productos.filter(p => p.margen && p.diasVenta).slice(0, 5)) {
     const m = Math.pow(1 + p.margen, 30 / p.diasVenta) - 1;
@@ -210,4 +211,4 @@ const salida = {
 };
 guardar('inversiones.json', salida);
 console.log(`  · Activos analizados: ${activos.filter(a => a.precio).length}/${activos.length} · Rulos: ${rulos.length} · Rendimientos: ${rend.length} · IAs: ${opiniones.length}`);
-console.log('  · Listo: datos/inversiones.json');
+console.log('  · Listo: docs/inversiones-datos/inversiones.json');
