@@ -85,7 +85,9 @@
    "cruce_muerte",
    "bajo_m20"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "VENDER"
+  },
   "evaluado": {}
  },
  {
@@ -101,7 +103,7 @@
    "fib_soporte"
   ],
   "votos": {
-   "gemini": "ESPERAR"
+   "gemini": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -135,7 +137,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "groq": "ESPERAR"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -158,7 +160,7 @@
   "fecha": "2026-11-13",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 68276.7578125,
+  "precio": 68264.296875,
   "tecnico": "COMPRAR",
   "senales": [
    "tendencia_alcista",
@@ -167,7 +169,8 @@
    "fib_soporte"
   ],
   "votos": {
-   "gemini": "COMPRAR"
+   "gemini": "ESPERAR",
+   "groq": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -176,7 +179,7 @@
   "fecha": "2026-11-13",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1929.4599609375,
+  "precio": 1924.0400390625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",

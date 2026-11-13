@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T21:31:13.445Z",
+ "generado": "2026-11-13T22:27:32.299Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 829,
@@ -216,7 +216,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -15.78,
+   "mensualPct": -15.8,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: COMPRAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -243,7 +243,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.07,
+   "mensualPct": -19.3,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -2774,7 +2774,7 @@
       "high": 73.75,
       "low": 72.54000091552734,
       "close": 73.75,
-      "volume": 43944
+      "volume": 44094
      }
     ],
     "m20": [
@@ -7603,12 +7603,12 @@
     ]
    },
    "niveles": {
-    "entrada": 73.56,
-    "objetivo": 63.658960388183594,
-    "stop": 71.43000030517578
+    "entrada": 73.75,
+    "objetivo": 78.17,
+    "stop": 70
    },
    "razonesIA": [
-    "RSI bajo y fuerte brecha cambiaria; riesgo país alto limita la exposición."
+    "Sobreventa (RSI 28.2) pero sin ruptura clara; se espera confirmación del posible upgrade de MSCI y rebote de soporte."
    ]
   },
   {
@@ -22185,11 +22185,11 @@
    },
    "niveles": {
     "entrada": 5935,
-    "objetivo": 7189.87,
+    "objetivo": 6710.26,
     "stop": 5400
    },
    "razonesIA": [
-    "Aunque está fuertemente sobrevendida con un RSI de 26, el riesgo político y la definición de MSCI sugieren cautela."
+    "A pesar del nivel de sobreventa técnica, la volatilidad de los activos locales exige cautela hasta consolidar un soporte."
    ]
   },
   {
@@ -39259,11 +39259,11 @@
      },
      {
       "time": "2026-11-13",
-      "open": 1478.89501953125,
+      "open": 1479.800048828125,
       "high": 1497.260009765625,
       "low": 1463.199951171875,
       "close": 1491.489990234375,
-      "volume": 507648
+      "volume": 581487
      }
     ],
     "m20": [
@@ -44080,6 +44080,11 @@
     "acuerdo": 1,
     "detalle": [
      {
+      "quien": "gemini",
+      "accion": "VENDER",
+      "peso": 1
+     },
+     {
       "quien": "tecnico",
       "accion": "VENDER",
       "peso": 1
@@ -44087,10 +44092,13 @@
     ]
    },
    "niveles": {
-    "entrada": 1491.489990234375,
-    "objetivo": 1299.238337890625
+    "entrada": 1491.49,
+    "objetivo": 1605.46,
+    "stop": 1400
    },
-   "razonesIA": []
+   "razonesIA": [
+    "Exhibe debilidad técnica estructural con un puntaje técnico marcadamente negativo."
+   ]
   },
   {
    "nombre": "S&P 500 (SPY)",
@@ -46594,7 +46602,7 @@
       "high": 760.1199951171875,
       "low": 747.8900146484375,
       "close": 754.3699951171875,
-      "volume": 35553319
+      "volume": 37233821
      }
     ],
     "m20": [
@@ -51407,12 +51415,12 @@
     ]
    },
    "consenso": {
-    "accion": "ESPERAR",
-    "acuerdo": 1,
+    "accion": "COMPRAR",
+    "acuerdo": 0.5,
     "detalle": [
      {
       "quien": "gemini",
-      "accion": "ESPERAR",
+      "accion": "COMPRAR",
       "peso": 1
      },
      {
@@ -51423,12 +51431,12 @@
     ]
    },
    "niveles": {
-    "entrada": 749.1,
+    "entrada": 754.37,
     "objetivo": 781.62,
     "stop": 730.5
    },
    "razonesIA": [
-    "Atraviesa una leve corrección mensual acercándose al nivel de retroceso de Fibonacci del 38,2%."
+    "Mantiene la tendencia alcista de largo plazo situándose por encima de su media móvil de 200 días."
    ]
   },
   {
@@ -53928,7 +53936,7 @@
       "high": 360.8299865722656,
       "low": 355.7550048828125,
       "close": 356.2699890136719,
-      "volume": 38999578
+      "volume": 39099985
      }
     ],
     "m20": [
@@ -58762,13 +58770,13 @@
     ]
    },
    "niveles": {
-    "entrada": 357.81,
+    "entrada": 356.27,
     "objetivo": 384.52,
-    "stop": 339.07
+    "stop": 340
    },
    "razonesIA": [
-    "Mantiene una tendencia alcista técnica saludable con un RSI en 61,6 y cotizando sobre la media móvil de 20 días.",
-    "RSI saludable, precios por encima de M20/M50 y objetivo en extensión 1.272 de Fibonacci."
+    "Presenta una sólida tendencia alcista con medias móviles alineadas y un rendimiento positivo constante frente al resto del mercado.",
+    "Tendencia alcista confirmada por medias móviles y objetivo en la extensión 1.272 de Fibonacci."
    ]
   },
   {
@@ -61268,7 +61276,7 @@
       "high": 170,
       "low": 158.38999938964844,
       "close": 162.85000610351562,
-      "volume": 360731669
+      "volume": 362490337
      }
     ],
     "m20": [
@@ -66085,7 +66093,7 @@
     "acuerdo": 1,
     "detalle": [
      {
-      "quien": "groq",
+      "quien": "gemini",
       "accion": "ESPERAR",
       "peso": 1
      },
@@ -66097,12 +66105,12 @@
     ]
    },
    "niveles": {
-    "entrada": 162.38,
-    "objetivo": 123.07696520996093,
-    "stop": 148.8000030517578
+    "entrada": 148.8,
+    "objetivo": 184.93,
+    "stop": 135
    },
    "razonesIA": [
-    "RSI muy bajo y precio bajo medias móviles; necesita confirmación de reversión antes de operar."
+    "Aunque el RSI indica sobreventa profunda, la pendiente bajista de corto plazo requiere prudencia antes de tomar posición."
    ]
   },
   {
@@ -68602,7 +68610,7 @@
       "high": 357.318115234375,
       "low": 354.4100036621094,
       "close": 355.45001220703125,
-      "volume": 11547683
+      "volume": 11703859
      }
     ],
     "m20": [
@@ -73437,16 +73445,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 68276.7578125,
-   "variacionDia": -4.3,
-   "variacion30d": -15.78,
+   "precio": 68264.296875,
+   "variacionDia": -4.32,
+   "variacion30d": -15.8,
    "puntaje": 40,
    "puntajeBase": 40,
    "accion": "COMPRAR",
-   "m20": 76586.811328125,
-   "m50": 80535.7765625,
-   "m200": 73035.522890625,
-   "rsi": 25.025778390620857,
+   "m20": 76586.18828125,
+   "m50": 80535.52734375,
+   "m200": 73035.4605859375,
+   "rsi": 25.00904514434221,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -75932,8 +75940,8 @@
       "open": 71371.765625,
       "high": 71386,
       "low": 68052.4375,
-      "close": 68276.7578125,
-      "volume": 42402701312
+      "close": 68264.296875,
+      "volume": 43181064192
      }
     ],
     "m20": [
@@ -77135,7 +77143,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 76586.8113
+      "value": 76586.1883
      }
     ],
     "m50": [
@@ -78337,7 +78345,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 80535.7766
+      "value": 80535.5273
      }
     ],
     "m200": [
@@ -79539,7 +79547,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 73035.5229
+      "value": 73035.4606
      }
     ],
     "rsi": [
@@ -80741,16 +80749,21 @@
      },
      {
       "time": "2026-11-13",
-      "value": 25.0258
+      "value": 25.009
      }
     ]
    },
    "consenso": {
     "accion": "COMPRAR",
-    "acuerdo": 1,
+    "acuerdo": 0.6666666666666666,
     "detalle": [
      {
       "quien": "gemini",
+      "accion": "ESPERAR",
+      "peso": 1
+     },
+     {
+      "quien": "groq",
       "accion": "COMPRAR",
       "peso": 1
      },
@@ -80762,12 +80775,13 @@
     ]
    },
    "niveles": {
-    "entrada": 68984.35,
-    "objetivo": 77761.36,
+    "entrada": 68264.3,
+    "objetivo": 94201.07,
     "stop": 62226.58
    },
    "razonesIA": [
-    "Presenta un indicador RSI extremo de sobreventa (26) cerca del nivel clave de retroceso de Fibonacci."
+    "Registra sobreventa extrema con RSI en 25, pero la fuerte volatilidad bajista aconseja aguardar confirmación de piso.",
+    "RSI muy bajo y precio bajo todas las medias móviles, con fuerte potencial alcista en la extensión 1.272 de Fibonacci."
    ]
   },
   {
@@ -80776,16 +80790,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1929.4599609375,
-   "variacionDia": -4.33,
-   "variacion30d": -19.07,
+   "precio": 1924.0400390625,
+   "variacionDia": -4.6,
+   "variacion30d": -19.3,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2216.1748229980467,
-   "m50": 2413.7479663085937,
-   "m200": 2147.2354443359377,
-   "rsi": 24.912788763684688,
+   "m20": 2215.9038269042967,
+   "m50": 2413.6395678710937,
+   "m200": 2147.2083447265627,
+   "rsi": 24.712341808608826,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -83266,8 +83280,8 @@
       "open": 2017.3367919921875,
       "high": 2017.3367919921875,
       "low": 1909.159912109375,
-      "close": 1929.4599609375,
-      "volume": 14928201728
+      "close": 1924.0400390625,
+      "volume": 14921835520
      }
     ],
     "m20": [
@@ -84469,7 +84483,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2216.1748
+      "value": 2215.9038
      }
     ],
     "m50": [
@@ -85671,7 +85685,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2413.748
+      "value": 2413.6396
      }
     ],
     "m200": [
@@ -86873,7 +86887,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 2147.2354
+      "value": 2147.2083
      }
     ],
     "rsi": [
@@ -88075,7 +88089,7 @@
      },
      {
       "time": "2026-11-13",
-      "value": 24.9128
+      "value": 24.7123
      }
     ]
    },
@@ -88091,7 +88105,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1929.4599609375,
+    "entrada": 1924.0400390625,
     "objetivo": 3078.16408203125,
     "stop": 1803.053955078125
    },
@@ -88103,7 +88117,7 @@
    "proveedor": "github",
    "nombre": "GitHub Models",
    "modelo": "openai/gpt-4.1-mini",
-   "ms": 633,
+   "ms": 751,
    "error": "fetch failed",
    "opinion": null,
    "confiabilidad": 1
@@ -88112,13 +88126,13 @@
    "proveedor": "gemini",
    "nombre": "Google Gemini",
    "modelo": "gemini-3.6-flash",
-   "ms": 18155,
+   "ms": 80224,
    "error": null,
    "opinion": {
-    "resumen": "El escenario local exhibe incertidumbre por la inminente decisión de MSCI y tasas bancarias del 1,97% que pierden contra una inflación del 2,2%. En el ámbito internacional, activos de calidad como Apple mantienen solidez técnica, mientras que las acciones locales y criptomonedas registran fuertes correcciones ingresando en zonas de sobreventa.",
+    "resumen": "La inflación mensual del 2,2% supera la tasa de los plazos fijos tradicionales, por lo que es prioritario buscar instrumentos con rendimiento real positivo para preservar el capital. En el ámbito internacional y local, la reciente corrección generó niveles de sobreventa en activos clave, demandando una estrategia selectiva y prudente.",
     "mejorOpcion": {
-     "nombre": "Apple (AAPL)",
-     "porque": "Ofrece un perfil de rendimiento positivo (+4,62% mensual) con clara estructura alcista sostenida por encima de sus medias móviles de 20, 50 y 200 días."
+     "nombre": "FCI FBA Bonos Argentina A RP D.596",
+     "porque": "Ofrece un rendimiento mensual del 3,92% con una tasa real positiva del 1,68% frente a la inflación, superando ampliamente a los plazos fijos en un entorno de moderado riesgo."
     },
     "activos": [
      {
@@ -88126,30 +88140,40 @@
       "yahoo": "AAPL",
       "accion": "COMPRAR",
       "confianza": 75,
-      "entrada": 357.81,
+      "entrada": 356.27,
       "objetivo": 384.52,
-      "stop": 339.07,
-      "razon": "Mantiene una tendencia alcista técnica saludable con un RSI en 61,6 y cotizando sobre la media móvil de 20 días."
+      "stop": 340,
+      "razon": "Presenta una sólida tendencia alcista con medias móviles alineadas y un rendimiento positivo constante frente al resto del mercado."
      },
      {
       "nombre": "S&P 500 (SPY)",
       "yahoo": "SPY",
-      "accion": "ESPERAR",
-      "confianza": 65,
-      "entrada": 749.1,
+      "accion": "COMPRAR",
+      "confianza": 70,
+      "entrada": 754.37,
       "objetivo": 781.62,
       "stop": 730.5,
-      "razon": "Atraviesa una leve corrección mensual acercándose al nivel de retroceso de Fibonacci del 38,2%."
+      "razon": "Mantiene la tendencia alcista de largo plazo situándose por encima de su media móvil de 200 días."
      },
      {
       "nombre": "Bitcoin",
       "yahoo": "BTC-USD",
-      "accion": "COMPRAR",
-      "confianza": 55,
-      "entrada": 68984.35,
+      "accion": "ESPERAR",
+      "confianza": 60,
+      "entrada": 67605.93,
       "objetivo": 77761.36,
       "stop": 62226.58,
-      "razon": "Presenta un indicador RSI extremo de sobreventa (26) cerca del nivel clave de retroceso de Fibonacci."
+      "razon": "Registra sobreventa extrema con RSI en 25, pero la fuerte volatilidad bajista aconseja aguardar confirmación de piso."
+     },
+     {
+      "nombre": "Nvidia",
+      "yahoo": "NVDA",
+      "accion": "ESPERAR",
+      "confianza": 55,
+      "entrada": 148.8,
+      "objetivo": 184.93,
+      "stop": 135,
+      "razon": "Aunque el RSI indica sobreventa profunda, la pendiente bajista de corto plazo requiere prudencia antes de tomar posición."
      },
      {
       "nombre": "YPF",
@@ -88157,15 +88181,25 @@
       "accion": "ESPERAR",
       "confianza": 50,
       "entrada": 5935,
-      "objetivo": 7189.87,
+      "objetivo": 6710.26,
       "stop": 5400,
-      "razon": "Aunque está fuertemente sobrevendida con un RSI de 26, el riesgo político y la definición de MSCI sugieren cautela."
+      "razon": "A pesar del nivel de sobreventa técnica, la volatilidad de los activos locales exige cautela hasta consolidar un soporte."
+     },
+     {
+      "nombre": "Mercado Libre",
+      "yahoo": "MELI",
+      "accion": "VENDER",
+      "confianza": 65,
+      "entrada": 1491.49,
+      "objetivo": 1605.46,
+      "stop": 1400,
+      "razon": "Exhibe debilidad técnica estructural con un puntaje técnico marcadamente negativo."
      }
     ],
     "riesgos": [
-     "Rendimiento negativo en términos reales de los plazos fijos tradicionales (1,97%) frente a una inflación del 2,2%.",
-     "Alta volatilidad a corto plazo en renta variable argentina sujeta al dictamen de MSCI respecto al estatus del país.",
-     "Incremento en la brecha del dólar CCL sobre el MEP (4,65%), reflejando mayor costo y demanda de salida de divisas."
+     "Pérdida de poder adquisitivo al mantener liquidez en plazos fijos tradicionales que pagan tasas reales negativas frente a la inflación del 2,2%.",
+     "Alta volatilidad en acciones argentinas asociada al riesgo país en 829 puntos y definiciones de clasificación de mercado.",
+     "Corrección prolongada en el sector tecnológico internacional y en el mercado de criptomonedas."
     ]
    },
    "confiabilidad": 1
@@ -88174,52 +88208,51 @@
    "proveedor": "groq",
    "nombre": "Groq",
    "modelo": "openai/gpt-oss-120b",
-   "ms": 2739,
+   "ms": 3198,
    "error": null,
    "opinion": {
-    "resumen": "La inflación mensual del 2,2 % y el riesgo país elevado siguen presionando al mercado local, mientras que los indicadores técnicos muestran oportunidades en acciones internacionales con fuerte impulso. Apple presenta una combinación favorable de RSI, medias móviles y extensiones de Fibonacci que sugieren una posible suba, mientras que Nvidia y el ETF argentino ARGT están en zonas de sobreventa y requieren cautela.",
+    "resumen": "Los indicadores técnicos muestran señales mixtas: el ETF ARGT está sobrevendido pero sin confirmación de ruptura, mientras que Apple mantiene una tendencia alcista clara y Bitcoin está extremadamente sobrevendido con gran potencial de rebote. Dada la alta inflación (2.2% mensual) y la brecha cambiaria, se prioriza la exposición a activos dolarizados con buen soporte técnico.",
     "mejorOpcion": {
-     "nombre": "Apple (AAPL)",
-     "porque": "RSI por encima de 60, precio por encima de la media de 20 y 50 días, y la proyección de la extensión de Fibonacci 1.272 indica un objetivo cercano por encima del precio actual, con soporte sólido en el retroceso 0.618."
+     "nombre": "Apple",
+     "porque": "Precio por encima de sus medias móviles 20, 50 y 200, RSI moderado y proyección alcista en la extensión de Fibonacci, ofreciendo una cobertura segura contra la devaluación del peso."
     },
     "activos": [
      {
       "nombre": "Apple",
       "yahoo": "AAPL",
       "accion": "COMPRAR",
-      "confianza": 78,
-      "entrada": 357.81,
+      "confianza": 75,
+      "entrada": 356.27,
       "objetivo": 384.52,
-      "stop": 307.01,
-      "razon": "RSI saludable, precios por encima de M20/M50 y objetivo en extensión 1.272 de Fibonacci."
+      "stop": 340,
+      "razon": "Tendencia alcista confirmada por medias móviles y objetivo en la extensión 1.272 de Fibonacci."
      },
      {
-      "nombre": "Nvidia",
-      "yahoo": "NVDA",
-      "accion": "ESPERAR",
-      "confianza": 45,
-      "entrada": 162.38,
-      "objetivo": null,
-      "stop": null,
-      "razon": "RSI muy bajo y precio bajo medias móviles; necesita confirmación de reversión antes de operar."
+      "nombre": "Bitcoin",
+      "yahoo": "BTC-USD",
+      "accion": "COMPRAR",
+      "confianza": 65,
+      "entrada": 68264.3,
+      "objetivo": 94201.07,
+      "stop": 62000,
+      "razon": "RSI muy bajo y precio bajo todas las medias móviles, con fuerte potencial alcista en la extensión 1.272 de Fibonacci."
      },
      {
       "nombre": "Argentina (ETF ARGT)",
       "yahoo": "ARGT",
       "accion": "ESPERAR",
-      "confianza": 40,
-      "entrada": 73.56,
-      "objetivo": null,
-      "stop": null,
-      "razon": "RSI bajo y fuerte brecha cambiaria; riesgo país alto limita la exposición."
+      "confianza": 50,
+      "entrada": 73.75,
+      "objetivo": 78.17,
+      "stop": 70,
+      "razon": "Sobreventa (RSI 28.2) pero sin ruptura clara; se espera confirmación del posible upgrade de MSCI y rebote de soporte."
      }
     ],
     "riesgos": [
-     "Inflación mensual del 2,2 % que erosiona rendimientos reales",
-     "Riesgo país 829, indicando vulnerabilidad macroeconómica",
-     "Alta volatilidad del dólar (brechas entre oficial, MEP, blue y CCL) que afecta la liquidez y costos de cobertura",
-     "Rendimientos negativos en activos locales como S&P 500, oro y Banco Macro",
-     "Posibles retrasos o negativas en la inclusión de Argentina en índices internacionales (MSCI) que podrían desactivar flujos de capital."
+     "Riesgo país elevado (índice 829) y alta inflación que erosiona el poder adquisitivo",
+     "Volatilidad extrema de criptomonedas y posible corrección brusca",
+     "Incertidumbre sobre la decisión de MSCI y su impacto en el ETF ARGT",
+     "Brechas cambiarias amplias que pueden afectar la liquidez y costos de conversión"
     ]
    },
    "confiabilidad": 1
@@ -88232,30 +88265,40 @@
     "yahoo": "AAPL",
     "accion": "COMPRAR",
     "confianza": 75,
-    "entrada": 357.81,
+    "entrada": 356.27,
     "objetivo": 384.52,
-    "stop": 339.07,
-    "razon": "Mantiene una tendencia alcista técnica saludable con un RSI en 61,6 y cotizando sobre la media móvil de 20 días."
+    "stop": 340,
+    "razon": "Presenta una sólida tendencia alcista con medias móviles alineadas y un rendimiento positivo constante frente al resto del mercado."
    },
    {
     "nombre": "S&P 500 (SPY)",
     "yahoo": "SPY",
-    "accion": "ESPERAR",
-    "confianza": 65,
-    "entrada": 749.1,
+    "accion": "COMPRAR",
+    "confianza": 70,
+    "entrada": 754.37,
     "objetivo": 781.62,
     "stop": 730.5,
-    "razon": "Atraviesa una leve corrección mensual acercándose al nivel de retroceso de Fibonacci del 38,2%."
+    "razon": "Mantiene la tendencia alcista de largo plazo situándose por encima de su media móvil de 200 días."
    },
    {
     "nombre": "Bitcoin",
     "yahoo": "BTC-USD",
-    "accion": "COMPRAR",
-    "confianza": 55,
-    "entrada": 68984.35,
+    "accion": "ESPERAR",
+    "confianza": 60,
+    "entrada": 67605.93,
     "objetivo": 77761.36,
     "stop": 62226.58,
-    "razon": "Presenta un indicador RSI extremo de sobreventa (26) cerca del nivel clave de retroceso de Fibonacci."
+    "razon": "Registra sobreventa extrema con RSI en 25, pero la fuerte volatilidad bajista aconseja aguardar confirmación de piso."
+   },
+   {
+    "nombre": "Nvidia",
+    "yahoo": "NVDA",
+    "accion": "ESPERAR",
+    "confianza": 55,
+    "entrada": 148.8,
+    "objetivo": 184.93,
+    "stop": 135,
+    "razon": "Aunque el RSI indica sobreventa profunda, la pendiente bajista de corto plazo requiere prudencia antes de tomar posición."
    },
    {
     "nombre": "YPF",
@@ -88263,9 +88306,19 @@
     "accion": "ESPERAR",
     "confianza": 50,
     "entrada": 5935,
-    "objetivo": 7189.87,
+    "objetivo": 6710.26,
     "stop": 5400,
-    "razon": "Aunque está fuertemente sobrevendida con un RSI de 26, el riesgo político y la definición de MSCI sugieren cautela."
+    "razon": "A pesar del nivel de sobreventa técnica, la volatilidad de los activos locales exige cautela hasta consolidar un soporte."
+   },
+   {
+    "nombre": "Mercado Libre",
+    "yahoo": "MELI",
+    "accion": "VENDER",
+    "confianza": 65,
+    "entrada": 1491.49,
+    "objetivo": 1605.46,
+    "stop": 1400,
+    "razon": "Exhibe debilidad técnica estructural con un puntaje técnico marcadamente negativo."
    }
   ],
   "groq": [
@@ -88273,35 +88326,35 @@
     "nombre": "Apple",
     "yahoo": "AAPL",
     "accion": "COMPRAR",
-    "confianza": 78,
-    "entrada": 357.81,
+    "confianza": 75,
+    "entrada": 356.27,
     "objetivo": 384.52,
-    "stop": 307.01,
-    "razon": "RSI saludable, precios por encima de M20/M50 y objetivo en extensión 1.272 de Fibonacci."
+    "stop": 340,
+    "razon": "Tendencia alcista confirmada por medias móviles y objetivo en la extensión 1.272 de Fibonacci."
    },
    {
-    "nombre": "Nvidia",
-    "yahoo": "NVDA",
-    "accion": "ESPERAR",
-    "confianza": 45,
-    "entrada": 162.38,
-    "objetivo": null,
-    "stop": null,
-    "razon": "RSI muy bajo y precio bajo medias móviles; necesita confirmación de reversión antes de operar."
+    "nombre": "Bitcoin",
+    "yahoo": "BTC-USD",
+    "accion": "COMPRAR",
+    "confianza": 65,
+    "entrada": 68264.3,
+    "objetivo": 94201.07,
+    "stop": 62000,
+    "razon": "RSI muy bajo y precio bajo todas las medias móviles, con fuerte potencial alcista en la extensión 1.272 de Fibonacci."
    },
    {
     "nombre": "Argentina (ETF ARGT)",
     "yahoo": "ARGT",
     "accion": "ESPERAR",
-    "confianza": 40,
-    "entrada": 73.56,
-    "objetivo": null,
-    "stop": null,
-    "razon": "RSI bajo y fuerte brecha cambiaria; riesgo país alto limita la exposición."
+    "confianza": 50,
+    "entrada": 73.75,
+    "objetivo": 78.17,
+    "stop": 70,
+    "razon": "Sobreventa (RSI 28.2) pero sin ruptura clara; se espera confirmación del posible upgrade de MSCI y rebote de soporte."
    }
   ]
  },
- "opinionesFecha": "2026-11-13T19:38:16.622Z",
+ "opinionesFecha": "2026-11-13T22:27:32.299Z",
  "titulares": [
   {
    "titulo": "Cuáles son las acciones que subirían más si Argentina consigue hoy un guiño para ser \"mercado emergente\" - Clarin.com",
@@ -88325,16 +88378,16 @@
    "tema": "mercado argentino acciones hoy"
   },
   {
-   "titulo": "Las 5 acciones argentinas con potencial de suba de hasta 140%, según Allaria - iProfesional",
-   "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQVRKQVh4NTdIZlRPZGFUMGdoc3VvU0tPbUxKb0ViQ1hyU1pCYU1rNFN2OGpQMWlmaGgyTjZyN3FjWlNnT0tIOHVTalV4TEFzd1RMSnNhNHprbU5kRFZjbngzd2pQcURGNVNTUDl3NjQyVVhpdHdBMGlrNVFIdmp0V0xQM0pBV21SR0JoVno5YU1WYWhRTTd2UExNcWJMTU5kQVUtT0xMWjZ2ekFFUkVuSkNUa2FKMmRobVNQUFY2OTlibkFRc1ZoMlp30gHPAUFVX3lxTFBYRF9NODVKMGI0Q0dLaDB0SkRwdURBOU5lQjUxYm14Vy1jZFh2Rk9fWHU1OXA3T0V6enI5aUFVMXVXb0hVS2JPU3VSaVgtOUc2aUY0YXM5c2s0Z0VqWEJuUllXTHpOSmlMamI5ZUZ1NDlMU1dsV3NwcHRjMlJMeGxqRE9GejgwTHlmb2tvRmxzLUpYbUVBV0I4cHo1dEloZDBnVmR6WmhNM0FpdWlqVWRhOHBhblcxUW10Y2FVdVV1b2VOUzZJaE5nZm5vWlZkMA?oc=5",
-   "fecha": "Sun, 09 Aug 2026 07:00:00 GMT",
+   "titulo": "Acciones argentinas caen en Wall Street en la rueda previa a la decisión de MSCI - Bloomberg Línea",
+   "enlace": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNOURlOFQ3MXd2TTY3M0JSZkptYlcybFNLektScE5INFFGVkFfZW5CN0EzTDMycXY4Y195czVnSGJnVUVLMmpRTTJNampJa3JpRDFTTWxKTEFUR3p6NGdaYWNUMndrdWdxMFVPbTYyYmlxUi12b3pCc3dPVzIwSDlkU29QMWVBSjlBQWFpT1JrXzEwa3NrRjEtX0xQbTR4TXg5MHJxYWNDc2lOcWw1LTF0UzlpUXJqWWg3Y0ItQ1Z2TXMxVkFUTXNOQTZWUlRwcUJueUHSAeYBQVVfeXFMUEx2OGpVVmRycDZTTTA5akRnM0w3YXdVUjlvcVZXbzhTN1NXZmVfOTJDRl9DTWJtODFILW9abWVodDdDWjY0OHYzbUZZcWtTNTNDQXRuR2EzSkxHZTZhY2tlb0dCRU5KZmxzQmFyaDR2c09Mb2VrZTZFQ013WWZrTHpUMlZOcmFJUnlTOFp5U0lsMjJBcUJhOEVUZ3liQ2U1Qk91QUJsbkJUZllwRzgxTEhOc2owbC0ya2steXh2VEdPYjRxQ3J2cHBIRlc3VzI0UkhLWW1fcDJTbHQwNlBkTUxFUzczRlE?oc=5",
+   "fecha": "Mon, 22 Jun 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "mercado argentino acciones hoy"
   },
   {
-   "titulo": "Acciones argentinas caen en Wall Street en la rueda previa a la decisión de MSCI - Bloomberg Línea",
-   "enlace": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNOURlOFQ3MXd2TTY3M0JSZkptYlcybFNLektScE5INFFGVkFfZW5CN0EzTDMycXY4Y195czVnSGJnVUVLMmpRTTJNampJa3JpRDFTTWxKTEFUR3p6NGdaYWNUMndrdWdxMFVPbTYyYmlxUi12b3pCc3dPVzIwSDlkU29QMWVBSjlBQWFpT1JrXzEwa3NrRjEtX0xQbTR4TXg5MHJxYWNDc2lOcWw1LTF0UzlpUXJqWWg3Y0ItQ1Z2TXMxVkFUTXNOQTZWUlRwcUJueUHSAeYBQVVfeXFMUEx2OGpVVmRycDZTTTA5akRnM0w3YXdVUjlvcVZXbzhTN1NXZmVfOTJDRl9DTWJtODFILW9abWVodDdDWjY0OHYzbUZZcWtTNTNDQXRuR2EzSkxHZTZhY2tlb0dCRU5KZmxzQmFyaDR2c09Mb2VrZTZFQ013WWZrTHpUMlZOcmFJUnlTOFp5U0lsMjJBcUJhOEVUZ3liQ2U1Qk91QUJsbkJUZllwRzgxTEhOc2owbC0ya2steXh2VEdPYjRxQ3J2cHBIRlc3VzI0UkhLWW1fcDJTbHQwNlBkTUxFUzczRlE?oc=5",
-   "fecha": "Mon, 22 Jun 2026 07:00:00 GMT",
+   "titulo": "Acciones argentinas: las tres que más subieron en julio y por qué todavía podrían tener recorrido - Ambito",
+   "enlace": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNVVTWmxyVURhRU1aZWZMUHA3OTFUV25WcjFPY2dlRE1zb2hwRzduQnUtNUo0WldXVDR0TjNiMlJQa3NRQzFsVzZZZHRBV0xlOUVLcjdIUm9aeTVISmdOUHhHVndIRVM5NTJITUcyQVVZTV9sOGhiMkQ2VUhLdE8xeEFDZEhMLWRNWlZSYtIBkgFBVV95cUxPdC1UdVhsdWd1YUZVUVl5ZDBoTVlxSWh6T1BYZE83Mlg4UXVNRnVra1ZQT1ZEcHctbHFsUEVPMDBCSVpFb0VFcDNNUEZUY3I1QllXT2k2czliaXhMeXVZb25TU054RDR5U0g5VHB5bEZTc3dnQ1dxeldDYkZaV0F1d0NrTmpSME9oZGRsaFMwRlU0dw?oc=5",
+   "fecha": "Mon, 03 Aug 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "mercado argentino acciones hoy"
   },
@@ -88444,6 +88497,13 @@
    "tema": "CNV normativa dólar parking"
   },
   {
+   "titulo": "Repunte de los papeles argentinos en Wall Street - Página|12",
+   "enlace": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVmJ2VW9BYWtaU01rRm50MDdENHBCRlhHRWxUb3NqM3hXQ1ppN0VsdEdNcG53SDZEMG1XU3MzQVo2aWJSZWxxVGFiTWlrVjRwS01rNHRrTE5lYVEyRGFyLUFJU1lIUXNmazgyVFVlQXFJc0Vxd3FyTlBBMmxwVGw5VjlzcEc2SzNiOFNxc0R4Sm1ZQQ?oc=5",
+   "fecha": "Wed, 11 Nov 2026 02:53:18 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
    "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
    "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
    "fecha": "Fri, 13 Nov 2026 14:47:27 GMT",
@@ -88468,13 +88528,6 @@
    "titulo": "Wall Street: las megainversiones en IA encendieron las alarmas y el Nasdaq sufrió su peor caída en cuatro meses - Ambito",
    "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNRnF1RXNDWV96eGowelRaLVhoeE5HekxCTmtoMVdGNmk1RnZ1X1hLYklLZmFnbkdqd1BpbDNleXJnellUTVlVTkxZVmplWGQyZGlCb2pLNlRTV1Nsd3lad1ZkRGMzanVfQ1k5MVAyQ1RDMXFLYVI0ek5iWmNaUVg2enVqUG9JT3RBMGFwM1Y3Wnh6M2E3REowTmtoOUcwUWlXbTkzamI5ejk5emNHdGdWVkliQTI1U24xc0xQUWZ6M0poUWMta1Jj0gHMAUFVX3lxTE5LVDVEaFU1dnNJcl9YcU1JNW1uWTVNb2VKejBGd3k0X1E3OG93WnpzMDEtYzg1QXBhNmxnc29YOF9DWWtCcHZWbUpidzlSeXVDYnM4VmlfM3VwUGo5b2JvLUhuSHVpQjhTQjA4aDBCZU8ySm9WQzM0WHRhRm5YRUZxaXk5TmMzZk5DTElqNEJBc0FKeXpCMG9FRmdTUUh1dUFhWFozM0dOYjJhTndiRUYxOGxFN3BLTjREbHY2MjFUUmlCVlliZDZXRDg4Rw?oc=5",
    "fecha": "Thu, 22 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Jornada en rojo en Wall Street: subió el riesgo país a 867 puntos y bajaron las reservas del BCRA por un pago al FMI - » Cholila Online",
-   "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWlplc3dBSTRvMVAxbnNDTWVvX3kwdDluM3ZLRXNqMnR3c3FZOTlhcVI5N2xhN0ZGT195a25ZU2UtZkw1cmxEa3RVM0FYd2dmQVpIemppVG55QU44S3JnYVlYdFgxZHVOQnBYaThqWHJhSmItM2hzSFhjYVpVM2R4VlFhWFJLU1g4UXEzY2Zvak1aSXp5LUg1RkZuM0tIalREUnlPdE5jaw?oc=5",
-   "fecha": "Thu, 12 Nov 2026 15:52:12 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
