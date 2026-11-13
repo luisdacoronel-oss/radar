@@ -20,11 +20,12 @@
   "fecha": "2026-11-13",
   "yahoo": "GGAL.BA",
   "nombre": "Grupo Galicia",
-  "precio": 4942.5,
+  "precio": 4885,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
-   "bajo_m20"
+   "bajo_m20",
+   "rsi_sobreventa"
   ],
   "votos": {},
   "evaluado": {}
@@ -34,7 +35,7 @@
   "fecha": "2026-11-13",
   "yahoo": "YPFD.BA",
   "nombre": "YPF",
-  "precio": 6270,
+  "precio": 6230,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -42,7 +43,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "COMPRAR"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -51,7 +52,7 @@
   "fecha": "2026-11-13",
   "yahoo": "PAMP.BA",
   "nombre": "Pampa Energía",
-  "precio": 4300,
+  "precio": 4265,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -66,7 +67,7 @@
   "fecha": "2026-11-13",
   "yahoo": "BMA.BA",
   "nombre": "Banco Macro",
-  "precio": 9400,
+  "precio": 9320,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -80,15 +81,13 @@
   "fecha": "2026-11-13",
   "yahoo": "MELI",
   "nombre": "Mercado Libre",
-  "precio": 1482.800048828125,
+  "precio": 1488.5001220703125,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
    "bajo_m20"
   ],
-  "votos": {
-   "gemini": "VENDER"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -96,14 +95,17 @@
   "fecha": "2026-11-13",
   "yahoo": "SPY",
   "nombre": "S&P 500 (SPY)",
-  "precio": 750.77001953125,
+  "precio": 752.0999755859375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR",
+   "groq": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -111,13 +113,14 @@
   "fecha": "2026-11-13",
   "yahoo": "AAPL",
   "nombre": "Apple",
-  "precio": 358.2699890136719,
+  "precio": 358.1000061035156,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "sobre_m20"
   ],
   "votos": {
+   "gemini": "COMPRAR",
    "groq": "COMPRAR"
   },
   "evaluado": {}
@@ -127,7 +130,7 @@
   "fecha": "2026-11-13",
   "yahoo": "NVDA",
   "nombre": "Nvidia",
-  "precio": 160.22000122070312,
+  "precio": 161.4656982421875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -135,7 +138,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "groq": "VENDER"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -144,13 +147,15 @@
   "fecha": "2026-11-13",
   "yahoo": "GLD",
   "nombre": "Oro (GLD)",
-  "precio": 356.05999755859375,
+  "precio": 355.93499755859375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
    "bajo_m20"
   ],
-  "votos": {},
+  "votos": {
+   "groq": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -158,7 +163,7 @@
   "fecha": "2026-11-13",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 68695.2265625,
+  "precio": 68778.9765625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -175,7 +180,7 @@
   "fecha": "2026-11-13",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1930.2900390625,
+  "precio": 1932.9200439453125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -190,16 +195,14 @@
   "fecha": "2026-11-13",
   "yahoo": "ARGT",
   "nombre": "Argentina (ETF ARGT)",
-  "precio": 73.0999984741211,
+  "precio": 72.94999694824219,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {
-   "groq": "VENDER"
-  },
+  "votos": {},
   "evaluado": {}
  }
 ]
