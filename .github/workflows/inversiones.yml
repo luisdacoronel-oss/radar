@@ -1,0 +1,46 @@
+name: RADAR Inversiones
+
+on:
+  schedule:
+    - cron: '22,52 * * * *'   # cada 30 minutos, intercalado con RADAR de Ventas (7 y 37)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: radar-inversiones
+  cancel-in-progress: false
+
+jobs:
+  analizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Analizar mercados y consultar IAs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          GROQ_KEY: ${{ secrets.GROQ_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+        run: node inversiones/motor.mjs
+
+      - name: Guardar resultados
+        if: always()
+        run: |
+          git config user.name "RADAR"
+          git config user.email "radar@users.noreply.github.com"
+          git add docs/inversiones-datos
+          git diff --cached --quiet && exit 0
+          git commit -m "RADAR: inversiones"
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs origin HEAD && git push && exit 0; sleep 10; done
+          exit 1
