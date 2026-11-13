@@ -35,8 +35,13 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
 .msg{max-width:88%;padding:12px 16px;border-radius:16px;line-height:1.55}.msg.yo{align-self:flex-end;background:var(--grad);color:#fff;white-space:pre-wrap}.msg.ia{align-self:flex-start;background:var(--panel2);border:1px solid var(--borde)}.msg h2,.msg h3{font-size:15px;margin:8px 0 4px}
 .fuentes{margin-top:8px;font-size:12px;color:var(--suave)}.chipIA{margin-top:10px;padding:8px 10px;border-radius:10px;background:#7c5cff18;font-size:13px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .barraChat{display:flex;gap:8px;margin-top:10px}.barraChat textarea{flex:1;resize:none}.botonesChat{display:flex;flex-direction:column;gap:6px}.opcVoz{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.btn.act{background:var(--grad)!important;color:#fff}.liveInfo{margin-top:8px;padding:10px 14px;border-radius:12px;background:#22d39b18;border:1px solid #22d39b55;color:var(--ok);font-size:14px}#btnLive.enVivo{background:linear-gradient(135deg,#ff5d73,#ffb547)!important;animation:latido 1.4s infinite}@keyframes latido{50%{box-shadow:0 0 0 8px #ff5d7333}}.selVoz{padding:7px 10px;border-radius:10px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde);font:inherit;font-size:13px;max-width:240px}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(150%);background:var(--panel2);border:1px solid var(--ok);color:var(--texto);padding:14px 18px;border-radius:14px;box-shadow:0 10px 30px #0008;z-index:80;transition:.3s;max-width:92vw}.toast.ver{transform:translateX(-50%) translateY(0)}.act-l b{color:var(--texto)}
+.subnav{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:10px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--borde)}.subnav button:not(.btn){all:unset;cursor:pointer;padding:7px 12px;border-radius:10px;color:var(--suave);font-size:14px}.subnav button.act:not(.btn){background:var(--panel2);color:#fff;box-shadow:inset 0 -2px 0 var(--a2)}
+.etq{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700}.etq.COMPRAR{background:#22d39b22;color:var(--ok)}.etq.VENDER{background:#ff5d7322;color:var(--mal)}.etq.ESPERAR{background:#ffb54722;color:#ffb547}
+.invG{height:560px;border:1px solid var(--borde);border-radius:16px;overflow:hidden}.invLey{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--suave);margin:6px 0 10px}.invLey i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:5px}
+.barraA{height:8px;background:var(--panel2);border-radius:4px;overflow:hidden;min-width:70px}.barraA>div{height:100%;background:var(--grad)}.pos{color:var(--ok)}.neg{color:var(--mal)}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://unpkg.com/lightweight-charts@5.0.8/dist/lightweight-charts.standalone.production.js"></script>
 </head>
 <body>
 <div id="cargando" class="login oculto" style="text-align:center"><div class="logo" style="justify-content:center"><i>◎</i>RADAR</div><p class="muted">Abriendo tus resultados…</p></div>
@@ -51,7 +56,7 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
 
 <div id="app" class="oculto">
 <header><div class="cab"><div class="logo"><i>◎</i>RADAR <span class="muted" style="font-weight:400;font-size:13px">en la nube</span></div>
-  <nav><button data-v="productos" class="act">📦 Productos</button><button data-v="asistente">💬 Asistente</button><button data-v="pedir">🔎 Pedir</button><button data-v="calculadora">🧮 Calculadora</button><button data-v="ventas">📣 Ventas</button><button data-v="capital">💰 Capital</button><button data-v="aprendizaje">🧠 Aprendizaje</button><button data-v="actividad">⏱ Actividad</button></nav></div></header>
+  <nav><button data-v="productos" class="act">📦 Productos</button><button data-v="asistente">💬 Asistente</button><button data-v="pedir">🔎 Pedir</button><button data-v="calculadora">🧮 Calculadora</button><button data-v="ventas">📣 Ventas</button><button data-v="capital">💰 Capital e inversiones</button><button data-v="aprendizaje">🧠 Aprendizaje</button><button data-v="actividad">⏱ Actividad</button></nav></div></header>
 <main>
   <section id="v-productos">
     <div class="grid g4" id="kpis"></div>
@@ -91,8 +96,27 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
       <div id="planOut" style="margin-top:14px"></div></div>
     <h2 style="margin-top:20px">Dónde y cómo hacer publicidad</h2><div class="grid g2" id="canales"></div>
   </section>
-  <section id="v-capital" class="oculto"><h1>Hacer rendir tu capital</h1><div id="capital"></div>
-    <p class="muted">Información general para comparar opciones. No es asesoramiento financiero: confirmá tasas y riesgos con tu banco, broker o un asesor antes de invertir.</p></section>
+  <section id="v-capital" class="oculto"><h1>Capital e inversiones</h1>
+    <p class="sub" id="invEstado">Cargando inversiones…</p>
+    <div class="subnav" id="invMenu"><button data-s="resumen" class="act">Resumen</button><button data-s="graficos">📈 Gráficos</button><button data-s="rulos">💱 Rulos</button><button data-s="rendimientos">🏦 Rendimientos</button><button data-s="consejo">🤝 Consejo de IAs</button><button data-s="productos">📦 Reinvertir en productos</button><button data-s="aprendizaje">🧠 Aprendizaje</button><button data-s="noticias">📰 Noticias</button><button class="btn chico sec" id="invVoz" style="margin-left:auto">🔊 Escuchar resumen</button></div>
+    <div class="invS" id="inv-resumen"></div>
+    <div class="invS oculto" id="inv-graficos">
+      <div class="pedir" style="align-items:center;margin-bottom:10px"><select id="invSel" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"></select><span class="muted" id="invLectura"></span></div>
+      <div class="invLey"><span><i style="background:#4c8dff"></i>Media 20</span><span><i style="background:#ffb547"></i>Media 50</span><span><i style="background:#bc8cff"></i>Media 200</span><span><i style="background:#8d98b8"></i>Retroceso Fibonacci</span><span><i style="background:#22d39b"></i>Extensión Fibonacci</span><span><i style="background:#ff5d73"></i>RSI 14 (abajo)</span></div>
+      <div id="invGrafico" class="invG"></div>
+      <div id="invNiveles" class="grid g2" style="margin-top:14px"></div>
+      <h2 style="margin-top:22px">Gráfico en vivo de TradingView</h2>
+      <p class="muted">Incluye medias móviles de 20, 50 y 200 y RSI. Fibonacci se dibuja con la herramienta de la barra lateral izquierda; los niveles calculados por RADAR están en el gráfico de arriba.</p>
+      <div id="invTV" class="invG" style="height:620px"></div>
+    </div>
+    <div class="invS oculto" id="inv-rulos"></div>
+    <div class="invS oculto" id="inv-rendimientos"></div>
+    <div class="invS oculto" id="inv-consejo"></div>
+    <div class="invS oculto" id="inv-productos"><div id="capital"></div></div>
+    <div class="invS oculto" id="inv-aprendizaje"></div>
+    <div class="invS oculto" id="inv-noticias"></div>
+    <div class="aviso" style="margin-top:14px">RADAR ordena datos y opiniones de varias IA para que usted decida. No es asesoramiento financiero profesional: ninguna señal garantiza resultados. Antes de operar un rulo, confirme la normativa vigente con su broker.</div>
+  </section>
   <section id="v-aprendizaje" class="oculto"><h1>Lo que aprendió RADAR</h1>
     <div class="grid g2"><div class="card"><h2>🛠 Mejoras que se aplicó solo</h2><div id="mejoras"></div></div><div class="card"><h2>📜 Reglas</h2><div id="reglas"></div></div></div>
     <div class="card" style="margin-top:14px"><h2>📘 Lecciones (investigaciones y videos de YouTube)</h2><div id="lecciones"></div></div></section>
@@ -223,6 +247,7 @@ DATOS DE REFERENCIA (usar solo si la pregunta lo requiere):
 - Reglas aprendidas: ${JSON.stringify((D.reglas||[]).slice(0,20).map(c=>c.titulo+': '+c.contenido))}
 - Lecciones recientes: ${JSON.stringify(lec)}
 - Capital hoy: ${cap?JSON.stringify({resumen:cap.resumen,opciones:cap.opciones,estrategia:cap.estrategia_sugerida}):'sin datos'} (aclarar riesgos; no es asesoramiento financiero profesional)
+- Inversiones hoy (panel Capital e inversiones de RADAR: dólares, rulos, rendimientos, señales con medias móviles, RSI y Fibonacci, y votación de varias IA): ${typeof resumenInversiones==='function'?resumenInversiones():'sin datos'} (si preguntan qué comprar o vender, usá estos datos, indicá entrada, objetivo y stop, aclarando riesgos; la decisión final es del usuario)
 - Pendientes del usuario: ${JSON.stringify(TAREAS.filter(t=>!t.hecha).map(t=>t.texto))}
 - Lo que sabés del usuario: ${JSON.stringify([...(D.notas||[]).map(n=>n.texto),...MEM.map(m=>m.texto)].slice(-50))}`;
 }
@@ -548,5 +573,121 @@ $('#btnLive').onclick=iniciarLive;
 try{const v=localStorage.getItem('radar_voz_live');if(v)$('#selLive').value=v}catch(e){}
 $('#selLive').onchange=e=>{try{localStorage.setItem('radar_voz_live',e.target.value)}catch(x){}};
 </script>
+<script>
+// ===================== RADAR · Capital e inversiones =====================
+// Datos que genera el motor de inversiones cada 30 minutos (docs/inversiones-datos/inversiones.json).
+// No están encriptados porque solo contienen datos públicos de mercado.
+let INV=null,INV_G=null;
+const invN=(x,d=2)=>x==null||isNaN(x)?'—':Number(x).toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const invP=x=>x==null?'—':`<span class="${x>=0?'pos':'neg'}">${x>=0?'+':''}${invN(x)} %</span>`;
+const invE=a=>`<span class="etq ${a}">${a==='COMPRAR'?'Comprar':a==='VENDER'?'Vender':'Esperar'}</span>`;
+const INV_IA={github:'GitHub Models',gemini:'Google Gemini',groq:'Groq',openrouter:'OpenRouter',mistral:'Mistral',cerebras:'Cerebras',tecnico:'Análisis técnico'};
+
+async function invCargar(){
+  const o=typeof origen==='function'?origen():null,urls=[];
+  if(o)urls.push(`https://raw.githubusercontent.com/${o.owner}/${o.repo}/HEAD/docs/inversiones-datos/inversiones.json?t=${Date.now()}`);
+  urls.push('inversiones-datos/inversiones.json?t='+Date.now());
+  for(const u of urls){try{const r=await fetch(u,{cache:'no-store'});if(r.ok){INV=await r.json();break}}catch(e){}}
+  if(!INV){$('#invEstado').textContent='Las inversiones aparecen después de la primera vuelta del motor de inversiones (revise la pestaña Actions en GitHub).';return}
+  $('#invEstado').innerHTML=`Mercados actualizados ${hace(INV.generado)} · opiniones de IA ${INV.opinionesFecha?hace(INV.opinionesFecha):'—'} · IA activas: ${(INV.iaActivas||[]).map(k=>INV_IA[k]||k).join(', ')}`;
+  invPintar();
+}
+
+function invTablaActivos(l){
+  if(!l.length)return'<p class="muted">Ninguno por ahora.</p>';
+  return`<table><tr><th>Activo</th><th>Decisión</th><th class="r">Precio</th><th class="r">Día</th><th class="r">30 días</th><th class="r">RSI</th><th class="r">Objetivo</th><th class="r">Stop</th><th>Por qué</th></tr>${l.map(a=>`<tr><td><b>${esc(a.nombre)}</b></td><td>${invE(a.consenso.accion)}</td><td class="r">${invN(a.precio)}</td><td class="r">${invP(a.variacionDia)}</td><td class="r">${invP(a.variacion30d)}</td><td class="r">${invN(a.rsi,0)}</td><td class="r">${invN(a.niveles.objetivo)}</td><td class="r">${invN(a.niveles.stop)}</td><td class="muted">${esc(a.razonesIA?.[0]||a.senales?.[0]?.texto||'')}</td></tr>`).join('')}</table>`;
+}
+
+function invPintar(){
+  const X=INV,act=X.activos.filter(a=>a.precio),d=X.dolar||{};
+  const compra=act.filter(a=>a.consenso?.accion==='COMPRAR').sort((a,b)=>b.consenso.acuerdo-a.consenso.acuerdo);
+  const venta=act.filter(a=>a.consenso?.accion==='VENDER');
+  const seguros=X.rendimientos.filter(r=>r.riesgo==='Bajo'),ruloOk=X.rulos.filter(r=>r.conviene);
+  const op=X.opiniones.find(o=>o.opinion?.mejorOpcion);
+  const kpi=(l,v,s)=>`<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="muted" style="font-size:13px">${s||''}</div></div>`;
+  $('#inv-resumen').innerHTML=`<div class="grid g4">${kpi('Dólar MEP','$'+invN(d.bolsa?.venta,0),`CCL $${invN(d.contadoconliqui?.venta,0)} · Cripto $${invN(d.cripto?.venta,0)} · Oficial $${invN(d.oficial?.venta,0)}`)}${kpi('Inflación del mes',invN(X.inflacionMensualPct)+' %',`Riesgo país: ${invN(X.riesgoPais,0)}`)}${kpi('Mejor bajo riesgo',seguros[0]?invN(seguros[0].mensualPct)+' %':'—',seguros[0]?esc(seguros[0].nombre)+' · real '+invN(seguros[0].realPct)+' %':'')}${kpi('Rulos que convienen',ruloOk.length,ruloOk[0]?esc(ruloOk[0].nombre)+': '+invN(ruloOk[0].netoPct)+' % neto':'Ninguno supera el mínimo')}</div>
+   ${op?`<div class="card ok" style="margin-top:14px"><h2>🤝 Lo que sugieren las IAs</h2><p>${esc(op.opinion.resumen||'')}</p><p><b>Mejor opción según ${esc(op.nombre)}:</b> ${esc(op.opinion.mejorOpcion.nombre)} — ${esc(op.opinion.mejorOpcion.porque)}</p><p class="muted">La decisión final es suya. Vea la opinión de cada IA en "Consejo de IAs".</p></div>`:''}
+   <div class="card" style="margin-top:14px"><h2>🟢 Con señal de compra (${compra.length})</h2>${invTablaActivos(compra)}</div>
+   ${venta.length?`<div class="card" style="margin-top:14px"><h2>🔴 Con señal de venta (${venta.length})</h2>${invTablaActivos(venta)}</div>`:''}`;
+
+  $('#inv-rulos').innerHTML=`<div class="card"><h2>Rulos y arbitrajes del dólar</h2><p class="muted">Ganancia calculada sobre un capital de referencia, descontando comisiones estimadas por operación.</p>
+   <table><tr><th>Operación</th><th>Cómo</th><th class="r">Bruto</th><th class="r">Neto</th><th class="r">Resultado</th></tr>${X.rulos.map(r=>`<tr><td><b>${esc(r.nombre)}</b> ${r.conviene?'<span class="etq COMPRAR">Conviene</span>':''}</td><td>${esc(r.pasos)}<div class="muted">${esc(r.nota)}</div></td><td class="r">${invP(r.brutoPct)}</td><td class="r">${invP(r.netoPct)}</td><td class="r">${ars(r.gananciaSobreCapital)}</td></tr>`).join('')}</table></div>`;
+
+  const fila=r=>`<tr><td><b>${esc(r.nombre)}</b><div class="muted">${esc(r.tipo)}</div></td><td>${esc(r.riesgo)}</td><td class="r">${invP(r.mensualPct)}</td><td class="r">${invP(r.realPct)}</td><td>${esc(r.donde)}<div class="muted">${esc(r.como)}</div></td></tr>`;
+  const cab='<tr><th>Alternativa</th><th>Riesgo</th><th class="r">Mensual</th><th class="r">Real</th><th>Dónde y cómo</th></tr>';
+  $('#inv-rendimientos').innerHTML=`<div class="card"><h2>Rendimiento previsible (tasas)</h2><p class="muted">"Real" es lo que queda después de la inflación: si es negativo, esa opción pierde contra la inflación.</p><table>${cab}${seguros.map(fila).join('')}</table></div>
+   <div class="card" style="margin-top:14px"><h2>Rendimiento variable</h2><p class="muted">Para acciones, CEDEARs y cripto se muestra lo que rindieron los últimos 30 días: es referencia, no promesa.</p><table>${cab}${X.rendimientos.filter(r=>r.riesgo!=='Bajo').map(fila).join('')}</table></div>`;
+
+  $('#inv-consejo').innerHTML=`<div class="card"><h2>Votación por activo</h2><p class="muted">Cada IA y el análisis técnico votan; el voto pesa según cuánto acertó cada uno en el pasado.</p>
+   <table><tr><th>Activo</th><th>Decisión</th><th>Acuerdo</th><th>Votos</th><th class="r">Entrada</th><th class="r">Objetivo</th><th class="r">Stop</th></tr>${act.map(a=>`<tr><td><b>${esc(a.nombre)}</b></td><td>${invE(a.consenso.accion)}</td><td><div class="barraA"><div style="width:${Math.round(a.consenso.acuerdo*100)}%"></div></div><span class="muted">${Math.round(a.consenso.acuerdo*100)} %</span></td><td class="muted">${a.consenso.detalle.map(v=>`${INV_IA[v.quien]||v.quien}: ${v.accion.toLowerCase()}`).join('<br>')}</td><td class="r">${invN(a.niveles.entrada)}</td><td class="r">${invN(a.niveles.objetivo)}</td><td class="r">${invN(a.niveles.stop)}</td></tr>`).join('')}</table></div>
+   <div class="grid gp" style="margin-top:14px">${X.opiniones.map(o=>`<div class="card"><h2>${esc(o.nombre)} <span class="muted" style="font-weight:400;font-size:12px">${esc(o.modelo||'')}</span></h2>${o.error?`<p class="mal-t">No respondió en esta vuelta: ${esc(o.error)}</p>`:`<p>${esc(o.opinion?.resumen||'')}</p>${o.opinion?.mejorOpcion?`<p><b>Mejor opción:</b> ${esc(o.opinion.mejorOpcion.nombre)}</p>`:''}${o.opinion?.riesgos?.length?`<div class="muted">Riesgos:<ul>${o.opinion.riesgos.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}`}<div class="muted" style="font-size:12px">Confiabilidad aprendida: ${invN(o.confiabilidad)}</div></div>`).join('')}</div>`;
+
+  const ap=X.aprendizaje,fAp=(k,s)=>`<tr><td>${esc(INV_IA[k]||k.replace(/_/g,' '))}</td><td class="r">${s.aciertos??0} / ${s.total??0}</td><td class="r">${s.total?Math.round(100*s.aciertos/s.total)+' %':'—'}</td><td class="r">${invN(s.confiabilidad)}</td></tr>`;
+  $('#inv-aprendizaje').innerHTML=`<div class="card"><h2>Cómo aprende en inversiones</h2><p>Cada recomendación se guarda con el precio del día. A los 5 y 20 días hábiles se compara con el precio real y se anota si acertó. Las IA y señales que más aciertan pesan más en las próximas decisiones (1,00 = neutral).</p><p class="muted">Recomendaciones guardadas: ${ap.registros} · Evaluaciones: ${ap.evaluaciones}</p></div>
+   <div class="grid g2" style="margin-top:14px"><div class="card"><h2>IAs y análisis técnico</h2><table><tr><th>Fuente</th><th class="r">Aciertos</th><th class="r">%</th><th class="r">Peso</th></tr>${Object.entries(ap.proveedores).map(([k,s])=>fAp(k,s)).join('')}${fAp('tecnico',ap.tecnico)}</table></div>
+   <div class="card"><h2>Señales técnicas</h2><table><tr><th>Señal</th><th class="r">Aciertos</th><th class="r">%</th><th class="r">Peso</th></tr>${Object.entries(ap.senales).map(([k,s])=>fAp(k,s)).join('')||'<tr><td colspan="4" class="muted">Las primeras evaluaciones aparecen a los 5 días hábiles de funcionamiento.</td></tr>'}</table></div></div>`;
+
+  $('#inv-noticias').innerHTML=`<div class="card"><h2>Titulares que leyó RADAR</h2><table>${X.titulares.map(t=>`<tr><td>${segura(t.enlace)?`<a href="${esc(t.enlace)}" target="_blank" rel="noopener">${esc(t.titulo)}</a>`:esc(t.titulo)}<div class="muted">${esc(t.fuente)} · ${esc(t.tema)}</div></td></tr>`).join('')}</table></div>`;
+
+  const sel=$('#invSel'),prev=sel.value;
+  sel.innerHTML=act.map(a=>`<option value="${esc(a.yahoo)}">${esc(a.nombre)}</option>`).join('');
+  if(prev)sel.value=prev;
+  if(!$('#inv-graficos').classList.contains('oculto'))invDibujar();
+}
+
+function invDibujar(){
+  if(!INV||typeof LightweightCharts==='undefined')return;
+  const a=INV.activos.find(x=>x.yahoo===$('#invSel').value)||INV.activos.find(x=>x.precio);if(!a)return;
+  $('#invLectura').innerHTML=`${invE(a.consenso.accion)} Puntaje técnico ${a.puntaje} · RSI ${invN(a.rsi,0)} · Tramo ${a.fibonacci?.tendenciaTramo||'—'}`;
+  if(INV_G){INV_G.remove();INV_G=null}
+  const LW=LightweightCharts;
+  INV_G=LW.createChart($('#invGrafico'),{autoSize:true,layout:{background:{color:'#121a33'},textColor:'#c9d1e8',panes:{separatorColor:'#243055'}},grid:{vertLines:{color:'#1a2444'},horzLines:{color:'#1a2444'}},timeScale:{borderColor:'#243055'},rightPriceScale:{borderColor:'#243055'},localization:{locale:'es-AR'}});
+  const v=INV_G.addSeries(LW.CandlestickSeries,{upColor:'#22d39b',downColor:'#ff5d73',borderVisible:false,wickUpColor:'#22d39b',wickDownColor:'#ff5d73'});
+  v.setData(a.grafico.velas.map(x=>({time:x.time,open:x.open,high:x.high,low:x.low,close:x.close})));
+  const l=(dat,color)=>{const s=INV_G.addSeries(LW.LineSeries,{color,lineWidth:2,priceLineVisible:false,lastValueVisible:false,crosshairMarkerVisible:false});s.setData(dat)};
+  l(a.grafico.m20,'#4c8dff');l(a.grafico.m50,'#ffb547');l(a.grafico.m200,'#bc8cff');
+  if(a.fibonacci){a.fibonacci.retroceso.forEach(f=>v.createPriceLine({price:f.precio,color:'#8d98b8',lineWidth:1,lineStyle:2,axisLabelVisible:true,title:`Fib ${(f.nivel*100).toFixed(1)}%`}));
+    a.fibonacci.extension.forEach(f=>v.createPriceLine({price:f.precio,color:'#22d39b',lineWidth:1,lineStyle:1,axisLabelVisible:true,title:`Ext ${(f.nivel*100).toFixed(1)}%`}))}
+  const r=INV_G.addSeries(LW.LineSeries,{color:'#ff5d73',lineWidth:2,priceLineVisible:false},1);r.setData(a.grafico.rsi);
+  r.createPriceLine({price:70,color:'#8d98b8',lineWidth:1,lineStyle:2,title:'70'});r.createPriceLine({price:30,color:'#8d98b8',lineWidth:1,lineStyle:2,title:'30'});
+  try{INV_G.panes()[1].setHeight(140)}catch(e){}
+  INV_G.timeScale().fitContent();
+  $('#invNiveles').innerHTML=`<div class="card"><h2>Cuándo y a qué precio</h2><p>Entrada: <b>${invN(a.niveles.entrada)}</b><br>Objetivo: <b>${invN(a.niveles.objetivo)}</b><br>${a.consenso.accion==='VENDER'?'Stop (salir si sube hasta)':'Stop (salir si baja hasta)'}: <b>${invN(a.niveles.stop)}</b></p><p class="muted">Dónde: ${a.tipo==='cripto'?'exchange de criptomonedas':'broker con cuenta comitente'}.</p></div>
+   <div class="card"><h2>Lectura técnica y opinión de las IAs</h2><ul>${a.senales.map(s=>`<li>${esc(s.texto)}</li>`).join('')}${(a.razonesIA||[]).map(x=>`<li><i>${esc(x)}</i></li>`).join('')}</ul></div>`;
+  invTV(a.tradingview);
+}
+
+function invTV(simbolo){
+  const tv=$('#invTV');if(tv.dataset.s===simbolo)return;tv.dataset.s=simbolo;tv.innerHTML='';
+  const c=document.createElement('div');c.className='tradingview-widget-container';c.style.height='100%';
+  const w=document.createElement('div');w.className='tradingview-widget-container__widget';w.style.height='100%';c.appendChild(w);
+  const s=document.createElement('script');s.src='https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';s.async=true;
+  s.innerHTML=JSON.stringify({autosize:true,symbol:simbolo,interval:'D',timezone:'America/Argentina/Buenos_Aires',theme:'dark',style:'1',locale:'es',allow_symbol_change:true,hide_side_toolbar:false,withdateranges:true,
+    studies:[{id:'MASimple@tv-basicstudies',inputs:{length:20}},{id:'MASimple@tv-basicstudies',inputs:{length:50}},{id:'MASimple@tv-basicstudies',inputs:{length:200}},{id:'RSI@tv-basicstudies',inputs:{length:14}}]});
+  c.appendChild(s);tv.appendChild(c);
+}
+
+// Resumen breve para el asistente de RADAR (así puede responder sobre inversiones por chat o por voz)
+function resumenInversiones(){
+  if(!INV)return'sin datos todavía';
+  const act=INV.activos.filter(a=>a.precio);
+  return JSON.stringify({actualizado:INV.generado,dolar:INV.dolar?{mep:INV.dolar.bolsa?.venta,ccl:INV.dolar.contadoconliqui?.venta,cripto:INV.dolar.cripto?.venta,oficial:INV.dolar.oficial?.venta,blue:INV.dolar.blue?.venta}:null,
+    inflacion_mensual_pct:INV.inflacionMensualPct,riesgo_pais:INV.riesgoPais,
+    rulos:INV.rulos.map(r=>({nombre:r.nombre,neto_pct:r.netoPct,conviene:r.conviene,nota:r.nota})),
+    mejores_rendimientos:INV.rendimientos.slice(0,8).map(r=>({nombre:r.nombre,riesgo:r.riesgo,mensual_pct:r.mensualPct,real_pct:r.realPct})),
+    activos:act.map(a=>({nombre:a.nombre,precio:+a.precio.toFixed(2),decision:a.consenso.accion,acuerdo_pct:Math.round(a.consenso.acuerdo*100),rsi:a.rsi&&Math.round(a.rsi),media50:a.m50&&+a.m50.toFixed(2),media200:a.m200&&+a.m200.toFixed(2),entrada:a.niveles.entrada&&+(+a.niveles.entrada).toFixed(2),objetivo:a.niveles.objetivo&&+(+a.niveles.objetivo).toFixed(2),stop:a.niveles.stop&&+(+a.niveles.stop).toFixed(2)})),
+    opinion_ias:(INV.opiniones.find(o=>o.opinion?.resumen)||{}).opinion?.resumen||null});
+}
+
+$$('#invMenu button[data-s]').forEach(b=>b.onclick=()=>{$$('#invMenu button[data-s]').forEach(x=>x.classList.toggle('act',x===b));$$('.invS').forEach(s=>s.classList.toggle('oculto',s.id!=='inv-'+b.dataset.s));if(b.dataset.s==='graficos')invDibujar()});
+$('#invSel').onchange=invDibujar;
+$('#invVoz').onclick=()=>{if(!INV)return;const act=INV.activos.filter(a=>a.precio),c=act.filter(a=>a.consenso.accion==='COMPRAR').map(a=>a.nombre),v=act.filter(a=>a.consenso.accion==='VENDER').map(a=>a.nombre),s=INV.rendimientos.find(r=>r.riesgo==='Bajo'),ru=INV.rulos.find(r=>r.conviene);
+  const t=`Resumen de inversiones. El dólar MEP está en ${Math.round(INV.dolar?.bolsa?.venta||0)} pesos. `+(s?`La mejor opción de bajo riesgo es ${s.nombre}, con ${invN(s.mensualPct)} por ciento mensual. `:'')+(ru?`Hay un rulo conveniente: ${ru.nombre}, con ${invN(ru.netoPct)} por ciento neto. `:'No hay rulos convenientes en este momento. ')+(c.length?`Con señal de compra: ${c.join(', ')}. `:'No hay activos con señal clara de compra. ')+(v.length?`Con señal de venta: ${v.join(', ')}. `:'')+'La decisión final es suya.';
+  if(typeof decirAviso==='function')decirAviso(t)};
+// abrir directamente en Capital e inversiones si se entra con #inversiones
+(function(){if(!/inversiones|capital/.test(location.hash))return;let n=0;const t=setInterval(()=>{const b=document.querySelector('nav button[data-v="capital"]');if(++n>120)clearInterval(t);if(b&&!$('#app').classList.contains('oculto')){b.click();clearInterval(t)}},500)})();
+invCargar();setInterval(invCargar,10*60000);
+</script>
+
 </body>
 </html>
