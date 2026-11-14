@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T11:19:46.956Z",
+ "generado": "2026-11-14T11:56:42.761Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -225,7 +225,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -16.79,
+   "mensualPct": -16.81,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: COMPRAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -243,7 +243,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.05,
+   "mensualPct": -18.99,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73443,16 +73443,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 67228.9921875,
-   "variacionDia": -1.49,
-   "variacion30d": -16.79,
+   "precio": 67208.5234375,
+   "variacionDia": -1.52,
+   "variacion30d": -16.81,
    "puntaje": 40,
    "puntajeBase": 40,
    "accion": "COMPRAR",
-   "m20": 75945.686328125,
-   "m50": 80199.10828125,
-   "m200": 72989.7770703125,
-   "rsi": 23.59867841924222,
+   "m20": 75944.662890625,
+   "m50": 80198.69890625,
+   "m200": 72989.6747265625,
+   "rsi": 23.572368973563997,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -75938,8 +75938,8 @@
       "open": 68238.2109375,
       "high": 68360.7109375,
       "low": 66535.5078125,
-      "close": 67228.9921875,
-      "volume": 31337920512
+      "close": 67208.5234375,
+      "volume": 31335131136
      }
     ],
     "m20": [
@@ -77141,7 +77141,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75945.6863
+      "value": 75944.6629
      }
     ],
     "m50": [
@@ -78343,7 +78343,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80199.1083
+      "value": 80198.6989
      }
     ],
     "m200": [
@@ -79545,7 +79545,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72989.7771
+      "value": 72989.6747
      }
     ],
     "rsi": [
@@ -80747,7 +80747,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 23.5987
+      "value": 23.5724
      }
     ]
    },
@@ -80788,16 +80788,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1907.0799560546875,
-   "variacionDia": -1.06,
-   "variacion30d": -19.05,
+   "precio": 1908.5,
+   "variacionDia": -0.99,
+   "variacion30d": -18.99,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2195.0892578125,
-   "m50": 2398.0426318359373,
-   "m200": 2145.314390258789,
-   "rsi": 24.050485680849334,
+   "m20": 2195.160260009766,
+   "m50": 2398.0710327148436,
+   "m200": 2145.3214904785154,
+   "rsi": 24.103741241897495,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -83278,8 +83278,8 @@
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
       "low": 1881.8056640625,
-      "close": 1907.0799560546875,
-      "volume": 11834168320
+      "close": 1908.5,
+      "volume": 11728753664
      }
     ],
     "m20": [
@@ -84481,7 +84481,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2195.0893
+      "value": 2195.1603
      }
     ],
     "m50": [
@@ -85683,7 +85683,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2398.0426
+      "value": 2398.071
      }
     ],
     "m200": [
@@ -86885,7 +86885,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2145.3144
+      "value": 2145.3215
      }
     ],
     "rsi": [
@@ -88087,7 +88087,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 24.0505
+      "value": 24.1037
      }
     ]
    },
@@ -88103,7 +88103,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1907.0799560546875,
+    "entrada": 1908.5,
     "objetivo": 3073.1508085937503,
     "stop": 1821.485107421875
    },
@@ -88404,9 +88404,9 @@
    "tema": "mercado argentino acciones hoy"
   },
   {
-   "titulo": "Acciones argentinas caen en Wall Street en la rueda previa a la decisión de MSCI - Bloomberg Línea",
-   "enlace": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNOURlOFQ3MXd2TTY3M0JSZkptYlcybFNLektScE5INFFGVkFfZW5CN0EzTDMycXY4Y195czVnSGJnVUVLMmpRTTJNampJa3JpRDFTTWxKTEFUR3p6NGdaYWNUMndrdWdxMFVPbTYyYmlxUi12b3pCc3dPVzIwSDlkU29QMWVBSjlBQWFpT1JrXzEwa3NrRjEtX0xQbTR4TXg5MHJxYWNDc2lOcWw1LTF0UzlpUXJqWWg3Y0ItQ1Z2TXMxVkFUTXNOQTZWUlRwcUJueUHSAeYBQVVfeXFMUEx2OGpVVmRycDZTTTA5akRnM0w3YXdVUjlvcVZXbzhTN1NXZmVfOTJDRl9DTWJtODFILW9abWVodDdDWjY0OHYzbUZZcWtTNTNDQXRuR2EzSkxHZTZhY2tlb0dCRU5KZmxzQmFyaDR2c09Mb2VrZTZFQ013WWZrTHpUMlZOcmFJUnlTOFp5U0lsMjJBcUJhOEVUZ3liQ2U1Qk91QUJsbkJUZllwRzgxTEhOc2owbC0ya2steXh2VEdPYjRxQ3J2cHBIRlc3VzI0UkhLWW1fcDJTbHQwNlBkTUxFUzczRlE?oc=5",
-   "fecha": "Mon, 22 Jun 2026 07:00:00 GMT",
+   "titulo": "Mercados: subió la Bolsa argentina y bajó el riesgo país pese a la rueda negativa de Wall Street - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWElqekJqWmVpdURzNnItQ3huTHg4THBMNmlHSU54eTZyMy1nZVlSU3Q2c2pHRU0wMU5jOWZ5VWxIdGQ1M3AyV18wcWFyMnJucV9QMGtPaEh1VTZJNHJZRkQzbHVXUEhZZ3VWR1JhRXlhaWdzdXFPMmV3akxRQkRjMUFPdFBsZ3pjU0hMM3JzZm5xRnZXVTlWM2Uyc3hmWG1zcmp3MGlZNy1uZ09mRHBMdm5kNWhjSlZOcHJHZTE0bFliZWVGQ3pES3NULTl0S3ozVUFpV0Z3SDB6WUFyOWfSAfgBQVVfeXFMT0FfSkhqMi1ITlB1QVNPT0pxR2J3ZXVVMHlvcDhHRTFMWXBxMGNpUDVVYzhCY1IwcktCRFBlRUtPMWIyaHNPeDJ0cVN4YTAzUWVlMl9WaTREVGl5UW10UkgyUFd5UDlSWEd1MVNfMnRHdVNCNlpJeVNKZDJGcWZqZDZHQkV6OTZlcGxSNGt5TWdCWk14SDhEMy1ZVzB1UjRfNnFNZEp2TlRFU2p6Rm9BS1p6VS1xTGRCVWRvdlp3TFVkMmF4Y2VEcFVlOUFCdk1OZUhsN185VkVvNzVVTTZENm9fSlI2Y3NkWTBOQWwzNFlzT0YyaEZ4OE4?oc=5",
+   "fecha": "Thu, 08 Oct 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "mercado argentino acciones hoy"
   },
