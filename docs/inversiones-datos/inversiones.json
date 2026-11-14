@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T16:54:57.853Z",
+ "generado": "2026-11-14T17:49:42.854Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.04,
+   "mensualPct": -18.56,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -22.5,
+   "mensualPct": -21.64,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73430,16 +73430,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 65406.30078125,
-   "variacionDia": -4.17,
-   "variacion30d": -19.04,
+   "precio": 65796.3984375,
+   "variacionDia": -3.59,
+   "variacion30d": -18.56,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75854.5517578125,
-   "m50": 80162.654453125,
-   "m200": 72980.66361328126,
-   "rsi": 21.46530287399584,
+   "m20": 75874.056640625,
+   "m50": 80170.45640625,
+   "m200": 72982.6141015625,
+   "rsi": 21.88881124765929,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73513,7 +73513,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 21: zona de sobreventa, posible rebote."
+     "texto": "RSI en 22: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75919,9 +75919,9 @@
       "time": "2026-11-14",
       "open": 68238.2109375,
       "high": 68360.7109375,
-      "low": 65136.09765625,
-      "close": 65406.30078125,
-      "volume": 32965746688
+      "low": 65089.78515625,
+      "close": 65796.3984375,
+      "volume": 34522017792
      }
     ],
     "m20": [
@@ -77123,7 +77123,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75854.5518
+      "value": 75874.0566
      }
     ],
     "m50": [
@@ -78325,7 +78325,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80162.6545
+      "value": 80170.4564
      }
     ],
     "m200": [
@@ -79527,7 +79527,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72980.6636
+      "value": 72982.6141
      }
     ],
     "rsi": [
@@ -80729,7 +80729,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 21.4653
+      "value": 21.8888
      }
     ]
    },
@@ -80764,16 +80764,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1825.8599853515625,
-   "variacionDia": -5.28,
-   "variacion30d": -22.5,
+   "precio": 1846.0799560546875,
+   "variacionDia": -4.23,
+   "variacion30d": -21.64,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2191.0282592773438,
-   "m50": 2396.418232421875,
-   "m200": 2144.9082904052734,
-   "rsi": 21.35222067402951,
+   "m20": 2192.0392578125,
+   "m50": 2396.8226318359375,
+   "m200": 2145.009390258789,
+   "rsi": 21.965734237351157,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80782,32 +80782,32 @@
     },
     "hasta": {
      "fecha": "2026-11-14",
-     "precio": 1820.769287109375
+     "precio": 1814.037353515625
     },
     "retroceso": [
      {
       "nivel": 0,
-      "precio": 1820.769287109375
+      "precio": 1814.037353515625
      },
      {
       "nivel": 0.236,
-      "precio": 2053.1655048828125
+      "precio": 2048.0223076171874
      },
      {
       "nivel": 0.382,
-      "precio": 2196.9360463867188
+      "precio": 2192.775711425781
      },
      {
       "nivel": 0.5,
-      "precio": 2313.1341552734375
+      "precio": 2309.7681884765625
      },
      {
       "nivel": 0.618,
-      "precio": 2429.3322641601562
+      "precio": 2426.760665527344
      },
      {
       "nivel": 0.786,
-      "precio": 2594.7668598632813
+      "precio": 2593.3262260742185
      },
      {
       "nivel": 1,
@@ -80817,19 +80817,19 @@
     "extension": [
      {
       "nivel": 1.272,
-      "precio": 1552.922798828125
+      "precio": 1544.3597792968749
      },
      {
       "nivel": 1.618,
-      "precio": 1212.2063100585935
+      "precio": 1201.314041503906
      },
      {
       "nivel": 2,
-      "precio": 836.03955078125
+      "precio": 822.57568359375
      },
      {
       "nivel": 2.618,
-      "precio": 227.47657373046877
+      "precio": 209.85237158203154
      }
     ]
    },
@@ -80847,12 +80847,12 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 21: zona de sobreventa, posible rebote."
+     "texto": "RSI en 22: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
      "peso": 0,
-     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1552.92."
+     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1544.36."
     }
    ],
    "grafico": {
@@ -83253,9 +83253,9 @@
       "time": "2026-11-14",
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
-      "low": 1820.769287109375,
-      "close": 1825.8599853515625,
-      "volume": 12828492800
+      "low": 1814.037353515625,
+      "close": 1846.0799560546875,
+      "volume": 13734416384
      }
     ],
     "m20": [
@@ -84457,7 +84457,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2191.0283
+      "value": 2192.0393
      }
     ],
     "m50": [
@@ -85659,7 +85659,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2396.4182
+      "value": 2396.8226
      }
     ],
     "m200": [
@@ -86861,7 +86861,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2144.9083
+      "value": 2145.0094
      }
     ],
     "rsi": [
@@ -88063,7 +88063,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 21.3522
+      "value": 21.9657
      }
     ]
    },
@@ -88079,8 +88079,8 @@
     ]
    },
    "niveles": {
-    "entrada": 1825.8599853515625,
-    "objetivo": 1552.922798828125
+    "entrada": 1846.0799560546875,
+    "objetivo": 1544.3597792968749
    },
    "razonesIA": []
   }
@@ -88522,16 +88522,16 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "El nuevo IPC habría elevado más la inflación de octubre 2026: cuánto habría marcado con la medición que frenó Javier Milei - Diario Río Negro",
-   "enlace": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOVmdyTURuSnMtZl9PY2dSajIzOF9WYk10NXVWcGZpTXhnb3JwY1hkVkEtOTFFX0RjeE55RDR4aXk3Z01mSEg5VHNJQXFzeWc1ZXNyeG5MTEl4ckxBT2p4MDlsNmtUeXJ5Wk00TG0wWGxBcDFka2ZoUXZOd284NExEc2RWeXI1bTl3M1hnc1hDZ0ZDLWFzRDI3aFl3aFlfZHViMDFRdzJwTWJ6WXVQNTN2YlRkc01Pbk9uNWxXakFNNk0xa1diNGo1ODhrc2s5VWV4T3Z2TGtJY2Y2SEJKOEZHaHBtU2dQSTY5X2RUbFYzRzluNUFZOTI3LUl4NNIBgwJBVV95cUxQQXdUM1NWdnZIVFpCLV9TQThPUkJCUWd3R05FeURrMEZ1SlVndnJHdjhia3BtNnVsNFZPVERtbmYybEhBSkgtbGxfNlJVZVdScVk1RzZ1UzVrS1g1UjF0ZjQ4RXRVajVObGhFUmZjUlF5RWZ6TUYtMjRrSWx4cllMaE8tajk5QmVGLVBNNTc4Xzk5bWhMQnN2ZHVjaHMwSXNPRHNwY0R1N21fcEk1U2FTYU92OVVvUGRqaGJNZVRxbldDNmhwdHpiR2tXQWt1SXQtU2NOQ3lrcUhsWHlySmpTa0IwT01RUzZVMURfdWh2QTQ3Qjc1cTNzcVJDcjlZdnEyZ3lN?oc=5",
-   "fecha": "Fri, 13 Nov 2026 16:03:15 GMT",
+   "titulo": "Argentina, entre los países con mayor inflación de la región: cómo quedó el ranking de octubre - La Gaceta",
+   "enlace": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOM2xoN2pMSjRPel9NSFFCd2xkcURrY2pxX1NEZjJlQ1l0Y0NrazZkQl9HVjVEVEFWYXY1b0h1dFo3Y3pjdTF1cFNLV2NFVml4bTd3YUpGUVczVjlETWdBS1lYYkRDT1BGZjhBY21ZQVFraWtzQ2psSVdDTDIyYkNGLWtQczFiTHBCZ0U2VEp2S2V0cVpYM2JnU0ItVjdoYnI4dmR0Wk4xX0h6aEVoUFBFWHliQ0w2Q0pTWlhmRlFLb3JRcEZPaWfSAcsBQVVfeXFMTk81alJKemM2aldmeW5tbkpaNVAxMTdVeUxqN1ZTajR3Y2tBUExBaXAxQ29ZOUUwLVFmeHhaamZRTVdPdEpGOU1MTnBaWTE4a2NPaW9jQzY4YzZTOGQtbmplX2dtWGJCRU1ySGdqLTd1VFFQX2pHUVFMTGFCUmFXTjMzbk9nVW1UNG1KSy0tUDZrb2VncnBoeTFqQjlLZThVb3VzX0NXRm1ERXFKTFNvZ28zc2Q3QkdLUHpNMzBZenlhb0o1MnFxVG9wX28?oc=5",
+   "fecha": "Sat, 14 Nov 2026 13:48:04 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "Argentina, entre los países con mayor inflación de la región: cómo quedó el ranking de octubre - La Gaceta",
-   "enlace": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOM2xoN2pMSjRPel9NSFFCd2xkcURrY2pxX1NEZjJlQ1l0Y0NrazZkQl9HVjVEVEFWYXY1b0h1dFo3Y3pjdTF1cFNLV2NFVml4bTd3YUpGUVczVjlETWdBS1lYYkRDT1BGZjhBY21ZQVFraWtzQ2psSVdDTDIyYkNGLWtQczFiTHBCZ0U2VEp2S2V0cVpYM2JnU0ItVjdoYnI4dmR0Wk4xX0h6aEVoUFBFWHliQ0w2Q0pTWlhmRlFLb3JRcEZPaWfSAcsBQVVfeXFMTk81alJKemM2aldmeW5tbkpaNVAxMTdVeUxqN1ZTajR3Y2tBUExBaXAxQ29ZOUUwLVFmeHhaamZRTVdPdEpGOU1MTnBaWTE4a2NPaW9jQzY4YzZTOGQtbmplX2dtWGJCRU1ySGdqLTd1VFFQX2pHUVFMTGFCUmFXTjMzbk9nVW1UNG1KSy0tUDZrb2VncnBoeTFqQjlLZThVb3VzX0NXRm1ERXFKTFNvZ28zc2Q3QkdLUHpNMzBZenlhb0o1MnFxVG9wX28?oc=5",
-   "fecha": "Sat, 14 Nov 2026 13:47:25 GMT",
+   "titulo": "El nuevo IPC habría elevado más la inflación de octubre 2026: cuánto habría marcado con la medición que frenó Javier Milei - Diario Río Negro",
+   "enlace": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOVmdyTURuSnMtZl9PY2dSajIzOF9WYk10NXVWcGZpTXhnb3JwY1hkVkEtOTFFX0RjeE55RDR4aXk3Z01mSEg5VHNJQXFzeWc1ZXNyeG5MTEl4ckxBT2p4MDlsNmtUeXJ5Wk00TG0wWGxBcDFka2ZoUXZOd284NExEc2RWeXI1bTl3M1hnc1hDZ0ZDLWFzRDI3aFl3aFlfZHViMDFRdzJwTWJ6WXVQNTN2YlRkc01Pbk9uNWxXakFNNk0xa1diNGo1ODhrc2s5VWV4T3Z2TGtJY2Y2SEJKOEZHaHBtU2dQSTY5X2RUbFYzRzluNUFZOTI3LUl4NNIBgwJBVV95cUxQQXdUM1NWdnZIVFpCLV9TQThPUkJCUWd3R05FeURrMEZ1SlVndnJHdjhia3BtNnVsNFZPVERtbmYybEhBSkgtbGxfNlJVZVdScVk1RzZ1UzVrS1g1UjF0ZjQ4RXRVajVObGhFUmZjUlF5RWZ6TUYtMjRrSWx4cllMaE8tajk5QmVGLVBNNTc4Xzk5bWhMQnN2ZHVjaHMwSXNPRHNwY0R1N21fcEk1U2FTYU92OVVvUGRqaGJNZVRxbldDNmhwdHpiR2tXQWt1SXQtU2NOQ3lrcUhsWHlySmpTa0IwT01RUzZVMURfdWh2QTQ3Qjc1cTNzcVJDcjlZdnEyZ3lN?oc=5",
+   "fecha": "Fri, 13 Nov 2026 16:03:15 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
