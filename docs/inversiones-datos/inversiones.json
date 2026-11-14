@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T04:35:00.462Z",
+ "generado": "2026-11-14T05:33:42.631Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -216,7 +216,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -17.75,
+   "mensualPct": -17.25,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: COMPRAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -243,7 +243,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -20.84,
+   "mensualPct": -20.26,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73433,16 +73433,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 66681.5234375,
-   "variacionDia": -6.53,
-   "variacion30d": -17.75,
+   "precio": 67091.609375,
+   "variacionDia": -5.96,
+   "variacion30d": -17.25,
    "puntaje": 40,
    "puntajeBase": 40,
    "accion": "COMPRAR",
-   "m20": 76507.049609375,
-   "m50": 80503.871875,
-   "m200": 73027.54671875,
-   "rsi": 23.05130036813341,
+   "m20": 76527.55390625,
+   "m50": 80512.07359375,
+   "m200": 73029.5971484375,
+   "rsi": 23.52851034939775,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73516,7 +73516,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 24: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_soporte",
@@ -75928,8 +75928,8 @@
       "open": 68238.2109375,
       "high": 68360.7109375,
       "low": 66535.5078125,
-      "close": 66681.5234375,
-      "volume": 38188703744
+      "close": 67091.609375,
+      "volume": 37414641664
      }
     ],
     "m20": [
@@ -77131,7 +77131,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 76507.0496
+      "value": 76527.5539
      }
     ],
     "m50": [
@@ -78333,7 +78333,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80503.8719
+      "value": 80512.0736
      }
     ],
     "m200": [
@@ -79535,7 +79535,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 73027.5467
+      "value": 73029.5971
      }
     ],
     "rsi": [
@@ -80737,7 +80737,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 23.0513
+      "value": 23.5285
      }
     ]
    },
@@ -80778,16 +80778,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1887.239990234375,
-   "variacionDia": -6.43,
-   "variacion30d": -20.84,
+   "precio": 1900.9599609375,
+   "variacionDia": -5.75,
+   "variacion30d": -20.26,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2214.063824462891,
-   "m50": 2412.903566894531,
-   "m200": 2147.024344482422,
-   "rsi": 23.43223501982807,
+   "m20": 2214.749822998047,
+   "m50": 2413.1779663085936,
+   "m200": 2147.0929443359373,
+   "rsi": 23.893680221828077,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -80861,7 +80861,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 24: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -83268,8 +83268,8 @@
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
       "low": 1881.8056640625,
-      "close": 1887.239990234375,
-      "volume": 13550699520
+      "close": 1900.9599609375,
+      "volume": 13456438272
      }
     ],
     "m20": [
@@ -84471,7 +84471,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2214.0638
+      "value": 2214.7498
      }
     ],
     "m50": [
@@ -85673,7 +85673,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2412.9036
+      "value": 2413.178
      }
     ],
     "m200": [
@@ -86875,7 +86875,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2147.0243
+      "value": 2147.0929
      }
     ],
     "rsi": [
@@ -88077,7 +88077,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 23.4322
+      "value": 23.8937
      }
     ]
    },
@@ -88093,7 +88093,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1887.239990234375,
+    "entrada": 1900.9599609375,
     "objetivo": 3078.16408203125,
     "stop": 1803.053955078125
    },
@@ -88443,16 +88443,16 @@
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Las tasas en pesos, dentro de una montaña rusa: el BCRA busca ahora plancharlas - El Cronista",
-   "enlace": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMmVxVmhwM3RKaEktdTNZbVg4QlZZSjRwVnNYcTNadV9mWm54WUJzY2FqNUsxR2NrbkVtQkZWejVFZDllMG43dEhMTHo3VzlMUnhIenNsbENoZUg1WlQzaVktS3M3bGN2T05wTnZacjJKbUgxMjdjVkxsa1Rmd19samJqLWNuTVdGUmJTSEJOT3N0T0ZBRHoyZC1lUllxSzVKTldUYWozUG1nVFliY0dRSlZQWDZxMWhCNGFFT3V30gHYAUFVX3lxTE1PdFl1TDAtNEczSXdYY1Atd1NIWUtlUVFFTEZubXkxX3FiM1d6YVBFQnc0MzR2Y3J5RHNab0pCNzViZ0JTMjZUdmk3WHJ0Tkg1cjFaWFh2a0JpZEtnQXNFeUQyV3RiLXh4dU5IczY0NUJidkk3TkJ4TVlfSVRhUHV4WS1VdkV2YVk0Y0s1VHA1ckgyckdwenFMQW5wU0pQRlltZldJWVg5LXBxeFpqV3hoaWtJOXB1WkxSa3R1WjRNRklza0I1Nl9vdGI3QmtmLTNudnZ2Tnk3QQ?oc=5",
-   "fecha": "Fri, 13 Nov 2026 12:55:49 GMT",
+   "titulo": "Plazo fijo: cuál es la tasa que ofrece cada banco para depósitos de $1 millón a 30 días - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbnVfUW5OQnkyUkpJZDRRNFgxaUF4WnVpMDF0d3FVelM2R0VabzVOeGYxMEtVY1YtaG55ZXZzdktTLV9HZWJUUnJOdmFSSVZRbEdJUXZpSzdaWGZzRlRaZFVQbHh4SUZDb1hWaFlpTjgtSnVJMDJuNVh1Nzh6alptX2p6aVNEQU9LQ25BRmh5OXZpYXp3bVUzT0l2Ynp4YjdBbTBocWxaTVQwLWVuOXNjRG9wUm0wZzhrdkQtRWw3YUpYQ1p4eXE4WnB30gHkAUFVX3lxTE1wZFVkajdKZWhPN3NXdHNzbjVkVjBuQzBxc0VXUE1hQWJrdDBEQkdMZEYtcno3NUJXWUo4d0ZuS3VxQnJibkhoMmdZOTdTUGdiMERQT09Hal9NSThja1U4VnZJN0QyOFBUWWszWUI4aUIyQTBDQWVzSDBwYWVteUU0NjZxclFqS056TFRkZV9QMGpTbFFmbFZMWkh2MVBkRmJUOWI1OWZGQWZRa0ZvbnkyZWQ4bHdmakdrcG1ka2hjd3F2Zjg2MjZKNkxpNFg2eXZiVWRUejVyUDNwQXZXa1lvcWtiVQ?oc=5",
+   "fecha": "Mon, 09 Nov 2026 14:26:00 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Plazo fijo: cuál es la tasa que ofrece cada banco para depósitos de $1 millón a 30 días - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbnVfUW5OQnkyUkpJZDRRNFgxaUF4WnVpMDF0d3FVelM2R0VabzVOeGYxMEtVY1YtaG55ZXZzdktTLV9HZWJUUnJOdmFSSVZRbEdJUXZpSzdaWGZzRlRaZFVQbHh4SUZDb1hWaFlpTjgtSnVJMDJuNVh1Nzh6alptX2p6aVNEQU9LQ25BRmh5OXZpYXp3bVUzT0l2Ynp4YjdBbTBocWxaTVQwLWVuOXNjRG9wUm0wZzhrdkQtRWw3YUpYQ1p4eXE4WnB30gHkAUFVX3lxTE1wZFVkajdKZWhPN3NXdHNzbjVkVjBuQzBxc0VXUE1hQWJrdDBEQkdMZEYtcno3NUJXWUo4d0ZuS3VxQnJibkhoMmdZOTdTUGdiMERQT09Hal9NSThja1U4VnZJN0QyOFBUWWszWUI4aUIyQTBDQWVzSDBwYWVteUU0NjZxclFqS056TFRkZV9QMGpTbFFmbFZMWkh2MVBkRmJUOWI1OWZGQWZRa0ZvbnkyZWQ4bHdmakdrcG1ka2hjd3F2Zjg2MjZKNkxpNFg2eXZiVWRUejVyUDNwQXZXa1lvcWtiVQ?oc=5",
-   "fecha": "Mon, 09 Nov 2026 14:26:00 GMT",
+   "titulo": "Las tasas en pesos, dentro de una montaña rusa: el BCRA busca ahora plancharlas - El Cronista",
+   "enlace": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMmVxVmhwM3RKaEktdTNZbVg4QlZZSjRwVnNYcTNadV9mWm54WUJzY2FqNUsxR2NrbkVtQkZWejVFZDllMG43dEhMTHo3VzlMUnhIenNsbENoZUg1WlQzaVktS3M3bGN2T05wTnZacjJKbUgxMjdjVkxsa1Rmd19samJqLWNuTVdGUmJTSEJOT3N0T0ZBRHoyZC1lUllxSzVKTldUYWozUG1nVFliY0dRSlZQWDZxMWhCNGFFT3V30gHYAUFVX3lxTE1PdFl1TDAtNEczSXdYY1Atd1NIWUtlUVFFTEZubXkxX3FiM1d6YVBFQnc0MzR2Y3J5RHNab0pCNzViZ0JTMjZUdmk3WHJ0Tkg1cjFaWFh2a0JpZEtnQXNFeUQyV3RiLXh4dU5IczY0NUJidkk3TkJ4TVlfSVRhUHV4WS1VdkV2YVk0Y0s1VHA1ckgyckdwenFMQW5wU0pQRlltZldJWVg5LXBxeFpqV3hoaWtJOXB1WkxSa3R1WjRNRklza0I1Nl9vdGI3QmtmLTNudnZ2Tnk3QQ?oc=5",
+   "fecha": "Fri, 13 Nov 2026 12:55:49 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
@@ -88520,16 +88520,16 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Wall Street tiene cierre mixto tras caídas por escándalo de Nvidia; BMV avanza 0.26% semanal - El Financiero",
-   "enlace": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNM0xFaUtwakdVdXh2bnd5Q1ItaXF1MERUeVhqWDFCWGx0b3ByTHpPT0ZIb0pJZEl2bnZCeDVodS1Ma3V1MlpkNW9OaVE1QVN4bEN4VXpYaTQzVm5lVm5hLWprUmVHMENNVzJtazAxN1A4dHo5SklKRERGb2R4MkFrb2FRb01Ud3p1bEZxR25XWkgyTG5VQkw5VjFhSHM?oc=5",
-   "fecha": "Fri, 13 Nov 2026 23:18:14 GMT",
+   "titulo": "BMV y Wall Street hoy: así cierran las bolsas este 13 de noviembre de 2026 - EL CEO",
+   "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOVJhb1VQNUs3N1JQSXM2c1VmNEtyX3NoT1lEU2lvVFhjT3Z1RGRlYkZPRW5tVm4zTFRXUjhxczQ2dzNSdy1kN19BMHdUck84TWROQmZQNTBzN2szUTlWRGJHcUpoZ2F0eC1HeTRlSXZNRHo0RlNhVl9rUnR0QjNTZ09UNkh1bkVqeGc?oc=5",
+   "fecha": "Fri, 13 Nov 2026 23:18:20 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "BMV y Wall Street hoy: así cotizan las bolsas este 13 de noviembre de 2026 - EL CEO",
-   "enlace": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYklBSkczYUZmTFBZd2xpQmQ2SEhaY1k1OGhtM1ZVY0daR1VTakhzbGxNZllnbjMwOWZnY0l4UmQzZzRyTW5Wc2VwMFdJR0JXTVhKV1BpMVhZSTFSSjJOVHJqNWtkUzF4VkVfeXFjY0VDQjFTY1hzamlXNEFKVjBjZURMRWdRYzFONVByWQ?oc=5",
-   "fecha": "Fri, 13 Nov 2026 17:58:20 GMT",
+   "titulo": "Wall Street tiene cierre mixto tras caídas por escándalo de Nvidia; BMV avanza 0.26% semanal - El Financiero",
+   "enlace": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNM0xFaUtwakdVdXh2bnd5Q1ItaXF1MERUeVhqWDFCWGx0b3ByTHpPT0ZIb0pJZEl2bnZCeDVodS1Ma3V1MlpkNW9OaVE1QVN4bEN4VXpYaTQzVm5lVm5hLWprUmVHMENNVzJtazAxN1A4dHo5SklKRERGb2R4MkFrb2FRb01Ud3p1bEZxR25XWkgyTG5VQkw5VjFhSHM?oc=5",
+   "fecha": "Fri, 13 Nov 2026 23:18:14 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
