@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T19:54:43.565Z",
+ "generado": "2026-11-14T20:53:48.267Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.71,
+   "mensualPct": -19.36,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -22.16,
+   "mensualPct": -23.19,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73445,16 +73445,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 65678.84375,
-   "variacionDia": -3.77,
-   "variacion30d": -18.71,
+   "precio": 65146.171875,
+   "variacionDia": -4.55,
+   "variacion30d": -19.36,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75868.17890625,
-   "m50": 80168.1053125,
-   "m200": 72982.026328125,
-   "rsi": 21.7594395442826,
+   "m20": 75841.5453125,
+   "m50": 80157.451875,
+   "m200": 72979.36296875,
+   "rsi": 21.19188637623691,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73528,7 +73528,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 22: zona de sobreventa, posible rebote."
+     "texto": "RSI en 21: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75935,8 +75935,8 @@
       "open": 68238.2109375,
       "high": 68360.7109375,
       "low": 65089.78515625,
-      "close": 65678.84375,
-      "volume": 35525169152
+      "close": 65146.171875,
+      "volume": 35767656448
      }
     ],
     "m20": [
@@ -77138,7 +77138,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75868.1789
+      "value": 75841.5453
      }
     ],
     "m50": [
@@ -78340,7 +78340,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80168.1053
+      "value": 80157.4519
      }
     ],
     "m200": [
@@ -79542,7 +79542,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72982.0263
+      "value": 72979.363
      }
     ],
     "rsi": [
@@ -80744,7 +80744,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 21.7594
+      "value": 21.1919
      }
     ]
    },
@@ -80779,16 +80779,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1833.8800048828125,
-   "variacionDia": -4.86,
-   "variacion30d": -22.16,
+   "precio": 1809.6500244140625,
+   "variacionDia": -6.12,
+   "variacion30d": -23.19,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2191.4292602539062,
-   "m50": 2396.5786328125,
-   "m200": 2144.9483905029297,
-   "rsi": 21.591416993312293,
+   "m20": 2190.2177612304686,
+   "m50": 2396.094033203125,
+   "m200": 2144.827240600586,
+   "rsi": 20.88458699542504,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80862,7 +80862,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 22: zona de sobreventa, posible rebote."
+     "texto": "RSI en 21: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -83269,8 +83269,8 @@
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
       "low": 1814.037353515625,
-      "close": 1833.8800048828125,
-      "volume": 14313856000
+      "close": 1809.6500244140625,
+      "volume": 14485795840
      }
     ],
     "m20": [
@@ -84472,7 +84472,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2191.4293
+      "value": 2190.2178
      }
     ],
     "m50": [
@@ -85674,7 +85674,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2396.5786
+      "value": 2396.094
      }
     ],
     "m200": [
@@ -86876,7 +86876,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2144.9484
+      "value": 2144.8272
      }
     ],
     "rsi": [
@@ -88078,7 +88078,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 21.5914
+      "value": 20.8846
      }
     ]
    },
@@ -88094,7 +88094,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1833.8800048828125,
+    "entrada": 1809.6500244140625,
     "objetivo": 1544.3597792968749
    },
    "razonesIA": []
@@ -88536,7 +88536,7 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarin.com",
+   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarín",
    "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdS03LXh2b0hXYkEwTlNfQnJnaU9sUk1mWEI0Y0hUTHNUODZjS3pBM0d2OFlBZ1FidmVzLWlzODQ4Ulh2UmVtMUpiMGhPSThXQ2kzb2djdFJOUkk0TUxMOW1GZHhtMFlxRjRZOTlmay1keUN0dndTMEVpcWxLSEJhU0NXdWh2LXljVWhWSTlGaHdyWG9aQnVTVU5tTFlQTW1mMG14TTZvRFFxTEVfa3V3WEJR?oc=5",
    "fecha": "Thu, 12 Nov 2026 21:30:40 GMT",
    "fuente": "",
@@ -88564,9 +88564,9 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "El nuevo IPC habría elevado más la inflación de octubre 2026: cuánto habría marcado con la medición que frenó Javier Milei - Diario Río Negro",
-   "enlace": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOVmdyTURuSnMtZl9PY2dSajIzOF9WYk10NXVWcGZpTXhnb3JwY1hkVkEtOTFFX0RjeE55RDR4aXk3Z01mSEg5VHNJQXFzeWc1ZXNyeG5MTEl4ckxBT2p4MDlsNmtUeXJ5Wk00TG0wWGxBcDFka2ZoUXZOd284NExEc2RWeXI1bTl3M1hnc1hDZ0ZDLWFzRDI3aFl3aFlfZHViMDFRdzJwTWJ6WXVQNTN2YlRkc01Pbk9uNWxXakFNNk0xa1diNGo1ODhrc2s5VWV4T3Z2TGtJY2Y2SEJKOEZHaHBtU2dQSTY5X2RUbFYzRzluNUFZOTI3LUl4NNIBgwJBVV95cUxQQXdUM1NWdnZIVFpCLV9TQThPUkJCUWd3R05FeURrMEZ1SlVndnJHdjhia3BtNnVsNFZPVERtbmYybEhBSkgtbGxfNlJVZVdScVk1RzZ1UzVrS1g1UjF0ZjQ4RXRVajVObGhFUmZjUlF5RWZ6TUYtMjRrSWx4cllMaE8tajk5QmVGLVBNNTc4Xzk5bWhMQnN2ZHVjaHMwSXNPRHNwY0R1N21fcEk1U2FTYU92OVVvUGRqaGJNZVRxbldDNmhwdHpiR2tXQWt1SXQtU2NOQ3lrcUhsWHlySmpTa0IwT01RUzZVMURfdWh2QTQ3Qjc1cTNzcVJDcjlZdnEyZ3lN?oc=5",
-   "fecha": "Fri, 13 Nov 2026 16:03:15 GMT",
+   "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
+   "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
+   "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
