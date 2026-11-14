@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T14:55:47.068Z",
+ "generado": "2026-11-14T15:53:39.363Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -14,19 +14,19 @@
    "nombre": "Blue",
    "compra": 1555,
    "venta": 1575,
-   "fecha": "2026-11-14T11:58:00.000Z"
+   "fecha": "2026-11-14T14:58:00.000Z"
   },
   "bolsa": {
    "nombre": "Bolsa",
    "compra": 1575.5,
    "venta": 1580.9,
-   "fecha": "2026-11-14T11:58:00.000Z"
+   "fecha": "2026-11-14T14:58:00.000Z"
   },
   "contadoconliqui": {
    "nombre": "Contado con liquidación",
    "compra": 1668.2,
    "venta": 1671.9,
-   "fecha": "2026-11-14T11:58:00.000Z"
+   "fecha": "2026-11-14T14:58:00.000Z"
   },
   "mayorista": {
    "nombre": "Mayorista",
@@ -36,9 +36,9 @@
   },
   "cripto": {
    "nombre": "Cripto",
-   "compra": 1667.62,
-   "venta": 1671.29,
-   "fecha": "2026-11-14T11:58:00.000Z"
+   "compra": 1666.61,
+   "venta": 1671.57,
+   "fecha": "2026-11-14T14:58:00.000Z"
   },
   "tarjeta": {
    "nombre": "Tarjeta",
@@ -59,10 +59,10 @@
   },
   {
    "nombre": "MEP → Cripto (USDT)",
-   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1667.62",
-   "brutoPct": 5.49,
-   "netoPct": 3.69,
-   "gananciaSobreCapital": 36855,
+   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1666.61",
+   "brutoPct": 5.42,
+   "netoPct": 3.62,
+   "gananciaSobreCapital": 36216,
    "conviene": true,
    "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
   },
@@ -86,10 +86,10 @@
   },
   {
    "nombre": "Cripto (USDT) → MEP",
-   "pasos": "Comprar dólares en USDT a $1671.29 → vender por MEP a $1575.5",
-   "brutoPct": -5.73,
-   "netoPct": -7.53,
-   "gananciaSobreCapital": -75315,
+   "pasos": "Comprar dólares en USDT a $1671.57 → vender por MEP a $1575.5",
+   "brutoPct": -5.75,
+   "netoPct": -7.55,
+   "gananciaSobreCapital": -75473,
    "conviene": false,
    "nota": "Camino inverso: comprar USDT con pesos y vender dólares MEP."
   }
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.48,
+   "mensualPct": -18.84,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.42,
+   "mensualPct": -22.06,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73437,16 +73437,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 65862.2265625,
-   "variacionDia": -3.5,
-   "variacion30d": -18.48,
+   "precio": 65570.8203125,
+   "variacionDia": -3.92,
+   "variacion30d": -18.84,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75877.348046875,
-   "m50": 80171.77296875,
-   "m200": 72982.9432421875,
-   "rsi": 21.96193082027122,
+   "m20": 75862.777734375,
+   "m50": 80165.94484375,
+   "m200": 72981.4862109375,
+   "rsi": 21.64189823808377,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -75926,9 +75926,9 @@
       "time": "2026-11-14",
       "open": 68238.2109375,
       "high": 68360.7109375,
-      "low": 65825.84375,
-      "close": 65862.2265625,
-      "volume": 31770169344
+      "low": 65136.09765625,
+      "close": 65570.8203125,
+      "volume": 32429580288
      }
     ],
     "m20": [
@@ -77130,7 +77130,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75877.348
+      "value": 75862.7777
      }
     ],
     "m50": [
@@ -78332,7 +78332,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80171.773
+      "value": 80165.9448
      }
     ],
     "m200": [
@@ -79534,7 +79534,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72982.9432
+      "value": 72981.4862
      }
     ],
     "rsi": [
@@ -80736,7 +80736,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 21.9619
+      "value": 21.6419
      }
     ]
    },
@@ -80752,7 +80752,7 @@
     ]
    },
    "niveles": {
-    "entrada": 65862.2265625,
+    "entrada": 65570.8203125,
     "objetivo": 94201.0706875,
     "stop": 62226.578125
    },
@@ -80764,16 +80764,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1851.3599853515625,
-   "variacionDia": -3.95,
-   "variacion30d": -21.42,
+   "precio": 1836.3299560546875,
+   "variacionDia": -4.73,
+   "variacion30d": -22.06,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2192.303259277344,
-   "m50": 2396.928232421875,
-   "m200": 2145.0357904052735,
-   "rsi": 22.131789814539985,
+   "m20": 2191.5517578125,
+   "m50": 2396.6276318359373,
+   "m200": 2144.960640258789,
+   "rsi": 21.665558830216256,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -83253,9 +83253,9 @@
       "time": "2026-11-14",
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
-      "low": 1846.871826171875,
-      "close": 1851.3599853515625,
-      "volume": 12292569088
+      "low": 1828.2806396484375,
+      "close": 1836.3299560546875,
+      "volume": 12402171904
      }
     ],
     "m20": [
@@ -84457,7 +84457,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2192.3033
+      "value": 2191.5518
      }
     ],
     "m50": [
@@ -85659,7 +85659,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2396.9282
+      "value": 2396.6276
      }
     ],
     "m200": [
@@ -86861,7 +86861,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2145.0358
+      "value": 2144.9606
      }
     ],
     "rsi": [
@@ -88063,7 +88063,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 22.1318
+      "value": 21.6656
      }
     ]
    },
@@ -88079,7 +88079,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1851.3599853515625,
+    "entrada": 1836.3299560546875,
     "objetivo": 3073.1508085937503
    },
    "razonesIA": []
@@ -88314,16 +88314,16 @@
    "tema": "mercado argentino acciones hoy"
   },
   {
-   "titulo": "Dólar hoy: cómo cotizan el blue, MEP y CCL este miércoles - Diario El Norte - San Nicolás",
-   "enlace": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaVVpMV9CcHp3akh1c0NTdFpueUpkTWxmMm5ORVhjTTNYdm03T0UxejZyNDlFQUFRZ3F5QWxRXzZuT1ZFZTVPRlY2aS1PYnM3bjZucTY2TTlwRVdWMVRMMGtkZnI0T3JlTnVKRTY5Yl81dDlDdlNtU3dtRXNXc1JGMDVBU2FJTFgyYTByWUNB?oc=5",
-   "fecha": "Wed, 11 Nov 2026 11:02:03 GMT",
+   "titulo": "Dólar blue hoy: a cuánto opera este sábado 14 de noviembre - Ambito",
+   "enlace": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSlFxRzZFclBDWUVScVJJYnpURm1RUnRMaW1JX0NmMnFJd2FmZXFtNXVOQUtXdU9mTkNLZTUwVjRnemZvSzZMRGE1LTYwV2s3eTY1cm1wTldJa0VPTk1VS0ZEYzBmZ2EtU2pmY0ZBQUhyYXVZVUpzT3VJNEhyWmJmYk4wSzVvZEJydkQ0VDdKNmtLam11WHJTc9IBngFBVV95cUxQbEdaWS1FSi1CYUVKLXUyT3ZOUXNCWUNZUFp1TDU0VWJSd09NN2ZXdi1IbTZ2czBBbnlPU3VBTzZQNmQxN1NiRFM5R19fU09jMGZUNHFVdzdiQkw5ek4tZDljUEJOZ29ZMUVQcWJWVFo2UHZYdXlMWlZJRXN4SXZkRVhYU2ZIU0RPUGk2UW5BR3dYZ0k3eFNKWkdLX2VpUQ?oc=5",
+   "fecha": "Sat, 14 Nov 2026 03:16:51 GMT",
    "fuente": "",
    "tema": "dólar MEP CCL brecha hoy"
   },
   {
-   "titulo": "Dólar blue hoy: a cuánto opera este domingo 8 de noviembre - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQem5LeHNLUnNOQ1U3ck9pM3RseElVM2swZjVWSTI5RGpWclpuR0dsWFd1Q0NidkxHQXc0VWRUVEFpdy1VTXV0T0pETmpFSHdwSld4RWJIandHMnE2c1dxUFFKZGVpWXI4VWZxWjNoYjdDNjUtRU5hN1Z4N2FiSk52NktVamxuTTR2RUNsMW1CSXFSMTEtMTltV9IBngFBVV95cUxNS21VR09wUC1JVVdIa2U3cF9VaUJfY0xhcGF6RHVpNVp4OVRTM0JjZGdHbG9oUmdZRGJMcUNkVThVb1dGaGRJalE0UXk2Uk9DMldKbVZxT1NBai1JNWhlTlc1aTdGb2toRXNuS3FfQkhmZnl2cUFqTGlVQ2tRcjl2VXhJYWp0Z3FPcmFYcjVkNHQzSHFmVG5tQU5FNW5qUQ?oc=5",
-   "fecha": "Sun, 08 Nov 2026 03:27:21 GMT",
+   "titulo": "Dólar hoy: cómo cotizan el blue, MEP y CCL este miércoles - Diario El Norte - San Nicolás",
+   "enlace": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaVVpMV9CcHp3akh1c0NTdFpueUpkTWxmMm5ORVhjTTNYdm03T0UxejZyNDlFQUFRZ3F5QWxRXzZuT1ZFZTVPRlY2aS1PYnM3bjZucTY2TTlwRVdWMVRMMGtkZnI0T3JlTnVKRTY5Yl81dDlDdlNtU3dtRXNXc1JGMDVBU2FJTFgyYTByWUNB?oc=5",
+   "fecha": "Wed, 11 Nov 2026 11:02:03 GMT",
    "fuente": "",
    "tema": "dólar MEP CCL brecha hoy"
   },
@@ -88510,16 +88510,16 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "El mercado alerta por estanflación tras el dato de inflación IPC INDEC - iProfesional",
-   "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMXp2a2M5d1AzYlNCcXNtNTNxMGdtMUx4bURwenRIU1hOSVlDU0hCMHFNY2R1Q05Zb3RXZFVueU1jQXdmbHNBN1RvVEJ6RE1OZ0p2b0hLOG9XZW5oM2FfQzlPX19wX2VnaUE4MjY1RzIwRFZzTE5FWFlrYUtmNjhqdTZMYnl0ejZOTWdiV3k3Y0VDLVpOckV4X3M1Ry03cXhnOG05SG1tVlNUZUw3eWFNS2Zmd29vQdIBuwFBVV95cUxOZ1U1VU91MlBndDhvUEpWZVo4dktCazBuSE9yYmYxaFJoemRCMkpHSVZhcGMxRkIySkJ6Q0pKMmlQU2JTZnFYa3duRjVFVTdfM3FmTTctS3BaYVlKdDFpWXQ5c3NZYnFUcTB1YlVfMS1lMmFmRWk2OTJxQWw0M3M5d1VjSHczQ2tSa3d4SEx4MzkweVFkSWIwT0ZfNU1SdHkzRlBzM2xLTXBqNEVnbVlBZnBfVGxnaUFhZ3Bv?oc=5",
-   "fecha": "Fri, 13 Nov 2026 10:19:08 GMT",
+   "titulo": "El nuevo IPC habría elevado más la inflación de octubre 2026: cuánto habría marcado con la medición que frenó Javier Milei - Diario Río Negro",
+   "enlace": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOVmdyTURuSnMtZl9PY2dSajIzOF9WYk10NXVWcGZpTXhnb3JwY1hkVkEtOTFFX0RjeE55RDR4aXk3Z01mSEg5VHNJQXFzeWc1ZXNyeG5MTEl4ckxBT2p4MDlsNmtUeXJ5Wk00TG0wWGxBcDFka2ZoUXZOd284NExEc2RWeXI1bTl3M1hnc1hDZ0ZDLWFzRDI3aFl3aFlfZHViMDFRdzJwTWJ6WXVQNTN2YlRkc01Pbk9uNWxXakFNNk0xa1diNGo1ODhrc2s5VWV4T3Z2TGtJY2Y2SEJKOEZHaHBtU2dQSTY5X2RUbFYzRzluNUFZOTI3LUl4NNIBgwJBVV95cUxQQXdUM1NWdnZIVFpCLV9TQThPUkJCUWd3R05FeURrMEZ1SlVndnJHdjhia3BtNnVsNFZPVERtbmYybEhBSkgtbGxfNlJVZVdScVk1RzZ1UzVrS1g1UjF0ZjQ4RXRVajVObGhFUmZjUlF5RWZ6TUYtMjRrSWx4cllMaE8tajk5QmVGLVBNNTc4Xzk5bWhMQnN2ZHVjaHMwSXNPRHNwY0R1N21fcEk1U2FTYU92OVVvUGRqaGJNZVRxbldDNmhwdHpiR2tXQWt1SXQtU2NOQ3lrcUhsWHlySmpTa0IwT01RUzZVMURfdWh2QTQ3Qjc1cTNzcVJDcjlZdnEyZ3lN?oc=5",
+   "fecha": "Fri, 13 Nov 2026 16:03:15 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "El nuevo IPC habría elevado más la inflación de octubre 2026: cuánto habría marcado con la medición que frenó Javier Milei - Diario Río Negro",
-   "enlace": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOVmdyTURuSnMtZl9PY2dSajIzOF9WYk10NXVWcGZpTXhnb3JwY1hkVkEtOTFFX0RjeE55RDR4aXk3Z01mSEg5VHNJQXFzeWc1ZXNyeG5MTEl4ckxBT2p4MDlsNmtUeXJ5Wk00TG0wWGxBcDFka2ZoUXZOd284NExEc2RWeXI1bTl3M1hnc1hDZ0ZDLWFzRDI3aFl3aFlfZHViMDFRdzJwTWJ6WXVQNTN2YlRkc01Pbk9uNWxXakFNNk0xa1diNGo1ODhrc2s5VWV4T3Z2TGtJY2Y2SEJKOEZHaHBtU2dQSTY5X2RUbFYzRzluNUFZOTI3LUl4NNIBgwJBVV95cUxQQXdUM1NWdnZIVFpCLV9TQThPUkJCUWd3R05FeURrMEZ1SlVndnJHdjhia3BtNnVsNFZPVERtbmYybEhBSkgtbGxfNlJVZVdScVk1RzZ1UzVrS1g1UjF0ZjQ4RXRVajVObGhFUmZjUlF5RWZ6TUYtMjRrSWx4cllMaE8tajk5QmVGLVBNNTc4Xzk5bWhMQnN2ZHVjaHMwSXNPRHNwY0R1N21fcEk1U2FTYU92OVVvUGRqaGJNZVRxbldDNmhwdHpiR2tXQWt1SXQtU2NOQ3lrcUhsWHlySmpTa0IwT01RUzZVMURfdWh2QTQ3Qjc1cTNzcVJDcjlZdnEyZ3lN?oc=5",
-   "fecha": "Fri, 13 Nov 2026 16:03:15 GMT",
+   "titulo": "El mercado alerta por estanflación tras el dato de inflación IPC INDEC - iProfesional",
+   "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMXp2a2M5d1AzYlNCcXNtNTNxMGdtMUx4bURwenRIU1hOSVlDU0hCMHFNY2R1Q05Zb3RXZFVueU1jQXdmbHNBN1RvVEJ6RE1OZ0p2b0hLOG9XZW5oM2FfQzlPX19wX2VnaUE4MjY1RzIwRFZzTE5FWFlrYUtmNjhqdTZMYnl0ejZOTWdiV3k3Y0VDLVpOckV4X3M1Ry03cXhnOG05SG1tVlNUZUw3eWFNS2Zmd29vQdIBuwFBVV95cUxOZ1U1VU91MlBndDhvUEpWZVo4dktCazBuSE9yYmYxaFJoemRCMkpHSVZhcGMxRkIySkJ6Q0pKMmlQU2JTZnFYa3duRjVFVTdfM3FmTTctS3BaYVlKdDFpWXQ5c3NZYnFUcTB1YlVfMS1lMmFmRWk2OTJxQWw0M3M5d1VjSHczQ2tSa3d4SEx4MzkweVFkSWIwT0ZfNU1SdHkzRlBzM2xLTXBqNEVnbVlBZnBfVGxnaUFhZ3Bv?oc=5",
+   "fecha": "Fri, 13 Nov 2026 10:19:08 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
