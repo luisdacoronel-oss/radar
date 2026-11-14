@@ -229,12 +229,11 @@
   "fecha": "2026-11-14",
   "yahoo": "GGAL.BA",
   "nombre": "Grupo Galicia",
-  "precio": 4855,
+  "precio": 5005,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
-   "bajo_m20",
-   "rsi_sobreventa"
+   "bajo_m20"
   ],
   "votos": {},
   "evaluado": {}
@@ -244,7 +243,7 @@
   "fecha": "2026-11-14",
   "yahoo": "YPFD.BA",
   "nombre": "YPF",
-  "precio": 6230,
+  "precio": 6340,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -261,12 +260,11 @@
   "fecha": "2026-11-14",
   "yahoo": "PAMP.BA",
   "nombre": "Pampa Energía",
-  "precio": 4205,
+  "precio": 4377.5,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
-   "bajo_m20",
-   "rsi_sobreventa"
+   "bajo_m20"
   ],
   "votos": {},
   "evaluado": {}
@@ -276,7 +274,7 @@
   "fecha": "2026-11-14",
   "yahoo": "BMA.BA",
   "nombre": "Banco Macro",
-  "precio": 9285,
+  "precio": 9580,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -372,7 +370,7 @@
   "fecha": "2026-11-14",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 67117.671875,
+  "precio": 67041.1484375,
   "tecnico": "COMPRAR",
   "senales": [
    "tendencia_alcista",
@@ -391,7 +389,7 @@
   "fecha": "2026-11-14",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1900.800048828125,
+  "precio": 1901.02001953125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
