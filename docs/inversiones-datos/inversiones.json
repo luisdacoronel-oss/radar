@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T21:52:18.095Z",
+ "generado": "2026-11-14T22:51:30.990Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -243,16 +243,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -20.33,
-   "realPct": null,
-   "donde": "Exchange",
-   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
-  },
-  {
-   "nombre": "Ethereum",
-   "tipo": "cripto (variable)",
-   "riesgo": "Alto",
-   "mensualPct": -24.9,
+   "mensualPct": -21.57,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -264,6 +255,15 @@
    "mensualPct": -25.03,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
+   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
+  },
+  {
+   "nombre": "Ethereum",
+   "tipo": "cripto (variable)",
+   "riesgo": "Alto",
+   "mensualPct": -25.94,
+   "realPct": null,
+   "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
@@ -73443,16 +73443,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64368.7890625,
-   "variacionDia": -5.69,
-   "variacion30d": -20.33,
+   "precio": 63360.640625,
+   "variacionDia": -7.16,
+   "variacion30d": -21.57,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75802.676171875,
-   "m50": 80141.90421875,
-   "m200": 72975.4760546875,
-   "rsi": 20.414783022528937,
+   "m20": 75752.26875,
+   "m50": 80121.74125,
+   "m200": 72970.4353125,
+   "rsi": 19.488024618437308,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73526,7 +73526,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 20: zona de sobreventa, posible rebote."
+     "texto": "RSI en 19: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75932,9 +75932,9 @@
       "time": "2026-11-14",
       "open": 68238.2109375,
       "high": 68360.7109375,
-      "low": 64213.2421875,
-      "close": 64368.7890625,
-      "volume": 38421626880
+      "low": 63561.41796875,
+      "close": 63360.640625,
+      "volume": 41006051328
      }
     ],
     "m20": [
@@ -77136,7 +77136,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75802.6762
+      "value": 75752.2688
      }
     ],
     "m50": [
@@ -78338,7 +78338,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80141.9042
+      "value": 80121.7413
      }
     ],
     "m200": [
@@ -79540,7 +79540,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72975.4761
+      "value": 72970.4353
      }
     ],
     "rsi": [
@@ -80742,7 +80742,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 20.4148
+      "value": 19.488
      }
     ]
    },
@@ -80777,16 +80777,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1769.25,
-   "variacionDia": -8.21,
-   "variacion30d": -24.9,
+   "precio": 1744.9300537109375,
+   "variacionDia": -9.48,
+   "variacion30d": -25.94,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2188.1977600097657,
-   "m50": 2395.2860327148437,
-   "m200": 2144.6252404785155,
-   "rsi": 19.803632883139898,
+   "m20": 2186.9817626953127,
+   "m50": 2394.7996337890627,
+   "m200": 2144.50364074707,
+   "rsi": 19.20524578615742,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80795,32 +80795,32 @@
     },
     "hasta": {
      "fecha": "2026-11-14",
-     "precio": 1760.0531005859375
+     "precio": 1746.80078125
     },
     "retroceso": [
      {
       "nivel": 0,
-      "precio": 1760.0531005859375
+      "precio": 1746.80078125
      },
      {
       "nivel": 0.236,
-      "precio": 2006.7783383789063
+      "precio": 1996.6535664062499
      },
      {
       "nivel": 0.382,
-      "precio": 2159.4134431152343
+      "precio": 2151.223509765625
      },
      {
       "nivel": 0.5,
-      "precio": 2282.7760620117188
+      "precio": 2276.14990234375
      },
      {
       "nivel": 0.618,
-      "precio": 2406.1386809082032
+      "precio": 2401.076294921875
      },
      {
       "nivel": 0.786,
-      "precio": 2581.7735959472657
+      "precio": 2578.937599609375
      },
      {
       "nivel": 1,
@@ -80830,19 +80830,19 @@
     "extension": [
      {
       "nivel": 1.272,
-      "precio": 1475.6918095703124
+      "precio": 1458.834859375
      },
      {
       "nivel": 1.618,
-      "precio": 1113.9675202636718
+      "precio": 1092.5252675781248
      },
      {
       "nivel": 2,
-      "precio": 714.607177734375
+      "precio": 688.1025390625
      },
      {
       "nivel": 2.618,
-      "precio": 68.52159741210971
+      "precio": 33.827025390625295
      }
     ]
    },
@@ -80860,12 +80860,12 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 20: zona de sobreventa, posible rebote."
+     "texto": "RSI en 19: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
      "peso": 0,
-     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1475.69."
+     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1458.83."
     }
    ],
    "grafico": {
@@ -83266,9 +83266,9 @@
       "time": "2026-11-14",
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
-      "low": 1760.0531005859375,
-      "close": 1769.25,
-      "volume": 16227027968
+      "low": 1746.80078125,
+      "close": 1744.9300537109375,
+      "volume": 17451098112
      }
     ],
     "m20": [
@@ -84470,7 +84470,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2188.1978
+      "value": 2186.9818
      }
     ],
     "m50": [
@@ -85672,7 +85672,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2395.286
+      "value": 2394.7996
      }
     ],
     "m200": [
@@ -86874,7 +86874,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2144.6252
+      "value": 2144.5036
      }
     ],
     "rsi": [
@@ -88076,7 +88076,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 19.8036
+      "value": 19.2052
      }
     ]
    },
@@ -88092,8 +88092,8 @@
     ]
    },
    "niveles": {
-    "entrada": 1769.25,
-    "objetivo": 1475.6918095703124
+    "entrada": 1744.9300537109375,
+    "objetivo": 1458.834859375
    },
    "razonesIA": []
   }
@@ -88464,6 +88464,13 @@
    "tema": "CNV normativa dólar parking"
   },
   {
+   "titulo": "Repunte de los papeles argentinos en Wall Street - Página|12",
+   "enlace": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVmJ2VW9BYWtaU01rRm50MDdENHBCRlhHRWxUb3NqM3hXQ1ppN0VsdEdNcG53SDZEMG1XU3MzQVo2aWJSZWxxVGFiTWlrVjRwS01rNHRrTE5lYVEyRGFyLUFJU1lIUXNmazgyVFVlQXFJc0Vxd3FyTlBBMmxwVGw5VjlzcEc2SzNiOFNxc0R4Sm1ZQQ?oc=5",
+   "fecha": "Wed, 11 Nov 2026 02:53:18 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
    "titulo": "Por qué se derrumban las acciones tecnológicas de Wall Street y sacuden a los mercados del mundo - Infobae",
    "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPZnY2QkRhRFpfbVgwdWQyUVRYcnJBTUNyX0U4WDladkRJWHZPYkpVdWhhV0RBNkRFYWpkaTNlYXk3MWVIWUNuZ2NUWEdPZzNya1JKVlZlbjRqZ0x3eXVydDJxR29TZV9qLXNfXzhJZFJjQm1RYkhrSGl1LWsxRUFTNFQ0S01vdUwzNVhFWEFvZ2c2MXc3Zm5lYzZjOXNjWDNDQmQzMzJWbUVhaS05VUNySkVsSWM3MUhjaDVNRW0wczQ3V3hvckRfN0ptTUFNMWtDcGJnRnlHcEzSAfMBQVVfeXFMTl9jdFMxU0dlWGFtbnI4Ymd1ZVZHdUxwLWxybnhPeE1uWm5kSnROaUxuMVRBTDM3ZFYyN2U3MDZwWVBBNDhyWi1nNDE2QkU2SjlVYWNIazRrcEctSjc3LXJjQVF5ODJ1Z2RsQ0JHN1V6RTVWT2llMG9VZ01yZE9pZURFVjFTd29vOVFYMG05eWU0OVhsaE1jR21fVzNjbTBXM1lVUEdtLVN2U3JxVmw3YTU2UTJ4RzNnc2ZMVFVZeEZURU56c2kyS09LRjdOdTNZN29pQV8zS2xZbHpPbjhZTkZYMXNkYzFUTjQxVGpmY1RfTzhR?oc=5",
    "fecha": "Fri, 30 Oct 2026 07:00:00 GMT",
@@ -88478,9 +88485,9 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Repunte de los papeles argentinos en Wall Street - Página|12",
-   "enlace": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVmJ2VW9BYWtaU01rRm50MDdENHBCRlhHRWxUb3NqM3hXQ1ppN0VsdEdNcG53SDZEMG1XU3MzQVo2aWJSZWxxVGFiTWlrVjRwS01rNHRrTE5lYVEyRGFyLUFJU1lIUXNmazgyVFVlQXFJc0Vxd3FyTlBBMmxwVGw5VjlzcEc2SzNiOFNxc0R4Sm1ZQQ?oc=5",
-   "fecha": "Wed, 11 Nov 2026 02:53:18 GMT",
+   "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
+   "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
+   "fecha": "Fri, 13 Nov 2026 18:16:09 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88488,13 +88495,6 @@
    "titulo": "La bolsa hoy: Wall Street sube tras las noticias de Anthropic - XTB.com",
    "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZzBDbmduX0daeGlVeE0zVloza1N5MFBUN3lfWWdULTV0Q3JnaWt5Q2FZZ25hM0ZXcHNZYUIwRktqRS1tR1lSaTg4WkNNU1A3OG1kNlNOTHoyenNlcER3QjFqRXZsbmZOd21GZWpNVjhwdXNTOGxaUFR4WFR2dzJiMG1FYWhheFZ3OS0zcTZlMzhWRlh1WFdnX2NKV1d0ajhuSWNFQ1dvR2d4QXFNZ0VxUXVFTk9BNS1WWGVzVlY3VmpiNDhQei1mTDl6RF9ocFNHcm9lWHRWOGg2cFk?oc=5",
    "fecha": "Tue, 27 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
-   "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
-   "fecha": "Fri, 13 Nov 2026 18:16:09 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88534,16 +88534,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarín",
+   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarin.com",
    "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdS03LXh2b0hXYkEwTlNfQnJnaU9sUk1mWEI0Y0hUTHNUODZjS3pBM0d2OFlBZ1FidmVzLWlzODQ4Ulh2UmVtMUpiMGhPSThXQ2kzb2djdFJOUkk0TUxMOW1GZHhtMFlxRjRZOTlmay1keUN0dndTMEVpcWxLSEJhU0NXdWh2LXljVWhWSTlGaHdyWG9aQnVTVU5tTFlQTW1mMG14TTZvRFFxTEVfa3V3WEJR?oc=5",
    "fecha": "Thu, 12 Nov 2026 21:30:40 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
-   "titulo": "La inflación de octubre fue del 2,2% según el INDEC - Página|12",
-   "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQR2t0RGRKVDloWFJyNVYtQzFROWROOTA3MVo0ZEdiakpmOW9sOHg4MzdzQV81Ry1IMFRXdmhFbC04bG05bkl0V1k2ZGZPTlFub1YyaGZDMkNqTTk1UEYxZWdqaWNPNy1jaVNNa1R0ZnBUcWVocXY1YVpycTVxZDdPczRSSjBMQzV3SHp0WjZwalJ6Vmc?oc=5",
-   "fecha": "Thu, 12 Nov 2026 19:04:54 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   },
@@ -88555,6 +88548,13 @@
    "tema": "inflación INDEC"
   },
   {
+   "titulo": "La inflación de octubre fue del 2,2% según el INDEC - Página|12",
+   "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQR2t0RGRKVDloWFJyNVYtQzFROWROOTA3MVo0ZEdiakpmOW9sOHg4MzdzQV81Ry1IMFRXdmhFbC04bG05bkl0V1k2ZGZPTlFub1YyaGZDMkNqTTk1UEYxZWdqaWNPNy1jaVNNa1R0ZnBUcWVocXY1YVpycTVxZDdPczRSSjBMQzV3SHp0WjZwalJ6Vmc?oc=5",
+   "fecha": "Thu, 12 Nov 2026 19:04:54 GMT",
+   "fuente": "",
+   "tema": "inflación INDEC"
+  },
+  {
    "titulo": "Argentina, entre los países con mayor inflación de la región: cómo quedó el ranking de octubre - La Gaceta",
    "enlace": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOM2xoN2pMSjRPel9NSFFCd2xkcURrY2pxX1NEZjJlQ1l0Y0NrazZkQl9HVjVEVEFWYXY1b0h1dFo3Y3pjdTF1cFNLV2NFVml4bTd3YUpGUVczVjlETWdBS1lYYkRDT1BGZjhBY21ZQVFraWtzQ2psSVdDTDIyYkNGLWtQczFiTHBCZ0U2VEp2S2V0cVpYM2JnU0ItVjdoYnI4dmR0Wk4xX0h6aEVoUFBFWHliQ0w2Q0pTWlhmRlFLb3JRcEZPaWfSAcsBQVVfeXFMTk81alJKemM2aldmeW5tbkpaNVAxMTdVeUxqN1ZTajR3Y2tBUExBaXAxQ29ZOUUwLVFmeHhaamZRTVdPdEpGOU1MTnBaWTE4a2NPaW9jQzY4YzZTOGQtbmplX2dtWGJCRU1ySGdqLTd1VFFQX2pHUVFMTGFCUmFXTjMzbk9nVW1UNG1KSy0tUDZrb2VncnBoeTFqQjlLZThVb3VzX0NXRm1ERXFKTFNvZ28zc2Q3QkdLUHpNMzBZenlhb0o1MnFxVG9wX28?oc=5",
    "fecha": "Sat, 14 Nov 2026 13:48:04 GMT",
@@ -88562,9 +88562,9 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
-   "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
-   "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
+   "titulo": "El mercado alerta por estanflación tras el dato de inflación IPC INDEC - iProfesional",
+   "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMXp2a2M5d1AzYlNCcXNtNTNxMGdtMUx4bURwenRIU1hOSVlDU0hCMHFNY2R1Q05Zb3RXZFVueU1jQXdmbHNBN1RvVEJ6RE1OZ0p2b0hLOG9XZW5oM2FfQzlPX19wX2VnaUE4MjY1RzIwRFZzTE5FWFlrYUtmNjhqdTZMYnl0ejZOTWdiV3k3Y0VDLVpOckV4X3M1Ry03cXhnOG05SG1tVlNUZUw3eWFNS2Zmd29vQdIBuwFBVV95cUxOZ1U1VU91MlBndDhvUEpWZVo4dktCazBuSE9yYmYxaFJoemRCMkpHSVZhcGMxRkIySkJ6Q0pKMmlQU2JTZnFYa3duRjVFVTdfM3FmTTctS3BaYVlKdDFpWXQ5c3NZYnFUcTB1YlVfMS1lMmFmRWk2OTJxQWw0M3M5d1VjSHczQ2tSa3d4SEx4MzkweVFkSWIwT0ZfNU1SdHkzRlBzM2xLTXBqNEVnbVlBZnBfVGxnaUFhZ3Bv?oc=5",
+   "fecha": "Fri, 13 Nov 2026 10:19:08 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
