@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T06:33:56.821Z",
+ "generado": "2026-11-14T07:45:28.469Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -231,21 +231,21 @@
    "como": "Señal actual: VENDER. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
+   "nombre": "Ethereum",
+   "tipo": "cripto (variable)",
+   "riesgo": "Alto",
+   "mensualPct": -19.7,
+   "realPct": null,
+   "donde": "Exchange",
+   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
+  },
+  {
    "nombre": "Grupo Galicia",
    "tipo": "accion (variable)",
    "riesgo": "Medio/Alto",
    "mensualPct": -18.27,
    "realPct": -20.03,
    "donde": "Broker (cuenta comitente)",
-   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
-  },
-  {
-   "nombre": "Ethereum",
-   "tipo": "cripto (variable)",
-   "riesgo": "Alto",
-   "mensualPct": -20.16,
-   "realPct": null,
-   "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
@@ -73405,16 +73405,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 67244.3828125,
-   "variacionDia": -5.74,
+   "precio": 67007.4609375,
+   "variacionDia": -1.82,
    "variacion30d": -17.06,
    "puntaje": 40,
    "puntajeBase": 40,
    "accion": "COMPRAR",
-   "m20": 76535.192578125,
-   "m50": 80515.1290625,
-   "m200": 73030.361015625,
-   "rsi": 23.711380958253372,
+   "m20": 75934.609765625,
+   "m50": 80194.67765625,
+   "m200": 72988.6694140625,
+   "rsi": 23.317018429056162,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73488,7 +73488,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 24: zona de sobreventa, posible rebote."
+     "texto": "RSI en 23: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_soporte",
@@ -73503,14 +73503,6 @@
    ],
    "grafico": {
     "velas": [
-     {
-      "time": "2026-01-18",
-      "open": 95101.1796875,
-      "high": 95491.5078125,
-      "low": 93588.8671875,
-      "close": 93634.4296875,
-      "volume": 20809781232
-     },
      {
       "time": "2026-01-19",
       "open": 93655.671875,
@@ -75896,19 +75888,23 @@
       "volume": 27507388119
      },
      {
+      "time": "2026-11-13",
+      "open": 71342.96875,
+      "high": 71428.53125,
+      "low": 67653.0703125,
+      "close": 68249.2734375,
+      "volume": 42985296506
+     },
+     {
       "time": "2026-11-14",
       "open": 68238.2109375,
       "high": 68360.7109375,
       "low": 66535.5078125,
-      "close": 67244.3828125,
-      "volume": 34953482240
+      "close": 67007.4609375,
+      "volume": 33562300416
      }
     ],
     "m20": [
-     {
-      "time": "2026-01-18",
-      "value": 92078.0527
-     },
      {
       "time": "2026-01-19",
       "value": 92284.2258
@@ -77102,15 +77098,15 @@
       "value": 77212.5152
      },
      {
+      "time": "2026-11-13",
+      "value": 76585.4371
+     },
+     {
       "time": "2026-11-14",
-      "value": 76535.1926
+      "value": 75934.6098
      }
     ],
     "m50": [
-     {
-      "time": "2026-01-18",
-      "value": 90254.7658
-     },
      {
       "time": "2026-01-19",
       "value": 90297.9514
@@ -78304,15 +78300,15 @@
       "value": 80857.8227
      },
      {
+      "time": "2026-11-13",
+      "value": 80535.2269
+     },
+     {
       "time": "2026-11-14",
-      "value": 80515.1291
+      "value": 80194.6777
      }
     ],
     "m200": [
-     {
-      "time": "2026-01-18",
-      "value": 105819.6179
-     },
      {
       "time": "2026-01-19",
       "value": 105734.146
@@ -79506,15 +79502,15 @@
       "value": 73080.9722
      },
      {
+      "time": "2026-11-13",
+      "value": 73035.3855
+     },
+     {
       "time": "2026-11-14",
-      "value": 73030.361
+      "value": 72988.6694
      }
     ],
     "rsi": [
-     {
-      "time": "2026-01-18",
-      "value": 55.8264
-     },
      {
       "time": "2026-01-19",
       "value": 51.7732
@@ -80708,8 +80704,12 @@
       "value": 29.9581
      },
      {
+      "time": "2026-11-13",
+      "value": 24.9889
+     },
+     {
       "time": "2026-11-14",
-      "value": 23.7114
+      "value": 23.317
      }
     ]
    },
@@ -80750,21 +80750,21 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1903.5,
-   "variacionDia": -5.62,
-   "variacion30d": -20.16,
+   "precio": 1891.7900390625,
+   "variacionDia": -1.86,
+   "variacion30d": -19.7,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2214.876824951172,
-   "m50": 2413.2287670898436,
-   "m200": 2147.10564453125,
-   "rsi": 23.981110714519815,
+   "m20": 2194.3247619628905,
+   "m50": 2397.736833496094,
+   "m200": 2145.2379406738282,
+   "rsi": 23.49163335205415,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
-     "fecha": "2026-07-17",
-     "precio": 1803.053955078125
+     "fecha": "2026-08-01",
+     "precio": 1821.485107421875
     },
     "hasta": {
      "fecha": "2026-09-21",
@@ -80777,45 +80777,45 @@
      },
      {
       "nivel": 0.236,
-      "precio": 2568.9219873046877
+      "precio": 2573.2717392578124
      },
      {
       "nivel": 0.382,
-      "precio": 2422.5650073242186
+      "precio": 2429.6057075195313
      },
      {
       "nivel": 0.5,
-      "precio": 2304.2764892578125
+      "precio": 2313.4920654296875
      },
      {
       "nivel": 0.618,
-      "precio": 2185.9879711914064
+      "precio": 2197.3784233398437
      },
      {
       "nivel": 0.786,
-      "precio": 2017.5771997070312
+      "precio": 2032.0640854492187
      },
      {
       "nivel": 1,
-      "precio": 1803.053955078125
+      "precio": 1821.485107421875
      }
     ],
     "extension": [
      {
       "nivel": 1.272,
-      "precio": 3078.16408203125
+      "precio": 3073.1508085937503
      },
      {
       "nivel": 1.618,
-      "precio": 3425.0100756835936
+      "precio": 3413.6196235351563
      },
      {
       "nivel": 2,
-      "precio": 3807.944091796875
+      "precio": 3789.512939453125
      },
      {
       "nivel": 2.618,
-      "precio": 4427.455144042969
+      "precio": 4397.633539550781
      }
     ]
    },
@@ -80833,24 +80833,16 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 24: zona de sobreventa, posible rebote."
+     "texto": "RSI en 23: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
      "peso": 0,
-     "texto": "Objetivo por extensión de Fibonacci 127,2%: 3078.16."
+     "texto": "Objetivo por extensión de Fibonacci 127,2%: 3073.15."
     }
    ],
    "grafico": {
     "velas": [
-     {
-      "time": "2026-01-18",
-      "open": 3308.90576171875,
-      "high": 3367.167724609375,
-      "low": 3278.4267578125,
-      "close": 3281.15771484375,
-      "volume": 13557863288
-     },
      {
       "time": "2026-01-19",
       "open": 3282.19921875,
@@ -83236,19 +83228,23 @@
       "volume": 10386658677
      },
      {
+      "time": "2026-11-13",
+      "open": 2016.8297119140625,
+      "high": 2018.650390625,
+      "low": 1897.54736328125,
+      "close": 1927.5888671875,
+      "volume": 15322699556
+     },
+     {
       "time": "2026-11-14",
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
       "low": 1881.8056640625,
-      "close": 1903.5,
-      "volume": 12403258368
+      "close": 1891.7900390625,
+      "volume": 12058420224
      }
     ],
     "m20": [
-     {
-      "time": "2026-01-18",
-      "value": 3168.964
-     },
      {
       "time": "2026-01-19",
       "value": 3179.7242
@@ -84442,15 +84438,15 @@
       "value": 2237.4995
      },
      {
+      "time": "2026-11-13",
+      "value": 2216.0813
+     },
+     {
       "time": "2026-11-14",
-      "value": 2214.8768
+      "value": 2194.3248
      }
     ],
     "m50": [
-     {
-      "time": "2026-01-18",
-      "value": 3080.2209
-     },
      {
       "time": "2026-01-19",
       "value": 3084.1111
@@ -85644,15 +85640,15 @@
       "value": 2428.9048
      },
      {
+      "time": "2026-11-13",
+      "value": 2413.7105
+     },
+     {
       "time": "2026-11-14",
-      "value": 2413.2288
+      "value": 2397.7368
      }
     ],
     "m200": [
-     {
-      "time": "2026-01-18",
-      "value": 3658.1138
-     },
      {
       "time": "2026-01-19",
       "value": 3661.0918
@@ -86846,15 +86842,15 @@
       "value": 2149.1035
      },
      {
+      "time": "2026-11-13",
+      "value": 2147.2261
+     },
+     {
       "time": "2026-11-14",
-      "value": 2147.1056
+      "value": 2145.2379
      }
     ],
     "rsi": [
-     {
-      "time": "2026-01-18",
-      "value": 59.4038
-     },
      {
       "time": "2026-01-19",
       "value": 51.7569
@@ -88048,8 +88044,12 @@
       "value": 28.6602
      },
      {
+      "time": "2026-11-13",
+      "value": 24.8432
+     },
+     {
       "time": "2026-11-14",
-      "value": 23.9811
+      "value": 23.4916
      }
     ]
    },
@@ -88065,9 +88065,9 @@
     ]
    },
    "niveles": {
-    "entrada": 1903.5,
-    "objetivo": 3078.16408203125,
-    "stop": 1803.053955078125
+    "entrada": 1891.7900390625,
+    "objetivo": 3073.1508085937503,
+    "stop": 1821.485107421875
    },
    "razonesIA": []
   }
@@ -88431,6 +88431,13 @@
    "tema": "Wall Street hoy"
   },
   {
+   "titulo": "Wall Street sintió el impacto de la salida de Jensen Huang y las acciones de Nvidia se desplomaron - La Gaceta",
+   "enlace": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOV3pNRmFwbXpGeUZaQUFrY1NvcTllLWI3a25xemFKdXNQQ2tyZjAtM0prSXAzczU5aWFCOEV0Q2hTX3hScDZSQzZ6TmxWZU9vRVlvd2pWdG9aRDgwbEFsQU91ZDV5U1BBbno2WEx4SzI5dnpjYWRvTVRDRkVWOC01M3N5bHdRVHRZSzFqSnhZU1JCVVBmdEViUjVoNDNoWFRPSTgxMWtqSXRvRVBsTGlCTUhRWnAxaEYtMW1zSjlmWU9sanRHS2FLOFZmNXfSAdIBQVVfeXFMUC1HRFl0cE1SMkt6RjRQM2w0bldvSVZTeHZFVTI1SV85VklZRG5PRHZVSkFpd09pOFZjVWRabVp3TXJ1ZUlQS1hmVDVBRmQweWdQN3c1YUlSTnBGd0w0QnhkTVFwVE4wdndKV2VQM1c5cVJjWUhDXzRkaV9xcl9zRHNDX29VUk5ab2NSRFgwS2pZOUJacWhvT051VFVYWVlUUkp4ZGs1WXZqWkg0YllzelpRUy0xVUFRTGhOejE1V0NscU9POWpUaEV4N09Hanl4cmd3?oc=5",
+   "fecha": "Thu, 12 Nov 2026 15:33:21 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
    "titulo": "BMV y Wall Street hoy: así cierran las bolsas este 13 de noviembre de 2026 - EL CEO",
    "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOVJhb1VQNUs3N1JQSXM2c1VmNEtyX3NoT1lEU2lvVFhjT3Z1RGRlYkZPRW5tVm4zTFRXUjhxczQ2dzNSdy1kN19BMHdUck84TWROQmZQNTBzN2szUTlWRGJHcUpoZ2F0eC1HeTRlSXZNRHo0RlNhVl9rUnR0QjNTZ09UNkh1bkVqeGc?oc=5",
    "fecha": "Fri, 13 Nov 2026 23:18:20 GMT",
@@ -88441,13 +88448,6 @@
    "titulo": "Wall Street: las megainversiones en IA encendieron las alarmas y el Nasdaq sufrió su peor caída en cuatro meses - Ambito",
    "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNRnF1RXNDWV96eGowelRaLVhoeE5HekxCTmtoMVdGNmk1RnZ1X1hLYklLZmFnbkdqd1BpbDNleXJnellUTVlVTkxZVmplWGQyZGlCb2pLNlRTV1Nsd3lad1ZkRGMzanVfQ1k5MVAyQ1RDMXFLYVI0ek5iWmNaUVg2enVqUG9JT3RBMGFwM1Y3Wnh6M2E3REowTmtoOUcwUWlXbTkzamI5ejk5emNHdGdWVkliQTI1U24xc0xQUWZ6M0poUWMta1Jj0gHMAUFVX3lxTE5LVDVEaFU1dnNJcl9YcU1JNW1uWTVNb2VKejBGd3k0X1E3OG93WnpzMDEtYzg1QXBhNmxnc29YOF9DWWtCcHZWbUpidzlSeXVDYnM4VmlfM3VwUGo5b2JvLUhuSHVpQjhTQjA4aDBCZU8ySm9WQzM0WHRhRm5YRUZxaXk5TmMzZk5DTElqNEJBc0FKeXpCMG9FRmdTUUh1dUFhWFozM0dOYjJhTndiRUYxOGxFN3BLTjREbHY2MjFUUmlCVlliZDZXRDg4Rw?oc=5",
    "fecha": "Thu, 22 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Jornada en rojo en Wall Street: subió el riesgo país a 867 puntos y bajaron las reservas del BCRA por un pago al FMI - » Cholila Online",
-   "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWlplc3dBSTRvMVAxbnNDTWVvX3kwdDluM3ZLRXNqMnR3c3FZOTlhcVI5N2xhN0ZGT195a25ZU2UtZkw1cmxEa3RVM0FYd2dmQVpIemppVG55QU44S3JnYVlYdFgxZHVOQnBYaThqWHJhSmItM2hzSFhjYVpVM2R4VlFhWFJLU1g4UXEzY2Zvak1aSXp5LUg1RkZuM0tIalREUnlPdE5jaw?oc=5",
-   "fecha": "Thu, 12 Nov 2026 15:52:12 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
