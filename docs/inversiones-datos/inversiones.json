@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T11:56:42.761Z",
+ "generado": "2026-11-14T13:10:09.148Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -8,25 +8,25 @@
    "nombre": "Oficial",
    "compra": 1520,
    "venta": 1570,
-   "fecha": "2026-11-13T18:00:00.000Z"
+   "fecha": "2026-11-13T18:55:00.000Z"
   },
   "blue": {
    "nombre": "Blue",
    "compra": 1555,
    "venta": 1575,
-   "fecha": "2026-11-13T20:58:00.000Z"
+   "fecha": "2026-11-14T11:58:00.000Z"
   },
   "bolsa": {
    "nombre": "Bolsa",
    "compra": 1575.5,
    "venta": 1580.9,
-   "fecha": "2026-11-13T20:58:00.000Z"
+   "fecha": "2026-11-14T11:58:00.000Z"
   },
   "contadoconliqui": {
    "nombre": "Contado con liquidación",
    "compra": 1668.2,
    "venta": 1671.9,
-   "fecha": "2026-11-13T20:58:00.000Z"
+   "fecha": "2026-11-14T11:58:00.000Z"
   },
   "mayorista": {
    "nombre": "Mayorista",
@@ -36,15 +36,15 @@
   },
   "cripto": {
    "nombre": "Cripto",
-   "compra": 1663.04,
-   "venta": 1670.45,
-   "fecha": "2026-11-13T20:58:00.000Z"
+   "compra": 1667.62,
+   "venta": 1671.29,
+   "fecha": "2026-11-14T11:58:00.000Z"
   },
   "tarjeta": {
    "nombre": "Tarjeta",
    "compra": 1976,
    "venta": 2041,
-   "fecha": "2026-11-13T18:00:00.000Z"
+   "fecha": "2026-11-13T18:55:00.000Z"
   }
  },
  "rulos": [
@@ -59,10 +59,10 @@
   },
   {
    "nombre": "MEP → Cripto (USDT)",
-   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1663.04",
-   "brutoPct": 5.2,
-   "netoPct": 3.4,
-   "gananciaSobreCapital": 33958,
+   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1667.62",
+   "brutoPct": 5.49,
+   "netoPct": 3.69,
+   "gananciaSobreCapital": 36855,
    "conviene": true,
    "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
   },
@@ -86,10 +86,10 @@
   },
   {
    "nombre": "Cripto (USDT) → MEP",
-   "pasos": "Comprar dólares en USDT a $1670.45 → vender por MEP a $1575.5",
-   "brutoPct": -5.68,
-   "netoPct": -7.48,
-   "gananciaSobreCapital": -74841,
+   "pasos": "Comprar dólares en USDT a $1671.29 → vender por MEP a $1575.5",
+   "brutoPct": -5.73,
+   "netoPct": -7.53,
+   "gananciaSobreCapital": -75315,
    "conviene": false,
    "nota": "Camino inverso: comprar USDT con pesos y vender dólares MEP."
   }
@@ -225,7 +225,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -16.81,
+   "mensualPct": -17.38,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: COMPRAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -240,15 +240,6 @@
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
-   "nombre": "Ethereum",
-   "tipo": "cripto (variable)",
-   "riesgo": "Alto",
-   "mensualPct": -18.99,
-   "realPct": null,
-   "donde": "Exchange",
-   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
-  },
-  {
    "nombre": "Mercado Libre",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
@@ -256,6 +247,15 @@
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: VENDER. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
+  },
+  {
+   "nombre": "Ethereum",
+   "tipo": "cripto (variable)",
+   "riesgo": "Alto",
+   "mensualPct": -19.69,
+   "realPct": null,
+   "donde": "Exchange",
+   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
    "nombre": "Nvidia",
@@ -73443,16 +73443,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 67208.5234375,
-   "variacionDia": -1.52,
-   "variacion30d": -16.81,
+   "precio": 66752.296875,
+   "variacionDia": -2.19,
+   "variacion30d": -17.38,
    "puntaje": 40,
    "puntajeBase": 40,
    "accion": "COMPRAR",
-   "m20": 75944.662890625,
-   "m50": 80198.69890625,
-   "m200": 72989.6747265625,
-   "rsi": 23.572368973563997,
+   "m20": 75921.8515625,
+   "m50": 80189.574375,
+   "m200": 72987.39359375,
+   "rsi": 23.000815978785937,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73526,7 +73526,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 24: zona de sobreventa, posible rebote."
+     "texto": "RSI en 23: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_soporte",
@@ -75938,8 +75938,8 @@
       "open": 68238.2109375,
       "high": 68360.7109375,
       "low": 66535.5078125,
-      "close": 67208.5234375,
-      "volume": 31335131136
+      "close": 66752.296875,
+      "volume": 30816782336
      }
     ],
     "m20": [
@@ -77141,7 +77141,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75944.6629
+      "value": 75921.8516
      }
     ],
     "m50": [
@@ -78343,7 +78343,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80198.6989
+      "value": 80189.5744
      }
     ],
     "m200": [
@@ -79545,7 +79545,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72989.6747
+      "value": 72987.3936
      }
     ],
     "rsi": [
@@ -80747,7 +80747,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 23.5724
+      "value": 23.0008
      }
     ]
    },
@@ -80788,16 +80788,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1908.5,
-   "variacionDia": -0.99,
-   "variacion30d": -18.99,
+   "precio": 1892.1600341796875,
+   "variacionDia": -1.84,
+   "variacion30d": -19.69,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2195.160260009766,
-   "m50": 2398.0710327148436,
-   "m200": 2145.3214904785154,
-   "rsi": 24.103741241897495,
+   "m20": 2194.34326171875,
+   "m50": 2397.7442333984377,
+   "m200": 2145.239790649414,
+   "rsi": 23.504850007347187,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -83278,8 +83278,8 @@
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
       "low": 1881.8056640625,
-      "close": 1908.5,
-      "volume": 11728753664
+      "close": 1892.1600341796875,
+      "volume": 11731852288
      }
     ],
     "m20": [
@@ -84481,7 +84481,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2195.1603
+      "value": 2194.3433
      }
     ],
     "m50": [
@@ -85683,7 +85683,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2398.071
+      "value": 2397.7442
      }
     ],
     "m200": [
@@ -86885,7 +86885,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2145.3215
+      "value": 2145.2398
      }
     ],
     "rsi": [
@@ -88087,7 +88087,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 24.1037
+      "value": 23.5049
      }
     ]
    },
@@ -88103,7 +88103,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1908.5,
+    "entrada": 1892.1600341796875,
     "objetivo": 3073.1508085937503,
     "stop": 1821.485107421875
    },
@@ -88404,9 +88404,9 @@
    "tema": "mercado argentino acciones hoy"
   },
   {
-   "titulo": "Mercados: subió la Bolsa argentina y bajó el riesgo país pese a la rueda negativa de Wall Street - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWElqekJqWmVpdURzNnItQ3huTHg4THBMNmlHSU54eTZyMy1nZVlSU3Q2c2pHRU0wMU5jOWZ5VWxIdGQ1M3AyV18wcWFyMnJucV9QMGtPaEh1VTZJNHJZRkQzbHVXUEhZZ3VWR1JhRXlhaWdzdXFPMmV3akxRQkRjMUFPdFBsZ3pjU0hMM3JzZm5xRnZXVTlWM2Uyc3hmWG1zcmp3MGlZNy1uZ09mRHBMdm5kNWhjSlZOcHJHZTE0bFliZWVGQ3pES3NULTl0S3ozVUFpV0Z3SDB6WUFyOWfSAfgBQVVfeXFMT0FfSkhqMi1ITlB1QVNPT0pxR2J3ZXVVMHlvcDhHRTFMWXBxMGNpUDVVYzhCY1IwcktCRFBlRUtPMWIyaHNPeDJ0cVN4YTAzUWVlMl9WaTREVGl5UW10UkgyUFd5UDlSWEd1MVNfMnRHdVNCNlpJeVNKZDJGcWZqZDZHQkV6OTZlcGxSNGt5TWdCWk14SDhEMy1ZVzB1UjRfNnFNZEp2TlRFU2p6Rm9BS1p6VS1xTGRCVWRvdlp3TFVkMmF4Y2VEcFVlOUFCdk1OZUhsN185VkVvNzVVTTZENm9fSlI2Y3NkWTBOQWwzNFlzT0YyaEZ4OE4?oc=5",
-   "fecha": "Thu, 08 Oct 2026 07:00:00 GMT",
+   "titulo": "Acciones argentinas caen en Wall Street en la rueda previa a la decisión de MSCI - Bloomberg Línea",
+   "enlace": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNOURlOFQ3MXd2TTY3M0JSZkptYlcybFNLektScE5INFFGVkFfZW5CN0EzTDMycXY4Y195czVnSGJnVUVLMmpRTTJNampJa3JpRDFTTWxKTEFUR3p6NGdaYWNUMndrdWdxMFVPbTYyYmlxUi12b3pCc3dPVzIwSDlkU29QMWVBSjlBQWFpT1JrXzEwa3NrRjEtX0xQbTR4TXg5MHJxYWNDc2lOcWw1LTF0UzlpUXJqWWg3Y0ItQ1Z2TXMxVkFUTXNOQTZWUlRwcUJueUHSAeYBQVVfeXFMUEx2OGpVVmRycDZTTTA5akRnM0w3YXdVUjlvcVZXbzhTN1NXZmVfOTJDRl9DTWJtODFILW9abWVodDdDWjY0OHYzbUZZcWtTNTNDQXRuR2EzSkxHZTZhY2tlb0dCRU5KZmxzQmFyaDR2c09Mb2VrZTZFQ013WWZrTHpUMlZOcmFJUnlTOFp5U0lsMjJBcUJhOEVUZ3liQ2U1Qk91QUJsbkJUZllwRzgxTEhOc2owbC0ya2steXh2VEdPYjRxQ3J2cHBIRlc3VzI0UkhLWW1fcDJTbHQwNlBkTUxFUzczRlE?oc=5",
+   "fecha": "Mon, 22 Jun 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "mercado argentino acciones hoy"
   },
@@ -88460,6 +88460,13 @@
    "tema": "BCRA tasas plazo fijo"
   },
   {
+   "titulo": "Plazos fijos hoy, 11 de noviembre 2026: qué bancos pagan más y cuánto se gana con $1 millón a 30 días - Diario Río Negro",
+   "enlace": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOeHM4Z0ViQVk1OHAtNTZNSmQwM1BPdEtWSnIwSFdvZVZraWo5SURkRzA4aWV6YllOSDRDajVSMzEwaGN3NzNyNVJIRzZHMlA0QnhBMFVSMHhVZ1lmQlpOdlVVSkdPa2FyeVB6NnNHZzBzZmEtUE1vM0hnbUx1X2o5NTZYN05mblZJWEVpWl9wWTJudVM0aTM3cDQtcy01WDNLVmpJVGswX0NBTWNrRzRmXzNOOFQyUmdHODNXbDRlZHZPYThpVjNsdjc4TmFTcWRpMU1ULWx6SWMtajZZ0gHkAUFVX3lxTE5fRi1JRVNScVlIRzQwU2JmRExZbjRQNkJLUjFCQk1wTFRmQUlmT0ZGa2VYWFZIUHYteTZTMTRBZHNuLTZpNlRYVWVVcGhpWHphd2gzR055R0NYS3NuUlhlMWRPelpjV1hRZ0JYdnRWbWJCZGVsQzVKbWh6NkVlNFY3VlVaTVpra3dqalU2dkdnbUY3QmNHMGZmdDRSbVZZQU1aT05JbzRxbWt3ZEQ4WkxxRlRNdG9hS1d1bC1Qc3BzMjJpeEpwaUVIR0MtQldpRFpzTVpHNWNiY252YkRyeUpxV2laWQ?oc=5",
+   "fecha": "Wed, 11 Nov 2026 15:29:56 GMT",
+   "fuente": "",
+   "tema": "BCRA tasas plazo fijo"
+  },
+  {
    "titulo": "Las tasas en pesos, dentro de una montaña rusa: el BCRA busca ahora plancharlas - El Cronista",
    "enlace": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMmVxVmhwM3RKaEktdTNZbVg4QlZZSjRwVnNYcTNadV9mWm54WUJzY2FqNUsxR2NrbkVtQkZWejVFZDllMG43dEhMTHo3VzlMUnhIenNsbENoZUg1WlQzaVktS3M3bGN2T05wTnZacjJKbUgxMjdjVkxsa1Rmd19samJqLWNuTVdGUmJTSEJOT3N0T0ZBRHoyZC1lUllxSzVKTldUYWozUG1nVFliY0dRSlZQWDZxMWhCNGFFT3V30gHYAUFVX3lxTE1PdFl1TDAtNEczSXdYY1Atd1NIWUtlUVFFTEZubXkxX3FiM1d6YVBFQnc0MzR2Y3J5RHNab0pCNzViZ0JTMjZUdmk3WHJ0Tkg1cjFaWFh2a0JpZEtnQXNFeUQyV3RiLXh4dU5IczY0NUJidkk3TkJ4TVlfSVRhUHV4WS1VdkV2YVk0Y0s1VHA1ckgyckdwenFMQW5wU0pQRlltZldJWVg5LXBxeFpqV3hoaWtJOXB1WkxSa3R1WjRNRklza0I1Nl9vdGI3QmtmLTNudnZ2Tnk3QQ?oc=5",
    "fecha": "Fri, 13 Nov 2026 12:55:49 GMT",
@@ -88470,13 +88477,6 @@
    "titulo": "Cuánto paga cada banco un plazo fijo en noviembre y qué tasas le ganan a la inflación - Diario Mendoza",
    "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNXlWTHM0OERNZk9ZaXVoSXg2MTBJejV4R3JiaGV2cVNhYTZlSWhPNlZCQ2diTU9TMjQ2bHZyRXJyc3VnQkdaeVZlNjkxWl9GbmFwOFV0QktRU2RNcHhDWUtBRXRPNVJwemhTeE1CNEl0YWRUZFVwZURHa3RIWWFaYU5uRlRZYk01LUNkcVZ4M09ZVGNZOEZzRXo5NG5kM09FRkFhZHVINjhCbGZUdm9jWlo3bGJMc3VSU2fSAb8BQVVfeXFMTUIxYVRkUlY1MzdyR0dqUDBXd2pQOTNzd2lZc0hWb01aajFERXBPM2VleUNFSHBPZ0RJSExqYUEwSFdhT1BZX2gtejZKN3FVNFVmVXBLRkNQdzBIQ1MxMjBobmR2MmVMUGpTMzB6Vk44b3dwaGx2c2NEaUxkSEx2T05ZY0xOeVdyLXV4ckxIeWF6NnBqSFZtS1FRT2JPOFl2bEhhSWwxS2JyUG5fWl9HaHdyNERjV1lpSEFlanFaNVk?oc=5",
    "fecha": "Fri, 13 Nov 2026 14:25:00 GMT",
-   "fuente": "",
-   "tema": "BCRA tasas plazo fijo"
-  },
-  {
-   "titulo": "Plazos fijos hoy, 11 de noviembre 2026: qué bancos pagan más y cuánto se gana con $1 millón a 30 días - Diario Río Negro",
-   "enlace": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOeHM4Z0ViQVk1OHAtNTZNSmQwM1BPdEtWSnIwSFdvZVZraWo5SURkRzA4aWV6YllOSDRDajVSMzEwaGN3NzNyNVJIRzZHMlA0QnhBMFVSMHhVZ1lmQlpOdlVVSkdPa2FyeVB6NnNHZzBzZmEtUE1vM0hnbUx1X2o5NTZYN05mblZJWEVpWl9wWTJudVM0aTM3cDQtcy01WDNLVmpJVGswX0NBTWNrRzRmXzNOOFQyUmdHODNXbDRlZHZPYThpVjNsdjc4TmFTcWRpMU1ULWx6SWMtajZZ0gHkAUFVX3lxTE5fRi1JRVNScVlIRzQwU2JmRExZbjRQNkJLUjFCQk1wTFRmQUlmT0ZGa2VYWFZIUHYteTZTMTRBZHNuLTZpNlRYVWVVcGhpWHphd2gzR055R0NYS3NuUlhlMWRPelpjV1hRZ0JYdnRWbWJCZGVsQzVKbWh6NkVlNFY3VlVaTVpra3dqalU2dkdnbUY3QmNHMGZmdDRSbVZZQU1aT05JbzRxbWt3ZEQ4WkxxRlRNdG9hS1d1bC1Qc3BzMjJpeEpwaUVIR0MtQldpRFpzTVpHNWNiY252YkRyeUpxV2laWQ?oc=5",
-   "fecha": "Wed, 11 Nov 2026 15:29:56 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
@@ -88523,9 +88523,23 @@
    "tema": "Wall Street hoy"
   },
   {
+   "titulo": "Por qué se derrumban las acciones tecnológicas de Wall Street y sacuden a los mercados del mundo - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPZnY2QkRhRFpfbVgwdWQyUVRYcnJBTUNyX0U4WDladkRJWHZPYkpVdWhhV0RBNkRFYWpkaTNlYXk3MWVIWUNuZ2NUWEdPZzNya1JKVlZlbjRqZ0x3eXVydDJxR29TZV9qLXNfXzhJZFJjQm1RYkhrSGl1LWsxRUFTNFQ0S01vdUwzNVhFWEFvZ2c2MXc3Zm5lYzZjOXNjWDNDQmQzMzJWbUVhaS05VUNySkVsSWM3MUhjaDVNRW0wczQ3V3hvckRfN0ptTUFNMWtDcGJnRnlHcEzSAfMBQVVfeXFMTl9jdFMxU0dlWGFtbnI4Ymd1ZVZHdUxwLWxybnhPeE1uWm5kSnROaUxuMVRBTDM3ZFYyN2U3MDZwWVBBNDhyWi1nNDE2QkU2SjlVYWNIazRrcEctSjc3LXJjQVF5ODJ1Z2RsQ0JHN1V6RTVWT2llMG9VZ01yZE9pZURFVjFTd29vOVFYMG05eWU0OVhsaE1jR21fVzNjbTBXM1lVUEdtLVN2U3JxVmw3YTU2UTJ4RzNnc2ZMVFVZeEZURU56c2kyS09LRjdOdTNZN29pQV8zS2xZbHpPbjhZTkZYMXNkYzFUTjQxVGpmY1RfTzhR?oc=5",
+   "fecha": "Fri, 30 Oct 2026 07:00:00 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
    "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
    "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
-   "fecha": "Fri, 13 Nov 2026 17:48:10 GMT",
+   "fecha": "Fri, 13 Nov 2026 18:16:09 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
+   "titulo": "Wall Street: Nasdaq se hundió casi 3% ante el renovado temor por las inversiones en IA - Ambito",
+   "enlace": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPOWF3aGhXT19aODdZZ1ZmNW96aENFTGliZmlkc2NwUXZ4aFA4MlhQUU9JTW5sZWgzaVdYZjBjdW8tQ2c2bVpjZ3RMYTU4M3hLSm05ZTYtUDc0RE84ZHZDWU96R0VnV3NKZ2ZpNmZ4WmN6YVplUmJtcE91WFI5Q0tRcjhpQ2U4NlhkY0d0dGh6ZlNJdGJPdFFSMnVSSzJnNmZnMWQ0LTNzTkE4ME1VLXRiQkozU1kzcGJBb2pRVGxhV01wUl9xSUNFbFJCb0RYZ9IB0wFBVV95cUxPRnNIRGxmT0pNV2hrLWdXSG9jd085Tmc3aW9oX2FWcFFQZkc0SHljY1M0UHNyUjNYelpycFJhdVE5bU9TbGJORTVwb0xrVTBNOG9Va1pZT1JNRFRybDNoeE9PUWZ1bmhoQjZLQ3VoUFVDdnBfOTZjcndrbkJtcnJQVGFzWFh0bjlNdUFjNXpRNXRXRGlDY2FhTmRzbG1kUUozR2xVXzRYenNvUG9lRnIweUlzbXRsT2d0aEdhTFZMT0ZVQzlYZ1VzbGhEWFpBd3p2MDlR?oc=5",
+   "fecha": "Fri, 30 Oct 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88537,23 +88551,23 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Wall Street: las megainversiones en IA encendieron las alarmas y el Nasdaq sufrió su peor caída en cuatro meses - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNRnF1RXNDWV96eGowelRaLVhoeE5HekxCTmtoMVdGNmk1RnZ1X1hLYklLZmFnbkdqd1BpbDNleXJnellUTVlVTkxZVmplWGQyZGlCb2pLNlRTV1Nsd3lad1ZkRGMzanVfQ1k5MVAyQ1RDMXFLYVI0ek5iWmNaUVg2enVqUG9JT3RBMGFwM1Y3Wnh6M2E3REowTmtoOUcwUWlXbTkzamI5ejk5emNHdGdWVkliQTI1U24xc0xQUWZ6M0poUWMta1Jj0gHMAUFVX3lxTE5LVDVEaFU1dnNJcl9YcU1JNW1uWTVNb2VKejBGd3k0X1E3OG93WnpzMDEtYzg1QXBhNmxnc29YOF9DWWtCcHZWbUpidzlSeXVDYnM4VmlfM3VwUGo5b2JvLUhuSHVpQjhTQjA4aDBCZU8ySm9WQzM0WHRhRm5YRUZxaXk5TmMzZk5DTElqNEJBc0FKeXpCMG9FRmdTUUh1dUFhWFozM0dOYjJhTndiRUYxOGxFN3BLTjREbHY2MjFUUmlCVlliZDZXRDg4Rw?oc=5",
-   "fecha": "Thu, 22 Oct 2026 07:00:00 GMT",
+   "titulo": "Criptomonedas: Bitcoin se derrumba a la zona de los u$s68.000 y Ethereum baja de los u$s2.000 - Ambito",
+   "enlace": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOU1XdXpBcDNWNDVlSzB1bUctbENVZlhDaHZzd01sS0EwNlAxUk9BeXlsVlZBbFJNUWpxRHZWckdidmNQVXF5OWs1NUQ5U2RlLTFSQjN5a3VmRjNZQmVTVWVuZmp0b0lJemcwY3owNnlNbDZaUGsyOENuUXA1dlQ1SEhPZE5jMjQ2Qm5aWjVVcmlfd3Q2MkMxWnc1SnQyZ2UyOHoxcEpLWUZTVTVCTVVKbTYxQVA3MGZP0gG-AUFVX3lxTE4tQkd3X3hMbFRRNkxKXzVBMVg3RDdtZThMOXhTWGktRmxKOHdKa1lTRG10N2xUZWtPb2ljYWFORE9OSnR4cjhjUUhOUjB2RHpTRG5uZjBGSU5qSlBWNFE4XzRfc1JvcmxzZGJ2eHlweVZFOGNKUTN4M1dyOEt0c3NUdC0xZnBoLTEtbkp1Z3YySmtZMTkzMXliVXI1VG15NjlNbHJfUzJ6SlVNT2JuZWRSZGZFajNpRTBtTm9ZckE?oc=5",
+   "fecha": "Fri, 13 Nov 2026 19:59:46 GMT",
    "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "BMV y Wall Street hoy: así cierran las bolsas este 13 de noviembre de 2026 - EL CEO",
-   "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOVJhb1VQNUs3N1JQSXM2c1VmNEtyX3NoT1lEU2lvVFhjT3Z1RGRlYkZPRW5tVm4zTFRXUjhxczQ2dzNSdy1kN19BMHdUck84TWROQmZQNTBzN2szUTlWRGJHcUpoZ2F0eC1HeTRlSXZNRHo0RlNhVl9rUnR0QjNTZ09UNkh1bkVqeGc?oc=5",
-   "fecha": "Fri, 13 Nov 2026 23:18:20 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
+   "tema": "bitcoin precio hoy"
   },
   {
    "titulo": "Precio del Bitcoin hoy: actualización en tiempo real al 12 de noviembre - La Nación",
    "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUTFCWjhsTk1JM2NmNTg4NnJjZnVpV2ZGVmkzdjg1VlJiSHFUUFJDM1FER0c0ZV9VaDNka0tZZ1NUNnA4THFhOXIwUDVsTHpYNWJPaEctRUptaFVGVG0zUmNhNkt0ZEEySnlPQk51LVJCNHRMVEJzRUw0NzBIdGJyd1VMVzlXTDFoV3I3MDZRY0ZVdUJiUkhISUp6ZEx5cnZIRld3dE9qTDdMb0NaRFhZa3loZG5ZSVFNdUswZ2hqUjY?oc=5",
    "fecha": "Fri, 13 Nov 2026 02:00:00 GMT",
+   "fuente": "",
+   "tema": "bitcoin precio hoy"
+  },
+  {
+   "titulo": "Precio de Bitcoin hoy: BTC cae 3,11% y cotiza apenas por sobre los USD 67.000 - Cripto247",
+   "enlace": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdnN0dk1abkJiYWU5cm4xY08wWmJ5enZIWWJQNlhCclFoOWcya25rZnZWYzF6NnZhUDJzUHJFMmEwSkhOR2Y4OXpSczRmR0VJRVF6dmdPeXI3MGczM2k0ZUxwWjltUWF4RnBlMUZqNFgtWHFQeVI1djRfUXJqOXJQZmliTUhMTlNDT0M0dUJYakpNalBJTGJua1pyYnFyRG5MdjJMcUVJX1FRcFQxeWVPV1JSNjIxY0JQ?oc=5",
+   "fecha": "Sat, 14 Nov 2026 13:01:24 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
@@ -88565,23 +88579,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Precio de Bitcoin hoy: retrocede 3,91% y cotiza por debajo de los USD 72.000 - Cripto247",
-   "enlace": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQd0o0Wms1VEhCTUhHYy1HSGtzOERKbUpjZTNsREdaLTZBb0t3eE8wbnBPZy05WmRxajZQQVVQd2ZhNXcyT2VLOEF6eVkwYmZNb2w3aTJzMXVlNkEtTExrTFd5eTl6dHhTUV9SVjBMcnUyalBMUTZFRlhEUlFmQXpjQVRacEs2Y3JjMVI4c3U1YzJuMXg5eUxFZC0xRjZvX3hwa19uLUdtUlo3NkpxZHdnOGZQMXlKT2M?oc=5",
-   "fecha": "Thu, 12 Nov 2026 20:16:45 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
    "titulo": "El precio del Bitcoin hoy, 13 de noviembre: el Bitcoin en plena caída - Expansión",
    "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPS3NLRlhFR0tTTE5UZFQxVy1BNmRPYktJSlBCSl9xcy0tYmFyQ2JuWDA5UGFLN0lwellHSS1vRnhzRTJPbWZCaVZEX19aUWw0ekVPalh4Q3Q4N2k5dWVaUElIQVBBelZTZ1kyNE5XWl8xbG04OXRhX3BQdklrZ0JPdDdEVGdESkdrZGQ3WklXSUVnWmlqckhQdUx5Wng2bzNRUk5aS0FoS3dnODE3SmFv0gGvAUFVX3lxTFBScXNWU1RRRFdERnU4eDZHOF9DU0FPYWgtRFZwamtyYl9WcDFadWdLUEZaMXVRU2JyY0NjWVZYdlpQRWpjdVZiOUV3SUZhVWJFQU5EWjNVemRqZXR6ekNscTdJdnhNbllZU012TElHd3FHd05YM0I4a2ZJYUpsWExCZUZhY0hYMFgxLVNySW1WcWoyQW41VjdBMVVyek1DSjFPLTNPVWFONW9ab3hUanM?oc=5",
    "fecha": "Fri, 13 Nov 2026 10:15:38 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "Caída de bitcoin: BTC toca 67.500 dólares, su mínimo desde agosto, con el dólar en máximos de 19 meses - Criptotendencias",
-   "enlace": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1yeElyOEh2V05CZkNyRW1zQV80cEVWWW1ZRGROR1BnLUM5X09UaEpvVEhUNll0VEtQb0Q1Zkp5bklxNXFfZUZ6azFiYUw1aF9teTk3V0FJcl80WWhWVTl6M3RlN1JtR3FYbWpPOWpiUG8wSVJFVjU3WkdVLTU?oc=5",
-   "fecha": "Fri, 13 Nov 2026 22:01:28 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
