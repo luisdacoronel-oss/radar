@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T14:02:05.477Z",
+ "generado": "2026-11-14T14:55:47.068Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -222,21 +222,21 @@
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
-   "nombre": "Bitcoin",
-   "tipo": "cripto (variable)",
-   "riesgo": "Alto",
-   "mensualPct": -17.85,
-   "realPct": null,
-   "donde": "Exchange",
-   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
-  },
-  {
    "nombre": "Pampa Energía",
    "tipo": "accion (variable)",
    "riesgo": "Medio/Alto",
    "mensualPct": -16.14,
    "realPct": -17.95,
    "donde": "Broker (cuenta comitente)",
+   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
+  },
+  {
+   "nombre": "Bitcoin",
+   "tipo": "cripto (variable)",
+   "riesgo": "Alto",
+   "mensualPct": -18.48,
+   "realPct": null,
+   "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -20.64,
+   "mensualPct": -21.42,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73437,16 +73437,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 66369.78125,
-   "variacionDia": -2.75,
-   "variacion30d": -17.85,
+   "precio": 65862.2265625,
+   "variacionDia": -3.5,
+   "variacion30d": -18.48,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75902.72578125,
-   "m50": 80181.9240625,
-   "m200": 72985.481015625,
-   "rsi": 22.54254243835392,
+   "m20": 75877.348046875,
+   "m50": 80171.77296875,
+   "m200": 72982.9432421875,
+   "rsi": 21.96193082027122,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73520,7 +73520,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 22: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75926,9 +75926,9 @@
       "time": "2026-11-14",
       "open": 68238.2109375,
       "high": 68360.7109375,
-      "low": 66535.5078125,
-      "close": 66369.78125,
-      "volume": 30396731392
+      "low": 65825.84375,
+      "close": 65862.2265625,
+      "volume": 31770169344
      }
     ],
     "m20": [
@@ -77130,7 +77130,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75902.7258
+      "value": 75877.348
      }
     ],
     "m50": [
@@ -78332,7 +78332,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80181.9241
+      "value": 80171.773
      }
     ],
     "m200": [
@@ -79534,7 +79534,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72985.481
+      "value": 72982.9432
      }
     ],
     "rsi": [
@@ -80736,7 +80736,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 22.5425
+      "value": 21.9619
      }
     ]
    },
@@ -80752,7 +80752,7 @@
     ]
    },
    "niveles": {
-    "entrada": 66369.78125,
+    "entrada": 65862.2265625,
     "objetivo": 94201.0706875,
     "stop": 62226.578125
    },
@@ -80764,16 +80764,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1869.6199951171875,
-   "variacionDia": -3.01,
-   "variacion30d": -20.64,
+   "precio": 1851.3599853515625,
+   "variacionDia": -3.95,
+   "variacion30d": -21.42,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2193.216259765625,
-   "m50": 2397.2934326171876,
-   "m200": 2145.1270904541016,
-   "rsi": 22.72593723764048,
+   "m20": 2192.303259277344,
+   "m50": 2396.928232421875,
+   "m200": 2145.0357904052735,
+   "rsi": 22.131789814539985,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -80847,7 +80847,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 22: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -83253,9 +83253,9 @@
       "time": "2026-11-14",
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
-      "low": 1881.8056640625,
-      "close": 1869.6199951171875,
-      "volume": 11293173760
+      "low": 1846.871826171875,
+      "close": 1851.3599853515625,
+      "volume": 12292569088
      }
     ],
     "m20": [
@@ -84457,7 +84457,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2193.2163
+      "value": 2192.3033
      }
     ],
     "m50": [
@@ -85659,7 +85659,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2397.2934
+      "value": 2396.9282
      }
     ],
     "m200": [
@@ -86861,7 +86861,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2145.1271
+      "value": 2145.0358
      }
     ],
     "rsi": [
@@ -88063,7 +88063,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 22.7259
+      "value": 22.1318
      }
     ]
    },
@@ -88079,7 +88079,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1869.6199951171875,
+    "entrada": 1851.3599853515625,
     "objetivo": 3073.1508085937503
    },
    "razonesIA": []
@@ -88279,6 +88279,13 @@
  "opinionesFecha": "2026-11-14T14:02:05.477Z",
  "titulares": [
   {
+   "titulo": "Riesgo país, dólar y acciones: así opera el mercado hoy, viernes 30 de octubre - TN",
+   "enlace": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZG9MenFuZ2llcF9iTE44enZUXzU5dlhwdi15SlU2RTB6NWhqc2xnaGFWanNGdDh5WGJPU0Q5ZjdBS3piNXR5SlFQSkJaNzdZMU5zTGRiakdLT0N3LTVGZUlGclJCQi1TQ3R2SkgydE5keGl3YXdkZXBwLVo2aXRmT3NIVTk1YjR5a094SHF3dlU3RWFkMENlNU0xdFBMWnFwQ3Q3dFRMMmhGc0Q5RDRiM3hvQmsxamxqdmRyNDk4bzdob1Bzd0hPZTUyRXh5bndQYm5qZW1PUDBiQdIB7gFBVV95cUxOdXRPR0NLWl9VbmsyUFR0YVI1XzZjUVQ1cUZKZjJaLXhCM3pDNEZnd0htT2RobTZPXzFtMEo2cWNINEJ1RTB0VXVPaXlSVDBTOVJmLTVvYklOTHpPODc1VWhJc2lCSGtwWF81QlJBU3NiY2p5NEVJUVpKcjV0SEFTeV9NSXJadFR4WnpsNUdYVFhVazZnWXM0ejNkQ1ZNek9HaXZzQUdGVEdTd2tPVG10RHVuYWF6SEFRVzFyNXpod2FKU0xiUlhFdTdCYjl0U1JEa1BzbTRaZ09aaXB0bk5HUXUtSXZLSmZrQlZrc2xB?oc=5",
+   "fecha": "Fri, 30 Oct 2026 07:00:00 GMT",
+   "fuente": "",
+   "tema": "mercado argentino acciones hoy"
+  },
+  {
    "titulo": "Los mercados apostaban por Bolsonaro y hoy están que arden: el impacto en Argentina - Página|12",
    "enlace": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcFZWUUFWUWEyelUwVHdOdGN5V1R5WWEwV0JOUmVFU1Zsby01eVhfejJMcTEzcnRtVlBETkFlSFcwSFBWdjRXQkZoVl80X2VwYl9nQW5tTVhsY0Jtb0wxSmowQjY2SWdZa0RjTGtBU1FqVFcyMEo1NGw0eDA2UlQ0MU1UYUdacnVwTkhjcEd0R1VqaE9qb3RXcUhjd1AzWWh0dWdPQnl4bnI3bXpOdXJERnZkSTlXWjgzSktiaFJRTQ?oc=5",
    "fecha": "Mon, 26 Oct 2026 07:00:00 GMT",
@@ -88300,16 +88307,9 @@
    "tema": "mercado argentino acciones hoy"
   },
   {
-   "titulo": "El mercado aguarda con cautela el nuevo informe de MSCI que se conoce hoy: ¿Puede Argentina salir de \"standalone\"? - Perfil",
-   "enlace": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPMzJybzY1eUtEUGI1N3RHWU9ubm94bjBma0ZrSUdHbnF4SUtxMUl0ME8zTVJoVDUwODlQbTFkODJ6OC1heDBfMGltcHpjTzBzSGFLZ3dXQ3NDMzNTNjdZUXJBQW8yUEl4QzRlSTRYVzlTdHV1MFgyNXp0bFpGaTdTWE1pVlJSVzNCVmo2TjVwMmRFLWE3LWdSMEFRX0I1NnZGM2dUTHJfbUV6RnBZcDdPYUVsdDl3d0tPaFlYb0NWWm5YUzhpd1MwbW1peXAwR2JmNVRDSy1fT0VZZFJmcmVXRktFQ3VDcGlocjZDekp1cFFmdw?oc=5",
-   "fecha": "Tue, 23 Jun 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "mercado argentino acciones hoy"
-  },
-  {
-   "titulo": "Mercados: subió la Bolsa argentina y bajó el riesgo país pese a la rueda negativa de Wall Street - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWElqekJqWmVpdURzNnItQ3huTHg4THBMNmlHSU54eTZyMy1nZVlSU3Q2c2pHRU0wMU5jOWZ5VWxIdGQ1M3AyV18wcWFyMnJucV9QMGtPaEh1VTZJNHJZRkQzbHVXUEhZZ3VWR1JhRXlhaWdzdXFPMmV3akxRQkRjMUFPdFBsZ3pjU0hMM3JzZm5xRnZXVTlWM2Uyc3hmWG1zcmp3MGlZNy1uZ09mRHBMdm5kNWhjSlZOcHJHZTE0bFliZWVGQ3pES3NULTl0S3ozVUFpV0Z3SDB6WUFyOWfSAfgBQVVfeXFMT0FfSkhqMi1ITlB1QVNPT0pxR2J3ZXVVMHlvcDhHRTFMWXBxMGNpUDVVYzhCY1IwcktCRFBlRUtPMWIyaHNPeDJ0cVN4YTAzUWVlMl9WaTREVGl5UW10UkgyUFd5UDlSWEd1MVNfMnRHdVNCNlpJeVNKZDJGcWZqZDZHQkV6OTZlcGxSNGt5TWdCWk14SDhEMy1ZVzB1UjRfNnFNZEp2TlRFU2p6Rm9BS1p6VS1xTGRCVWRvdlp3TFVkMmF4Y2VEcFVlOUFCdk1OZUhsN185VkVvNzVVTTZENm9fSlI2Y3NkWTBOQWwzNFlzT0YyaEZ4OE4?oc=5",
-   "fecha": "Thu, 08 Oct 2026 07:00:00 GMT",
+   "titulo": "Cayeron las acciones argentinas tras la decisión que mantuvo al mercado local en la categoría “aislado” - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNTTFUOG1RV1huekY4ci1ocVpMdkk1NHhWOEM0RWVSblJRRVpxU2xGTjdldFB6VE9EQ0tOWm9YN2gtS1Y1VDd1ZFVxRDgxTWtibEZFMTdnRm51d3BTWXJ6bWtNU2lrdjBlZ3NBSmdoWnF4V2NEUWd5RDk0ZS01ZHpGRXpfOWRJNFBVNHowMzFtY0N6X2t0NElsTTZnNGdxam8tNVRwbzl1cTdLUjZKVDBoanZfcXdGMUo0RjhTbUI0SzJUcE9QX1BIWEhyY3NPdHNQbU5CV3pra2JUalHSAfYBQVVfeXFMTnQ1R1JTU0Vyb08xdTFsaGRlQm9jNm1aSHdVeVJFZVZCLXFESEViVjRWdGVkd3VwcmcwTkl2SU5sUzAxaTl0bFBVVHNwSXl0bk9yNDlfSERnUUd2TlltZHpqMkJmSlZKTzA5OVFZTzlfS3FScGl3NlQtOU92UlUyQU5zSnpEcElkM2pWSUo5U2FPSEktRHpUWEQ2REs4ZUJ6VDE4NDZqQTUtQldFdDF6b2FqREduRGJqVGVqZG5yTVRTTnJIaEtNeHh5bVIyYjFjWmNiLWl1a3NlX0lCeGJyVmZfMTlWTWZESWZLUUdEQXNzVFhlQnhn?oc=5",
+   "fecha": "Wed, 24 Jun 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "mercado argentino acciones hoy"
   },
@@ -88377,9 +88377,9 @@
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Cuánto paga cada banco un plazo fijo en noviembre y qué tasas le ganan a la inflación - Diario Mendoza",
-   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNXlWTHM0OERNZk9ZaXVoSXg2MTBJejV4R3JiaGV2cVNhYTZlSWhPNlZCQ2diTU9TMjQ2bHZyRXJyc3VnQkdaeVZlNjkxWl9GbmFwOFV0QktRU2RNcHhDWUtBRXRPNVJwemhTeE1CNEl0YWRUZFVwZURHa3RIWWFaYU5uRlRZYk01LUNkcVZ4M09ZVGNZOEZzRXo5NG5kM09FRkFhZHVINjhCbGZUdm9jWlo3bGJMc3VSU2fSAb8BQVVfeXFMTUIxYVRkUlY1MzdyR0dqUDBXd2pQOTNzd2lZc0hWb01aajFERXBPM2VleUNFSHBPZ0RJSExqYUEwSFdhT1BZX2gtejZKN3FVNFVmVXBLRkNQdzBIQ1MxMjBobmR2MmVMUGpTMzB6Vk44b3dwaGx2c2NEaUxkSEx2T05ZY0xOeVdyLXV4ckxIeWF6NnBqSFZtS1FRT2JPOFl2bEhhSWwxS2JyUG5fWl9HaHdyNERjV1lpSEFlanFaNVk?oc=5",
-   "fecha": "Fri, 13 Nov 2026 14:25:00 GMT",
+   "titulo": "Plazo fijo: la diferencia de ganancia entre bancos por invertir $4 millones a 30 días - MDZ Online",
+   "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaTZaNzFXWVRlME5QWDMxS1dYXzBCVGxVVlRzeE5aQ0lGTHAxSENabDAyNEFRREw2ZXZQWjU2MUVnZU1raU81eXlDanhMd2d5UGtQY3oxeDhBSEFNbmxNZUs0cmZiOWdVSlh1dW4wQ19FdU1xWlFrUXZZZGc2ZWlHZTRVaW5BcVlZR0FOODl2YWRRUFFrTnZUSXVUOEpWcWs3NzFCTnpqZEhzbTRRaVZQTF9GNWtOb0hQdFdYYTZ5eFY1QUloLXBIdjBEdVFWb1ZPalB4bQ?oc=5",
+   "fecha": "Thu, 12 Nov 2026 13:22:45 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
@@ -88475,9 +88475,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Precio de criptomonedas en Argentina: cuánto valen hoy, 13 de noviembre de 2026 - iProUP",
-   "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaWRVVWNBT0ttX0JaUjNLV1RRTWpzb2RrbDNDNHhTbk84Z1o0RVdpUFBSMnRDSEZWeWpyZDRzOW5WQTI4TnlRYm1HdXY4UlQxNThzdHloQ0hfdV9TdDk3VDlESVRSdG1WTC1xV1hNdWtjR1pPTVVJOThSYjJkLTFMaUg4aFRwQjJWSFR2UE10VkNuNWFGd2tBUTkzM3BtVks3NG80T2lQcTMzYW01Tk95RFhwelQ5Nno1Smkxb0NqaELSAcYBQVVfeXFMUExzZm5WcHlEOF9zU3BuNXotSjlZbFhtSkJsXzk3NmdrdHJQQzBqTmNVWS12Ym9tVHJESVBtY2FlWmRxNG1MSktTeGp1eUpnNVZld0Zpak02aGx4eUFRSGNFcUNRUWNsdUt6aFFfWTFsR1BlQjV3akR1NnBYcGlQQklDNm1xb3kwckY5ZHRhSGswVDE0Tmo1RGVzVEg3dlZ5RUEtczVYUFQ0ZnNFVzBJNzRQZ1dKd2tWQXNxREZKNThiSkNhMXV3?oc=5",
-   "fecha": "Fri, 13 Nov 2026 16:12:25 GMT",
+   "titulo": "Precio de criptomonedas en Argentina: cuánto valen hoy, 10 de noviembre de 2026 - iProUP",
+   "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQR0FmUlh0Um1yUDh6T2dQbF9GM2p1YS1VcUFQY0Fsc2FQMnZWNTZhQ0NRUF9Fa0Y3U3dkdk1XbWlTRG1CVmlHMG1CUExQSGZPeDJBNHJKeHNBMTgzVmlUZ1JiMFdvNEJwSGNqZU81V2gyNENBQy1STzI4dmZXeEZsZ1l5WUxDZXJDWFVHRkxqQlhZRFM3VkwyeWZydUNWQTRxdHhBNU9sY3ZwYVNrYllrS3VjTVJiQlVGR1JJZlBlWG3SAcYBQVVfeXFMTnZJbEJtYWRlYWV5N3U0Sm1ieXAza3ZEY3lqb21FRWJSUUlsNTlXQzRCQXV1ZFZQV3ZMRE5NTWhOQ2prb1YwRnkwYXlPZ2ZVcTNEdWliWjVYeEFBckNwTkZhOGdERkFieUpOV2lmdVhBa0sxQ3RKd3BmYjd5UEI0Z1M5UXZEOHRtYU9TSFRUUWlpa3BxVkxZTXVQSnY0ZW9xMFpmdU16Z1VQT1dzV1M5TjNuRVExbl9Uc3VJT3d0MDhBejNRRTB3?oc=5",
+   "fecha": "Tue, 10 Nov 2026 17:03:12 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
