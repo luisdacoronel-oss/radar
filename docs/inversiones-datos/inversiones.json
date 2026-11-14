@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T17:49:42.854Z",
+ "generado": "2026-11-14T18:20:38.764Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -14,19 +14,19 @@
    "nombre": "Blue",
    "compra": 1555,
    "venta": 1575,
-   "fecha": "2026-11-14T14:58:00.000Z"
+   "fecha": "2026-11-14T17:58:00.000Z"
   },
   "bolsa": {
    "nombre": "Bolsa",
    "compra": 1575.5,
    "venta": 1580.9,
-   "fecha": "2026-11-14T14:58:00.000Z"
+   "fecha": "2026-11-14T17:58:00.000Z"
   },
   "contadoconliqui": {
    "nombre": "Contado con liquidación",
    "compra": 1668.2,
    "venta": 1671.9,
-   "fecha": "2026-11-14T14:58:00.000Z"
+   "fecha": "2026-11-14T17:58:00.000Z"
   },
   "mayorista": {
    "nombre": "Mayorista",
@@ -36,9 +36,9 @@
   },
   "cripto": {
    "nombre": "Cripto",
-   "compra": 1666.61,
-   "venta": 1671.57,
-   "fecha": "2026-11-14T14:58:00.000Z"
+   "compra": 1671.3,
+   "venta": 1675.08,
+   "fecha": "2026-11-14T17:58:00.000Z"
   },
   "tarjeta": {
    "nombre": "Tarjeta",
@@ -59,10 +59,10 @@
   },
   {
    "nombre": "MEP → Cripto (USDT)",
-   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1666.61",
-   "brutoPct": 5.42,
-   "netoPct": 3.62,
-   "gananciaSobreCapital": 36216,
+   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1671.3",
+   "brutoPct": 5.72,
+   "netoPct": 3.92,
+   "gananciaSobreCapital": 39183,
    "conviene": true,
    "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
   },
@@ -86,10 +86,10 @@
   },
   {
    "nombre": "Cripto (USDT) → MEP",
-   "pasos": "Comprar dólares en USDT a $1671.57 → vender por MEP a $1575.5",
-   "brutoPct": -5.75,
-   "netoPct": -7.55,
-   "gananciaSobreCapital": -75473,
+   "pasos": "Comprar dólares en USDT a $1675.08 → vender por MEP a $1575.5",
+   "brutoPct": -5.94,
+   "netoPct": -7.74,
+   "gananciaSobreCapital": -77448,
    "conviene": false,
    "nota": "Camino inverso: comprar USDT con pesos y vender dólares MEP."
   }
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.56,
+   "mensualPct": -18.7,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.64,
+   "mensualPct": -22.3,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73430,16 +73430,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 65796.3984375,
-   "variacionDia": -3.59,
-   "variacion30d": -18.56,
+   "precio": 65685.65625,
+   "variacionDia": -3.76,
+   "variacion30d": -18.7,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75874.056640625,
-   "m50": 80170.45640625,
-   "m200": 72982.6141015625,
-   "rsi": 21.88881124765929,
+   "m20": 75868.51953125,
+   "m50": 80168.2415625,
+   "m200": 72982.060390625,
+   "rsi": 21.766895102544822,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -75920,8 +75920,8 @@
       "open": 68238.2109375,
       "high": 68360.7109375,
       "low": 65089.78515625,
-      "close": 65796.3984375,
-      "volume": 34522017792
+      "close": 65685.65625,
+      "volume": 34712256512
      }
     ],
     "m20": [
@@ -77123,7 +77123,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75874.0566
+      "value": 75868.5195
      }
     ],
     "m50": [
@@ -78325,7 +78325,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80170.4564
+      "value": 80168.2416
      }
     ],
     "m200": [
@@ -79527,7 +79527,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72982.6141
+      "value": 72982.0604
      }
     ],
     "rsi": [
@@ -80729,7 +80729,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 21.8888
+      "value": 21.7669
      }
     ]
    },
@@ -80764,16 +80764,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1846.0799560546875,
-   "variacionDia": -4.23,
-   "variacion30d": -21.64,
+   "precio": 1830.5,
+   "variacionDia": -5.04,
+   "variacion30d": -22.3,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2192.0392578125,
-   "m50": 2396.8226318359375,
-   "m200": 2145.009390258789,
-   "rsi": 21.965734237351157,
+   "m20": 2191.2602600097657,
+   "m50": 2396.5110327148436,
+   "m200": 2144.9314904785156,
+   "rsi": 21.48995838066753,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80847,7 +80847,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 22: zona de sobreventa, posible rebote."
+     "texto": "RSI en 21: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -83254,8 +83254,8 @@
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
       "low": 1814.037353515625,
-      "close": 1846.0799560546875,
-      "volume": 13734416384
+      "close": 1830.5,
+      "volume": 13859887104
      }
     ],
     "m20": [
@@ -84457,7 +84457,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2192.0393
+      "value": 2191.2603
      }
     ],
     "m50": [
@@ -85659,7 +85659,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2396.8226
+      "value": 2396.511
      }
     ],
     "m200": [
@@ -86861,7 +86861,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2145.0094
+      "value": 2144.9315
      }
     ],
     "rsi": [
@@ -88063,7 +88063,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 21.9657
+      "value": 21.49
      }
     ]
    },
@@ -88079,7 +88079,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1846.0799560546875,
+    "entrada": 1830.5,
     "objetivo": 1544.3597792968749
    },
    "razonesIA": []
@@ -88382,16 +88382,16 @@
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Las tasas en pesos, dentro de una montaña rusa: el BCRA busca ahora plancharlas - El Cronista",
-   "enlace": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMmVxVmhwM3RKaEktdTNZbVg4QlZZSjRwVnNYcTNadV9mWm54WUJzY2FqNUsxR2NrbkVtQkZWejVFZDllMG43dEhMTHo3VzlMUnhIenNsbENoZUg1WlQzaVktS3M3bGN2T05wTnZacjJKbUgxMjdjVkxsa1Rmd19samJqLWNuTVdGUmJTSEJOT3N0T0ZBRHoyZC1lUllxSzVKTldUYWozUG1nVFliY0dRSlZQWDZxMWhCNGFFT3V30gHYAUFVX3lxTE1PdFl1TDAtNEczSXdYY1Atd1NIWUtlUVFFTEZubXkxX3FiM1d6YVBFQnc0MzR2Y3J5RHNab0pCNzViZ0JTMjZUdmk3WHJ0Tkg1cjFaWFh2a0JpZEtnQXNFeUQyV3RiLXh4dU5IczY0NUJidkk3TkJ4TVlfSVRhUHV4WS1VdkV2YVk0Y0s1VHA1ckgyckdwenFMQW5wU0pQRlltZldJWVg5LXBxeFpqV3hoaWtJOXB1WkxSa3R1WjRNRklza0I1Nl9vdGI3QmtmLTNudnZ2Tnk3QQ?oc=5",
-   "fecha": "Fri, 13 Nov 2026 12:55:49 GMT",
+   "titulo": "Plazo fijo: la diferencia de ganancia entre bancos por invertir $4 millones a 30 días - MDZ Online",
+   "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaTZaNzFXWVRlME5QWDMxS1dYXzBCVGxVVlRzeE5aQ0lGTHAxSENabDAyNEFRREw2ZXZQWjU2MUVnZU1raU81eXlDanhMd2d5UGtQY3oxeDhBSEFNbmxNZUs0cmZiOWdVSlh1dW4wQ19FdU1xWlFrUXZZZGc2ZWlHZTRVaW5BcVlZR0FOODl2YWRRUFFrTnZUSXVUOEpWcWs3NzFCTnpqZEhzbTRRaVZQTF9GNWtOb0hQdFdYYTZ5eFY1QUloLXBIdjBEdVFWb1ZPalB4bQ?oc=5",
+   "fecha": "Thu, 12 Nov 2026 13:22:45 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Plazo fijo: la diferencia de ganancia entre bancos por invertir $4 millones a 30 días - MDZ Online",
-   "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaTZaNzFXWVRlME5QWDMxS1dYXzBCVGxVVlRzeE5aQ0lGTHAxSENabDAyNEFRREw2ZXZQWjU2MUVnZU1raU81eXlDanhMd2d5UGtQY3oxeDhBSEFNbmxNZUs0cmZiOWdVSlh1dW4wQ19FdU1xWlFrUXZZZGc2ZWlHZTRVaW5BcVlZR0FOODl2YWRRUFFrTnZUSXVUOEpWcWs3NzFCTnpqZEhzbTRRaVZQTF9GNWtOb0hQdFdYYTZ5eFY1QUloLXBIdjBEdVFWb1ZPalB4bQ?oc=5",
-   "fecha": "Thu, 12 Nov 2026 13:22:45 GMT",
+   "titulo": "Cuánto paga cada banco un plazo fijo en noviembre y qué tasas le ganan a la inflación - Diario Mendoza",
+   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNXlWTHM0OERNZk9ZaXVoSXg2MTBJejV4R3JiaGV2cVNhYTZlSWhPNlZCQ2diTU9TMjQ2bHZyRXJyc3VnQkdaeVZlNjkxWl9GbmFwOFV0QktRU2RNcHhDWUtBRXRPNVJwemhTeE1CNEl0YWRUZFVwZURHa3RIWWFaYU5uRlRZYk01LUNkcVZ4M09ZVGNZOEZzRXo5NG5kM09FRkFhZHVINjhCbGZUdm9jWlo3bGJMc3VSU2fSAb8BQVVfeXFMTUIxYVRkUlY1MzdyR0dqUDBXd2pQOTNzd2lZc0hWb01aajFERXBPM2VleUNFSHBPZ0RJSExqYUEwSFdhT1BZX2gtejZKN3FVNFVmVXBLRkNQdzBIQ1MxMjBobmR2MmVMUGpTMzB6Vk44b3dwaGx2c2NEaUxkSEx2T05ZY0xOeVdyLXV4ckxIeWF6NnBqSFZtS1FRT2JPOFl2bEhhSWwxS2JyUG5fWl9HaHdyNERjV1lpSEFlanFaNVk?oc=5",
+   "fecha": "Fri, 13 Nov 2026 14:25:00 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
