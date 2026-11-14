@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T22:51:30.990Z",
+ "generado": "2026-11-14T23:21:17.130Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -243,7 +243,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.57,
+   "mensualPct": -21.03,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -261,7 +261,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -25.94,
+   "mensualPct": -25.67,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73443,16 +73443,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 63360.640625,
-   "variacionDia": -7.16,
-   "variacion30d": -21.57,
+   "precio": 63798.75,
+   "variacionDia": -6.52,
+   "variacion30d": -21.03,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75752.26875,
-   "m50": 80121.74125,
-   "m200": 72970.4353125,
-   "rsi": 19.488024618437308,
+   "m20": 75774.17421875,
+   "m50": 80130.5034375,
+   "m200": 72972.625859375,
+   "rsi": 19.880218655766257,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73526,7 +73526,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 19: zona de sobreventa, posible rebote."
+     "texto": "RSI en 20: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75932,9 +75932,9 @@
       "time": "2026-11-14",
       "open": 68238.2109375,
       "high": 68360.7109375,
-      "low": 63561.41796875,
-      "close": 63360.640625,
-      "volume": 41006051328
+      "low": 63506.33984375,
+      "close": 63798.75,
+      "volume": 42769870848
      }
     ],
     "m20": [
@@ -77136,7 +77136,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75752.2688
+      "value": 75774.1742
      }
     ],
     "m50": [
@@ -78338,7 +78338,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80121.7413
+      "value": 80130.5034
      }
     ],
     "m200": [
@@ -79540,7 +79540,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72970.4353
+      "value": 72972.6259
      }
     ],
     "rsi": [
@@ -80742,7 +80742,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 19.488
+      "value": 19.8802
      }
     ]
    },
@@ -80777,16 +80777,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1744.9300537109375,
-   "variacionDia": -9.48,
-   "variacion30d": -25.94,
+   "precio": 1751.219970703125,
+   "variacionDia": -9.15,
+   "variacion30d": -25.67,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2186.9817626953127,
-   "m50": 2394.7996337890627,
-   "m200": 2144.50364074707,
-   "rsi": 19.20524578615742,
+   "m20": 2187.296258544922,
+   "m50": 2394.9254321289063,
+   "m200": 2144.5350903320314,
+   "rsi": 19.356513692217987,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80795,32 +80795,32 @@
     },
     "hasta": {
      "fecha": "2026-11-14",
-     "precio": 1746.80078125
+     "precio": 1743.121826171875
     },
     "retroceso": [
      {
       "nivel": 0,
-      "precio": 1746.80078125
+      "precio": 1743.121826171875
      },
      {
       "nivel": 0.236,
-      "precio": 1996.6535664062499
+      "precio": 1993.8428447265624
      },
      {
       "nivel": 0.382,
-      "precio": 2151.223509765625
+      "precio": 2148.949915527344
      },
      {
       "nivel": 0.5,
-      "precio": 2276.14990234375
+      "precio": 2274.3104248046875
      },
      {
       "nivel": 0.618,
-      "precio": 2401.076294921875
+      "precio": 2399.670934082031
      },
      {
       "nivel": 0.786,
-      "precio": 2578.937599609375
+      "precio": 2578.1503032226565
      },
      {
       "nivel": 1,
@@ -80830,19 +80830,19 @@
     "extension": [
      {
       "nivel": 1.272,
-      "precio": 1458.834859375
+      "precio": 1454.155228515625
      },
      {
       "nivel": 1.618,
-      "precio": 1092.5252675781248
+      "precio": 1086.5727182617186
      },
      {
       "nivel": 2,
-      "precio": 688.1025390625
+      "precio": 680.74462890625
      },
      {
       "nivel": 2.618,
-      "precio": 33.827025390625295
+      "precio": 24.19552099609382
      }
     ]
    },
@@ -80865,7 +80865,7 @@
     {
      "clave": "fib_objetivo",
      "peso": 0,
-     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1458.83."
+     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1454.16."
     }
    ],
    "grafico": {
@@ -83266,9 +83266,9 @@
       "time": "2026-11-14",
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
-      "low": 1746.80078125,
-      "close": 1744.9300537109375,
-      "volume": 17451098112
+      "low": 1743.121826171875,
+      "close": 1751.219970703125,
+      "volume": 17897869312
      }
     ],
     "m20": [
@@ -84470,7 +84470,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2186.9818
+      "value": 2187.2963
      }
     ],
     "m50": [
@@ -85672,7 +85672,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2394.7996
+      "value": 2394.9254
      }
     ],
     "m200": [
@@ -86874,7 +86874,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2144.5036
+      "value": 2144.5351
      }
     ],
     "rsi": [
@@ -88076,7 +88076,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 19.2052
+      "value": 19.3565
      }
     ]
    },
@@ -88092,8 +88092,8 @@
     ]
    },
    "niveles": {
-    "entrada": 1744.9300537109375,
-    "objetivo": 1458.834859375
+    "entrada": 1751.219970703125,
+    "objetivo": 1454.155228515625
    },
    "razonesIA": []
   }
