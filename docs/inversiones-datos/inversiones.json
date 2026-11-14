@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T09:28:23.580Z",
+ "generado": "2026-11-14T10:25:27.901Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -225,7 +225,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -17.02,
+   "mensualPct": -16.82,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: COMPRAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -243,7 +243,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.31,
+   "mensualPct": -19.1,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73457,16 +73457,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 67041.1484375,
-   "variacionDia": -1.77,
-   "variacion30d": -17.02,
+   "precio": 67199.359375,
+   "variacionDia": -1.54,
+   "variacion30d": -16.82,
    "puntaje": 40,
    "puntajeBase": 40,
    "accion": "COMPRAR",
-   "m20": 75936.294140625,
-   "m50": 80195.35140625,
-   "m200": 72988.8378515625,
-   "rsi": 23.35941524376122,
+   "m20": 75944.2046875,
+   "m50": 80198.515625,
+   "m200": 72989.62890625,
+   "rsi": 23.560608975558196,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73540,7 +73540,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 24: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_soporte",
@@ -75952,8 +75952,8 @@
       "open": 68238.2109375,
       "high": 68360.7109375,
       "low": 66535.5078125,
-      "close": 67041.1484375,
-      "volume": 32167415808
+      "close": 67199.359375,
+      "volume": 31897782272
      }
     ],
     "m20": [
@@ -77155,7 +77155,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 75936.2941
+      "value": 75944.2047
      }
     ],
     "m50": [
@@ -78357,7 +78357,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80195.3514
+      "value": 80198.5156
      }
     ],
     "m200": [
@@ -79559,7 +79559,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 72988.8379
+      "value": 72989.6289
      }
     ],
     "rsi": [
@@ -80761,7 +80761,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 23.3594
+      "value": 23.5606
      }
     ]
    },
@@ -80802,16 +80802,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1901.02001953125,
-   "variacionDia": -1.38,
-   "variacion30d": -19.31,
+   "precio": 1905.8800048828125,
+   "variacionDia": -1.13,
+   "variacion30d": -19.1,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2194.786260986328,
-   "m50": 2397.9214331054686,
-   "m200": 2145.284090576172,
-   "rsi": 23.825841564752594,
+   "m20": 2195.029260253906,
+   "m50": 2398.0186328125,
+   "m200": 2145.30839050293,
+   "rsi": 24.005667308478607,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -83292,8 +83292,8 @@
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
       "low": 1881.8056640625,
-      "close": 1901.02001953125,
-      "volume": 12038833152
+      "close": 1905.8800048828125,
+      "volume": 11857126400
      }
     ],
     "m20": [
@@ -84495,7 +84495,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2194.7863
+      "value": 2195.0293
      }
     ],
     "m50": [
@@ -85697,7 +85697,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2397.9214
+      "value": 2398.0186
      }
     ],
     "m200": [
@@ -86899,7 +86899,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2145.2841
+      "value": 2145.3084
      }
     ],
     "rsi": [
@@ -88101,7 +88101,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 23.8258
+      "value": 24.0057
      }
     ]
    },
@@ -88117,7 +88117,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1901.02001953125,
+    "entrada": 1905.8800048828125,
     "objetivo": 3073.1508085937503,
     "stop": 1821.485107421875
    },
@@ -88522,6 +88522,13 @@
    "tema": "CNV normativa dólar parking"
   },
   {
+   "titulo": "Más trabas: las reservas del BCRA tocan un nuevo piso y amplían restricciones para operar con los dólares financieros - La Nación",
+   "enlace": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSkd5MUJ1N01zeTlaMjN1bV9meXFiRXJ4ZzNvNHpUOHlvTnVkQUsxeE5URDI3T3kwcXd3aHZRUGVUTkdlb2dJeHVJZ3VpdTBNNXNHNi1udEJkdGJtTGxDVGlJTUxER2ZPU21XVGk4aldqTkpDSFpLNmsxSzl2dEgwbzBJdUl2M3Q4ZWw4S2Yzb0pmY0VaZ0xMaTFmT2FCNm44aS0yYmlJMFNDRW51RkNza2lKQ1dJN0l1U0NvWlk5VWFQOTA?oc=5",
+   "fecha": "Wed, 24 May 2023 07:00:00 GMT",
+   "fuente": "",
+   "tema": "CNV normativa dólar parking"
+  },
+  {
    "titulo": "Chau al cepo: eliminan el parking de dólar financiero para personas humanas - iProfesional",
    "enlace": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOazNVVDJVTDNpZXVLSHNwd1FfaGdaYVFrQm4zaFJlU2w4S0JObVZzN1F0X3MzOFk4Tnlub005cVVKaUM5bDVlaWtKUnhiSW5XU1A4ZzBod2pDa3lhOVN6STdPSlU5UHlCTEFxTmp4M2EyUEF4R1VwZzRtYzhDYmlOVWJBaUZZdElBYUo2cl91ZWhNZ01paFZlcFp6Wi1RZ3dfaFVDX21pVGI5YUt4aWk5aWJvODBKRGlLdnE00gHAAUFVX3lxTE9OQjM5YVlHV3VhbzdLdnNIMDB4WG5ReHY5aU9idzRXR2p2QUliaU9JOERUdjBPUVdZUVVGMlpSbTRxX1doaWFPcnpIYk1yUjF6cmhaQ2pZcTY4eGxCNHo0X1V4MUdsaHV6blZpal9MR1k0SUhORTJFRG10bUNkZ2NYMGlrdHBBYV9Nb2c1OVNLX2JqbE5hYWp3SVZ1Q2pIWlAxeUwtYU1qNE5teVRPS3Zfei16MDg5V2tmVzhUck9xdQ?oc=5",
    "fecha": "Mon, 14 Apr 2025 07:00:00 GMT",
@@ -88539,13 +88546,6 @@
    "titulo": "Compra de Dólar MEP: qué deben tener en cuenta los inversores tras los cambios de la CNV - Forbes Argentina",
    "enlace": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQa29rcmtkTEdWVVQ0VExwUEk0ZjJVRmRnUFdSX044Z0lvd1NmaWFWcmZlYjhxX2Y1T3pSVjRLNmV6NGZCXzBwYXVaOWdJTnlmVFBidS1JeXJPbFNfNFJGQXR3Z3pNZHFnZURmVkZJV3pIQkFmTjk4VkNHazVDVW1MWUstMmpnWmNRTE43b0tTVHpEWkh4U3BRWHB5YkpzblVPNEtfQ0IzVlZURVk20gGyAUFVX3lxTE5wN3B0RWcyLUNQMU5UNzQzNUEyYXE0YU1JU3hWUVVFa20wcWhtTlNSdTZzQnBWdTZDenByUnpQaElSMFZnRDBCRDdrZEJHNFFvdEt2Wko0NnVfTlRYelc5LUJkRWlHUGpoYkpINFZZcU5vNHpyU3dnOWR3ckQ5Qk9Sa081RUtfWVkxZDJobXV0YnhTbTBxTHJKbFA5ZHZMRFU3cVozT19tVFAwNmZWLXRvRlE?oc=5",
    "fecha": "Thu, 14 Dec 2023 08:00:00 GMT",
-   "fuente": "",
-   "tema": "CNV normativa dólar parking"
-  },
-  {
-   "titulo": "Toda la normativa sobre la compra de dólar MEP: Lo que necesitas saber - Dolarhoy.com",
-   "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWU1kRmtjSDB1U2tyaWhHaHhBQkx0ZWI5QlBfeU9vQ1V2N2w0SWhEdk51LTJUX3hnNmNVYml4YWNjcGVjMDBXWHVfNjRJZzBZcldIVHREaE52a0NxVjdGMHZFWFlIb3piYnB2S0lFYjFWUUFza0lsTjBPemlZdms2enVSU3YwX0NKSzBvek1oektBeFp0eGprSklSVE1taEhhRFhXS3FUVThONTJjVE40?oc=5",
-   "fecha": "Mon, 07 Aug 2023 07:00:00 GMT",
    "fuente": "",
    "tema": "CNV normativa dólar parking"
   },
@@ -88599,16 +88599,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Precio de Bitcoin hoy 13 de noviembre: a cuánto opera en dólares, pesos argentinos y pesos mexicanos tras caer 4,86% - Cripto247",
-   "enlace": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOSHQ4aGlNWnJqSERGMVM5YWR1UW1FYm1HclBHdlVqRm1BSFdBS1pocGRrMDJNOEUzUDA2WnNvQUdPVWhuMGh1UlJwa01DUTFVa1V5ZE1mMFBuUzM2angtOUtqRWNWUlA4Tk9KQmRLXzFzYnRtaVlyQm9jZTFxU0lhLWVIOXhLVlJxT3I4MDFJckl1eFhoNUFLcUpjYl9BV2o4TFF5cnJzLXdQdGdRREtwZC1fT3VKcHgxenptelJnVTJOWkNhSXJOblhIQnptS3c0ZkZoenpZSzBwZ1JjS0JWMFExRk9oYUJpNGJtUjJmTjJlR1I2Mlhkcg?oc=5",
-   "fecha": "Fri, 13 Nov 2026 12:34:56 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "Bitcoin hoy: cotización y precio del BTC este viernes 13 de noviembre de 2026 - FM Del Condado",
-   "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQS29qSWdHNVlVU3NIWDJET1VlZ1Y5anVyRjY2cGgzS3VvM0MzNDRnYmhXZWJxZGJfcXlFa2lSZVNfTmtGQzY5VVZoeXEwYy1pT1doUHhaM2x2QkJZTm9WVzBUQnE4cUt5SHk0QU1vNGNtU3Q3TG52WEpxc1FsNkJtNTlTS2dOUmdROFdkNngweHZxMEpBaGhqdDljSDkyamh5NDlYblRwTQ?oc=5",
-   "fecha": "Fri, 13 Nov 2026 11:20:00 GMT",
+   "titulo": "Precio de Bitcoin hoy: retrocede 3,91% y cotiza por debajo de los USD 72.000 - Cripto247",
+   "enlace": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQd0o0Wms1VEhCTUhHYy1HSGtzOERKbUpjZTNsREdaLTZBb0t3eE8wbnBPZy05WmRxajZQQVVQd2ZhNXcyT2VLOEF6eVkwYmZNb2w3aTJzMXVlNkEtTExrTFd5eTl6dHhTUV9SVjBMcnUyalBMUTZFRlhEUlFmQXpjQVRacEs2Y3JjMVI4c3U1YzJuMXg5eUxFZC0xRjZvX3hwa19uLUdtUlo3NkpxZHdnOGZQMXlKT2M?oc=5",
+   "fecha": "Thu, 12 Nov 2026 20:16:45 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
@@ -88616,6 +88609,13 @@
    "titulo": "El precio del Bitcoin hoy, 13 de noviembre: el Bitcoin en plena caída - Expansión",
    "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPS3NLRlhFR0tTTE5UZFQxVy1BNmRPYktJSlBCSl9xcy0tYmFyQ2JuWDA5UGFLN0lwellHSS1vRnhzRTJPbWZCaVZEX19aUWw0ekVPalh4Q3Q4N2k5dWVaUElIQVBBelZTZ1kyNE5XWl8xbG04OXRhX3BQdklrZ0JPdDdEVGdESkdrZGQ3WklXSUVnWmlqckhQdUx5Wng2bzNRUk5aS0FoS3dnODE3SmFv0gGvAUFVX3lxTFBScXNWU1RRRFdERnU4eDZHOF9DU0FPYWgtRFZwamtyYl9WcDFadWdLUEZaMXVRU2JyY0NjWVZYdlpQRWpjdVZiOUV3SUZhVWJFQU5EWjNVemRqZXR6ekNscTdJdnhNbllZU012TElHd3FHd05YM0I4a2ZJYUpsWExCZUZhY0hYMFgxLVNySW1WcWoyQW41VjdBMVVyek1DSjFPLTNPVWFONW9ab3hUanM?oc=5",
    "fecha": "Fri, 13 Nov 2026 10:15:38 GMT",
+   "fuente": "",
+   "tema": "bitcoin precio hoy"
+  },
+  {
+   "titulo": "Caída de bitcoin: BTC toca 67.500 dólares, su mínimo desde agosto, con el dólar en máximos de 19 meses - Criptotendencias",
+   "enlace": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1yeElyOEh2V05CZkNyRW1zQV80cEVWWW1ZRGROR1BnLUM5X09UaEpvVEhUNll0VEtQb0Q1Zkp5bklxNXFfZUZ6azFiYUw1aF9teTk3V0FJcl80WWhWVTl6M3RlN1JtR3FYbWpPOWpiUG8wSVJFVjU3WkdVLTU?oc=5",
+   "fecha": "Fri, 13 Nov 2026 22:01:28 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
@@ -88634,6 +88634,13 @@
    "tema": "inflación INDEC"
   },
   {
+   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarin.com",
+   "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdS03LXh2b0hXYkEwTlNfQnJnaU9sUk1mWEI0Y0hUTHNUODZjS3pBM0d2OFlBZ1FidmVzLWlzODQ4Ulh2UmVtMUpiMGhPSThXQ2kzb2djdFJOUkk0TUxMOW1GZHhtMFlxRjRZOTlmay1keUN0dndTMEVpcWxLSEJhU0NXdWh2LXljVWhWSTlGaHdyWG9aQnVTVU5tTFlQTW1mMG14TTZvRFFxTEVfa3V3WEJR?oc=5",
+   "fecha": "Thu, 12 Nov 2026 21:30:40 GMT",
+   "fuente": "",
+   "tema": "inflación INDEC"
+  },
+  {
    "titulo": "A cuánto habría llegado la inflación de octubre con el nuevo índice de precios que el Gobierno postergó - Infobae",
    "enlace": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOQ2laaWp4OHJXMWlxbFNKRTFMc1M3VEFGTl94a1ZnQThuMzJTOFJSclM2TUNWM0FXQXVYS09oc2xPV05fVS1XelZ3T2lFQk9Fd3VxLVVjM1ZDcG1IOEpMeWZkNFZTOGZHM3JBMHZ4azVGZTNnLU9GZTJqZjY2aUU3SW96VVlvS2hOb0pGX05faGIyWTR1SEtSZFlWZFV0MEh2bVRTSmpvM3ZHdEFTMUh2SWp4VXhscG1UclRZTS1uOXVyMjg2R3I0V09QNWRmRDVIU2NWcEJZVGpXdllLVUtwQV9B0gH8AUFVX3lxTE94MFh0dVgtS0JYTnFxOXdMbGd0R3R5cUNURUVKQW5vR25HMTJyVE5fQm1iMVF3dGFkZ2FYTWFmTWduS1pmQ0lQbmhmMU9oamMyQmlZUGRsbkh1c29HWms4TFdwam1qdFppcVZKMllaQ0psM1ZtNkFvdFlmb1R5eGJOOWZfQVNLelVadW45T3lnN1FvaDdnb05DRVg2RnhaWVNzbHpBSU54Wko2Tk9fdmVzc1dWeWZmZUlSU3NrOGhJblhUbU40aGxXS19kMUw1cklnWE9LMWJnV2dNMFBIN29uNlEyb3JLTnBDVFFSSC10YWxpOUFfWnJCODFaYg?oc=5",
    "fecha": "Fri, 13 Nov 2026 12:08:00 GMT",
@@ -88644,13 +88651,6 @@
    "titulo": "El mercado alerta por estanflación tras el dato de inflación IPC INDEC - iProfesional",
    "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMXp2a2M5d1AzYlNCcXNtNTNxMGdtMUx4bURwenRIU1hOSVlDU0hCMHFNY2R1Q05Zb3RXZFVueU1jQXdmbHNBN1RvVEJ6RE1OZ0p2b0hLOG9XZW5oM2FfQzlPX19wX2VnaUE4MjY1RzIwRFZzTE5FWFlrYUtmNjhqdTZMYnl0ejZOTWdiV3k3Y0VDLVpOckV4X3M1Ry03cXhnOG05SG1tVlNUZUw3eWFNS2Zmd29vQdIBuwFBVV95cUxOZ1U1VU91MlBndDhvUEpWZVo4dktCazBuSE9yYmYxaFJoemRCMkpHSVZhcGMxRkIySkJ6Q0pKMmlQU2JTZnFYa3duRjVFVTdfM3FmTTctS3BaYVlKdDFpWXQ5c3NZYnFUcTB1YlVfMS1lMmFmRWk2OTJxQWw0M3M5d1VjSHczQ2tSa3d4SEx4MzkweVFkSWIwT0ZfNU1SdHkzRlBzM2xLTXBqNEVnbVlBZnBfVGxnaUFhZ3Bv?oc=5",
    "fecha": "Fri, 13 Nov 2026 10:19:08 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
-   "titulo": "Inflación de octubre 2026: a qué hora publica hoy el INDEC el dato del IPC - Clarin.com",
-   "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbUJSRlAxLUVSLXNxMW5TTDc5N192RldJZ3A1SWNOdG1YeWFGMHBfbUp0TGpOUkV2YmdVdkYyRVZzTlJuT0VBNS0tOWhjaTUzbHJHUEtuSkVpNjg3WUhHS3d4SU1UZS1ZZnZDZW1jZndCU1dvWEtIQW1MOG1NV2htNEJ1ekd4S085b0ZnaEhWVkp3dVJyQWVRNHFRQmhHTVJUWHprT0tmaUN5YTRlRlRtaVFXZVZHZw?oc=5",
-   "fecha": "Thu, 12 Nov 2026 15:02:59 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
