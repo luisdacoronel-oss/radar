@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T00:22:59.382Z",
+ "generado": "2026-11-14T01:48:30.649Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 829,
@@ -216,7 +216,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -15.76,
+   "mensualPct": -15.75,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: COMPRAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -243,7 +243,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.91,
+   "mensualPct": -19.12,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -2771,10 +2771,10 @@
      {
       "time": "2026-11-13",
       "open": 72.91999816894531,
-      "high": 73.75,
+      "high": 73.80000305175781,
       "low": 72.54000091552734,
       "close": 73.75,
-      "volume": 44094
+      "volume": 44200
      }
     ],
     "m20": [
@@ -39259,11 +39259,11 @@
      },
      {
       "time": "2026-11-13",
-      "open": 1479.800048828125,
+      "open": 1478.9000244140625,
       "high": 1497.260009765625,
       "low": 1463.199951171875,
       "close": 1491.489990234375,
-      "volume": 581487
+      "volume": 586100
      }
     ],
     "m20": [
@@ -46592,9 +46592,9 @@
       "time": "2026-11-13",
       "open": 760.0700073242188,
       "high": 760.1199951171875,
-      "low": 747.8900146484375,
+      "low": 747.8800048828125,
       "close": 754.3699951171875,
-      "volume": 37233821
+      "volume": 38391200
      }
     ],
     "m20": [
@@ -53924,11 +53924,11 @@
      },
      {
       "time": "2026-11-13",
-      "open": 357.9649963378906,
+      "open": 357.9599914550781,
       "high": 360.8299865722656,
-      "low": 355.7578125,
+      "low": 355.75,
       "close": 356.2699890136719,
-      "volume": 39099985
+      "volume": 39985300
      }
     ],
     "m20": [
@@ -61264,11 +61264,11 @@
      },
      {
       "time": "2026-11-13",
-      "open": 169.88999938964844,
+      "open": 169.91000366210938,
       "high": 170,
       "low": 158.38999938964844,
       "close": 162.85000610351562,
-      "volume": 362490337
+      "volume": 363819700
      }
     ],
     "m20": [
@@ -68599,10 +68599,10 @@
      {
       "time": "2026-11-13",
       "open": 356.2699890136719,
-      "high": 357.318115234375,
+      "high": 357.32000732421875,
       "low": 354.4100036621094,
       "close": 355.45001220703125,
-      "volume": 11703859
+      "volume": 11863900
      }
     ],
     "m20": [
@@ -73445,16 +73445,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 68293.640625,
-   "variacionDia": -4.27,
-   "variacion30d": -15.76,
+   "precio": 68301.1796875,
+   "variacionDia": -4.26,
+   "variacion30d": -15.75,
    "puntaje": 40,
    "puntajeBase": 40,
    "accion": "COMPRAR",
-   "m20": 76587.65546875,
-   "m50": 80536.11421875,
-   "m200": 73035.6073046875,
-   "rsi": 25.048485332140245,
+   "m20": 76588.032421875,
+   "m50": 80536.265,
+   "m200": 73035.645,
+   "rsi": 25.05863848826145,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -75939,9 +75939,9 @@
       "time": "2026-11-14",
       "open": 68238.2109375,
       "high": 68360.7109375,
-      "low": 68238.2109375,
-      "close": 68293.640625,
-      "volume": 42080714752
+      "low": 68128.515625,
+      "close": 68301.1796875,
+      "volume": 41841942528
      }
     ],
     "m20": [
@@ -77143,7 +77143,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 76587.6555
+      "value": 76588.0324
      }
     ],
     "m50": [
@@ -78345,7 +78345,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80536.1142
+      "value": 80536.265
      }
     ],
     "m200": [
@@ -79547,7 +79547,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 73035.6073
+      "value": 73035.645
      }
     ],
     "rsi": [
@@ -80749,7 +80749,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 25.0485
+      "value": 25.0586
      }
     ]
    },
@@ -80784,16 +80784,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1933.1500244140625,
-   "variacionDia": -4.15,
-   "variacion30d": -18.91,
+   "precio": 1928.199951171875,
+   "variacionDia": -4.39,
+   "variacion30d": -19.12,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2216.359326171875,
-   "m50": 2413.821767578125,
-   "m200": 2147.2538946533205,
-   "rsi": 25.05113065336829,
+   "m20": 2216.1118225097657,
+   "m50": 2413.722766113281,
+   "m200": 2147.229144287109,
+   "rsi": 24.865899800998378,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -83272,10 +83272,10 @@
      {
       "time": "2026-11-14",
       "open": 1927.4058837890625,
-      "high": 1933.083984375,
-      "low": 1927.4058837890625,
-      "close": 1933.1500244140625,
-      "volume": 15203064832
+      "high": 1933.090087890625,
+      "low": 1926.475830078125,
+      "close": 1928.199951171875,
+      "volume": 14818779136
      }
     ],
     "m20": [
@@ -84477,7 +84477,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2216.3593
+      "value": 2216.1118
      }
     ],
     "m50": [
@@ -85679,7 +85679,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2413.8218
+      "value": 2413.7228
      }
     ],
     "m200": [
@@ -86881,7 +86881,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2147.2539
+      "value": 2147.2291
      }
     ],
     "rsi": [
@@ -88083,7 +88083,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 25.0511
+      "value": 24.8659
      }
     ]
    },
@@ -88099,7 +88099,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1933.1500244140625,
+    "entrada": 1928.199951171875,
     "objetivo": 3078.16408203125,
     "stop": 1803.053955078125
    },
@@ -88486,6 +88486,13 @@
    "tema": "Wall Street hoy"
   },
   {
+   "titulo": "Wall Street tiene cierre mixto tras caídas por escándalo de Nvidia; BMV avanza 0.26% semanal - El Financiero",
+   "enlace": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNM0xFaUtwakdVdXh2bnd5Q1ItaXF1MERUeVhqWDFCWGx0b3ByTHpPT0ZIb0pJZEl2bnZCeDVodS1Ma3V1MlpkNW9OaVE1QVN4bEN4VXpYaTQzVm5lVm5hLWprUmVHMENNVzJtazAxN1A4dHo5SklKRERGb2R4MkFrb2FRb01Ud3p1bEZxR25XWkgyTG5VQkw5VjFhSHM?oc=5",
+   "fecha": "Fri, 13 Nov 2026 23:18:14 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
    "titulo": "BMV y Wall Street hoy: así cotizan las bolsas este 13 de noviembre de 2026 - EL CEO",
    "enlace": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYklBSkczYUZmTFBZd2xpQmQ2SEhaY1k1OGhtM1ZVY0daR1VTakhzbGxNZllnbjMwOWZnY0l4UmQzZzRyTW5Wc2VwMFdJR0JXTVhKV1BpMVhZSTFSSjJOVHJqNWtkUzF4VkVfeXFjY0VDQjFTY1hzamlXNEFKVjBjZURMRWdRYzFONVByWQ?oc=5",
    "fecha": "Fri, 13 Nov 2026 17:58:20 GMT",
@@ -88500,23 +88507,16 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Wall Street: las megainversiones en IA encendieron las alarmas y el Nasdaq sufrió su peor caída en cuatro meses - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNRnF1RXNDWV96eGowelRaLVhoeE5HekxCTmtoMVdGNmk1RnZ1X1hLYklLZmFnbkdqd1BpbDNleXJnellUTVlVTkxZVmplWGQyZGlCb2pLNlRTV1Nsd3lad1ZkRGMzanVfQ1k5MVAyQ1RDMXFLYVI0ek5iWmNaUVg2enVqUG9JT3RBMGFwM1Y3Wnh6M2E3REowTmtoOUcwUWlXbTkzamI5ejk5emNHdGdWVkliQTI1U24xc0xQUWZ6M0poUWMta1Jj0gHMAUFVX3lxTE5LVDVEaFU1dnNJcl9YcU1JNW1uWTVNb2VKejBGd3k0X1E3OG93WnpzMDEtYzg1QXBhNmxnc29YOF9DWWtCcHZWbUpidzlSeXVDYnM4VmlfM3VwUGo5b2JvLUhuSHVpQjhTQjA4aDBCZU8ySm9WQzM0WHRhRm5YRUZxaXk5TmMzZk5DTElqNEJBc0FKeXpCMG9FRmdTUUh1dUFhWFozM0dOYjJhTndiRUYxOGxFN3BLTjREbHY2MjFUUmlCVlliZDZXRDg4Rw?oc=5",
-   "fecha": "Thu, 22 Oct 2026 07:00:00 GMT",
+   "titulo": "Criptomonedas: Bitcoin se derrumba y toca su menor valor en tres meses - Ambito",
+   "enlace": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOU1XdXpBcDNWNDVlSzB1bUctbENVZlhDaHZzd01sS0EwNlAxUk9BeXlsVlZBbFJNUWpxRHZWckdidmNQVXF5OWs1NUQ5U2RlLTFSQjN5a3VmRjNZQmVTVWVuZmp0b0lJemcwY3owNnlNbDZaUGsyOENuUXA1dlQ1SEhPZE5jMjQ2Qm5aWjVVcmlfd3Q2MkMxWnc1SnQyZ2UyOHoxcEpLWUZTVTVCTVVKbTYxQVA3MGZP0gG-AUFVX3lxTE4tQkd3X3hMbFRRNkxKXzVBMVg3RDdtZThMOXhTWGktRmxKOHdKa1lTRG10N2xUZWtPb2ljYWFORE9OSnR4cjhjUUhOUjB2RHpTRG5uZjBGSU5qSlBWNFE4XzRfc1JvcmxzZGJ2eHlweVZFOGNKUTN4M1dyOEt0c3NUdC0xZnBoLTEtbkp1Z3YySmtZMTkzMXliVXI1VG15NjlNbHJfUzJ6SlVNT2JuZWRSZGZFajNpRTBtTm9ZckE?oc=5",
+   "fecha": "Fri, 13 Nov 2026 19:59:46 GMT",
    "fuente": "",
-   "tema": "Wall Street hoy"
+   "tema": "bitcoin precio hoy"
   },
   {
    "titulo": "Precio del Bitcoin hoy: actualización en tiempo real al 12 de noviembre - La Nación",
    "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUTFCWjhsTk1JM2NmNTg4NnJjZnVpV2ZGVmkzdjg1VlJiSHFUUFJDM1FER0c0ZV9VaDNka0tZZ1NUNnA4THFhOXIwUDVsTHpYNWJPaEctRUptaFVGVG0zUmNhNkt0ZEEySnlPQk51LVJCNHRMVEJzRUw0NzBIdGJyd1VMVzlXTDFoV3I3MDZRY0ZVdUJiUkhISUp6ZEx5cnZIRld3dE9qTDdMb0NaRFhZa3loZG5ZSVFNdUswZ2hqUjY?oc=5",
    "fecha": "Fri, 13 Nov 2026 02:00:00 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "Criptomonedas: Bitcoin se derrumba y toca su menor valor en tres meses - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOU1XdXpBcDNWNDVlSzB1bUctbENVZlhDaHZzd01sS0EwNlAxUk9BeXlsVlZBbFJNUWpxRHZWckdidmNQVXF5OWs1NUQ5U2RlLTFSQjN5a3VmRjNZQmVTVWVuZmp0b0lJemcwY3owNnlNbDZaUGsyOENuUXA1dlQ1SEhPZE5jMjQ2Qm5aWjVVcmlfd3Q2MkMxWnc1SnQyZ2UyOHoxcEpLWUZTVTVCTVVKbTYxQVA3MGZP0gG-AUFVX3lxTE4tQkd3X3hMbFRRNkxKXzVBMVg3RDdtZThMOXhTWGktRmxKOHdKa1lTRG10N2xUZWtPb2ljYWFORE9OSnR4cjhjUUhOUjB2RHpTRG5uZjBGSU5qSlBWNFE4XzRfc1JvcmxzZGJ2eHlweVZFOGNKUTN4M1dyOEt0c3NUdC0xZnBoLTEtbkp1Z3YySmtZMTkzMXliVXI1VG15NjlNbHJfUzJ6SlVNT2JuZWRSZGZFajNpRTBtTm9ZckE?oc=5",
-   "fecha": "Fri, 13 Nov 2026 19:59:46 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
