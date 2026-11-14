@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T03:30:44.267Z",
+ "generado": "2026-11-14T04:35:00.462Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -216,7 +216,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -17.05,
+   "mensualPct": -17.75,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: COMPRAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -243,7 +243,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -20.25,
+   "mensualPct": -20.84,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -7604,11 +7604,11 @@
    },
    "niveles": {
     "entrada": 73.75,
-    "objetivo": 89.09,
-    "stop": 71.43
+    "objetivo": 80,
+    "stop": 68
    },
    "razonesIA": [
-    "RSI 28, por debajo de 30, precio bajo medias móviles y fib retroceso indica zona de soporte fuerte; alta volatilidad y riesgo país"
+    "RSI 28.2, precio bajo medias móviles y tendencia bajista; mejor esperar señal de reversión."
    ]
   },
   {
@@ -14881,6 +14881,11 @@
     "acuerdo": 1,
     "detalle": [
      {
+      "quien": "gemini",
+      "accion": "ESPERAR",
+      "peso": 1
+     },
+     {
       "quien": "tecnico",
       "accion": "ESPERAR",
       "peso": 1
@@ -14888,10 +14893,13 @@
     ]
    },
    "niveles": {
-    "entrada": 4855,
-    "objetivo": 3694.24
+    "entrada": 4770,
+    "objetivo": 5703.38,
+    "stop": 3694.24
    },
-   "razonesIA": []
+   "razonesIA": [
+    "Muestra un sesgo bajista pronunciado a la espera del anuncio sobre la reclasificación del país por MSCI."
+   ]
   },
   {
    "nombre": "YPF",
@@ -22160,18 +22168,8 @@
    },
    "consenso": {
     "accion": "ESPERAR",
-    "acuerdo": 0.6666666666666666,
+    "acuerdo": 1,
     "detalle": [
-     {
-      "quien": "gemini",
-      "accion": "ESPERAR",
-      "peso": 1
-     },
-     {
-      "quien": "groq",
-      "accion": "VENDER",
-      "peso": 1
-     },
      {
       "quien": "tecnico",
       "accion": "ESPERAR",
@@ -22180,14 +22178,11 @@
     ]
    },
    "niveles": {
-    "entrada": 6340,
-    "objetivo": 7189,
-    "stop": 6710.26
+    "entrada": 6230,
+    "objetivo": 5041.48,
+    "stop": 5935
    },
-   "razonesIA": [
-    "Presenta un severo retroceso mensual del 25% y se encuentra sujeta a la incertidumbre local y decisión de MSCI.",
-    "RSI 27,5, precio muy bajo medias móviles y fuerte caída del 25 %; fib retroceso sugiere posible rebote limitado"
-   ]
+   "razonesIA": []
   },
   {
    "nombre": "Pampa Energía",
@@ -29455,9 +29450,14 @@
     ]
    },
    "consenso": {
-    "accion": "ESPERAR",
-    "acuerdo": 1,
+    "accion": "COMPRAR",
+    "acuerdo": 0.5,
     "detalle": [
+     {
+      "quien": "gemini",
+      "accion": "COMPRAR",
+      "peso": 1
+     },
      {
       "quien": "tecnico",
       "accion": "ESPERAR",
@@ -29467,9 +29467,12 @@
    },
    "niveles": {
     "entrada": 4205,
-    "objetivo": 3664.8
+    "objetivo": 4711.2,
+    "stop": 4100
    },
-   "razonesIA": []
+   "razonesIA": [
+    "Presenta un nivel técnico de sobreventa extrema con un RSI de 18,8 cerca de su piso de Fibonacci."
+   ]
   },
   {
    "nombre": "Banco Macro",
@@ -51394,17 +51397,17 @@
     ]
    },
    "consenso": {
-    "accion": "COMPRAR",
-    "acuerdo": 0.6666666666666666,
+    "accion": "ESPERAR",
+    "acuerdo": 1,
     "detalle": [
      {
       "quien": "gemini",
-      "accion": "COMPRAR",
+      "accion": "ESPERAR",
       "peso": 1
      },
      {
       "quien": "groq",
-      "accion": "COMPRAR",
+      "accion": "ESPERAR",
       "peso": 1
      },
      {
@@ -51416,12 +51419,12 @@
    },
    "niveles": {
     "entrada": 754.37,
-    "objetivo": 799.31,
-    "stop": 741.43
+    "objetivo": 781.62,
+    "stop": 735
    },
    "razonesIA": [
-    "Mantiene su tendencia de largo plazo sobre la media móvil de 200 días ofreciendo diversificación en moneda dura.",
-    "RSI 47, cerca de 50, precio sobre M20 y M50, fib retroceso indica soporte en 741 y extensión 1.272 como objetivo"
+    "Conserva su estructura alcista de largo plazo, pero atraviesa un proceso corrector de corto plazo hacia sus soportes de Fibonacci.",
+    "Precio cerca de la media de 20 días, RSI neutro; se sugiere observar confirmación antes de entrar."
    ]
   },
   {
@@ -58760,8 +58763,8 @@
     "stop": 340.28
    },
    "razonesIA": [
-    "Mantiene una estructura alcista sólida por encima de sus medias móviles principales y muestra fortaleza relativa.",
-    "RSI saludable, precios sobre medias móviles y extensión fib 1.272 como objetivo razonable"
+    "Mantiene una tendencia alcista técnica sólida por encima de sus medias móviles y con un RSI favorable en 60,6.",
+    "Momentum positivo, RSI saludable y precios sobre medias móviles."
    ]
   },
   {
@@ -66074,12 +66077,12 @@
     ]
    },
    "consenso": {
-    "accion": "ESPERAR",
-    "acuerdo": 1,
+    "accion": "VENDER",
+    "acuerdo": 0.5,
     "detalle": [
      {
-      "quien": "gemini",
-      "accion": "ESPERAR",
+      "quien": "groq",
+      "accion": "VENDER",
       "peso": 1
      },
      {
@@ -66090,12 +66093,12 @@
     ]
    },
    "niveles": {
-    "entrada": 148.8,
-    "objetivo": 184.9,
-    "stop": 135
+    "entrada": 162.85,
+    "objetivo": 140,
+    "stop": 180
    },
    "razonesIA": [
-    "Presenta niveles de sobreventa técnica (RSI 24.9), pero requiere confirmación de piso antes de ingresar tras su fuerte caída."
+    "RSI muy bajo (24.9), precio bajo medias móviles y patrón bajista en Fibonacci."
    ]
   },
   {
@@ -73430,16 +73433,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 67253.2578125,
-   "variacionDia": -5.73,
-   "variacion30d": -17.05,
+   "precio": 66681.5234375,
+   "variacionDia": -6.53,
+   "variacion30d": -17.75,
    "puntaje": 40,
    "puntajeBase": 40,
    "accion": "COMPRAR",
-   "m20": 76535.636328125,
-   "m50": 80515.3065625,
-   "m200": 73030.405390625,
-   "rsi": 23.72209178444993,
+   "m20": 76507.049609375,
+   "m50": 80503.871875,
+   "m200": 73027.54671875,
+   "rsi": 23.05130036813341,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73513,7 +73516,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 24: zona de sobreventa, posible rebote."
+     "texto": "RSI en 23: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_soporte",
@@ -75924,9 +75927,9 @@
       "time": "2026-11-14",
       "open": 68238.2109375,
       "high": 68360.7109375,
-      "low": 67208.4609375,
-      "close": 67253.2578125,
-      "volume": 39676133376
+      "low": 66535.5078125,
+      "close": 66681.5234375,
+      "volume": 38188703744
      }
     ],
     "m20": [
@@ -77128,7 +77131,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 76535.6363
+      "value": 76507.0496
      }
     ],
     "m50": [
@@ -78330,7 +78333,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 80515.3066
+      "value": 80503.8719
      }
     ],
     "m200": [
@@ -79532,7 +79535,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 73030.4054
+      "value": 73027.5467
      }
     ],
     "rsi": [
@@ -80734,7 +80737,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 23.7221
+      "value": 23.0513
      }
     ]
    },
@@ -80760,13 +80763,13 @@
     ]
    },
    "niveles": {
-    "entrada": 67080.73,
-    "objetivo": 94201.07,
-    "stop": 61800
+    "entrada": 66681.52,
+    "objetivo": 77761.36,
+    "stop": 63000
    },
    "razonesIA": [
-    "Exhibe sobreventa extrema (RSI 23.5), requiriendo cautela por la elevada volatilidad reciente.",
-    "RSI muy bajo (23,5) y tendencia bajista reciente; esperar confirmación de rebote antes de entrar"
+    "Ingresó en zona de sobreventa (RSI 23,1) tras ajustar fuertemente hacia los retrocesos de Fibonacci de su tramo alcista.",
+    "RSI bajo pero fibonaccis indican posible rebote; se recomienda cautela."
    ]
   },
   {
@@ -80775,16 +80778,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1901.260009765625,
-   "variacionDia": -5.73,
-   "variacion30d": -20.25,
+   "precio": 1887.239990234375,
+   "variacionDia": -6.43,
+   "variacion30d": -20.84,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2214.764825439453,
-   "m50": 2413.183967285156,
-   "m200": 2147.0944445800783,
-   "rsi": 23.903974959777173,
+   "m20": 2214.063824462891,
+   "m50": 2412.903566894531,
+   "m200": 2147.024344482422,
+   "rsi": 23.43223501982807,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -80858,7 +80861,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 24: zona de sobreventa, posible rebote."
+     "texto": "RSI en 23: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -83264,9 +83267,9 @@
       "time": "2026-11-14",
       "open": 1927.4058837890625,
       "high": 1933.090087890625,
-      "low": 1886.63525390625,
-      "close": 1901.260009765625,
-      "volume": 14353850368
+      "low": 1881.8056640625,
+      "close": 1887.239990234375,
+      "volume": 13550699520
      }
     ],
     "m20": [
@@ -84468,7 +84471,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2214.7648
+      "value": 2214.0638
      }
     ],
     "m50": [
@@ -85670,7 +85673,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2413.184
+      "value": 2412.9036
      }
     ],
     "m200": [
@@ -86872,7 +86875,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 2147.0944
+      "value": 2147.0243
      }
     ],
     "rsi": [
@@ -88074,7 +88077,7 @@
      },
      {
       "time": "2026-11-14",
-      "value": 23.904
+      "value": 23.4322
      }
     ]
    },
@@ -88090,7 +88093,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1901.260009765625,
+    "entrada": 1887.239990234375,
     "objetivo": 3078.16408203125,
     "stop": 1803.053955078125
    },
@@ -88102,7 +88105,7 @@
    "proveedor": "github",
    "nombre": "GitHub Models",
    "modelo": "openai/gpt-4.1-mini",
-   "ms": 791,
+   "ms": 252,
    "error": "fetch failed",
    "opinion": null,
    "confiabilidad": 1
@@ -88111,13 +88114,13 @@
    "proveedor": "gemini",
    "nombre": "Google Gemini",
    "modelo": "gemini-3.6-flash",
-   "ms": 77794,
+   "ms": 15869,
    "error": null,
    "opinion": {
-    "resumen": "Con una inflación mensual del 2,2% que deja a los plazos fijos tradicionales con rendimiento real negativo (-0,22%), es conveniente priorizar instrumentos en dólares o de renta fija que superen el costo de vida. Mientras la renta variable local y las criptomonedas exhiben una fuerte sobreventa técnica a la espera de noticias clave (como la reclasificación de MSCI), los activos estadounidenses consolidados ofrecen mayor estabilidad. Se sugiere cautela, monitorear la brecha cambiaría MEP/CCL y priorizar la preservación de capital.",
+    "resumen": "El mercado local muestra un marcado retroceso en acciones y sobreventa en varios activos, mientras el inversor aguarda definiciones clave de MSCI respecto a la calificación de Argentina. La inflación mensual del 2,2% deja a las tasas de plazo fijo tradicionales en terreno negativo, favoreciendo la cobertura en activos internacionales o instrumentos que sigan al dólar. Ante la volatilidad reinante, se sugiere prudencia y selectividad en las decisiones de inversión.",
     "mejorOpcion": {
      "nombre": "Apple (AAPL)",
-     "porque": "Mantiene una sólida tendencia alcista cotizando por encima de sus medias móviles clave de 20, 50 y 200 días, registrando un rendimiento positivo en el último mes frente a la volatilidad global."
+     "porque": "Es uno de los pocos activos con rendimiento mensual positivo (4,17%) que sostiene una sólida tendencia alcista cotizando por encima de sus medias móviles de 20, 50 y 200 días."
     },
     "activos": [
      {
@@ -88125,57 +88128,56 @@
       "yahoo": "AAPL",
       "accion": "COMPRAR",
       "confianza": 75,
-      "entrada": 350,
-      "objetivo": 384.5,
-      "stop": 338,
-      "razon": "Mantiene una estructura alcista sólida por encima de sus medias móviles principales y muestra fortaleza relativa."
+      "entrada": 356.27,
+      "objetivo": 384.52,
+      "stop": 340.28,
+      "razon": "Mantiene una tendencia alcista técnica sólida por encima de sus medias móviles y con un RSI favorable en 60,6."
      },
      {
       "nombre": "S&P 500 (SPY)",
       "yahoo": "SPY",
-      "accion": "COMPRAR",
-      "confianza": 70,
-      "entrada": 750,
-      "objetivo": 781.6,
-      "stop": 730,
-      "razon": "Mantiene su tendencia de largo plazo sobre la media móvil de 200 días ofreciendo diversificación en moneda dura."
+      "accion": "ESPERAR",
+      "confianza": 60,
+      "entrada": 749.1,
+      "objetivo": 781.62,
+      "stop": 731.92,
+      "razon": "Conserva su estructura alcista de largo plazo, pero atraviesa un proceso corrector de corto plazo hacia sus soportes de Fibonacci."
      },
      {
-      "nombre": "Nvidia",
-      "yahoo": "NVDA",
-      "accion": "ESPERAR",
+      "nombre": "Pampa Energía",
+      "yahoo": "PAMP.BA",
+      "accion": "COMPRAR",
       "confianza": 55,
-      "entrada": 148.8,
-      "objetivo": 184.9,
-      "stop": 135,
-      "razon": "Presenta niveles de sobreventa técnica (RSI 24.9), pero requiere confirmación de piso antes de ingresar tras su fuerte caída."
+      "entrada": 4205,
+      "objetivo": 4711.2,
+      "stop": 4100,
+      "razon": "Presenta un nivel técnico de sobreventa extrema con un RSI de 18,8 cerca de su piso de Fibonacci."
+     },
+     {
+      "nombre": "Grupo Galicia",
+      "yahoo": "GGAL.BA",
+      "accion": "ESPERAR",
+      "confianza": 50,
+      "entrada": 4770,
+      "objetivo": 5703.38,
+      "stop": 3694.24,
+      "razon": "Muestra un sesgo bajista pronunciado a la espera del anuncio sobre la reclasificación del país por MSCI."
      },
      {
       "nombre": "Bitcoin",
       "yahoo": "BTC-USD",
       "accion": "ESPERAR",
       "confianza": 50,
-      "entrada": 62226,
-      "objetivo": 74795,
-      "stop": 59000,
-      "razon": "Exhibe sobreventa extrema (RSI 23.5), requiriendo cautela por la elevada volatilidad reciente."
-     },
-     {
-      "nombre": "YPF",
-      "yahoo": "YPFD.BA",
-      "accion": "ESPERAR",
-      "confianza": 45,
-      "entrada": 5935,
-      "objetivo": 7189,
-      "stop": 5400,
-      "razon": "Presenta un severo retroceso mensual del 25% y se encuentra sujeta a la incertidumbre local y decisión de MSCI."
+      "entrada": 66681.52,
+      "objetivo": 77761.36,
+      "stop": 62226.58,
+      "razon": "Ingresó en zona de sobreventa (RSI 23,1) tras ajustar fuertemente hacia los retrocesos de Fibonacci de su tramo alcista."
      }
     ],
     "riesgos": [
-     "La tasa de interés de los plazos fijos tradicionales genera pérdidas en términos reales frente a la inflación del 2,2%.",
-     "Elevada volatilidad en acciones argentinas ante la expectativa del dictamen de MSCI respecto al estatus del país.",
-     "Incremento en la brecha entre el dólar MEP y CCL (4,32%) que refleja presión sobre la salida de divisas y reservas.",
-     "Corrección técnica acentuada en el sector de criptomonedas y tecnológicas de alta capitalización."
+     "Pérdida de poder adquisitivo en depósitos a plazo fijo tradicionales al rendir 1,97% mensual frente a una inflación del 2,2%.",
+     "Alta volatilidad en los activos argentinos ante la incertidumbre por el informe de MSCI y los cambios regulatorios de la CNV.",
+     "Incremento en la brecha entre el dólar MEP y CCL (5,2%), lo que encarece el giro de divisas al exterior."
     ]
    },
    "confiabilidad": 1
@@ -88184,72 +88186,72 @@
    "proveedor": "groq",
    "nombre": "Groq",
    "modelo": "openai/gpt-oss-120b",
-   "ms": 2486,
+   "ms": 2949,
    "error": null,
    "opinion": {
-    "resumen": "La inflación mensual del 2,2 % y el riesgo país elevado (829) mantienen presión sobre el peso, mientras que los indicadores técnicos muestran que la mayoría de los activos locales están en zona bajista. Los activos internacionales con tendencia alcista y buen soporte técnico, como Apple y el S&P 500, ofrecen mejores oportunidades de retorno. Se recomienda enfocarse en instrumentos en dólares con fundamentos técnicos sólidos y evitar los papeles argentinos altamente volátiles.",
+    "resumen": "La inflación mensual del 2,2 % y el riesgo país en 830 puntos siguen presionando al mercado local, mientras que los activos internacionales muestran mejor desempeño técnico. Apple presenta una combinación favorable de RSI moderado, precios por encima de sus medias móviles y un sólido impulso mensual. Se recomienda priorizar la exposición a acciones estadounidenses con buen perfil técnico y diversificar con instrumentos de bajo riesgo en pesos.",
     "mejorOpcion": {
      "nombre": "Apple (AAPL)",
-     "porque": "RSI 60,6 indica fuerza, precio por encima de medias móviles 20‑50‑200 y fib retroceso muestra soporte en 340 USD; objetivo en extensión 1.272 (384 USD) con buen margen de beneficio."
+     "porque": "RSI 60.6, cotiza por encima de sus medias móviles de 20, 50 y 200 días y muestra una ganancia mensual del 4,17 %, lo que indica fuerza y potencial de alza moderada."
     },
     "activos": [
      {
       "nombre": "Apple",
       "yahoo": "AAPL",
       "accion": "COMPRAR",
-      "confianza": 82,
+      "confianza": 78,
       "entrada": 356.27,
-      "objetivo": 384.52,
-      "stop": 340.28,
-      "razon": "RSI saludable, precios sobre medias móviles y extensión fib 1.272 como objetivo razonable"
+      "objetivo": 374,
+      "stop": 340,
+      "razon": "Momentum positivo, RSI saludable y precios sobre medias móviles."
      },
      {
       "nombre": "S&P 500 (SPY)",
       "yahoo": "SPY",
-      "accion": "COMPRAR",
-      "confianza": 75,
+      "accion": "ESPERAR",
+      "confianza": 55,
       "entrada": 754.37,
-      "objetivo": 799.31,
-      "stop": 741.43,
-      "razon": "RSI 47, cerca de 50, precio sobre M20 y M50, fib retroceso indica soporte en 741 y extensión 1.272 como objetivo"
+      "objetivo": 770,
+      "stop": 735,
+      "razon": "Precio cerca de la media de 20 días, RSI neutro; se sugiere observar confirmación antes de entrar."
+     },
+     {
+      "nombre": "Nvidia",
+      "yahoo": "NVDA",
+      "accion": "VENDER",
+      "confianza": 60,
+      "entrada": 162.85,
+      "objetivo": 140,
+      "stop": 180,
+      "razon": "RSI muy bajo (24.9), precio bajo medias móviles y patrón bajista en Fibonacci."
      },
      {
       "nombre": "Bitcoin",
       "yahoo": "BTC-USD",
       "accion": "ESPERAR",
-      "confianza": 60,
-      "entrada": 67080.73,
-      "objetivo": 94201.07,
-      "stop": 61800,
-      "razon": "RSI muy bajo (23,5) y tendencia bajista reciente; esperar confirmación de rebote antes de entrar"
+      "confianza": 50,
+      "entrada": 66681.52,
+      "objetivo": 72000,
+      "stop": 63000,
+      "razon": "RSI bajo pero fibonaccis indican posible rebote; se recomienda cautela."
      },
      {
-      "nombre": "Argentina (ETF ARGT)",
+      "nombre": "ETF Argentina (ARGT)",
       "yahoo": "ARGT",
       "accion": "ESPERAR",
       "confianza": 45,
       "entrada": 73.75,
-      "objetivo": 89.09,
-      "stop": 71.43,
-      "razon": "RSI 28, por debajo de 30, precio bajo medias móviles y fib retroceso indica zona de soporte fuerte; alta volatilidad y riesgo país"
-     },
-     {
-      "nombre": "YPF",
-      "yahoo": "YPFD.BA",
-      "accion": "VENDER",
-      "confianza": 70,
-      "entrada": 6340,
-      "objetivo": 5703.38,
-      "stop": 6710.26,
-      "razon": "RSI 27,5, precio muy bajo medias móviles y fuerte caída del 25 %; fib retroceso sugiere posible rebote limitado"
+      "objetivo": 80,
+      "stop": 68,
+      "razon": "RSI 28.2, precio bajo medias móviles y tendencia bajista; mejor esperar señal de reversión."
      }
     ],
     "riesgos": [
-     "Inflación persistente que erosiona rendimientos en pesos",
-     "Elevado riesgo país que puede generar devaluaciones bruscas",
-     "Volatilidad de los mercados emergentes y posibles restricciones cambiarias",
-     "Sensibilidad a decisiones de MSCI y a la política del BCRA",
-     "Riesgo de sobrevaloración en activos tecnológicos si se produce corrección global"
+     "Alta inflación que erosiona rendimientos reales",
+     "Elevado riesgo país que afecta la volatilidad del peso y del dólar",
+     "Brechas cambiarias entre oficial, MEP y blue que pueden generar pérdidas inesperadas",
+     "Entorno político y regulatorio incierto en Argentina",
+     "Posible corrección en mercados tecnológicos tras fuertes subidas previas"
     ]
    },
    "confiabilidad": 1
@@ -88262,50 +88264,50 @@
     "yahoo": "AAPL",
     "accion": "COMPRAR",
     "confianza": 75,
-    "entrada": 350,
-    "objetivo": 384.5,
-    "stop": 338,
-    "razon": "Mantiene una estructura alcista sólida por encima de sus medias móviles principales y muestra fortaleza relativa."
+    "entrada": 356.27,
+    "objetivo": 384.52,
+    "stop": 340.28,
+    "razon": "Mantiene una tendencia alcista técnica sólida por encima de sus medias móviles y con un RSI favorable en 60,6."
    },
    {
     "nombre": "S&P 500 (SPY)",
     "yahoo": "SPY",
-    "accion": "COMPRAR",
-    "confianza": 70,
-    "entrada": 750,
-    "objetivo": 781.6,
-    "stop": 730,
-    "razon": "Mantiene su tendencia de largo plazo sobre la media móvil de 200 días ofreciendo diversificación en moneda dura."
+    "accion": "ESPERAR",
+    "confianza": 60,
+    "entrada": 749.1,
+    "objetivo": 781.62,
+    "stop": 731.92,
+    "razon": "Conserva su estructura alcista de largo plazo, pero atraviesa un proceso corrector de corto plazo hacia sus soportes de Fibonacci."
    },
    {
-    "nombre": "Nvidia",
-    "yahoo": "NVDA",
-    "accion": "ESPERAR",
+    "nombre": "Pampa Energía",
+    "yahoo": "PAMP.BA",
+    "accion": "COMPRAR",
     "confianza": 55,
-    "entrada": 148.8,
-    "objetivo": 184.9,
-    "stop": 135,
-    "razon": "Presenta niveles de sobreventa técnica (RSI 24.9), pero requiere confirmación de piso antes de ingresar tras su fuerte caída."
+    "entrada": 4205,
+    "objetivo": 4711.2,
+    "stop": 4100,
+    "razon": "Presenta un nivel técnico de sobreventa extrema con un RSI de 18,8 cerca de su piso de Fibonacci."
+   },
+   {
+    "nombre": "Grupo Galicia",
+    "yahoo": "GGAL.BA",
+    "accion": "ESPERAR",
+    "confianza": 50,
+    "entrada": 4770,
+    "objetivo": 5703.38,
+    "stop": 3694.24,
+    "razon": "Muestra un sesgo bajista pronunciado a la espera del anuncio sobre la reclasificación del país por MSCI."
    },
    {
     "nombre": "Bitcoin",
     "yahoo": "BTC-USD",
     "accion": "ESPERAR",
     "confianza": 50,
-    "entrada": 62226,
-    "objetivo": 74795,
-    "stop": 59000,
-    "razon": "Exhibe sobreventa extrema (RSI 23.5), requiriendo cautela por la elevada volatilidad reciente."
-   },
-   {
-    "nombre": "YPF",
-    "yahoo": "YPFD.BA",
-    "accion": "ESPERAR",
-    "confianza": 45,
-    "entrada": 5935,
-    "objetivo": 7189,
-    "stop": 5400,
-    "razon": "Presenta un severo retroceso mensual del 25% y se encuentra sujeta a la incertidumbre local y decisión de MSCI."
+    "entrada": 66681.52,
+    "objetivo": 77761.36,
+    "stop": 62226.58,
+    "razon": "Ingresó en zona de sobreventa (RSI 23,1) tras ajustar fuertemente hacia los retrocesos de Fibonacci de su tramo alcista."
    }
   ],
   "groq": [
@@ -88313,55 +88315,55 @@
     "nombre": "Apple",
     "yahoo": "AAPL",
     "accion": "COMPRAR",
-    "confianza": 82,
+    "confianza": 78,
     "entrada": 356.27,
-    "objetivo": 384.52,
-    "stop": 340.28,
-    "razon": "RSI saludable, precios sobre medias móviles y extensión fib 1.272 como objetivo razonable"
+    "objetivo": 374,
+    "stop": 340,
+    "razon": "Momentum positivo, RSI saludable y precios sobre medias móviles."
    },
    {
     "nombre": "S&P 500 (SPY)",
     "yahoo": "SPY",
-    "accion": "COMPRAR",
-    "confianza": 75,
+    "accion": "ESPERAR",
+    "confianza": 55,
     "entrada": 754.37,
-    "objetivo": 799.31,
-    "stop": 741.43,
-    "razon": "RSI 47, cerca de 50, precio sobre M20 y M50, fib retroceso indica soporte en 741 y extensión 1.272 como objetivo"
+    "objetivo": 770,
+    "stop": 735,
+    "razon": "Precio cerca de la media de 20 días, RSI neutro; se sugiere observar confirmación antes de entrar."
+   },
+   {
+    "nombre": "Nvidia",
+    "yahoo": "NVDA",
+    "accion": "VENDER",
+    "confianza": 60,
+    "entrada": 162.85,
+    "objetivo": 140,
+    "stop": 180,
+    "razon": "RSI muy bajo (24.9), precio bajo medias móviles y patrón bajista en Fibonacci."
    },
    {
     "nombre": "Bitcoin",
     "yahoo": "BTC-USD",
     "accion": "ESPERAR",
-    "confianza": 60,
-    "entrada": 67080.73,
-    "objetivo": 94201.07,
-    "stop": 61800,
-    "razon": "RSI muy bajo (23,5) y tendencia bajista reciente; esperar confirmación de rebote antes de entrar"
+    "confianza": 50,
+    "entrada": 66681.52,
+    "objetivo": 72000,
+    "stop": 63000,
+    "razon": "RSI bajo pero fibonaccis indican posible rebote; se recomienda cautela."
    },
    {
-    "nombre": "Argentina (ETF ARGT)",
+    "nombre": "ETF Argentina (ARGT)",
     "yahoo": "ARGT",
     "accion": "ESPERAR",
     "confianza": 45,
     "entrada": 73.75,
-    "objetivo": 89.09,
-    "stop": 71.43,
-    "razon": "RSI 28, por debajo de 30, precio bajo medias móviles y fib retroceso indica zona de soporte fuerte; alta volatilidad y riesgo país"
-   },
-   {
-    "nombre": "YPF",
-    "yahoo": "YPFD.BA",
-    "accion": "VENDER",
-    "confianza": 70,
-    "entrada": 6340,
-    "objetivo": 5703.38,
-    "stop": 6710.26,
-    "razon": "RSI 27,5, precio muy bajo medias móviles y fuerte caída del 25 %; fib retroceso sugiere posible rebote limitado"
+    "objetivo": 80,
+    "stop": 68,
+    "razon": "RSI 28.2, precio bajo medias móviles y tendencia bajista; mejor esperar señal de reversión."
    }
   ]
  },
- "opinionesFecha": "2026-11-14T02:31:50.191Z",
+ "opinionesFecha": "2026-11-14T04:35:00.462Z",
  "titulares": [
   {
    "titulo": "Cuáles son las acciones que subirían más si Argentina consigue hoy un guiño para ser \"mercado emergente\" - Clarin.com",
@@ -88448,16 +88450,16 @@
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Cuánto paga cada banco un plazo fijo en noviembre y qué tasas le ganan a la inflación - Diario Mendoza",
-   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNXlWTHM0OERNZk9ZaXVoSXg2MTBJejV4R3JiaGV2cVNhYTZlSWhPNlZCQ2diTU9TMjQ2bHZyRXJyc3VnQkdaeVZlNjkxWl9GbmFwOFV0QktRU2RNcHhDWUtBRXRPNVJwemhTeE1CNEl0YWRUZFVwZURHa3RIWWFaYU5uRlRZYk01LUNkcVZ4M09ZVGNZOEZzRXo5NG5kM09FRkFhZHVINjhCbGZUdm9jWlo3bGJMc3VSU2fSAb8BQVVfeXFMTUIxYVRkUlY1MzdyR0dqUDBXd2pQOTNzd2lZc0hWb01aajFERXBPM2VleUNFSHBPZ0RJSExqYUEwSFdhT1BZX2gtejZKN3FVNFVmVXBLRkNQdzBIQ1MxMjBobmR2MmVMUGpTMzB6Vk44b3dwaGx2c2NEaUxkSEx2T05ZY0xOeVdyLXV4ckxIeWF6NnBqSFZtS1FRT2JPOFl2bEhhSWwxS2JyUG5fWl9HaHdyNERjV1lpSEFlanFaNVk?oc=5",
-   "fecha": "Fri, 13 Nov 2026 14:25:00 GMT",
+   "titulo": "Plazo fijo: cuál es la tasa que ofrece cada banco para depósitos de $1 millón a 30 días - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbnVfUW5OQnkyUkpJZDRRNFgxaUF4WnVpMDF0d3FVelM2R0VabzVOeGYxMEtVY1YtaG55ZXZzdktTLV9HZWJUUnJOdmFSSVZRbEdJUXZpSzdaWGZzRlRaZFVQbHh4SUZDb1hWaFlpTjgtSnVJMDJuNVh1Nzh6alptX2p6aVNEQU9LQ25BRmh5OXZpYXp3bVUzT0l2Ynp4YjdBbTBocWxaTVQwLWVuOXNjRG9wUm0wZzhrdkQtRWw3YUpYQ1p4eXE4WnB30gHkAUFVX3lxTE1wZFVkajdKZWhPN3NXdHNzbjVkVjBuQzBxc0VXUE1hQWJrdDBEQkdMZEYtcno3NUJXWUo4d0ZuS3VxQnJibkhoMmdZOTdTUGdiMERQT09Hal9NSThja1U4VnZJN0QyOFBUWWszWUI4aUIyQTBDQWVzSDBwYWVteUU0NjZxclFqS056TFRkZV9QMGpTbFFmbFZMWkh2MVBkRmJUOWI1OWZGQWZRa0ZvbnkyZWQ4bHdmakdrcG1ka2hjd3F2Zjg2MjZKNkxpNFg2eXZiVWRUejVyUDNwQXZXa1lvcWtiVQ?oc=5",
+   "fecha": "Mon, 09 Nov 2026 14:26:00 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Plazo fijo: cuál es la tasa que ofrece cada banco para depósitos de $1 millón a 30 días - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbnVfUW5OQnkyUkpJZDRRNFgxaUF4WnVpMDF0d3FVelM2R0VabzVOeGYxMEtVY1YtaG55ZXZzdktTLV9HZWJUUnJOdmFSSVZRbEdJUXZpSzdaWGZzRlRaZFVQbHh4SUZDb1hWaFlpTjgtSnVJMDJuNVh1Nzh6alptX2p6aVNEQU9LQ25BRmh5OXZpYXp3bVUzT0l2Ynp4YjdBbTBocWxaTVQwLWVuOXNjRG9wUm0wZzhrdkQtRWw3YUpYQ1p4eXE4WnB30gHkAUFVX3lxTE1wZFVkajdKZWhPN3NXdHNzbjVkVjBuQzBxc0VXUE1hQWJrdDBEQkdMZEYtcno3NUJXWUo4d0ZuS3VxQnJibkhoMmdZOTdTUGdiMERQT09Hal9NSThja1U4VnZJN0QyOFBUWWszWUI4aUIyQTBDQWVzSDBwYWVteUU0NjZxclFqS056TFRkZV9QMGpTbFFmbFZMWkh2MVBkRmJUOWI1OWZGQWZRa0ZvbnkyZWQ4bHdmakdrcG1ka2hjd3F2Zjg2MjZKNkxpNFg2eXZiVWRUejVyUDNwQXZXa1lvcWtiVQ?oc=5",
-   "fecha": "Mon, 09 Nov 2026 14:26:00 GMT",
+   "titulo": "Cuánto paga cada banco un plazo fijo en noviembre y qué tasas le ganan a la inflación - Diario Mendoza",
+   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNXlWTHM0OERNZk9ZaXVoSXg2MTBJejV4R3JiaGV2cVNhYTZlSWhPNlZCQ2diTU9TMjQ2bHZyRXJyc3VnQkdaeVZlNjkxWl9GbmFwOFV0QktRU2RNcHhDWUtBRXRPNVJwemhTeE1CNEl0YWRUZFVwZURHa3RIWWFaYU5uRlRZYk01LUNkcVZ4M09ZVGNZOEZzRXo5NG5kM09FRkFhZHVINjhCbGZUdm9jWlo3bGJMc3VSU2fSAb8BQVVfeXFMTUIxYVRkUlY1MzdyR0dqUDBXd2pQOTNzd2lZc0hWb01aajFERXBPM2VleUNFSHBPZ0RJSExqYUEwSFdhT1BZX2gtejZKN3FVNFVmVXBLRkNQdzBIQ1MxMjBobmR2MmVMUGpTMzB6Vk44b3dwaGx2c2NEaUxkSEx2T05ZY0xOeVdyLXV4ckxIeWF6NnBqSFZtS1FRT2JPOFl2bEhhSWwxS2JyUG5fWl9HaHdyNERjV1lpSEFlanFaNVk?oc=5",
+   "fecha": "Fri, 13 Nov 2026 14:25:00 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
