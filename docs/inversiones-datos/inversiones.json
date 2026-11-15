@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T16:23:26.195Z",
+ "generado": "2026-11-15T17:21:55.027Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -231,6 +231,15 @@
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
+   "nombre": "Bitcoin",
+   "tipo": "cripto (variable)",
+   "riesgo": "Alto",
+   "mensualPct": -19.06,
+   "realPct": null,
+   "donde": "Exchange",
+   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
+  },
+  {
    "nombre": "Mercado Libre",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
@@ -240,19 +249,10 @@
    "como": "Señal actual: VENDER. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
-   "nombre": "Bitcoin",
-   "tipo": "cripto (variable)",
-   "riesgo": "Alto",
-   "mensualPct": -19.7,
-   "realPct": null,
-   "donde": "Exchange",
-   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
-  },
-  {
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -22.56,
+   "mensualPct": -22.05,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73466,16 +73466,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64258.9609375,
-   "variacionDia": 0.2,
-   "variacion30d": -19.7,
+   "precio": 64768.62109375,
+   "variacionDia": 1,
+   "variacion30d": -19.06,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75003.2544921875,
-   "m50": 79734.139609375,
-   "m200": 72916.68650390625,
-   "rsi": 20.706949814738906,
+   "m20": 75028.7375,
+   "m50": 79744.3328125,
+   "m200": 72919.2348046875,
+   "rsi": 22.673555542612064,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -73549,7 +73549,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 21: zona de sobreventa, posible rebote."
+     "texto": "RSI en 23: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75956,8 +75956,8 @@
       "open": 64119.78125,
       "high": 65889.234375,
       "low": 62093.515625,
-      "close": 64258.9609375,
-      "volume": 49130835968
+      "close": 64768.62109375,
+      "volume": 48597045248
      }
     ],
     "m20": [
@@ -77159,7 +77159,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75003.2545
+      "value": 75028.7375
      }
     ],
     "m50": [
@@ -78361,7 +78361,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 79734.1396
+      "value": 79744.3328
      }
     ],
     "m200": [
@@ -79563,7 +79563,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72916.6865
+      "value": 72919.2348
      }
     ],
     "rsi": [
@@ -80765,7 +80765,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 20.7069
+      "value": 22.6736
      }
     ]
    },
@@ -80800,16 +80800,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1802,
-   "variacionDia": 1.86,
-   "variacion30d": -22.56,
+   "precio": 1813.739990234375,
+   "variacionDia": 2.52,
+   "variacion30d": -22.05,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2162.2772216796875,
-   "m50": 2377.4191796875,
-   "m200": 2142.367514038086,
-   "rsi": 23.280080463943023,
+   "m20": 2162.864221191406,
+   "m50": 2377.6539794921873,
+   "m200": 2142.426213989258,
+   "rsi": 24.45051535441378,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80883,7 +80883,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 24: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -83290,8 +83290,8 @@
       "open": 1768.7667236328125,
       "high": 1837.720947265625,
       "low": 1714.29296875,
-      "close": 1802,
-      "volume": 20172072960
+      "close": 1813.739990234375,
+      "volume": 20012396544
      }
     ],
     "m20": [
@@ -84493,7 +84493,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2162.2772
+      "value": 2162.8642
      }
     ],
     "m50": [
@@ -85695,7 +85695,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2377.4192
+      "value": 2377.654
      }
     ],
     "m200": [
@@ -86897,7 +86897,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2142.3675
+      "value": 2142.4262
      }
     ],
     "rsi": [
@@ -88099,7 +88099,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 23.2801
+      "value": 24.4505
      }
     ]
    },
@@ -88115,7 +88115,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1802,
+    "entrada": 1813.739990234375,
     "objetivo": 1417.484921875,
     "stop": 1714.29296875
    },
@@ -88520,16 +88520,16 @@
    "tema": "CNV normativa dólar parking"
   },
   {
-   "titulo": "Dólar MEP y CCL: la CNV oficializó la eliminación del parking - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQzlYdy0tM0NRZTBrRzRLM1dJdXVRMHh6eGRTNzNHMnVOWFd6ZFRQNXRmdmp2NTlvMUxXRUpDUlNwN1R5VVFzaTI2T3lDbFIwR3p1X2NtVWVYYVptbmdfcTZEZFpUb3dFVkFqZXdFZzhLekw4bTZaMUtnVU9QcFZkVUxkUkxER2NoTUIzWjBiQm5FR3BmRmZKYXJOWnpZcUlKSDg00gGoAUFVX3lxTE4xZFczOXQzcjM3VGNZV3NudEV4ZnpSc2x5ZWduYU1FZTlOcWJlMk9VSmtGOEp4dXBpd1plSS1JZENkV0trZnZHRU5iR3EtTW9xeHRYS2JBSGFyMTE0aVZsbWp6amJ4ZjlNajg3OTR4d2w4QjgtZFhDd052UWJzZktMWU83NHpxenJGUzdhT0dMVF9SU1M2bWlZcHJPTnlIN2ktSTljWjJCZQ?oc=5",
-   "fecha": "Tue, 15 Apr 2025 07:00:00 GMT",
+   "titulo": "La CNV dispone nuevas restricciones para los dólares financieros - Errepar",
+   "enlace": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVm1RNTVscVhud2Y4dFhId29UT2hKMWNXaFFjbWQyWWVmSTZqTWpkd1I1dWp1d1VBYVpjSHRmSkFxRmUxVjV5bDR6Z09EblNRSjdoMmRvZ3VuWi1tUlA1RnR3WU01VlhuRzAzVGFEU3RkVHBvNEJmNUV3TWpZZ0hxUzRLUlhCMzVGYndlcw?oc=5",
+   "fecha": "Tue, 23 May 2023 07:00:00 GMT",
    "fuente": "",
    "tema": "CNV normativa dólar parking"
   },
   {
-   "titulo": "Chau al cepo: eliminan el parking de dólar financiero para personas humanas - iProfesional",
-   "enlace": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOazNVVDJVTDNpZXVLSHNwd1FfaGdaYVFrQm4zaFJlU2w4S0JObVZzN1F0X3MzOFk4Tnlub005cVVKaUM5bDVlaWtKUnhiSW5XU1A4ZzBod2pDa3lhOVN6STdPSlU5UHlCTEFxTmp4M2EyUEF4R1VwZzRtYzhDYmlOVWJBaUZZdElBYUo2cl91ZWhNZ01paFZlcFp6Wi1RZ3dfaFVDX21pVGI5YUt4aWk5aWJvODBKRGlLdnE00gHAAUFVX3lxTE9OQjM5YVlHV3VhbzdLdnNIMDB4WG5ReHY5aU9idzRXR2p2QUliaU9JOERUdjBPUVdZUVVGMlpSbTRxX1doaWFPcnpIYk1yUjF6cmhaQ2pZcTY4eGxCNHo0X1V4MUdsaHV6blZpal9MR1k0SUhORTJFRG10bUNkZ2NYMGlrdHBBYV9Nb2c1OVNLX2JqbE5hYWp3SVZ1Q2pIWlAxeUwtYU1qNE5teVRPS3Zfei16MDg5V2tmVzhUck9xdQ?oc=5",
-   "fecha": "Mon, 14 Apr 2025 07:00:00 GMT",
+   "titulo": "Dólar MEP y CCL: la CNV oficializó la eliminación del parking - Ambito",
+   "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQzlYdy0tM0NRZTBrRzRLM1dJdXVRMHh6eGRTNzNHMnVOWFd6ZFRQNXRmdmp2NTlvMUxXRUpDUlNwN1R5VVFzaTI2T3lDbFIwR3p1X2NtVWVYYVptbmdfcTZEZFpUb3dFVkFqZXdFZzhLekw4bTZaMUtnVU9QcFZkVUxkUkxER2NoTUIzWjBiQm5FR3BmRmZKYXJOWnpZcUlKSDg00gGoAUFVX3lxTE4xZFczOXQzcjM3VGNZV3NudEV4ZnpSc2x5ZWduYU1FZTlOcWJlMk9VSmtGOEp4dXBpd1plSS1JZENkV0trZnZHRU5iR3EtTW9xeHRYS2JBSGFyMTE0aVZsbWp6amJ4ZjlNajg3OTR4d2w4QjgtZFhDd052UWJzZktMWU83NHpxenJGUzdhT0dMVF9SU1M2bWlZcHJPTnlIN2ktSTljWjJCZQ?oc=5",
+   "fecha": "Tue, 15 Apr 2025 07:00:00 GMT",
    "fuente": "",
    "tema": "CNV normativa dólar parking"
   },
@@ -88541,11 +88541,18 @@
    "tema": "CNV normativa dólar parking"
   },
   {
-   "titulo": "Toda la normativa sobre la compra de dólar MEP: Lo que necesitas saber - Dolarhoy.com",
-   "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWU1kRmtjSDB1U2tyaWhHaHhBQkx0ZWI5QlBfeU9vQ1V2N2w0SWhEdk51LTJUX3hnNmNVYml4YWNjcGVjMDBXWHVfNjRJZzBZcldIVHREaE52a0NxVjdGMHZFWFlIb3piYnB2S0lFYjFWUUFza0lsTjBPemlZdms2enVSU3YwX0NKSzBvek1oektBeFp0eGprSklSVE1taEhhRFhXS3FUVThONTJjVE40?oc=5",
-   "fecha": "Mon, 07 Aug 2023 07:00:00 GMT",
+   "titulo": "Chau al cepo: eliminan el parking de dólar financiero para personas humanas - iProfesional",
+   "enlace": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOazNVVDJVTDNpZXVLSHNwd1FfaGdaYVFrQm4zaFJlU2w4S0JObVZzN1F0X3MzOFk4Tnlub005cVVKaUM5bDVlaWtKUnhiSW5XU1A4ZzBod2pDa3lhOVN6STdPSlU5UHlCTEFxTmp4M2EyUEF4R1VwZzRtYzhDYmlOVWJBaUZZdElBYUo2cl91ZWhNZ01paFZlcFp6Wi1RZ3dfaFVDX21pVGI5YUt4aWk5aWJvODBKRGlLdnE00gHAAUFVX3lxTE9OQjM5YVlHV3VhbzdLdnNIMDB4WG5ReHY5aU9idzRXR2p2QUliaU9JOERUdjBPUVdZUVVGMlpSbTRxX1doaWFPcnpIYk1yUjF6cmhaQ2pZcTY4eGxCNHo0X1V4MUdsaHV6blZpal9MR1k0SUhORTJFRG10bUNkZ2NYMGlrdHBBYV9Nb2c1OVNLX2JqbE5hYWp3SVZ1Q2pIWlAxeUwtYU1qNE5teVRPS3Zfei16MDg5V2tmVzhUck9xdQ?oc=5",
+   "fecha": "Mon, 14 Apr 2025 07:00:00 GMT",
    "fuente": "",
    "tema": "CNV normativa dólar parking"
+  },
+  {
+   "titulo": "Por qué se derrumban las acciones tecnológicas de Wall Street y sacuden a los mercados del mundo - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPZnY2QkRhRFpfbVgwdWQyUVRYcnJBTUNyX0U4WDladkRJWHZPYkpVdWhhV0RBNkRFYWpkaTNlYXk3MWVIWUNuZ2NUWEdPZzNya1JKVlZlbjRqZ0x3eXVydDJxR29TZV9qLXNfXzhJZFJjQm1RYkhrSGl1LWsxRUFTNFQ0S01vdUwzNVhFWEFvZ2c2MXc3Zm5lYzZjOXNjWDNDQmQzMzJWbUVhaS05VUNySkVsSWM3MUhjaDVNRW0wczQ3V3hvckRfN0ptTUFNMWtDcGJnRnlHcEzSAfMBQVVfeXFMTl9jdFMxU0dlWGFtbnI4Ymd1ZVZHdUxwLWxybnhPeE1uWm5kSnROaUxuMVRBTDM3ZFYyN2U3MDZwWVBBNDhyWi1nNDE2QkU2SjlVYWNIazRrcEctSjc3LXJjQVF5ODJ1Z2RsQ0JHN1V6RTVWT2llMG9VZ01yZE9pZURFVjFTd29vOVFYMG05eWU0OVhsaE1jR21fVzNjbTBXM1lVUEdtLVN2U3JxVmw3YTU2UTJ4RzNnc2ZMVFVZeEZURU56c2kyS09LRjdOdTNZN29pQV8zS2xZbHpPbjhZTkZYMXNkYzFUTjQxVGpmY1RfTzhR?oc=5",
+   "fecha": "Fri, 30 Oct 2026 07:00:00 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
   },
   {
    "titulo": "Wall Street: Nasdaq se hundió casi 3% ante el renovado temor por las inversiones en IA - Ambito",
@@ -88562,13 +88569,6 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "La bolsa hoy: Wall Street sube tras las noticias de Anthropic - XTB.com",
-   "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZzBDbmduX0daeGlVeE0zVloza1N5MFBUN3lfWWdULTV0Q3JnaWt5Q2FZZ25hM0ZXcHNZYUIwRktqRS1tR1lSaTg4WkNNU1A3OG1kNlNOTHoyenNlcER3QjFqRXZsbmZOd21GZWpNVjhwdXNTOGxaUFR4WFR2dzJiMG1FYWhheFZ3OS0zcTZlMzhWRlh1WFdnX2NKV1d0ajhuSWNFQ1dvR2d4QXFNZ0VxUXVFTk9BNS1WWGVzVlY3VmpiNDhQei1mTDl6RF9ocFNHcm9lWHRWOGg2cFk?oc=5",
-   "fecha": "Tue, 27 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
    "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
    "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
    "fecha": "Fri, 13 Nov 2026 14:47:27 GMT",
@@ -88576,9 +88576,9 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Desplome en Wall Street: la cautela regulatoria sobre la inteligencia artificial y el impacto electoral golpean a los gigantes tecnológicos - Dolarhoy.com",
-   "enlace": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPQUFBYkpBUXF5RVRKQ2ctN19qZURhY3UzTlRvYk55V0FJenpFTXlwM2xQU2Y5VjFMWlZDTHNwVVh4NlR3TUJ4UHo1Vmd4c0x3UjJMbXREUDVlWVZQTzZZSldFN2xEaWJSNlJVZlBqN1NrVGhPV2dQYndSYUNkMkp4dUhOLVJEZk9Zd2s4MTFXczFscHlXaDkzYk5QbUFBWWlKSGlCeWI3ZmJOM2NfaVRMZGw1bDlWNWFRaG5KVTdfVzZWanplS1VWX21JQXJNZ3VVRTBMblJWdGQzU0VJVFRBTXJSTkN2V2dtRGo3TmdJOU9RcGJZUmZPellJNW1hQUNHTUVyT0s3aUtJa0diQlE?oc=5",
-   "fecha": "Thu, 12 Nov 2026 07:51:16 GMT",
+   "titulo": "La bolsa hoy: Wall Street sube tras las noticias de Anthropic - XTB.com",
+   "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZzBDbmduX0daeGlVeE0zVloza1N5MFBUN3lfWWdULTV0Q3JnaWt5Q2FZZ25hM0ZXcHNZYUIwRktqRS1tR1lSaTg4WkNNU1A3OG1kNlNOTHoyenNlcER3QjFqRXZsbmZOd21GZWpNVjhwdXNTOGxaUFR4WFR2dzJiMG1FYWhheFZ3OS0zcTZlMzhWRlh1WFdnX2NKV1d0ajhuSWNFQ1dvR2d4QXFNZ0VxUXVFTk9BNS1WWGVzVlY3VmpiNDhQei1mTDl6RF9ocFNHcm9lWHRWOGg2cFk?oc=5",
+   "fecha": "Tue, 27 Oct 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88646,9 +88646,9 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarín",
-   "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdS03LXh2b0hXYkEwTlNfQnJnaU9sUk1mWEI0Y0hUTHNUODZjS3pBM0d2OFlBZ1FidmVzLWlzODQ4Ulh2UmVtMUpiMGhPSThXQ2kzb2djdFJOUkk0TUxMOW1GZHhtMFlxRjRZOTlmay1keUN0dndTMEVpcWxLSEJhU0NXdWh2LXljVWhWSTlGaHdyWG9aQnVTVU5tTFlQTW1mMG14TTZvRFFxTEVfa3V3WEJR?oc=5",
-   "fecha": "Thu, 12 Nov 2026 21:30:40 GMT",
+   "titulo": "Jubilados y pensionados: cuánto cobrarán en diciembre tras el nuevo dato de inflación del Indec - La Gaceta",
+   "enlace": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQXzFwc1NZbEtZUnV6Nzg5WjZ6ZFdsM2V1N3pSYlB3VkRveXVRU0thVDVjWmgxMjZnb24zblNFTEx1LVRjZm13em8xV3VaNWRIR2JpaF9YbHBob0Vsdm1GdDBJSzgtTllSX1JJN09Dd211NHlkVHR2Y19ITl9SQ1JRWE5wWllYZEw3M0c5UmZWVEg1QjNfaEQzZUcxQlJqRHdoQXpFNHBPU0ZsZDk3THFCb0N2MmdWX3JROF9Gc0pZVlg3a05EV3BrUmtqQnlMejjSAdQBQVVfeXFMTkpGVmNZWVdrTjVyek1uc1FTWlN6Vk5JcU1aaXJPQmZrRWUxeVNUQ244Nmp1RTRxR0x5dzd6V2FjR2IyRkwzTUJORGNNZnJNeExRNkJEMHZiWjBOOU4ydlVfcTBsU3gwRlphaWtNZXhqbllYdGdaa0JwdkVpVjBnVC1aalRTSTVnbEVidE5ubmRWTlE5U2VaakgxZGRTYXpjWXV5MVVNWS1xRGRoV0N0S01uYy01WGpjcEdDNVdMWjc2Nks3MmpiM1dpcS01OTRiaXI0NVA?oc=5",
+   "fecha": "Fri, 13 Nov 2026 12:52:15 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
