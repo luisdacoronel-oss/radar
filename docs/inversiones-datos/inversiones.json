@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T02:34:32.275Z",
+ "generado": "2026-11-15T03:34:23.083Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -243,7 +243,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.94,
+   "mensualPct": -19.77,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -23.52,
+   "mensualPct": -22.99,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73455,16 +73455,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64684.30859375,
-   "variacionDia": -5.22,
-   "variacion30d": -19.94,
+   "precio": 64820.73046875,
+   "variacionDia": -5.02,
+   "variacion30d": -19.77,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75818.4521484375,
-   "m50": 80148.214609375,
-   "m200": 72977.05365234375,
-   "rsi": 20.723213712863767,
+   "m20": 75825.2732421875,
+   "m50": 80150.943046875,
+   "m200": 72977.73576171875,
+   "rsi": 20.859475464378903,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -75943,10 +75943,10 @@
      {
       "time": "2026-11-15",
       "open": 64119.78125,
-      "high": 64628.67578125,
+      "high": 65289.0078125,
       "low": 62093.515625,
-      "close": 64684.30859375,
-      "volume": 50516008960
+      "close": 64820.73046875,
+      "volume": 51495137280
      }
     ],
     "m20": [
@@ -77148,7 +77148,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75818.4521
+      "value": 75825.2732
      }
     ],
     "m50": [
@@ -78350,7 +78350,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 80148.2146
+      "value": 80150.943
      }
     ],
     "m200": [
@@ -79552,7 +79552,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72977.0537
+      "value": 72977.7358
      }
     ],
     "rsi": [
@@ -80754,7 +80754,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 20.7232
+      "value": 20.8595
      }
     ]
    },
@@ -80795,16 +80795,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1801.77001953125,
-   "variacionDia": -6.53,
-   "variacion30d": -23.52,
+   "precio": 1814.4000244140625,
+   "variacionDia": -5.87,
+   "variacion30d": -22.99,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2189.823760986328,
-   "m50": 2395.936433105469,
-   "m200": 2144.7878405761717,
-   "rsi": 20.66458133178766,
+   "m20": 2190.4552612304688,
+   "m50": 2396.189033203125,
+   "m200": 2144.850990600586,
+   "rsi": 21.019482161069348,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83283,10 +83283,10 @@
      {
       "time": "2026-11-15",
       "open": 1768.7667236328125,
-      "high": 1802.086181640625,
+      "high": 1825.3111572265625,
       "low": 1714.29296875,
-      "close": 1801.77001953125,
-      "volume": 20732401664
+      "close": 1814.4000244140625,
+      "volume": 21029474304
      }
     ],
     "m20": [
@@ -84488,7 +84488,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2189.8238
+      "value": 2190.4553
      }
     ],
     "m50": [
@@ -85690,7 +85690,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2395.9364
+      "value": 2396.189
      }
     ],
     "m200": [
@@ -86892,7 +86892,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2144.7878
+      "value": 2144.851
      }
     ],
     "rsi": [
@@ -88094,7 +88094,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 20.6646
+      "value": 21.0195
      }
     ]
    },
@@ -88110,7 +88110,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1801.77001953125,
+    "entrada": 1814.4000244140625,
     "objetivo": 1417.484921875,
     "stop": 1714.29296875
    },
@@ -88501,9 +88501,9 @@
    "tema": "BCRA tasas plazo fijo"
   },
   {
-   "titulo": "Cuánto paga cada banco un plazo fijo en noviembre y qué tasas le ganan a la inflación - Diario Mendoza",
-   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNXlWTHM0OERNZk9ZaXVoSXg2MTBJejV4R3JiaGV2cVNhYTZlSWhPNlZCQ2diTU9TMjQ2bHZyRXJyc3VnQkdaeVZlNjkxWl9GbmFwOFV0QktRU2RNcHhDWUtBRXRPNVJwemhTeE1CNEl0YWRUZFVwZURHa3RIWWFaYU5uRlRZYk01LUNkcVZ4M09ZVGNZOEZzRXo5NG5kM09FRkFhZHVINjhCbGZUdm9jWlo3bGJMc3VSU2fSAb8BQVVfeXFMTUIxYVRkUlY1MzdyR0dqUDBXd2pQOTNzd2lZc0hWb01aajFERXBPM2VleUNFSHBPZ0RJSExqYUEwSFdhT1BZX2gtejZKN3FVNFVmVXBLRkNQdzBIQ1MxMjBobmR2MmVMUGpTMzB6Vk44b3dwaGx2c2NEaUxkSEx2T05ZY0xOeVdyLXV4ckxIeWF6NnBqSFZtS1FRT2JPOFl2bEhhSWwxS2JyUG5fWl9HaHdyNERjV1lpSEFlanFaNVk?oc=5",
-   "fecha": "Fri, 13 Nov 2026 14:25:00 GMT",
+   "titulo": "Plazo fijo: la diferencia de ganancia entre bancos por invertir $4 millones a 30 días - MDZ Online",
+   "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaTZaNzFXWVRlME5QWDMxS1dYXzBCVGxVVlRzeE5aQ0lGTHAxSENabDAyNEFRREw2ZXZQWjU2MUVnZU1raU81eXlDanhMd2d5UGtQY3oxeDhBSEFNbmxNZUs0cmZiOWdVSlh1dW4wQ19FdU1xWlFrUXZZZGc2ZWlHZTRVaW5BcVlZR0FOODl2YWRRUFFrTnZUSXVUOEpWcWs3NzFCTnpqZEhzbTRRaVZQTF9GNWtOb0hQdFdYYTZ5eFY1QUloLXBIdjBEdVFWb1ZPalB4bQ?oc=5",
+   "fecha": "Thu, 12 Nov 2026 13:22:45 GMT",
    "fuente": "",
    "tema": "BCRA tasas plazo fijo"
   },
@@ -88543,13 +88543,6 @@
    "tema": "CNV normativa dólar parking"
   },
   {
-   "titulo": "Repunte de los papeles argentinos en Wall Street - Página|12",
-   "enlace": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVmJ2VW9BYWtaU01rRm50MDdENHBCRlhHRWxUb3NqM3hXQ1ppN0VsdEdNcG53SDZEMG1XU3MzQVo2aWJSZWxxVGFiTWlrVjRwS01rNHRrTE5lYVEyRGFyLUFJU1lIUXNmazgyVFVlQXFJc0Vxd3FyTlBBMmxwVGw5VjlzcEc2SzNiOFNxc0R4Sm1ZQQ?oc=5",
-   "fecha": "Wed, 11 Nov 2026 02:53:18 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
    "titulo": "Por qué se derrumban las acciones tecnológicas de Wall Street y sacuden a los mercados del mundo - Infobae",
    "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPZnY2QkRhRFpfbVgwdWQyUVRYcnJBTUNyX0U4WDladkRJWHZPYkpVdWhhV0RBNkRFYWpkaTNlYXk3MWVIWUNuZ2NUWEdPZzNya1JKVlZlbjRqZ0x3eXVydDJxR29TZV9qLXNfXzhJZFJjQm1RYkhrSGl1LWsxRUFTNFQ0S01vdUwzNVhFWEFvZ2c2MXc3Zm5lYzZjOXNjWDNDQmQzMzJWbUVhaS05VUNySkVsSWM3MUhjaDVNRW0wczQ3V3hvckRfN0ptTUFNMWtDcGJnRnlHcEzSAfMBQVVfeXFMTl9jdFMxU0dlWGFtbnI4Ymd1ZVZHdUxwLWxybnhPeE1uWm5kSnROaUxuMVRBTDM3ZFYyN2U3MDZwWVBBNDhyWi1nNDE2QkU2SjlVYWNIazRrcEctSjc3LXJjQVF5ODJ1Z2RsQ0JHN1V6RTVWT2llMG9VZ01yZE9pZURFVjFTd29vOVFYMG05eWU0OVhsaE1jR21fVzNjbTBXM1lVUEdtLVN2U3JxVmw3YTU2UTJ4RzNnc2ZMVFVZeEZURU56c2kyS09LRjdOdTNZN29pQV8zS2xZbHpPbjhZTkZYMXNkYzFUTjQxVGpmY1RfTzhR?oc=5",
    "fecha": "Fri, 30 Oct 2026 07:00:00 GMT",
@@ -88574,6 +88567,13 @@
    "titulo": "La bolsa hoy: Wall Street sube tras las noticias de Anthropic - XTB.com",
    "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZzBDbmduX0daeGlVeE0zVloza1N5MFBUN3lfWWdULTV0Q3JnaWt5Q2FZZ25hM0ZXcHNZYUIwRktqRS1tR1lSaTg4WkNNU1A3OG1kNlNOTHoyenNlcER3QjFqRXZsbmZOd21GZWpNVjhwdXNTOGxaUFR4WFR2dzJiMG1FYWhheFZ3OS0zcTZlMzhWRlh1WFdnX2NKV1d0ajhuSWNFQ1dvR2d4QXFNZ0VxUXVFTk9BNS1WWGVzVlY3VmpiNDhQei1mTDl6RF9ocFNHcm9lWHRWOGg2cFk?oc=5",
    "fecha": "Tue, 27 Oct 2026 07:00:00 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
+   "titulo": "Jornada en rojo en Wall Street: subió el riesgo país a 867 puntos y bajaron las reservas del BCRA por un pago al FMI - » Cholila Online",
+   "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWlplc3dBSTRvMVAxbnNDTWVvX3kwdDluM3ZLRXNqMnR3c3FZOTlhcVI5N2xhN0ZGT195a25ZU2UtZkw1cmxEa3RVM0FYd2dmQVpIemppVG55QU44S3JnYVlYdFgxZHVOQnBYaThqWHJhSmItM2hzSFhjYVpVM2R4VlFhWFJLU1g4UXEzY2Zvak1aSXp5LUg1RkZuM0tIalREUnlPdE5jaw?oc=5",
+   "fecha": "Thu, 12 Nov 2026 15:52:12 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
