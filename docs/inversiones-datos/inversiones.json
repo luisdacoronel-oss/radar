@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T17:21:55.027Z",
+ "generado": "2026-11-15T17:55:01.843Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.06,
+   "mensualPct": -19.37,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -22.05,
+   "mensualPct": -22.15,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73466,16 +73466,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64768.62109375,
-   "variacionDia": 1,
-   "variacion30d": -19.06,
+   "precio": 64519.359375,
+   "variacionDia": 0.61,
+   "variacion30d": -19.37,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75028.7375,
-   "m50": 79744.3328125,
-   "m200": 72919.2348046875,
-   "rsi": 22.673555542612064,
+   "m20": 75016.2744140625,
+   "m50": 79739.347578125,
+   "m200": 72917.98849609375,
+   "rsi": 21.72407673314069,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -73549,7 +73549,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 22: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75956,8 +75956,8 @@
       "open": 64119.78125,
       "high": 65889.234375,
       "low": 62093.515625,
-      "close": 64768.62109375,
-      "volume": 48597045248
+      "close": 64519.359375,
+      "volume": 48151400448
      }
     ],
     "m20": [
@@ -77159,7 +77159,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75028.7375
+      "value": 75016.2744
      }
     ],
     "m50": [
@@ -78361,7 +78361,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 79744.3328
+      "value": 79739.3476
      }
     ],
     "m200": [
@@ -79563,7 +79563,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72919.2348
+      "value": 72917.9885
      }
     ],
     "rsi": [
@@ -80765,7 +80765,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 22.6736
+      "value": 21.7241
      }
     ]
    },
@@ -80800,16 +80800,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1813.739990234375,
-   "variacionDia": 2.52,
-   "variacion30d": -22.05,
+   "precio": 1811.550048828125,
+   "variacionDia": 2.4,
+   "variacion30d": -22.15,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2162.864221191406,
-   "m50": 2377.6539794921873,
-   "m200": 2142.426213989258,
-   "rsi": 24.45051535441378,
+   "m20": 2162.7547241210937,
+   "m50": 2377.6101806640627,
+   "m200": 2142.4152642822264,
+   "rsi": 24.234903287807015,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83290,8 +83290,8 @@
       "open": 1768.7667236328125,
       "high": 1837.720947265625,
       "low": 1714.29296875,
-      "close": 1813.739990234375,
-      "volume": 20012396544
+      "close": 1811.550048828125,
+      "volume": 19928514560
      }
     ],
     "m20": [
@@ -84493,7 +84493,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2162.8642
+      "value": 2162.7547
      }
     ],
     "m50": [
@@ -85695,7 +85695,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2377.654
+      "value": 2377.6102
      }
     ],
     "m200": [
@@ -86897,7 +86897,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2142.4262
+      "value": 2142.4153
      }
     ],
     "rsi": [
@@ -88099,7 +88099,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 24.4505
+      "value": 24.2349
      }
     ]
    },
@@ -88115,7 +88115,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1813.739990234375,
+    "entrada": 1811.550048828125,
     "objetivo": 1417.484921875,
     "stop": 1714.29296875
    },
@@ -88464,16 +88464,16 @@
    "tema": "dólar MEP CCL brecha hoy"
   },
   {
-   "titulo": "Dólar CCL: brecha con el MEP sube a 5,2% en Argentina - El Ecosistema Startup",
-   "enlace": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN0V5T0JFT1VMQ291bXRucEQzVHRHYVFJVUdiVkxSbWpXd0sySkVfQ1pzcTFLRWlRSkEtSlM4WlVmcl91RVZKQUhMQXhSUDRyRGk0M2hReUpUMGNjZHhLdmRjN2tRZXY3S3BOeFZ4eHE0ZWE1QlZMZndXVlZadWd0RG9PT19KWHQw?oc=5",
-   "fecha": "Thu, 22 Oct 2026 07:00:00 GMT",
+   "titulo": "Dólar hoy: por qué se achicó la brecha entre el oficial, el MEP y el blue - Diario Río Negro",
+   "enlace": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWlpUcUNUeFFCSHpITnBHREdfVTh2ZDN4ZTkzZm43ZkJTRkdKMHN6cVdjcEtCbGl2eE1GQzg5T0lEUXZ1cUgwbU1RbUpoWjNONlh2aGZ2bDVYMG4wRzJTRlRLNnFHb0N4X0ZCY0x2bXJlWU1makpSaFVaZlVkd0FyNnQxYzctWEhmNlZ0bzdkUHk0b1lLVjQ5dnlSX0NuX1gxeDdjTWtNQ1FvbnpqT01haXBzYWFubWh3c19KTk1KZXdlajdweWllbjJ3UkFlM1VIa1NpTElOcXdZZzlUci1QX3Q4bC16dHfSAe8BQVVfeXFMUEVfV3ZTMExpOHBSal81TEgzd1Z3SUNYLUZ2NTRoQjFVNXhndlczRHBhU1lfOWw0QTc4akNvaUc0YkFuSjBuUXgyeTRtU2wxWXdGdzlLZ283YUprcnFXczV2VDMxc1lRSVhEWjUyNXc4aVJ5QW9HUHhuUGNVT0xDVGRueEc0NXhGeVVkVjdOc2lGMWhhMVA1SEFIbTlTRkZxSTFLb2I3VWdrdFNHaUV0aWw1WWZGZV9qUjY4cmxDOXk4Ml9JNjd6NWMtbjRYXzdzZ1hCMlRjOVZ4RktydFpNb3RiV2ZmM3FpVklYdjdUX0E?oc=5",
+   "fecha": "Wed, 23 Sep 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "dólar MEP CCL brecha hoy"
   },
   {
-   "titulo": "Dólar hoy: por qué se achicó la brecha entre el oficial, el MEP y el blue - Diario Río Negro",
-   "enlace": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWlpUcUNUeFFCSHpITnBHREdfVTh2ZDN4ZTkzZm43ZkJTRkdKMHN6cVdjcEtCbGl2eE1GQzg5T0lEUXZ1cUgwbU1RbUpoWjNONlh2aGZ2bDVYMG4wRzJTRlRLNnFHb0N4X0ZCY0x2bXJlWU1makpSaFVaZlVkd0FyNnQxYzctWEhmNlZ0bzdkUHk0b1lLVjQ5dnlSX0NuX1gxeDdjTWtNQ1FvbnpqT01haXBzYWFubWh3c19KTk1KZXdlajdweWllbjJ3UkFlM1VIa1NpTElOcXdZZzlUci1QX3Q4bC16dHfSAe8BQVVfeXFMUEVfV3ZTMExpOHBSal81TEgzd1Z3SUNYLUZ2NTRoQjFVNXhndlczRHBhU1lfOWw0QTc4akNvaUc0YkFuSjBuUXgyeTRtU2wxWXdGdzlLZ283YUprcnFXczV2VDMxc1lRSVhEWjUyNXc4aVJ5QW9HUHhuUGNVT0xDVGRueEc0NXhGeVVkVjdOc2lGMWhhMVA1SEFIbTlTRkZxSTFLb2I3VWdrdFNHaUV0aWw1WWZGZV9qUjY4cmxDOXk4Ml9JNjd6NWMtbjRYXzdzZ1hCMlRjOVZ4RktydFpNb3RiV2ZmM3FpVklYdjdUX0E?oc=5",
-   "fecha": "Wed, 23 Sep 2026 07:00:00 GMT",
+   "titulo": "Dólar CCL: brecha con el MEP sube a 5,2% en Argentina - El Ecosistema Startup",
+   "enlace": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN0V5T0JFT1VMQ291bXRucEQzVHRHYVFJVUdiVkxSbWpXd0sySkVfQ1pzcTFLRWlRSkEtSlM4WlVmcl91RVZKQUhMQXhSUDRyRGk0M2hReUpUMGNjZHhLdmRjN2tRZXY3S3BOeFZ4eHE0ZWE1QlZMZndXVlZadWd0RG9PT19KWHQw?oc=5",
+   "fecha": "Thu, 22 Oct 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "dólar MEP CCL brecha hoy"
   },
@@ -88520,16 +88520,16 @@
    "tema": "CNV normativa dólar parking"
   },
   {
-   "titulo": "La CNV dispone nuevas restricciones para los dólares financieros - Errepar",
-   "enlace": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVm1RNTVscVhud2Y4dFhId29UT2hKMWNXaFFjbWQyWWVmSTZqTWpkd1I1dWp1d1VBYVpjSHRmSkFxRmUxVjV5bDR6Z09EblNRSjdoMmRvZ3VuWi1tUlA1RnR3WU01VlhuRzAzVGFEU3RkVHBvNEJmNUV3TWpZZ0hxUzRLUlhCMzVGYndlcw?oc=5",
-   "fecha": "Tue, 23 May 2023 07:00:00 GMT",
+   "titulo": "Dólar MEP y CCL: la CNV oficializó la eliminación del parking - Ambito",
+   "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQzlYdy0tM0NRZTBrRzRLM1dJdXVRMHh6eGRTNzNHMnVOWFd6ZFRQNXRmdmp2NTlvMUxXRUpDUlNwN1R5VVFzaTI2T3lDbFIwR3p1X2NtVWVYYVptbmdfcTZEZFpUb3dFVkFqZXdFZzhLekw4bTZaMUtnVU9QcFZkVUxkUkxER2NoTUIzWjBiQm5FR3BmRmZKYXJOWnpZcUlKSDg00gGoAUFVX3lxTE4xZFczOXQzcjM3VGNZV3NudEV4ZnpSc2x5ZWduYU1FZTlOcWJlMk9VSmtGOEp4dXBpd1plSS1JZENkV0trZnZHRU5iR3EtTW9xeHRYS2JBSGFyMTE0aVZsbWp6amJ4ZjlNajg3OTR4d2w4QjgtZFhDd052UWJzZktMWU83NHpxenJGUzdhT0dMVF9SU1M2bWlZcHJPTnlIN2ktSTljWjJCZQ?oc=5",
+   "fecha": "Tue, 15 Apr 2025 07:00:00 GMT",
    "fuente": "",
    "tema": "CNV normativa dólar parking"
   },
   {
-   "titulo": "Dólar MEP y CCL: la CNV oficializó la eliminación del parking - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQzlYdy0tM0NRZTBrRzRLM1dJdXVRMHh6eGRTNzNHMnVOWFd6ZFRQNXRmdmp2NTlvMUxXRUpDUlNwN1R5VVFzaTI2T3lDbFIwR3p1X2NtVWVYYVptbmdfcTZEZFpUb3dFVkFqZXdFZzhLekw4bTZaMUtnVU9QcFZkVUxkUkxER2NoTUIzWjBiQm5FR3BmRmZKYXJOWnpZcUlKSDg00gGoAUFVX3lxTE4xZFczOXQzcjM3VGNZV3NudEV4ZnpSc2x5ZWduYU1FZTlOcWJlMk9VSmtGOEp4dXBpd1plSS1JZENkV0trZnZHRU5iR3EtTW9xeHRYS2JBSGFyMTE0aVZsbWp6amJ4ZjlNajg3OTR4d2w4QjgtZFhDd052UWJzZktMWU83NHpxenJGUzdhT0dMVF9SU1M2bWlZcHJPTnlIN2ktSTljWjJCZQ?oc=5",
-   "fecha": "Tue, 15 Apr 2025 07:00:00 GMT",
+   "titulo": "Chau al cepo: eliminan el parking de dólar financiero para personas humanas - iProfesional",
+   "enlace": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOazNVVDJVTDNpZXVLSHNwd1FfaGdaYVFrQm4zaFJlU2w4S0JObVZzN1F0X3MzOFk4Tnlub005cVVKaUM5bDVlaWtKUnhiSW5XU1A4ZzBod2pDa3lhOVN6STdPSlU5UHlCTEFxTmp4M2EyUEF4R1VwZzRtYzhDYmlOVWJBaUZZdElBYUo2cl91ZWhNZ01paFZlcFp6Wi1RZ3dfaFVDX21pVGI5YUt4aWk5aWJvODBKRGlLdnE00gHAAUFVX3lxTE9OQjM5YVlHV3VhbzdLdnNIMDB4WG5ReHY5aU9idzRXR2p2QUliaU9JOERUdjBPUVdZUVVGMlpSbTRxX1doaWFPcnpIYk1yUjF6cmhaQ2pZcTY4eGxCNHo0X1V4MUdsaHV6blZpal9MR1k0SUhORTJFRG10bUNkZ2NYMGlrdHBBYV9Nb2c1OVNLX2JqbE5hYWp3SVZ1Q2pIWlAxeUwtYU1qNE5teVRPS3Zfei16MDg5V2tmVzhUck9xdQ?oc=5",
+   "fecha": "Mon, 14 Apr 2025 07:00:00 GMT",
    "fuente": "",
    "tema": "CNV normativa dólar parking"
   },
@@ -88541,9 +88541,9 @@
    "tema": "CNV normativa dólar parking"
   },
   {
-   "titulo": "Chau al cepo: eliminan el parking de dólar financiero para personas humanas - iProfesional",
-   "enlace": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOazNVVDJVTDNpZXVLSHNwd1FfaGdaYVFrQm4zaFJlU2w4S0JObVZzN1F0X3MzOFk4Tnlub005cVVKaUM5bDVlaWtKUnhiSW5XU1A4ZzBod2pDa3lhOVN6STdPSlU5UHlCTEFxTmp4M2EyUEF4R1VwZzRtYzhDYmlOVWJBaUZZdElBYUo2cl91ZWhNZ01paFZlcFp6Wi1RZ3dfaFVDX21pVGI5YUt4aWk5aWJvODBKRGlLdnE00gHAAUFVX3lxTE9OQjM5YVlHV3VhbzdLdnNIMDB4WG5ReHY5aU9idzRXR2p2QUliaU9JOERUdjBPUVdZUVVGMlpSbTRxX1doaWFPcnpIYk1yUjF6cmhaQ2pZcTY4eGxCNHo0X1V4MUdsaHV6blZpal9MR1k0SUhORTJFRG10bUNkZ2NYMGlrdHBBYV9Nb2c1OVNLX2JqbE5hYWp3SVZ1Q2pIWlAxeUwtYU1qNE5teVRPS3Zfei16MDg5V2tmVzhUck9xdQ?oc=5",
-   "fecha": "Mon, 14 Apr 2025 07:00:00 GMT",
+   "titulo": "Toda la normativa sobre la compra de dólar MEP: Lo que necesitas saber - Dolarhoy.com",
+   "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWU1kRmtjSDB1U2tyaWhHaHhBQkx0ZWI5QlBfeU9vQ1V2N2w0SWhEdk51LTJUX3hnNmNVYml4YWNjcGVjMDBXWHVfNjRJZzBZcldIVHREaE52a0NxVjdGMHZFWFlIb3piYnB2S0lFYjFWUUFza0lsTjBPemlZdms2enVSU3YwX0NKSzBvek1oektBeFp0eGprSklSVE1taEhhRFhXS3FUVThONTJjVE40?oc=5",
+   "fecha": "Mon, 07 Aug 2023 07:00:00 GMT",
    "fuente": "",
    "tema": "CNV normativa dólar parking"
   },
@@ -88604,6 +88604,13 @@
    "tema": "bitcoin precio hoy"
   },
   {
+   "titulo": "Bitcoin retrocede un 1,78% este domingo 15 de noviembre: a cuánto cotiza en USD, ARS, MXN y el resto de la región - Cripto247",
+   "enlace": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNbTJRSG9PUDgxNUk3blpCV2w4aUtLanZ6UkhibmVwTTVqVHJEYjR4WkFoUDlUYmdRcFZZeElPMHBYRE1ub2JPRXpVM2ppZEZqMWNnVk9ZeUl3akNfaFlJU29wMmE5bXVncHhSOEdwMHZ6V3M2Nlc2NnpCSDVxMXYzVFptclhZemgweXpFcGl1VG85czlMLXJ3OTBScmlEWU1ScHNuMGtINWZ3M3FYV05MWFN6NEhvOHliOUhwaXpWYnZuZFFISjE3cFRoQ00zRmZzVHZCcmZuZnNzM3VNMG93SHYtbGV5MGFrbFJOV1BSQzRBUnM?oc=5",
+   "fecha": "Sun, 15 Nov 2026 14:29:34 GMT",
+   "fuente": "",
+   "tema": "bitcoin precio hoy"
+  },
+  {
    "titulo": "Bitcoin hoy: cotización y precio del BTC este domingo 15 de noviembre de 2026 - FM Del Condado",
    "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSU5HRzVJdlI0REtYaEVFNDlSdU5sSWFqcEYxUWpSNXlBWnZEWTk1ODlkVWdlMWY4RmRpczR1N2w4M3F6WXVpZjNrNE1vODFOczdLekZ2Z3AxYzJsck4zWFFZNGpoak95bFVLaTkybThDQ0hpWkVtSEZQWEt2QXpZc2NrNFpIeDNrTFRpV0MtZklHSThKNTlBRk9VcDU4ZmxZT0U4UTI5UQ?oc=5",
    "fecha": "Sun, 15 Nov 2026 12:50:00 GMT",
@@ -88611,11 +88618,11 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Bitcoin retrocede un 1,78% este domingo 15 de noviembre: a cuánto cotiza en USD, ARS, MXN y el resto de la región - Cripto247",
-   "enlace": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNbTJRSG9PUDgxNUk3blpCV2w4aUtLanZ6UkhibmVwTTVqVHJEYjR4WkFoUDlUYmdRcFZZeElPMHBYRE1ub2JPRXpVM2ppZEZqMWNnVk9ZeUl3akNfaFlJU29wMmE5bXVncHhSOEdwMHZ6V3M2Nlc2NnpCSDVxMXYzVFptclhZemgweXpFcGl1VG85czlMLXJ3OTBScmlEWU1ScHNuMGtINWZ3M3FYV05MWFN6NEhvOHliOUhwaXpWYnZuZFFISjE3cFRoQ00zRmZzVHZCcmZuZnNzM3VNMG93SHYtbGV5MGFrbFJOV1BSQzRBUnM?oc=5",
-   "fecha": "Sun, 15 Nov 2026 14:29:34 GMT",
+   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarin.com",
+   "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdS03LXh2b0hXYkEwTlNfQnJnaU9sUk1mWEI0Y0hUTHNUODZjS3pBM0d2OFlBZ1FidmVzLWlzODQ4Ulh2UmVtMUpiMGhPSThXQ2kzb2djdFJOUkk0TUxMOW1GZHhtMFlxRjRZOTlmay1keUN0dndTMEVpcWxLSEJhU0NXdWh2LXljVWhWSTlGaHdyWG9aQnVTVU5tTFlQTW1mMG14TTZvRFFxTEVfa3V3WEJR?oc=5",
+   "fecha": "Thu, 12 Nov 2026 21:30:40 GMT",
    "fuente": "",
-   "tema": "bitcoin precio hoy"
+   "tema": "inflación INDEC"
   },
   {
    "titulo": "Salarios vs. inflación: así quedaron las cifras durante septiembre según el Indec - TN",
@@ -88642,13 +88649,6 @@
    "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
    "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
    "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
-   "titulo": "Jubilados y pensionados: cuánto cobrarán en diciembre tras el nuevo dato de inflación del Indec - La Gaceta",
-   "enlace": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQXzFwc1NZbEtZUnV6Nzg5WjZ6ZFdsM2V1N3pSYlB3VkRveXVRU0thVDVjWmgxMjZnb24zblNFTEx1LVRjZm13em8xV3VaNWRIR2JpaF9YbHBob0Vsdm1GdDBJSzgtTllSX1JJN09Dd211NHlkVHR2Y19ITl9SQ1JRWE5wWllYZEw3M0c5UmZWVEg1QjNfaEQzZUcxQlJqRHdoQXpFNHBPU0ZsZDk3THFCb0N2MmdWX3JROF9Gc0pZVlg3a05EV3BrUmtqQnlMejjSAdQBQVVfeXFMTkpGVmNZWVdrTjVyek1uc1FTWlN6Vk5JcU1aaXJPQmZrRWUxeVNUQ244Nmp1RTRxR0x5dzd6V2FjR2IyRkwzTUJORGNNZnJNeExRNkJEMHZiWjBOOU4ydlVfcTBsU3gwRlphaWtNZXhqbllYdGdaa0JwdkVpVjBnVC1aalRTSTVnbEVidE5ubmRWTlE5U2VaakgxZGRTYXpjWXV5MVVNWS1xRGRoV0N0S01uYy01WGpjcEdDNVdMWjc2Nks3MmpiM1dpcS01OTRiaXI0NVA?oc=5",
-   "fecha": "Fri, 13 Nov 2026 12:52:15 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
