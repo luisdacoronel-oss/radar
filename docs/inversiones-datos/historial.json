@@ -404,8 +404,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR",
-   "groq": "ESPERAR"
+   "groq": "VENDER"
   },
   "evaluado": {}
  },
@@ -420,9 +419,7 @@
    "tendencia_bajista",
    "bajo_m20"
   ],
-  "votos": {
-   "gemini": "VENDER"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -438,7 +435,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR"
+   "gemini": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -453,9 +450,7 @@
    "tendencia_alcista",
    "bajo_m20"
   ],
-  "votos": {
-   "gemini": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -469,9 +464,7 @@
    "tendencia_bajista",
    "bajo_m20"
   ],
-  "votos": {
-   "gemini": "VENDER"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -485,9 +478,7 @@
    "cruce_muerte",
    "bajo_m20"
   ],
-  "votos": {
-   "gemini": "VENDER"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -503,8 +494,8 @@
    "fib_soporte"
   ],
   "votos": {
-   "gemini": "COMPRAR",
-   "groq": "COMPRAR"
+   "gemini": "ESPERAR",
+   "groq": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -520,7 +511,7 @@
    "sobre_m20"
   ],
   "votos": {
-   "gemini": "COMPRAR",
+   "gemini": "ESPERAR",
    "groq": "COMPRAR"
   },
   "evaluado": {}
@@ -538,7 +529,8 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR"
+   "gemini": "COMPRAR",
+   "groq": "VENDER"
   },
   "evaluado": {}
  },
@@ -554,8 +546,7 @@
    "bajo_m20"
   ],
   "votos": {
-   "gemini": "ESPERAR",
-   "groq": "ESPERAR"
+   "groq": "VENDER"
   },
   "evaluado": {}
  },
@@ -564,25 +555,7 @@
   "fecha": "2026-11-15",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 65419.2109375,
-  "tecnico": "ESPERAR",
-  "senales": [
-   "tendencia_alcista",
-   "bajo_m20",
-   "rsi_sobreventa"
-  ],
-  "votos": {
-   "gemini": "ESPERAR",
-   "groq": "COMPRAR"
-  },
-  "evaluado": {}
- },
- {
-  "id": "2026-11-15|ETH-USD",
-  "fecha": "2026-11-15",
-  "yahoo": "ETH-USD",
-  "nombre": "Ethereum",
-  "precio": 1827.239990234375,
+  "precio": 65387.91015625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -592,6 +565,21 @@
   "votos": {
    "gemini": "ESPERAR"
   },
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-15|ETH-USD",
+  "fecha": "2026-11-15",
+  "yahoo": "ETH-USD",
+  "nombre": "Ethereum",
+  "precio": 1832.0400390625,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {},
   "evaluado": {}
  }
 ]
