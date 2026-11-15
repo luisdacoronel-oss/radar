@@ -435,8 +435,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR",
-   "groq": "VENDER"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -495,8 +494,7 @@
    "fib_soporte"
   ],
   "votos": {
-   "gemini": "ESPERAR",
-   "groq": "COMPRAR"
+   "groq": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -530,8 +528,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR",
-   "groq": "VENDER"
+   "groq": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -554,7 +551,7 @@
   "fecha": "2026-11-15",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 64820.73046875,
+  "precio": 64774.1484375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -562,7 +559,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR",
+   "gemini": "VENDER",
    "groq": "ESPERAR"
   },
   "evaluado": {}
@@ -572,7 +569,7 @@
   "fecha": "2026-11-15",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1814.4000244140625,
+  "precio": 1814.18994140625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
