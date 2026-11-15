@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T19:55:31.823Z",
+ "generado": "2026-11-15T20:53:59.675Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.83,
+   "mensualPct": -18.67,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.57,
+   "mensualPct": -21.53,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73486,16 +73486,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64957.80859375,
-   "variacionDia": 1.29,
-   "variacion30d": -18.83,
+   "precio": 65081.390625,
+   "variacionDia": 1.49,
+   "variacion30d": -18.67,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75038.196875,
-   "m50": 79748.1165625,
-   "m200": 72920.1807421875,
-   "rsi": 23.378966073406318,
+   "m20": 75044.3759765625,
+   "m50": 79750.588203125,
+   "m200": 72920.79865234374,
+   "rsi": 23.83284967854084,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -73569,7 +73569,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 24: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75976,8 +75976,8 @@
       "open": 64119.78125,
       "high": 65889.234375,
       "low": 62093.515625,
-      "close": 64957.80859375,
-      "volume": 47685468160
+      "close": 65081.390625,
+      "volume": 47766704128
      }
     ],
     "m20": [
@@ -77179,7 +77179,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75038.1969
+      "value": 75044.376
      }
     ],
     "m50": [
@@ -78381,7 +78381,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 79748.1166
+      "value": 79750.5882
      }
     ],
     "m200": [
@@ -79583,7 +79583,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72920.1807
+      "value": 72920.7987
      }
     ],
     "rsi": [
@@ -80785,7 +80785,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 23.379
+      "value": 23.8328
      }
     ]
    },
@@ -80820,16 +80820,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1825.0699462890625,
-   "variacionDia": 3.16,
-   "variacion30d": -21.57,
+   "precio": 1825.9000244140625,
+   "variacionDia": 3.21,
+   "variacion30d": -21.53,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2163.4307189941405,
-   "m50": 2377.880578613281,
-   "m200": 2142.4828637695314,
-   "rsi": 25.546699621502142,
+   "m20": 2163.4722229003905,
+   "m50": 2377.897180175781,
+   "m200": 2142.4870141601564,
+   "rsi": 25.625761173635425,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83310,8 +83310,8 @@
       "open": 1768.7667236328125,
       "high": 1837.720947265625,
       "low": 1714.29296875,
-      "close": 1825.0699462890625,
-      "volume": 19612676096
+      "close": 1825.9000244140625,
+      "volume": 19193368576
      }
     ],
     "m20": [
@@ -84513,7 +84513,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2163.4307
+      "value": 2163.4722
      }
     ],
     "m50": [
@@ -85715,7 +85715,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2377.8806
+      "value": 2377.8972
      }
     ],
     "m200": [
@@ -86917,7 +86917,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2142.4829
+      "value": 2142.487
      }
     ],
     "rsi": [
@@ -88119,7 +88119,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 25.5467
+      "value": 25.6258
      }
     ]
    },
@@ -88647,9 +88647,9 @@
    "tema": "CNV normativa dólar parking"
   },
   {
-   "titulo": "Toda la normativa sobre la compra de dólar MEP: Lo que necesitas saber - Dolarhoy.com",
-   "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWU1kRmtjSDB1U2tyaWhHaHhBQkx0ZWI5QlBfeU9vQ1V2N2w0SWhEdk51LTJUX3hnNmNVYml4YWNjcGVjMDBXWHVfNjRJZzBZcldIVHREaE52a0NxVjdGMHZFWFlIb3piYnB2S0lFYjFWUUFza0lsTjBPemlZdms2enVSU3YwX0NKSzBvek1oektBeFp0eGprSklSVE1taEhhRFhXS3FUVThONTJjVE40?oc=5",
-   "fecha": "Mon, 07 Aug 2023 07:00:00 GMT",
+   "titulo": "Cepo cambiario: cuáles son las restricciones que se mantienen tras los cambios del Gobierno - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPS3pzU1ozOVRTcVBJVUw1aVhqNWQ3bUNaU0FBZEIzQlRDYUxyMDdMU3hnck9kcjNZTUxZQklLaDZ3QkdFRGRtWUV4a3dnRjVQTk1DMERySVJRSVAtYm56NmdTaVF2Q1ZZVm9sMzVtOUlOV051N3E4X29UUS1sOTdCdENSTG1rLXpfWkEyR1BpSnpQNFh6bzFjNWs3QzUwMV9WaDRCSGx5WnNDNUFYMmFjZzFmZFBsTVVrUUtVWHRfVlBHRVVSdlg3aF9XdWlRQ0lz0gHrAUFVX3lxTE11UkliMS1YVmxHVjlRRVhLMTE3SmVBTjk2ZktBLTVTRDRyTzExcXBVMFBsT3BDbW03SWFWNnp4SEZqbTJaTF9lOVRiWHhvaDNhX1YyLWFwY3BqZDZEMkxTZGljeF9SdG1kb3hqRXQ1NGU3STlMSUg5VmZZRkdCTVdZdnhiZWVBT2hnbnNOUHJVZnhEYXM0S0g0aFRwa3RQN1lKSmFyNEUyZldwdXhVeDNtNUNNbWtxd0FjYXItQk5IYkJhdTNvYWhuNUVMYjlpdE9SR1Q5RTVUU0dzLXBKeklYZWVuU0c2cm9NWUk?oc=5",
+   "fecha": "Sun, 12 Apr 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "CNV normativa dólar parking"
   },
@@ -88668,32 +88668,25 @@
    "tema": "Wall Street hoy"
   },
   {
+   "titulo": "Lo que debes saber hoy: Wall Street se prepara para la temporada de resultados - XTB.com",
+   "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPR29QV0VtY3otaTBobGJtcVNoLXZkUEM1MTUzSHFZOE5zd2xpdE5na0J0YVR1M19YQVAxWUwxam13QWs5SUZIZ1l1aV9hTHFhMVNVLTJWZV9hOW90YVVBQm93RWpMVExYenktbHNhSS1YUmpnUVFLT01XQVM3LVRpcjM5cUdEaXh2Uk52V01JaWFBVkJUZHZ0ZXpneTk5NTMzQjVwXzBwYU93YnFUclFKTUdmNWJmMmtXbGZLNWZkaVp2dUVzbnkybU1pUllTZi11djVDNFBSZ1I?oc=5",
+   "fecha": "Fri, 09 Oct 2026 07:00:00 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
+   "titulo": "Por qué Bitcoin baja hoy - iProUP",
+   "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5vTkd2YnJTeEVFaDgzZUhZbEVtMllDQlJCSG5mNC14Z2VNQzJMbkNpV1dNNHNydVRMSzQxQjFTcFB0WEEwX0Y0MlZjY0dmTmlaSUNKUHZvREsyMkVOUkhIdWZ1bjJlTGpuYVVVWGxEWDRhZ3RkNVZfQlp30gF_QVVfeXFMTlNyNkFOS2xFbDNnTFduQzc1cjh0UmlOWWZHejl0WEthYldxLURkbUFhUl9rdWFqeUltT3BrQmRmRldVWC1Lemk4LXBFY2JjbEFLSkFjRGRhX214R0E0VUNybWNUM0ZSQ3ZoLTg3ZDFxU0N5T2RQd3VkbDZRaVRhaw?oc=5",
+   "fecha": "Sun, 15 Nov 2026 12:23:00 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
    "titulo": "Wall Street - Cotización en tiempo real y Trading con CFDs - FOREX.com",
    "enlace": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB0WFpabGN0Q05kV1pBck14dnRKT1pBX1B2TDRqUkpTVmVJS3VZOWZ6MHZJZkV4TF9tMHE3d2xNOTdKNTBTNEp5dXhJSjlqNXFlSVQtOW01YmM4M0tJQVhuWUxZVQ?oc=5",
    "fecha": "Wed, 11 Nov 2026 22:59:59 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
-   "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
-   "fecha": "Fri, 13 Nov 2026 14:47:27 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "La bolsa hoy: Wall Street sube tras las noticias de Anthropic - XTB.com",
-   "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZzBDbmduX0daeGlVeE0zVloza1N5MFBUN3lfWWdULTV0Q3JnaWt5Q2FZZ25hM0ZXcHNZYUIwRktqRS1tR1lSaTg4WkNNU1A3OG1kNlNOTHoyenNlcER3QjFqRXZsbmZOd21GZWpNVjhwdXNTOGxaUFR4WFR2dzJiMG1FYWhheFZ3OS0zcTZlMzhWRlh1WFdnX2NKV1d0ajhuSWNFQ1dvR2d4QXFNZ0VxUXVFTk9BNS1WWGVzVlY3VmpiNDhQei1mTDl6RF9ocFNHcm9lWHRWOGg2cFk?oc=5",
-   "fecha": "Tue, 27 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Criptomonedas: valor de las principales divisas digitales hoy domingo 15 de noviembre - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZDMtY0ZNQVpPcDdRSzl1UlhNTFB6SGJ0TEZ4bnZhN3l6Ry1Nem5IRTVrMFlIVXNkdnlSYzBWYnRxQ0xHQWRYSnJQZ0FfZmJORnFJb2NJNi1nOGRCcGJkanE3dnFwdUs1U2VvMm5yenotZ2Jxb2o5aHBTNEtFeldPUFhFUkRhOVA1d3ZuczhURmMwa1pheE1icWNzeVBnc05QNDhoNG5HTnk4aWVnWlVWN2pPbmhLMndZNklQRHBnNDQwdnFy0gHfAUFVX3lxTFB0VHgtejBCOTItWF9fVG5CU0c4c1hjM3BmdmVxREtJclVOUnVwRU50SERZdDJ4WDF1QkdZcUZVRTZ6THhtS0dFdkdzWk5CcXVBTXBlX0lib2pVNVdfdXRvNF9hUWxRbTZLbm9CUHRVa2tqMkJxY0Rrb01sOUhSTWgtTG1IQl91d2JMT0dvWllMaFNHWkNwMzNLUk1IbW9QVjlualBjR0E3ZDNUR0w4S3NQVmFia0NYQzhYMmxjVF9QVWZTczN6WkZ1NnktYXZpTzRWVzZ5MG5CdjNzam5OTk0?oc=5",
-   "fecha": "Sun, 15 Nov 2026 11:46:00 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
   },
   {
    "titulo": "Precio del Bitcoin hoy: actualización en tiempo real al 12 de noviembre - La Nación",
@@ -88703,9 +88696,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Bitcoin hoy: cotización y precio del BTC este domingo 15 de noviembre de 2026 - FM Del Condado",
-   "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSU5HRzVJdlI0REtYaEVFNDlSdU5sSWFqcEYxUWpSNXlBWnZEWTk1ODlkVWdlMWY4RmRpczR1N2w4M3F6WXVpZjNrNE1vODFOczdLekZ2Z3AxYzJsck4zWFFZNGpoak95bFVLaTkybThDQ0hpWkVtSEZQWEt2QXpZc2NrNFpIeDNrTFRpV0MtZklHSThKNTlBRk9VcDU4ZmxZT0U4UTI5UQ?oc=5",
-   "fecha": "Sun, 15 Nov 2026 12:50:00 GMT",
+   "titulo": "Criptomonedas: valor de las principales divisas digitales hoy domingo 15 de noviembre - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZDMtY0ZNQVpPcDdRSzl1UlhNTFB6SGJ0TEZ4bnZhN3l6Ry1Nem5IRTVrMFlIVXNkdnlSYzBWYnRxQ0xHQWRYSnJQZ0FfZmJORnFJb2NJNi1nOGRCcGJkanE3dnFwdUs1U2VvMm5yenotZ2Jxb2o5aHBTNEtFeldPUFhFUkRhOVA1d3ZuczhURmMwa1pheE1icWNzeVBnc05QNDhoNG5HTnk4aWVnWlVWN2pPbmhLMndZNklQRHBnNDQwdnFy0gHfAUFVX3lxTFB0VHgtejBCOTItWF9fVG5CU0c4c1hjM3BmdmVxREtJclVOUnVwRU50SERZdDJ4WDF1QkdZcUZVRTZ6THhtS0dFdkdzWk5CcXVBTXBlX0lib2pVNVdfdXRvNF9hUWxRbTZLbm9CUHRVa2tqMkJxY0Rrb01sOUhSTWgtTG1IQl91d2JMT0dvWllMaFNHWkNwMzNLUk1IbW9QVjlualBjR0E3ZDNUR0w4S3NQVmFia0NYQzhYMmxjVF9QVWZTczN6WkZ1NnktYXZpTzRWVzZ5MG5CdjNzam5OTk0?oc=5",
+   "fecha": "Sun, 15 Nov 2026 11:46:00 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
@@ -88717,11 +88710,25 @@
    "tema": "bitcoin precio hoy"
   },
   {
+   "titulo": "Bitcoin hoy: cotización y precio del BTC este domingo 15 de noviembre de 2026 - FM Del Condado",
+   "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSU5HRzVJdlI0REtYaEVFNDlSdU5sSWFqcEYxUWpSNXlBWnZEWTk1ODlkVWdlMWY4RmRpczR1N2w4M3F6WXVpZjNrNE1vODFOczdLekZ2Z3AxYzJsck4zWFFZNGpoak95bFVLaTkybThDQ0hpWkVtSEZQWEt2QXpZc2NrNFpIeDNrTFRpV0MtZklHSThKNTlBRk9VcDU4ZmxZT0U4UTI5UQ?oc=5",
+   "fecha": "Sun, 15 Nov 2026 12:50:00 GMT",
+   "fuente": "",
+   "tema": "bitcoin precio hoy"
+  },
+  {
    "titulo": "Bitcoin retrocede un 1,78% este domingo 15 de noviembre: a cuánto cotiza en USD, ARS, MXN y el resto de la región - Cripto247",
    "enlace": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNbTJRSG9PUDgxNUk3blpCV2w4aUtLanZ6UkhibmVwTTVqVHJEYjR4WkFoUDlUYmdRcFZZeElPMHBYRE1ub2JPRXpVM2ppZEZqMWNnVk9ZeUl3akNfaFlJU29wMmE5bXVncHhSOEdwMHZ6V3M2Nlc2NnpCSDVxMXYzVFptclhZemgweXpFcGl1VG85czlMLXJ3OTBScmlEWU1ScHNuMGtINWZ3M3FYV05MWFN6NEhvOHliOUhwaXpWYnZuZFFISjE3cFRoQ00zRmZzVHZCcmZuZnNzM3VNMG93SHYtbGV5MGFrbFJOV1BSQzRBUnM?oc=5",
    "fecha": "Sun, 15 Nov 2026 14:29:34 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
+  },
+  {
+   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarin.com",
+   "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdS03LXh2b0hXYkEwTlNfQnJnaU9sUk1mWEI0Y0hUTHNUODZjS3pBM0d2OFlBZ1FidmVzLWlzODQ4Ulh2UmVtMUpiMGhPSThXQ2kzb2djdFJOUkk0TUxMOW1GZHhtMFlxRjRZOTlmay1keUN0dndTMEVpcWxLSEJhU0NXdWh2LXljVWhWSTlGaHdyWG9aQnVTVU5tTFlQTW1mMG14TTZvRFFxTEVfa3V3WEJR?oc=5",
+   "fecha": "Thu, 12 Nov 2026 21:30:40 GMT",
+   "fuente": "",
+   "tema": "inflación INDEC"
   },
   {
    "titulo": "Salarios vs. inflación: así quedaron las cifras durante septiembre según el Indec - TN",
@@ -88745,16 +88752,9 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "Inflación de octubre 2026: a qué hora publica hoy el INDEC el dato del IPC - Clarin.com",
-   "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbUJSRlAxLUVSLXNxMW5TTDc5N192RldJZ3A1SWNOdG1YeWFGMHBfbUp0TGpOUkV2YmdVdkYyRVZzTlJuT0VBNS0tOWhjaTUzbHJHUEtuSkVpNjg3WUhHS3d4SU1UZS1ZZnZDZW1jZndCU1dvWEtIQW1MOG1NV2htNEJ1ekd4S085b0ZnaEhWVkp3dVJyQWVRNHFRQmhHTVJUWHprT0tmaUN5YTRlRlRtaVFXZVZHZw?oc=5",
-   "fecha": "Thu, 12 Nov 2026 15:02:59 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
-   "titulo": "Según el INDEC, la inflación del NEA fue del 1,5% en octubre y quedó por debajo del promedio nacional - El Destape",
-   "enlace": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdXpfX2JDUEJkdkpkODRReTMtamtadUNMM2VlVkt1LWJRSEF3dW9FeWJUSHdndzlhZFllclcyaFFJREJsQXlWX0hraENUNDBSVU03T21NLWNQU0s5aE1KdEdMTVJBSkRNXzZPVE1sYXdUMHhhZEx5TmJ4cDFCS19TMWprSlk4S3drYWFoMVR1ZXJUNGJfY1p6NW4zaW9udU9HMTR2UDJUdVlOcDZqTmc4VGhZMHpGdTdaMDRVbFplOWxtcXJta3QwdtIB3AFBVV95cUxOV2JLSzkxUE5nNDRULU5qR0hFSXZSN2swYzhmT21YQ2ZYdC1aWTQ0ZExGcWJhbzB0MXI4eXM0Zm5YOE9xaXFFbDNJRUtqTjNndEVXdmMwd3dVTkZycGtuRzlseWlHeU8wT1dpa1pOeXN2NFA5UEFmb1ZHOTV1T1lvSU1OcHdZa1o0Z0I4M2FoMzZhOTJ5b2lhekNsenJOTG5sZTUyTW5JVDBtbFcwNHM0eXZ1WE40TmxzMHVtOHo5N0k3Yk9QTGh1QlhLVmg5TlZwYkN4SWVEVmwxdG5H?oc=5",
-   "fecha": "Thu, 12 Nov 2026 20:05:44 GMT",
+   "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
+   "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
+   "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
