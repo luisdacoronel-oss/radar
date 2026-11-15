@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T13:38:10.460Z",
+ "generado": "2026-11-15T14:29:12.253Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.23,
+   "mensualPct": -18.96,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.3,
+   "mensualPct": -22.18,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73449,16 +73449,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 65436,
-   "variacionDia": 2.04,
-   "variacion30d": -18.23,
+   "precio": 64851.3203125,
+   "variacionDia": 1.13,
+   "variacion30d": -18.96,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75062.1064453125,
-   "m50": 79757.680390625,
-   "m200": 72922.57169921875,
-   "rsi": 25.105880996807286,
+   "m20": 75032.8724609375,
+   "m50": 79745.986796875,
+   "m200": 72919.64830078125,
+   "rsi": 22.98350199250325,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -73532,7 +73532,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 25: zona de sobreventa, posible rebote."
+     "texto": "RSI en 23: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75939,8 +75939,8 @@
       "open": 64119.78125,
       "high": 65889.234375,
       "low": 62093.515625,
-      "close": 65436,
-      "volume": 54904971264
+      "close": 64851.3203125,
+      "volume": 52801822720
      }
     ],
     "m20": [
@@ -77142,7 +77142,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75062.1064
+      "value": 75032.8725
      }
     ],
     "m50": [
@@ -78344,7 +78344,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 79757.6804
+      "value": 79745.9868
      }
     ],
     "m200": [
@@ -79546,7 +79546,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72922.5717
+      "value": 72919.6483
      }
     ],
     "rsi": [
@@ -80748,7 +80748,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 25.1059
+      "value": 22.9835
      }
     ]
    },
@@ -80789,16 +80789,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1831.3900146484375,
-   "variacionDia": 3.52,
-   "variacion30d": -21.3,
+   "precio": 1810.780029296875,
+   "variacionDia": 2.35,
+   "variacion30d": -22.18,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2163.746722412109,
-   "m50": 2378.0069799804687,
-   "m200": 2142.514464111328,
-   "rsi": 26.144462131903182,
+   "m20": 2162.7162231445313,
+   "m50": 2377.5947802734377,
+   "m200": 2142.4114141845703,
+   "rsi": 24.158797793568624,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80872,7 +80872,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 26: zona de sobreventa, posible rebote."
+     "texto": "RSI en 24: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -83279,8 +83279,8 @@
       "open": 1768.7667236328125,
       "high": 1837.720947265625,
       "low": 1714.29296875,
-      "close": 1831.3900146484375,
-      "volume": 22510143488
+      "close": 1810.780029296875,
+      "volume": 21869150208
      }
     ],
     "m20": [
@@ -84482,7 +84482,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2163.7467
+      "value": 2162.7162
      }
     ],
     "m50": [
@@ -85684,7 +85684,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2378.007
+      "value": 2377.5948
      }
     ],
     "m200": [
@@ -86886,7 +86886,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2142.5145
+      "value": 2142.4114
      }
     ],
     "rsi": [
@@ -88088,7 +88088,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 26.1445
+      "value": 24.1588
      }
     ]
    },
@@ -88104,7 +88104,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1831.3900146484375,
+    "entrada": 1810.780029296875,
     "objetivo": 1417.484921875,
     "stop": 1714.29296875
    },
@@ -88580,9 +88580,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Soporte de bitcoin en riesgo: 855.000 BTC, unos 57.000 millones, quedan expuestos tras caer a 67.000 dólares - Criptotendencias",
-   "enlace": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBybDk5QzZwck5zZUUwQ3E4ZHF5TnFrZ01yNHhib3h4aUlxdzNUTWE3TGpyTi1ybnZ6VkhSWERiX2hfb2FfZElyQnREenpFOC1scDczUC1UUmJPY0xOWWg3b2stMHZORlU1bkhmSGRFejVBUXFn?oc=5",
-   "fecha": "Sun, 15 Nov 2026 00:01:36 GMT",
+   "titulo": "Precio de Bitcoin hoy: retrocede 3,91% y cotiza por debajo de los USD 72.000 - Cripto247",
+   "enlace": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQd0o0Wms1VEhCTUhHYy1HSGtzOERKbUpjZTNsREdaLTZBb0t3eE8wbnBPZy05WmRxajZQQVVQd2ZhNXcyT2VLOEF6eVkwYmZNb2w3aTJzMXVlNkEtTExrTFd5eTl6dHhTUV9SVjBMcnUyalBMUTZFRlhEUlFmQXpjQVRacEs2Y3JjMVI4c3U1YzJuMXg5eUxFZC0xRjZvX3hwa19uLUdtUlo3NkpxZHdnOGZQMXlKT2M?oc=5",
+   "fecha": "Thu, 12 Nov 2026 20:16:45 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
