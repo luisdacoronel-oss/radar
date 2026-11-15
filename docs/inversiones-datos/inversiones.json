@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T21:53:05.847Z",
+ "generado": "2026-11-15T22:53:01.362Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.59,
+   "mensualPct": -18.65,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.67,
+   "mensualPct": -21.59,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73442,16 +73442,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 65150.96875,
-   "variacionDia": 1.6,
-   "variacion30d": -18.59,
+   "precio": 65100.55859375,
+   "variacionDia": 1.52,
+   "variacion30d": -18.65,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75047.8548828125,
-   "m50": 79751.979765625,
-   "m200": 72921.14654296875,
-   "rsi": 24.086033275051577,
+   "m20": 75045.334375,
+   "m50": 79750.9715625,
+   "m200": 72920.8944921875,
+   "rsi": 23.902767214659278,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -75932,8 +75932,8 @@
       "open": 64119.78125,
       "high": 65889.234375,
       "low": 62093.515625,
-      "close": 65150.96875,
-      "volume": 43869605888
+      "close": 65100.55859375,
+      "volume": 40871317504
      }
     ],
     "m20": [
@@ -77135,7 +77135,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75047.8549
+      "value": 75045.3344
      }
     ],
     "m50": [
@@ -78337,7 +78337,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 79751.9798
+      "value": 79750.9716
      }
     ],
     "m200": [
@@ -79539,7 +79539,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72921.1465
+      "value": 72920.8945
      }
     ],
     "rsi": [
@@ -80741,7 +80741,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 24.086
+      "value": 23.9028
      }
     ]
    },
@@ -80782,16 +80782,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1822.7900390625,
-   "variacionDia": 3.03,
-   "variacion30d": -21.67,
+   "precio": 1824.469970703125,
+   "variacionDia": 3.13,
+   "variacion30d": -21.59,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2163.3167236328127,
-   "m50": 2377.83498046875,
-   "m200": 2142.4714642333984,
-   "rsi": 25.3286803748518,
+   "m20": 2163.4007202148437,
+   "m50": 2377.8685791015623,
+   "m200": 2142.479863891602,
+   "rsi": 25.489449662144423,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83272,8 +83272,8 @@
       "open": 1768.7667236328125,
       "high": 1837.720947265625,
       "low": 1714.29296875,
-      "close": 1822.7900390625,
-      "volume": 17315487744
+      "close": 1824.469970703125,
+      "volume": 16120781824
      }
     ],
     "m20": [
@@ -84475,7 +84475,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2163.3167
+      "value": 2163.4007
      }
     ],
     "m50": [
@@ -85677,7 +85677,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2377.835
+      "value": 2377.8686
      }
     ],
     "m200": [
@@ -86879,7 +86879,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2142.4715
+      "value": 2142.4799
      }
     ],
     "rsi": [
@@ -88081,7 +88081,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 25.3287
+      "value": 25.4894
      }
     ]
    },
@@ -88097,7 +88097,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1822.7900390625,
+    "entrada": 1824.469970703125,
     "objetivo": 1417.484921875,
     "stop": 1714.29296875
    },
@@ -88504,13 +88504,6 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Lo que debes saber hoy: Wall Street se prepara para la temporada de resultados - XTB.com",
-   "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPR29QV0VtY3otaTBobGJtcVNoLXZkUEM1MTUzSHFZOE5zd2xpdE5na0J0YVR1M19YQVAxWUwxam13QWs5SUZIZ1l1aV9hTHFhMVNVLTJWZV9hOW90YVVBQm93RWpMVExYenktbHNhSS1YUmpnUVFLT01XQVM3LVRpcjM5cUdEaXh2Uk52V01JaWFBVkJUZHZ0ZXpneTk5NTMzQjVwXzBwYU93YnFUclFKTUdmNWJmMmtXbGZLNWZkaVp2dUVzbnkybU1pUllTZi11djVDNFBSZ1I?oc=5",
-   "fecha": "Fri, 09 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
    "titulo": "Por qué Bitcoin baja hoy - iProUP",
    "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5vTkd2YnJTeEVFaDgzZUhZbEVtMllDQlJCSG5mNC14Z2VNQzJMbkNpV1dNNHNydVRMSzQxQjFTcFB0WEEwX0Y0MlZjY0dmTmlaSUNKUHZvREsyMkVOUkhIdWZ1bjJlTGpuYVVVWGxEWDRhZ3RkNVZfQlp30gF_QVVfeXFMTlNyNkFOS2xFbDNnTFduQzc1cjh0UmlOWWZHejl0WEthYldxLURkbUFhUl9rdWFqeUltT3BrQmRmRldVWC1Lemk4LXBFY2JjbEFLSkFjRGRhX214R0E0VUNybWNUM0ZSQ3ZoLTg3ZDFxU0N5T2RQd3VkbDZRaVRhaw?oc=5",
    "fecha": "Sun, 15 Nov 2026 12:23:00 GMT",
@@ -88521,6 +88514,13 @@
    "titulo": "Wall Street - Cotización en tiempo real y Trading con CFDs - FOREX.com",
    "enlace": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB0WFpabGN0Q05kV1pBck14dnRKT1pBX1B2TDRqUkpTVmVJS3VZOWZ6MHZJZkV4TF9tMHE3d2xNOTdKNTBTNEp5dXhJSjlqNXFlSVQtOW01YmM4M0tJQVhuWUxZVQ?oc=5",
    "fecha": "Wed, 11 Nov 2026 22:59:59 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
+   "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
+   "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
+   "fecha": "Fri, 13 Nov 2026 14:47:27 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88553,18 +88553,11 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Bitcoin retrocede un 1,78% este domingo 15 de noviembre: a cuánto cotiza en USD, ARS, MXN y el resto de la región - Cripto247",
-   "enlace": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNbTJRSG9PUDgxNUk3blpCV2w4aUtLanZ6UkhibmVwTTVqVHJEYjR4WkFoUDlUYmdRcFZZeElPMHBYRE1ub2JPRXpVM2ppZEZqMWNnVk9ZeUl3akNfaFlJU29wMmE5bXVncHhSOEdwMHZ6V3M2Nlc2NnpCSDVxMXYzVFptclhZemgweXpFcGl1VG85czlMLXJ3OTBScmlEWU1ScHNuMGtINWZ3M3FYV05MWFN6NEhvOHliOUhwaXpWYnZuZFFISjE3cFRoQ00zRmZzVHZCcmZuZnNzM3VNMG93SHYtbGV5MGFrbFJOV1BSQzRBUnM?oc=5",
-   "fecha": "Sun, 15 Nov 2026 14:29:34 GMT",
+   "titulo": "¿Por qué sube hoy un 10% el precio de Zcash? - Traders Union",
+   "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXZ2eWpETkZpQk9yMDdWOEFZcngySGVhSzlhRVNJdjA3WTlkNGZVOWJaWEFjbGJ3ODFheVdDUE9vNmd1SXNWSk1OWkp2RTYxTnpXT19tWEotUWd4NlBTbEcwS0dranQ2NVNPRWhjSFZDMUNkajFPWmw1VFA3d3FGMUJ5UFl6TDFXYVN4OTFsWks0MGYzUTlrcGR6Vm9Mc3dod0xj?oc=5",
+   "fecha": "Sun, 15 Nov 2026 20:51:27 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "Inflación: cuáles son los rubros que más aumentaron y qué puede pasar con los precios en los próximos meses - Clarin.com",
-   "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdS03LXh2b0hXYkEwTlNfQnJnaU9sUk1mWEI0Y0hUTHNUODZjS3pBM0d2OFlBZ1FidmVzLWlzODQ4Ulh2UmVtMUpiMGhPSThXQ2kzb2djdFJOUkk0TUxMOW1GZHhtMFlxRjRZOTlmay1keUN0dndTMEVpcWxLSEJhU0NXdWh2LXljVWhWSTlGaHdyWG9aQnVTVU5tTFlQTW1mMG14TTZvRFFxTEVfa3V3WEJR?oc=5",
-   "fecha": "Thu, 12 Nov 2026 21:30:40 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
   },
   {
    "titulo": "Salarios vs. inflación: así quedaron las cifras durante septiembre según el Indec - TN",
@@ -88591,6 +88584,13 @@
    "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
    "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
    "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
+   "fuente": "",
+   "tema": "inflación INDEC"
+  },
+  {
+   "titulo": "Jubilados y pensionados: cuánto cobrarán en diciembre tras el nuevo dato de inflación del Indec - La Gaceta",
+   "enlace": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQXzFwc1NZbEtZUnV6Nzg5WjZ6ZFdsM2V1N3pSYlB3VkRveXVRU0thVDVjWmgxMjZnb24zblNFTEx1LVRjZm13em8xV3VaNWRIR2JpaF9YbHBob0Vsdm1GdDBJSzgtTllSX1JJN09Dd211NHlkVHR2Y19ITl9SQ1JRWE5wWllYZEw3M0c5UmZWVEg1QjNfaEQzZUcxQlJqRHdoQXpFNHBPU0ZsZDk3THFCb0N2MmdWX3JROF9Gc0pZVlg3a05EV3BrUmtqQnlMejjSAdQBQVVfeXFMTkpGVmNZWVdrTjVyek1uc1FTWlN6Vk5JcU1aaXJPQmZrRWUxeVNUQ244Nmp1RTRxR0x5dzd6V2FjR2IyRkwzTUJORGNNZnJNeExRNkJEMHZiWjBOOU4ydlVfcTBsU3gwRlphaWtNZXhqbllYdGdaa0JwdkVpVjBnVC1aalRTSTVnbEVidE5ubmRWTlE5U2VaakgxZGRTYXpjWXV5MVVNWS1xRGRoV0N0S01uYy01WGpjcEdDNVdMWjc2Nks3MmpiM1dpcS01OTRiaXI0NVA?oc=5",
+   "fecha": "Fri, 13 Nov 2026 12:52:15 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
