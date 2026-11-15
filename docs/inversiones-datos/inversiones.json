@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T08:34:46.600Z",
+ "generado": "2026-11-15T09:29:33.945Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.18,
+   "mensualPct": -18.04,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -22.62,
+   "mensualPct": -21.33,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73492,16 +73492,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64677.6015625,
-   "variacionDia": 0.86,
-   "variacion30d": -19.18,
+   "precio": 65587.140625,
+   "variacionDia": 2.28,
+   "variacion30d": -18.04,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75024.1865234375,
-   "m50": 79742.512421875,
-   "m200": 72918.77970703125,
-   "rsi": 22.32952894045127,
+   "m20": 75069.6634765625,
+   "m50": 79760.703203125,
+   "m200": 72923.32740234376,
+   "rsi": 25.63562653138392,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -73575,7 +73575,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 22: zona de sobreventa, posible rebote."
+     "texto": "RSI en 26: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75980,10 +75980,10 @@
      {
       "time": "2026-11-15",
       "open": 64119.78125,
-      "high": 65289.0078125,
+      "high": 65889.234375,
       "low": 62093.515625,
-      "close": 64677.6015625,
-      "volume": 51923501056
+      "close": 65587.140625,
+      "volume": 53813329920
      }
     ],
     "m20": [
@@ -77185,7 +77185,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75024.1865
+      "value": 75069.6635
      }
     ],
     "m50": [
@@ -78387,7 +78387,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 79742.5124
+      "value": 79760.7032
      }
     ],
     "m200": [
@@ -79589,7 +79589,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72918.7797
+      "value": 72923.3274
      }
     ],
     "rsi": [
@@ -80791,7 +80791,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 22.3295
+      "value": 25.6356
      }
     ]
    },
@@ -80832,16 +80832,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1800.5400390625,
-   "variacionDia": 1.78,
-   "variacion30d": -22.62,
+   "precio": 1830.550048828125,
+   "variacionDia": 3.47,
+   "variacion30d": -21.33,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2162.2042236328125,
-   "m50": 2377.38998046875,
-   "m200": 2142.3602142333984,
-   "rsi": 23.1319873357927,
+   "m20": 2163.704724121094,
+   "m50": 2377.9901806640623,
+   "m200": 2142.5102642822267,
+   "rsi": 26.065570437268093,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80915,7 +80915,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 26: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -83320,10 +83320,10 @@
      {
       "time": "2026-11-15",
       "open": 1768.7667236328125,
-      "high": 1825.3111572265625,
+      "high": 1837.720947265625,
       "low": 1714.29296875,
-      "close": 1800.5400390625,
-      "volume": 21212557312
+      "close": 1830.550048828125,
+      "volume": 22002702336
      }
     ],
     "m20": [
@@ -84525,7 +84525,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2162.2042
+      "value": 2163.7047
      }
     ],
     "m50": [
@@ -85727,7 +85727,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2377.39
+      "value": 2377.9902
      }
     ],
     "m200": [
@@ -86929,7 +86929,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2142.3602
+      "value": 2142.5103
      }
     ],
     "rsi": [
@@ -88131,7 +88131,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 23.132
+      "value": 26.0656
      }
     ]
    },
@@ -88721,16 +88721,16 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
-   "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
-   "fecha": "Fri, 13 Nov 2026 14:47:27 GMT",
+   "titulo": "Lo que debes saber hoy: Wall Street se prepara para la temporada de resultados - XTB.com",
+   "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPR29QV0VtY3otaTBobGJtcVNoLXZkUEM1MTUzSHFZOE5zd2xpdE5na0J0YVR1M19YQVAxWUwxam13QWs5SUZIZ1l1aV9hTHFhMVNVLTJWZV9hOW90YVVBQm93RWpMVExYenktbHNhSS1YUmpnUVFLT01XQVM3LVRpcjM5cUdEaXh2Uk52V01JaWFBVkJUZHZ0ZXpneTk5NTMzQjVwXzBwYU93YnFUclFKTUdmNWJmMmtXbGZLNWZkaVp2dUVzbnkybU1pUllTZi11djVDNFBSZ1I?oc=5",
+   "fecha": "Fri, 09 Oct 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "La bolsa hoy: Wall Street sube tras las noticias de Anthropic - XTB.com",
-   "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZzBDbmduX0daeGlVeE0zVloza1N5MFBUN3lfWWdULTV0Q3JnaWt5Q2FZZ25hM0ZXcHNZYUIwRktqRS1tR1lSaTg4WkNNU1A3OG1kNlNOTHoyenNlcER3QjFqRXZsbmZOd21GZWpNVjhwdXNTOGxaUFR4WFR2dzJiMG1FYWhheFZ3OS0zcTZlMzhWRlh1WFdnX2NKV1d0ajhuSWNFQ1dvR2d4QXFNZ0VxUXVFTk9BNS1WWGVzVlY3VmpiNDhQei1mTDl6RF9ocFNHcm9lWHRWOGg2cFk?oc=5",
-   "fecha": "Tue, 27 Oct 2026 07:00:00 GMT",
+   "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
+   "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
+   "fecha": "Fri, 13 Nov 2026 14:47:27 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88770,9 +88770,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Precio de criptomonedas en Argentina: cuánto valen hoy, 10 de noviembre de 2026 - iProUP",
-   "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQR0FmUlh0Um1yUDh6T2dQbF9GM2p1YS1VcUFQY0Fsc2FQMnZWNTZhQ0NRUF9Fa0Y3U3dkdk1XbWlTRG1CVmlHMG1CUExQSGZPeDJBNHJKeHNBMTgzVmlUZ1JiMFdvNEJwSGNqZU81V2gyNENBQy1STzI4dmZXeEZsZ1l5WUxDZXJDWFVHRkxqQlhZRFM3VkwyeWZydUNWQTRxdHhBNU9sY3ZwYVNrYllrS3VjTVJiQlVGR1JJZlBlWG3SAcYBQVVfeXFMTnZJbEJtYWRlYWV5N3U0Sm1ieXAza3ZEY3lqb21FRWJSUUlsNTlXQzRCQXV1ZFZQV3ZMRE5NTWhOQ2prb1YwRnkwYXlPZ2ZVcTNEdWliWjVYeEFBckNwTkZhOGdERkFieUpOV2lmdVhBa0sxQ3RKd3BmYjd5UEI0Z1M5UXZEOHRtYU9TSFRUUWlpa3BxVkxZTXVQSnY0ZW9xMFpmdU16Z1VQT1dzV1M5TjNuRVExbl9Uc3VJT3d0MDhBejNRRTB3?oc=5",
-   "fecha": "Tue, 10 Nov 2026 17:03:12 GMT",
+   "titulo": "El precio del Bitcoin hoy, 13 de noviembre: el Bitcoin en plena caída - Expansión",
+   "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPS3NLRlhFR0tTTE5UZFQxVy1BNmRPYktJSlBCSl9xcy0tYmFyQ2JuWDA5UGFLN0lwellHSS1vRnhzRTJPbWZCaVZEX19aUWw0ekVPalh4Q3Q4N2k5dWVaUElIQVBBelZTZ1kyNE5XWl8xbG04OXRhX3BQdklrZ0JPdDdEVGdESkdrZGQ3WklXSUVnWmlqckhQdUx5Wng2bzNRUk5aS0FoS3dnODE3SmFv0gGvAUFVX3lxTFBScXNWU1RRRFdERnU4eDZHOF9DU0FPYWgtRFZwamtyYl9WcDFadWdLUEZaMXVRU2JyY0NjWVZYdlpQRWpjdVZiOUV3SUZhVWJFQU5EWjNVemRqZXR6ekNscTdJdnhNbllZU012TElHd3FHd05YM0I4a2ZJYUpsWExCZUZhY0hYMFgxLVNySW1WcWoyQW41VjdBMVVyek1DSjFPLTNPVWFONW9ab3hUanM?oc=5",
+   "fecha": "Fri, 13 Nov 2026 10:15:38 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
@@ -88805,9 +88805,9 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "A cuánto habría llegado la inflación de octubre con el nuevo índice de precios que el Gobierno postergó - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOQ2laaWp4OHJXMWlxbFNKRTFMc1M3VEFGTl94a1ZnQThuMzJTOFJSclM2TUNWM0FXQXVYS09oc2xPV05fVS1XelZ3T2lFQk9Fd3VxLVVjM1ZDcG1IOEpMeWZkNFZTOGZHM3JBMHZ4azVGZTNnLU9GZTJqZjY2aUU3SW96VVlvS2hOb0pGX05faGIyWTR1SEtSZFlWZFV0MEh2bVRTSmpvM3ZHdEFTMUh2SWp4VXhscG1UclRZTS1uOXVyMjg2R3I0V09QNWRmRDVIU2NWcEJZVGpXdllLVUtwQV9B0gH8AUFVX3lxTE94MFh0dVgtS0JYTnFxOXdMbGd0R3R5cUNURUVKQW5vR25HMTJyVE5fQm1iMVF3dGFkZ2FYTWFmTWduS1pmQ0lQbmhmMU9oamMyQmlZUGRsbkh1c29HWms4TFdwam1qdFppcVZKMllaQ0psM1ZtNkFvdFlmb1R5eGJOOWZfQVNLelVadW45T3lnN1FvaDdnb05DRVg2RnhaWVNzbHpBSU54Wko2Tk9fdmVzc1dWeWZmZUlSU3NrOGhJblhUbU40aGxXS19kMUw1cklnWE9LMWJnV2dNMFBIN29uNlEyb3JLTnBDVFFSSC10YWxpOUFfWnJCODFaYg?oc=5",
-   "fecha": "Fri, 13 Nov 2026 12:08:00 GMT",
+   "titulo": "Jubilados y pensionados: cuánto cobrarán en diciembre tras el nuevo dato de inflación del Indec - La Gaceta",
+   "enlace": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQXzFwc1NZbEtZUnV6Nzg5WjZ6ZFdsM2V1N3pSYlB3VkRveXVRU0thVDVjWmgxMjZnb24zblNFTEx1LVRjZm13em8xV3VaNWRIR2JpaF9YbHBob0Vsdm1GdDBJSzgtTllSX1JJN09Dd211NHlkVHR2Y19ITl9SQ1JRWE5wWllYZEw3M0c5UmZWVEg1QjNfaEQzZUcxQlJqRHdoQXpFNHBPU0ZsZDk3THFCb0N2MmdWX3JROF9Gc0pZVlg3a05EV3BrUmtqQnlMejjSAdQBQVVfeXFMTkpGVmNZWVdrTjVyek1uc1FTWlN6Vk5JcU1aaXJPQmZrRWUxeVNUQ244Nmp1RTRxR0x5dzd6V2FjR2IyRkwzTUJORGNNZnJNeExRNkJEMHZiWjBOOU4ydlVfcTBsU3gwRlphaWtNZXhqbllYdGdaa0JwdkVpVjBnVC1aalRTSTVnbEVidE5ubmRWTlE5U2VaakgxZGRTYXpjWXV5MVVNWS1xRGRoV0N0S01uYy01WGpjcEdDNVdMWjc2Nks3MmpiM1dpcS01OTRiaXI0NVA?oc=5",
+   "fecha": "Fri, 13 Nov 2026 12:52:15 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
