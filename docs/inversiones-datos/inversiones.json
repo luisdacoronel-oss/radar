@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T04:38:49.021Z",
+ "generado": "2026-11-15T05:37:59.123Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -243,7 +243,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.82,
+   "mensualPct": -19.8,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -23,
+   "mensualPct": -23.39,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73437,16 +73437,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64774.1484375,
-   "variacionDia": -5.09,
-   "variacion30d": -19.82,
+   "precio": 64795.8515625,
+   "variacionDia": -5.06,
+   "variacion30d": -19.8,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75822.944140625,
-   "m50": 80150.01140625,
-   "m200": 72977.5028515625,
-   "rsi": 20.812747089615485,
+   "m20": 75824.029296875,
+   "m50": 80150.44546875,
+   "m200": 72977.6113671875,
+   "rsi": 20.83449232257429,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -75927,8 +75927,8 @@
       "open": 64119.78125,
       "high": 65289.0078125,
       "low": 62093.515625,
-      "close": 64774.1484375,
-      "volume": 50517671936
+      "close": 64795.8515625,
+      "volume": 49852497920
      }
     ],
     "m20": [
@@ -77130,7 +77130,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75822.9441
+      "value": 75824.0293
      }
     ],
     "m50": [
@@ -78332,7 +78332,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 80150.0114
+      "value": 80150.4455
      }
     ],
     "m200": [
@@ -79534,7 +79534,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72977.5029
+      "value": 72977.6114
      }
     ],
     "rsi": [
@@ -80736,7 +80736,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 20.8127
+      "value": 20.8345
      }
     ]
    },
@@ -80777,16 +80777,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1814.18994140625,
-   "variacionDia": -5.88,
-   "variacion30d": -23,
+   "precio": 1804.8800048828125,
+   "variacionDia": -6.37,
+   "variacion30d": -23.39,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2190.444757080078,
-   "m50": 2396.184831542969,
-   "m200": 2144.849940185547,
-   "rsi": 21.013479196556915,
+   "m20": 2189.9792602539064,
+   "m50": 2395.9986328125,
+   "m200": 2144.8033905029297,
+   "rsi": 20.750854512957147,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83267,8 +83267,8 @@
       "open": 1768.7667236328125,
       "high": 1825.3111572265625,
       "low": 1714.29296875,
-      "close": 1814.18994140625,
-      "volume": 20855793664
+      "close": 1804.8800048828125,
+      "volume": 20518737920
      }
     ],
     "m20": [
@@ -84470,7 +84470,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2190.4448
+      "value": 2189.9793
      }
     ],
     "m50": [
@@ -85672,7 +85672,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2396.1848
+      "value": 2395.9986
      }
     ],
     "m200": [
@@ -86874,7 +86874,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2144.8499
+      "value": 2144.8034
      }
     ],
     "rsi": [
@@ -88076,7 +88076,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 21.0135
+      "value": 20.7509
      }
     ]
    },
@@ -88092,7 +88092,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1814.18994140625,
+    "entrada": 1804.8800048828125,
     "objetivo": 1417.484921875,
     "stop": 1714.29296875
    },
