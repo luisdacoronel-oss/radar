@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T14:29:12.253Z",
+ "generado": "2026-11-15T15:23:44.779Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -14,19 +14,19 @@
    "nombre": "Blue",
    "compra": 1555,
    "venta": 1575,
-   "fecha": "2026-11-15T12:00:00.000Z"
+   "fecha": "2026-11-15T14:57:00.000Z"
   },
   "bolsa": {
    "nombre": "Bolsa",
    "compra": 1575.5,
    "venta": 1580.9,
-   "fecha": "2026-11-15T12:00:00.000Z"
+   "fecha": "2026-11-15T14:57:00.000Z"
   },
   "contadoconliqui": {
    "nombre": "Contado con liquidación",
    "compra": 1668.2,
    "venta": 1671.9,
-   "fecha": "2026-11-15T12:00:00.000Z"
+   "fecha": "2026-11-15T14:57:00.000Z"
   },
   "mayorista": {
    "nombre": "Mayorista",
@@ -36,9 +36,9 @@
   },
   "cripto": {
    "nombre": "Cripto",
-   "compra": 1678.8,
-   "venta": 1682.83,
-   "fecha": "2026-11-15T12:00:00.000Z"
+   "compra": 1677.42,
+   "venta": 1682.97,
+   "fecha": "2026-11-15T14:57:00.000Z"
   },
   "tarjeta": {
    "nombre": "Tarjeta",
@@ -49,15 +49,6 @@
  },
  "rulos": [
   {
-   "nombre": "MEP → Cripto (USDT)",
-   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1678.8",
-   "brutoPct": 6.19,
-   "netoPct": 4.39,
-   "gananciaSobreCapital": 43927,
-   "conviene": true,
-   "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
-  },
-  {
    "nombre": "MEP → CCL",
    "pasos": "Comprar dólares MEP a $1580.9 → vender como CCL a $1668.2",
    "brutoPct": 5.52,
@@ -65,6 +56,15 @@
    "gananciaSobreCapital": 43222,
    "conviene": true,
    "nota": "Requiere operar bonos (AL30/GD30) en un broker. Verifique los plazos mínimos de tenencia (parking) vigentes de la CNV."
+  },
+  {
+   "nombre": "MEP → Cripto (USDT)",
+   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1677.42",
+   "brutoPct": 6.11,
+   "netoPct": 4.31,
+   "gananciaSobreCapital": 43054,
+   "conviene": true,
+   "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
   },
   {
    "nombre": "Oficial → MEP",
@@ -86,10 +86,10 @@
   },
   {
    "nombre": "Cripto (USDT) → MEP",
-   "pasos": "Comprar dólares en USDT a $1682.83 → vender por MEP a $1575.5",
-   "brutoPct": -6.38,
-   "netoPct": -8.18,
-   "gananciaSobreCapital": -81779,
+   "pasos": "Comprar dólares en USDT a $1682.97 → vender por MEP a $1575.5",
+   "brutoPct": -6.39,
+   "netoPct": -8.19,
+   "gananciaSobreCapital": -81857,
    "conviene": false,
    "nota": "Camino inverso: comprar USDT con pesos y vender dólares MEP."
   }
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.96,
+   "mensualPct": -19.23,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -22.18,
+   "mensualPct": -22.36,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73449,16 +73449,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64851.3203125,
-   "variacionDia": 1.13,
-   "variacion30d": -18.96,
+   "precio": 64637.75,
+   "variacionDia": 0.79,
+   "variacion30d": -19.23,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75032.8724609375,
-   "m50": 79745.986796875,
-   "m200": 72919.64830078125,
-   "rsi": 22.98350199250325,
+   "m20": 75022.1939453125,
+   "m50": 79741.715390625,
+   "m200": 72918.58044921875,
+   "rsi": 22.177936520419834,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -73532,7 +73532,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 22: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75939,8 +75939,8 @@
       "open": 64119.78125,
       "high": 65889.234375,
       "low": 62093.515625,
-      "close": 64851.3203125,
-      "volume": 52801822720
+      "close": 64637.75,
+      "volume": 51604828160
      }
     ],
     "m20": [
@@ -77142,7 +77142,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75032.8725
+      "value": 75022.1939
      }
     ],
     "m50": [
@@ -78344,7 +78344,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 79745.9868
+      "value": 79741.7154
      }
     ],
     "m200": [
@@ -79546,7 +79546,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72919.6483
+      "value": 72918.5804
      }
     ],
     "rsi": [
@@ -80748,7 +80748,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 22.9835
+      "value": 22.1779
      }
     ]
    },
@@ -80789,16 +80789,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1810.780029296875,
-   "variacionDia": 2.35,
-   "variacion30d": -22.18,
+   "precio": 1806.550048828125,
+   "variacionDia": 2.12,
+   "variacion30d": -22.36,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2162.7162231445313,
-   "m50": 2377.5947802734377,
-   "m200": 2142.4114141845703,
-   "rsi": 24.158797793568624,
+   "m20": 2162.5047241210937,
+   "m50": 2377.5101806640623,
+   "m200": 2142.390264282227,
+   "rsi": 23.737982280566726,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83279,8 +83279,8 @@
       "open": 1768.7667236328125,
       "high": 1837.720947265625,
       "low": 1714.29296875,
-      "close": 1810.780029296875,
-      "volume": 21869150208
+      "close": 1806.550048828125,
+      "volume": 21414443008
      }
     ],
     "m20": [
@@ -84482,7 +84482,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2162.7162
+      "value": 2162.5047
      }
     ],
     "m50": [
@@ -85684,7 +85684,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2377.5948
+      "value": 2377.5102
      }
     ],
     "m200": [
@@ -86886,7 +86886,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2142.4114
+      "value": 2142.3903
      }
     ],
     "rsi": [
@@ -88088,7 +88088,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 24.1588
+      "value": 23.738
      }
     ]
    },
@@ -88104,7 +88104,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1810.780029296875,
+    "entrada": 1806.550048828125,
     "objetivo": 1417.484921875,
     "stop": 1714.29296875
    },
@@ -88580,9 +88580,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Precio de Bitcoin hoy: retrocede 3,91% y cotiza por debajo de los USD 72.000 - Cripto247",
-   "enlace": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQd0o0Wms1VEhCTUhHYy1HSGtzOERKbUpjZTNsREdaLTZBb0t3eE8wbnBPZy05WmRxajZQQVVQd2ZhNXcyT2VLOEF6eVkwYmZNb2w3aTJzMXVlNkEtTExrTFd5eTl6dHhTUV9SVjBMcnUyalBMUTZFRlhEUlFmQXpjQVRacEs2Y3JjMVI4c3U1YzJuMXg5eUxFZC0xRjZvX3hwa19uLUdtUlo3NkpxZHdnOGZQMXlKT2M?oc=5",
-   "fecha": "Thu, 12 Nov 2026 20:16:45 GMT",
+   "titulo": "Bitcoin retrocede un 1,78% este domingo 15 de noviembre: a cuánto cotiza en USD, ARS, MXN y el resto de la región - Cripto247",
+   "enlace": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNbTJRSG9PUDgxNUk3blpCV2w4aUtLanZ6UkhibmVwTTVqVHJEYjR4WkFoUDlUYmdRcFZZeElPMHBYRE1ub2JPRXpVM2ppZEZqMWNnVk9ZeUl3akNfaFlJU29wMmE5bXVncHhSOEdwMHZ6V3M2Nlc2NnpCSDVxMXYzVFptclhZemgweXpFcGl1VG85czlMLXJ3OTBScmlEWU1ScHNuMGtINWZ3M3FYV05MWFN6NEhvOHliOUhwaXpWYnZuZFFISjE3cFRoQ00zRmZzVHZCcmZuZnNzM3VNMG93SHYtbGV5MGFrbFJOV1BSQzRBUnM?oc=5",
+   "fecha": "Sun, 15 Nov 2026 14:29:34 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
