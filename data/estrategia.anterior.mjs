@@ -1,17 +1,17 @@
-// CAMBIOS: Priorizo kits livianos de tecnología, herramientas especializadas, bebés y belleza con alto margen de ganancia.
+// CAMBIOS: Ajusté las categorías para priorizar tecnología móvil, herramientas de diagnóstico avanzado, cuidado personal y bebés con alta rotación.
 // ESTRATEGIA DE RADAR — este archivo lo reescribe RADAR solo, una vez por día, según sus resultados.
 // Antes de reemplazarlo lo prueba (test/prueba.mjs). Si la versión nueva falla, se queda con la anterior.
-export const VERSION = 3;
+export const VERSION = 4;
 
 // Categorías donde buscar primero (se reordenan según lo que dio productos aprobados).
 export const categorias = [
-  'herramientas y diagnóstico automotor',
   'tecnología y accesorios para celulares',
+  'herramientas y diagnóstico automotor',
   'bebés y maternidad',
   'belleza y cuidado personal',
+  'herramientas e instrumentos de medición',
   'mascotas y accesorios',
   'hogar y organización',
-  'herramientas e instrumentos de medición',
   'deportes, fitness y aire libre',
   'cocina y bazar',
   'fotografía, audio y video'
