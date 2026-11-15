@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T11:22:53.928Z",
+ "generado": "2026-11-15T12:23:03.711Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -14,19 +14,19 @@
    "nombre": "Blue",
    "compra": 1555,
    "venta": 1575,
-   "fecha": "2026-11-14T20:57:00.000Z"
+   "fecha": "2026-11-15T12:00:00.000Z"
   },
   "bolsa": {
    "nombre": "Bolsa",
    "compra": 1575.5,
    "venta": 1580.9,
-   "fecha": "2026-11-14T20:57:00.000Z"
+   "fecha": "2026-11-15T12:00:00.000Z"
   },
   "contadoconliqui": {
    "nombre": "Contado con liquidación",
    "compra": 1668.2,
    "venta": 1671.9,
-   "fecha": "2026-11-14T20:57:00.000Z"
+   "fecha": "2026-11-15T12:00:00.000Z"
   },
   "mayorista": {
    "nombre": "Mayorista",
@@ -36,9 +36,9 @@
   },
   "cripto": {
    "nombre": "Cripto",
-   "compra": 1672.72,
-   "venta": 1676.1,
-   "fecha": "2026-11-14T20:57:00.000Z"
+   "compra": 1678.8,
+   "venta": 1682.83,
+   "fecha": "2026-11-15T12:00:00.000Z"
   },
   "tarjeta": {
    "nombre": "Tarjeta",
@@ -49,6 +49,15 @@
  },
  "rulos": [
   {
+   "nombre": "MEP → Cripto (USDT)",
+   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1678.8",
+   "brutoPct": 6.19,
+   "netoPct": 4.39,
+   "gananciaSobreCapital": 43927,
+   "conviene": true,
+   "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
+  },
+  {
    "nombre": "MEP → CCL",
    "pasos": "Comprar dólares MEP a $1580.9 → vender como CCL a $1668.2",
    "brutoPct": 5.52,
@@ -56,15 +65,6 @@
    "gananciaSobreCapital": 43222,
    "conviene": true,
    "nota": "Requiere operar bonos (AL30/GD30) en un broker. Verifique los plazos mínimos de tenencia (parking) vigentes de la CNV."
-  },
-  {
-   "nombre": "MEP → Cripto (USDT)",
-   "pasos": "Comprar dólares MEP a $1580.9 → vender como USDT en un exchange a $1672.72",
-   "brutoPct": 5.81,
-   "netoPct": 4.01,
-   "gananciaSobreCapital": 40081,
-   "conviene": true,
-   "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
   },
   {
    "nombre": "Oficial → MEP",
@@ -86,10 +86,10 @@
   },
   {
    "nombre": "Cripto (USDT) → MEP",
-   "pasos": "Comprar dólares en USDT a $1676.1 → vender por MEP a $1575.5",
-   "brutoPct": -6,
-   "netoPct": -7.8,
-   "gananciaSobreCapital": -78020,
+   "pasos": "Comprar dólares en USDT a $1682.83 → vender por MEP a $1575.5",
+   "brutoPct": -6.38,
+   "netoPct": -8.18,
+   "gananciaSobreCapital": -81779,
    "conviene": false,
    "nota": "Camino inverso: comprar USDT con pesos y vender dólares MEP."
   }
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.27,
+   "mensualPct": -21.35,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73457,16 +73457,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 65387.91015625,
-   "variacionDia": 1.96,
+   "precio": 65390.48046875,
+   "variacionDia": 1.97,
    "variacion30d": -18.29,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75059.701953125,
-   "m50": 79756.71859375,
-   "m200": 72922.33125,
-   "rsi": 24.935740483675943,
+   "m20": 75059.83046875,
+   "m50": 79756.77,
+   "m200": 72922.3441015625,
+   "rsi": 24.944853728966066,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -75947,8 +75947,8 @@
       "open": 64119.78125,
       "high": 65889.234375,
       "low": 62093.515625,
-      "close": 65387.91015625,
-      "volume": 54687260672
+      "close": 65390.48046875,
+      "volume": 55317450752
      }
     ],
     "m20": [
@@ -77150,7 +77150,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 75059.702
+      "value": 75059.8305
      }
     ],
     "m50": [
@@ -78352,7 +78352,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 79756.7186
+      "value": 79756.77
      }
     ],
     "m200": [
@@ -79554,7 +79554,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 72922.3313
+      "value": 72922.3441
      }
     ],
     "rsi": [
@@ -80756,7 +80756,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 24.9357
+      "value": 24.9449
      }
     ]
    },
@@ -80791,16 +80791,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1832.0400390625,
-   "variacionDia": 3.56,
-   "variacion30d": -21.27,
+   "precio": 1830.1300048828125,
+   "variacionDia": 3.45,
+   "variacion30d": -21.35,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2163.7792236328123,
-   "m50": 2378.01998046875,
-   "m200": 2142.5177142333982,
-   "rsi": 26.20539858953866,
+   "m20": 2163.683721923828,
+   "m50": 2377.981779785156,
+   "m200": 2142.5081640625,
+   "rsi": 26.02605560789472,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83281,8 +83281,8 @@
       "open": 1768.7667236328125,
       "high": 1837.720947265625,
       "low": 1714.29296875,
-      "close": 1832.0400390625,
-      "volume": 21963104256
+      "close": 1830.1300048828125,
+      "volume": 22465261568
      }
     ],
     "m20": [
@@ -84484,7 +84484,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2163.7792
+      "value": 2163.6837
      }
     ],
     "m50": [
@@ -85686,7 +85686,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2378.02
+      "value": 2377.9818
      }
     ],
     "m200": [
@@ -86888,7 +86888,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 2142.5177
+      "value": 2142.5082
      }
     ],
     "rsi": [
@@ -88090,7 +88090,7 @@
      },
      {
       "time": "2026-11-15",
-      "value": 26.2054
+      "value": 26.0261
      }
     ]
    },
@@ -88106,7 +88106,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1832.0400390625,
+    "entrada": 1830.1300048828125,
     "objetivo": 1417.484921875,
     "stop": 1714.29296875
    },
@@ -88491,13 +88491,6 @@
    "tema": "CNV normativa dólar parking"
   },
   {
-   "titulo": "La CNV dispone nuevas restricciones para los dólares financieros - Errepar",
-   "enlace": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVm1RNTVscVhud2Y4dFhId29UT2hKMWNXaFFjbWQyWWVmSTZqTWpkd1I1dWp1d1VBYVpjSHRmSkFxRmUxVjV5bDR6Z09EblNRSjdoMmRvZ3VuWi1tUlA1RnR3WU01VlhuRzAzVGFEU3RkVHBvNEJmNUV3TWpZZ0hxUzRLUlhCMzVGYndlcw?oc=5",
-   "fecha": "Tue, 23 May 2023 07:00:00 GMT",
-   "fuente": "",
-   "tema": "CNV normativa dólar parking"
-  },
-  {
    "titulo": "Dólar MEP y CCL: la CNV oficializó la eliminación del parking - Ambito",
    "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQzlYdy0tM0NRZTBrRzRLM1dJdXVRMHh6eGRTNzNHMnVOWFd6ZFRQNXRmdmp2NTlvMUxXRUpDUlNwN1R5VVFzaTI2T3lDbFIwR3p1X2NtVWVYYVptbmdfcTZEZFpUb3dFVkFqZXdFZzhLekw4bTZaMUtnVU9QcFZkVUxkUkxER2NoTUIzWjBiQm5FR3BmRmZKYXJOWnpZcUlKSDg00gGoAUFVX3lxTE4xZFczOXQzcjM3VGNZV3NudEV4ZnpSc2x5ZWduYU1FZTlOcWJlMk9VSmtGOEp4dXBpd1plSS1JZENkV0trZnZHRU5iR3EtTW9xeHRYS2JBSGFyMTE0aVZsbWp6amJ4ZjlNajg3OTR4d2w4QjgtZFhDd052UWJzZktMWU83NHpxenJGUzdhT0dMVF9SU1M2bWlZcHJPTnlIN2ktSTljWjJCZQ?oc=5",
    "fecha": "Tue, 15 Apr 2025 07:00:00 GMT",
@@ -88515,6 +88508,13 @@
    "titulo": "Compra de Dólar MEP: qué deben tener en cuenta los inversores tras los cambios de la CNV - Forbes Argentina",
    "enlace": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQa29rcmtkTEdWVVQ0VExwUEk0ZjJVRmRnUFdSX044Z0lvd1NmaWFWcmZlYjhxX2Y1T3pSVjRLNmV6NGZCXzBwYXVaOWdJTnlmVFBidS1JeXJPbFNfNFJGQXR3Z3pNZHFnZURmVkZJV3pIQkFmTjk4VkNHazVDVW1MWUstMmpnWmNRTE43b0tTVHpEWkh4U3BRWHB5YkpzblVPNEtfQ0IzVlZURVk20gGyAUFVX3lxTE5wN3B0RWcyLUNQMU5UNzQzNUEyYXE0YU1JU3hWUVVFa20wcWhtTlNSdTZzQnBWdTZDenByUnpQaElSMFZnRDBCRDdrZEJHNFFvdEt2Wko0NnVfTlRYelc5LUJkRWlHUGpoYkpINFZZcU5vNHpyU3dnOWR3ckQ5Qk9Sa081RUtfWVkxZDJobXV0YnhTbTBxTHJKbFA5ZHZMRFU3cVozT19tVFAwNmZWLXRvRlE?oc=5",
    "fecha": "Thu, 14 Dec 2023 08:00:00 GMT",
+   "fuente": "",
+   "tema": "CNV normativa dólar parking"
+  },
+  {
+   "titulo": "Toda la normativa sobre la compra de dólar MEP: Lo que necesitas saber - Dolarhoy.com",
+   "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWU1kRmtjSDB1U2tyaWhHaHhBQkx0ZWI5QlBfeU9vQ1V2N2w0SWhEdk51LTJUX3hnNmNVYml4YWNjcGVjMDBXWHVfNjRJZzBZcldIVHREaE52a0NxVjdGMHZFWFlIb3piYnB2S0lFYjFWUUFza0lsTjBPemlZdms2enVSU3YwX0NKSzBvek1oektBeFp0eGprSklSVE1taEhhRFhXS3FUVThONTJjVE40?oc=5",
+   "fecha": "Mon, 07 Aug 2023 07:00:00 GMT",
    "fuente": "",
    "tema": "CNV normativa dólar parking"
   },
@@ -88540,6 +88540,13 @@
    "tema": "Wall Street hoy"
   },
   {
+   "titulo": "Wall Street - Cotización en tiempo real y Trading con CFDs - FOREX.com",
+   "enlace": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB0WFpabGN0Q05kV1pBck14dnRKT1pBX1B2TDRqUkpTVmVJS3VZOWZ6MHZJZkV4TF9tMHE3d2xNOTdKNTBTNEp5dXhJSjlqNXFlSVQtOW01YmM4M0tJQVhuWUxZVQ?oc=5",
+   "fecha": "Wed, 11 Nov 2026 22:59:59 GMT",
+   "fuente": "",
+   "tema": "Wall Street hoy"
+  },
+  {
    "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
    "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
    "fecha": "Fri, 13 Nov 2026 14:47:27 GMT",
@@ -88547,11 +88554,11 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Jornada en rojo en Wall Street: subió el riesgo país a 867 puntos y bajaron las reservas del BCRA por un pago al FMI - » Cholila Online",
-   "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWlplc3dBSTRvMVAxbnNDTWVvX3kwdDluM3ZLRXNqMnR3c3FZOTlhcVI5N2xhN0ZGT195a25ZU2UtZkw1cmxEa3RVM0FYd2dmQVpIemppVG55QU44S3JnYVlYdFgxZHVOQnBYaThqWHJhSmItM2hzSFhjYVpVM2R4VlFhWFJLU1g4UXEzY2Zvak1aSXp5LUg1RkZuM0tIalREUnlPdE5jaw?oc=5",
-   "fecha": "Thu, 12 Nov 2026 15:52:12 GMT",
+   "titulo": "Criptomonedas: valor de las principales divisas digitales hoy domingo 15 de noviembre - Infobae",
+   "enlace": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZDMtY0ZNQVpPcDdRSzl1UlhNTFB6SGJ0TEZ4bnZhN3l6Ry1Nem5IRTVrMFlIVXNkdnlSYzBWYnRxQ0xHQWRYSnJQZ0FfZmJORnFJb2NJNi1nOGRCcGJkanE3dnFwdUs1U2VvMm5yenotZ2Jxb2o5aHBTNEtFeldPUFhFUkRhOVA1d3ZuczhURmMwa1pheE1icWNzeVBnc05QNDhoNG5HTnk4aWVnWlVWN2pPbmhLMndZNklQRHBnNDQwdnFy0gHfAUFVX3lxTFB0VHgtejBCOTItWF9fVG5CU0c4c1hjM3BmdmVxREtJclVOUnVwRU50SERZdDJ4WDF1QkdZcUZVRTZ6THhtS0dFdkdzWk5CcXVBTXBlX0lib2pVNVdfdXRvNF9hUWxRbTZLbm9CUHRVa2tqMkJxY0Rrb01sOUhSTWgtTG1IQl91d2JMT0dvWllMaFNHWkNwMzNLUk1IbW9QVjlualBjR0E3ZDNUR0w4S3NQVmFia0NYQzhYMmxjVF9QVWZTczN6WkZ1NnktYXZpTzRWVzZ5MG5CdjNzam5OTk0?oc=5",
+   "fecha": "Sun, 15 Nov 2026 11:46:00 GMT",
    "fuente": "",
-   "tema": "Wall Street hoy"
+   "tema": "bitcoin precio hoy"
   },
   {
    "titulo": "Precio del Bitcoin hoy: actualización en tiempo real al 12 de noviembre - La Nación",
@@ -88575,16 +88582,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Precio de Bitcoin hoy: BTC cae 3,11% y cotiza apenas por sobre los USD 67.000 - Cripto247",
-   "enlace": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdnN0dk1abkJiYWU5cm4xY08wWmJ5enZIWWJQNlhCclFoOWcya25rZnZWYzF6NnZhUDJzUHJFMmEwSkhOR2Y4OXpSczRmR0VJRVF6dmdPeXI3MGczM2k0ZUxwWjltUWF4RnBlMUZqNFgtWHFQeVI1djRfUXJqOXJQZmliTUhMTlNDT0M0dUJYakpNalBJTGJua1pyYnFyRG5MdjJMcUVJX1FRcFQxeWVPV1JSNjIxY0JQ?oc=5",
-   "fecha": "Sat, 14 Nov 2026 13:04:08 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "El precio del Bitcoin hoy, 13 de noviembre: el Bitcoin en plena caída - Expansión",
-   "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPS3NLRlhFR0tTTE5UZFQxVy1BNmRPYktJSlBCSl9xcy0tYmFyQ2JuWDA5UGFLN0lwellHSS1vRnhzRTJPbWZCaVZEX19aUWw0ekVPalh4Q3Q4N2k5dWVaUElIQVBBelZTZ1kyNE5XWl8xbG04OXRhX3BQdklrZ0JPdDdEVGdESkdrZGQ3WklXSUVnWmlqckhQdUx5Wng2bzNRUk5aS0FoS3dnODE3SmFv0gGvAUFVX3lxTFBScXNWU1RRRFdERnU4eDZHOF9DU0FPYWgtRFZwamtyYl9WcDFadWdLUEZaMXVRU2JyY0NjWVZYdlpQRWpjdVZiOUV3SUZhVWJFQU5EWjNVemRqZXR6ekNscTdJdnhNbllZU012TElHd3FHd05YM0I4a2ZJYUpsWExCZUZhY0hYMFgxLVNySW1WcWoyQW41VjdBMVVyek1DSjFPLTNPVWFONW9ab3hUanM?oc=5",
-   "fecha": "Fri, 13 Nov 2026 10:15:38 GMT",
+   "titulo": "Precio de Bitcoin hoy: retrocede 3,91% y cotiza por debajo de los USD 72.000 - Cripto247",
+   "enlace": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQd0o0Wms1VEhCTUhHYy1HSGtzOERKbUpjZTNsREdaLTZBb0t3eE8wbnBPZy05WmRxajZQQVVQd2ZhNXcyT2VLOEF6eVkwYmZNb2w3aTJzMXVlNkEtTExrTFd5eTl6dHhTUV9SVjBMcnUyalBMUTZFRlhEUlFmQXpjQVRacEs2Y3JjMVI4c3U1YzJuMXg5eUxFZC0xRjZvX3hwa19uLUdtUlo3NkpxZHdnOGZQMXlKT2M?oc=5",
+   "fecha": "Thu, 12 Nov 2026 20:16:45 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
@@ -88617,9 +88617,9 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "Jubilados y pensionados: cuánto cobrarán en diciembre tras el nuevo dato de inflación del Indec - La Gaceta",
-   "enlace": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQXzFwc1NZbEtZUnV6Nzg5WjZ6ZFdsM2V1N3pSYlB3VkRveXVRU0thVDVjWmgxMjZnb24zblNFTEx1LVRjZm13em8xV3VaNWRIR2JpaF9YbHBob0Vsdm1GdDBJSzgtTllSX1JJN09Dd211NHlkVHR2Y19ITl9SQ1JRWE5wWllYZEw3M0c5UmZWVEg1QjNfaEQzZUcxQlJqRHdoQXpFNHBPU0ZsZDk3THFCb0N2MmdWX3JROF9Gc0pZVlg3a05EV3BrUmtqQnlMejjSAdQBQVVfeXFMTkpGVmNZWVdrTjVyek1uc1FTWlN6Vk5JcU1aaXJPQmZrRWUxeVNUQ244Nmp1RTRxR0x5dzd6V2FjR2IyRkwzTUJORGNNZnJNeExRNkJEMHZiWjBOOU4ydlVfcTBsU3gwRlphaWtNZXhqbllYdGdaa0JwdkVpVjBnVC1aalRTSTVnbEVidE5ubmRWTlE5U2VaakgxZGRTYXpjWXV5MVVNWS1xRGRoV0N0S01uYy01WGpjcEdDNVdMWjc2Nks3MmpiM1dpcS01OTRiaXI0NVA?oc=5",
-   "fecha": "Fri, 13 Nov 2026 12:52:15 GMT",
+   "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
+   "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
+   "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
