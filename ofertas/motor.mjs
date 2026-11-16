@@ -36,7 +36,7 @@ if (SIM) usarMock(p => ({ text: JSON.stringify(simulacion(p)), fuentes: [] }));
 // ---------- dólar y calculadora de RADAR ----------
 let dolar = 1450, dolarMEP = null;
 if (!SIM) { try { const r = await fetch('https://dolarapi.com/v1/dolares'); const j = await r.json(); dolar = j.find(x => x.casa === 'oficial')?.venta || dolar; dolarMEP = j.find(x => x.casa === 'bolsa')?.venta || null } catch { } }
-usarConfig({ ...cfgRadar, dolar_oficial: dolar });
+const CFGU = usarConfig({ ...cfgRadar, dolar_oficial: dolar });
 
 // ---------- 1. Buscar ofertas por categoría (rotando) ----------
 const cats = cfg.categorias || [];
@@ -143,8 +143,14 @@ SOLO JSON, hasta ${GN.productosPorNicho || 12} productos: {"productos":[{"nombre
 }
 function evaluarGanador(x) {
   const costoUSD = num(x.costo_usd) + (num(x.envio_usd) || 0), peso = num(x.peso_kg) || 0.3, pv = num(x.precio_venta_ars);
-  let r = null; try { if (pv) r = rentab(pv, { metodo: 'courier_economico', costo_usd: costoUSD, peso, cantidad: GN.loteImportacion || 10 }) } catch { }
+  // se calcula vendiendo en Mercado Libre y en la web propia, y se elige el canal que deja más
+  const eImp = { metodo: 'courier_economico', costo_usd: costoUSD, peso, cantidad: GN.loteImportacion || 10 };
+  let rML = null, rWeb = null; try { if (pv) { rML = rentab(pv, eImp); rWeb = rentabWeb(pv, eImp) } } catch { }
+  const usaWeb = rWeb && (!rML || rWeb.ganancia > rML.ganancia);
+  const r = rML ? { ...rML, ganancia: usaWeb ? rWeb.ganancia : rML.ganancia, margen_neto: usaWeb ? rWeb.margen_precio : rML.margen_neto } : null;
   const costoARS = r?.cp?.unit ?? costoUSD * (dolarMEP || dolar);
+  // impuestos de importación que un Responsable Inscripto recupera como crédito fiscal (IVA, IVA adicional y percepción de Ganancias)
+  let recuperable = null; try { const I = CFGU.importacion, cp = rML?.cp; if (cp) { const cif = cp.fob_usd + cp.flete_usd + cp.fob_usd * I.seguro_pct / 100, base = cif * (1 + I.derecho_importacion_default_pct / 100 + I.tasa_estadistica_pct / 100); recuperable = Math.round(base * (I.iva_pct + I.iva_adicional_pct + I.ganancias_percepcion_pct) / 100 * dolar / cp.cantidad) } } catch { }
   const mult = pv && costoUSD ? pv / (costoUSD * (dolarMEP || dolar)) : null;
   const c = {
     problema: x.problema && x.problema.length > 12 ? 20 : x.problema ? 10 : 0,
@@ -159,12 +165,13 @@ function evaluarGanador(x) {
   if (r && r.ganancia <= 0) { nota = Math.min(nota, 49); riesgos.push('Con los costos actuales de importación y venta no deja ganancia: habría que comprar por mayor o venderlo más caro.') }
   if (!x.ventas_comprobadas) riesgos.push('Ventas no comprobadas.');
   if (num(x.vendedores_ml) > 40) riesgos.push(`Ya hay ${x.vendedores_ml} vendedores en Mercado Libre.`);
-  riesgos.push(`Importación: ${x.dias_envio || '15-35'} días de envío, límites del courier y riesgo de cambio.`);
+  riesgos.push(`Importación: ${x.dias_envio || '15-35'} días de envío y riesgo de cambio.`);
+  riesgos.push('Para importar y revender hay que ser Responsable Inscripto y estar inscripto como importador: el monotributo y la franquicia de US$400 del courier son solo para uso personal.');
   const lote = GN.loteImportacion || 10;
   return {
     id: slug(x.nombre + '-' + (x.proveedor || '')), encontrado: ahora, nombre: x.nombre, nicho: x.nicho, problema: x.problema || '', imagen: segura(x.imagen_url),
     proveedor: x.proveedor || '', url: segura(x.url_proveedor), urlML: segura(x.url_ml), costoUSD: +costoUSD.toFixed(2), diasEnvio: x.dias_envio || '', pesoKg: peso, tamano: x.tamano || '', enTiendas: x.en_tiendas_fisicas || 'sin dato',
-    precioVenta: pv || null, multiplicador: mult ? +mult.toFixed(1) : null, costoPuesto: Math.round(costoARS), gananciaUnidad: r ? Math.round(r.ganancia) : null, margenPct: r ? +r.margen_neto.toFixed(1) : null,
+    precioVenta: pv || null, multiplicador: mult ? +mult.toFixed(1) : null, costoPuesto: Math.round(costoARS), impuestosRecuperables: recuperable, precioMinimoGanar: rML?.equilibrio ? Math.round(rML.equilibrio) : null, canal: r ? (usaWeb ? 'Tu web' : 'Mercado Libre') : null, ml: rML ? { ganancia: Math.round(rML.ganancia), margenPct: +rML.margen_neto.toFixed(1) } : null, web: rWeb ? { ganancia: Math.round(rWeb.ganancia), margenPct: +rWeb.margen_precio.toFixed(1) } : null, gananciaUnidad: r ? Math.round(r.ganancia) : null, margenPct: r ? +r.margen_neto.toFixed(1) : null,
     lote, inversion: Math.round(costoARS * lote), gananciaLote: r ? Math.round(r.ganancia * lote) : null, vendedoresML: num(x.vendedores_ml) || null,
     evidencia: x.evidencia_ventas || '', anuncios: x.anuncios || '', comprobado: !!x.ventas_comprobadas, criterios: c, nota, riesgos: [...new Set(riesgos)],
   };
