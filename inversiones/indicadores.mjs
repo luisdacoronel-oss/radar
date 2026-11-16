@@ -127,3 +127,33 @@ export function leerSenales(velas) {
     series: { m20, m50, m200, rsi: r },
   };
 }
+
+// ---------- Ficha del activo: variaciones, volatilidad, riesgo, soportes/resistencias y escenarios ----------
+export function ficha(velas, fib) {
+  const c = velas.map(v => v.close), p = c.at(-1);
+  const varN = n => c.length > n ? +((p / c.at(-1 - n) - 1) * 100).toFixed(2) : null;
+  const rets = c.slice(-61).map((x, i, a) => i ? Math.log(x / a[i - 1]) : null).filter(x => x != null);
+  const media = rets.reduce((a, b) => a + b, 0) / (rets.length || 1);
+  const vol = Math.sqrt(rets.reduce((a, b) => a + (b - media) ** 2, 0) / Math.max(1, rets.length - 1)) * Math.sqrt(252) * 100;
+  const riesgo = vol < 15 ? 'Bajo' : vol < 30 ? 'Medio' : vol < 55 ? 'Alto' : 'Muy alto';
+  // pivotes: mínimos y máximos locales de los últimos 6 meses (ventana de 5 ruedas a cada lado)
+  const t = velas.slice(-130), piv = { bajos: [], altos: [] };
+  for (let i = 5; i < t.length - 5; i++) {
+    const ventana = t.slice(i - 5, i + 6);
+    if (t[i].low === Math.min(...ventana.map(v => v.low))) piv.bajos.push(t[i].low);
+    if (t[i].high === Math.max(...ventana.map(v => v.high))) piv.altos.push(t[i].high);
+  }
+  const agrupar = arr => arr.sort((a, b) => a - b).reduce((g, x) => { const u = g.at(-1); if (u && Math.abs(x - u.v) / u.v < 0.02) { u.v = (u.v * u.n + x) / (u.n + 1); u.n++ } else g.push({ v: x, n: 1 }); return g }, []);
+  const soportes = agrupar(piv.bajos.concat(piv.altos)).filter(g => g.v < p * 0.995).sort((a, b) => b.v - a.v).slice(0, 3).map(g => +g.v.toFixed(4));
+  const resistencias = agrupar(piv.altos.concat(piv.bajos)).filter(g => g.v > p * 1.005).sort((a, b) => a.v - b.v).slice(0, 3).map(g => +g.v.toFixed(4));
+  const vol20 = velas.slice(-20).reduce((a, v) => a + (v.volume || 0), 0) / 20;
+  const mov = p * vol / 100 * Math.sqrt(63 / 252); // movimiento típico en ~3 meses
+  const ext = fib?.extension?.[0]?.precio;
+  const escenarios = {
+    horizonte: '1 a 3 meses',
+    alcista: +(resistencias[0] && ext ? Math.max(resistencias[0], Math.min(ext, p + mov * 1.5)) : p + mov).toFixed(4),
+    neutral: [+(p - mov * 0.4).toFixed(4), +(p + mov * 0.4).toFixed(4)],
+    bajista: +(soportes[0] ? Math.min(soportes[0], p - mov * 0.5) : p - mov).toFixed(4),
+  };
+  return { var1d: varN(1), var1s: varN(5), var1m: varN(21), var1a: varN(252), volatilidadAnualPct: +vol.toFixed(1), riesgo, soportes, resistencias, volumenPromedio20: Math.round(vol20), escenarios };
+}

@@ -1,34 +1,327 @@
 {
-  "_nota": "Configuración del módulo de inversiones de RADAR. Puede agregar o quitar activos de la lista. 'yahoo' es el código para descargar datos; 'tradingview' es el código para el gráfico.",
-  "capitalReferencia": 1000000,
-  "comisionPorOperacion": 0.006,
-  "minimoRuloNeto": 0.01,
-  "horizonteEvaluacionDias": [5, 20],
-  "activos": [
-    { "nombre": "Argentina (ETF ARGT)", "yahoo": "ARGT",   "tradingview": "AMEX:ARGT",     "tipo": "cedear",  "moneda": "USD" },
-    { "nombre": "Grupo Galicia",     "yahoo": "GGAL.BA",  "tradingview": "BCBA:GGAL",     "tipo": "accion",  "moneda": "ARS" },
-    { "nombre": "YPF",               "yahoo": "YPFD.BA",  "tradingview": "BCBA:YPFD",     "tipo": "accion",  "moneda": "ARS" },
-    { "nombre": "Pampa Energía",     "yahoo": "PAMP.BA",  "tradingview": "BCBA:PAMP",     "tipo": "accion",  "moneda": "ARS" },
-    { "nombre": "Banco Macro",       "yahoo": "BMA.BA",   "tradingview": "BCBA:BMA",      "tipo": "accion",  "moneda": "ARS" },
-    { "nombre": "Mercado Libre",     "yahoo": "MELI",     "tradingview": "NASDAQ:MELI",   "tipo": "cedear",  "moneda": "USD" },
-    { "nombre": "S&P 500 (SPY)",     "yahoo": "SPY",      "tradingview": "AMEX:SPY",      "tipo": "cedear",  "moneda": "USD" },
-    { "nombre": "Apple",             "yahoo": "AAPL",     "tradingview": "NASDAQ:AAPL",   "tipo": "cedear",  "moneda": "USD" },
-    { "nombre": "Nvidia",            "yahoo": "NVDA",     "tradingview": "NASDAQ:NVDA",   "tipo": "cedear",  "moneda": "USD" },
-    { "nombre": "Oro (GLD)",         "yahoo": "GLD",      "tradingview": "AMEX:GLD",      "tipo": "cedear",  "moneda": "USD" },
-    { "nombre": "Bitcoin",           "yahoo": "BTC-USD",  "tradingview": "BINANCE:BTCUSDT","tipo": "cripto", "moneda": "USD" },
-    { "nombre": "Ethereum",          "yahoo": "ETH-USD",  "tradingview": "BINANCE:ETHUSDT","tipo": "cripto", "moneda": "USD" }
-  ],
-  "busquedasNoticias": [
-    "mercado argentino acciones hoy",
-    "dólar MEP CCL brecha hoy",
-    "BCRA tasas plazo fijo",
-    "CNV normativa dólar parking",
-    "Wall Street hoy",
-    "bitcoin precio hoy",
-    "inflación INDEC"
-  ],
-  "ia": {
-    "_nota": "Proveedores gratuitos. GitHub Models funciona sin clave extra dentro de GitHub. Los demás se activan solo si se carga su clave gratuita como 'secret' en GitHub.",
-    "proveedores": ["github", "gemini", "groq", "openrouter", "mistral", "cerebras"]
+ "_nota": "Configuración del módulo de inversiones de RADAR. Puede agregar o quitar activos de la lista. 'yahoo' es el código para descargar datos; 'tradingview' es el código para el gráfico.",
+ "capitalReferencia": 1000000,
+ "comisionPorOperacion": 0.006,
+ "minimoRuloNeto": 0.01,
+ "horizonteEvaluacionDias": [
+  5,
+  20
+ ],
+ "activos": [
+  {
+   "nombre": "Grupo Galicia",
+   "yahoo": "GGAL.BA",
+   "tradingview": "BCBA:GGAL",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "YPF",
+   "yahoo": "YPFD.BA",
+   "tradingview": "BCBA:YPFD",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "Pampa Energía",
+   "yahoo": "PAMP.BA",
+   "tradingview": "BCBA:PAMP",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "Banco Macro",
+   "yahoo": "BMA.BA",
+   "tradingview": "BCBA:BMA",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "Ternium Argentina",
+   "yahoo": "TXAR.BA",
+   "tradingview": "BCBA:TXAR",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "Central Puerto",
+   "yahoo": "CEPU.BA",
+   "tradingview": "BCBA:CEPU",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "TGS",
+   "yahoo": "TGSU2.BA",
+   "tradingview": "BCBA:TGSU2",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "Aluar",
+   "yahoo": "ALUA.BA",
+   "tradingview": "BCBA:ALUA",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "BBVA Argentina",
+   "yahoo": "BBAR.BA",
+   "tradingview": "BCBA:BBAR",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "Loma Negra",
+   "yahoo": "LOMA.BA",
+   "tradingview": "BCBA:LOMA",
+   "tipo": "accion",
+   "moneda": "ARS",
+   "categoria": "Acciones argentinas"
+  },
+  {
+   "nombre": "Vista Energy",
+   "yahoo": "VIST",
+   "tradingview": "NYSE:VIST",
+   "tipo": "cedear",
+   "moneda": "USD",
+   "categoria": "EE.UU. y CEDEARs"
+  },
+  {
+   "nombre": "Mercado Libre",
+   "yahoo": "MELI",
+   "tradingview": "NASDAQ:MELI",
+   "tipo": "cedear",
+   "moneda": "USD",
+   "categoria": "EE.UU. y CEDEARs"
+  },
+  {
+   "nombre": "Apple",
+   "yahoo": "AAPL",
+   "tradingview": "NASDAQ:AAPL",
+   "tipo": "cedear",
+   "moneda": "USD",
+   "categoria": "EE.UU. y CEDEARs"
+  },
+  {
+   "nombre": "Microsoft",
+   "yahoo": "MSFT",
+   "tradingview": "NASDAQ:MSFT",
+   "tipo": "cedear",
+   "moneda": "USD",
+   "categoria": "EE.UU. y CEDEARs"
+  },
+  {
+   "nombre": "Nvidia",
+   "yahoo": "NVDA",
+   "tradingview": "NASDAQ:NVDA",
+   "tipo": "cedear",
+   "moneda": "USD",
+   "categoria": "EE.UU. y CEDEARs"
+  },
+  {
+   "nombre": "Alphabet (Google)",
+   "yahoo": "GOOGL",
+   "tradingview": "NASDAQ:GOOGL",
+   "tipo": "cedear",
+   "moneda": "USD",
+   "categoria": "EE.UU. y CEDEARs"
+  },
+  {
+   "nombre": "Amazon",
+   "yahoo": "AMZN",
+   "tradingview": "NASDAQ:AMZN",
+   "tipo": "cedear",
+   "moneda": "USD",
+   "categoria": "EE.UU. y CEDEARs"
+  },
+  {
+   "nombre": "Tesla",
+   "yahoo": "TSLA",
+   "tradingview": "NASDAQ:TSLA",
+   "tipo": "cedear",
+   "moneda": "USD",
+   "categoria": "EE.UU. y CEDEARs"
+  },
+  {
+   "nombre": "Coca-Cola",
+   "yahoo": "KO",
+   "tradingview": "NYSE:KO",
+   "tipo": "cedear",
+   "moneda": "USD",
+   "categoria": "EE.UU. y CEDEARs"
+  },
+  {
+   "nombre": "Argentina (ETF ARGT)",
+   "yahoo": "ARGT",
+   "tradingview": "AMEX:ARGT",
+   "tipo": "etf",
+   "moneda": "USD",
+   "categoria": "ETF e índices"
+  },
+  {
+   "nombre": "S&P 500 (SPY)",
+   "yahoo": "SPY",
+   "tradingview": "AMEX:SPY",
+   "tipo": "etf",
+   "moneda": "USD",
+   "categoria": "ETF e índices"
+  },
+  {
+   "nombre": "Nasdaq 100 (QQQ)",
+   "yahoo": "QQQ",
+   "tradingview": "NASDAQ:QQQ",
+   "tipo": "etf",
+   "moneda": "USD",
+   "categoria": "ETF e índices"
+  },
+  {
+   "nombre": "Dow Jones (DIA)",
+   "yahoo": "DIA",
+   "tradingview": "AMEX:DIA",
+   "tipo": "etf",
+   "moneda": "USD",
+   "categoria": "ETF e índices"
+  },
+  {
+   "nombre": "Brasil (EWZ)",
+   "yahoo": "EWZ",
+   "tradingview": "AMEX:EWZ",
+   "tipo": "etf",
+   "moneda": "USD",
+   "categoria": "ETF e índices"
+  },
+  {
+   "nombre": "Emergentes (EEM)",
+   "yahoo": "EEM",
+   "tradingview": "AMEX:EEM",
+   "tipo": "etf",
+   "moneda": "USD",
+   "categoria": "ETF e índices"
+  },
+  {
+   "nombre": "Bitcoin",
+   "yahoo": "BTC-USD",
+   "tradingview": "BINANCE:BTCUSDT",
+   "tipo": "cripto",
+   "moneda": "USD",
+   "categoria": "Criptomonedas"
+  },
+  {
+   "nombre": "Ethereum",
+   "yahoo": "ETH-USD",
+   "tradingview": "BINANCE:ETHUSDT",
+   "tipo": "cripto",
+   "moneda": "USD",
+   "categoria": "Criptomonedas"
+  },
+  {
+   "nombre": "Solana",
+   "yahoo": "SOL-USD",
+   "tradingview": "BINANCE:SOLUSDT",
+   "tipo": "cripto",
+   "moneda": "USD",
+   "categoria": "Criptomonedas"
+  },
+  {
+   "nombre": "BNB",
+   "yahoo": "BNB-USD",
+   "tradingview": "BINANCE:BNBUSDT",
+   "tipo": "cripto",
+   "moneda": "USD",
+   "categoria": "Criptomonedas"
+  },
+  {
+   "nombre": "XRP",
+   "yahoo": "XRP-USD",
+   "tradingview": "BINANCE:XRPUSDT",
+   "tipo": "cripto",
+   "moneda": "USD",
+   "categoria": "Criptomonedas"
+  },
+  {
+   "nombre": "Cardano",
+   "yahoo": "ADA-USD",
+   "tradingview": "BINANCE:ADAUSDT",
+   "tipo": "cripto",
+   "moneda": "USD",
+   "categoria": "Criptomonedas"
+  },
+  {
+   "nombre": "Oro (GLD)",
+   "yahoo": "GLD",
+   "tradingview": "AMEX:GLD",
+   "tipo": "commodity",
+   "moneda": "USD",
+   "categoria": "Materias primas"
+  },
+  {
+   "nombre": "Plata (SLV)",
+   "yahoo": "SLV",
+   "tradingview": "AMEX:SLV",
+   "tipo": "commodity",
+   "moneda": "USD",
+   "categoria": "Materias primas"
+  },
+  {
+   "nombre": "Petróleo (USO)",
+   "yahoo": "USO",
+   "tradingview": "AMEX:USO",
+   "tipo": "commodity",
+   "moneda": "USD",
+   "categoria": "Materias primas"
+  },
+  {
+   "nombre": "Cobre (CPER)",
+   "yahoo": "CPER",
+   "tradingview": "AMEX:CPER",
+   "tipo": "commodity",
+   "moneda": "USD",
+   "categoria": "Materias primas"
+  },
+  {
+   "nombre": "Agro: soja, maíz, trigo (DBA)",
+   "yahoo": "DBA",
+   "tradingview": "AMEX:DBA",
+   "tipo": "commodity",
+   "moneda": "USD",
+   "categoria": "Materias primas"
   }
+ ],
+ "busquedasNoticias": [
+  "mercado argentino acciones hoy",
+  "dólar MEP CCL brecha hoy",
+  "BCRA tasas plazo fijo",
+  "CNV normativa dólar parking",
+  "Wall Street hoy",
+  "bitcoin precio hoy",
+  "inflación INDEC"
+ ],
+ "ia": {
+  "_nota": "Proveedores gratuitos. GitHub Models funciona sin clave extra dentro de GitHub. Los demás se activan solo si se carga su clave gratuita como 'secret' en GitHub.",
+  "proveedores": [
+   "github",
+   "gemini",
+   "groq",
+   "openrouter",
+   "mistral",
+   "cerebras"
+  ]
+ },
+ "_categorias": [
+  "Acciones argentinas",
+  "EE.UU. y CEDEARs",
+  "ETF e índices",
+  "Criptomonedas",
+  "Materias primas"
+ ]
 }

@@ -13,7 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as F from './fuentes.mjs';
-import { leerSenales } from './indicadores.mjs';
+import { leerSenales, ficha } from './indicadores.mjs';
 import { consultarTodas, extraerJSON, proveedoresActivos, PROVEEDORES } from './ia.mjs';
 import * as A from './aprendizaje.mjs';
 
@@ -38,6 +38,8 @@ const velasPorActivo = {};
 for (const [i, a] of cfg.activos.entries()) {
   velasPorActivo[a.yahoo] = SIM ? F.velasSimuladas(i + 1, 420, 50 + i * 30) : await F.velasYahoo(a.yahoo);
 }
+const rf = SIM ? F.rentaFijaSimulada() : await F.rentaFija();
+const usdt = SIM ? F.usdtSimulado() : await F.usdtPorExchange();
 let titulares = [];
 if (!SIM) {
   for (const q of cfg.busquedasNoticias) titulares.push(...(await F.noticias(q, 5)).map(n => ({ ...n, tema: q })));
@@ -69,12 +71,12 @@ for (const a of cfg.activos) {
   const c = velas.map(v => v.close);
   const var30 = c.length > 22 ? c.at(-1) / c.at(-22) - 1 : null;
   const var1 = c.at(-1) / c.at(-2) - 1;
-  const cola = velas.slice(-300);
+  const cola = velas.slice(-260).map(v => ({ time: v.time, open: +v.open.toPrecision(6), high: +v.high.toPrecision(6), low: +v.low.toPrecision(6), close: +v.close.toPrecision(6) }));
   const desde = velas.length - cola.length;
-  const corte = arr => arr.slice(desde).map((v, i) => v == null ? null : { time: cola[i].time, value: +v.toFixed(4) }).filter(Boolean);
+  const corte = arr => arr.slice(desde).map((v, i) => v == null ? null : { time: cola[i].time, value: +v.toPrecision(6) }).filter(Boolean);
   activos.push({
     ...a, precio: s.precio, variacionDia: pct(var1), variacion30d: pct(var30),
-    puntaje: puntajeAjustado, puntajeBase: s.puntaje, accion,
+    puntaje: puntajeAjustado, puntajeBase: s.puntaje, accion, ficha: ficha(velas, s.fibonacci),
     m20: s.m20, m50: s.m50, m200: s.m200, rsi: s.rsi, fibonacci: s.fibonacci, senales: s.senales,
     grafico: { velas: cola, m20: corte(s.series.m20), m50: corte(s.series.m50), m200: corte(s.series.m200), rsi: corte(s.series.rsi) },
   });
@@ -89,7 +91,7 @@ if (dolar) {
     const bruto = precioVenta / precioCompra - 1;
     const neto = bruto - ops * com;
     rulos.push({
-      nombre, pasos: `Comprar dólares ${compraEn} a $${precioCompra} → vender ${vendeEn} a $${precioVenta}`,
+      nombre, pasos: `Comprar dólares ${compraEn} a $${(+precioCompra).toFixed(2)} → vender ${vendeEn} a $${(+precioVenta).toFixed(2)}`,
       brutoPct: pct(bruto), netoPct: pct(neto),
       gananciaSobreCapital: Math.round(cfg.capitalReferencia * neto),
       conviene: neto >= cfg.minimoRuloNeto, nota,
@@ -101,7 +103,21 @@ if (dolar) {
   R('Cripto (USDT) → MEP', 'en USDT', 'por MEP', d.cripto?.venta, d.bolsa?.compra, 3, 'Camino inverso: comprar USDT con pesos y vender dólares MEP.');
   R('Oficial → MEP', 'oficial en el banco', 'por MEP', d.oficial?.venta, d.bolsa?.compra, 2, 'Solo si la normativa vigente permite comprar oficial y vender MEP sin restricción cruzada. Verifique antes de operar.');
   R('Oficial → Blue', 'oficial en el banco', 'en el mercado informal', d.oficial?.venta, d.blue?.compra, 1, 'Mercado informal: no se recomienda por riesgo legal y de seguridad. Se muestra solo como referencia.');
-  rulos.sort((a, b) => b.netoPct - a.netoPct);
+  // USDT entre exchanges: comprar donde está más barato y vender donde pagan más
+  if (usdt.length > 1) {
+    const barato = [...usdt].sort((a, b) => a.compra - b.compra)[0], caro = [...usdt].sort((a, b) => b.venta - a.venta)[0];
+    if (barato.exchange !== caro.exchange) R(`USDT: ${barato.exchange} → ${caro.exchange}`, `en USDT en ${barato.exchange}`, `en ${caro.exchange}`, barato.compra, caro.venta, 1,
+      'Precios con comisiones incluidas (CriptoYa). Requiere cuenta verificada en ambos exchanges y transferir USDT por una red barata (TRC20/BEP20).');
+  }
+  // MEP y CCL con bonos (AL30): precio real de las puntas, no el promedio
+  const bono = s => rf?.bonos?.find(b => b.simbolo === s);
+  const al30 = bono('AL30'), al30d = bono('AL30D'), al30c = bono('AL30C');
+  if (al30?.venta && al30d?.compra) {
+    const mep = al30.venta / al30d.compra, ccl = al30c?.compra ? al30.venta / al30c.compra : null;
+    rulos.push({ nombre: 'Referencia: MEP con AL30', pasos: `Comprar AL30 a $${al30.venta} y vender AL30D a US$${al30d.compra} → dólar MEP ≈ $${mep.toFixed(2)}`, brutoPct: null, netoPct: null, gananciaSobreCapital: null, conviene: false, nota: 'Precio del MEP armado con bonos, útil para comparar con el MEP que muestra su broker.' });
+    if (ccl && d.bolsa?.compra) R('MEP (bonos) → CCL (bonos)', 'MEP con AL30/AL30D', 'como CCL con AL30C', mep, ccl, 2, 'Calculado con las puntas reales de AL30. Requiere poder transferir los títulos a una cuenta del exterior y respetar el parking de la CNV.');
+  }
+  rulos.sort((a, b) => (b.netoPct ?? -99) - (a.netoPct ?? -99));
 }
 
 // ---------- 5. Rendimientos comparados (mensual estimado y real) ----------
@@ -150,11 +166,11 @@ const resumenParaIA = {
   rulos: rulos.map(r => ({ nombre: r.nombre, netoPct: r.netoPct })),
   rendimientos: rend.slice(0, 12).map(r => ({ nombre: r.nombre, mensualPct: r.mensualPct, realPct: r.realPct, riesgo: r.riesgo })),
   activos: activos.filter(a => a.precio).map(a => ({
-    nombre: a.nombre, yahoo: a.yahoo, precio: +a.precio.toFixed(2), var30dPct: a.variacion30d, rsi: a.rsi && +a.rsi.toFixed(1),
+    nombre: a.nombre, yahoo: a.yahoo, categoria: a.categoria, precio: +a.precio.toFixed(2), var30dPct: a.variacion30d, var1aPct: a.ficha?.var1a, volatilidadPct: a.ficha?.volatilidadAnualPct, soportes: a.ficha?.soportes, resistencias: a.ficha?.resistencias, rsi: a.rsi && +a.rsi.toFixed(1),
     m20: a.m20 && +a.m20.toFixed(2), m50: a.m50 && +a.m50.toFixed(2), m200: a.m200 && +a.m200.toFixed(2),
-    fibTramo: a.fibonacci?.tendenciaTramo, fibRetroceso: a.fibonacci?.retroceso.map(n => [n.nivel, +n.precio.toFixed(2)]),
-    fibExtension: a.fibonacci?.extension.map(n => [n.nivel, +n.precio.toFixed(2)]), puntajeTecnico: a.puntaje,
+    fibTramo: a.fibonacci?.tendenciaTramo, fibObjetivo127: a.fibonacci?.extension?.[0] && +a.fibonacci.extension[0].precio.toFixed(2), puntajeTecnico: a.puntaje,
   })),
+  rentaFija: [...(rf?.bonos || []).slice(0, 12), ...(rf?.letras || []).slice(0, 8)].map(b => ({ simbolo: b.simbolo, tipo: b.tipo, precio: b.precio, variacionPct: b.variacionPct })),
   titulares: titulares.slice(0, 30).map(t => t.titulo),
 };
 const SISTEMA = 'Usted es un analista financiero prudente que trabaja para un inversor argentino. Responda SOLO con un objeto JSON válido, en español formal y sencillo. ' +
@@ -213,7 +229,7 @@ guardar('aprendizaje.json', estado);
 const salida = {
   generado: ahora, simulacion: SIM,
   inflacionMensualPct: pct(inflMensual), riesgoPais: ar?.riesgo?.valor ?? null,
-  dolar, rulos, rendimientos: rend, activos, opiniones, votosIA, opinionesFecha, titulares: titulares.slice(0, 40),
+  dolar, rulos, rendimientos: rend, activos, rentaFija: rf, usdt, categorias: cfg._categorias, opiniones, votosIA, opinionesFecha, titulares: titulares.slice(0, 40),
   aprendizaje: {
     registros: historial.length,
     evaluaciones: Object.values(estado.proveedores ?? {}).reduce((t, s) => t + s.total, 0) + (estado.tecnico?.total ?? 0),
@@ -223,6 +239,6 @@ const salida = {
   },
   iaActivas: SIM ? ['github', 'gemini', 'groq'] : activosIA,
 };
-guardar('inversiones.json', salida);
+fs.writeFileSync(path.join(DATOS, 'inversiones.json'), JSON.stringify(salida));
 console.log(`  · Activos analizados: ${activos.filter(a => a.precio).length}/${activos.length} · Rulos: ${rulos.length} · Rendimientos: ${rend.length} · IAs: ${opiniones.length}`);
 console.log('  · Listo: docs/inversiones-datos/inversiones.json');

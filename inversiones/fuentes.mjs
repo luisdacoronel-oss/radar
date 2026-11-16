@@ -113,3 +113,36 @@ export function argentinaSimulada() {
     cripto: [{ entidad: 'buenbit', rendimientos: [{ moneda: 'USDT', apy: 5.5 }, { moneda: 'USDC', apy: 5.0 }] }],
   };
 }
+
+// ---------- Renta fija argentina en vivo (data912.com, gratuito y público) ----------
+// arg_bonds: bonos soberanos · arg_notes: letras (LECAP/BONCAP) · arg_corp: obligaciones negociables
+export async function rentaFija() {
+  const base = 'https://data912.com/live';
+  const [bonos, letras, ons] = await Promise.all(['arg_bonds', 'arg_notes', 'arg_corp'].map(t => traer(`${base}/${t}`)));
+  const norm = (lista, tipo) => (Array.isArray(lista) ? lista : []).map(x => ({
+    simbolo: x.symbol, tipo,
+    precio: x.c ?? x.px_ask ?? x.px_bid ?? null, compra: x.px_bid ?? null, venta: x.px_ask ?? null,
+    variacionPct: x.pct_change ?? null, volumen: x.v ?? null, operaciones: x.q_op ?? null,
+  })).filter(x => x.simbolo && x.precio > 0);
+  return { bonos: norm(bonos, 'Bono'), letras: norm(letras, 'Letra'), ons: norm(ons, 'Obligación negociable') };
+}
+
+// ---------- Cotizaciones de USDT en cada exchange argentino (criptoya.com, gratuito y público) ----------
+export async function usdtPorExchange() {
+  const d = await traer('https://criptoya.com/api/usdt/ars/1');
+  if (!d || typeof d !== 'object') return [];
+  return Object.entries(d).map(([exchange, v]) => ({ exchange, compra: v.totalAsk ?? v.ask, venta: v.totalBid ?? v.bid, hora: v.time }))
+    .filter(x => x.compra > 0 && x.venta > 0);
+}
+
+export function rentaFijaSimulada() {
+  const b = (s, p, v) => ({ simbolo: s, precio: p, compra: p * 0.998, venta: p * 1.002, variacionPct: v, volumen: 1e8, operaciones: 300 });
+  return {
+    bonos: [b('AL30', 89500, 0.4), b('AL30D', 61.2, 0.2), b('AL30C', 58.4, 0.1), b('GD30', 91200, 0.3), b('GD35', 72000, -0.2)].map(x => ({ ...x, tipo: 'Bono' })),
+    letras: [b('S30E7', 104.2, 0.1), b('T15E7', 112.5, 0.05)].map(x => ({ ...x, tipo: 'Letra' })),
+    ons: [b('YMCXO', 1650, 0.3), b('TLC5O', 1580, -0.1)].map(x => ({ ...x, tipo: 'Obligación negociable' })),
+  };
+}
+export function usdtSimulado() {
+  return [{ exchange: 'buenbit', compra: 1672, venta: 1655 }, { exchange: 'lemoncash', compra: 1668, venta: 1650 }, { exchange: 'binancep2p', compra: 1660, venta: 1664 }, { exchange: 'ripio', compra: 1680, venta: 1648 }];
+}
