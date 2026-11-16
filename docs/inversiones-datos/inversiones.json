@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T23:57:09.193Z",
+ "generado": "2026-11-16T01:41:38.114Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.49,
+   "mensualPct": -19.16,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.21,
+   "mensualPct": -22.38,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73464,72 +73464,72 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 65231,
-   "variacionDia": 1.72,
-   "variacion30d": -18.49,
+   "precio": 64695.12109375,
+   "variacionDia": 0.88,
+   "variacion30d": -19.16,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75051.8564453125,
-   "m50": 79753.580390625,
-   "m200": 72921.54669921874,
-   "rsi": 24.375180539054256,
+   "m20": 75025.0625,
+   "m50": 79742.8628125,
+   "m200": 72918.8673046875,
+   "rsi": 22.395985225748092,
    "fibonacci": {
-    "tendenciaTramo": "bajista",
+    "tendenciaTramo": "alcista",
     "desde": {
-     "fecha": "2026-09-21",
-     "precio": 87363.7578125
+     "fecha": "2026-08-03",
+     "precio": 62226.578125
     },
     "hasta": {
-     "fecha": "2026-11-15",
-     "precio": 62093.515625
+     "fecha": "2026-09-21",
+     "precio": 87363.7578125
     },
     "retroceso": [
      {
       "nivel": 0,
-      "precio": 62093.515625
+      "precio": 87363.7578125
      },
      {
       "nivel": 0.236,
-      "precio": 68057.29278125
+      "precio": 81431.38340625
      },
      {
       "nivel": 0.382,
-      "precio": 71746.748140625
+      "precio": 77761.355171875
      },
      {
       "nivel": 0.5,
-      "precio": 74728.63671875
+      "precio": 74795.16796875
      },
      {
       "nivel": 0.618,
-      "precio": 77710.525296875
+      "precio": 71828.980765625
      },
      {
       "nivel": 0.786,
-      "precio": 81955.925984375
+      "precio": 67605.934578125
      },
      {
       "nivel": 1,
-      "precio": 87363.7578125
+      "precio": 62226.578125
      }
     ],
     "extension": [
      {
       "nivel": 1.272,
-      "precio": 55220.00975
+      "precio": 94201.0706875
      },
      {
       "nivel": 1.618,
-      "precio": 46476.505953125
+      "precio": 102898.53485937501
      },
      {
       "nivel": 2,
-      "precio": 36823.2734375
+      "precio": 112500.9375
      },
      {
       "nivel": 2.618,
-      "precio": 21206.263765625
+      "precio": 128035.714546875
      }
     ]
    },
@@ -73547,12 +73547,12 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 24: zona de sobreventa, posible rebote."
+     "texto": "RSI en 22: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
      "peso": 0,
-     "texto": "Objetivo por extensión de Fibonacci 127,2%: 55220.01."
+     "texto": "Objetivo por extensión de Fibonacci 127,2%: 94201.07."
     }
    ],
    "grafico": {
@@ -75950,12 +75950,12 @@
       "volume": 44019244180
      },
      {
-      "time": "2026-11-15",
-      "open": 64119.78125,
-      "high": 65889.234375,
-      "low": 62093.515625,
-      "close": 65231,
-      "volume": 38382182400
+      "time": "2026-11-16",
+      "open": 65314.55078125,
+      "high": 65363.4375,
+      "low": 64701.78515625,
+      "close": 64695.12109375,
+      "volume": 36408270848
      }
     ],
     "m20": [
@@ -77156,8 +77156,8 @@
       "value": 75790.6393
      },
      {
-      "time": "2026-11-15",
-      "value": 75051.8564
+      "time": "2026-11-16",
+      "value": 75025.0625
      }
     ],
     "m50": [
@@ -78358,8 +78358,8 @@
       "value": 80137.0895
      },
      {
-      "time": "2026-11-15",
-      "value": 79753.5804
+      "time": "2026-11-16",
+      "value": 79742.8628
      }
     ],
     "m200": [
@@ -79560,8 +79560,8 @@
       "value": 72974.2724
      },
      {
-      "time": "2026-11-15",
-      "value": 72921.5467
+      "time": "2026-11-16",
+      "value": 72918.8673
      }
     ],
     "rsi": [
@@ -80762,8 +80762,8 @@
       "value": 20.1856
      },
      {
-      "time": "2026-11-15",
-      "value": 24.3752
+      "time": "2026-11-16",
+      "value": 22.396
      }
     ]
    },
@@ -80804,16 +80804,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1833.3499755859375,
-   "variacionDia": 3.63,
-   "variacion30d": -21.21,
+   "precio": 1806.199951171875,
+   "variacionDia": 2.1,
+   "variacion30d": -22.38,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2163.8447204589843,
-   "m50": 2378.046179199219,
-   "m200": 2142.5242639160156,
-   "rsi": 26.32789343376878,
+   "m20": 2162.4872192382813,
+   "m50": 2377.5031787109374,
+   "m200": 2142.388513793945,
+   "rsi": 23.702943808813444,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80821,33 +80821,33 @@
      "precio": 2805.4990234375
     },
     "hasta": {
-     "fecha": "2026-11-15",
-     "precio": 1714.29296875
+     "fecha": "2026-11-14",
+     "precio": 1730.70458984375
     },
     "retroceso": [
      {
       "nivel": 0,
-      "precio": 1714.29296875
+      "precio": 1730.70458984375
      },
      {
       "nivel": 0.236,
-      "precio": 1971.81759765625
+      "precio": 1984.356076171875
      },
      {
       "nivel": 0.382,
-      "precio": 2131.133681640625
+      "precio": 2141.2760634765627
      },
      {
       "nivel": 0.5,
-      "precio": 2259.89599609375
+      "precio": 2268.101806640625
      },
      {
       "nivel": 0.618,
-      "precio": 2388.658310546875
+      "precio": 2394.9275498046873
      },
      {
       "nivel": 0.786,
-      "precio": 2571.980927734375
+      "precio": 2575.4930146484376
      },
      {
       "nivel": 1,
@@ -80857,19 +80857,19 @@
     "extension": [
      {
       "nivel": 1.272,
-      "precio": 1417.484921875
+      "precio": 1438.36050390625
      },
      {
       "nivel": 1.618,
-      "precio": 1039.927626953125
+      "precio": 1066.4816298828123
      },
      {
       "nivel": 2,
-      "precio": 623.0869140625
+      "precio": 655.91015625
      },
      {
       "nivel": 2.618,
-      "precio": -51.27842773437487
+      "precio": -8.31280371093726
      }
     ]
    },
@@ -80887,12 +80887,12 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 26: zona de sobreventa, posible rebote."
+     "texto": "RSI en 24: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
      "peso": 0,
-     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1417.48."
+     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1438.36."
     }
    ],
    "grafico": {
@@ -83290,12 +83290,12 @@
       "volume": 17981259090
      },
      {
-      "time": "2026-11-15",
-      "open": 1768.7667236328125,
-      "high": 1839.067626953125,
-      "low": 1714.29296875,
-      "close": 1833.3499755859375,
-      "volume": 15314553856
+      "time": "2026-11-16",
+      "open": 1835.2918701171875,
+      "high": 1837.161865234375,
+      "low": 1807.2979736328125,
+      "close": 1806.199951171875,
+      "volume": 14369269760
      }
     ],
     "m20": [
@@ -84496,8 +84496,8 @@
       "value": 2188.1913
      },
      {
-      "time": "2026-11-15",
-      "value": 2163.8447
+      "time": "2026-11-16",
+      "value": 2162.4872
      }
     ],
     "m50": [
@@ -85698,8 +85698,8 @@
       "value": 2395.2834
      },
      {
-      "time": "2026-11-15",
-      "value": 2378.0462
+      "time": "2026-11-16",
+      "value": 2377.5032
      }
     ],
     "m200": [
@@ -86900,8 +86900,8 @@
       "value": 2144.6246
      },
      {
-      "time": "2026-11-15",
-      "value": 2142.5243
+      "time": "2026-11-16",
+      "value": 2142.3885
      }
     ],
     "rsi": [
@@ -88102,8 +88102,8 @@
       "value": 19.8003
      },
      {
-      "time": "2026-11-15",
-      "value": 26.3279
+      "time": "2026-11-16",
+      "value": 23.7029
      }
     ]
    },
@@ -88119,9 +88119,9 @@
     ]
    },
    "niveles": {
-    "entrada": 1833.3499755859375,
-    "objetivo": 1417.484921875,
-    "stop": 1714.29296875
+    "entrada": 1806.199951171875,
+    "objetivo": 1438.36050390625,
+    "stop": 1730.70458984375
    },
    "razonesIA": []
   }
@@ -88431,255 +88431,9 @@
   ]
  },
  "opinionesFecha": "2026-11-15T23:57:09.193Z",
- "titulares": [
-  {
-   "titulo": "Riesgo país, dólar y acciones: así opera el mercado hoy, viernes 30 de octubre - TN",
-   "enlace": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZG9MenFuZ2llcF9iTE44enZUXzU5dlhwdi15SlU2RTB6NWhqc2xnaGFWanNGdDh5WGJPU0Q5ZjdBS3piNXR5SlFQSkJaNzdZMU5zTGRiakdLT0N3LTVGZUlGclJCQi1TQ3R2SkgydE5keGl3YXdkZXBwLVo2aXRmT3NIVTk1YjR5a094SHF3dlU3RWFkMENlNU0xdFBMWnFwQ3Q3dFRMMmhGc0Q5RDRiM3hvQmsxamxqdmRyNDk4bzdob1Bzd0hPZTUyRXh5bndQYm5qZW1PUDBiQdIB7gFBVV95cUxOdXRPR0NLWl9VbmsyUFR0YVI1XzZjUVQ1cUZKZjJaLXhCM3pDNEZnd0htT2RobTZPXzFtMEo2cWNINEJ1RTB0VXVPaXlSVDBTOVJmLTVvYklOTHpPODc1VWhJc2lCSGtwWF81QlJBU3NiY2p5NEVJUVpKcjV0SEFTeV9NSXJadFR4WnpsNUdYVFhVazZnWXM0ejNkQ1ZNek9HaXZzQUdGVEdTd2tPVG10RHVuYWF6SEFRVzFyNXpod2FKU0xiUlhFdTdCYjl0U1JEa1BzbTRaZ09aaXB0bk5HUXUtSXZLSmZrQlZrc2xB?oc=5",
-   "fecha": "Fri, 30 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "mercado argentino acciones hoy"
-  },
-  {
-   "titulo": "Los mercados apostaban por Bolsonaro y hoy están que arden: el impacto en Argentina - Página|12",
-   "enlace": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcFZWUUFWUWEyelUwVHdOdGN5V1R5WWEwV0JOUmVFU1Zsby01eVhfejJMcTEzcnRtVlBETkFlSFcwSFBWdjRXQkZoVl80X2VwYl9nQW5tTVhsY0Jtb0wxSmowQjY2SWdZa0RjTGtBU1FqVFcyMEo1NGw0eDA2UlQ0MU1UYUdacnVwTkhjcEd0R1VqaE9qb3RXcUhjd1AzWWh0dWdPQnl4bnI3bXpOdXJERnZkSTlXWjgzSktiaFJRTQ?oc=5",
-   "fecha": "Mon, 26 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "mercado argentino acciones hoy"
-  },
-  {
-   "titulo": "Las acciones argentinas cayeron hasta casi 6% en Wall Street - La Nación",
-   "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOUDByQ21RX095MFh4RXpDVE9TYzlFQ25RQXluZkdEMG94cEtOVFVxbUx0X1Z5VnBmSjIwNzhUWF9tbVlFMGxrUWcwMFdySnlSaFV5cVNneFNqQU1KQXZiVU5TX2k1aXU0TFhrWDRsNTlqUy1EektaTlNxU0UxOFpobElMdDFJSEl1YzhBOHp0QjlfNnQ1ZWw3TjZwa25sSzFEVFRR?oc=5",
-   "fecha": "Tue, 11 Aug 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "mercado argentino acciones hoy"
-  },
-  {
-   "titulo": "Cuáles son las acciones que subirían más si Argentina consigue hoy un guiño para ser \"mercado emergente\" - Clarin.com",
-   "enlace": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMVI1X1dJVzN2a2JJcjRxU1VNQXJFMHU0M0U1YjVqbUFZemVUYjVHendnNE11S0FyRUlrR0hBRFU2X200c25GSVBRQ3ZjSjJsVmpJdldHcUdSY2cyVmNMV2EtYjRJUk5kNi13VjRYeHdVQWNrTVk0WTUwS2U0ZWtidmc5d1huNV81NjIxLVlMUnZueFdVM3BiTmFiV1ZIVTVCdUJZZ0o4VjRvMElFd0JqbWNMRDE?oc=5",
-   "fecha": "Thu, 18 Jun 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "mercado argentino acciones hoy"
-  },
-  {
-   "titulo": "Acciones argentinas con 66% de suba: un broker local cambia su estrategia tras fuerte caída del S&P Merval - El Cronista",
-   "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZWY2NG1PdUV2RnVHcTUybFFTcWI5NmhTUldoTk5aRHpJOEpyN21kSkJyckd3bld3d1E1TkltWGZvZmJORDJCSnhEY2lTTW1qVWVHeHpCaGpkdW02LXhGSlAwenFFTjF1NmxlNFZTLUs4aEdFRm4zekp1T3NJVXB6ZVpkM19tcnRJOWlpRlZUNDdMMERLTjBNVl84bUM1NklsNGJNOS1JQ2trZjU3QU00RG1tbFJIdmdoRUk0Zmx6ZnZQMXUyMlU0eTBIM2JjVkE1VjQ1V281aDBhU1HSAfYBQVVfeXFMTTd0ODA1ZmZrcERIS0ZTUFZtR0c0SHZlSnFRMFNJN2dINDFZdVIxajNiUlo0WlFheHBiRTllQllqMUtwRE84MjNyMW9tcG5kN2hHU2JJcUVJSGxYLW0xelVab29Edzd2SjZVeEpIRVVqMnBDSzBPWG9MZHl6cXVFQUs0V0FvcGhsN1MtQnhlZkoxN1NtQkVpTVlNdkN5MkZkYWhNVjZ0YzBwYnR1VmZHdUN1enBfV2ZiT2FNN2tRUjFKUVBSOWpOb2RNa09xdmtqZGFHNzFCU1Zibng4TE9jTHowSFFWUnd3bXhwMjVDOXlyaXhPSGVn?oc=5",
-   "fecha": "Fri, 04 Sep 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "mercado argentino acciones hoy"
-  },
-  {
-   "titulo": "Dólar hoy: cómo cotizan el blue, MEP y CCL este miércoles - Diario El Norte - San Nicolás",
-   "enlace": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaVVpMV9CcHp3akh1c0NTdFpueUpkTWxmMm5ORVhjTTNYdm03T0UxejZyNDlFQUFRZ3F5QWxRXzZuT1ZFZTVPRlY2aS1PYnM3bjZucTY2TTlwRVdWMVRMMGtkZnI0T3JlTnVKRTY5Yl81dDlDdlNtU3dtRXNXc1JGMDVBU2FJTFgyYTByWUNB?oc=5",
-   "fecha": "Wed, 11 Nov 2026 11:02:03 GMT",
-   "fuente": "",
-   "tema": "dólar MEP CCL brecha hoy"
-  },
-  {
-   "titulo": "Dólar CCL vs. MEP: por qué se disparó el canje y aumenta el costo de sacar divisas del país - RoadShow",
-   "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTHdsOHZKVVpkN0lLUTVGRlkwci1fa3BoZURFU19ZQXBCV09JdDFkZWRHbFhsVlR4djAwZHU0bVlQYUZidk1vMFB1WHhOUUhxRmtwS3FMODJ4UE0weVRYSlNPd3NiZEYtT1BhVXZPWHVPZ2JxMllrcnJnVGFPaWdkNGJsUkdIdHJvS1hxdDk1QUFZbEtZV3FoRS13bV9MWjVJbjVqa2FaYlVkM0ZmdnhYMTlsT2I2T2p0amc?oc=5",
-   "fecha": "Fri, 23 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "dólar MEP CCL brecha hoy"
-  },
-  {
-   "titulo": "Dólar CCL: brecha con el MEP sube a 5,2% en Argentina - El Ecosistema Startup",
-   "enlace": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN0V5T0JFT1VMQ291bXRucEQzVHRHYVFJVUdiVkxSbWpXd0sySkVfQ1pzcTFLRWlRSkEtSlM4WlVmcl91RVZKQUhMQXhSUDRyRGk0M2hReUpUMGNjZHhLdmRjN2tRZXY3S3BOeFZ4eHE0ZWE1QlZMZndXVlZadWd0RG9PT19KWHQw?oc=5",
-   "fecha": "Thu, 22 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "dólar MEP CCL brecha hoy"
-  },
-  {
-   "titulo": "Dólar hoy: por qué se achicó la brecha entre el oficial, el MEP y el blue - Diario Río Negro",
-   "enlace": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWlpUcUNUeFFCSHpITnBHREdfVTh2ZDN4ZTkzZm43ZkJTRkdKMHN6cVdjcEtCbGl2eE1GQzg5T0lEUXZ1cUgwbU1RbUpoWjNONlh2aGZ2bDVYMG4wRzJTRlRLNnFHb0N4X0ZCY0x2bXJlWU1makpSaFVaZlVkd0FyNnQxYzctWEhmNlZ0bzdkUHk0b1lLVjQ5dnlSX0NuX1gxeDdjTWtNQ1FvbnpqT01haXBzYWFubWh3c19KTk1KZXdlajdweWllbjJ3UkFlM1VIa1NpTElOcXdZZzlUci1QX3Q4bC16dHfSAe8BQVVfeXFMUEVfV3ZTMExpOHBSal81TEgzd1Z3SUNYLUZ2NTRoQjFVNXhndlczRHBhU1lfOWw0QTc4akNvaUc0YkFuSjBuUXgyeTRtU2wxWXdGdzlLZ283YUprcnFXczV2VDMxc1lRSVhEWjUyNXc4aVJ5QW9HUHhuUGNVT0xDVGRueEc0NXhGeVVkVjdOc2lGMWhhMVA1SEFIbTlTRkZxSTFLb2I3VWdrdFNHaUV0aWw1WWZGZV9qUjY4cmxDOXk4Ml9JNjd6NWMtbjRYXzdzZ1hCMlRjOVZ4RktydFpNb3RiV2ZmM3FpVklYdjdUX0E?oc=5",
-   "fecha": "Wed, 23 Sep 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "dólar MEP CCL brecha hoy"
-  },
-  {
-   "titulo": "La brecha entre dólar MEP y CCL no afloja: qué pasa en el mercado - iProfesional",
-   "enlace": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdzZoRDBrUDZTai1oTGVHZjktLWdmQS1ZZHlaTVY2enF1SF9sX21feUFPaklqRVp6SDRxQWNyVmFyR1l2R2loXzdBQVJSVDhRdmlpSjR1aG1nczdlWmtqcV82dVpucGNSSlo5aXN5SUQyQUd0UVpNbTdScFRTa3IzVTBnQmMyTWhCYXlQUXJLMW9vYmlPT1BrZUdScTJtQ1otZnB6Y3ZHV3JpZ9IBrwFBVV95cUxPdzA4djc3X3h3Sk5kaTJhMktWUVlIejE0VHh6emFydDZIM3ZaSGxLeFdjbXpZLUNvUGxTR1FPTG04RGxSbnRLN2xqcUFNU3hCeVNHemdHTFllNmNUSmxpbEI2VFdkRld1aERJYVd4ZlFISmNFOHdqcTQzUXRUa00ya0tOeE15RVB1SVBOeGdDLUZuWDVNUlpfQnRyNUU5M0ZoVncyT3FDNnJ2RW10dk1J?oc=5",
-   "fecha": "Sun, 08 Feb 2026 08:00:00 GMT",
-   "fuente": "",
-   "tema": "dólar MEP CCL brecha hoy"
-  },
-  {
-   "titulo": "Plazo fijo: cuál es la tasa de interés banco por banco este viernes 13 de noviembre - La Nación",
-   "enlace": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQRXMxcUVpUnhjOWM5d2tuaHFfTUFyMFNiLU12Q2xZeUlGeVlpdC0zS2VUR3Y4Q3hsOVFHXzdRVlVlUFpaU3F0OGtHcXR3TEl1bGRkMloxR29lLXo1Q0lhRjU3Y3ZmU01hd3Y3b0dJUzBJV0t6QW00NHlad19KQUxZZmFUYkU4UjVaN3JMdW5wSTlUdGZpVnVIQ2o2VFhPcEloNGR4X3ZobWU5SXlkcVVvOG41bkVPVTdpb3NaeU1OXzI4SnZlak1DZ3Nobkw?oc=5",
-   "fecha": "Fri, 13 Nov 2026 16:19:00 GMT",
-   "fuente": "",
-   "tema": "BCRA tasas plazo fijo"
-  },
-  {
-   "titulo": "Plazo fijo: cuál es la tasa que ofrece cada banco para depósitos de $1 millón a 30 días - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbnVfUW5OQnkyUkpJZDRRNFgxaUF4WnVpMDF0d3FVelM2R0VabzVOeGYxMEtVY1YtaG55ZXZzdktTLV9HZWJUUnJOdmFSSVZRbEdJUXZpSzdaWGZzRlRaZFVQbHh4SUZDb1hWaFlpTjgtSnVJMDJuNVh1Nzh6alptX2p6aVNEQU9LQ25BRmh5OXZpYXp3bVUzT0l2Ynp4YjdBbTBocWxaTVQwLWVuOXNjRG9wUm0wZzhrdkQtRWw3YUpYQ1p4eXE4WnB30gHkAUFVX3lxTE1wZFVkajdKZWhPN3NXdHNzbjVkVjBuQzBxc0VXUE1hQWJrdDBEQkdMZEYtcno3NUJXWUo4d0ZuS3VxQnJibkhoMmdZOTdTUGdiMERQT09Hal9NSThja1U4VnZJN0QyOFBUWWszWUI4aUIyQTBDQWVzSDBwYWVteUU0NjZxclFqS056TFRkZV9QMGpTbFFmbFZMWkh2MVBkRmJUOWI1OWZGQWZRa0ZvbnkyZWQ4bHdmakdrcG1ka2hjd3F2Zjg2MjZKNkxpNFg2eXZiVWRUejVyUDNwQXZXa1lvcWtiVQ?oc=5",
-   "fecha": "Mon, 09 Nov 2026 14:26:00 GMT",
-   "fuente": "",
-   "tema": "BCRA tasas plazo fijo"
-  },
-  {
-   "titulo": "Las tasas en pesos, dentro de una montaña rusa: el BCRA busca ahora plancharlas - El Cronista",
-   "enlace": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMmVxVmhwM3RKaEktdTNZbVg4QlZZSjRwVnNYcTNadV9mWm54WUJzY2FqNUsxR2NrbkVtQkZWejVFZDllMG43dEhMTHo3VzlMUnhIenNsbENoZUg1WlQzaVktS3M3bGN2T05wTnZacjJKbUgxMjdjVkxsa1Rmd19samJqLWNuTVdGUmJTSEJOT3N0T0ZBRHoyZC1lUllxSzVKTldUYWozUG1nVFliY0dRSlZQWDZxMWhCNGFFT3V30gHYAUFVX3lxTE1PdFl1TDAtNEczSXdYY1Atd1NIWUtlUVFFTEZubXkxX3FiM1d6YVBFQnc0MzR2Y3J5RHNab0pCNzViZ0JTMjZUdmk3WHJ0Tkg1cjFaWFh2a0JpZEtnQXNFeUQyV3RiLXh4dU5IczY0NUJidkk3TkJ4TVlfSVRhUHV4WS1VdkV2YVk0Y0s1VHA1ckgyckdwenFMQW5wU0pQRlltZldJWVg5LXBxeFpqV3hoaWtJOXB1WkxSa3R1WjRNRklza0I1Nl9vdGI3QmtmLTNudnZ2Tnk3QQ?oc=5",
-   "fecha": "Fri, 13 Nov 2026 12:55:49 GMT",
-   "fuente": "",
-   "tema": "BCRA tasas plazo fijo"
-  },
-  {
-   "titulo": "Plazos fijos hoy, 11 de noviembre 2026: qué bancos pagan más y cuánto se gana con $1 millón a 30 días - Diario Río Negro",
-   "enlace": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOeHM4Z0ViQVk1OHAtNTZNSmQwM1BPdEtWSnIwSFdvZVZraWo5SURkRzA4aWV6YllOSDRDajVSMzEwaGN3NzNyNVJIRzZHMlA0QnhBMFVSMHhVZ1lmQlpOdlVVSkdPa2FyeVB6NnNHZzBzZmEtUE1vM0hnbUx1X2o5NTZYN05mblZJWEVpWl9wWTJudVM0aTM3cDQtcy01WDNLVmpJVGswX0NBTWNrRzRmXzNOOFQyUmdHODNXbDRlZHZPYThpVjNsdjc4TmFTcWRpMU1ULWx6SWMtajZZ0gHkAUFVX3lxTE5fRi1JRVNScVlIRzQwU2JmRExZbjRQNkJLUjFCQk1wTFRmQUlmT0ZGa2VYWFZIUHYteTZTMTRBZHNuLTZpNlRYVWVVcGhpWHphd2gzR055R0NYS3NuUlhlMWRPelpjV1hRZ0JYdnRWbWJCZGVsQzVKbWh6NkVlNFY3VlVaTVpra3dqalU2dkdnbUY3QmNHMGZmdDRSbVZZQU1aT05JbzRxbWt3ZEQ4WkxxRlRNdG9hS1d1bC1Qc3BzMjJpeEpwaUVIR0MtQldpRFpzTVpHNWNiY252YkRyeUpxV2laWQ?oc=5",
-   "fecha": "Wed, 11 Nov 2026 15:29:56 GMT",
-   "fuente": "",
-   "tema": "BCRA tasas plazo fijo"
-  },
-  {
-   "titulo": "Plazo fijo: la diferencia de ganancia entre bancos por invertir $4 millones a 30 días - MDZ Online",
-   "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaTZaNzFXWVRlME5QWDMxS1dYXzBCVGxVVlRzeE5aQ0lGTHAxSENabDAyNEFRREw2ZXZQWjU2MUVnZU1raU81eXlDanhMd2d5UGtQY3oxeDhBSEFNbmxNZUs0cmZiOWdVSlh1dW4wQ19FdU1xWlFrUXZZZGc2ZWlHZTRVaW5BcVlZR0FOODl2YWRRUFFrTnZUSXVUOEpWcWs3NzFCTnpqZEhzbTRRaVZQTF9GNWtOb0hQdFdYYTZ5eFY1QUloLXBIdjBEdVFWb1ZPalB4bQ?oc=5",
-   "fecha": "Thu, 12 Nov 2026 13:22:45 GMT",
-   "fuente": "",
-   "tema": "BCRA tasas plazo fijo"
-  },
-  {
-   "titulo": "Eliminación del Parking para personas humanas residentes - Argentina.gob.ar",
-   "enlace": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQRFgxWEk4TkJBR1V3al9xVWZsZWtlUVZ6SjE0WkM4X1hxOHF3T3pPNnJMalNEN2hpVTNwbjRMTURncDBjTnY1Z0JVN3dSWGlVOXhycktpbmItZWZTNmIxUFkyRV9qOFpMUDdKcnVyT0JtZ0hPcVU5aUNNTEFQclFuU2t4RDE2eXFkbHNQSHFSMnAtMHZEc2c2UHpR?oc=5",
-   "fecha": "Mon, 14 Apr 2025 07:00:00 GMT",
-   "fuente": "",
-   "tema": "CNV normativa dólar parking"
-  },
-  {
-   "titulo": "Dólar MEP y CCL: la CNV oficializó la eliminación del parking - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQzlYdy0tM0NRZTBrRzRLM1dJdXVRMHh6eGRTNzNHMnVOWFd6ZFRQNXRmdmp2NTlvMUxXRUpDUlNwN1R5VVFzaTI2T3lDbFIwR3p1X2NtVWVYYVptbmdfcTZEZFpUb3dFVkFqZXdFZzhLekw4bTZaMUtnVU9QcFZkVUxkUkxER2NoTUIzWjBiQm5FR3BmRmZKYXJOWnpZcUlKSDg00gGoAUFVX3lxTE4xZFczOXQzcjM3VGNZV3NudEV4ZnpSc2x5ZWduYU1FZTlOcWJlMk9VSmtGOEp4dXBpd1plSS1JZENkV0trZnZHRU5iR3EtTW9xeHRYS2JBSGFyMTE0aVZsbWp6amJ4ZjlNajg3OTR4d2w4QjgtZFhDd052UWJzZktMWU83NHpxenJGUzdhT0dMVF9SU1M2bWlZcHJPTnlIN2ktSTljWjJCZQ?oc=5",
-   "fecha": "Tue, 15 Apr 2025 07:00:00 GMT",
-   "fuente": "",
-   "tema": "CNV normativa dólar parking"
-  },
-  {
-   "titulo": "Chau al cepo: eliminan el parking de dólar financiero para personas humanas - iProfesional",
-   "enlace": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOazNVVDJVTDNpZXVLSHNwd1FfaGdaYVFrQm4zaFJlU2w4S0JObVZzN1F0X3MzOFk4Tnlub005cVVKaUM5bDVlaWtKUnhiSW5XU1A4ZzBod2pDa3lhOVN6STdPSlU5UHlCTEFxTmp4M2EyUEF4R1VwZzRtYzhDYmlOVWJBaUZZdElBYUo2cl91ZWhNZ01paFZlcFp6Wi1RZ3dfaFVDX21pVGI5YUt4aWk5aWJvODBKRGlLdnE00gHAAUFVX3lxTE9OQjM5YVlHV3VhbzdLdnNIMDB4WG5ReHY5aU9idzRXR2p2QUliaU9JOERUdjBPUVdZUVVGMlpSbTRxX1doaWFPcnpIYk1yUjF6cmhaQ2pZcTY4eGxCNHo0X1V4MUdsaHV6blZpal9MR1k0SUhORTJFRG10bUNkZ2NYMGlrdHBBYV9Nb2c1OVNLX2JqbE5hYWp3SVZ1Q2pIWlAxeUwtYU1qNE5teVRPS3Zfei16MDg5V2tmVzhUck9xdQ?oc=5",
-   "fecha": "Mon, 14 Apr 2025 07:00:00 GMT",
-   "fuente": "",
-   "tema": "CNV normativa dólar parking"
-  },
-  {
-   "titulo": "Compra de Dólar MEP: qué deben tener en cuenta los inversores tras los cambios de la CNV - Forbes Argentina",
-   "enlace": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQa29rcmtkTEdWVVQ0VExwUEk0ZjJVRmRnUFdSX044Z0lvd1NmaWFWcmZlYjhxX2Y1T3pSVjRLNmV6NGZCXzBwYXVaOWdJTnlmVFBidS1JeXJPbFNfNFJGQXR3Z3pNZHFnZURmVkZJV3pIQkFmTjk4VkNHazVDVW1MWUstMmpnWmNRTE43b0tTVHpEWkh4U3BRWHB5YkpzblVPNEtfQ0IzVlZURVk20gGyAUFVX3lxTE5wN3B0RWcyLUNQMU5UNzQzNUEyYXE0YU1JU3hWUVVFa20wcWhtTlNSdTZzQnBWdTZDenByUnpQaElSMFZnRDBCRDdrZEJHNFFvdEt2Wko0NnVfTlRYelc5LUJkRWlHUGpoYkpINFZZcU5vNHpyU3dnOWR3ckQ5Qk9Sa081RUtfWVkxZDJobXV0YnhTbTBxTHJKbFA5ZHZMRFU3cVozT19tVFAwNmZWLXRvRlE?oc=5",
-   "fecha": "Thu, 14 Dec 2023 08:00:00 GMT",
-   "fuente": "",
-   "tema": "CNV normativa dólar parking"
-  },
-  {
-   "titulo": "Cepo cambiario: cuáles son las restricciones que se mantienen tras los cambios del Gobierno - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPS3pzU1ozOVRTcVBJVUw1aVhqNWQ3bUNaU0FBZEIzQlRDYUxyMDdMU3hnck9kcjNZTUxZQklLaDZ3QkdFRGRtWUV4a3dnRjVQTk1DMERySVJRSVAtYm56NmdTaVF2Q1ZZVm9sMzVtOUlOV051N3E4X29UUS1sOTdCdENSTG1rLXpfWkEyR1BpSnpQNFh6bzFjNWs3QzUwMV9WaDRCSGx5WnNDNUFYMmFjZzFmZFBsTVVrUUtVWHRfVlBHRVVSdlg3aF9XdWlRQ0lz0gHrAUFVX3lxTE11UkliMS1YVmxHVjlRRVhLMTE3SmVBTjk2ZktBLTVTRDRyTzExcXBVMFBsT3BDbW03SWFWNnp4SEZqbTJaTF9lOVRiWHhvaDNhX1YyLWFwY3BqZDZEMkxTZGljeF9SdG1kb3hqRXQ1NGU3STlMSUg5VmZZRkdCTVdZdnhiZWVBT2hnbnNOUHJVZnhEYXM0S0g0aFRwa3RQN1lKSmFyNEUyZldwdXhVeDNtNUNNbWtxd0FjYXItQk5IYkJhdTNvYWhuNUVMYjlpdE9SR1Q5RTVUU0dzLXBKeklYZWVuU0c2cm9NWUk?oc=5",
-   "fecha": "Sun, 12 Apr 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "CNV normativa dólar parking"
-  },
-  {
-   "titulo": "Por qué se derrumban las acciones tecnológicas de Wall Street y sacuden a los mercados del mundo - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPZnY2QkRhRFpfbVgwdWQyUVRYcnJBTUNyX0U4WDladkRJWHZPYkpVdWhhV0RBNkRFYWpkaTNlYXk3MWVIWUNuZ2NUWEdPZzNya1JKVlZlbjRqZ0x3eXVydDJxR29TZV9qLXNfXzhJZFJjQm1RYkhrSGl1LWsxRUFTNFQ0S01vdUwzNVhFWEFvZ2c2MXc3Zm5lYzZjOXNjWDNDQmQzMzJWbUVhaS05VUNySkVsSWM3MUhjaDVNRW0wczQ3V3hvckRfN0ptTUFNMWtDcGJnRnlHcEzSAfMBQVVfeXFMTl9jdFMxU0dlWGFtbnI4Ymd1ZVZHdUxwLWxybnhPeE1uWm5kSnROaUxuMVRBTDM3ZFYyN2U3MDZwWVBBNDhyWi1nNDE2QkU2SjlVYWNIazRrcEctSjc3LXJjQVF5ODJ1Z2RsQ0JHN1V6RTVWT2llMG9VZ01yZE9pZURFVjFTd29vOVFYMG05eWU0OVhsaE1jR21fVzNjbTBXM1lVUEdtLVN2U3JxVmw3YTU2UTJ4RzNnc2ZMVFVZeEZURU56c2kyS09LRjdOdTNZN29pQV8zS2xZbHpPbjhZTkZYMXNkYzFUTjQxVGpmY1RfTzhR?oc=5",
-   "fecha": "Fri, 30 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Wall Street: Nasdaq se hundió casi 3% ante el renovado temor por las inversiones en IA - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPOWF3aGhXT19aODdZZ1ZmNW96aENFTGliZmlkc2NwUXZ4aFA4MlhQUU9JTW5sZWgzaVdYZjBjdW8tQ2c2bVpjZ3RMYTU4M3hLSm05ZTYtUDc0RE84ZHZDWU96R0VnV3NKZ2ZpNmZ4WmN6YVplUmJtcE91WFI5Q0tRcjhpQ2U4NlhkY0d0dGh6ZlNJdGJPdFFSMnVSSzJnNmZnMWQ0LTNzTkE4ME1VLXRiQkozU1kzcGJBb2pRVGxhV01wUl9xSUNFbFJCb0RYZ9IB0wFBVV95cUxPRnNIRGxmT0pNV2hrLWdXSG9jd085Tmc3aW9oX2FWcFFQZkc0SHljY1M0UHNyUjNYelpycFJhdVE5bU9TbGJORTVwb0xrVTBNOG9Va1pZT1JNRFRybDNoeE9PUWZ1bmhoQjZLQ3VoUFVDdnBfOTZjcndrbkJtcnJQVGFzWFh0bjlNdUFjNXpRNXRXRGlDY2FhTmRzbG1kUUozR2xVXzRYenNvUG9lRnIweUlzbXRsT2d0aEdhTFZMT0ZVQzlYZ1VzbGhEWFpBd3p2MDlR?oc=5",
-   "fecha": "Fri, 30 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Por qué Bitcoin baja hoy - iProUP",
-   "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5vTkd2YnJTeEVFaDgzZUhZbEVtMllDQlJCSG5mNC14Z2VNQzJMbkNpV1dNNHNydVRMSzQxQjFTcFB0WEEwX0Y0MlZjY0dmTmlaSUNKUHZvREsyMkVOUkhIdWZ1bjJlTGpuYVVVWGxEWDRhZ3RkNVZfQlp30gF_QVVfeXFMTlNyNkFOS2xFbDNnTFduQzc1cjh0UmlOWWZHejl0WEthYldxLURkbUFhUl9rdWFqeUltT3BrQmRmRldVWC1Lemk4LXBFY2JjbEFLSkFjRGRhX214R0E0VUNybWNUM0ZSQ3ZoLTg3ZDFxU0N5T2RQd3VkbDZRaVRhaw?oc=5",
-   "fecha": "Sun, 15 Nov 2026 12:23:00 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Wall Street - Cotización en tiempo real y Trading con CFDs - FOREX.com",
-   "enlace": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB0WFpabGN0Q05kV1pBck14dnRKT1pBX1B2TDRqUkpTVmVJS3VZOWZ6MHZJZkV4TF9tMHE3d2xNOTdKNTBTNEp5dXhJSjlqNXFlSVQtOW01YmM4M0tJQVhuWUxZVQ?oc=5",
-   "fecha": "Wed, 11 Nov 2026 22:59:59 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
-   "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
-   "fecha": "Fri, 13 Nov 2026 14:47:27 GMT",
-   "fuente": "",
-   "tema": "Wall Street hoy"
-  },
-  {
-   "titulo": "Precio del Bitcoin hoy: actualización en tiempo real al 12 de noviembre - La Nación",
-   "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUTFCWjhsTk1JM2NmNTg4NnJjZnVpV2ZGVmkzdjg1VlJiSHFUUFJDM1FER0c0ZV9VaDNka0tZZ1NUNnA4THFhOXIwUDVsTHpYNWJPaEctRUptaFVGVG0zUmNhNkt0ZEEySnlPQk51LVJCNHRMVEJzRUw0NzBIdGJyd1VMVzlXTDFoV3I3MDZRY0ZVdUJiUkhISUp6ZEx5cnZIRld3dE9qTDdMb0NaRFhZa3loZG5ZSVFNdUswZ2hqUjY?oc=5",
-   "fecha": "Fri, 13 Nov 2026 02:00:00 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "Criptomonedas: valor de las principales divisas digitales hoy domingo 15 de noviembre - Infobae",
-   "enlace": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZDMtY0ZNQVpPcDdRSzl1UlhNTFB6SGJ0TEZ4bnZhN3l6Ry1Nem5IRTVrMFlIVXNkdnlSYzBWYnRxQ0xHQWRYSnJQZ0FfZmJORnFJb2NJNi1nOGRCcGJkanE3dnFwdUs1U2VvMm5yenotZ2Jxb2o5aHBTNEtFeldPUFhFUkRhOVA1d3ZuczhURmMwa1pheE1icWNzeVBnc05QNDhoNG5HTnk4aWVnWlVWN2pPbmhLMndZNklQRHBnNDQwdnFy0gHfAUFVX3lxTFB0VHgtejBCOTItWF9fVG5CU0c4c1hjM3BmdmVxREtJclVOUnVwRU50SERZdDJ4WDF1QkdZcUZVRTZ6THhtS0dFdkdzWk5CcXVBTXBlX0lib2pVNVdfdXRvNF9hUWxRbTZLbm9CUHRVa2tqMkJxY0Rrb01sOUhSTWgtTG1IQl91d2JMT0dvWllMaFNHWkNwMzNLUk1IbW9QVjlualBjR0E3ZDNUR0w4S3NQVmFia0NYQzhYMmxjVF9QVWZTczN6WkZ1NnktYXZpTzRWVzZ5MG5CdjNzam5OTk0?oc=5",
-   "fecha": "Sun, 15 Nov 2026 11:46:00 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "Criptomonedas: Bitcoin se derrumba a la zona de los u$s68.000 y Ethereum baja de los u$s2.000 - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOU1XdXpBcDNWNDVlSzB1bUctbENVZlhDaHZzd01sS0EwNlAxUk9BeXlsVlZBbFJNUWpxRHZWckdidmNQVXF5OWs1NUQ5U2RlLTFSQjN5a3VmRjNZQmVTVWVuZmp0b0lJemcwY3owNnlNbDZaUGsyOENuUXA1dlQ1SEhPZE5jMjQ2Qm5aWjVVcmlfd3Q2MkMxWnc1SnQyZ2UyOHoxcEpLWUZTVTVCTVVKbTYxQVA3MGZP0gG-AUFVX3lxTE4tQkd3X3hMbFRRNkxKXzVBMVg3RDdtZThMOXhTWGktRmxKOHdKa1lTRG10N2xUZWtPb2ljYWFORE9OSnR4cjhjUUhOUjB2RHpTRG5uZjBGSU5qSlBWNFE4XzRfc1JvcmxzZGJ2eHlweVZFOGNKUTN4M1dyOEt0c3NUdC0xZnBoLTEtbkp1Z3YySmtZMTkzMXliVXI1VG15NjlNbHJfUzJ6SlVNT2JuZWRSZGZFajNpRTBtTm9ZckE?oc=5",
-   "fecha": "Fri, 13 Nov 2026 19:59:46 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "Bitcoin hoy: cotización y precio del BTC este domingo 15 de noviembre de 2026 - FM Del Condado",
-   "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSU5HRzVJdlI0REtYaEVFNDlSdU5sSWFqcEYxUWpSNXlBWnZEWTk1ODlkVWdlMWY4RmRpczR1N2w4M3F6WXVpZjNrNE1vODFOczdLekZ2Z3AxYzJsck4zWFFZNGpoak95bFVLaTkybThDQ0hpWkVtSEZQWEt2QXpZc2NrNFpIeDNrTFRpV0MtZklHSThKNTlBRk9VcDU4ZmxZT0U4UTI5UQ?oc=5",
-   "fecha": "Sun, 15 Nov 2026 12:50:00 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "¿Por qué sube hoy un 10% el precio de Zcash? - Traders Union",
-   "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXZ2eWpETkZpQk9yMDdWOEFZcngySGVhSzlhRVNJdjA3WTlkNGZVOWJaWEFjbGJ3ODFheVdDUE9vNmd1SXNWSk1OWkp2RTYxTnpXT19tWEotUWd4NlBTbEcwS0dranQ2NVNPRWhjSFZDMUNkajFPWmw1VFA3d3FGMUJ5UFl6TDFXYVN4OTFsWks0MGYzUTlrcGR6Vm9Mc3dod0xj?oc=5",
-   "fecha": "Sun, 15 Nov 2026 20:51:27 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "La inflación de octubre fue del 2,2% según el INDEC - Página|12",
-   "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQR2t0RGRKVDloWFJyNVYtQzFROWROOTA3MVo0ZEdiakpmOW9sOHg4MzdzQV81Ry1IMFRXdmhFbC04bG05bkl0V1k2ZGZPTlFub1YyaGZDMkNqTTk1UEYxZWdqaWNPNy1jaVNNa1R0ZnBUcWVocXY1YVpycTVxZDdPczRSSjBMQzV3SHp0WjZwalJ6Vmc?oc=5",
-   "fecha": "Thu, 12 Nov 2026 19:04:54 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
-   "titulo": "Salarios vs. inflación: así quedaron las cifras durante septiembre según el Indec - TN",
-   "enlace": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLUtOU2h3SFZVc0NDZFVKOXdvRmR2NURuSTN5THduMnBTTlA4djBYVlkwcmVqakhCQWs3NkhrOW9CVEdMc19hREFqQ1NWYmdWX2VTSUMzQXZaNUZrWXZzMVhJcURaSVZnMk1JTjJaTVg2Mkp6b3ptY21xUHdhbk1GY256QlhnaWNDdENMaFo0VFowTkg1X3MxTUgzOTM2WWZ4SWlwN3Ffc0hfVjFQNnYzNkNkTFNQU0ZVQkFjblh0RTdKS0dq0gHYAUFVX3lxTFBDdlNYb2ltbGdlSi1ObjRpN24ySWYzMThqOVA5UDcxbnFKZjQ2ZXlzWkt6dXg3eExTeEY1c0IxUzk3SzV2b1kzSE1XdHFlWk5mMTlUNlRsZ2M5NjN4SGVLUlVfOEJjV215ejg3QjIzd0x6TjI4bDY2aVBsVi1nSWhRZjUtSWhmeUNyc3hvMkpibmtiNjZCME92Rl9veENxUVM3ekZPOTRwV1ZnMko3N2FycGxNZXczWmRXcGd3ZmZGQWxQWklLN2lBWEhFMWRBaGRObzRuV0ItMA?oc=5",
-   "fecha": "Fri, 13 Nov 2026 19:46:09 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
-   "titulo": "El mercado alerta por estanflación tras el dato de inflación IPC INDEC - iProfesional",
-   "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMXp2a2M5d1AzYlNCcXNtNTNxMGdtMUx4bURwenRIU1hOSVlDU0hCMHFNY2R1Q05Zb3RXZFVueU1jQXdmbHNBN1RvVEJ6RE1OZ0p2b0hLOG9XZW5oM2FfQzlPX19wX2VnaUE4MjY1RzIwRFZzTE5FWFlrYUtmNjhqdTZMYnl0ejZOTWdiV3k3Y0VDLVpOckV4X3M1Ry03cXhnOG05SG1tVlNUZUw3eWFNS2Zmd29vQdIBuwFBVV95cUxOZ1U1VU91MlBndDhvUEpWZVo4dktCazBuSE9yYmYxaFJoemRCMkpHSVZhcGMxRkIySkJ6Q0pKMmlQU2JTZnFYa3duRjVFVTdfM3FmTTctS3BaYVlKdDFpWXQ5c3NZYnFUcTB1YlVfMS1lMmFmRWk2OTJxQWw0M3M5d1VjSHczQ2tSa3d4SEx4MzkweVFkSWIwT0ZfNU1SdHkzRlBzM2xLTXBqNEVnbVlBZnBfVGxnaUFhZ3Bv?oc=5",
-   "fecha": "Fri, 13 Nov 2026 10:19:08 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
-   "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
-   "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
-   "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
-   "titulo": "Jubilados y pensionados: cuánto cobrarán en diciembre tras el nuevo dato de inflación del Indec - La Gaceta",
-   "enlace": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQXzFwc1NZbEtZUnV6Nzg5WjZ6ZFdsM2V1N3pSYlB3VkRveXVRU0thVDVjWmgxMjZnb24zblNFTEx1LVRjZm13em8xV3VaNWRIR2JpaF9YbHBob0Vsdm1GdDBJSzgtTllSX1JJN09Dd211NHlkVHR2Y19ITl9SQ1JRWE5wWllYZEw3M0c5UmZWVEg1QjNfaEQzZUcxQlJqRHdoQXpFNHBPU0ZsZDk3THFCb0N2MmdWX3JROF9Gc0pZVlg3a05EV3BrUmtqQnlMejjSAdQBQVVfeXFMTkpGVmNZWVdrTjVyek1uc1FTWlN6Vk5JcU1aaXJPQmZrRWUxeVNUQ244Nmp1RTRxR0x5dzd6V2FjR2IyRkwzTUJORGNNZnJNeExRNkJEMHZiWjBOOU4ydlVfcTBsU3gwRlphaWtNZXhqbllYdGdaa0JwdkVpVjBnVC1aalRTSTVnbEVidE5ubmRWTlE5U2VaakgxZGRTYXpjWXV5MVVNWS1xRGRoV0N0S01uYy01WGpjcEdDNVdMWjc2Nks3MmpiM1dpcS01OTRiaXI0NVA?oc=5",
-   "fecha": "Fri, 13 Nov 2026 12:52:15 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  }
- ],
+ "titulares": [],
  "aprendizaje": {
-  "registros": 37,
+  "registros": 49,
   "evaluaciones": 0,
   "proveedores": {},
   "tecnico": {
