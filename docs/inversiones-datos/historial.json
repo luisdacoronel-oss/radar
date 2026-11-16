@@ -590,7 +590,7 @@
   "fecha": "2026-11-16",
   "yahoo": "ARGT",
   "nombre": "Argentina (ETF ARGT)",
-  "precio": 71.17500305175781,
+  "precio": 70.85070037841797,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -605,7 +605,7 @@
   "fecha": "2026-11-16",
   "yahoo": "GGAL.BA",
   "nombre": "Grupo Galicia",
-  "precio": 4867.5,
+  "precio": 4810,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -619,7 +619,7 @@
   "fecha": "2026-11-16",
   "yahoo": "YPFD.BA",
   "nombre": "YPF",
-  "precio": 6065,
+  "precio": 6020,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -636,7 +636,7 @@
   "fecha": "2026-11-16",
   "yahoo": "PAMP.BA",
   "nombre": "Pampa Energía",
-  "precio": 4257.5,
+  "precio": 4182.5,
   "tecnico": "ESPERAR",
   "senales": [
    "cruce_muerte",
@@ -651,7 +651,7 @@
   "fecha": "2026-11-16",
   "yahoo": "BMA.BA",
   "nombre": "Banco Macro",
-  "precio": 9290,
+  "precio": 9200,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -665,7 +665,7 @@
   "fecha": "2026-11-16",
   "yahoo": "MELI",
   "nombre": "Mercado Libre",
-  "precio": 1456.18994140625,
+  "precio": 1462.9599609375,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -679,7 +679,7 @@
   "fecha": "2026-11-16",
   "yahoo": "SPY",
   "nombre": "S&P 500 (SPY)",
-  "precio": 742.4199829101562,
+  "precio": 740.5599975585938,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -696,7 +696,7 @@
   "fecha": "2026-11-16",
   "yahoo": "AAPL",
   "nombre": "Apple",
-  "precio": 353.6300048828125,
+  "precio": 352.2710876464844,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -712,7 +712,7 @@
   "fecha": "2026-11-16",
   "yahoo": "NVDA",
   "nombre": "Nvidia",
-  "precio": 156.02000427246094,
+  "precio": 155.99000549316406,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -727,7 +727,7 @@
   "fecha": "2026-11-16",
   "yahoo": "GLD",
   "nombre": "Oro (GLD)",
-  "precio": 352.19000244140625,
+  "precio": 353.4150085449219,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -743,7 +743,7 @@
   "fecha": "2026-11-16",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 64851.03125,
+  "precio": 64800,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -761,7 +761,7 @@
   "fecha": "2026-11-16",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1817.0999755859375,
+  "precio": 1813.5,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
