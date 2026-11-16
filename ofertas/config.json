@@ -1,0 +1,11 @@
+{
+  "_nota": "Configuración del buscador de ofertas y reventa. Se puede editar desde GitHub sin tocar código.",
+  "categorias": ["Electrónica", "Celulares", "Computación", "Accesorios tecnológicos", "Herramientas", "Ferretería", "Hogar", "Muebles", "Decoración", "Electrodomésticos", "Indumentaria", "Calzado", "Perfumería", "Cosmética", "Accesorios para vehículos", "Artículos deportivos", "Juguetes", "Productos para mascotas", "Productos industriales", "Insumos comerciales"],
+  "categoriasPorVuelta": 5,
+  "ofertasPorCategoria": 8,
+  "sitios": ["Mercado Libre (ofertas del día, tiendas oficiales y liquidaciones)", "Frávega", "Musimundo", "Megatone", "Cetrogar", "On City", "Coto Digital", "Carrefour", "Jumbo", "Easy", "Sodimac", "Dexter", "Netshoes", "Perfumerías Rouge", "Juleriaque", "distribuidores mayoristas argentinos", "AliExpress", "Amazon", "Alibaba"],
+  "canalVenta": "Mercado Libre",
+  "capitalMaximoPorProducto": 300000,
+  "diasVigenciaOferta": 3,
+  "clasificacion": { "excelenteROI": 60, "buenaROI": 35, "moderadaROI": 20 }
+}
