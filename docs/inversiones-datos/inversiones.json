@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-16T05:10:59.693Z",
+ "generado": "2026-11-16T06:42:52.668Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.31,
+   "mensualPct": -19.34,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -22.19,
+   "mensualPct": -22.15,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73466,16 +73466,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64575.26171875,
-   "variacionDia": 0.7,
-   "variacion30d": -19.31,
+   "precio": 64550.69921875,
+   "variacionDia": 0.66,
+   "variacion30d": -19.34,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75019.06953125,
-   "m50": 79740.465625,
-   "m200": 72918.2680078125,
-   "rsi": 21.939040642035323,
+   "m20": 75017.84140625,
+   "m50": 79739.974375,
+   "m200": 72918.1451953125,
+   "rsi": 21.84473489846083,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -75955,9 +75955,9 @@
       "time": "2026-11-16",
       "open": 65314.55078125,
       "high": 65363.4375,
-      "low": 64599.7265625,
-      "close": 64575.26171875,
-      "volume": 30234875904
+      "low": 64254.11328125,
+      "close": 64550.69921875,
+      "volume": 30362619904
      }
     ],
     "m20": [
@@ -77159,7 +77159,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 75019.0695
+      "value": 75017.8414
      }
     ],
     "m50": [
@@ -78361,7 +78361,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 79740.4656
+      "value": 79739.9744
      }
     ],
     "m200": [
@@ -79563,7 +79563,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 72918.268
+      "value": 72918.1452
      }
     ],
     "rsi": [
@@ -80765,7 +80765,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 21.939
+      "value": 21.8447
      }
     ]
    },
@@ -80800,16 +80800,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1810.6600341796875,
-   "variacionDia": 2.35,
-   "variacion30d": -22.19,
+   "precio": 1811.489990234375,
+   "variacionDia": 2.39,
+   "variacion30d": -22.15,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2162.7102233886717,
-   "m50": 2377.592380371094,
-   "m200": 2142.4108142089844,
-   "rsi": 24.146924208783602,
+   "m20": 2162.7517211914064,
+   "m50": 2377.6089794921877,
+   "m200": 2142.414963989258,
+   "rsi": 24.228972841274853,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83290,8 +83290,8 @@
       "open": 1835.2918701171875,
       "high": 1837.161865234375,
       "low": 1804.953125,
-      "close": 1810.6600341796875,
-      "volume": 11791230976
+      "close": 1811.489990234375,
+      "volume": 11628502016
      }
     ],
     "m20": [
@@ -84493,7 +84493,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2162.7102
+      "value": 2162.7517
      }
     ],
     "m50": [
@@ -85695,7 +85695,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2377.5924
+      "value": 2377.609
      }
     ],
     "m200": [
@@ -86897,7 +86897,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2142.4108
+      "value": 2142.415
      }
     ],
     "rsi": [
@@ -88099,7 +88099,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 24.1469
+      "value": 24.229
      }
     ]
    },
@@ -88115,7 +88115,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1810.6600341796875,
+    "entrada": 1811.489990234375,
     "objetivo": 1438.36050390625,
     "stop": 1730.70458984375
    },
@@ -88451,13 +88451,6 @@
    "tema": "dólar MEP CCL brecha hoy"
   },
   {
-   "titulo": "Dólar blue hoy: a cuánto opera este domingo 15 de noviembre - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSWIwZDNJaV9lYmlfZ1JfN3pqUjduUG1zdnN4ZUYxZGp4UjIyR05zQjFxVFA5cWJYSG5GNFlkZTVZQURxMWtabHZTdllMRFV4RDl1akRKMFFZWFpBd2w3b2Zvbm93WDNud2NXcXg3SngwSXRYcFdEMXRDbVBPMVdaQUZySHFHdjVvS0laUHFFYW0xRnJZXzQ3cTFn0gGfAUFVX3lxTE4yeEFLQkVmcXVaWUN2dVhMU3VXOXpuT3RRaVk0VWJJUFN1dENpc0lQcHVULUhLOFRqakJwRE44VXBvRXI5T2FHMW5mT2p0Q3NrNzNVMHZ1MXNWTVUySmc5aFROeWItSEVuTTZ1X2Izb3VLS19SNlV3M1N5bUdNa2FqSURyb0Rsb2pIVkRvbFRFazdVNkVfbGtpQ3VsN3JoZw?oc=5",
-   "fecha": "Sun, 15 Nov 2026 03:21:26 GMT",
-   "fuente": "",
-   "tema": "dólar MEP CCL brecha hoy"
-  },
-  {
    "titulo": "Dólar hoy: cómo cotizan el blue, MEP y CCL este miércoles - Diario El Norte - San Nicolás",
    "enlace": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaVVpMV9CcHp3akh1c0NTdFpueUpkTWxmMm5ORVhjTTNYdm03T0UxejZyNDlFQUFRZ3F5QWxRXzZuT1ZFZTVPRlY2aS1PYnM3bjZucTY2TTlwRVdWMVRMMGtkZnI0T3JlTnVKRTY5Yl81dDlDdlNtU3dtRXNXc1JGMDVBU2FJTFgyYTByWUNB?oc=5",
    "fecha": "Wed, 11 Nov 2026 11:02:03 GMT",
@@ -88475,6 +88468,13 @@
    "titulo": "Dólar CCL: brecha con el MEP sube a 5,2% en Argentina - El Ecosistema Startup",
    "enlace": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN0V5T0JFT1VMQ291bXRucEQzVHRHYVFJVUdiVkxSbWpXd0sySkVfQ1pzcTFLRWlRSkEtSlM4WlVmcl91RVZKQUhMQXhSUDRyRGk0M2hReUpUMGNjZHhLdmRjN2tRZXY3S3BOeFZ4eHE0ZWE1QlZMZndXVlZadWd0RG9PT19KWHQw?oc=5",
    "fecha": "Thu, 22 Oct 2026 07:00:00 GMT",
+   "fuente": "",
+   "tema": "dólar MEP CCL brecha hoy"
+  },
+  {
+   "titulo": "Dólar hoy: por qué se achicó la brecha entre el oficial, el MEP y el blue - Diario Río Negro",
+   "enlace": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWlpUcUNUeFFCSHpITnBHREdfVTh2ZDN4ZTkzZm43ZkJTRkdKMHN6cVdjcEtCbGl2eE1GQzg5T0lEUXZ1cUgwbU1RbUpoWjNONlh2aGZ2bDVYMG4wRzJTRlRLNnFHb0N4X0ZCY0x2bXJlWU1makpSaFVaZlVkd0FyNnQxYzctWEhmNlZ0bzdkUHk0b1lLVjQ5dnlSX0NuX1gxeDdjTWtNQ1FvbnpqT01haXBzYWFubWh3c19KTk1KZXdlajdweWllbjJ3UkFlM1VIa1NpTElOcXdZZzlUci1QX3Q4bC16dHfSAe8BQVVfeXFMUEVfV3ZTMExpOHBSal81TEgzd1Z3SUNYLUZ2NTRoQjFVNXhndlczRHBhU1lfOWw0QTc4akNvaUc0YkFuSjBuUXgyeTRtU2wxWXdGdzlLZ283YUprcnFXczV2VDMxc1lRSVhEWjUyNXc4aVJ5QW9HUHhuUGNVT0xDVGRueEc0NXhGeVVkVjdOc2lGMWhhMVA1SEFIbTlTRkZxSTFLb2I3VWdrdFNHaUV0aWw1WWZGZV9qUjY4cmxDOXk4Ml9JNjd6NWMtbjRYXzdzZ1hCMlRjOVZ4RktydFpNb3RiV2ZmM3FpVklYdjdUX0E?oc=5",
+   "fecha": "Wed, 23 Sep 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "dólar MEP CCL brecha hoy"
   },
@@ -88570,16 +88570,16 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Por qué Bitcoin baja hoy - iProUP",
-   "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5vTkd2YnJTeEVFaDgzZUhZbEVtMllDQlJCSG5mNC14Z2VNQzJMbkNpV1dNNHNydVRMSzQxQjFTcFB0WEEwX0Y0MlZjY0dmTmlaSUNKUHZvREsyMkVOUkhIdWZ1bjJlTGpuYVVVWGxEWDRhZ3RkNVZfQlp30gF_QVVfeXFMTlNyNkFOS2xFbDNnTFduQzc1cjh0UmlOWWZHejl0WEthYldxLURkbUFhUl9rdWFqeUltT3BrQmRmRldVWC1Lemk4LXBFY2JjbEFLSkFjRGRhX214R0E0VUNybWNUM0ZSQ3ZoLTg3ZDFxU0N5T2RQd3VkbDZRaVRhaw?oc=5",
-   "fecha": "Sun, 15 Nov 2026 12:23:00 GMT",
+   "titulo": "La bolsa hoy: Wall Street sube tras las noticias de Anthropic - XTB.com",
+   "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZzBDbmduX0daeGlVeE0zVloza1N5MFBUN3lfWWdULTV0Q3JnaWt5Q2FZZ25hM0ZXcHNZYUIwRktqRS1tR1lSaTg4WkNNU1A3OG1kNlNOTHoyenNlcER3QjFqRXZsbmZOd21GZWpNVjhwdXNTOGxaUFR4WFR2dzJiMG1FYWhheFZ3OS0zcTZlMzhWRlh1WFdnX2NKV1d0ajhuSWNFQ1dvR2d4QXFNZ0VxUXVFTk9BNS1WWGVzVlY3VmpiNDhQei1mTDl6RF9ocFNHcm9lWHRWOGg2cFk?oc=5",
+   "fecha": "Tue, 27 Oct 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "La bolsa hoy: Wall Street sube tras las noticias de Anthropic - XTB.com",
-   "enlace": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZzBDbmduX0daeGlVeE0zVloza1N5MFBUN3lfWWdULTV0Q3JnaWt5Q2FZZ25hM0ZXcHNZYUIwRktqRS1tR1lSaTg4WkNNU1A3OG1kNlNOTHoyenNlcER3QjFqRXZsbmZOd21GZWpNVjhwdXNTOGxaUFR4WFR2dzJiMG1FYWhheFZ3OS0zcTZlMzhWRlh1WFdnX2NKV1d0ajhuSWNFQ1dvR2d4QXFNZ0VxUXVFTk9BNS1WWGVzVlY3VmpiNDhQei1mTDl6RF9ocFNHcm9lWHRWOGg2cFk?oc=5",
-   "fecha": "Tue, 27 Oct 2026 07:00:00 GMT",
+   "titulo": "Mercado hoy: Futuros de Wall Street suben y Nvidia logra estabilidad - Bitfinanzas",
+   "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ySTAwcXRoME1pNzE1bi1jaEJrVV9yeGRaTzhrOWp1NWxLQjhtR0VvbHJpRGNpbUE3T091cXptMkhhR1hFOEdmREFiUG9VT0JUZ1d0VUhOY3JVMnJwMFRtbUdGTWVBTUt1?oc=5",
+   "fecha": "Fri, 13 Nov 2026 14:47:27 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88619,9 +88619,9 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "La inflación de octubre fue del 2,2% según el INDEC - Página|12",
-   "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQR2t0RGRKVDloWFJyNVYtQzFROWROOTA3MVo0ZEdiakpmOW9sOHg4MzdzQV81Ry1IMFRXdmhFbC04bG05bkl0V1k2ZGZPTlFub1YyaGZDMkNqTTk1UEYxZWdqaWNPNy1jaVNNa1R0ZnBUcWVocXY1YVpycTVxZDdPczRSSjBMQzV3SHp0WjZwalJ6Vmc?oc=5",
-   "fecha": "Thu, 12 Nov 2026 19:04:54 GMT",
+   "titulo": "Argentina, entre los países con mayor inflación de la región: cómo quedó el ranking de octubre - La Gaceta",
+   "enlace": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOM2xoN2pMSjRPel9NSFFCd2xkcURrY2pxX1NEZjJlQ1l0Y0NrazZkQl9HVjVEVEFWYXY1b0h1dFo3Y3pjdTF1cFNLV2NFVml4bTd3YUpGUVczVjlETWdBS1lYYkRDT1BGZjhBY21ZQVFraWtzQ2psSVdDTDIyYkNGLWtQczFiTHBCZ0U2VEp2S2V0cVpYM2JnU0ItVjdoYnI4dmR0Wk4xX0h6aEVoUFBFWHliQ0w2Q0pTWlhmRlFLb3JRcEZPaWfSAcsBQVVfeXFMTk81alJKemM2aldmeW5tbkpaNVAxMTdVeUxqN1ZTajR3Y2tBUExBaXAxQ29ZOUUwLVFmeHhaamZRTVdPdEpGOU1MTnBaWTE4a2NPaW9jQzY4YzZTOGQtbmplX2dtWGJCRU1ySGdqLTd1VFFQX2pHUVFMTGFCUmFXTjMzbk9nVW1UNG1KSy0tUDZrb2VncnBoeTFqQjlLZThVb3VzX0NXRm1ERXFKTFNvZ28zc2Q3QkdLUHpNMzBZenlhb0o1MnFxVG9wX28?oc=5",
+   "fecha": "Sat, 14 Nov 2026 13:48:04 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   },
@@ -88633,13 +88633,6 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "Argentina, entre los países con mayor inflación de la región: cómo quedó el ranking de octubre - La Gaceta",
-   "enlace": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOM2xoN2pMSjRPel9NSFFCd2xkcURrY2pxX1NEZjJlQ1l0Y0NrazZkQl9HVjVEVEFWYXY1b0h1dFo3Y3pjdTF1cFNLV2NFVml4bTd3YUpGUVczVjlETWdBS1lYYkRDT1BGZjhBY21ZQVFraWtzQ2psSVdDTDIyYkNGLWtQczFiTHBCZ0U2VEp2S2V0cVpYM2JnU0ItVjdoYnI4dmR0Wk4xX0h6aEVoUFBFWHliQ0w2Q0pTWlhmRlFLb3JRcEZPaWfSAcsBQVVfeXFMTk81alJKemM2aldmeW5tbkpaNVAxMTdVeUxqN1ZTajR3Y2tBUExBaXAxQ29ZOUUwLVFmeHhaamZRTVdPdEpGOU1MTnBaWTE4a2NPaW9jQzY4YzZTOGQtbmplX2dtWGJCRU1ySGdqLTd1VFFQX2pHUVFMTGFCUmFXTjMzbk9nVW1UNG1KSy0tUDZrb2VncnBoeTFqQjlLZThVb3VzX0NXRm1ERXFKTFNvZ28zc2Q3QkdLUHpNMzBZenlhb0o1MnFxVG9wX28?oc=5",
-   "fecha": "Sat, 14 Nov 2026 13:48:04 GMT",
-   "fuente": "",
-   "tema": "inflación INDEC"
-  },
-  {
    "titulo": "El mercado alerta por estanflación tras el dato de inflación IPC INDEC - iProfesional",
    "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMXp2a2M5d1AzYlNCcXNtNTNxMGdtMUx4bURwenRIU1hOSVlDU0hCMHFNY2R1Q05Zb3RXZFVueU1jQXdmbHNBN1RvVEJ6RE1OZ0p2b0hLOG9XZW5oM2FfQzlPX19wX2VnaUE4MjY1RzIwRFZzTE5FWFlrYUtmNjhqdTZMYnl0ejZOTWdiV3k3Y0VDLVpOckV4X3M1Ry03cXhnOG05SG1tVlNUZUw3eWFNS2Zmd29vQdIBuwFBVV95cUxOZ1U1VU91MlBndDhvUEpWZVo4dktCazBuSE9yYmYxaFJoemRCMkpHSVZhcGMxRkIySkJ6Q0pKMmlQU2JTZnFYa3duRjVFVTdfM3FmTTctS3BaYVlKdDFpWXQ5c3NZYnFUcTB1YlVfMS1lMmFmRWk2OTJxQWw0M3M5d1VjSHczQ2tSa3d4SEx4MzkweVFkSWIwT0ZfNU1SdHkzRlBzM2xLTXBqNEVnbVlBZnBfVGxnaUFhZ3Bv?oc=5",
    "fecha": "Fri, 13 Nov 2026 10:19:08 GMT",
@@ -88647,9 +88640,16 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
-   "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
-   "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
+   "titulo": "La inflación en el Conurbano fue del 2% - InfoRegión",
+   "enlace": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOeE56OHpVM1QtamFadDRtMVV2djZ3ZkVrVnZSdzFpeE1uMjF3WTBqcjBBOTNsRlJSbGJjaVR5M1cta29jS1cwRnpQLW4tTTRWbWU0YjlicHo0U213bXdnLWxKUEcyNGc5c0JwakxTMDdkZDRPVnBLSi10R1owdGcyNm5WaTJZZ0k?oc=5",
+   "fecha": "Sat, 14 Nov 2026 11:46:05 GMT",
+   "fuente": "",
+   "tema": "inflación INDEC"
+  },
+  {
+   "titulo": "La inflación de octubre fue del 2,2%, pero con la nueva medición del INDEC que postergó el Gobierno habría llegado al 2,4% - Perfil",
+   "enlace": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPbDFLOUY5UHhzTVN5X2NvWGwwSklxZGk4OV92VGtBTnFuaW5zMjhtZ1ppVlRLRnhyNUVfeHI1UVBfTzc5eldzaWZJb3NNaXZWOVBrUWM3b0pUdVk3X215OWdxVGpKTWJWQVgwTlZGRUhVRWtVRkt3RTZpRkR6TEhOODg4YjFhNndBeV8tQkZnWVduOG5ZMVE3Nzhja0laR0xoUE8zaWNSdjBPX2w3SEJvUFVnamVWanp1eXVUZzFEcEdIbHFtOUFuMmtBZWtVaURQVVpFZ1R1R3oxc2hjbjZiQlNYb29lLXhHQ2VOeFplSV9Tc1R5?oc=5",
+   "fecha": "Fri, 13 Nov 2026 16:21:47 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
