@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-16T16:58:14.930Z",
+ "generado": "2026-11-16T18:12:53.018Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -8,70 +8,70 @@
    "nombre": "Oficial",
    "compra": 1525,
    "venta": 1575,
-   "fecha": "2026-11-16T13:00:00.000Z"
+   "fecha": "2026-11-16T14:00:00.000Z"
   },
   "blue": {
    "nombre": "Blue",
    "compra": 1565,
    "venta": 1585,
-   "fecha": "2026-11-16T15:59:00.000Z"
+   "fecha": "2026-11-16T16:59:00.000Z"
   },
   "bolsa": {
    "nombre": "Bolsa",
-   "compra": 1580.3,
-   "venta": 1581.4,
-   "fecha": "2026-11-16T15:59:00.000Z"
+   "compra": 1582.1,
+   "venta": 1584,
+   "fecha": "2026-11-16T16:59:00.000Z"
   },
   "contadoconliqui": {
    "nombre": "Contado con liquidación",
-   "compra": 1678.7,
-   "venta": 1679.2,
-   "fecha": "2026-11-16T15:59:00.000Z"
+   "compra": 1679.6,
+   "venta": 1680.2,
+   "fecha": "2026-11-16T16:59:00.000Z"
   },
   "mayorista": {
    "nombre": "Mayorista",
-   "compra": 1539,
-   "venta": 1548,
-   "fecha": "2026-11-16T10:51:00.000Z"
+   "compra": 1539.5,
+   "venta": 1548.5,
+   "fecha": "2026-11-16T13:37:00.000Z"
   },
   "cripto": {
    "nombre": "Cripto",
-   "compra": 1674.83,
-   "venta": 1678.38,
-   "fecha": "2026-11-16T15:59:00.000Z"
+   "compra": 1674.32,
+   "venta": 1678.36,
+   "fecha": "2026-11-16T16:59:00.000Z"
   },
   "tarjeta": {
    "nombre": "Tarjeta",
    "compra": 1982.5,
    "venta": 2047.5,
-   "fecha": "2026-11-16T13:00:00.000Z"
+   "fecha": "2026-11-16T14:00:00.000Z"
   }
  },
  "rulos": [
   {
    "nombre": "MEP → CCL",
-   "pasos": "Comprar dólares MEP a $1581.4 → vender como CCL a $1678.7",
-   "brutoPct": 6.15,
-   "netoPct": 4.95,
-   "gananciaSobreCapital": 49528,
+   "pasos": "Comprar dólares MEP a $1584 → vender como CCL a $1679.6",
+   "brutoPct": 6.04,
+   "netoPct": 4.84,
+   "gananciaSobreCapital": 48354,
    "conviene": true,
    "nota": "Requiere operar bonos (AL30/GD30) en un broker. Verifique los plazos mínimos de tenencia (parking) vigentes de la CNV."
   },
   {
    "nombre": "MEP → Cripto (USDT)",
-   "pasos": "Comprar dólares MEP a $1581.4 → vender como USDT en un exchange a $1674.83",
-   "brutoPct": 5.91,
-   "netoPct": 4.11,
-   "gananciaSobreCapital": 41081,
+   "pasos": "Comprar dólares MEP a $1584 → vender como USDT en un exchange a $1674.32",
+   "brutoPct": 5.7,
+   "netoPct": 3.9,
+   "gananciaSobreCapital": 39020,
    "conviene": true,
    "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
   },
   {
    "nombre": "Oficial → MEP",
-   "pasos": "Comprar dólares oficial en el banco a $1575 → vender por MEP a $1580.3",
-   "brutoPct": 0.34,
-   "netoPct": -0.86,
-   "gananciaSobreCapital": -8635,
+   "pasos": "Comprar dólares oficial en el banco a $1575 → vender por MEP a $1582.1",
+   "brutoPct": 0.45,
+   "netoPct": -0.75,
+   "gananciaSobreCapital": -7492,
    "conviene": false,
    "nota": "Solo si la normativa vigente permite comprar oficial y vender MEP sin restricción cruzada. Verifique antes de operar."
   },
@@ -86,10 +86,10 @@
   },
   {
    "nombre": "Cripto (USDT) → MEP",
-   "pasos": "Comprar dólares en USDT a $1678.38 → vender por MEP a $1580.3",
-   "brutoPct": -5.84,
-   "netoPct": -7.64,
-   "gananciaSobreCapital": -76437,
+   "pasos": "Comprar dólares en USDT a $1678.36 → vender por MEP a $1582.1",
+   "brutoPct": -5.74,
+   "netoPct": -7.54,
+   "gananciaSobreCapital": -75354,
    "conviene": false,
    "nota": "Camino inverso: comprar USDT con pesos y vender dólares MEP."
   }
@@ -99,7 +99,7 @@
    "nombre": "Apple",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": 2.94,
+   "mensualPct": 2.96,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -180,7 +180,7 @@
    "nombre": "S&P 500 (SPY)",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -2.3,
+   "mensualPct": -2.73,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -189,7 +189,7 @@
    "nombre": "Oro (GLD)",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -7.34,
+   "mensualPct": -7.81,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -198,16 +198,25 @@
    "nombre": "Banco Macro",
    "tipo": "accion (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -11.85,
-   "realPct": -13.75,
+   "mensualPct": -11.94,
+   "realPct": -13.84,
    "donde": "Broker (cuenta comitente)",
+   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
+  },
+  {
+   "nombre": "Bitcoin",
+   "tipo": "cripto (variable)",
+   "riesgo": "Alto",
+   "mensualPct": -18.94,
+   "realPct": null,
+   "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
    "nombre": "Argentina (ETF ARGT)",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -18.55,
+   "mensualPct": -19.12,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -216,26 +225,17 @@
    "nombre": "Grupo Galicia",
    "tipo": "accion (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -17.16,
-   "realPct": -18.94,
+   "mensualPct": -17.5,
+   "realPct": -19.28,
    "donde": "Broker (cuenta comitente)",
-   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
-  },
-  {
-   "nombre": "Bitcoin",
-   "tipo": "cripto (variable)",
-   "riesgo": "Alto",
-   "mensualPct": -18.96,
-   "realPct": null,
-   "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
    "nombre": "Pampa Energía",
    "tipo": "accion (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -18.06,
-   "realPct": -19.82,
+   "mensualPct": -18.2,
+   "realPct": -19.96,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
@@ -243,7 +243,7 @@
    "nombre": "Mercado Libre",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -19.86,
+   "mensualPct": -20.6,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: VENDER. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.21,
+   "mensualPct": -21.69,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -261,7 +261,7 @@
    "nombre": "Nvidia",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -25.55,
+   "mensualPct": -27.14,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -270,8 +270,8 @@
    "nombre": "YPF",
    "tipo": "accion (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -26.36,
-   "realPct": -27.95,
+   "mensualPct": -26.66,
+   "realPct": -28.24,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   }
@@ -283,16 +283,16 @@
    "tradingview": "AMEX:ARGT",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 71.67500305175781,
-   "variacionDia": -2.81,
-   "variacion30d": -18.55,
+   "precio": 71.17500305175781,
+   "variacionDia": -3.49,
+   "variacion30d": -19.12,
    "puntaje": 5,
    "puntajeBase": 5,
    "accion": "ESPERAR",
-   "m20": 78.98375053405762,
-   "m50": 85.74689971923829,
-   "m200": 90.77547512054443,
-   "rsi": 24.851056339517584,
+   "m20": 78.95875053405761,
+   "m50": 85.73689971923828,
+   "m200": 90.77297512054443,
+   "rsi": 24.154425934960457,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -300,33 +300,33 @@
      "precio": 100
     },
     "hasta": {
-     "fecha": "2026-11-12",
-     "precio": 71.43000030517578
+     "fecha": "2026-11-16",
+     "precio": 71.05500030517578
     },
     "retroceso": [
      {
       "nivel": 0,
-      "precio": 71.43000030517578
+      "precio": 71.05500030517578
      },
      {
       "nivel": 0.236,
-      "precio": 78.1725202331543
+      "precio": 77.8860202331543
      },
      {
       "nivel": 0.382,
-      "precio": 82.34374018859863
+      "precio": 82.11199018859864
      },
      {
       "nivel": 0.5,
-      "precio": 85.71500015258789
+      "precio": 85.52750015258789
      },
      {
       "nivel": 0.618,
-      "precio": 89.08626011657715
+      "precio": 88.94301011657714
      },
      {
       "nivel": 0.786,
-      "precio": 93.88602006530762
+      "precio": 93.80577006530763
      },
      {
       "nivel": 1,
@@ -336,19 +336,19 @@
     "extension": [
      {
       "nivel": 1.272,
-      "precio": 63.658960388183594
+      "precio": 63.18196038818359
      },
      {
       "nivel": 1.618,
-      "precio": 53.77374049377441
+      "precio": 53.16699049377441
      },
      {
       "nivel": 2,
-      "precio": 42.86000061035156
+      "precio": 42.11000061035156
      },
      {
       "nivel": 2.618,
-      "precio": 25.203740798950193
+      "precio": 24.221990798950202
      }
     ]
    },
@@ -366,12 +366,12 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 25: zona de sobreventa, posible rebote."
+     "texto": "RSI en 24: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
      "peso": 0,
-     "texto": "Objetivo por extensión de Fibonacci 127,2%: 63.66."
+     "texto": "Objetivo por extensión de Fibonacci 127,2%: 63.18."
     }
    ],
    "grafico": {
@@ -2772,9 +2772,9 @@
       "time": "2026-11-16",
       "open": 72.9000015258789,
       "high": 72.91999816894531,
-      "low": 71.67500305175781,
-      "close": 71.67500305175781,
-      "volume": 24852
+      "low": 71.05500030517578,
+      "close": 71.17500305175781,
+      "volume": 38267
      }
     ],
     "m20": [
@@ -3976,7 +3976,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 78.9838
+      "value": 78.9588
      }
     ],
     "m50": [
@@ -5178,7 +5178,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 85.7469
+      "value": 85.7369
      }
     ],
     "m200": [
@@ -6380,7 +6380,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 90.7755
+      "value": 90.773
      }
     ],
     "rsi": [
@@ -7582,7 +7582,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 24.8511
+      "value": 24.1544
      }
     ]
    },
@@ -7598,8 +7598,8 @@
     ]
    },
    "niveles": {
-    "entrada": 71.67500305175781,
-    "objetivo": 63.658960388183594
+    "entrada": 71.17500305175781,
+    "objetivo": 63.18196038818359
    },
    "razonesIA": []
   },
@@ -7609,16 +7609,16 @@
    "tradingview": "BCBA:GGAL",
    "tipo": "accion",
    "moneda": "ARS",
-   "precio": 4887.5,
-   "variacionDia": -2.35,
-   "variacion30d": -17.16,
+   "precio": 4867.5,
+   "variacionDia": -2.75,
+   "variacion30d": -17.5,
    "puntaje": -15,
    "puntajeBase": -15,
    "accion": "ESPERAR",
-   "m20": 5407.375,
-   "m50": 5998.05,
-   "m200": 6872.3875,
-   "rsi": 31.46664836766044,
+   "m20": 5406.375,
+   "m50": 5997.65,
+   "m200": 6872.2875,
+   "rsi": 31.102101212052588,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -10099,8 +10099,8 @@
       "open": 4995,
       "high": 4995,
       "low": 4840,
-      "close": 4887.5,
-      "volume": 700947
+      "close": 4867.5,
+      "volume": 927113
      }
     ],
     "m20": [
@@ -11302,7 +11302,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 5407.375
+      "value": 5406.375
      }
     ],
     "m50": [
@@ -12504,7 +12504,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 5998.05
+      "value": 5997.65
      }
     ],
     "m200": [
@@ -13658,7 +13658,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 6872.3875
+      "value": 6872.2875
      }
     ],
     "rsi": [
@@ -14860,7 +14860,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 31.4666
+      "value": 31.1021
      }
     ]
    },
@@ -14876,7 +14876,7 @@
     ]
    },
    "niveles": {
-    "entrada": 4887.5,
+    "entrada": 4867.5,
     "objetivo": 3694.24
    },
    "razonesIA": []
@@ -14887,16 +14887,16 @@
    "tradingview": "BCBA:YPFD",
    "tipo": "accion",
    "moneda": "ARS",
-   "precio": 6090,
-   "variacionDia": -3.94,
-   "variacion30d": -26.36,
+   "precio": 6065,
+   "variacionDia": -4.34,
+   "variacion30d": -26.66,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 7360.5,
-   "m50": 8014.6,
-   "m200": 7170.575,
-   "rsi": 24.93473144425522,
+   "m20": 7359.25,
+   "m50": 8014.1,
+   "m200": 7170.45,
+   "rsi": 24.70058319574113,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -17377,8 +17377,8 @@
       "open": 6340,
       "high": 6355,
       "low": 6025,
-      "close": 6090,
-      "volume": 758880
+      "close": 6065,
+      "volume": 1055703
      }
     ],
     "m20": [
@@ -18580,7 +18580,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 7360.5
+      "value": 7359.25
      }
     ],
     "m50": [
@@ -19782,7 +19782,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 8014.6
+      "value": 8014.1
      }
     ],
     "m200": [
@@ -20936,7 +20936,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 7170.575
+      "value": 7170.45
      }
     ],
     "rsi": [
@@ -22138,7 +22138,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 24.9347
+      "value": 24.7006
      }
     ]
    },
@@ -22164,7 +22164,7 @@
     "stop": 5500
    },
    "razonesIA": [
-    "Muestra un RSI en zona de sobreventa (24.6), lo que sugiere un posible rebote técnico, aunque la tendencia principal sigue siendo bajista."
+    "Presenta un RSI en zona de sobreventa que podría anticipar un rebote técnico, aunque la tendencia general sigue siendo bajista."
    ]
   },
   {
@@ -22173,16 +22173,16 @@
    "tradingview": "BCBA:PAMP",
    "tipo": "accion",
    "moneda": "ARS",
-   "precio": 4265,
-   "variacionDia": -2.57,
-   "variacion30d": -18.06,
+   "precio": 4257.5,
+   "variacionDia": -2.74,
+   "variacion30d": -18.2,
    "puntaje": -10,
    "puntajeBase": -10,
    "accion": "ESPERAR",
-   "m20": 4702.375,
-   "m50": 5026.15,
-   "m200": 5031.65,
-   "rsi": 28.686539586695844,
+   "m20": 4702,
+   "m50": 5026,
+   "m200": 5031.6125,
+   "rsi": 28.493077132515012,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -22256,7 +22256,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 29: zona de sobreventa, posible rebote."
+     "texto": "RSI en 28: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -24662,9 +24662,9 @@
       "time": "2026-11-16",
       "open": 4375,
       "high": 4462.5,
-      "low": 4255,
-      "close": 4265,
-      "volume": 389902
+      "low": 4245,
+      "close": 4257.5,
+      "volume": 517886
      }
     ],
     "m20": [
@@ -25866,7 +25866,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 4702.375
+      "value": 4702
      }
     ],
     "m50": [
@@ -27068,7 +27068,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 5026.15
+      "value": 5026
      }
     ],
     "m200": [
@@ -28222,7 +28222,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 5031.65
+      "value": 5031.6125
      }
     ],
     "rsi": [
@@ -29424,7 +29424,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 28.6865
+      "value": 28.4931
      }
     ]
    },
@@ -29440,7 +29440,7 @@
     ]
    },
    "niveles": {
-    "entrada": 4265,
+    "entrada": 4257.5,
     "objetivo": 3664.8,
     "stop": 4100
    },
@@ -29452,16 +29452,16 @@
    "tradingview": "BCBA:BMA",
    "tipo": "accion",
    "moneda": "ARS",
-   "precio": 9300,
-   "variacionDia": -2.92,
-   "variacion30d": -11.85,
+   "precio": 9290,
+   "variacionDia": -3.03,
+   "variacion30d": -11.94,
    "puntaje": -15,
    "puntajeBase": -15,
    "accion": "ESPERAR",
-   "m20": 9984.75,
-   "m50": 10848.9,
-   "m200": 12211.875,
-   "rsi": 34.39055204675347,
+   "m20": 9984.25,
+   "m50": 10848.7,
+   "m200": 12211.825,
+   "rsi": 34.27262572062469,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -31942,8 +31942,8 @@
       "open": 9535,
       "high": 9590,
       "low": 9150,
-      "close": 9300,
-      "volume": 306947
+      "close": 9290,
+      "volume": 450571
      }
     ],
     "m20": [
@@ -33145,7 +33145,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 9984.75
+      "value": 9984.25
      }
     ],
     "m50": [
@@ -34347,7 +34347,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 10848.9
+      "value": 10848.7
      }
     ],
     "m200": [
@@ -35501,7 +35501,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 12211.875
+      "value": 12211.825
      }
     ],
     "rsi": [
@@ -36703,7 +36703,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 34.3906
+      "value": 34.2726
      }
     ]
    },
@@ -36719,7 +36719,7 @@
     ]
    },
    "niveles": {
-    "entrada": 9300,
+    "entrada": 9290,
     "objetivo": 7392.879999999999
    },
    "razonesIA": []
@@ -36730,16 +36730,16 @@
    "tradingview": "NASDAQ:MELI",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 1469.695068359375,
-   "variacionDia": -1.46,
-   "variacion30d": -19.86,
+   "precio": 1456.18994140625,
+   "variacionDia": -2.37,
+   "variacion30d": -20.6,
    "puntaje": -30,
    "puntajeBase": -30,
    "accion": "VENDER",
-   "m20": 1638.3397583007813,
-   "m50": 1750.6240991210936,
-   "m200": 1780.2785241699219,
-   "rsi": 32.23745413305632,
+   "m20": 1637.664501953125,
+   "m50": 1750.3539965820312,
+   "m200": 1780.2109985351562,
+   "rsi": 31.44205978970406,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -36747,33 +36747,33 @@
      "precio": 2066
     },
     "hasta": {
-     "fecha": "2026-11-13",
-     "precio": 1463.199951171875
+     "fecha": "2026-11-16",
+     "precio": 1456.030029296875
     },
     "retroceso": [
      {
       "nivel": 0,
-      "precio": 1463.199951171875
+      "precio": 1456.030029296875
      },
      {
       "nivel": 0.236,
-      "precio": 1605.4607626953125
+      "precio": 1599.9829423828126
      },
      {
       "nivel": 0.382,
-      "precio": 1693.4695698242188
+      "precio": 1689.0385581054688
      },
      {
       "nivel": 0.5,
-      "precio": 1764.5999755859375
+      "precio": 1761.0150146484375
      },
      {
       "nivel": 0.618,
-      "precio": 1835.7303813476562
+      "precio": 1832.9914711914062
      },
      {
       "nivel": 0.786,
-      "precio": 1937.0007895507813
+      "precio": 1935.4664262695312
      },
      {
       "nivel": 1,
@@ -36783,19 +36783,19 @@
     "extension": [
      {
       "nivel": 1.272,
-      "precio": 1299.238337890625
+      "precio": 1290.118197265625
      },
      {
       "nivel": 1.618,
-      "precio": 1090.6695209960935
+      "precio": 1079.0685874023438
      },
      {
       "nivel": 2,
-      "precio": 860.39990234375
+      "precio": 846.06005859375
      },
      {
       "nivel": 2.618,
-      "precio": 487.86947216796875
+      "precio": 469.09861669921884
      }
     ]
    },
@@ -36813,12 +36813,12 @@
     {
      "clave": "rsi_neutral",
      "peso": 0,
-     "texto": "RSI en 32: zona neutral."
+     "texto": "RSI en 31: zona neutral."
     },
     {
      "clave": "fib_objetivo",
      "peso": 0,
-     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1299.24."
+     "texto": "Objetivo por extensión de Fibonacci 127,2%: 1290.12."
     }
    ],
    "grafico": {
@@ -39219,9 +39219,9 @@
       "time": "2026-11-16",
       "open": 1485.469970703125,
       "high": 1493.4449462890625,
-      "low": 1465.510009765625,
-      "close": 1469.695068359375,
-      "volume": 153102
+      "low": 1456.030029296875,
+      "close": 1456.18994140625,
+      "volume": 222440
      }
     ],
     "m20": [
@@ -40423,7 +40423,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 1638.3398
+      "value": 1637.6645
      }
     ],
     "m50": [
@@ -41625,7 +41625,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 1750.6241
+      "value": 1750.354
      }
     ],
     "m200": [
@@ -42827,7 +42827,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 1780.2785
+      "value": 1780.211
      }
     ],
     "rsi": [
@@ -44029,7 +44029,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 32.2375
+      "value": 31.4421
      }
     ]
    },
@@ -44045,8 +44045,8 @@
     ]
    },
    "niveles": {
-    "entrada": 1469.695068359375,
-    "objetivo": 1299.238337890625
+    "entrada": 1456.18994140625,
+    "objetivo": 1290.118197265625
    },
    "razonesIA": []
   },
@@ -44056,16 +44056,16 @@
    "tradingview": "AMEX:SPY",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 745.6699829101562,
-   "variacionDia": -1.15,
-   "variacion30d": -2.3,
+   "precio": 742.4199829101562,
+   "variacionDia": -1.58,
+   "variacion30d": -2.73,
    "puntaje": 20,
    "puntajeBase": 20,
    "accion": "ESPERAR",
-   "m20": 757.980990600586,
-   "m50": 763.9373950195312,
-   "m200": 732.186049194336,
-   "rsi": 42.833804998910715,
+   "m20": 757.818490600586,
+   "m50": 763.8723950195313,
+   "m200": 732.169799194336,
+   "rsi": 41.436422941859554,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -44139,12 +44139,12 @@
     {
      "clave": "rsi_neutral",
      "peso": 0,
-     "texto": "RSI en 43: zona neutral."
+     "texto": "RSI en 41: zona neutral."
     },
     {
      "clave": "fib_soporte",
      "peso": 15,
-     "texto": "El precio está sobre el retroceso de Fibonacci 38.2% (756.77), que suele actuar como soporte."
+     "texto": "El precio está sobre el retroceso de Fibonacci 50.0% (749.10), que suele actuar como soporte."
     },
     {
      "clave": "fib_objetivo",
@@ -46550,9 +46550,9 @@
       "time": "2026-11-16",
       "open": 749.6599731445312,
       "high": 749.8200073242188,
-      "low": 743.3099975585938,
-      "close": 745.6699829101562,
-      "volume": 17366215
+      "low": 742.0499877929688,
+      "close": 742.4199829101562,
+      "volume": 22338925
      }
     ],
     "m20": [
@@ -47754,7 +47754,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 757.981
+      "value": 757.8185
      }
     ],
     "m50": [
@@ -48956,7 +48956,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 763.9374
+      "value": 763.8724
      }
     ],
     "m200": [
@@ -50158,7 +50158,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 732.186
+      "value": 732.1698
      }
     ],
     "rsi": [
@@ -51360,14 +51360,19 @@
      },
      {
       "time": "2026-11-16",
-      "value": 42.8338
+      "value": 41.4364
      }
     ]
    },
    "consenso": {
-    "accion": "ESPERAR",
-    "acuerdo": 1,
+    "accion": "COMPRAR",
+    "acuerdo": 0.5,
     "detalle": [
+     {
+      "quien": "groq",
+      "accion": "COMPRAR",
+      "peso": 1
+     },
      {
       "quien": "tecnico",
       "accion": "ESPERAR",
@@ -51376,11 +51381,13 @@
     ]
    },
    "niveles": {
-    "entrada": 745.6699829101562,
-    "objetivo": 799.310869140625,
-    "stop": 716.5800170898438
+    "entrada": 742.42,
+    "objetivo": 799.31,
+    "stop": 730.5
    },
-   "razonesIA": []
+   "razonesIA": [
+    "RSI moderado, precio ligeramente por encima de la media de 20 días y tendencia alcista confirmada por el Fibonacci."
+   ]
   },
   {
    "nombre": "Apple",
@@ -51388,16 +51395,16 @@
    "tradingview": "NASDAQ:AAPL",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 353.57000732421875,
-   "variacionDia": -0.76,
-   "variacion30d": 2.94,
+   "precio": 353.6300048828125,
+   "variacionDia": -0.74,
+   "variacion30d": 2.96,
    "puntaje": 15,
    "puntajeBase": 15,
    "accion": "ESPERAR",
-   "m20": 346.68200225830077,
-   "m50": 339.7084014892578,
-   "m200": 301.72335021972657,
-   "rsi": 57.78514515664502,
+   "m20": 346.6850021362305,
+   "m50": 339.7096014404297,
+   "m200": 301.72365020751954,
+   "rsi": 57.84568120743394,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -53877,9 +53884,9 @@
       "time": "2026-11-16",
       "open": 357.1000061035156,
       "high": 357.1000061035156,
-      "low": 353.0199890136719,
-      "close": 353.57000732421875,
-      "volume": 13016331
+      "low": 352.79998779296875,
+      "close": 353.6300048828125,
+      "volume": 17005199
      }
     ],
     "m20": [
@@ -55081,7 +55088,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 346.682
+      "value": 346.685
      }
     ],
     "m50": [
@@ -56283,7 +56290,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 339.7084
+      "value": 339.7096
      }
     ],
     "m200": [
@@ -57485,7 +57492,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 301.7234
+      "value": 301.7237
      }
     ],
     "rsi": [
@@ -58687,7 +58694,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 57.7851
+      "value": 57.8457
      }
     ]
    },
@@ -58708,12 +58715,12 @@
     ]
    },
    "niveles": {
-    "entrada": 354.3,
-    "objetivo": 384.5,
-    "stop": 340
+    "entrada": 353.63,
+    "objetivo": 384.52,
+    "stop": 317.29
    },
    "razonesIA": [
-    "RSI en zona neutral‑alcista y precio por debajo de la extensión de Fibonacci, con impulso positivo del último mes."
+    "RSI en zona neutral, precio sobre la media de 20 días y objetivo en la extensión 1.272 del Fibonacci."
    ]
   },
   {
@@ -58722,16 +58729,16 @@
    "tradingview": "NASDAQ:NVDA",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 159.42999267578125,
-   "variacionDia": -2.1,
-   "variacion30d": -25.55,
+   "precio": 156.02000427246094,
+   "variacionDia": -4.19,
+   "variacion30d": -27.14,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 195.80550155639648,
-   "m50": 213.22860076904297,
-   "m200": 204.0323001098633,
-   "rsi": 23.71742865260839,
+   "m20": 195.63500213623047,
+   "m50": 213.16040100097655,
+   "m200": 204.0152501678467,
+   "rsi": 22.68011511991844,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -58805,7 +58812,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 24: zona de sobreventa, posible rebote."
+     "texto": "RSI en 23: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -61211,9 +61218,9 @@
       "time": "2026-11-16",
       "open": 159.00250244140625,
       "high": 163,
-      "low": 158.11000061035156,
-      "close": 159.42999267578125,
-      "volume": 152360000
+      "low": 155.82000732421875,
+      "close": 156.02000427246094,
+      "volume": 196800611
      }
     ],
     "m20": [
@@ -62415,7 +62422,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 195.8055
+      "value": 195.635
      }
     ],
     "m50": [
@@ -63617,7 +63624,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 213.2286
+      "value": 213.1604
      }
     ],
     "m200": [
@@ -64819,7 +64826,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 204.0323
+      "value": 204.0153
      }
     ],
     "rsi": [
@@ -66021,7 +66028,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 23.7174
+      "value": 22.6801
      }
     ]
    },
@@ -66037,7 +66044,7 @@
     ]
    },
    "niveles": {
-    "entrada": 159.42999267578125,
+    "entrada": 156.02000427246094,
     "objetivo": 123.07696520996093,
     "stop": 148.8000030517578
    },
@@ -66049,16 +66056,16 @@
    "tradingview": "AMEX:GLD",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 353.9649963378906,
-   "variacionDia": -0.42,
-   "variacion30d": -7.34,
+   "precio": 352.19000244140625,
+   "variacionDia": -0.92,
+   "variacion30d": -7.81,
    "puntaje": -15,
    "puntajeBase": -15,
    "accion": "ESPERAR",
-   "m20": 367.49725036621095,
-   "m50": 379.84989990234374,
-   "m200": 407.96177490234373,
-   "rsi": 37.084648881914305,
+   "m20": 367.4085006713867,
+   "m50": 379.81440002441406,
+   "m200": 407.9528999328613,
+   "rsi": 36.14679167080039,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -66066,33 +66073,33 @@
      "precio": 429.4200134277344
     },
     "hasta": {
-     "fecha": "2026-11-12",
-     "precio": 352.9100036621094
+     "fecha": "2026-11-16",
+     "precio": 351.9599914550781
     },
     "retroceso": [
      {
       "nivel": 0,
-      "precio": 352.9100036621094
+      "precio": 351.9599914550781
      },
      {
       "nivel": 0.236,
-      "precio": 370.9663659667969
+      "precio": 370.240556640625
      },
      {
       "nivel": 0.382,
-      "precio": 382.13682739257814
+      "precio": 381.54971984863283
      },
      {
       "nivel": 0.5,
-      "precio": 391.1650085449219
+      "precio": 390.69000244140625
      },
      {
       "nivel": 0.618,
-      "precio": 400.1931896972656
+      "precio": 399.83028503417967
      },
      {
       "nivel": 0.786,
-      "precio": 413.04687133789065
+      "precio": 412.84356872558595
      },
      {
       "nivel": 1,
@@ -66102,19 +66109,19 @@
     "extension": [
      {
       "nivel": 1.272,
-      "precio": 332.0992810058594
+      "precio": 330.8908654785156
      },
      {
       "nivel": 1.618,
-      "precio": 305.6268176269531
+      "precio": 304.0896978759765
      },
      {
       "nivel": 2,
-      "precio": 276.3999938964844
+      "precio": 274.4999694824219
      },
      {
       "nivel": 2.618,
-      "precio": 229.11680786132814
+      "precio": 226.62967590332033
      }
     ]
    },
@@ -66132,12 +66139,12 @@
     {
      "clave": "rsi_neutral",
      "peso": 0,
-     "texto": "RSI en 37: zona neutral."
+     "texto": "RSI en 36: zona neutral."
     },
     {
      "clave": "fib_objetivo",
      "peso": 0,
-     "texto": "Objetivo por extensión de Fibonacci 127,2%: 332.10."
+     "texto": "Objetivo por extensión de Fibonacci 127,2%: 330.89."
     }
    ],
    "grafico": {
@@ -68538,9 +68545,9 @@
       "time": "2026-11-16",
       "open": 354.1300048828125,
       "high": 356.2900085449219,
-      "low": 353.30499267578125,
-      "close": 353.9649963378906,
-      "volume": 4668787
+      "low": 351.9599914550781,
+      "close": 352.19000244140625,
+      "volume": 5909465
      }
     ],
     "m20": [
@@ -69742,7 +69749,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 367.4973
+      "value": 367.4085
      }
     ],
     "m50": [
@@ -70944,7 +70951,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 379.8499
+      "value": 379.8144
      }
     ],
     "m200": [
@@ -72146,7 +72153,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 407.9618
+      "value": 407.9529
      }
     ],
     "rsi": [
@@ -73348,7 +73355,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 37.0846
+      "value": 36.1468
      }
     ]
    },
@@ -73357,6 +73364,11 @@
     "acuerdo": 1,
     "detalle": [
      {
+      "quien": "groq",
+      "accion": "ESPERAR",
+      "peso": 1
+     },
+     {
       "quien": "tecnico",
       "accion": "ESPERAR",
       "peso": 1
@@ -73364,10 +73376,13 @@
     ]
    },
    "niveles": {
-    "entrada": 353.9649963378906,
-    "objetivo": 332.0992810058594
+    "entrada": 352.19,
+    "objetivo": 330.89,
+    "stop": 390.69
    },
-   "razonesIA": []
+   "razonesIA": [
+    "RSI bajo 36, precio bajo medias móviles y la extensión del Fibonacci indica una posible corrección a la baja."
+   ]
   },
   {
    "nombre": "Bitcoin",
@@ -73375,16 +73390,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64835.66015625,
-   "variacionDia": -0.72,
-   "variacion30d": -18.96,
+   "precio": 64851.03125,
+   "variacionDia": -0.7,
+   "variacion30d": -18.94,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 74257.088671875,
-   "m50": 79362.613125,
-   "m200": 72864.5737109375,
-   "rsi": 24.063900860250158,
+   "m20": 74257.8572265625,
+   "m50": 79362.920546875,
+   "m200": 72864.65056640626,
+   "rsi": 24.082364161317074,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -75865,8 +75880,8 @@
       "open": 65314.55078125,
       "high": 65363.4375,
       "low": 63845.92578125,
-      "close": 64835.66015625,
-      "volume": 30606254080
+      "close": 64851.03125,
+      "volume": 30794334208
      }
     ],
     "m20": [
@@ -77068,7 +77083,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 74257.0887
+      "value": 74257.8572
      }
     ],
     "m50": [
@@ -78270,7 +78285,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 79362.6131
+      "value": 79362.9205
      }
     ],
     "m200": [
@@ -79472,7 +79487,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 72864.5737
+      "value": 72864.6506
      }
     ],
     "rsi": [
@@ -80674,7 +80689,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 24.0639
+      "value": 24.0824
      }
     ]
    },
@@ -80700,13 +80715,13 @@
     ]
    },
    "niveles": {
-    "entrada": 64317.67,
-    "objetivo": 70000,
-    "stop": 60000
+    "entrada": 64851.03,
+    "objetivo": 68000,
+    "stop": 74690.82
    },
    "razonesIA": [
-    "El activo se encuentra en una zona de soporte técnico relevante, pero la presión vendedora global desaconseja una entrada agresiva en este momento.",
-    "RSI muy bajo (23,5) indica sobreventa, pero la alta volatilidad y la brecha cambiaria aumentan el riesgo."
+    "Se encuentra en niveles de soporte críticos; es prudente aguardar una confirmación de cambio de tendencia antes de ingresar.",
+    "RSI en zona de sobreventa, alta volatilidad y objetivo de extensión bajista que sugiere mayor riesgo a corto plazo."
    ]
   },
   {
@@ -80715,16 +80730,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1828.1600341796875,
-   "variacionDia": -0.4,
-   "variacion30d": -21.21,
+   "precio": 1817.0999755859375,
+   "variacionDia": -1,
+   "variacion30d": -21.69,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2137.973486328125,
-   "m50": 2360.91375,
-   "m200": 2140.3945343017576,
-   "rsi": 26.26541790346812,
+   "m20": 2137.4204833984377,
+   "m50": 2360.692548828125,
+   "m200": 2140.339234008789,
+   "rsi": 25.879716238027683,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83205,8 +83220,8 @@
       "open": 1835.2918701171875,
       "high": 1856.026123046875,
       "low": 1785.6817626953125,
-      "close": 1828.1600341796875,
-      "volume": 11722937344
+      "close": 1817.0999755859375,
+      "volume": 11837057024
      }
     ],
     "m20": [
@@ -84408,7 +84423,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2137.9735
+      "value": 2137.4205
      }
     ],
     "m50": [
@@ -85610,7 +85625,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2360.9138
+      "value": 2360.6925
      }
     ],
     "m200": [
@@ -86812,7 +86827,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2140.3945
+      "value": 2140.3392
      }
     ],
     "rsi": [
@@ -88014,7 +88029,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 26.2654
+      "value": 25.8797
      }
     ]
    },
@@ -88030,7 +88045,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1828.1600341796875,
+    "entrada": 1817.0999755859375,
     "objetivo": 1415.0556689453124,
     "stop": 1712.3831787109375
    },
@@ -88042,7 +88057,7 @@
    "proveedor": "github",
    "nombre": "GitHub Models",
    "modelo": "openai/gpt-4.1-mini",
-   "ms": 833,
+   "ms": 760,
    "error": "fetch failed",
    "opinion": null,
    "confiabilidad": 1
@@ -88051,13 +88066,13 @@
    "proveedor": "gemini",
    "nombre": "Google Gemini",
    "modelo": "gemini-3.1-flash-lite",
-   "ms": 11150,
+   "ms": 13704,
    "error": null,
    "opinion": {
-    "resumen": "El mercado atraviesa una fase de alta volatilidad y corrección bajista, con indicadores técnicos como el RSI señalando condiciones de sobreventa en activos locales y tecnológicos. La incertidumbre macroeconómica local, sumada a la debilidad en Wall Street, sugiere mantener una postura defensiva y cautelosa.",
+    "resumen": "El mercado presenta una alta volatilidad con una tendencia bajista marcada tanto en activos locales como en el sector tecnológico global. La combinación de un riesgo país elevado y la caída en los índices de referencia sugiere mantener una postura defensiva y priorizar la liquidez.",
     "mejorOpcion": {
      "nombre": "FCI FBA Bonos Argentina A RP D.596",
-     "porque": "Presenta el mejor rendimiento mensual real positivo (1.68%) entre las opciones de bajo riesgo, ofreciendo una cobertura más efectiva frente a la inflación actual que los plazos fijos."
+     "porque": "Es el activo con mejor rendimiento real positivo en el contexto actual, ofreciendo una cobertura más eficiente frente a la inflación que los plazos fijos tradicionales."
     },
     "activos": [
      {
@@ -88068,7 +88083,7 @@
       "entrada": 5935,
       "objetivo": 6710,
       "stop": 5500,
-      "razon": "Muestra un RSI en zona de sobreventa (24.6), lo que sugiere un posible rebote técnico, aunque la tendencia principal sigue siendo bajista."
+      "razon": "Presenta un RSI en zona de sobreventa que podría anticipar un rebote técnico, aunque la tendencia general sigue siendo bajista."
      },
      {
       "nombre": "Bitcoin",
@@ -88077,14 +88092,14 @@
       "confianza": 60,
       "entrada": 62000,
       "objetivo": 68000,
-      "stop": 55000,
-      "razon": "El activo se encuentra en una zona de soporte técnico relevante, pero la presión vendedora global desaconseja una entrada agresiva en este momento."
+      "stop": 58000,
+      "razon": "Se encuentra en niveles de soporte críticos; es prudente aguardar una confirmación de cambio de tendencia antes de ingresar."
      }
     ],
     "riesgos": [
-     "Elevada volatilidad en los dólares financieros y brecha cambiaria persistente.",
-     "Riesgo país en niveles elevados (830 puntos) que limita el acceso a financiamiento.",
-     "Corrección global en el sector tecnológico y de inteligencia artificial que impacta en activos de renta variable."
+     "Alta volatilidad en el sector tecnológico global afectando carteras diversificadas.",
+     "Presión sobre las reservas del BCRA y brechas cambiarias persistentes.",
+     "Riesgo país elevado que encarece el financiamiento y presiona a la baja las acciones locales."
     ]
    },
    "confiabilidad": 1
@@ -88093,52 +88108,62 @@
    "proveedor": "groq",
    "nombre": "Groq",
    "modelo": "openai/gpt-oss-120b",
-   "ms": 2542,
+   "ms": 4612,
    "error": null,
    "opinion": {
-    "resumen": "El entorno macroeconómico argentino muestra alta inflación (2,2 % mensual) y riesgo país elevado (830), lo que favorece la diversificación en activos externos y de bajo riesgo local. Los instrumentos con mejor perfil técnico y retorno reciente son Apple y los fondos de liquidez en pesos, mientras que los criptoactivos siguen muy volátiles. Se recomienda priorizar exposición a mercados internacionales con soporte técnico y mantener una posición cautelosa en cripto.",
+    "resumen": "El riesgo país sigue muy alto (830) y la brecha entre MEP y CCL supera el 6 %, lo que mantiene presión sobre el peso. Los activos internacionales presentan mejores señales técnicas, destacando Apple y el S&P 500, mientras que los instrumentos locales muestran mayor volatilidad y menor potencial de recuperación.",
     "mejorOpcion": {
-     "nombre": "Apple (AAPL)",
-     "porque": "Presenta tendencia alcista, RSI 58,5 y objetivo de precio cercano a la extensión de Fibonacci (≈ 384 USD), ofreciendo buen potencial de ganancia con riesgo moderado."
+     "nombre": "Apple",
+     "porque": "RSI cercano a 58, precio por encima de la media de 20 días y objetivo claro en la extensión 1.272 del Fibonacci, ofreciendo una buena relación riesgo‑beneficio."
     },
     "activos": [
      {
       "nombre": "Apple",
       "yahoo": "AAPL",
       "accion": "COMPRAR",
-      "confianza": 80,
-      "entrada": 354.3,
-      "objetivo": 384.5,
-      "stop": 340,
-      "razon": "RSI en zona neutral‑alcista y precio por debajo de la extensión de Fibonacci, con impulso positivo del último mes."
+      "confianza": 78,
+      "entrada": 353.63,
+      "objetivo": 384.52,
+      "stop": 317.29,
+      "razon": "RSI en zona neutral, precio sobre la media de 20 días y objetivo en la extensión 1.272 del Fibonacci."
      },
      {
-      "nombre": "FCI Megainver Liquidez Pesos - Clase B",
-      "yahoo": "N/A",
+      "nombre": "S&P 500 (SPY)",
+      "yahoo": "SPY",
       "accion": "COMPRAR",
-      "confianza": 85,
-      "entrada": 1,
-      "objetivo": 1.05,
-      "stop": 0.95,
-      "razon": "Rendimiento mensual del 2,83 % y riesgo bajo, ideal para proteger capital contra la alta inflación local."
+      "confianza": 70,
+      "entrada": 742.42,
+      "objetivo": 799.31,
+      "stop": 730.5,
+      "razon": "RSI moderado, precio ligeramente por encima de la media de 20 días y tendencia alcista confirmada por el Fibonacci."
+     },
+     {
+      "nombre": "Oro (GLD)",
+      "yahoo": "GLD",
+      "accion": "ESPERAR",
+      "confianza": 45,
+      "entrada": 352.19,
+      "objetivo": 330.89,
+      "stop": 390.69,
+      "razon": "RSI bajo 36, precio bajo medias móviles y la extensión del Fibonacci indica una posible corrección a la baja."
      },
      {
       "nombre": "Bitcoin",
       "yahoo": "BTC-USD",
       "accion": "ESPERAR",
       "confianza": 40,
-      "entrada": 64317.67,
-      "objetivo": 70000,
-      "stop": 60000,
-      "razon": "RSI muy bajo (23,5) indica sobreventa, pero la alta volatilidad y la brecha cambiaria aumentan el riesgo."
+      "entrada": 64851.03,
+      "objetivo": 55123.8,
+      "stop": 74690.82,
+      "razon": "RSI en zona de sobreventa, alta volatilidad y objetivo de extensión bajista que sugiere mayor riesgo a corto plazo."
      }
     ],
     "riesgos": [
-     "Elevado riesgo país y volatilidad del dólar (brecha CCL ~8 %)",
-     "Inflación mensual persistente que erosiona rendimientos en pesos",
-     "Inestabilidad de los mercados tecnológicos internacionales (ej. Nvidia)",
-     "Alta volatilidad y posible regulación de criptoactivos",
-     "Sensibilidad de los fondos locales a cambios en la política del BCRA"
+     "Riesgo país elevado (830) que puede afectar la estabilidad de los activos locales",
+     "Brecha cambiaria MEP‑CCL >6 % que genera volatilidad del peso",
+     "Inflación mensual del 2.2 % que erosiona rendimientos en pesos",
+     "Caída de acciones argentinas y alta volatilidad en cripto",
+     "Posible deterioro de los sectores tecnológicos de EE.UU. que impacta a Apple y al S&P 500"
     ]
    },
    "confiabilidad": 1
@@ -88154,7 +88179,7 @@
     "entrada": 5935,
     "objetivo": 6710,
     "stop": 5500,
-    "razon": "Muestra un RSI en zona de sobreventa (24.6), lo que sugiere un posible rebote técnico, aunque la tendencia principal sigue siendo bajista."
+    "razon": "Presenta un RSI en zona de sobreventa que podría anticipar un rebote técnico, aunque la tendencia general sigue siendo bajista."
    },
    {
     "nombre": "Bitcoin",
@@ -88163,8 +88188,8 @@
     "confianza": 60,
     "entrada": 62000,
     "objetivo": 68000,
-    "stop": 55000,
-    "razon": "El activo se encuentra en una zona de soporte técnico relevante, pero la presión vendedora global desaconseja una entrada agresiva en este momento."
+    "stop": 58000,
+    "razon": "Se encuentra en niveles de soporte críticos; es prudente aguardar una confirmación de cambio de tendencia antes de ingresar."
    }
   ],
   "groq": [
@@ -88172,35 +88197,45 @@
     "nombre": "Apple",
     "yahoo": "AAPL",
     "accion": "COMPRAR",
-    "confianza": 80,
-    "entrada": 354.3,
-    "objetivo": 384.5,
-    "stop": 340,
-    "razon": "RSI en zona neutral‑alcista y precio por debajo de la extensión de Fibonacci, con impulso positivo del último mes."
+    "confianza": 78,
+    "entrada": 353.63,
+    "objetivo": 384.52,
+    "stop": 317.29,
+    "razon": "RSI en zona neutral, precio sobre la media de 20 días y objetivo en la extensión 1.272 del Fibonacci."
    },
    {
-    "nombre": "FCI Megainver Liquidez Pesos - Clase B",
-    "yahoo": "N/A",
+    "nombre": "S&P 500 (SPY)",
+    "yahoo": "SPY",
     "accion": "COMPRAR",
-    "confianza": 85,
-    "entrada": 1,
-    "objetivo": 1.05,
-    "stop": 0.95,
-    "razon": "Rendimiento mensual del 2,83 % y riesgo bajo, ideal para proteger capital contra la alta inflación local."
+    "confianza": 70,
+    "entrada": 742.42,
+    "objetivo": 799.31,
+    "stop": 730.5,
+    "razon": "RSI moderado, precio ligeramente por encima de la media de 20 días y tendencia alcista confirmada por el Fibonacci."
+   },
+   {
+    "nombre": "Oro (GLD)",
+    "yahoo": "GLD",
+    "accion": "ESPERAR",
+    "confianza": 45,
+    "entrada": 352.19,
+    "objetivo": 330.89,
+    "stop": 390.69,
+    "razon": "RSI bajo 36, precio bajo medias móviles y la extensión del Fibonacci indica una posible corrección a la baja."
    },
    {
     "nombre": "Bitcoin",
     "yahoo": "BTC-USD",
     "accion": "ESPERAR",
     "confianza": 40,
-    "entrada": 64317.67,
-    "objetivo": 70000,
-    "stop": 60000,
-    "razon": "RSI muy bajo (23,5) indica sobreventa, pero la alta volatilidad y la brecha cambiaria aumentan el riesgo."
+    "entrada": 64851.03,
+    "objetivo": 55123.8,
+    "stop": 74690.82,
+    "razon": "RSI en zona de sobreventa, alta volatilidad y objetivo de extensión bajista que sugiere mayor riesgo a corto plazo."
    }
   ]
  },
- "opinionesFecha": "2026-11-16T15:42:36.046Z",
+ "opinionesFecha": "2026-11-16T18:12:53.018Z",
  "titulares": [
   {
    "titulo": "Riesgo país, dólar y acciones: así opera el mercado hoy, viernes 30 de octubre - TN",
@@ -88371,9 +88406,9 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Resultados de Nvidia esta semana; Warsh habla hoy: 5 claves en Wall Street - Investing.com México - Finanzas, Bolsa y Forex",
-   "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaFVJTW5KQkU4VTd2U3BQUUtGQ29iZExiVE1yTnhleWIwT3NORnBkeDJrd1l3dXl6N3FkNHZjQzN2RFhSbEtLaUNqWE9xeVg0eFI5NW9HT1ZUaDloSUFsWTRxczFoaWlocXpUZWJFbUdjSm1VQTJ2MXdiTjhSem9PbDExQ09Oa1hJNTF3OXF3NjZsZUNTWEtrdDNWUVhBOVJUTlRybjVkdHdHN0dtWXk2OW9GcVE1dw?oc=5",
-   "fecha": "Mon, 16 Nov 2026 10:29:57 GMT",
+   "titulo": "Wall Street amanece en rojo, arrastrado por el sector tecnológico y la crisis de Nvidia: ¿Cuánto cae HOY? - El Financiero",
+   "enlace": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRmxmRlVsZnFVMjlIdGhZN0w0eHpxTHVfckd5a0xOeWR1ZG5mQnEtV2gtX0VYZVdESHRzS2MwSXpaUHZOT0VwSHEyR1ozU24zZHU1cHdSSjVjTHZ2QnFsZEtXN2d5d3BneEdNbERKd3pEZlJMNU0yZmlCa016X2s0Rm9xRzlCMkplWFRfZmhCdnREMnNSQ3QyLWplcnI?oc=5",
+   "fecha": "Mon, 16 Nov 2026 16:58:21 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88385,6 +88420,13 @@
    "tema": "bitcoin precio hoy"
   },
   {
+   "titulo": "Precio de criptomonedas en Argentina: cuánto valen hoy, 16 de noviembre de 2026 - iProUP",
+   "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQa2xzbDlCQjMtbXhiekt2YlpGamZPMkNSOTlYbFBaTXpSSVRyNzB2S2ZrOHo0cXRBVmx0djlzY0xmLTFaanBiNWFaQ0l3cFpMX0I1ZHdOam92bzdZYUZ2UjVFRGlvb3pTTTd1TzhKZ0MzSGhQVXNRQjcwTEpVMnVNZ09pakdKR2JuWGg4T0I3RDk5UGhaX2RSd2pKcVZaRkJDVjBVU0I1NkRJR0ZWZ2RwbXN3VGtQVWduMjhtUi1HNXrSAcYBQVVfeXFMTnlWRXl0a3U1a2Nha1NfRXI0MjZjblVjQ1EyOFhQWlZRUzNVdGJMOWlNRjJfSERST3dPa3JtZkZBb0MyR1plTG90REY2cUlJb2ZiTk1PSDNjQ1BRYkg0Um9PajEycXhKMDctOWhWV1RJNDdNV1Jod09zT2E2UWF0bkVOZ04zLVZ6d2kzcF9OeHE3OUpTejRVcElvQWtCTFVSX1JISDNXbUZuSDFfdG8weU8wWVZ3UUtVaDY1b0tHd0VZY0I2UmR3?oc=5",
+   "fecha": "Mon, 16 Nov 2026 17:17:53 GMT",
+   "fuente": "",
+   "tema": "bitcoin precio hoy"
+  },
+  {
    "titulo": "El precio del Bitcoin hoy, 16 de noviembre: el Bitcoin desciende hasta los 64.932,5 dólares - Expansión",
    "enlace": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQkdZZ0pYUjBVRVNRX1MzTHhPV1F6c0tHVGg5QlBWcm01OHJ2LUY3aV8zdnJySTVvdm5BMTk0emw0ZFdNUm9EVHZnMG45dldQZk41SUZ2T1IyQ2piSGFWd19KVTUzcmdHMUFWYzA5b2NnQUJfbmpTR0N4ZldYOUJWWDIteHZId3JVSjFhVmJDeE5Na3BPLUxRLXl3YW05Ul8yVUpYaFNNeUpsS1I0RnFPMW54RDJ6M1ZmZ05HM2ZrT1lYbU3SAcMBQVVfeXFMT196dHZHTWVZbk8tOENjcnV0VU83aFVtTzBYSWh0WU85X3dOS2gxQjV4Q2xLWHlEZHo5ZElkSmh6eEdDMGpaWWpwNlljRmFlSnVpbDlYNGYtRHNvUndrMjZUamVGXy1KM1IxLXNsSDlDMTc3N3ZvUGhSV1p4M0o3Z1RKRkpIbEdGTXlScTQ4NlY0LXU5NTBPRTNpcE41ckoxaUpMTTVuVzY3TmFlLTlXUFdDdjVSem0tN2Q2bjhNMllOSVVz?oc=5",
    "fecha": "Mon, 16 Nov 2026 09:30:13 GMT",
@@ -88392,7 +88434,7 @@
    "tema": "bitcoin precio hoy"
   },
   {
-   "titulo": "Strive compra bitcoin: 251 BTC y ya acumula 43.404 - Criptotendencias",
+   "titulo": "Strive compra bitcoin: suma 251 BTC por 17,5 millones y su acción cae 9,5% antes de la apertura - Criptotendencias",
    "enlace": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBzTWhzOGwyaEN6YVFKODlPazRtTjFHQlF5UzlTVnl6bVEzRFp6b3JtUHQ5a1hyVkV4TFAtalFJRmJTZ3VxYUprbFotcW0wTkRJbC0wNnNoMWhDWTBDVWlieXhLc3ZsdmlnbEN4dzhaLUs?oc=5",
    "fecha": "Mon, 16 Nov 2026 14:01:37 GMT",
    "fuente": "",
@@ -88402,13 +88444,6 @@
    "titulo": "Criptomonedas: valor de las principales divisas digitales hoy domingo 15 de noviembre - Infobae",
    "enlace": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZDMtY0ZNQVpPcDdRSzl1UlhNTFB6SGJ0TEZ4bnZhN3l6Ry1Nem5IRTVrMFlIVXNkdnlSYzBWYnRxQ0xHQWRYSnJQZ0FfZmJORnFJb2NJNi1nOGRCcGJkanE3dnFwdUs1U2VvMm5yenotZ2Jxb2o5aHBTNEtFeldPUFhFUkRhOVA1d3ZuczhURmMwa1pheE1icWNzeVBnc05QNDhoNG5HTnk4aWVnWlVWN2pPbmhLMndZNklQRHBnNDQwdnFy0gHfAUFVX3lxTFB0VHgtejBCOTItWF9fVG5CU0c4c1hjM3BmdmVxREtJclVOUnVwRU50SERZdDJ4WDF1QkdZcUZVRTZ6THhtS0dFdkdzWk5CcXVBTXBlX0lib2pVNVdfdXRvNF9hUWxRbTZLbm9CUHRVa2tqMkJxY0Rrb01sOUhSTWgtTG1IQl91d2JMT0dvWllMaFNHWkNwMzNLUk1IbW9QVjlualBjR0E3ZDNUR0w4S3NQVmFia0NYQzhYMmxjVF9QVWZTczN6WkZ1NnktYXZpTzRWVzZ5MG5CdjNzam5OTk0?oc=5",
    "fecha": "Sun, 15 Nov 2026 11:46:00 GMT",
-   "fuente": "",
-   "tema": "bitcoin precio hoy"
-  },
-  {
-   "titulo": "Precio de Bitcoin hoy: retrocede 3,91% y cotiza por debajo de los USD 72.000 - Cripto247",
-   "enlace": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQd0o0Wms1VEhCTUhHYy1HSGtzOERKbUpjZTNsREdaLTZBb0t3eE8wbnBPZy05WmRxajZQQVVQd2ZhNXcyT2VLOEF6eVkwYmZNb2w3aTJzMXVlNkEtTExrTFd5eTl6dHhTUV9SVjBMcnUyalBMUTZFRlhEUlFmQXpjQVRacEs2Y3JjMVI4c3U1YzJuMXg5eUxFZC0xRjZvX3hwa19uLUdtUlo3NkpxZHdnOGZQMXlKT2M?oc=5",
-   "fecha": "Thu, 12 Nov 2026 20:16:45 GMT",
    "fuente": "",
    "tema": "bitcoin precio hoy"
   },
