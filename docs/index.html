@@ -39,6 +39,8 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
 .etq{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700}.etq.COMPRAR{background:#22d39b22;color:var(--ok)}.etq.VENDER{background:#ff5d7322;color:var(--mal)}.etq.ESPERAR{background:#ffb54722;color:#ffb547}
 .invG{height:560px;border:1px solid var(--borde);border-radius:16px;overflow:hidden}.invLey{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--suave);margin:6px 0 10px}.invLey i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:5px}
 .barraA{height:8px;background:var(--panel2);border-radius:4px;overflow:hidden;min-width:70px}.barraA>div{height:100%;background:var(--grad)}.pos{color:var(--ok)}.neg{color:var(--mal)}
+nav{row-gap:4px}nav button{padding:7px 10px;font-size:14px}
+@media print{body *{visibility:hidden!important}#informeImp,#informeImp *{visibility:visible!important}#informeImp{position:absolute;left:0;top:0;width:100%;background:#fff!important;color:#000!important;border:none}#informeImp a{color:#000}#informeImp .muted{color:#444!important}}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="https://unpkg.com/lightweight-charts@5.0.8/dist/lightweight-charts.standalone.production.js"></script>
@@ -56,9 +58,67 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
 
 <div id="app" class="oculto">
 <header><div class="cab"><div class="logo"><i>◎</i>RADAR <span class="muted" style="font-weight:400;font-size:13px">en la nube</span></div>
-  <nav><button data-v="productos" class="act">📦 Productos</button><button data-v="asistente">💬 Asistente</button><button data-v="pedir">🔎 Pedir</button><button data-v="calculadora">🧮 Calculadora</button><button data-v="ventas">📣 Ventas</button><button data-v="capital">💰 Capital e inversiones</button><button data-v="aprendizaje">🧠 Aprendizaje</button><button data-v="actividad">⏱ Actividad</button></nav></div></header>
+  <nav><button data-v="tablero" class="act">📊 Tablero</button><button data-v="productos">📦 Productos</button><button data-v="ofertas">🛒 Ofertas y reventa</button><button data-v="asistente">💬 Asistente</button><button data-v="pedir">🔎 Pedir</button><button data-v="calculadora">🧮 Calculadora</button><button data-v="ventas">📣 Ventas</button><button data-v="capital">💰 Capital e inversiones</button><button data-v="cartera">📁 Mi cartera</button><button data-v="alertas">🔔 Alertas</button><button data-v="informes">📑 Informes</button><button data-v="aprendizaje">🧠 Aprendizaje</button><button data-v="actividad">⏱ Actividad</button><button data-v="config">⚙ Configuración</button></nav></div></header>
 <main>
-  <section id="v-productos">
+  <section id="v-tablero"><h1>Tablero</h1><p class="sub" id="tbEstado">Resumen de su capital, sus oportunidades y el mercado.</p>
+    <h2 style="margin-top:6px">💼 Resumen financiero</h2><div class="grid g4" id="tbFin"></div>
+    <div class="grid g2" style="margin-top:14px"><div class="card"><h2>Evolución del patrimonio</h2><canvas id="tbEvo" height="150"></canvas></div><div class="card"><h2>Distribución del capital</h2><canvas id="tbDist" height="150"></canvas></div></div>
+    <h2 style="margin-top:18px">🛒 Resumen comercial</h2><div class="grid g4" id="tbCom"></div>
+    <div class="card" style="margin-top:14px"><h2>Mejores oportunidades para comprar y revender</h2><div id="tbTop"></div></div>
+    <h2 style="margin-top:18px">🌎 Indicadores del mercado</h2><div class="card"><div id="tbMer"></div></div>
+    <div class="card" style="margin-top:14px"><h2>🔔 Alertas disparadas</h2><div id="tbAle"></div></div>
+  </section>
+  <section id="v-ofertas" class="oculto"><h1>Ofertas y reventa</h1><p class="sub" id="ofEstado">Cargando ofertas…</p>
+    <div class="subnav" id="ofMenu"><button data-s="ranking" class="act">🏆 Ranking de 20</button><button data-s="todas">🔎 Buscador de ofertas</button><button data-s="mercado">📊 Investigación de mercado</button><button data-s="simulador">🧪 Simulador de negocios</button><button data-s="proveedores">🏪 Proveedores</button></div>
+    <div class="ofS" id="of-ranking"></div>
+    <div class="ofS oculto" id="of-todas">
+      <div class="pedir" style="margin-bottom:12px"><input id="ofBuscar" placeholder="Buscar producto, marca o tienda…"><select id="ofCat" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"></select><select id="ofClase" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"><option value="">Todas las clasificaciones</option><option>Excelente oportunidad</option><option>Buena oportunidad</option><option>Oportunidad moderada</option><option>Baja rentabilidad</option><option>No recomendable</option></select><select id="ofOrden" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"><option value="puntaje">Ordenar: mejor oportunidad</option><option value="roi">Mayor ROI</option><option value="ganancia">Mayor ganancia por lote</option><option value="desc">Mayor descuento real</option><option value="inversion">Menor inversión</option></select></div>
+      <div id="ofLista" class="grid gp"></div></div>
+    <div class="ofS oculto" id="of-mercado"></div>
+    <div class="ofS oculto" id="of-simulador">
+      <div class="card"><h2>Simular una compra para revender</h2><p class="muted">Usa los mismos costos de Mercado Libre y de su web que la Calculadora de RADAR. Puede agregar varios productos y compararlos.</p>
+        <div class="grid g4 campos">
+          <label>Producto<input id="siNom" placeholder="Ej. Auriculares"></label><label>Capital disponible ($)<input id="siCap" type="number" value="500000"></label>
+          <label>Cantidad a comprar<input id="siCant" type="number" value="10"></label><label>Precio unitario de compra ($)<input id="siPre" type="number" value="20000"></label>
+          <label>Gastos adicionales del lote ($)<input id="siGas" type="number" value="20000"></label><label>Precio de venta ($)<input id="siVen" type="number" value="35000"></label>
+          <label>Canal<select id="siCanal"><option value="ml">Mercado Libre</option><option value="web">Tu web</option><option value="otro">Otro (indicar % de gastos)</option></select></label><label>Gastos de venta si es "Otro" (%)<input id="siOtro" type="number" value="10"></label>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="siCalc">Calcular</button><button class="btn sec" id="siAgregar">➕ Agregar a la comparación</button><button class="btn sec" id="siLimpiar">Limpiar comparación</button></div>
+        <div id="siRes" style="margin-top:14px"></div></div>
+      <div class="card" style="margin-top:14px"><h2>Comparación de productos</h2><div id="siComp"><p class="muted">Agregue productos para compararlos.</p></div></div></div>
+    <div class="ofS oculto" id="of-proveedores"></div>
+  </section>
+  <section id="v-cartera" class="oculto"><h1>Mi cartera</h1><p class="sub">Registre sus inversiones reales y simuladas. Los precios se actualizan solos con los datos de RADAR. Se guardan en este dispositivo: use "Copia de seguridad" para pasarlas a otro.</p>
+    <div class="grid g4" id="caRes"></div>
+    <div class="card" style="margin-top:14px"><h2>Agregar operación</h2><div class="grid g4 campos">
+      <label>Activo<input id="caAct" list="caLista" placeholder="Ej. GGAL.BA, AL30, BTC-USD o nombre libre"></label><datalist id="caLista"></datalist>
+      <label>Fecha de compra<input id="caFec" type="date"></label><label>Cantidad<input id="caCant" type="number" step="any"></label><label>Precio de entrada<input id="caPre" type="number" step="any"></label>
+      <label>Comisiones ($)<input id="caCom" type="number" step="any" value="0"></label><label>Moneda<select id="caMon"><option>ARS</option><option>USD</option></select></label>
+      <label>Plataforma o broker<input id="caPla" placeholder="Ej. IOL, Balanz, Binance"></label><label>Tipo<select id="caTipo"><option value="real">Operación real</option><option value="simulada">Simulación</option></select></label>
+    </div><div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="caAdd">Guardar operación</button><button class="btn sec" id="caExp">💾 Copia de seguridad</button><label class="btn sec">📂 Restaurar copia<input type="file" id="caImp" accept=".json" style="display:none"></label></div></div>
+    <div class="card" style="margin-top:14px"><h2>Operaciones reales</h2><div id="caReal"></div></div>
+    <div class="card" style="margin-top:14px"><h2>Simulaciones</h2><div id="caSim"></div></div>
+    <div class="grid g2" style="margin-top:14px"><div class="card"><h2>Exposición por categoría</h2><canvas id="caDist" height="160"></canvas></div><div class="card"><h2>Evolución histórica</h2><canvas id="caEvo" height="160"></canvas></div></div>
+  </section>
+  <section id="v-alertas" class="oculto"><h1>Alertas</h1><p class="sub">RADAR revisa sus alertas cada vez que se actualizan los datos y, mientras la página está abierta, le avisa con una notificación y por voz. Los mensajes de WhatsApp siguen con su configuración actual.</p>
+    <div class="card"><h2>Nueva alerta</h2><div class="grid g4 campos">
+      <label>Tipo<select id="alTipo"><option value="precio_sube">Un activo sube a un precio</option><option value="precio_baja">Un activo baja a un precio</option><option value="senal">Un activo da señal de compra</option><option value="oferta_precio">Un producto aparece por debajo de un precio</option><option value="oferta_roi">Aparece una oferta con ROI mínimo</option><option value="oferta_demanda">Aparece un producto con alta demanda</option><option value="rulo">Aparece un rulo conveniente</option><option value="cartera_gana">Mi cartera gana un %</option><option value="cartera_pierde">Mi cartera pierde un %</option></select></label>
+      <label>Activo o producto<input id="alObj" list="caLista" placeholder="Ej. BTC-USD o 'taladro'"></label><label>Valor<input id="alVal" type="number" step="any" placeholder="Precio, % o ROI"></label>
+      <label>&nbsp;<button class="btn" id="alAdd" style="justify-content:center">Crear alerta</button></label></div>
+      <p><button class="btn chico sec" id="alNotif">🔔 Permitir notificaciones en este dispositivo</button></p></div>
+    <div class="card" style="margin-top:14px"><h2>Mis alertas</h2><div id="alLista"></div></div>
+    <div class="card" style="margin-top:14px"><h2>Historial de avisos</h2><div id="alHist"></div></div>
+  </section>
+  <section id="v-informes" class="oculto"><h1>Informes</h1><p class="sub">Plan de acción con lo que conviene hacer hoy: qué comprar, dónde, a qué precio, a cuánto vender, cuánto invertir, cuánto se gana realmente y qué riesgos tiene.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><select id="inPer" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"><option value="1">Informe diario</option><option value="7">Informe semanal</option><option value="30">Informe mensual</option></select><button class="btn" id="inXls">📊 Exportar a Excel</button><button class="btn sec" id="inPdf">📄 Exportar a PDF</button><button class="btn sec" id="inVoz">🔊 Escuchar</button></div>
+    <div id="informeDoc"></div>
+  </section>
+  <section id="v-config" class="oculto"><h1>Configuración</h1><p class="sub">Estos datos personalizan los cálculos de la página (capital, riesgo, montos sugeridos). Se guardan en este dispositivo.</p>
+    <div class="card"><div class="grid g4 campos" id="cfForm"></div><div style="margin-top:12px"><button class="btn" id="cfGuardar">Guardar configuración</button> <span class="muted" id="cfMsg"></span></div></div>
+    <div class="card" style="margin-top:14px"><h2>Configuración del trabajo en la nube</h2><p class="muted">Categorías y sitios donde buscar ofertas, activos a analizar, comisiones y reglas de venta. Se editan en GitHub sin tocar código: abra el archivo, toque el lápiz, cambie el valor y toque "Commit changes".</p><div id="cfNube"></div></div>
+  </section>
+
+  <section id="v-productos" class="oculto">
     <div class="grid g4" id="kpis"></div>
     <p class="muted" id="estado" style="margin:12px 0"></p>
     <div class="card" id="informe" style="margin-bottom:16px"></div>
@@ -98,7 +158,7 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
   </section>
   <section id="v-capital" class="oculto"><h1>Capital e inversiones</h1>
     <p class="sub" id="invEstado">Cargando inversiones…</p>
-    <div class="subnav" id="invMenu"><button data-s="resumen" class="act">Resumen</button><button data-s="graficos">📈 Gráficos</button><button data-s="rulos">💱 Rulos</button><button data-s="rendimientos">🏦 Rendimientos</button><button data-s="consejo">🤝 Consejo de IAs</button><button data-s="productos">📦 Reinvertir en productos</button><button data-s="aprendizaje">🧠 Aprendizaje</button><button data-s="noticias">📰 Noticias</button><button class="btn chico sec" id="invVoz" style="margin-left:auto">🔊 Escuchar resumen</button></div>
+    <div class="subnav" id="invMenu"><button data-s="resumen" class="act">Resumen</button><button data-s="bolsa">🏛 Bolsa y CEDEARs</button><button data-s="bonos">📜 Bonos y letras</button><button data-s="cripto">₿ Cripto</button><button data-s="otros">🛢 Otros activos</button><button data-s="graficos">📈 Gráficos</button><button data-s="rulos">💱 Rulos</button><button data-s="rendimientos">🏦 Rendimientos</button><button data-s="consejo">🤝 Consejo de IAs</button><button data-s="productos">📦 Reinvertir en productos</button><button data-s="aprendizaje">🧠 Aprendizaje</button><button data-s="noticias">📰 Noticias</button><button class="btn chico sec" id="invVoz" style="margin-left:auto">🔊 Escuchar resumen</button></div>
     <div class="invS" id="inv-resumen"></div>
     <div class="invS oculto" id="inv-graficos">
       <div class="pedir" style="align-items:center;margin-bottom:10px"><select id="invSel" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"></select><span class="muted" id="invLectura"></span></div>
@@ -109,7 +169,7 @@ ul{margin:6px 0;padding-left:18px;line-height:1.6}details{border-bottom:1px soli
       <p class="muted">Incluye medias móviles de 20, 50 y 200 y RSI. Fibonacci se dibuja con la herramienta de la barra lateral izquierda; los niveles calculados por RADAR están en el gráfico de arriba.</p>
       <div id="invTV" class="invG" style="height:620px"></div>
     </div>
-    <div class="invS oculto" id="inv-rulos"></div>
+    <div class="invS oculto" id="inv-bolsa"></div><div class="invS oculto" id="inv-bonos"></div><div class="invS oculto" id="inv-cripto"></div><div class="invS oculto" id="inv-otros"></div><div class="invS oculto" id="inv-rulos"></div>
     <div class="invS oculto" id="inv-rendimientos"></div>
     <div class="invS oculto" id="inv-consejo"></div>
     <div class="invS oculto" id="inv-productos"><div id="capital"></div></div>
@@ -248,6 +308,7 @@ DATOS DE REFERENCIA (usar solo si la pregunta lo requiere):
 - Lecciones recientes: ${JSON.stringify(lec)}
 - Capital hoy: ${cap?JSON.stringify({resumen:cap.resumen,opciones:cap.opciones,estrategia:cap.estrategia_sugerida}):'sin datos'} (aclarar riesgos; no es asesoramiento financiero profesional)
 - Inversiones hoy (panel Capital e inversiones de RADAR: dólares, rulos, rendimientos, señales con medias móviles, RSI y Fibonacci, y votación de varias IA): ${typeof resumenInversiones==='function'?resumenInversiones():'sin datos'} (si preguntan qué comprar o vender, usá estos datos, indicá entrada, objetivo y stop, aclarando riesgos; la decisión final es del usuario)
+- Ofertas y reventa hoy (ranking de RADAR con qué comprar, dónde, precio, a cuánto vender, cuánto invertir, ganancia real y riesgos): ${typeof resumenOfertas==='function'?resumenOfertas():'sin datos'} (al recomendar productos o inversiones respondé siempre: qué comprar, dónde, a qué precio, a cuánto vender, cuánto invertir, cuánto se gana realmente y qué riesgos tiene)
 - Pendientes del usuario: ${JSON.stringify(TAREAS.filter(t=>!t.hecha).map(t=>t.texto))}
 - Lo que sabés del usuario: ${JSON.stringify([...(D.notas||[]).map(n=>n.texto),...MEM.map(m=>m.texto)].slice(-50))}`;
 }
@@ -654,6 +715,7 @@ function invDibujar(){
   INV_G.timeScale().fitContent();
   $('#invNiveles').innerHTML=`<div class="card"><h2>Cuándo y a qué precio</h2><p>Entrada: <b>${invN(a.niveles.entrada)}</b><br>Objetivo: <b>${invN(a.niveles.objetivo)}</b><br>${a.consenso.accion==='VENDER'?'Stop (salir si sube hasta)':'Stop (salir si baja hasta)'}: <b>${invN(a.niveles.stop)}</b></p><p class="muted">Dónde: ${a.tipo==='cripto'?'exchange de criptomonedas':'broker con cuenta comitente'}.</p></div>
    <div class="card"><h2>Lectura técnica y opinión de las IAs</h2><ul>${a.senales.map(s=>`<li>${esc(s.texto)}</li>`).join('')}${(a.razonesIA||[]).map(x=>`<li><i>${esc(x)}</i></li>`).join('')}</ul></div>`;
+  try{if(typeof invFicha==='function')invFicha()}catch(e){}
   invTV(a.tradingview);
 }
 
@@ -687,6 +749,251 @@ $('#invVoz').onclick=()=>{if(!INV)return;const act=INV.activos.filter(a=>a.preci
 // abrir directamente en Capital e inversiones si se entra con #inversiones
 (function(){if(!/inversiones|capital/.test(location.hash))return;let n=0;const t=setInterval(()=>{const b=document.querySelector('nav button[data-v="capital"]');if(++n>120)clearInterval(t);if(b&&!$('#app').classList.contains('oculto')){b.click();clearInterval(t)}},500)})();
 invCargar();setInterval(invCargar,10*60000);
+</script>
+
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script>
+// ===================== RADAR · Tablero, Ofertas y reventa, Cartera, Alertas, Informes y Configuración =====================
+const LS={get:(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const CONF_DEF={moneda:'ARS',capital:1000000,perfil:'moderado',horizonte:'medio',rentMin:3,roiMin:30,canal:'Mercado Libre',capitalPorProducto:300000,comision:0.6,riesgoPorOperacion:2,notificaciones:true};
+let CONF={...CONF_DEF,...LS.get('radar_conf',{})};
+let OF=null,CARTERA=LS.get('radar_cartera',[]),ALERTAS=LS.get('radar_alertas',[]),AVISOS=LS.get('radar_avisos',[]),SIMS=[];
+const $n=(x,d=0)=>x==null||isNaN(x)?'—':Number(x).toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const $p=x=>x==null||isNaN(x)?'—':`<span class="${x>=0?'pos':'neg'}">${x>=0?'+':''}${$n(x,1)} %</span>`;
+const CLASE_COLOR={'Excelente oportunidad':'COMPRAR','Buena oportunidad':'COMPRAR','Oportunidad moderada':'ESPERAR','Baja rentabilidad':'ESPERAR','No recomendable':'VENDER'};
+const PERFIL={conservador:{pct:5,nombre:'Conservador'},moderado:{pct:10,nombre:'Moderado'},agresivo:{pct:15,nombre:'Agresivo'}};
+const tabla=(cab,filas)=>`<div style="overflow-x:auto"><table class="ordenable"><tr>${cab.map(c=>`<th${/^\$|%|Precio|Invertir|Gan|ROI|Valor|Cant/.test(c)?' class="r"':''}>${c}</th>`).join('')}</tr>${filas.join('')}</table></div>`;
+// tablas ordenables: clic en el encabezado
+document.addEventListener('click',e=>{const th=e.target.closest('table.ordenable th');if(!th)return;const t=th.closest('table'),i=[...th.parentNode.children].indexOf(th),asc=th.dataset.o!=='a';th.dataset.o=asc?'a':'d';
+  const filas=[...t.querySelectorAll('tr')].slice(1),val=r=>{const s=r.children[i]?.innerText||'';const n=parseFloat(s.replace(/[^\d,.-]/g,'').replace(/\./g,'').replace(',','.'));return isNaN(n)?s:n};
+  filas.sort((a,b)=>{const x=val(a),y=val(b);return(typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y)))*(asc?1:-1)}).forEach(r=>t.appendChild(r))});
+
+// ---------- datos de ofertas ----------
+async function ofCargar(){
+  const o=typeof origen==='function'?origen():null,urls=[];
+  if(o)urls.push(`https://raw.githubusercontent.com/${o.owner}/${o.repo}/HEAD/docs/ofertas-datos/ofertas.json?t=${Date.now()}`);urls.push('ofertas-datos/ofertas.json?t='+Date.now());
+  for(const u of urls){try{const r=await fetch(u,{cache:'no-store'});if(r.ok){OF=await r.json();break}}catch(e){}}
+  $('#ofEstado').innerHTML=OF?`Actualizado ${hace(OF.generado)} · ${OF.resumen.total} ofertas vigentes · revisadas: ${esc(OF.categoriasRevisadas.join(', '))} · próximas: ${esc(OF.proximas.join(', '))}`:'Las ofertas aparecen después de la primera búsqueda en la nube (dos veces por día).';
+  ofPintar();todo();
+}
+const ofById=id=>OF?.ofertas.find(o=>o.id===id);
+function ofTarjeta(o,pos){
+  const sello=o.comprobado?.demanda?'<span class="chip">Demanda comprobada</span>':'<span class="chip g">Demanda estimada</span>';
+  const ver=/real/.test(o.verificacion)?`<span class="chip">✔ ${esc(o.verificacion)}</span>`:`<span class="chip g">⚠ ${esc(o.verificacion)}</span>`;
+  return`<div class="card ${/Excelente|Buena/.test(o.clasificacion)?'ok':''}"><div style="display:flex;gap:12px">${o.imagen?`<img src="${esc(o.imagen)}" style="width:96px;height:96px;object-fit:cover;border-radius:12px;background:#fff" onerror="this.remove()">`:''}
+  <div style="flex:1"><div class="muted" style="font-size:12px">${pos?`#${pos} · `:''}${esc(o.categoria)} · ${esc([o.marca,o.modelo].filter(Boolean).join(' '))}</div><h2 style="margin:2px 0 6px">${esc(o.nombre)}</h2><span class="etq ${CLASE_COLOR[o.clasificacion]}">${esc(o.clasificacion)}</span></div></div>
+  <table style="margin-top:10px">
+  <tr><td>🛍 <b>Dónde comprar</b></td><td>${esc(o.tienda)}${o.ubicacion?' · '+esc(o.ubicacion):''} · ${esc(o.disponibilidad)}${o.url?` · <a href="${esc(o.url)}" target="_blank" rel="noopener">Ver publicación</a>`:''}</td></tr>
+  <tr><td>💲 <b>Precio de compra</b></td><td>${o.moneda==='USD'?'US$ ':'$'}${$n(o.precio)}${o.precioAnterior?` <span class="muted"><s>${$n(o.precioAnterior)}</s> (−${$n(o.descuentoPublicadoPct,0)} %)</span>`:''} · envío ${o.envio==null?'sin dato':o.envio?'$'+$n(o.envio):'gratis'}</td></tr>
+  <tr><td>📈 <b>Vender a</b></td><td>$${$n(o.precioVenta)} en ${esc(o.canal||'—')} <span class="muted">(mercado: $${$n(o.precioMercado)}; mínimo sin perder: $${$n(o.precioMinimoVenta)})</span></td></tr>
+  <tr><td>💰 <b>Invertir</b></td><td>${o.unidadesSugeridas} u. × $${$n(o.costoTotalUnidad)} = <b>$${$n(o.inversion)}</b> <span class="muted">(se recupera en ~${o.diasRecupero??'—'} días)</span></td></tr>
+  <tr><td>✅ <b>Ganancia real</b></td><td><b>$${$n(o.gananciaUnidad)}</b> por unidad · <b>$${$n(o.gananciaLote)}</b> el lote · ROI ${$p(o.roiPct)} <span class="muted">(gastos de venta $${$n(o.gastosVentaUnidad)}/u.)</span></td></tr>
+  <tr><td>⚠ <b>Riesgos</b></td><td>${o.riesgos.length?o.riesgos.map(esc).join(' · '):'Sin riesgos especiales detectados.'}</td></tr></table>
+  <div style="margin-top:8px">${ver}${sello}<span class="chip g">Demanda ${esc(o.demanda)}${o.evidenciaDemanda?': '+esc(o.evidenciaDemanda):''}</span><span class="chip g">Competencia ${esc(o.competencia)}${o.vendedoresML?` (${o.vendedoresML} vendedores)`:''}</span></div>
+  <div class="muted" style="font-size:12px;margin-top:6px">Consultado ${new Date(o.encontrada).toLocaleString('es-AR')}</div></div>`;
+}
+function ofPintar(){
+  if(!OF){['#of-ranking','#of-mercado','#of-proveedores'].forEach(s=>$(s).innerHTML='<div class="card"><p class="muted">Todavía no hay datos. La primera búsqueda se hace a las 9:41 o 18:41, o al tocar "Run workflow" en "RADAR Ofertas" de GitHub.</p></div>');return}
+  const rk=OF.ranking.map(ofById).filter(Boolean);
+  $('#of-ranking').innerHTML=`<div class="card"><h2>Los ${rk.length} productos que más conviene comprar para revender</h2><p class="muted">Ordenados por ganancia real, demanda, competencia y descuento verificado. Mínimo configurado: ROI ${CONF.roiMin} %. ${OF.resumen.nuevasEstaVuelta} ofertas nuevas en la última búsqueda.</p>${rk.length?tabla(['#','Qué comprar','Dónde','Precio compra','Vender a','Invertir','Ganancia lote','ROI','Clasificación'],rk.map((o,i)=>`<tr><td>${i+1}</td><td><b>${esc(o.nombre)}</b></td><td>${o.url?`<a href="${esc(o.url)}" target="_blank">${esc(o.tienda)}</a>`:esc(o.tienda)}</td><td class="r">$${$n(o.precio)}</td><td class="r">$${$n(o.precioVenta)}</td><td class="r">$${$n(o.inversion)}</td><td class="r"><b>$${$n(o.gananciaLote)}</b></td><td class="r">${$p(o.roiPct)}</td><td><span class="etq ${CLASE_COLOR[o.clasificacion]}">${esc(o.clasificacion)}</span></td></tr>`)):'<p>Hoy ninguna oferta supera los mínimos de ganancia. RADAR sigue buscando.</p>'}</div><div class="grid gp" style="margin-top:14px">${rk.slice(0,20).map((o,i)=>ofTarjeta(o,i+1)).join('')}</div>`;
+  const cats=[...new Set(OF.ofertas.map(o=>o.categoria))].sort();$('#ofCat').innerHTML='<option value="">Todas las categorías</option>'+cats.map(c=>`<option>${esc(c)}</option>`).join('');
+  ofFiltrar();
+  const t=OF.tendencias;
+  $('#of-mercado').innerHTML=t?`<div class="card"><h2>Qué están comprando hoy en Argentina</h2><p>${esc(t.resumen||'')}</p>${t.categorias_calientes?.length?`<p><b>Categorías con más demanda:</b> ${t.categorias_calientes.map(esc).join(', ')}</p>`:''}${tabla(['Producto','Categoría','Tendencia','Competencia','Precio promedio','Estacionalidad','Dato'],(t.productos||[]).map(x=>`<tr><td><b>${esc(x.producto)}</b></td><td>${esc(x.categoria)}</td><td>${esc(x.tendencia)}</td><td>${esc(x.competencia)}</td><td class="r">$${$n(x.precio_promedio_ars)}</td><td>${esc(x.estacionalidad)}</td><td class="muted">${/estim/i.test(x.evidencia||'')?'Estimación':'Comprobado'}: ${segura(x.url)?`<a href="${esc(x.url)}" target="_blank">${esc(x.evidencia)}</a>`:esc(x.evidencia)}</td></tr>`))}<p class="muted">Actualizado ${esc(t.fecha)}. Los datos marcados "Estimación" no tienen cifras publicadas por las plataformas.</p></div>`:'<div class="card"><p class="muted">La investigación de mercado se actualiza una vez por día.</p></div>';
+  const prov={};OF.ofertas.forEach(o=>{const k=o.tienda||'—';(prov[k]||=[]).push(o)});
+  $('#of-proveedores').innerHTML=`<div class="card"><h2>Tiendas y proveedores con ofertas</h2>${tabla(['Proveedor','Ofertas','Mejor oportunidad','Descuento real promedio','Categorías'],Object.entries(prov).sort((a,b)=>b[1].length-a[1].length).map(([k,l])=>{const m=[...l].sort((a,b)=>b.puntaje-a.puntaje)[0],d=l.map(o=>o.descuentoVsMercadoPct).filter(x=>x!=null);return`<tr><td><b>${esc(k)}</b></td><td class="r">${l.length}</td><td>${esc(m.nombre)} <span class="muted">(ROI ${$n(m.roiPct,0)} %)</span></td><td class="r">${d.length?$n(d.reduce((a,b)=>a+b,0)/d.length,1)+' %':'—'}</td><td class="muted">${esc([...new Set(l.map(o=>o.categoria))].join(', '))}</td></tr>`}))}</div>`;
+}
+function ofFiltrar(){if(!OF)return;const q=$('#ofBuscar').value.toLowerCase(),c=$('#ofCat').value,cl=$('#ofClase').value,ord=$('#ofOrden').value;
+  let l=OF.ofertas.filter(o=>(!q||(o.nombre+' '+o.marca+' '+o.tienda).toLowerCase().includes(q))&&(!c||o.categoria===c)&&(!cl||o.clasificacion===cl));
+  const k={puntaje:o=>-o.puntaje,roi:o=>-(o.roiPct??-999),ganancia:o=>-(o.gananciaLote??-1e12),desc:o=>-(o.descuentoVsMercadoPct??-999),inversion:o=>o.inversion??1e12}[ord];l.sort((a,b)=>k(a)-k(b));
+  $('#ofLista').innerHTML=l.map(o=>ofTarjeta(o)).join('')||'<p class="muted">No hay ofertas con esos filtros.</p>'}
+['#ofBuscar','#ofCat','#ofClase','#ofOrden'].forEach(s=>$(s).addEventListener('input',ofFiltrar));
+$$('#ofMenu button').forEach(b=>b.onclick=()=>{$$('#ofMenu button').forEach(x=>x.classList.toggle('act',x===b));$$('.ofS').forEach(s=>s.classList.toggle('oculto',s.id!=='of-'+b.dataset.s))});
+
+// ---------- simulador de negocios ----------
+function simular(){
+  const v=id=>parseFloat($(id).value)||0,cant=Math.max(1,v('#siCant')),pu=v('#siPre'),gas=v('#siGas'),pv=v('#siVen'),cap=v('#siCap'),canal=$('#siCanal').value;
+  const costoU=pu+gas/cant;let gastoVentaU=pv*v('#siOtro')/100;
+  if(canal!=='otro'&&typeof rentab==='function'&&D){try{usarConfig(D.tarifas||{dolar_oficial:D.dolar});const e={metodo:'local',costo_local:costoU,peso:0.5,cantidad:cant};const r=canal==='ml'?rentab(pv,e):rentabWeb(pv,e);gastoVentaU=r.cv.total}catch(e){}}
+  const inv=costoU*cant,fact=pv*cant,gb=(pv-costoU)*cant,gn=(pv-gastoVentaU-costoU)*cant,roi=inv?gn/inv*100:0,mc=pv-gastoVentaU-costoU,eq=mc>0?Math.ceil(inv/(pv-gastoVentaU)):null;
+  const esc3=[['Pesimista',0.85,0.6],['Normal',1,1],['Optimista',1.08,1]].map(([n,fp,fv])=>{const u=Math.floor(cant*fv),g=(pv*fp-gastoVentaU*fp-costoU)*u-(cant-u)*0;return{n,precio:pv*fp,u,g:g-(cant-u)*0,roi:inv?((pv*fp-gastoVentaU*fp)*u-inv)/inv*100:0}});
+  return{nom:$('#siNom').value||'Producto',cant,costoU,inv,fact,gb,gn,roi,mc,eq,cap,alcanza:inv<=cap,esc3,canal:{ml:'Mercado Libre',web:'Tu web',otro:'Otro'}[canal]};
+}
+function simPintar(s){$('#siRes').innerHTML=`<div class="grid g4">${[['Inversión total','$'+$n(s.inv)+(s.alcanza?'':' ⚠ supera su capital')],['Facturación potencial','$'+$n(s.fact)],['Ganancia bruta','$'+$n(s.gb)],['Ganancia neta','$'+$n(s.gn)],['ROI',$n(s.roi,1)+' %'],['Margen de contribución por unidad','$'+$n(s.mc)],['Punto de equilibrio',s.eq?s.eq+' unidades vendidas':'no se alcanza'],['Unidades para recuperar la inversión',s.eq?s.eq+' de '+s.cant:'—']].map(([l,v])=>`<div class="card kpi"><div class="l">${l}</div><div class="v" style="font-size:20px">${v}</div></div>`).join('')}</div>
+  ${tabla(['Escenario','Precio de venta','Unidades vendidas','ROI'],s.esc3.map(e=>`<tr><td><b>${e.n}</b></td><td class="r">$${$n(e.precio)}</td><td class="r">${e.u}</td><td class="r">${$p(e.roi)}</td></tr>`))}<p class="muted">Pesimista: vende el 60 % a un precio 15 % menor. Optimista: vende todo a un precio 8 % mayor.</p>`}
+$('#siCalc').onclick=()=>simPintar(simular());
+$('#siAgregar').onclick=()=>{const s=simular();simPintar(s);SIMS.push(s);simComp()};$('#siLimpiar').onclick=()=>{SIMS=[];simComp()};
+function simComp(){$('#siComp').innerHTML=SIMS.length?tabla(['Producto','Canal','Invertir','Ganancia neta','ROI','Punto de equilibrio'],[...SIMS].sort((a,b)=>b.roi-a.roi).map((s,i)=>`<tr><td>${i===0?'🏆 ':''}<b>${esc(s.nom)}</b></td><td>${s.canal}</td><td class="r">$${$n(s.inv)}</td><td class="r">$${$n(s.gn)}</td><td class="r">${$p(s.roi)}</td><td class="r">${s.eq??'—'}</td></tr>`)):'<p class="muted">Agregue productos para compararlos.</p>'}
+
+// ---------- precios para cartera y alertas ----------
+function precioDe(sim){if(!sim)return null;const s=String(sim).toUpperCase();
+  const a=INV?.activos.find(x=>x.yahoo?.toUpperCase()===s||x.nombre.toUpperCase()===s);if(a?.precio)return{precio:a.precio,nombre:a.nombre,categoria:a.categoria||a.tipo,moneda:a.moneda};
+  const rf=INV?.rentaFija;const b=[...(rf?.bonos||[]),...(rf?.letras||[]),...(rf?.ons||[])].find(x=>x.simbolo?.toUpperCase()===s);if(b)return{precio:b.precio,nombre:b.simbolo,categoria:b.tipo==='Bono'?'Bonos':b.tipo==='Letra'?'Letras':'Obligaciones negociables',moneda:/D$|C$/.test(s)?'USD':'ARS'};return null}
+function pesos(v,m){return m==='USD'?v*(INV?.dolar?.bolsa?.venta||D?.dolar||1):v}
+
+// ---------- cartera ----------
+function caCalc(){return CARTERA.map(o=>{const q=precioDe(o.simbolo),pa=q?.precio??o.precioManual??o.precio,costo=o.cantidad*o.precio+(+o.comisiones||0),valor=o.cantidad*pa;return{...o,actual:pa,costo,valor,gan:valor-costo,pct:costo?(valor-costo)/costo*100:0,categoria:q?.categoria||o.categoria||'Otros',nombre:q?.nombre||o.simbolo,auto:!!q}})}
+function caResumen(tipo='real'){const l=caCalc().filter(o=>o.tipo===tipo);const c=l.reduce((a,o)=>a+pesos(o.costo,o.moneda),0),v=l.reduce((a,o)=>a+pesos(o.valor,o.moneda),0);return{l,costo:c,valor:v,gan:v-c,pct:c?(v-c)/c*100:0}}
+function caPintar(){
+  const r=caResumen('real'),dispo=Math.max(0,CONF.capital-r.costo);
+  $('#caRes').innerHTML=[['Capital total',CONF.capital],['Capital invertido',r.costo],['Disponible para invertir',dispo],['Valor actual',r.valor]].map(([l,v])=>`<div class="card kpi"><div class="l">${l}</div><div class="v">$${$n(v)}</div></div>`).join('')+`<div class="card kpi"><div class="l">Ganancia / pérdida</div><div class="v">$${$n(r.gan)}</div><div>${$p(r.pct)}</div></div>`;
+  const fila=o=>`<tr><td><b>${esc(o.nombre)}</b><div class="muted">${esc(o.categoria)} · ${esc(o.plataforma||'')}</div></td><td>${esc(o.fecha)}</td><td class="r">${$n(o.cantidad,2)}</td><td class="r">${o.moneda==='USD'?'US$':'$'}${$n(o.precio,2)}</td><td class="r">${o.moneda==='USD'?'US$':'$'}${$n(o.actual,2)}${o.auto?'':' <span class="muted">(manual)</span>'}</td><td class="r">${$n(o.valor,0)}</td><td class="r">${$n(o.gan,0)}</td><td class="r">${$p(o.pct)}</td><td><button class="btn chico sec" data-cadel="${o.id}">✕</button>${o.auto?'':` <button class="btn chico sec" data-caman="${o.id}">Precio</button>`}</td></tr>`;
+  const cab=['Activo','Fecha','Cantidad','Precio entrada','Precio actual','Valor','Ganancia','%',''];
+  $('#caReal').innerHTML=r.l.length?tabla(cab,r.l.map(fila)):'<p class="muted">Todavía no cargó operaciones reales.</p>';
+  const s=caResumen('simulada');$('#caSim').innerHTML=s.l.length?tabla(cab,s.l.map(fila))+`<p class="muted">Resultado simulado: $${$n(s.gan)} (${$n(s.pct,1)} %)</p>`:'<p class="muted">Sin simulaciones.</p>';
+  $$('[data-cadel]').forEach(b=>b.onclick=()=>{if(!confirm('¿Borrar esta operación?'))return;CARTERA=CARTERA.filter(o=>o.id!==b.dataset.cadel);LS.set('radar_cartera',CARTERA);todo()});
+  $$('[data-caman]').forEach(b=>b.onclick=()=>{const v=parseFloat(prompt('Precio actual de este activo:'));if(!v)return;const o=CARTERA.find(x=>x.id===b.dataset.caman);o.precioManual=v;LS.set('radar_cartera',CARTERA);todo()});
+  // historial diario del patrimonio
+  const h=LS.get('radar_cartera_hist',[]),hoy=new Date().toISOString().slice(0,10);if(r.l.length){const i=h.findIndex(x=>x.f===hoy);const reg={f:hoy,v:Math.round(r.valor),c:Math.round(r.costo)};if(i>=0)h[i]=reg;else h.push(reg);LS.set('radar_cartera_hist',h.slice(-730))}
+  const dist={};r.l.forEach(o=>dist[o.categoria]=(dist[o.categoria]||0)+pesos(o.valor,o.moneda));if(dispo>0)dist['Disponible']=dispo;
+  grafico('caDist','doughnut',Object.keys(dist),[{data:Object.values(dist)}]);grafico('tbDist','doughnut',Object.keys(dist),[{data:Object.values(dist)}]);
+  const hh=LS.get('radar_cartera_hist',[]);const evo=[{label:'Valor',data:hh.map(x=>x.v),borderColor:'#00d4ff',tension:.3},{label:'Invertido',data:hh.map(x=>x.c),borderColor:'#7c5cff',tension:.3}];
+  grafico('caEvo','line',hh.map(x=>x.f.slice(5)),evo);grafico('tbEvo','line',hh.map(x=>x.f.slice(5)),evo);
+  $('#caLista').innerHTML=(INV?.activos||[]).map(a=>`<option value="${esc(a.yahoo)}">${esc(a.nombre)}</option>`).join('')+[...(INV?.rentaFija?.bonos||[]),...(INV?.rentaFija?.letras||[])].map(b=>`<option value="${esc(b.simbolo)}">${esc(b.tipo)}</option>`).join('');
+}
+const GR={};function grafico(id,tipo,labels,datasets){const c=document.getElementById(id);if(!c||typeof Chart==='undefined')return;GR[id]?.destroy();const col=['#7c5cff','#00d4ff','#22d39b','#ffb547','#ff5d73','#bc8cff','#4c8dff','#8d98b8'];
+  GR[id]=new Chart(c,{type:tipo,data:{labels,datasets:datasets.map(d=>tipo==='doughnut'?{...d,backgroundColor:col,borderWidth:0}:d)},options:{plugins:{legend:{labels:{color:'#c9d1e8'}}},scales:tipo==='line'?{x:{ticks:{color:'#8d98b8'}},y:{ticks:{color:'#8d98b8'}}}:{}}})}
+$('#caFec').value=new Date().toISOString().slice(0,10);
+$('#caAct').addEventListener('change',()=>{const q=precioDe($('#caAct').value);if(q){$('#caPre').value=+q.precio.toFixed(4);$('#caMon').value=q.moneda||'ARS'}});
+$('#caAdd').onclick=()=>{const sim=$('#caAct').value.trim(),cant=parseFloat($('#caCant').value),pre=parseFloat($('#caPre').value);if(!sim||!cant||!pre)return alert('Complete activo, cantidad y precio de entrada.');
+  CARTERA.push({id:Date.now().toString(36),simbolo:sim,fecha:$('#caFec').value,cantidad:cant,precio:pre,comisiones:parseFloat($('#caCom').value)||0,moneda:$('#caMon').value,plataforma:$('#caPla').value,tipo:$('#caTipo').value});
+  LS.set('radar_cartera',CARTERA);['#caAct','#caCant','#caPre'].forEach(s=>$(s).value='');todo()};
+$('#caExp').onclick=()=>{const b=new Blob([JSON.stringify({cartera:CARTERA,historial:LS.get('radar_cartera_hist',[]),alertas:ALERTAS,configuracion:CONF,fecha:new Date().toISOString()},null,1)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='radar-copia-'+new Date().toISOString().slice(0,10)+'.json';a.click()};
+$('#caImp').onchange=async e=>{try{const d=JSON.parse(await e.target.files[0].text());if(!confirm('¿Reemplazar los datos de este dispositivo por los de la copia?'))return;CARTERA=d.cartera||[];ALERTAS=d.alertas||[];CONF={...CONF_DEF,...(d.configuracion||{})};LS.set('radar_cartera',CARTERA);LS.set('radar_alertas',ALERTAS);LS.set('radar_conf',CONF);if(d.historial)LS.set('radar_cartera_hist',d.historial);todo();alert('Copia restaurada.')}catch(err){alert('No se pudo leer la copia: '+err.message)}};
+
+// ---------- alertas ----------
+const AL_TXT={precio_sube:'sube a',precio_baja:'baja a',senal:'da señal de compra',oferta_precio:'aparece por debajo de $',oferta_roi:'oferta con ROI de al menos',oferta_demanda:'producto con alta demanda',rulo:'rulo conveniente',cartera_gana:'cartera gana',cartera_pierde:'cartera pierde'};
+function alPintar(){
+  $('#alLista').innerHTML=ALERTAS.length?tabla(['Alerta','Estado',''],ALERTAS.map(a=>`<tr><td>${esc(a.obj||'')} ${AL_TXT[a.tipo]} ${a.val!=null&&!isNaN(a.val)?esc(a.val)+(/roi|cartera/.test(a.tipo)?' %':''):''}</td><td>${a.activa?'Activa':'Pausada'}</td><td><button class="btn chico sec" data-alon="${a.id}">${a.activa?'Pausar':'Activar'}</button> <button class="btn chico sec" data-aldel="${a.id}">✕</button></td></tr>`)):'<p class="muted">No hay alertas. Cree la primera arriba.</p>';
+  $('#alHist').innerHTML=AVISOS.length?AVISOS.slice(0,40).map(a=>`<div>${esc(new Date(a.f).toLocaleString('es-AR'))} · ${esc(a.t)}</div>`).join(''):'<p class="muted">Sin avisos todavía.</p>';
+  $('#tbAle').innerHTML=AVISOS.length?AVISOS.slice(0,6).map(a=>`<div>🔔 ${esc(a.t)} <span class="muted">· ${hace(a.f)}</span></div>`).join(''):'<p class="muted">Sin alertas disparadas.</p>';
+  $$('[data-aldel]').forEach(b=>b.onclick=()=>{ALERTAS=ALERTAS.filter(a=>a.id!==b.dataset.aldel);LS.set('radar_alertas',ALERTAS);alPintar()});
+  $$('[data-alon]').forEach(b=>b.onclick=()=>{const a=ALERTAS.find(x=>x.id===b.dataset.alon);a.activa=!a.activa;LS.set('radar_alertas',ALERTAS);alPintar()});
+}
+function alRevisar(){
+  const hoy=new Date().toISOString().slice(0,10),nuevos=[];const avisar=(a,clave,t)=>{const k=a.id+'|'+clave+'|'+hoy;if(AVISOS.some(x=>x.k===k))return;AVISOS.unshift({k,t,f:new Date().toISOString()});nuevos.push(t)};
+  const ofs=OF?.ofertas||[],tot=caResumen('real');
+  for(const a of ALERTAS.filter(x=>x.activa)){const q=precioDe(a.obj),v=+a.val;
+    if(a.tipo==='precio_sube'&&q&&q.precio>=v)avisar(a,'p',`${q.nombre} llegó a ${$n(q.precio,2)} (objetivo ${$n(v,2)}).`);
+    if(a.tipo==='precio_baja'&&q&&q.precio<=v)avisar(a,'p',`${q.nombre} bajó a ${$n(q.precio,2)} (objetivo ${$n(v,2)}).`);
+    if(a.tipo==='senal'){const x=INV?.activos.find(z=>z.yahoo?.toUpperCase()===String(a.obj).toUpperCase());if(x?.consenso?.accion==='COMPRAR')avisar(a,'s',`${x.nombre} tiene señal de compra (acuerdo ${Math.round(x.consenso.acuerdo*100)} %).`)}
+    if(a.tipo==='oferta_precio')ofs.filter(o=>o.nombre.toLowerCase().includes(String(a.obj||'').toLowerCase())&&o.precio<=v).forEach(o=>avisar(a,o.id,`${o.nombre} a $${$n(o.precio)} en ${o.tienda}.`));
+    if(a.tipo==='oferta_roi')ofs.filter(o=>o.roiPct>=v&&(!a.obj||o.nombre.toLowerCase().includes(a.obj.toLowerCase()))).forEach(o=>avisar(a,o.id,`Oferta con ROI ${$n(o.roiPct,0)} %: ${o.nombre} en ${o.tienda}.`));
+    if(a.tipo==='oferta_demanda')ofs.filter(o=>o.demanda==='alta'&&o.comprobado?.demanda&&(!a.obj||o.nombre.toLowerCase().includes(a.obj.toLowerCase()))).forEach(o=>avisar(a,o.id,`Producto con alta demanda: ${o.nombre}.`));
+    if(a.tipo==='rulo')(INV?.rulos||[]).filter(r=>r.conviene&&r.netoPct>=(v||0)).forEach(r=>avisar(a,r.nombre,`Rulo conveniente: ${r.nombre}, ${$n(r.netoPct,2)} % neto.`));
+    if(a.tipo==='cartera_gana'&&tot.l.length&&tot.pct>=v)avisar(a,'g',`Su cartera gana ${$n(tot.pct,1)} %.`);
+    if(a.tipo==='cartera_pierde'&&tot.l.length&&tot.pct<=-Math.abs(v))avisar(a,'l',`Su cartera pierde ${$n(tot.pct,1)} %.`);}
+  AVISOS=AVISOS.slice(0,200);LS.set('radar_avisos',AVISOS);
+  if(nuevos.length&&CONF.notificaciones){try{if(Notification.permission==='granted')nuevos.slice(0,3).forEach(t=>new Notification('RADAR',{body:t}))}catch(e){}if(typeof decirAviso==='function')decirAviso('Atención. '+nuevos.slice(0,3).join(' '))}
+}
+$('#alAdd').onclick=()=>{const t=$('#alTipo').value,o=$('#alObj').value.trim(),v=parseFloat($('#alVal').value);if(/precio_|oferta_precio/.test(t)&&(!o||isNaN(v)))return alert('Indique el activo o producto y el valor.');if(t==='senal'&&!o)return alert('Indique el activo.');
+  ALERTAS.push({id:Date.now().toString(36),tipo:t,obj:o,val:isNaN(v)?null:v,activa:true});LS.set('radar_alertas',ALERTAS);$('#alObj').value=$('#alVal').value='';alRevisar();alPintar()};
+$('#alNotif').onclick=async()=>{try{const p=await Notification.requestPermission();alert(p==='granted'?'Listo: RADAR puede mostrar notificaciones en este dispositivo.':'El navegador no dio permiso para notificaciones.')}catch(e){alert('Este navegador no permite notificaciones.')}};
+
+// ---------- monto sugerido para inversiones (según capital y perfil) ----------
+function montoInversion(a){
+  const disp=Math.max(0,CONF.capital-caResumen('real').costo)||CONF.capital,tope=disp*(PERFIL[CONF.perfil]?.pct||10)/100;
+  const ent=+a.niveles.entrada||a.precio,stop=+a.niveles.stop,obj=+a.niveles.objetivo,riesgoU=stop&&ent>stop?(ent-stop)/ent:0.08;
+  const porRiesgo=CONF.capital*CONF.riesgoPorOperacion/100/riesgoU,monto=Math.round(Math.min(tope,porRiesgo));
+  const com=monto*CONF.comision/100*2,gan=obj&&ent?monto*(obj/ent-1)-com:null,perd=monto*riesgoU+com;
+  return{monto,gan,perd,ent,obj,stop}}
+
+// ---------- informes ----------
+function informeDatos(){
+  const per=+$('#inPer').value,desde=new Date(Date.now()-per*864e5).toISOString();
+  const prods=(OF?.ranking||[]).map(ofById).filter(o=>o&&o.encontrada>=desde).slice(0,20);
+  const acts=(INV?.activos||[]).filter(a=>a.precio&&a.consenso?.accion==='COMPRAR').sort((a,b)=>b.consenso.acuerdo-a.consenso.acuerdo);
+  const rulos=(INV?.rulos||[]).filter(r=>r.conviene),seg=(INV?.rendimientos||[]).filter(r=>r.riesgo==='Bajo').slice(0,3);
+  const ventas=(INV?.activos||[]).filter(a=>a.precio&&a.consenso?.accion==='VENDER');
+  return{per,prods,acts,rulos,seg,ventas}}
+function informePintar(){
+  const I=informeDatos(),dolar=INV?.dolar?.bolsa?.venta,titulo={1:'Informe diario',7:'Informe semanal',30:'Informe mensual'}[I.per];
+  const filaP=o=>`<tr><td><b>${esc(o.nombre)}</b></td><td>${o.url?`<a href="${esc(o.url)}" target="_blank">${esc(o.tienda)}</a>`:esc(o.tienda)}</td><td class="r">$${$n(o.precio)}</td><td class="r">$${$n(o.precioVenta)} <span class="muted">${esc(o.canal||'')}</span></td><td class="r">$${$n(o.inversion)} <span class="muted">(${o.unidadesSugeridas} u.)</span></td><td class="r"><b>$${$n(o.gananciaLote)}</b> <span class="muted">ROI ${$n(o.roiPct,0)} %</span></td><td class="muted">${esc(o.riesgos.slice(0,3).join(' · ')||'—')}</td></tr>`;
+  const filaA=a=>{const m=montoInversion(a);return`<tr><td><b>${esc(a.nombre)}</b> <span class="muted">${esc(a.categoria||'')}</span></td><td>${a.tipo==='cripto'?'Exchange de cripto':'Broker (cuenta comitente)'}</td><td class="r">${$n(m.ent,2)}</td><td class="r">${$n(m.obj,2)}</td><td class="r">$${$n(m.monto)}</td><td class="r"><b>$${$n(m.gan)}</b></td><td class="muted">Stop ${$n(m.stop,2)} (pérdida máx. ~$${$n(m.perd)}) · volatilidad ${$n(a.ficha?.volatilidadAnualPct,0)} % · riesgo ${esc(a.ficha?.riesgo||'—')} · acuerdo IA ${Math.round(a.consenso.acuerdo*100)} %</td></tr>`};
+  const cab=['Qué comprar','Dónde','A qué precio','A cuánto vender','Cuánto invertir','Ganancia real','Riesgos'];
+  $('#informeDoc').innerHTML=`<div class="card" id="informeImp"><h1>${titulo} de RADAR</h1><p class="muted">${new Date().toLocaleString('es-AR')} · Capital: $${$n(CONF.capital)} · Perfil: ${PERFIL[CONF.perfil]?.nombre} · Dólar MEP: $${$n(dolar)} · Inflación mensual: ${$n(INV?.inflacionMensualPct,1)} %</p>
+  <h2>1. Productos para comprar y revender</h2>${I.prods.length?tabla(cab,I.prods.map(filaP)):'<p class="muted">No hay productos que superen los mínimos de ganancia en este período.</p>'}
+  <h2 style="margin-top:16px">2. Inversiones con señal de compra</h2>${I.acts.length?tabla(cab,I.acts.map(filaA)):'<p class="muted">No hay activos con señal de compra.</p>'}<p class="muted">Monto sugerido: hasta el ${PERFIL[CONF.perfil]?.pct} % del capital disponible y sin arriesgar más del ${CONF.riesgoPorOperacion} % del capital total si se toca el stop. Incluye comisiones de ${CONF.comision} % por operación.</p>
+  <h2 style="margin-top:16px">3. Rulos y dinero de bajo riesgo</h2>${tabla(['Qué hacer','Cómo','Ganancia','Riesgos'],[...I.rulos.map(r=>`<tr><td><b>${esc(r.nombre)}</b></td><td>${esc(r.pasos)}</td><td class="r">${$n(r.netoPct,2)} % neto · $${$n(CONF.capital*(PERFIL[CONF.perfil]?.pct||10)/100*r.netoPct/100)} invirtiendo $${$n(CONF.capital*(PERFIL[CONF.perfil]?.pct||10)/100)}</td><td class="muted">${esc(r.nota)}</td></tr>`),...I.seg.map(r=>`<tr><td><b>${esc(r.nombre)}</b></td><td>${esc(r.donde)}: ${esc(r.como)}</td><td class="r">${$n(r.mensualPct,2)} % mensual (real ${$n(r.realPct,2)} %)</td><td class="muted">Riesgo bajo. Rinde menos que la inflación si el valor real es negativo.</td></tr>`)])}
+  ${I.ventas.length?`<h2 style="margin-top:16px">4. Activos para vender o evitar</h2><p>${I.ventas.map(a=>`<b>${esc(a.nombre)}</b> (${esc(a.razonesIA?.[0]||a.senales?.[0]?.texto||'')})`).join('<br>')}</p>`:''}
+  <h2 style="margin-top:16px">5. Riesgos y fuentes</h2><ul>${[...(INV?.opiniones||[]).flatMap(o=>o.opinion?.riesgos||[]).slice(0,5),'Ninguna proyección es una ganancia garantizada. Las compras e inversiones requieren su confirmación.'].map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+  <p class="muted">Fuentes: dolarapi.com, argentinadatos.com, data912.com, criptoya.com, Yahoo Finance, Google Noticias y búsquedas web de Gemini y Groq${(OF?.fuentes||[]).length?': '+(OF.fuentes.slice(0,8).map(f=>segura(f.url)?`<a href="${esc(f.url)}" target="_blank">${esc(String(f.titulo||'fuente').slice(0,40))}</a>`:'').join(' · ')):''}. Datos de mercado ${INV?hace(INV.generado):'—'}; ofertas ${OF?hace(OF.generado):'—'}.</p></div>`;
+}
+$('#inPer').onchange=informePintar;
+$('#inPdf').onclick=()=>{informePintar();document.body.classList.add('imprimiendo');setTimeout(()=>{window.print();document.body.classList.remove('imprimiendo')},300)};
+$('#inXls').onclick=()=>{if(typeof XLSX==='undefined')return alert('No se pudo cargar el módulo de Excel. Revise la conexión.');const I=informeDatos(),wb=XLSX.utils.book_new(),hoja=(n,f)=>XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet(f.length?f:[{Info:'Sin datos'}]),n);
+  hoja('Productos',I.prods.map(o=>({'Qué comprar':o.nombre,Categoría:o.categoria,Dónde:o.tienda,Link:o.url,'Precio compra':o.precio,Moneda:o.moneda,'Vender a':o.precioVenta,Canal:o.canal,Unidades:o.unidadesSugeridas,Invertir:o.inversion,'Ganancia por unidad':o.gananciaUnidad,'Ganancia lote':o.gananciaLote,'ROI %':o.roiPct,Clasificación:o.clasificacion,Riesgos:o.riesgos.join(' | '),Consultado:o.encontrada})));
+  hoja('Inversiones',I.acts.map(a=>{const m=montoInversion(a);return{'Qué comprar':a.nombre,Categoría:a.categoria,Dónde:a.tipo==='cripto'?'Exchange':'Broker','Precio entrada':m.ent,Objetivo:m.obj,Stop:m.stop,Invertir:m.monto,'Ganancia estimada':Math.round(m.gan||0),'Pérdida máxima':Math.round(m.perd),'Volatilidad %':a.ficha?.volatilidadAnualPct,Riesgo:a.ficha?.riesgo,'Acuerdo IA %':Math.round(a.consenso.acuerdo*100)}}));
+  hoja('Rulos',(INV?.rulos||[]).map(r=>({Operación:r.nombre,Cómo:r.pasos,'Bruto %':r.brutoPct,'Neto %':r.netoPct,Conviene:r.conviene?'Sí':'No',Nota:r.nota})));
+  hoja('Rendimientos',(INV?.rendimientos||[]).map(r=>({Alternativa:r.nombre,Tipo:r.tipo,Riesgo:r.riesgo,'Mensual %':r.mensualPct,'Real %':r.realPct,Dónde:r.donde})));
+  hoja('Ofertas',(OF?.ofertas||[]).map(o=>({Producto:o.nombre,Tienda:o.tienda,Precio:o.precio,'Precio mercado':o.precioMercado,'Descuento real %':o.descuentoVsMercadoPct,Verificación:o.verificacion,'Vender a':o.precioVenta,'ROI %':o.roiPct,Clasificación:o.clasificacion,Link:o.url})));
+  hoja('Cartera',caCalc().map(o=>({Activo:o.nombre,Tipo:o.tipo,Fecha:o.fecha,Cantidad:o.cantidad,'Precio entrada':o.precio,'Precio actual':o.actual,Moneda:o.moneda,Valor:Math.round(o.valor),Ganancia:Math.round(o.gan),'%':+o.pct.toFixed(2),Plataforma:o.plataforma})));
+  XLSX.writeFile(wb,'RADAR-informe-'+new Date().toISOString().slice(0,10)+'.xlsx')};
+$('#inVoz').onclick=()=>{const I=informeDatos();const t=`Informe de RADAR. `+(I.prods[0]?`El mejor producto para revender es ${I.prods[0].nombre}: se compra en ${I.prods[0].tienda} a ${$n(I.prods[0].precio)} pesos, se vende a ${$n(I.prods[0].precioVenta)} y con ${$n(I.prods[0].inversion)} pesos de inversión deja ${$n(I.prods[0].gananciaLote)} pesos de ganancia. `:'No hay productos que superen los mínimos hoy. ')+(I.acts[0]?`En inversiones, ${I.acts[0].nombre} tiene señal de compra. `:'')+(I.rulos[0]?`Hay un rulo conveniente: ${I.rulos[0].nombre}. `:'')+'La decisión final es suya.';if(typeof decirAviso==='function')decirAviso(t)};
+
+// ---------- configuración ----------
+function cfPintar(){
+  const campo=(k,l,t,ops)=>`<label>${l}${ops?`<select data-cf="${k}">${ops.map(([v,n])=>`<option value="${v}" ${CONF[k]==v?'selected':''}>${n}</option>`).join('')}</select>`:`<input data-cf="${k}" type="${t||'number'}" step="any" value="${esc(CONF[k])}">`}</label>`;
+  $('#cfForm').innerHTML=[campo('moneda','Moneda principal',0,[['ARS','Pesos argentinos'],['USD','Dólares']]),campo('capital','Capital disponible ($)'),campo('perfil','Perfil de riesgo',0,[['conservador','Conservador (5 % por inversión)'],['moderado','Moderado (10 %)'],['agresivo','Agresivo (15 %)']]),campo('horizonte','Horizonte de inversión',0,[['corto','Corto (menos de 3 meses)'],['medio','Medio (3 a 12 meses)'],['largo','Largo (más de 1 año)']]),
+    campo('rentMin','Rentabilidad mínima buscada (% mensual)'),campo('roiMin','Margen comercial mínimo de reventa (ROI %)'),campo('canal','Canal de venta preferido',0,[['Mercado Libre','Mercado Libre'],['Tu web','Tu web'],['Ambos','Ambos']]),campo('capitalPorProducto','Capital máximo por producto ($)'),
+    campo('comision','Comisión del broker por operación (%)'),campo('riesgoPorOperacion','Pérdida máxima aceptada por operación (% del capital)'),campo('notificaciones','Avisos por notificación y voz',0,[['true','Sí'],['false','No']])].join('');
+  const o=typeof origen==='function'?origen():null,base=o?`https://github.com/${o.owner}/${o.repo}/edit/main/`:'#';
+  $('#cfNube').innerHTML=tabla(['Qué se configura','Archivo'],[['Categorías y sitios donde buscar ofertas, capital por producto, clasificación','ofertas/config.json'],['Activos a analizar (acciones, CEDEARs, cripto, materias primas), comisión de rulos','inversiones/config.json'],['Reglas de venta, horarios de WhatsApp, consultas de IA por día','config.json']].map(([q,f])=>`<tr><td>${q}</td><td><a href="${base+f}" target="_blank">✏ ${f}</a></td></tr>`));
+}
+$('#cfGuardar').onclick=()=>{$$('[data-cf]').forEach(i=>{const k=i.dataset.cf,v=i.value;CONF[k]=typeof CONF_DEF[k]==='number'?parseFloat(v)||0:typeof CONF_DEF[k]==='boolean'?v==='true':v});LS.set('radar_conf',CONF);$('#cfMsg').textContent='Guardado.';todo()};
+
+// ---------- tablero ----------
+function tbPintar(){
+  const r=caResumen('real'),mes=(()=>{const h=LS.get('radar_cartera_hist',[]);const ini=h.find(x=>x.f>=new Date(Date.now()-30*864e5).toISOString().slice(0,10));return ini?r.valor-ini.v-(r.costo-ini.c):null})();
+  const k=(l,v,s)=>`<div class="card kpi"><div class="l">${l}</div><div class="v" style="font-size:22px">${v}</div><div class="muted" style="font-size:12px">${s||''}</div></div>`;
+  $('#tbFin').innerHTML=k('Capital total','$'+$n(CONF.capital),'Configuración')+k('Invertido','$'+$n(r.costo),`Valor actual $${$n(r.valor)}`)+k('Disponible','$'+$n(Math.max(0,CONF.capital-r.costo)),'Para nuevas inversiones')+k('Ganancia / pérdida',`$${$n(r.gan)}`,`${$n(r.pct,1)} % · del mes: ${mes==null?'—':'$'+$n(mes)}`);
+  const ofs=OF?.ofertas||[],rk=(OF?.ranking||[]).map(ofById).filter(Boolean),capNec=rk.slice(0,5).reduce((a,o)=>a+(o.inversion||0),0),ganPot=rk.slice(0,5).reduce((a,o)=>a+(o.gananciaLote||0),0);
+  const maxM=[...ofs].sort((a,b)=>(b.roiPct??-1)-(a.roiPct??-1))[0],maxD=[...ofs].filter(o=>o.demanda==='alta').sort((a,b)=>b.puntaje-a.puntaje)[0];
+  $('#tbCom').innerHTML=k('Oportunidades detectadas',ofs.length,`${rk.length} en el ranking`)+k('Mayor margen',maxM?$n(maxM.roiPct,0)+' %':'—',maxM?esc(maxM.nombre):'')+k('Capital para las 5 mejores','$'+$n(capNec),'Inversión sugerida')+k('Ganancia potencial','$'+$n(ganPot),'Revendiendo las 5 mejores');
+  $('#tbTop').innerHTML=rk.length?tabla(['Qué comprar','Dónde','Precio','Vender a','Invertir','Ganancia real','Clasificación'],rk.slice(0,5).map(o=>`<tr><td><b>${esc(o.nombre)}</b></td><td>${o.url?`<a href="${esc(o.url)}" target="_blank">${esc(o.tienda)}</a>`:esc(o.tienda)}</td><td class="r">$${$n(o.precio)}</td><td class="r">$${$n(o.precioVenta)}</td><td class="r">$${$n(o.inversion)}</td><td class="r"><b>$${$n(o.gananciaLote)}</b></td><td><span class="etq ${CLASE_COLOR[o.clasificacion]}">${esc(o.clasificacion)}</span></td></tr>`)):'<p class="muted">Aparecen después de la primera búsqueda de ofertas.</p>';
+  const d=INV?.dolar||{},f=x=>x?.fecha?new Date(x.fecha).toLocaleString('es-AR',{day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}):'—';
+  const idx=n=>INV?.activos.find(a=>a.nombre.startsWith(n));
+  const filas=[['Dólar oficial',d.oficial?.venta,'ARS',f(d.oficial),'dolarapi.com'],['Dólar MEP',d.bolsa?.venta,'ARS',f(d.bolsa),'dolarapi.com'],['Dólar CCL',d.contadoconliqui?.venta,'ARS',f(d.contadoconliqui),'dolarapi.com'],['Dólar cripto',d.cripto?.venta,'ARS',f(d.cripto),'dolarapi.com'],
+    ['Inflación mensual',INV?.inflacionMensualPct,'%','último dato INDEC','argentinadatos.com'],['Riesgo país',INV?.riesgoPais,'puntos','—','argentinadatos.com'],['Plazo fijo (mejor tasa mensual)',INV?.rendimientos?.find(r=>/Plazo fijo/.test(r.nombre))?.mensualPct,'%','—','argentinadatos.com'],
+    ...['Argentina (ETF','S&P 500','Nasdaq','Dow Jones','Brasil','Bitcoin','Ethereum','Solana','Oro','Petróleo'].map(n=>{const a=idx(n);return a?[a.nombre,a.precio,a.moneda,a.grafico?.velas?.at(-1)?.time||'—','Yahoo Finance',a.variacionDia]:null}).filter(Boolean)];
+  $('#tbMer').innerHTML=tabla(['Indicador','Valor','Moneda','Fecha','Fuente','Día'],filas.map(x=>`<tr><td><b>${esc(x[0])}</b></td><td class="r">${$n(x[1],2)}</td><td>${esc(x[2])}</td><td class="muted">${esc(x[3])}</td><td class="muted">${esc(x[4])}</td><td class="r">${x[5]!=null?$p(x[5]):''}</td></tr>`));
+  $('#tbEstado').innerHTML=`Mercados ${INV?hace(INV.generado):'—'} · ofertas ${OF?hace(OF.generado):'—'} · productos de RADAR ${D?.generado?hace(D.generado):'—'}`;
+}
+
+// ---------- categorías de inversiones (bolsa, bonos, cripto, otros) ----------
+function invCategorias(){
+  if(!INV)return;const act=INV.activos.filter(a=>a.precio);
+  const t=l=>tabla(['Activo','Precio','Día','Semana','Mes','Año','Volatilidad','Riesgo','RSI','Decisión'],l.map(a=>`<tr data-ver="${esc(a.yahoo)}" style="cursor:pointer"><td><b>${esc(a.nombre)}</b> <span class="muted">${esc(a.yahoo)}</span></td><td class="r">${invN(a.precio)}</td><td class="r">${invP(a.ficha?.var1d)}</td><td class="r">${invP(a.ficha?.var1s)}</td><td class="r">${invP(a.ficha?.var1m)}</td><td class="r">${invP(a.ficha?.var1a)}</td><td class="r">${invN(a.ficha?.volatilidadAnualPct,0)} %</td><td>${esc(a.ficha?.riesgo||'—')}</td><td class="r">${invN(a.rsi,0)}</td><td>${invE(a.consenso.accion)}</td></tr>`));
+  const sec=(id,cats,extra='')=>{$(id).innerHTML=cats.map(c=>{const l=act.filter(a=>a.categoria===c);return l.length?`<div class="card" style="margin-bottom:14px"><h2>${esc(c)}</h2>${t(l)}</div>`:''}).join('')+extra+'<p class="muted">Toque un activo para ver su gráfico y su ficha completa.</p>'};
+  sec('#inv-bolsa',['Acciones argentinas','EE.UU. y CEDEARs','ETF e índices']);
+  const usdt=(INV.usdt||[]).sort((a,b)=>a.compra-b.compra);
+  sec('#inv-cripto',['Criptomonedas'],usdt.length?`<div class="card" style="margin-bottom:14px"><h2>Dólar cripto (USDT) por exchange</h2>${tabla(['Exchange','Usted compra a','Usted vende a','Diferencia'],usdt.map(x=>`<tr><td><b>${esc(x.exchange)}</b></td><td class="r">$${$n(x.compra,2)}</td><td class="r">$${$n(x.venta,2)}</td><td class="r">${$n((x.compra/x.venta-1)*100,2)} %</td></tr>`))}<p class="muted">Precios con comisiones incluidas (CriptoYa). La stablecoin USDT sigue al dólar.</p></div>`:'');
+  sec('#inv-otros',['Materias primas'],'<div class="card" style="margin-bottom:14px"><h2>Inversiones inmobiliarias</h2><p class="muted">No hay una fuente pública y gratuita con precios diarios confiables de inmuebles. Como alternativa, RADAR sigue fondos y empresas del sector cuando se agregan en inversiones/config.json (por ejemplo, IRSA: IRSA.BA).</p></div>');
+  const rf=INV.rentaFija||{},trf=(n,l)=>l?.length?`<div class="card" style="margin-bottom:14px"><h2>${n} (${l.length})</h2>${tabla(['Símbolo','Precio','Compra','Venta','Variación','Volumen'],l.slice().sort((a,b)=>(b.volumen||0)-(a.volumen||0)).slice(0,60).map(b=>`<tr><td><b>${esc(b.simbolo)}</b></td><td class="r">${$n(b.precio,2)}</td><td class="r">${$n(b.compra,2)}</td><td class="r">${$n(b.venta,2)}</td><td class="r">${invP(b.variacionPct)}</td><td class="r">${$n(b.volumen)}</td></tr>`))}</div>`:'';
+  $('#inv-bonos').innerHTML=(trf('Bonos soberanos',rf.bonos)+trf('Letras del Tesoro (LECAP / BONCAP)',rf.letras)+trf('Obligaciones negociables',rf.ons))||'<div class="card"><p class="muted">Los bonos aparecen en la próxima actualización del motor de inversiones.</p></div>';
+  $('#inv-bonos').innerHTML+='<p class="muted">Precios en vivo de BYMA (data912.com). Los terminados en D cotizan en dólares MEP y en C en dólares cable. Ordenados por volumen operado.</p>';
+  $$('[data-ver]').forEach(tr=>tr.onclick=()=>{$('#invSel').value=tr.dataset.ver;$('#invMenu button[data-s="graficos"]').click()});
+}
+
+// ---------- ficha completa del activo (se agrega al gráfico) ----------
+function invFicha(){const a=INV?.activos.find(x=>x.yahoo===$('#invSel').value);const f=a?.ficha;if(!f)return;
+  const m=montoInversion(a);
+  $('#invNiveles').insertAdjacentHTML('beforeend',`<div class="card"><h2>Ficha de ${esc(a.nombre)}</h2><table>
+  <tr><td>Variación</td><td>Día ${invP(f.var1d)} · Semana ${invP(f.var1s)} · Mes ${invP(f.var1m)} · Año ${invP(f.var1a)}</td></tr>
+  <tr><td>Volatilidad anual</td><td>${invN(f.volatilidadAnualPct,1)} % · riesgo <b>${esc(f.riesgo)}</b></td></tr><tr><td>Volumen promedio (20 ruedas)</td><td>${$n(f.volumenPromedio20)}</td></tr>
+  <tr><td>Soportes</td><td>${f.soportes.map(x=>invN(x)).join(' · ')||'—'}</td></tr><tr><td>Resistencias</td><td>${f.resistencias.map(x=>invN(x)).join(' · ')||'—'}</td></tr>
+  <tr><td>Tendencia</td><td>${a.m50&&a.m200?(a.m50>a.m200?'Alcista de fondo (media 50 sobre 200)':'Bajista de fondo (media 50 bajo 200)'):'—'}</td></tr></table></div>
+  <div class="card"><h2>Escenarios (${esc(f.escenarios.horizonte)})</h2><table><tr><td class="pos">Alcista</td><td>${invN(f.escenarios.alcista)}</td></tr><tr><td>Neutral</td><td>${invN(f.escenarios.neutral[0])} a ${invN(f.escenarios.neutral[1])}</td></tr><tr><td class="neg">Bajista</td><td>${invN(f.escenarios.bajista)}</td></tr></table>
+  <p><b>Con su configuración:</b> invertir hasta $${$n(m.monto)}; si llega al objetivo ganaría ~$${$n(m.gan)} y si toca el stop perdería ~$${$n(m.perd)} (comisiones incluidas).</p><p class="muted">Escenarios calculados con volatilidad, soportes, resistencias y Fibonacci. No son una garantía.</p></div>`)}
+
+// resumen de ofertas para el asistente de RADAR
+function resumenOfertas(){if(!OF)return'sin datos todavía';return JSON.stringify({actualizado:OF.generado,ranking:(OF.ranking||[]).map(ofById).filter(Boolean).slice(0,12).map(o=>({que:o.nombre,donde:o.tienda,link:o.url,precio_compra:o.precio,moneda:o.moneda,vender_a:o.precioVenta,canal:o.canal,unidades:o.unidadesSugeridas,invertir:o.inversion,ganancia_unidad:o.gananciaUnidad,ganancia_lote:o.gananciaLote,roi_pct:o.roiPct,clasificacion:o.clasificacion,descuento:o.verificacion,demanda:o.demanda,riesgos:o.riesgos})),tendencias:OF.tendencias?.resumen||null,configuracion_usuario:{capital:CONF.capital,perfil:CONF.perfil,roi_minimo:CONF.roiMin}})}
+
+// ---------- refresco general ----------
+function todo(){try{caPintar()}catch(e){console.warn(e)}try{alRevisar();alPintar()}catch(e){console.warn(e)}try{tbPintar()}catch(e){console.warn(e)}try{informePintar()}catch(e){console.warn(e)}try{invCategorias()}catch(e){console.warn(e)}}
+cfPintar();ofCargar();setInterval(ofCargar,15*60000);
+// cuando llegan los datos de inversiones, se actualiza todo
+(function(){let ult=null;setInterval(()=>{if(INV&&INV.generado!==ult){ult=INV.generado;todo()}},2000)})();
 </script>
 
 </body>
