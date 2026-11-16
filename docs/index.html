@@ -65,16 +65,17 @@ nav{row-gap:4px}nav button{padding:7px 10px;font-size:14px}
     <div class="grid g2" style="margin-top:14px"><div class="card"><h2>Evolución del patrimonio</h2><canvas id="tbEvo" height="150"></canvas></div><div class="card"><h2>Distribución del capital</h2><canvas id="tbDist" height="150"></canvas></div></div>
     <h2 style="margin-top:18px">🛒 Resumen comercial</h2><div class="grid g4" id="tbCom"></div>
     <div class="card" style="margin-top:14px"><h2>Mejores oportunidades para comprar y revender</h2><div id="tbTop"></div></div>
+    <div class="card" style="margin-top:14px"><h2>🔥 Lo que más busca comprar la gente esta semana</h2><div id="tbBus"></div></div>
     <h2 style="margin-top:18px">🌎 Indicadores del mercado</h2><div class="card"><div id="tbMer"></div></div>
     <div class="card" style="margin-top:14px"><h2>🔔 Alertas disparadas</h2><div id="tbAle"></div></div>
   </section>
   <section id="v-ofertas" class="oculto"><h1>Ofertas y reventa</h1><p class="sub" id="ofEstado">Cargando ofertas…</p>
-    <div class="subnav" id="ofMenu"><button data-s="ranking" class="act">🏆 Ranking de 20</button><button data-s="todas">🔎 Buscador de ofertas</button><button data-s="mercado">📊 Investigación de mercado</button><button data-s="simulador">🧪 Simulador de negocios</button><button data-s="proveedores">🏪 Proveedores</button></div>
+    <div class="subnav" id="ofMenu"><button data-s="ranking" class="act">🏆 Ranking de 20</button><button data-s="buscados">🔥 Lo más buscado (semanal)</button><button data-s="ganadores">🏅 Productos ganadores</button><button data-s="todas">🔎 Buscador de ofertas</button><button data-s="mercado">📊 Investigación de mercado</button><button data-s="simulador">🧪 Simulador de negocios</button><button data-s="proveedores">🏪 Proveedores</button></div>
     <div class="ofS" id="of-ranking"></div>
     <div class="ofS oculto" id="of-todas">
       <div class="pedir" style="margin-bottom:12px"><input id="ofBuscar" placeholder="Buscar producto, marca o tienda…"><select id="ofCat" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"></select><select id="ofClase" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"><option value="">Todas las clasificaciones</option><option>Excelente oportunidad</option><option>Buena oportunidad</option><option>Oportunidad moderada</option><option>Baja rentabilidad</option><option>No recomendable</option></select><select id="ofOrden" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"><option value="puntaje">Ordenar: mejor oportunidad</option><option value="roi">Mayor ROI</option><option value="ganancia">Mayor ganancia por lote</option><option value="desc">Mayor descuento real</option><option value="inversion">Menor inversión</option></select></div>
       <div id="ofLista" class="grid gp"></div></div>
-    <div class="ofS oculto" id="of-mercado"></div>
+    <div class="ofS oculto" id="of-buscados"></div><div class="ofS oculto" id="of-ganadores"></div><div class="ofS oculto" id="of-mercado"></div>
     <div class="ofS oculto" id="of-simulador">
       <div class="card"><h2>Simular una compra para revender</h2><p class="muted">Usa los mismos costos de Mercado Libre y de su web que la Calculadora de RADAR. Puede agregar varios productos y compararlos.</p>
         <div class="grid g4 campos">
@@ -757,7 +758,7 @@ invCargar();setInterval(invCargar,10*60000);
 const LS={get:(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const CONF_DEF={moneda:'ARS',capital:1000000,perfil:'moderado',horizonte:'medio',rentMin:3,roiMin:30,canal:'Mercado Libre',capitalPorProducto:300000,comision:0.6,riesgoPorOperacion:2,notificaciones:true};
 let CONF={...CONF_DEF,...LS.get('radar_conf',{})};
-let OF=null,CARTERA=LS.get('radar_cartera',[]),ALERTAS=LS.get('radar_alertas',[]),AVISOS=LS.get('radar_avisos',[]),SIMS=[];
+let MB=null,OF=null,CARTERA=LS.get('radar_cartera',[]),ALERTAS=LS.get('radar_alertas',[]),AVISOS=LS.get('radar_avisos',[]),SIMS=[];
 const $n=(x,d=0)=>x==null||isNaN(x)?'—':Number(x).toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
 const $p=x=>x==null||isNaN(x)?'—':`<span class="${x>=0?'pos':'neg'}">${x>=0?'+':''}${$n(x,1)} %</span>`;
 const CLASE_COLOR={'Excelente oportunidad':'COMPRAR','Buena oportunidad':'COMPRAR','Oportunidad moderada':'ESPERAR','Baja rentabilidad':'ESPERAR','No recomendable':'VENDER'};
@@ -773,6 +774,7 @@ async function ofCargar(){
   const o=typeof origen==='function'?origen():null,urls=[];
   if(o)urls.push(`https://raw.githubusercontent.com/${o.owner}/${o.repo}/HEAD/docs/ofertas-datos/ofertas.json?t=${Date.now()}`);urls.push('ofertas-datos/ofertas.json?t='+Date.now());
   for(const u of urls){try{const r=await fetch(u,{cache:'no-store'});if(r.ok){OF=await r.json();break}}catch(e){}}
+  for(const u of urls.map(x=>x.replace('ofertas.json','mas-buscados.json'))){try{const r=await fetch(u,{cache:'no-store'});if(r.ok){MB=await r.json();break}}catch(e){}}
   $('#ofEstado').innerHTML=OF?`Actualizado ${hace(OF.generado)} · ${OF.resumen.total} ofertas vigentes · revisadas: ${esc(OF.categoriasRevisadas.join(', '))} · próximas: ${esc(OF.proximas.join(', '))}`:'Las ofertas aparecen después de la primera búsqueda en la nube (dos veces por día).';
   ofPintar();todo();
 }
@@ -793,15 +795,48 @@ function ofTarjeta(o,pos){
   <div class="muted" style="font-size:12px;margin-top:6px">Consultado ${new Date(o.encontrada).toLocaleString('es-AR')}</div></div>`;
 }
 function ofPintar(){
+  try{mbPintar()}catch(e){}
   if(!OF){['#of-ranking','#of-mercado','#of-proveedores'].forEach(s=>$(s).innerHTML='<div class="card"><p class="muted">Todavía no hay datos. La primera búsqueda se hace a las 9:41 o 18:41, o al tocar "Run workflow" en "RADAR Ofertas" de GitHub.</p></div>');return}
   const rk=OF.ranking.map(ofById).filter(Boolean);
   $('#of-ranking').innerHTML=`<div class="card"><h2>Los ${rk.length} productos que más conviene comprar para revender</h2><p class="muted">Ordenados por ganancia real, demanda, competencia y descuento verificado. Mínimo configurado: ROI ${CONF.roiMin} %. ${OF.resumen.nuevasEstaVuelta} ofertas nuevas en la última búsqueda.</p>${rk.length?tabla(['#','Qué comprar','Dónde','Precio compra','Vender a','Invertir','Ganancia lote','ROI','Clasificación'],rk.map((o,i)=>`<tr><td>${i+1}</td><td><b>${esc(o.nombre)}</b></td><td>${o.url?`<a href="${esc(o.url)}" target="_blank">${esc(o.tienda)}</a>`:esc(o.tienda)}</td><td class="r">$${$n(o.precio)}</td><td class="r">$${$n(o.precioVenta)}</td><td class="r">$${$n(o.inversion)}</td><td class="r"><b>$${$n(o.gananciaLote)}</b></td><td class="r">${$p(o.roiPct)}</td><td><span class="etq ${CLASE_COLOR[o.clasificacion]}">${esc(o.clasificacion)}</span></td></tr>`)):'<p>Hoy ninguna oferta supera los mínimos de ganancia. RADAR sigue buscando.</p>'}</div><div class="grid gp" style="margin-top:14px">${rk.slice(0,20).map((o,i)=>ofTarjeta(o,i+1)).join('')}</div>`;
   const cats=[...new Set(OF.ofertas.map(o=>o.categoria))].sort();$('#ofCat').innerHTML='<option value="">Todas las categorías</option>'+cats.map(c=>`<option>${esc(c)}</option>`).join('');
-  ofFiltrar();
+  ofFiltrar();try{mbPintar()}catch(e){}try{ganPintar()}catch(e){}
   const t=OF.tendencias;
   $('#of-mercado').innerHTML=t?`<div class="card"><h2>Qué están comprando hoy en Argentina</h2><p>${esc(t.resumen||'')}</p>${t.categorias_calientes?.length?`<p><b>Categorías con más demanda:</b> ${t.categorias_calientes.map(esc).join(', ')}</p>`:''}${tabla(['Producto','Categoría','Tendencia','Competencia','Precio promedio','Estacionalidad','Dato'],(t.productos||[]).map(x=>`<tr><td><b>${esc(x.producto)}</b></td><td>${esc(x.categoria)}</td><td>${esc(x.tendencia)}</td><td>${esc(x.competencia)}</td><td class="r">$${$n(x.precio_promedio_ars)}</td><td>${esc(x.estacionalidad)}</td><td class="muted">${/estim/i.test(x.evidencia||'')?'Estimación':'Comprobado'}: ${segura(x.url)?`<a href="${esc(x.url)}" target="_blank">${esc(x.evidencia)}</a>`:esc(x.evidencia)}</td></tr>`))}<p class="muted">Actualizado ${esc(t.fecha)}. Los datos marcados "Estimación" no tienen cifras publicadas por las plataformas.</p></div>`:'<div class="card"><p class="muted">La investigación de mercado se actualiza una vez por día.</p></div>';
   const prov={};OF.ofertas.forEach(o=>{const k=o.tienda||'—';(prov[k]||=[]).push(o)});
   $('#of-proveedores').innerHTML=`<div class="card"><h2>Tiendas y proveedores con ofertas</h2>${tabla(['Proveedor','Ofertas','Mejor oportunidad','Descuento real promedio','Categorías'],Object.entries(prov).sort((a,b)=>b[1].length-a[1].length).map(([k,l])=>{const m=[...l].sort((a,b)=>b.puntaje-a.puntaje)[0],d=l.map(o=>o.descuentoVsMercadoPct).filter(x=>x!=null);return`<tr><td><b>${esc(k)}</b></td><td class="r">${l.length}</td><td>${esc(m.nombre)} <span class="muted">(ROI ${$n(m.roiPct,0)} %)</span></td><td class="r">${d.length?$n(d.reduce((a,b)=>a+b,0)/d.length,1)+' %':'—'}</td><td class="muted">${esc([...new Set(l.map(o=>o.categoria))].join(', '))}</td></tr>`}))}</div>`;
+}
+function ganPintar(){
+  const g=OF?.ganadores||[];const el=$('#of-ganadores');
+  if(!g.length){el.innerHTML='<div class="card"><p class="muted">Los productos ganadores aparecen después de la próxima búsqueda de ofertas (9:41 o 18:41).</p></div>';return}
+  const nichos=[...new Set(g.map(x=>x.nicho))].sort(),sel=$('#ganNicho')?.value||'',solo=$('#ganRent')?.checked;
+  const l=g.filter(x=>(!sel||x.nicho===sel)&&(!solo||x.gananciaUnidad>0)).slice(0,50);
+  const C=[['problema','Resuelve un problema'],['dificil','Difícil de encontrar'],['x3','Se vende ×3 su costo'],['vendiendo','Ya se está vendiendo'],['precio','US$5–30, chico y liviano']];
+  const color=n=>n>=80?'var(--ok)':n>=60?'#ffb547':'var(--mal)';
+  el.innerHTML=`<div class="card"><h2>Productos ganadores: los 50 mejores</h2><p class="muted">Cada producto se evalúa con 5 criterios (20 puntos cada uno). La nota exige además ganancia real después de importar y vender. Nichos de esta vuelta: ${esc((OF.nichosHoy||[]).join(', '))} · próxima: ${esc((OF.proximosNichos||[]).join(', '))}.</p>
+   <div class="pedir"><select id="ganNicho" class="selVoz" style="padding:10px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)"><option value="">Todos los nichos</option>${nichos.map(n=>`<option ${n===sel?'selected':''}>${esc(n)}</option>`).join('')}</select><label style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="ganRent" ${solo?'checked':''}> Solo los que dejan ganancia</label></div>
+   ${tabla(['#','Producto','Nicho','Costo','Vender a','×','Ganancia/u.','Invertir (lote)','Envío','Competencia','Nota'],l.map((x,i)=>`<tr><td>${i+1}</td><td><b>${esc(x.nombre)}</b></td><td>${esc(x.nicho)}</td><td class="r">US$${$n(x.costoUSD,2)}</td><td class="r">$${$n(x.precioVenta)}</td><td class="r">${x.multiplicador??'—'}</td><td class="r">${x.gananciaUnidad!=null?`<span class="${x.gananciaUnidad>0?'pos':'neg'}">$${$n(x.gananciaUnidad)}</span>`:'—'}</td><td class="r">$${$n(x.inversion)} <span class="muted">(${x.lote} u.)</span></td><td>${esc(x.diasEnvio)} d</td><td class="r">${x.vendedoresML??'—'}</td><td class="r"><b style="color:${color(x.nota)}">${x.nota}</b></td></tr>`))}</div>
+   <div class="grid gp" style="margin-top:14px">${l.slice(0,24).map(x=>`<div class="card"><div style="display:flex;gap:12px;align-items:flex-start">${x.imagen?`<img src="${esc(x.imagen)}" style="width:92px;height:92px;object-fit:cover;border-radius:12px;background:#fff" onerror="this.remove()">`:''}<div style="flex:1"><div class="muted" style="font-size:12px">${esc(x.nicho)} · ${esc(x.proveedor)}</div><h2 style="margin:2px 0">${esc(x.nombre)}</h2><div class="muted">${esc(x.problema)}</div></div><div style="min-width:58px;height:58px;border-radius:50%;border:4px solid ${color(x.nota)};display:grid;place-items:center;font-weight:800;font-size:18px">${x.nota}</div></div>
+     <div style="margin-top:10px">${C.map(([k,t])=>`<div style="display:flex;align-items:center;gap:8px;font-size:13px;margin:3px 0"><span style="width:170px">${t}</span><div class="barraA" style="flex:1"><div style="width:${x.criterios[k]*5}%"></div></div><span class="muted">${x.criterios[k]}/20</span></div>`).join('')}</div>
+     <table style="margin-top:8px"><tr><td>🛍 <b>Dónde comprar</b></td><td>${esc(x.proveedor)}${x.url?` · <a href="${esc(x.url)}" target="_blank" rel="noopener">Ver proveedor</a>`:''} · envío ${esc(x.diasEnvio)} días</td></tr>
+     <tr><td>💲 <b>A qué precio</b></td><td>US$${$n(x.costoUSD,2)} · puesto en Argentina con impuestos y courier: $${$n(x.costoPuesto)}</td></tr>
+     <tr><td>📈 <b>Vender a</b></td><td>$${$n(x.precioVenta)} (×${x.multiplicador??'—'} el costo del proveedor)${x.urlML?` · <a href="${esc(x.urlML)}" target="_blank">ver en Mercado Libre</a>`:''}</td></tr>
+     <tr><td>💰 <b>Invertir</b></td><td>${x.lote} u. = <b>$${$n(x.inversion)}</b></td></tr>
+     <tr><td>✅ <b>Ganancia real</b></td><td><b>$${$n(x.gananciaUnidad)}</b> por unidad · <b>$${$n(x.gananciaLote)}</b> el lote · margen ${$n(x.margenPct,1)} %</td></tr>
+     <tr><td>📊 <b>Ya se vende</b></td><td>${esc(x.evidencia||'sin evidencia publicada')}${x.anuncios?' · anuncios en '+esc(x.anuncios):''} ${x.comprobado?'<span class="chip">Comprobado</span>':'<span class="chip g">Estimado</span>'}</td></tr>
+     <tr><td>⚠ <b>Riesgos</b></td><td>${x.riesgos.map(esc).join(' · ')}</td></tr></table></div>`).join('')}</div>`;
+  $('#ganNicho').onchange=ganPintar;$('#ganRent').onchange=ganPintar;
+}
+function mbPintar(){
+  const sem=MB?.semanas||[];if(!sem.length){$('#of-buscados').innerHTML='<div class="card"><p class="muted">El ranking semanal se arma en la próxima búsqueda de ofertas (9:41 o 18:41) y se renueva cada semana.</p></div>';$('#tbBus').innerHTML='<p class="muted">Se arma en la próxima búsqueda de ofertas.</p>';return}
+  const elegida=$('#mbSem')?.value,w=sem.find(x=>x.semana===elegida)||sem[0];
+  const mov=m=>m==null?'':m==='nuevo'?'<span class="chip">Nuevo</span>':m>0?`<span class="pos">▲ ${m}</span>`:m<0?`<span class="neg">▼ ${-m}</span>`:'<span class="muted">=</span>';
+  const fila=x=>`<tr><td class="r"><b>${x.puesto}</b></td><td><b>${esc(x.producto)}</b><div class="muted">${esc(x.por_que||'')}</div></td><td>${esc(x.categoria||'')}</td><td>${mov(x.movimiento)}</td><td>${esc(x.tendencia||'')}</td><td class="r">${x.precio_promedio_ars?'$'+$n(x.precio_promedio_ars):'—'}</td><td>${esc(x.oportunidad_reventa||'—')}</td><td class="muted">${segura(x.url)?`<a href="${esc(x.url)}" target="_blank">${esc(x.fuente||'fuente')}</a>`:esc(x.fuente||'')}: ${esc(x.evidencia||'')}</td></tr>`;
+  $('#of-buscados').innerHTML=`<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h2>Lo que más busca comprar la gente en Argentina</h2><select id="mbSem" class="selVoz" style="padding:8px;border-radius:12px;background:var(--panel2);color:var(--texto);border:1px solid var(--borde)">${sem.map(x=>`<option value="${x.semana}" ${x===w?'selected':''}>Semana ${x.semana.split('-S')[1]} de ${x.semana.slice(0,4)}</option>`).join('')}</select></div>
+   <p>${esc(w.resumen||'')}</p><p class="muted">Actualizado ${new Date(w.fecha).toLocaleString('es-AR')}${w.leyoTendenciasML?' · incluye la lectura directa de Tendencias de Mercado Libre':''}. La flecha compara con la semana anterior.</p>
+   ${tabla(['Puesto','Producto','Categoría','Vs. semana anterior','Tendencia','Precio promedio','Oportunidad de reventa','Dato y fuente'],w.ranking.map(fila))}</div>`;
+  $('#mbSem').onchange=mbPintar;
+  $('#tbBus').innerHTML=tabla(['Puesto','Producto','Vs. semana anterior','Tendencia'],sem[0].ranking.slice(0,5).map(x=>`<tr><td class="r"><b>${x.puesto}</b></td><td><b>${esc(x.producto)}</b></td><td>${mov(x.movimiento)}</td><td>${esc(x.tendencia||'')}</td></tr>`));
 }
 function ofFiltrar(){if(!OF)return;const q=$('#ofBuscar').value.toLowerCase(),c=$('#ofCat').value,cl=$('#ofClase').value,ord=$('#ofOrden').value;
   let l=OF.ofertas.filter(o=>(!q||(o.nombre+' '+o.marca+' '+o.tienda).toLowerCase().includes(q))&&(!c||o.categoria===c)&&(!cl||o.clasificacion===cl));
@@ -913,6 +948,7 @@ function informePintar(){
   const cab=['Qué comprar','Dónde','A qué precio','A cuánto vender','Cuánto invertir','Ganancia real','Riesgos'];
   $('#informeDoc').innerHTML=`<div class="card" id="informeImp"><h1>${titulo} de RADAR</h1><p class="muted">${new Date().toLocaleString('es-AR')} · Capital: $${$n(CONF.capital)} · Perfil: ${PERFIL[CONF.perfil]?.nombre} · Dólar MEP: $${$n(dolar)} · Inflación mensual: ${$n(INV?.inflacionMensualPct,1)} %</p>
   <h2>1. Productos para comprar y revender</h2>${I.prods.length?tabla(cab,I.prods.map(filaP)):'<p class="muted">No hay productos que superen los mínimos de ganancia en este período.</p>'}
+  ${(OF?.ganadores||[]).filter(x=>x.gananciaUnidad>0&&x.nota>=60).length?`<h2 style="margin-top:16px">1b. Productos ganadores para importar</h2>${tabla(cab,(OF.ganadores||[]).filter(x=>x.gananciaUnidad>0&&x.nota>=60).slice(0,10).map(x=>`<tr><td><b>${esc(x.nombre)}</b> <span class="muted">nota ${x.nota}</span></td><td>${x.url?`<a href="${esc(x.url)}" target="_blank">${esc(x.proveedor)}</a>`:esc(x.proveedor)}</td><td class="r">US$${$n(x.costoUSD,2)} <span class="muted">($${$n(x.costoPuesto)} puesto)</span></td><td class="r">$${$n(x.precioVenta)}</td><td class="r">$${$n(x.inversion)} <span class="muted">(${x.lote} u.)</span></td><td class="r"><b>$${$n(x.gananciaLote)}</b></td><td class="muted">${esc(x.riesgos.slice(0,2).join(' · '))}</td></tr>`))}`:''}
   <h2 style="margin-top:16px">2. Inversiones con señal de compra</h2>${I.acts.length?tabla(cab,I.acts.map(filaA)):'<p class="muted">No hay activos con señal de compra.</p>'}<p class="muted">Monto sugerido: hasta el ${PERFIL[CONF.perfil]?.pct} % del capital disponible y sin arriesgar más del ${CONF.riesgoPorOperacion} % del capital total si se toca el stop. Incluye comisiones de ${CONF.comision} % por operación.</p>
   <h2 style="margin-top:16px">3. Rulos y dinero de bajo riesgo</h2>${tabla(['Qué hacer','Cómo','Ganancia','Riesgos'],[...I.rulos.map(r=>`<tr><td><b>${esc(r.nombre)}</b></td><td>${esc(r.pasos)}</td><td class="r">${$n(r.netoPct,2)} % neto · $${$n(CONF.capital*(PERFIL[CONF.perfil]?.pct||10)/100*r.netoPct/100)} invirtiendo $${$n(CONF.capital*(PERFIL[CONF.perfil]?.pct||10)/100)}</td><td class="muted">${esc(r.nota)}</td></tr>`),...I.seg.map(r=>`<tr><td><b>${esc(r.nombre)}</b></td><td>${esc(r.donde)}: ${esc(r.como)}</td><td class="r">${$n(r.mensualPct,2)} % mensual (real ${$n(r.realPct,2)} %)</td><td class="muted">Riesgo bajo. Rinde menos que la inflación si el valor real es negativo.</td></tr>`)])}
   ${I.ventas.length?`<h2 style="margin-top:16px">4. Activos para vender o evitar</h2><p>${I.ventas.map(a=>`<b>${esc(a.nombre)}</b> (${esc(a.razonesIA?.[0]||a.senales?.[0]?.texto||'')})`).join('<br>')}</p>`:''}
@@ -987,7 +1023,7 @@ function invFicha(){const a=INV?.activos.find(x=>x.yahoo===$('#invSel').value);c
   <p><b>Con su configuración:</b> invertir hasta $${$n(m.monto)}; si llega al objetivo ganaría ~$${$n(m.gan)} y si toca el stop perdería ~$${$n(m.perd)} (comisiones incluidas).</p><p class="muted">Escenarios calculados con volatilidad, soportes, resistencias y Fibonacci. No son una garantía.</p></div>`)}
 
 // resumen de ofertas para el asistente de RADAR
-function resumenOfertas(){if(!OF)return'sin datos todavía';return JSON.stringify({actualizado:OF.generado,ranking:(OF.ranking||[]).map(ofById).filter(Boolean).slice(0,12).map(o=>({que:o.nombre,donde:o.tienda,link:o.url,precio_compra:o.precio,moneda:o.moneda,vender_a:o.precioVenta,canal:o.canal,unidades:o.unidadesSugeridas,invertir:o.inversion,ganancia_unidad:o.gananciaUnidad,ganancia_lote:o.gananciaLote,roi_pct:o.roiPct,clasificacion:o.clasificacion,descuento:o.verificacion,demanda:o.demanda,riesgos:o.riesgos})),tendencias:OF.tendencias?.resumen||null,configuracion_usuario:{capital:CONF.capital,perfil:CONF.perfil,roi_minimo:CONF.roiMin}})}
+function resumenOfertas(){if(!OF)return'sin datos todavía';return JSON.stringify({actualizado:OF.generado,ranking:(OF.ranking||[]).map(ofById).filter(Boolean).slice(0,12).map(o=>({que:o.nombre,donde:o.tienda,link:o.url,precio_compra:o.precio,moneda:o.moneda,vender_a:o.precioVenta,canal:o.canal,unidades:o.unidadesSugeridas,invertir:o.inversion,ganancia_unidad:o.gananciaUnidad,ganancia_lote:o.gananciaLote,roi_pct:o.roiPct,clasificacion:o.clasificacion,descuento:o.verificacion,demanda:o.demanda,riesgos:o.riesgos})),tendencias:OF.tendencias?.resumen||null,productos_ganadores:(OF.ganadores||[]).filter(x=>x.gananciaUnidad>0).slice(0,10).map(x=>({que:x.nombre,nicho:x.nicho,problema:x.problema,donde:x.proveedor,link:x.url,costo_usd:x.costoUSD,costo_puesto_ars:x.costoPuesto,vender_a:x.precioVenta,multiplicador:x.multiplicador,invertir:x.inversion,lote:x.lote,ganancia_unidad:x.gananciaUnidad,ganancia_lote:x.gananciaLote,nota:x.nota,riesgos:x.riesgos})),mas_buscados_semana:MB?.semanas?.[0]?{semana:MB.semanas[0].semana,resumen:MB.semanas[0].resumen,ranking:MB.semanas[0].ranking.map(x=>({puesto:x.puesto,producto:x.producto,tendencia:x.tendencia,movimiento:x.movimiento,oportunidad_reventa:x.oportunidad_reventa}))}:null,configuracion_usuario:{capital:CONF.capital,perfil:CONF.perfil,roi_minimo:CONF.roiMin}})}
 
 // ---------- refresco general ----------
 function todo(){try{caPintar()}catch(e){console.warn(e)}try{alRevisar();alPintar()}catch(e){console.warn(e)}try{tbPintar()}catch(e){console.warn(e)}try{informePintar()}catch(e){console.warn(e)}try{invCategorias()}catch(e){console.warn(e)}}
@@ -996,5 +1032,38 @@ cfPintar();ofCargar();setInterval(ofCargar,15*60000);
 (function(){let ult=null;setInterval(()=>{if(INV&&INV.generado!==ult){ult=INV.generado;todo()}},2000)})();
 </script>
 
+<script>
+// ===================== Parar la voz: diciendo «parar», con el botón ⏹ o con la tecla Esc =====================
+const PALABRA_PARAR=/^(?:radar[\s,.]*)?(?:por favor\s+)?(par[aá]r?|par[aá]te|basta|silencio|c[aá]llate|stop|det[eé]nte|alto|suficiente|ya est[aá]|cort[aá])(?:\s+(?:de hablar|ya|por favor|radar))*[\s.!¡]*$/i;
+let VOZ_PARADA=false,OIDO_PARAR=null;
+function pararVoz(){VOZ_PARADA=true;try{speechSynthesis.cancel()}catch(e){}try{COLA_VOZ=0;FIN_VOZ=false}catch(e){}
+  try{(LIVE.srcs||[]).forEach(x=>{try{x.stop()}catch(e){}});LIVE.srcs=[];if(LIVE.ctxOut)LIVE.next=LIVE.ctxOut.currentTime}catch(e){}
+  escucharParar(false);try{VOZC.habla=false;if(VOZC.manos)setTimeout(oir,400)}catch(e){}$('#btnParar')?.classList.add('oculto')}
+// mientras RADAR habla, un oído aparte escucha solo la orden de parar (frases cortas, para no confundirse con su propia voz)
+async function escucharParar(on){
+  if(!on){const r=OIDO_PARAR;OIDO_PARAR=null;try{r?.abort()}catch(e){}return}
+  if(!SRC||OIDO_PARAR)return;
+  try{const p=await navigator.permissions?.query({name:'microphone'});if(p&&p.state!=='granted')return}catch(e){}
+  const r=new SRC();r.lang='es-AR';r.continuous=true;r.interimResults=true;
+  r.onresult=e=>{for(let i=e.resultIndex;i<e.results.length;i++){const t=e.results[i][0].transcript.trim();if(t.split(/\s+/).length<=5&&PALABRA_PARAR.test(t)){pararVoz();return}}};
+  r.onend=()=>{if(OIDO_PARAR===r){OIDO_PARAR=null;if(speechSynthesis.speaking)setTimeout(()=>escucharParar(true),200)}};
+  try{r.start();OIDO_PARAR=r}catch(e){}
+}
+(function(){
+  const _pausar=pausarOido,_reanudar=reanudarOido,_cola=hablarCola,_decir=decirIA,_enviar=enviarChat,_frase=frase;
+  pausarOido=function(){_pausar();escucharParar(true)};
+  reanudarOido=function(){escucharParar(false);_reanudar()};
+  hablarCola=function(t,fin){if(VOZ_PARADA){if(fin)reanudarOido();return}return _cola(t,fin)};
+  decirIA=function(t){VOZ_PARADA=false;return _decir(t)};
+  enviarChat=function(t){VOZ_PARADA=false;return _enviar(t)};
+  frase=function(t){if(PALABRA_PARAR.test(String(t||'').trim())){pararVoz();return}return _frase(t)};
+  $('#btnChat').onclick=()=>enviarChat();
+  // botón flotante ⏹ Parar, visible solo mientras habla
+  const b=document.createElement('button');b.id='btnParar';b.className='btn oculto';b.textContent='⏹ Parar';b.title='Detener la voz (también: decir «parar» o tecla Esc)';
+  b.style.cssText='position:fixed;right:18px;bottom:18px;z-index:99;box-shadow:0 6px 20px #0008';b.onclick=pararVoz;document.body.appendChild(b);
+  setInterval(()=>{const h=('speechSynthesis' in window&&speechSynthesis.speaking)||(typeof LIVE!=='undefined'&&LIVE.srcs?.length>0);b.classList.toggle('oculto',!h)},300);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')pararVoz()});
+})();
+</script>
 </body>
 </html>
