@@ -60,7 +60,7 @@ for (const cat of elegidas) {
     const { datos, fuentes: fs1 } = await ia.json(`Buscá en internet ofertas REALES y VIGENTES HOY (${new Date().toLocaleDateString('es-AR')}) en la categoría "${cat}" que se puedan comprar para REVENDER con ganancia en Argentina.
 Revisá: ${(cfg.sitios || []).join(', ')}.
 Buscá: descuentos importantes, precios por debajo del promedio del mercado, liquidaciones, ofertas por tiempo limitado, diferencias grandes de precio entre vendedores, precios mayoristas y productos con buena demanda y poca competencia.
-Reglas: incluí SOLO publicaciones que encontraste con su LINK EXACTO; no inventes precios, ventas ni proveedores. Si un dato no figura, dejalo vacío o null y marcá "comprobado" en false. Desconfiá de descuentos sobre precios inflados: informá el precio habitual de mercado.
+Reglas: solo tiendas y proveedores donde registrarse es gratis (nada que requiera suscripción paga). Incluí SOLO publicaciones que encontraste con su LINK EXACTO; no inventes precios, ventas ni proveedores. Si un dato no figura, dejalo vacío o null y marcá "comprobado" en false. Desconfiá de descuentos sobre precios inflados: informá el precio habitual de mercado.
 Devolvé SOLO JSON, máximo ${cfg.ofertasPorCategoria || 8} ofertas: ${ESQ}`, true);
     const lista = Array.isArray(datos) ? datos : (datos?.ofertas || Object.values(datos || {}).find(Array.isArray) || []);
     (fs1 || []).forEach(f => fuentes.push(f));
@@ -79,6 +79,101 @@ SOLO JSON: {"resumen":"2-3 oraciones","productos":[{"producto","categoria","tend
     tendencias = { fecha: hoy, ...(datos || {}), fuentes: (fs2 || []).slice(0, 10) };
   } catch (e) { errores.push('tendencias: ' + e.message) }
 }
+
+// ---------- 2b. Ranking semanal de lo más buscado para comprar en Argentina ----------
+// Se arma una vez por semana (se reintenta si falló) con Tendencias de Mercado Libre, Google Trends y los más vendidos.
+const semanaISO = d => { const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())); const dia = t.getUTCDay() || 7; t.setUTCDate(t.getUTCDate() + 4 - dia); const ini = new Date(Date.UTC(t.getUTCFullYear(), 0, 1)); return `${t.getUTCFullYear()}-S${String(Math.ceil(((t - ini) / 864e5 + 1) / 7)).padStart(2, '0')}` };
+const MB_ARCH = path.join(SAL, 'mas-buscados.json');
+const masBuscados = leer(MB_ARCH, { semanas: [] });
+const semana = semanaISO(new Date());
+const actual = masBuscados.semanas.find(x => x.semana === semana);
+if (!actual || (actual.ranking || []).length < 10 || process.env.FORZAR_SEMANAL === '1') {
+  let textoML = '';
+  if (!SIM) {
+    try {
+      const r = await fetch('https://tendencias.mercadolibre.com.ar/', { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'es-AR' }, signal: AbortSignal.timeout(20000) });
+      if (r.ok) textoML = (await r.text()).replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, '\n').replace(/&[a-z#0-9]+;/g, ' ').split('\n').map(x => x.trim()).filter(x => x.length > 2 && x.length < 60).slice(0, 400).join(' | ').slice(0, 7000);
+    } catch { }
+  }
+  try {
+    const { datos, fuentes: fs3 } = await ia.json(`Armá el ranking de lo que MÁS BUSCA COMPRAR la gente en Argentina esta semana (${new Date().toLocaleDateString('es-AR')}).
+Fuentes prioritarias: Tendencias de Mercado Libre (tendencias.mercadolibre.com.ar: búsquedas más populares y que más crecieron), Google Trends Argentina (búsquedas de compras), más vendidos de Mercado Libre y de las principales tiendas.
+${textoML ? 'Texto leído HOY directamente de Tendencias de Mercado Libre (usalo como fuente principal):\n' + textoML + '\n' : ''}
+Reglas: productos concretos que la gente quiere comprar (no marcas sueltas ni noticias). No inventes datos: en "evidencia" poné el dato tal cual lo viste y su fuente; si no hay cifra, escribí "posición en el ranking de la fuente".
+SOLO JSON: {"resumen":"2 oraciones sobre qué está buscando la gente y por qué","ranking":[{"puesto":1,"producto":"","categoria":"","tendencia":"creciendo | estable | bajando","evidencia":"","fuente":"Mercado Libre Tendencias | Google Trends | Más vendidos ML | otra","url":"","precio_promedio_ars":número o null,"oportunidad_reventa":"alta | media | baja","por_que":"una oración"}]} con 20 productos ordenados del más buscado al menos buscado.`, true);
+    const lista = (datos?.ranking || []).filter(x => x?.producto).slice(0, 20).map((x, i) => ({ ...x, puesto: i + 1 }));
+    if (lista.length) {
+      const anterior = masBuscados.semanas.filter(x => x.semana < semana).sort((a, b) => b.semana.localeCompare(a.semana))[0];
+      for (const x of lista) {
+        const prev = anterior?.ranking?.find(y => slug(y.producto) === slug(x.producto));
+        x.movimiento = !anterior ? null : prev ? prev.puesto - x.puesto : 'nuevo';
+      }
+      const reg = { semana, fecha: ahora, resumen: datos?.resumen || '', ranking: lista, leyoTendenciasML: !!textoML, fuentes: (fs3 || []).slice(0, 10) };
+      masBuscados.semanas = [reg, ...masBuscados.semanas.filter(x => x.semana !== semana)].sort((a, b) => b.semana.localeCompare(a.semana)).slice(0, 26);
+      fs.writeFileSync(MB_ARCH, JSON.stringify(masBuscados));
+      console.log(`  · Ranking semanal ${semana}: ${lista.length} productos${textoML ? ' (con Tendencias de Mercado Libre)' : ''}`);
+    }
+  } catch (e) { errores.push('ranking semanal: ' + e.message) }
+}
+
+// ---------- 2c. Productos ganadores (5 criterios) ----------
+// 1) resuelve un problema real · 2) difícil de encontrar en supermercados o tiendas físicas
+// 3) se puede vender al menos 3 veces su costo · 4) ya se está vendiendo · 5) cuesta entre US$5 y US$30, es chico y fácil de enviar
+const GN = cfg.ganadores || {};
+const PROV = GN.proveedores || ['AliExpress', 'CJ Dropshipping', 'Alibaba', 'Temu', 'DHgate', 'Mercado Libre'];
+const PROV_RE = new RegExp(PROV.map(x => x.split(' ')[0]).join('|'), 'i');
+const nichos = GN.nichos || ['Salud', 'Belleza', 'Cuidado personal'];
+const nN = Math.min(GN.nichosPorVuelta || 2, nichos.length);
+const iniN = ((estado.vueltaGanadores || 0) * nN) % nichos.length;
+estado.vueltaGanadores = (estado.vueltaGanadores || 0) + 1;
+const nichosHoy = Array.from({ length: nN }, (_, i) => nichos[(iniN + i) % nichos.length]);
+const poolPrevio = leer(path.join(SAL, 'ofertas.json'), {}).ganadores || [];
+const candidatos = [];
+for (const nicho of nichosHoy) {
+  try {
+    const { datos } = await ia.json(`Buscá en internet PRODUCTOS GANADORES para vender en Argentina (dropshipping o importación chica) en el nicho "${nicho}".
+Usá SOLO tiendas y proveedores con registro GRATUITO y sin suscripción paga: ${PROV.join(', ')}. No uses AutoDS, Spocket, Zendrop ni otras plataformas pagas. Revisá esos catálogos, lo que se está anunciando en TikTok e Instagram y lo que ya se vende en Mercado Libre Argentina.
+Cada producto debe cumplir estos 5 criterios: 1) soluciona un problema real; 2) no se consigue en un supermercado ni en una tienda física común; 3) tiene valor percibido alto: se puede vender al menos 3 veces su costo; 4) ya está generando ventas (pedidos visibles, anuncios activos o ventas en Mercado Libre); 5) cuesta entre 5 y 30 dólares en el proveedor y es chico, liviano y fácil de enviar.
+Reglas: datos reales con LINK EXACTO del proveedor; no inventes cifras de ventas: copiá la evidencia tal cual figura o dejala vacía.
+SOLO JSON, hasta ${GN.productosPorNicho || 12} productos: {"productos":[{"nombre","nicho","problema":"qué problema resuelve","proveedor":"AliExpress | CJ | Alibaba | Temu | otro","url_proveedor","imagen_url","costo_usd":número,"envio_usd":número o null,"dias_envio":"ej. 10-20","peso_kg":número,"tamano":"chico | mediano | grande",
+"en_tiendas_fisicas":"no | a veces | sí","url_ml":"publicación similar en Mercado Libre Argentina o vacío","precio_venta_ars":número (precio al que se vende o se podría vender en Argentina),"vendedores_ml":número o null,
+"evidencia_ventas":"ej. '+10.000 vendidos en AliExpress' o 'anuncios activos en TikTok'","ventas_comprobadas":true/false,"anuncios":"plataformas donde se anuncia o vacío","riesgos":["..."]}]}`, true);
+    for (const x of (datos?.productos || Object.values(datos || {}).find(Array.isArray) || [])) if (x?.nombre && num(x.costo_usd) > 0 && PROV_RE.test(`${x.proveedor} ${x.url_proveedor}`)) candidatos.push({ ...x, nicho: x.nicho || nicho });
+  } catch (e) { errores.push(`ganadores ${nicho}: ${e.message}`) }
+}
+function evaluarGanador(x) {
+  const costoUSD = num(x.costo_usd) + (num(x.envio_usd) || 0), peso = num(x.peso_kg) || 0.3, pv = num(x.precio_venta_ars);
+  let r = null; try { if (pv) r = rentab(pv, { metodo: 'courier_economico', costo_usd: costoUSD, peso, cantidad: GN.loteImportacion || 10 }) } catch { }
+  const costoARS = r?.cp?.unit ?? costoUSD * (dolarMEP || dolar);
+  const mult = pv && costoUSD ? pv / (costoUSD * (dolarMEP || dolar)) : null;
+  const c = {
+    problema: x.problema && x.problema.length > 12 ? 20 : x.problema ? 10 : 0,
+    dificil: { no: 20, 'a veces': 10 }[String(x.en_tiendas_fisicas || '').toLowerCase()] ?? 5,
+    x3: mult == null ? 0 : mult >= 3 ? 20 : mult >= 2 ? 10 : 0,
+    vendiendo: x.ventas_comprobadas && x.evidencia_ventas ? 20 : x.evidencia_ventas || x.anuncios ? 10 : 0,
+    precio: (num(x.costo_usd) >= 5 && num(x.costo_usd) <= 30 ? 12 : 4) + (peso <= 1 && !/grande/i.test(x.tamano || '') ? 8 : 0),
+  };
+  let nota = Object.values(c).reduce((a, b) => a + b, 0);
+  const riesgos = [...(x.riesgos || [])];
+  // la nota final exige ganancia real después de importar y vender
+  if (r && r.ganancia <= 0) { nota = Math.min(nota, 49); riesgos.push('Con los costos actuales de importación y venta no deja ganancia: habría que comprar por mayor o venderlo más caro.') }
+  if (!x.ventas_comprobadas) riesgos.push('Ventas no comprobadas.');
+  if (num(x.vendedores_ml) > 40) riesgos.push(`Ya hay ${x.vendedores_ml} vendedores en Mercado Libre.`);
+  riesgos.push(`Importación: ${x.dias_envio || '15-35'} días de envío, límites del courier y riesgo de cambio.`);
+  const lote = GN.loteImportacion || 10;
+  return {
+    id: slug(x.nombre + '-' + (x.proveedor || '')), encontrado: ahora, nombre: x.nombre, nicho: x.nicho, problema: x.problema || '', imagen: segura(x.imagen_url),
+    proveedor: x.proveedor || '', url: segura(x.url_proveedor), urlML: segura(x.url_ml), costoUSD: +costoUSD.toFixed(2), diasEnvio: x.dias_envio || '', pesoKg: peso, tamano: x.tamano || '', enTiendas: x.en_tiendas_fisicas || 'sin dato',
+    precioVenta: pv || null, multiplicador: mult ? +mult.toFixed(1) : null, costoPuesto: Math.round(costoARS), gananciaUnidad: r ? Math.round(r.ganancia) : null, margenPct: r ? +r.margen_neto.toFixed(1) : null,
+    lote, inversion: Math.round(costoARS * lote), gananciaLote: r ? Math.round(r.ganancia * lote) : null, vendedoresML: num(x.vendedores_ml) || null,
+    evidencia: x.evidencia_ventas || '', anuncios: x.anuncios || '', comprobado: !!x.ventas_comprobadas, criterios: c, nota, riesgos: [...new Set(riesgos)],
+  };
+}
+const limiteG = new Date(Date.now() - (GN.diasVigencia || 30) * 864e5).toISOString();
+const mapaG = new Map(poolPrevio.filter(g => g.encontrado >= limiteG).map(g => [g.id, g]));
+for (const g of candidatos.map(evaluarGanador)) mapaG.set(g.id, g);
+const ganadores = [...mapaG.values()].sort((a, b) => b.nota - a.nota || (b.gananciaLote ?? 0) - (a.gananciaLote ?? 0)).slice(0, GN.maximo || 200);
+console.log(`  · Productos ganadores: ${candidatos.length} nuevos (${nichosHoy.join(', ')}) · total ${ganadores.length}`);
 
 // ---------- 3. Analizar cada oferta ----------
 const C = cfg.clasificacion || { excelenteROI: 60, buenaROI: 35, moderadaROI: 20 };
@@ -180,7 +275,7 @@ for (const k of Object.keys(historial)) if ((historial[k].at(-1)?.fecha || '') <
 const salida = {
   generado: ahora, simulacion: SIM, dolarOficial: dolar, dolarMEP, categoriasRevisadas: elegidas, proximas: Array.from({ length: n }, (_, i) => cats[(inicio + n + i) % cats.length]),
   resumen: { total: ofertas.length, nuevasEstaVuelta: analizadas.length, porClase: ofertas.reduce((m, o) => (m[o.clasificacion] = (m[o.clasificacion] || 0) + 1, m), {}) },
-  ranking, ofertas, tendencias, fuentes: fuentes.slice(0, 30), errores,
+  ranking, ofertas, tendencias, ganadores, nichosHoy, proximosNichos: Array.from({ length: nN }, (_, i) => nichos[(iniN + nN + i) % nichos.length]), fuentes: fuentes.slice(0, 30), errores,
 };
 fs.writeFileSync(path.join(SAL, 'ofertas.json'), JSON.stringify(salida));
 fs.writeFileSync(path.join(SAL, 'historial-precios.json'), JSON.stringify(historial));
@@ -189,6 +284,8 @@ console.log(`  · Ofertas vigentes: ${ofertas.length} (nuevas ${analizadas.lengt
 
 // ---------- datos de prueba ----------
 function simulacion(prompt) {
+  if (/PRODUCTOS GANADORES/.test(prompt)) return { productos: [['Masajeador cervical eléctrico', 12, 'no', 45000, true], ['Removedor de callos recargable', 8, 'no', 28000, true], ['Cepillo alisador iónico', 15, 'a veces', 39000, false], ['Corrector de postura', 6, 'a veces', 15000, true]].map(([n, c, t, pv, ok]) => ({ nombre: n, problema: 'Alivia dolores y molestias del día a día.', proveedor: 'AliExpress', url_proveedor: 'https://example.com', costo_usd: c, envio_usd: 2, dias_envio: '12-25', peso_kg: 0.3, tamano: 'chico', en_tiendas_fisicas: t, url_ml: '', precio_venta_ars: pv, vendedores_ml: 15, evidencia_ventas: ok ? '+5.000 vendidos' : '', ventas_comprobadas: ok, anuncios: 'TikTok', riesgos: [] })) };
+  if (/MÁS BUSCA COMPRAR/.test(prompt)) return { resumen: 'Ranking simulado.', ranking: ['Aire acondicionado split', 'Ventilador de pie', 'Protector solar', 'Zapatillas running', 'Celular gama media', 'Pileta de lona', 'Conservadora', 'Smart TV 50', 'Freidora de aire', 'Auriculares bluetooth', 'Notebook', 'Repelente', 'Bicicleta', 'Parlante bluetooth', 'Smartwatch'].map((p, i) => ({ producto: p, categoria: 'Varios', tendencia: i % 3 ? 'estable' : 'creciendo', evidencia: 'posición en el ranking de la fuente', fuente: 'Mercado Libre Tendencias', url: 'https://tendencias.mercadolibre.com.ar/', precio_promedio_ars: 50000 + i * 10000, oportunidad_reventa: ['alta', 'media', 'baja'][i % 3], por_que: 'Llegada del verano.' })) };
   if (/consumidores/.test(prompt)) return { resumen: 'Tendencias simuladas.', productos: [{ producto: 'Auriculares inalámbricos', categoria: 'Electrónica', tendencia: 'creciendo', evidencia: 'estimación', competencia: 'alta', precio_promedio_ars: 35000, estacionalidad: 'Navidad', url: 'https://example.com' }], categorias_calientes: ['Electrónica'] };
   const cat = (prompt.match(/categoría "([^"]+)"/) || [])[1] || 'Varios';
   const base = [
