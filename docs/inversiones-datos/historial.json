@@ -598,7 +598,8 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "groq": "COMPRAR"
+   "gemini": "VENDER",
+   "groq": "VENDER"
   },
   "evaluado": {}
  },
@@ -614,7 +615,7 @@
    "bajo_m20"
   ],
   "votos": {
-   "gemini": "ESPERAR"
+   "gemini": "VENDER"
   },
   "evaluado": {}
  },
@@ -631,8 +632,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR",
-   "groq": "COMPRAR"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -647,7 +647,9 @@
    "tendencia_alcista",
    "bajo_m20"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -661,7 +663,9 @@
    "tendencia_bajista",
    "bajo_m20"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "VENDER"
+  },
   "evaluado": {}
  },
  {
@@ -675,7 +679,9 @@
    "cruce_muerte",
    "bajo_m20"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "VENDER"
+  },
   "evaluado": {}
  },
  {
@@ -691,8 +697,7 @@
    "fib_soporte"
   ],
   "votos": {
-   "gemini": "COMPRAR",
-   "groq": "COMPRAR"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -726,7 +731,8 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "COMPRAR"
+   "gemini": "COMPRAR",
+   "groq": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -742,7 +748,7 @@
    "bajo_m20"
   ],
   "votos": {
-   "gemini": "VENDER"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -751,7 +757,7 @@
   "fecha": "2026-11-16",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 64695.12109375,
+  "precio": 65274.6484375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -759,7 +765,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR",
+   "gemini": "COMPRAR",
    "groq": "COMPRAR"
   },
   "evaluado": {}
@@ -769,14 +775,16 @@
   "fecha": "2026-11-16",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1806.199951171875,
+  "precio": 1831.0400390625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR"
+  },
   "evaluado": {}
  }
 ]
