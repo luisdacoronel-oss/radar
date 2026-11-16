@@ -1,10 +1,11 @@
 {
-  "margen_minimo_pct": 300,
-  "ml_ganancia_min_pct_costo": 70,
-  "web": { "margen_min_pct_precio": 50, "envio_paga": "cliente" },
-  "perfil": { "reputacion_ml": "verde", "tipo_publicacion": "clasica", "notas": "" },
-  "whatsapp_horarios": [[10, 13], [17, 22]],
-  "max_consultas_ia_por_dia": 600,
-  "objetivo_productos_dia": 60,
-  "minutos_por_vuelta": 20
+  "_nota": "Configuración del buscador de ofertas y reventa. Se puede editar desde GitHub sin tocar código.",
+  "categorias": ["Electrónica", "Celulares", "Computación", "Accesorios tecnológicos", "Herramientas", "Ferretería", "Hogar", "Muebles", "Decoración", "Electrodomésticos", "Indumentaria", "Calzado", "Perfumería", "Cosmética", "Accesorios para vehículos", "Artículos deportivos", "Juguetes", "Productos para mascotas", "Productos industriales", "Insumos comerciales"],
+  "categoriasPorVuelta": 5,
+  "ofertasPorCategoria": 8,
+  "sitios": ["Mercado Libre (ofertas del día, tiendas oficiales y liquidaciones)", "Frávega", "Musimundo", "Megatone", "Cetrogar", "On City", "Coto Digital", "Carrefour", "Jumbo", "Easy", "Sodimac", "Dexter", "Netshoes", "Perfumerías Rouge", "Juleriaque", "distribuidores mayoristas argentinos", "AliExpress", "Amazon", "Alibaba"],
+  "canalVenta": "Mercado Libre",
+  "capitalMaximoPorProducto": 300000,
+  "diasVigenciaOferta": 3,
+  "clasificacion": { "excelenteROI": 60, "buenaROI": 35, "moderadaROI": 20 }
 }
