@@ -1,0 +1,38 @@
+name: RADAR Ofertas
+
+on:
+  schedule:
+    - cron: '41 12,21 * * *'   # 9:41 y 18:41 de Argentina, todos los días
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-ofertas
+  cancel-in-progress: false
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Buscar ofertas y analizar reventa
+        env:
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          GROQ_KEY: ${{ secrets.GROQ_KEY }}
+        run: node ofertas/motor.mjs
+      - name: Guardar resultados
+        if: always()
+        run: |
+          git config user.name "RADAR"
+          git config user.email "radar@users.noreply.github.com"
+          git add docs/ofertas-datos
+          git diff --cached --quiet && exit 0
+          git commit -m "RADAR: ofertas"
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs origin HEAD && git push && exit 0; sleep 10; done
+          exit 1
