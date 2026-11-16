@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-16T02:41:18.175Z",
+ "generado": "2026-11-16T03:48:14.849Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -234,7 +234,7 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -18.43,
+   "mensualPct": -19.01,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.31,
+   "mensualPct": -21.9,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -73486,16 +73486,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 65274.6484375,
-   "variacionDia": 1.79,
-   "variacion30d": -18.43,
+   "precio": 64811,
+   "variacionDia": 1.06,
+   "variacion30d": -19.01,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 75054.0388671875,
-   "m50": 79754.453359375,
-   "m200": 72921.76494140625,
-   "rsi": 24.531952942045507,
+   "m20": 75030.8564453125,
+   "m50": 79745.180390625,
+   "m200": 72919.44669921875,
+   "rsi": 22.83269744879648,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -73569,7 +73569,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 25: zona de sobreventa, posible rebote."
+     "texto": "RSI en 23: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75976,8 +75976,8 @@
       "open": 65314.55078125,
       "high": 65363.4375,
       "low": 64599.7265625,
-      "close": 65274.6484375,
-      "volume": 32649322496
+      "close": 64811,
+      "volume": 30278068224
      }
     ],
     "m20": [
@@ -77179,7 +77179,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 75054.0389
+      "value": 75030.8564
      }
     ],
     "m50": [
@@ -78381,7 +78381,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 79754.4534
+      "value": 79745.1804
      }
     ],
     "m200": [
@@ -79583,7 +79583,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 72921.7649
+      "value": 72919.4467
      }
     ],
     "rsi": [
@@ -80785,7 +80785,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 24.532
+      "value": 22.8327
      }
     ]
    },
@@ -80826,16 +80826,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1831.0400390625,
-   "variacionDia": 3.5,
-   "variacion30d": -21.31,
+   "precio": 1817.219970703125,
+   "variacionDia": 2.72,
+   "variacion30d": -21.9,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2163.7292236328126,
-   "m50": 2377.99998046875,
-   "m200": 2142.5127142333986,
-   "rsi": 26.11161201757453,
+   "m20": 2163.038220214844,
+   "m50": 2377.7235791015623,
+   "m200": 2142.4436138916017,
+   "rsi": 24.790625953125712,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -80909,7 +80909,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 26: zona de sobreventa, posible rebote."
+     "texto": "RSI en 25: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -83316,8 +83316,8 @@
       "open": 1835.2918701171875,
       "high": 1837.161865234375,
       "low": 1804.953125,
-      "close": 1831.0400390625,
-      "volume": 12895218688
+      "close": 1817.219970703125,
+      "volume": 11968212992
      }
     ],
     "m20": [
@@ -84519,7 +84519,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2163.7292
+      "value": 2163.0382
      }
     ],
     "m50": [
@@ -85721,7 +85721,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2378
+      "value": 2377.7236
      }
     ],
     "m200": [
@@ -86923,7 +86923,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2142.5127
+      "value": 2142.4436
      }
     ],
     "rsi": [
@@ -88125,7 +88125,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 26.1116
+      "value": 24.7906
      }
     ]
    },
@@ -88595,6 +88595,13 @@
    "tema": "mercado argentino acciones hoy"
   },
   {
+   "titulo": "Dólar blue hoy: a cuánto cotiza este domingo 15 de noviembre con el MEP y el CCL - El Cronista",
+   "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZXpvaHZzc3NKa1NJNnN6ZS12S3ZCOWlwWDVJbnBxYU1iblBYNG1ySGJXUXNWNGlKOHpjVXQxcEFHV1hzNHk0V0p2QnlIX1I3eTNGaXI3LVdqcGljejZtQjVxcm5Ub2MzNHl6dmV0MkRCVVh4TVVNcUctN3hBVDhTWVNzcm1FMDh5T3duZ1YtQWJtTWNId3pueGdBY0F5V1FMcVQ4S3pKRHFGUll1YkJkSVFvb1oyM1FYOGFCSUdmZW7SAdsBQVVfeXFMTnRuYmRaQ2kzamsxVXNfWU0za3haejFzbi1aVnQteTFLV3pNTGd5TW9IWnV5dFQxcEVtZTVrT09xcHdwTGsxX3hYbGFRazhXb2dhcEJ4dHFSaE5TUkFJU0M0ODlocnFwel9Db09VYV81QkE1NXVoOW0zNVE2NE5uY215Q1BoVDJCYV9oc1BNNkF2ZlVLTV9kTUZ0d2xJUXNJeXA1QlVwR25CenF0SThxdDhEN245SHlQS29rMG1IMEJIX0p1aDM3ZmlXS3lRcDdDcHVPalIzb0ZiVXgw?oc=5",
+   "fecha": "Sun, 15 Nov 2026 03:04:25 GMT",
+   "fuente": "",
+   "tema": "dólar MEP CCL brecha hoy"
+  },
+  {
    "titulo": "Dólar blue hoy: a cuánto opera este domingo 15 de noviembre - Ambito",
    "enlace": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSWIwZDNJaV9lYmlfZ1JfN3pqUjduUG1zdnN4ZUYxZGp4UjIyR05zQjFxVFA5cWJYSG5GNFlkZTVZQURxMWtabHZTdllMRFV4RDl1akRKMFFZWFpBd2w3b2Zvbm93WDNud2NXcXg3SngwSXRYcFdEMXRDbVBPMVdaQUZySHFHdjVvS0laUHFFYW0xRnJZXzQ3cTFn0gGfAUFVX3lxTE4yeEFLQkVmcXVaWUN2dVhMU3VXOXpuT3RRaVk0VWJJUFN1dENpc0lQcHVULUhLOFRqakJwRE44VXBvRXI5T2FHMW5mT2p0Q3NrNzNVMHZ1MXNWTVUySmc5aFROeWItSEVuTTZ1X2Izb3VLS19SNlV3M1N5bUdNa2FqSURyb0Rsb2pIVkRvbFRFazdVNkVfbGtpQ3VsN3JoZw?oc=5",
    "fecha": "Sun, 15 Nov 2026 03:21:26 GMT",
@@ -88619,13 +88626,6 @@
    "titulo": "Dólar CCL: brecha con el MEP sube a 5,2% en Argentina - El Ecosistema Startup",
    "enlace": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN0V5T0JFT1VMQ291bXRucEQzVHRHYVFJVUdiVkxSbWpXd0sySkVfQ1pzcTFLRWlRSkEtSlM4WlVmcl91RVZKQUhMQXhSUDRyRGk0M2hReUpUMGNjZHhLdmRjN2tRZXY3S3BOeFZ4eHE0ZWE1QlZMZndXVlZadWd0RG9PT19KWHQw?oc=5",
    "fecha": "Thu, 22 Oct 2026 07:00:00 GMT",
-   "fuente": "",
-   "tema": "dólar MEP CCL brecha hoy"
-  },
-  {
-   "titulo": "Dólar hoy: por qué se achicó la brecha entre el oficial, el MEP y el blue - Diario Río Negro",
-   "enlace": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWlpUcUNUeFFCSHpITnBHREdfVTh2ZDN4ZTkzZm43ZkJTRkdKMHN6cVdjcEtCbGl2eE1GQzg5T0lEUXZ1cUgwbU1RbUpoWjNONlh2aGZ2bDVYMG4wRzJTRlRLNnFHb0N4X0ZCY0x2bXJlWU1makpSaFVaZlVkd0FyNnQxYzctWEhmNlZ0bzdkUHk0b1lLVjQ5dnlSX0NuX1gxeDdjTWtNQ1FvbnpqT01haXBzYWFubWh3c19KTk1KZXdlajdweWllbjJ3UkFlM1VIa1NpTElOcXdZZzlUci1QX3Q4bC16dHfSAe8BQVVfeXFMUEVfV3ZTMExpOHBSal81TEgzd1Z3SUNYLUZ2NTRoQjFVNXhndlczRHBhU1lfOWw0QTc4akNvaUc0YkFuSjBuUXgyeTRtU2wxWXdGdzlLZ283YUprcnFXczV2VDMxc1lRSVhEWjUyNXc4aVJ5QW9HUHhuUGNVT0xDVGRueEc0NXhGeVVkVjdOc2lGMWhhMVA1SEFIbTlTRkZxSTFLb2I3VWdrdFNHaUV0aWw1WWZGZV9qUjY4cmxDOXk4Ml9JNjd6NWMtbjRYXzdzZ1hCMlRjOVZ4RktydFpNb3RiV2ZmM3FpVklYdjdUX0E?oc=5",
-   "fecha": "Wed, 23 Sep 2026 07:00:00 GMT",
    "fuente": "",
    "tema": "dólar MEP CCL brecha hoy"
   },
@@ -88791,16 +88791,16 @@
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
-   "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
-   "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
+   "titulo": "Jubilados y pensionados: cuánto cobrarán en diciembre tras el nuevo dato de inflación del Indec - La Gaceta",
+   "enlace": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQXzFwc1NZbEtZUnV6Nzg5WjZ6ZFdsM2V1N3pSYlB3VkRveXVRU0thVDVjWmgxMjZnb24zblNFTEx1LVRjZm13em8xV3VaNWRIR2JpaF9YbHBob0Vsdm1GdDBJSzgtTllSX1JJN09Dd211NHlkVHR2Y19ITl9SQ1JRWE5wWllYZEw3M0c5UmZWVEg1QjNfaEQzZUcxQlJqRHdoQXpFNHBPU0ZsZDk3THFCb0N2MmdWX3JROF9Gc0pZVlg3a05EV3BrUmtqQnlMejjSAdQBQVVfeXFMTkpGVmNZWVdrTjVyek1uc1FTWlN6Vk5JcU1aaXJPQmZrRWUxeVNUQ244Nmp1RTRxR0x5dzd6V2FjR2IyRkwzTUJORGNNZnJNeExRNkJEMHZiWjBOOU4ydlVfcTBsU3gwRlphaWtNZXhqbllYdGdaa0JwdkVpVjBnVC1aalRTSTVnbEVidE5ubmRWTlE5U2VaakgxZGRTYXpjWXV5MVVNWS1xRGRoV0N0S01uYy01WGpjcEdDNVdMWjc2Nks3MmpiM1dpcS01OTRiaXI0NVA?oc=5",
+   "fecha": "Fri, 13 Nov 2026 12:52:15 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   },
   {
-   "titulo": "Jubilados y pensionados: cuánto cobrarán en diciembre tras el nuevo dato de inflación del Indec - La Gaceta",
-   "enlace": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQXzFwc1NZbEtZUnV6Nzg5WjZ6ZFdsM2V1N3pSYlB3VkRveXVRU0thVDVjWmgxMjZnb24zblNFTEx1LVRjZm13em8xV3VaNWRIR2JpaF9YbHBob0Vsdm1GdDBJSzgtTllSX1JJN09Dd211NHlkVHR2Y19ITl9SQ1JRWE5wWllYZEw3M0c5UmZWVEg1QjNfaEQzZUcxQlJqRHdoQXpFNHBPU0ZsZDk3THFCb0N2MmdWX3JROF9Gc0pZVlg3a05EV3BrUmtqQnlMejjSAdQBQVVfeXFMTkpGVmNZWVdrTjVyek1uc1FTWlN6Vk5JcU1aaXJPQmZrRWUxeVNUQ244Nmp1RTRxR0x5dzd6V2FjR2IyRkwzTUJORGNNZnJNeExRNkJEMHZiWjBOOU4ydlVfcTBsU3gwRlphaWtNZXhqbllYdGdaa0JwdkVpVjBnVC1aalRTSTVnbEVidE5ubmRWTlE5U2VaakgxZGRTYXpjWXV5MVVNWS1xRGRoV0N0S01uYy01WGpjcEdDNVdMWjc2Nks3MmpiM1dpcS01OTRiaXI0NVA?oc=5",
-   "fecha": "Fri, 13 Nov 2026 12:52:15 GMT",
+   "titulo": "RDEco: qué diferencia hay entre las canastas de consumo que utilizan el INDEC y la Ciudad de Buenos Aires - Perfil",
+   "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPS2dzMGtRaDZzbnk5OURxV2loWjFUX1VuazFCUGpZTmNpbEJPSUdZV1FYbG5zOEhlTFpGSGo2dkQzUGtHZ1g5cHpHUXBYVlpPeGtCaTJXTkI0bFp0Ml9jSnpzOGdhUWprdEwwdFVzYWlDQ2lmVjItOEx5cUI2WnpSQUZQMlBEX0pWTzBNandGMldNUGE4SEpzVkpBSXZxa1FLQk9pY0I2X1hEa1kwVHo3TGxuTUhPZHA3TGRSclFCdGpNd0hSUTFwdlVOTG1mVDU0Qi1XYk5LQmNyalI2SkkxR2JDUnd2QQ?oc=5",
+   "fecha": "Fri, 13 Nov 2026 23:12:19 GMT",
    "fuente": "",
    "tema": "inflación INDEC"
   }
