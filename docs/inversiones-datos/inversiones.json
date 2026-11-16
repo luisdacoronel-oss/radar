@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-16T15:42:36.046Z",
+ "generado": "2026-11-16T16:58:14.930Z",
  "simulacion": false,
  "inflacionMensualPct": 2.2,
  "riesgoPais": 830,
@@ -8,25 +8,25 @@
    "nombre": "Oficial",
    "compra": 1525,
    "venta": 1575,
-   "fecha": "2026-11-16T12:00:00.000Z"
+   "fecha": "2026-11-16T13:00:00.000Z"
   },
   "blue": {
    "nombre": "Blue",
-   "compra": 1560,
-   "venta": 1580,
-   "fecha": "2026-11-16T14:59:00.000Z"
+   "compra": 1565,
+   "venta": 1585,
+   "fecha": "2026-11-16T15:59:00.000Z"
   },
   "bolsa": {
    "nombre": "Bolsa",
-   "compra": 1582.4,
-   "venta": 1583.9,
-   "fecha": "2026-11-16T14:59:00.000Z"
+   "compra": 1580.3,
+   "venta": 1581.4,
+   "fecha": "2026-11-16T15:59:00.000Z"
   },
   "contadoconliqui": {
    "nombre": "Contado con liquidación",
-   "compra": 1677.7,
-   "venta": 1678.3,
-   "fecha": "2026-11-16T14:59:00.000Z"
+   "compra": 1678.7,
+   "venta": 1679.2,
+   "fecha": "2026-11-16T15:59:00.000Z"
   },
   "mayorista": {
    "nombre": "Mayorista",
@@ -36,60 +36,60 @@
   },
   "cripto": {
    "nombre": "Cripto",
-   "compra": 1672.4,
-   "venta": 1678.35,
-   "fecha": "2026-11-16T14:59:00.000Z"
+   "compra": 1674.83,
+   "venta": 1678.38,
+   "fecha": "2026-11-16T15:59:00.000Z"
   },
   "tarjeta": {
    "nombre": "Tarjeta",
    "compra": 1982.5,
    "venta": 2047.5,
-   "fecha": "2026-11-16T12:00:00.000Z"
+   "fecha": "2026-11-16T13:00:00.000Z"
   }
  },
  "rulos": [
   {
    "nombre": "MEP → CCL",
-   "pasos": "Comprar dólares MEP a $1583.9 → vender como CCL a $1677.7",
-   "brutoPct": 5.92,
-   "netoPct": 4.72,
-   "gananciaSobreCapital": 47221,
+   "pasos": "Comprar dólares MEP a $1581.4 → vender como CCL a $1678.7",
+   "brutoPct": 6.15,
+   "netoPct": 4.95,
+   "gananciaSobreCapital": 49528,
    "conviene": true,
    "nota": "Requiere operar bonos (AL30/GD30) en un broker. Verifique los plazos mínimos de tenencia (parking) vigentes de la CNV."
   },
   {
    "nombre": "MEP → Cripto (USDT)",
-   "pasos": "Comprar dólares MEP a $1583.9 → vender como USDT en un exchange a $1672.4",
-   "brutoPct": 5.59,
-   "netoPct": 3.79,
-   "gananciaSobreCapital": 37875,
+   "pasos": "Comprar dólares MEP a $1581.4 → vender como USDT en un exchange a $1674.83",
+   "brutoPct": 5.91,
+   "netoPct": 4.11,
+   "gananciaSobreCapital": 41081,
    "conviene": true,
    "nota": "Incluye pasar los dólares del broker a un exchange. Revise comisiones de retiro y depósito."
   },
   {
    "nombre": "Oficial → MEP",
-   "pasos": "Comprar dólares oficial en el banco a $1575 → vender por MEP a $1582.4",
-   "brutoPct": 0.47,
-   "netoPct": -0.73,
-   "gananciaSobreCapital": -7302,
+   "pasos": "Comprar dólares oficial en el banco a $1575 → vender por MEP a $1580.3",
+   "brutoPct": 0.34,
+   "netoPct": -0.86,
+   "gananciaSobreCapital": -8635,
    "conviene": false,
    "nota": "Solo si la normativa vigente permite comprar oficial y vender MEP sin restricción cruzada. Verifique antes de operar."
   },
   {
    "nombre": "Oficial → Blue",
-   "pasos": "Comprar dólares oficial en el banco a $1575 → vender en el mercado informal a $1560",
-   "brutoPct": -0.95,
-   "netoPct": -1.55,
-   "gananciaSobreCapital": -15524,
+   "pasos": "Comprar dólares oficial en el banco a $1575 → vender en el mercado informal a $1565",
+   "brutoPct": -0.63,
+   "netoPct": -1.23,
+   "gananciaSobreCapital": -12349,
    "conviene": false,
    "nota": "Mercado informal: no se recomienda por riesgo legal y de seguridad. Se muestra solo como referencia."
   },
   {
    "nombre": "Cripto (USDT) → MEP",
-   "pasos": "Comprar dólares en USDT a $1678.35 → vender por MEP a $1582.4",
-   "brutoPct": -5.72,
-   "netoPct": -7.52,
-   "gananciaSobreCapital": -75169,
+   "pasos": "Comprar dólares en USDT a $1678.38 → vender por MEP a $1580.3",
+   "brutoPct": -5.84,
+   "netoPct": -7.64,
+   "gananciaSobreCapital": -76437,
    "conviene": false,
    "nota": "Camino inverso: comprar USDT con pesos y vender dólares MEP."
   }
@@ -99,7 +99,7 @@
    "nombre": "Apple",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": 3.16,
+   "mensualPct": 2.94,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -180,7 +180,7 @@
    "nombre": "S&P 500 (SPY)",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -2.42,
+   "mensualPct": -2.3,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -189,7 +189,7 @@
    "nombre": "Oro (GLD)",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -7.35,
+   "mensualPct": -7.34,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -198,8 +198,8 @@
    "nombre": "Banco Macro",
    "tipo": "accion (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -11.47,
-   "realPct": -13.38,
+   "mensualPct": -11.85,
+   "realPct": -13.75,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
@@ -207,7 +207,7 @@
    "nombre": "Argentina (ETF ARGT)",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -18.25,
+   "mensualPct": -18.55,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -216,17 +216,8 @@
    "nombre": "Grupo Galicia",
    "tipo": "accion (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -16.91,
-   "realPct": -18.7,
-   "donde": "Broker (cuenta comitente)",
-   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
-  },
-  {
-   "nombre": "Pampa Energía",
-   "tipo": "accion (variable)",
-   "riesgo": "Medio/Alto",
-   "mensualPct": -17.34,
-   "realPct": -19.12,
+   "mensualPct": -17.16,
+   "realPct": -18.94,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
@@ -234,16 +225,25 @@
    "nombre": "Bitcoin",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -19.61,
+   "mensualPct": -18.96,
    "realPct": null,
    "donde": "Exchange",
+   "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
+  },
+  {
+   "nombre": "Pampa Energía",
+   "tipo": "accion (variable)",
+   "riesgo": "Medio/Alto",
+   "mensualPct": -18.06,
+   "realPct": -19.82,
+   "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   },
   {
    "nombre": "Mercado Libre",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -19.62,
+   "mensualPct": -19.86,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: VENDER. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -252,7 +252,7 @@
    "nombre": "Ethereum",
    "tipo": "cripto (variable)",
    "riesgo": "Alto",
-   "mensualPct": -21.96,
+   "mensualPct": -21.21,
    "realPct": null,
    "donde": "Exchange",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -261,7 +261,7 @@
    "nombre": "Nvidia",
    "tipo": "cedear (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -25.71,
+   "mensualPct": -25.55,
    "realPct": null,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
@@ -270,8 +270,8 @@
    "nombre": "YPF",
    "tipo": "accion (variable)",
    "riesgo": "Medio/Alto",
-   "mensualPct": -26.84,
-   "realPct": -28.41,
+   "mensualPct": -26.36,
+   "realPct": -27.95,
    "donde": "Broker (cuenta comitente)",
    "como": "Señal actual: ESPERAR. El rendimiento mostrado es el de los últimos 30 días, no una garantía."
   }
@@ -283,16 +283,16 @@
    "tradingview": "AMEX:ARGT",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 71.94000244140625,
-   "variacionDia": -2.45,
-   "variacion30d": -18.25,
+   "precio": 71.67500305175781,
+   "variacionDia": -2.81,
+   "variacion30d": -18.55,
    "puntaje": 5,
    "puntajeBase": 5,
    "accion": "ESPERAR",
-   "m20": 78.99700050354004,
-   "m50": 85.75219970703125,
-   "m200": 90.77680011749267,
-   "rsi": 25.236814489037158,
+   "m20": 78.98375053405762,
+   "m50": 85.74689971923829,
+   "m200": 90.77547512054443,
+   "rsi": 24.851056339517584,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -2772,9 +2772,9 @@
       "time": "2026-11-16",
       "open": 72.9000015258789,
       "high": 72.91999816894531,
-      "low": 71.77999877929688,
-      "close": 71.94000244140625,
-      "volume": 10483
+      "low": 71.67500305175781,
+      "close": 71.67500305175781,
+      "volume": 24852
      }
     ],
     "m20": [
@@ -3976,7 +3976,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 78.997
+      "value": 78.9838
      }
     ],
     "m50": [
@@ -5178,7 +5178,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 85.7522
+      "value": 85.7469
      }
     ],
     "m200": [
@@ -6380,7 +6380,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 90.7768
+      "value": 90.7755
      }
     ],
     "rsi": [
@@ -7582,7 +7582,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 25.2368
+      "value": 24.8511
      }
     ]
    },
@@ -7598,7 +7598,7 @@
     ]
    },
    "niveles": {
-    "entrada": 71.94000244140625,
+    "entrada": 71.67500305175781,
     "objetivo": 63.658960388183594
    },
    "razonesIA": []
@@ -7609,16 +7609,16 @@
    "tradingview": "BCBA:GGAL",
    "tipo": "accion",
    "moneda": "ARS",
-   "precio": 4902.5,
-   "variacionDia": -2.05,
-   "variacion30d": -16.91,
+   "precio": 4887.5,
+   "variacionDia": -2.35,
+   "variacion30d": -17.16,
    "puntaje": -15,
    "puntajeBase": -15,
    "accion": "ESPERAR",
-   "m20": 5408.125,
-   "m50": 5998.35,
-   "m200": 6872.4625,
-   "rsi": 31.745716587338208,
+   "m20": 5407.375,
+   "m50": 5998.05,
+   "m200": 6872.3875,
+   "rsi": 31.46664836766044,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -7692,7 +7692,7 @@
     {
      "clave": "rsi_neutral",
      "peso": 0,
-     "texto": "RSI en 32: zona neutral."
+     "texto": "RSI en 31: zona neutral."
     },
     {
      "clave": "fib_objetivo",
@@ -10099,8 +10099,8 @@
       "open": 4995,
       "high": 4995,
       "low": 4840,
-      "close": 4902.5,
-      "volume": 485578
+      "close": 4887.5,
+      "volume": 700947
      }
     ],
     "m20": [
@@ -11302,7 +11302,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 5408.125
+      "value": 5407.375
      }
     ],
     "m50": [
@@ -12504,7 +12504,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 5998.35
+      "value": 5998.05
      }
     ],
     "m200": [
@@ -13658,7 +13658,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 6872.4625
+      "value": 6872.3875
      }
     ],
     "rsi": [
@@ -14860,7 +14860,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 31.7457
+      "value": 31.4666
      }
     ]
    },
@@ -14876,7 +14876,7 @@
     ]
    },
    "niveles": {
-    "entrada": 4902.5,
+    "entrada": 4887.5,
     "objetivo": 3694.24
    },
    "razonesIA": []
@@ -14887,16 +14887,16 @@
    "tradingview": "BCBA:YPFD",
    "tipo": "accion",
    "moneda": "ARS",
-   "precio": 6050,
-   "variacionDia": -4.57,
-   "variacion30d": -26.84,
+   "precio": 6090,
+   "variacionDia": -3.94,
+   "variacion30d": -26.36,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 7358.5,
-   "m50": 8013.8,
-   "m200": 7170.375,
-   "rsi": 24.562193226636268,
+   "m20": 7360.5,
+   "m50": 8014.6,
+   "m200": 7170.575,
+   "rsi": 24.93473144425522,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -17377,8 +17377,8 @@
       "open": 6340,
       "high": 6355,
       "low": 6025,
-      "close": 6050,
-      "volume": 378725
+      "close": 6090,
+      "volume": 758880
      }
     ],
     "m20": [
@@ -18580,7 +18580,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 7358.5
+      "value": 7360.5
      }
     ],
     "m50": [
@@ -19782,7 +19782,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 8013.8
+      "value": 8014.6
      }
     ],
     "m200": [
@@ -20936,7 +20936,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 7170.375
+      "value": 7170.575
      }
     ],
     "rsi": [
@@ -22138,7 +22138,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 24.5622
+      "value": 24.9347
      }
     ]
    },
@@ -22173,16 +22173,16 @@
    "tradingview": "BCBA:PAMP",
    "tipo": "accion",
    "moneda": "ARS",
-   "precio": 4302.5,
-   "variacionDia": -1.71,
-   "variacion30d": -17.34,
+   "precio": 4265,
+   "variacionDia": -2.57,
+   "variacion30d": -18.06,
    "puntaje": -10,
    "puntajeBase": -10,
    "accion": "ESPERAR",
-   "m20": 4704.25,
-   "m50": 5026.9,
-   "m200": 5031.8375,
-   "rsi": 29.694643880672757,
+   "m20": 4702.375,
+   "m50": 5026.15,
+   "m200": 5031.65,
+   "rsi": 28.686539586695844,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -22256,7 +22256,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 30: zona de sobreventa, posible rebote."
+     "texto": "RSI en 29: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -24663,8 +24663,8 @@
       "open": 4375,
       "high": 4462.5,
       "low": 4255,
-      "close": 4302.5,
-      "volume": 234521
+      "close": 4265,
+      "volume": 389902
      }
     ],
     "m20": [
@@ -25866,7 +25866,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 4704.25
+      "value": 4702.375
      }
     ],
     "m50": [
@@ -27068,7 +27068,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 5026.9
+      "value": 5026.15
      }
     ],
     "m200": [
@@ -28222,7 +28222,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 5031.8375
+      "value": 5031.65
      }
     ],
     "rsi": [
@@ -29424,7 +29424,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 29.6946
+      "value": 28.6865
      }
     ]
    },
@@ -29440,7 +29440,7 @@
     ]
    },
    "niveles": {
-    "entrada": 4302.5,
+    "entrada": 4265,
     "objetivo": 3664.8,
     "stop": 4100
    },
@@ -29452,16 +29452,16 @@
    "tradingview": "BCBA:BMA",
    "tipo": "accion",
    "moneda": "ARS",
-   "precio": 9340,
-   "variacionDia": -2.51,
-   "variacion30d": -11.47,
+   "precio": 9300,
+   "variacionDia": -2.92,
+   "variacion30d": -11.85,
    "puntaje": -15,
    "puntajeBase": -15,
    "accion": "ESPERAR",
-   "m20": 9986.75,
-   "m50": 10849.7,
-   "m200": 12212.075,
-   "rsi": 34.87048589547568,
+   "m20": 9984.75,
+   "m50": 10848.9,
+   "m200": 12211.875,
+   "rsi": 34.39055204675347,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -29535,7 +29535,7 @@
     {
      "clave": "rsi_neutral",
      "peso": 0,
-     "texto": "RSI en 35: zona neutral."
+     "texto": "RSI en 34: zona neutral."
     },
     {
      "clave": "fib_objetivo",
@@ -31942,8 +31942,8 @@
       "open": 9535,
       "high": 9590,
       "low": 9150,
-      "close": 9340,
-      "volume": 190399
+      "close": 9300,
+      "volume": 306947
      }
     ],
     "m20": [
@@ -33145,7 +33145,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 9986.75
+      "value": 9984.75
      }
     ],
     "m50": [
@@ -34347,7 +34347,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 10849.7
+      "value": 10848.9
      }
     ],
     "m200": [
@@ -35501,7 +35501,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 12212.075
+      "value": 12211.875
      }
     ],
     "rsi": [
@@ -36703,7 +36703,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 34.8705
+      "value": 34.3906
      }
     ]
    },
@@ -36719,7 +36719,7 @@
     ]
    },
    "niveles": {
-    "entrada": 9340,
+    "entrada": 9300,
     "objetivo": 7392.879999999999
    },
    "razonesIA": []
@@ -36730,16 +36730,16 @@
    "tradingview": "NASDAQ:MELI",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 1474.1400146484375,
-   "variacionDia": -1.16,
-   "variacion30d": -19.62,
+   "precio": 1469.695068359375,
+   "variacionDia": -1.46,
+   "variacion30d": -19.86,
    "puntaje": -30,
    "puntajeBase": -30,
    "accion": "VENDER",
-   "m20": 1638.5620056152343,
-   "m50": 1750.712998046875,
-   "m200": 1780.3007489013671,
-   "rsi": 32.50811856596253,
+   "m20": 1638.3397583007813,
+   "m50": 1750.6240991210936,
+   "m200": 1780.2785241699219,
+   "rsi": 32.23745413305632,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -36813,7 +36813,7 @@
     {
      "clave": "rsi_neutral",
      "peso": 0,
-     "texto": "RSI en 33: zona neutral."
+     "texto": "RSI en 32: zona neutral."
     },
     {
      "clave": "fib_objetivo",
@@ -39219,9 +39219,9 @@
       "time": "2026-11-16",
       "open": 1485.469970703125,
       "high": 1493.4449462890625,
-      "low": 1467.6400146484375,
-      "close": 1474.1400146484375,
-      "volume": 94511
+      "low": 1465.510009765625,
+      "close": 1469.695068359375,
+      "volume": 153102
      }
     ],
     "m20": [
@@ -40423,7 +40423,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 1638.562
+      "value": 1638.3398
      }
     ],
     "m50": [
@@ -41625,7 +41625,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 1750.713
+      "value": 1750.6241
      }
     ],
     "m200": [
@@ -42827,7 +42827,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 1780.3007
+      "value": 1780.2785
      }
     ],
     "rsi": [
@@ -44029,7 +44029,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 32.5081
+      "value": 32.2375
      }
     ]
    },
@@ -44045,7 +44045,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1474.1400146484375,
+    "entrada": 1469.695068359375,
     "objetivo": 1299.238337890625
    },
    "razonesIA": []
@@ -44056,16 +44056,16 @@
    "tradingview": "AMEX:SPY",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 744.77001953125,
-   "variacionDia": -1.27,
-   "variacion30d": -2.42,
+   "precio": 745.6699829101562,
+   "variacionDia": -1.15,
+   "variacion30d": -2.3,
    "puntaje": 20,
    "puntajeBase": 20,
    "accion": "ESPERAR",
-   "m20": 757.9359924316407,
-   "m50": 763.9193957519532,
-   "m200": 732.1815493774415,
-   "rsi": 42.43750486128151,
+   "m20": 757.980990600586,
+   "m50": 763.9373950195312,
+   "m200": 732.186049194336,
+   "rsi": 42.833804998910715,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -44139,12 +44139,12 @@
     {
      "clave": "rsi_neutral",
      "peso": 0,
-     "texto": "RSI en 42: zona neutral."
+     "texto": "RSI en 43: zona neutral."
     },
     {
      "clave": "fib_soporte",
      "peso": 15,
-     "texto": "El precio está sobre el retroceso de Fibonacci 50.0% (749.10), que suele actuar como soporte."
+     "texto": "El precio está sobre el retroceso de Fibonacci 38.2% (756.77), que suele actuar como soporte."
     },
     {
      "clave": "fib_objetivo",
@@ -46551,8 +46551,8 @@
       "open": 749.6599731445312,
       "high": 749.8200073242188,
       "low": 743.3099975585938,
-      "close": 744.77001953125,
-      "volume": 11578332
+      "close": 745.6699829101562,
+      "volume": 17366215
      }
     ],
     "m20": [
@@ -47754,7 +47754,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 757.936
+      "value": 757.981
      }
     ],
     "m50": [
@@ -48956,7 +48956,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 763.9194
+      "value": 763.9374
      }
     ],
     "m200": [
@@ -50158,7 +50158,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 732.1815
+      "value": 732.186
      }
     ],
     "rsi": [
@@ -51360,7 +51360,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 42.4375
+      "value": 42.8338
      }
     ]
    },
@@ -51376,7 +51376,7 @@
     ]
    },
    "niveles": {
-    "entrada": 744.77001953125,
+    "entrada": 745.6699829101562,
     "objetivo": 799.310869140625,
     "stop": 716.5800170898438
    },
@@ -51388,16 +51388,16 @@
    "tradingview": "NASDAQ:AAPL",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 354.29998779296875,
-   "variacionDia": -0.55,
-   "variacion30d": 3.16,
+   "precio": 353.57000732421875,
+   "variacionDia": -0.76,
+   "variacion30d": 2.94,
    "puntaje": 15,
    "puntajeBase": 15,
    "accion": "ESPERAR",
-   "m20": 346.71850128173827,
-   "m50": 339.72300109863284,
-   "m200": 301.7270001220703,
-   "rsi": 58.53039564124507,
+   "m20": 346.68200225830077,
+   "m50": 339.7084014892578,
+   "m200": 301.72335021972657,
+   "rsi": 57.78514515664502,
    "fibonacci": {
     "tendenciaTramo": "alcista",
     "desde": {
@@ -51471,7 +51471,7 @@
     {
      "clave": "rsi_neutral",
      "peso": 0,
-     "texto": "RSI en 59: zona neutral."
+     "texto": "RSI en 58: zona neutral."
     },
     {
      "clave": "fib_objetivo",
@@ -53878,8 +53878,8 @@
       "open": 357.1000061035156,
       "high": 357.1000061035156,
       "low": 353.0199890136719,
-      "close": 354.29998779296875,
-      "volume": 9913539
+      "close": 353.57000732421875,
+      "volume": 13016331
      }
     ],
     "m20": [
@@ -55081,7 +55081,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 346.7185
+      "value": 346.682
      }
     ],
     "m50": [
@@ -56283,7 +56283,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 339.723
+      "value": 339.7084
      }
     ],
     "m200": [
@@ -57485,7 +57485,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 301.727
+      "value": 301.7234
      }
     ],
     "rsi": [
@@ -58687,7 +58687,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 58.5304
+      "value": 57.7851
      }
     ]
    },
@@ -58722,16 +58722,16 @@
    "tradingview": "NASDAQ:NVDA",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 159.07510375976562,
-   "variacionDia": -2.32,
-   "variacion30d": -25.71,
+   "precio": 159.42999267578125,
+   "variacionDia": -2.1,
+   "variacion30d": -25.55,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 195.7877571105957,
-   "m50": 213.22150299072266,
-   "m200": 204.0305256652832,
-   "rsi": 23.605069203662197,
+   "m20": 195.80550155639648,
+   "m50": 213.22860076904297,
+   "m200": 204.0323001098633,
+   "rsi": 23.71742865260839,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -61212,8 +61212,8 @@
       "open": 159.00250244140625,
       "high": 163,
       "low": 158.11000061035156,
-      "close": 159.07510375976562,
-      "volume": 115813867
+      "close": 159.42999267578125,
+      "volume": 152360000
      }
     ],
     "m20": [
@@ -62415,7 +62415,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 195.7878
+      "value": 195.8055
      }
     ],
     "m50": [
@@ -63617,7 +63617,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 213.2215
+      "value": 213.2286
      }
     ],
     "m200": [
@@ -64819,7 +64819,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 204.0305
+      "value": 204.0323
      }
     ],
     "rsi": [
@@ -66021,7 +66021,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 23.6051
+      "value": 23.7174
      }
     ]
    },
@@ -66037,7 +66037,7 @@
     ]
    },
    "niveles": {
-    "entrada": 159.07510375976562,
+    "entrada": 159.42999267578125,
     "objetivo": 123.07696520996093,
     "stop": 148.8000030517578
    },
@@ -66049,16 +66049,16 @@
    "tradingview": "AMEX:GLD",
    "tipo": "cedear",
    "moneda": "USD",
-   "precio": 353.95001220703125,
+   "precio": 353.9649963378906,
    "variacionDia": -0.42,
-   "variacion30d": -7.35,
+   "variacion30d": -7.34,
    "puntaje": -15,
    "puntajeBase": -15,
    "accion": "ESPERAR",
-   "m20": 367.49650115966796,
-   "m50": 379.84960021972654,
-   "m200": 407.96169998168943,
-   "rsi": 37.07652804632868,
+   "m20": 367.49725036621095,
+   "m50": 379.84989990234374,
+   "m200": 407.96177490234373,
+   "rsi": 37.084648881914305,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -68538,9 +68538,9 @@
       "time": "2026-11-16",
       "open": 354.1300048828125,
       "high": 356.2900085449219,
-      "low": 353.80999755859375,
-      "close": 353.95001220703125,
-      "volume": 3590709
+      "low": 353.30499267578125,
+      "close": 353.9649963378906,
+      "volume": 4668787
      }
     ],
     "m20": [
@@ -69742,7 +69742,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 367.4965
+      "value": 367.4973
      }
     ],
     "m50": [
@@ -70944,7 +70944,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 379.8496
+      "value": 379.8499
      }
     ],
     "m200": [
@@ -72146,7 +72146,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 407.9617
+      "value": 407.9618
      }
     ],
     "rsi": [
@@ -73348,7 +73348,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 37.0765
+      "value": 37.0846
      }
     ]
    },
@@ -73364,7 +73364,7 @@
     ]
    },
    "niveles": {
-    "entrada": 353.95001220703125,
+    "entrada": 353.9649963378906,
     "objetivo": 332.0992810058594
    },
    "razonesIA": []
@@ -73375,16 +73375,16 @@
    "tradingview": "BINANCE:BTCUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 64317.671875,
-   "variacionDia": -1.51,
-   "variacion30d": -19.61,
+   "precio": 64835.66015625,
+   "variacionDia": -0.72,
+   "variacion30d": -18.96,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 74231.1892578125,
-   "m50": 79352.253359375,
-   "m200": 72861.98376953125,
-   "rsi": 23.45784384007473,
+   "m20": 74257.088671875,
+   "m50": 79362.613125,
+   "m200": 72864.5737109375,
+   "rsi": 24.063900860250158,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -73458,7 +73458,7 @@
     {
      "clave": "rsi_sobreventa",
      "peso": 20,
-     "texto": "RSI en 23: zona de sobreventa, posible rebote."
+     "texto": "RSI en 24: zona de sobreventa, posible rebote."
     },
     {
      "clave": "fib_objetivo",
@@ -75865,8 +75865,8 @@
       "open": 65314.55078125,
       "high": 65363.4375,
       "low": 63845.92578125,
-      "close": 64317.671875,
-      "volume": 29664630784
+      "close": 64835.66015625,
+      "volume": 30606254080
      }
     ],
     "m20": [
@@ -77068,7 +77068,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 74231.1893
+      "value": 74257.0887
      }
     ],
     "m50": [
@@ -78270,7 +78270,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 79352.2534
+      "value": 79362.6131
      }
     ],
     "m200": [
@@ -79472,7 +79472,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 72861.9838
+      "value": 72864.5737
      }
     ],
     "rsi": [
@@ -80674,7 +80674,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 23.4578
+      "value": 24.0639
      }
     ]
    },
@@ -80715,16 +80715,16 @@
    "tradingview": "BINANCE:ETHUSDT",
    "tipo": "cripto",
    "moneda": "USD",
-   "precio": 1810.780029296875,
-   "variacionDia": -1.35,
-   "variacion30d": -21.96,
+   "precio": 1828.1600341796875,
+   "variacionDia": -0.4,
+   "variacion30d": -21.21,
    "puntaje": 25,
    "puntajeBase": 25,
    "accion": "ESPERAR",
-   "m20": 2137.1044860839843,
-   "m50": 2360.5661499023436,
-   "m200": 2140.307634277344,
-   "rsi": 25.664361897609126,
+   "m20": 2137.973486328125,
+   "m50": 2360.91375,
+   "m200": 2140.3945343017576,
+   "rsi": 26.26541790346812,
    "fibonacci": {
     "tendenciaTramo": "bajista",
     "desde": {
@@ -83205,8 +83205,8 @@
       "open": 1835.2918701171875,
       "high": 1856.026123046875,
       "low": 1785.6817626953125,
-      "close": 1810.780029296875,
-      "volume": 11780826112
+      "close": 1828.1600341796875,
+      "volume": 11722937344
      }
     ],
     "m20": [
@@ -84408,7 +84408,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2137.1045
+      "value": 2137.9735
      }
     ],
     "m50": [
@@ -85610,7 +85610,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2360.5661
+      "value": 2360.9138
      }
     ],
     "m200": [
@@ -86812,7 +86812,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 2140.3076
+      "value": 2140.3945
      }
     ],
     "rsi": [
@@ -88014,7 +88014,7 @@
      },
      {
       "time": "2026-11-16",
-      "value": 25.6644
+      "value": 26.2654
      }
     ]
    },
@@ -88030,7 +88030,7 @@
     ]
    },
    "niveles": {
-    "entrada": 1810.780029296875,
+    "entrada": 1828.1600341796875,
     "objetivo": 1415.0556689453124,
     "stop": 1712.3831787109375
    },
@@ -88238,9 +88238,16 @@
    "tema": "mercado argentino acciones hoy"
   },
   {
-   "titulo": "Dólar blue hoy: a cuánto opera este lunes 16 de noviembre - Ambito",
-   "enlace": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNOW5XOFVORHowOU9jQ1FXRGRWWHA5T1FCQ0oxY0ZFeHY1Wm5GTGVjd3RzaUZINGVCcmY5S1AtQlJHbm92MHQ0eUJnUUJuVVBMTFdVdGNYRDQzVzJMOC1XcXdQeXJ3VXYzamdvUks5Vm53RVhhZ2JHQjdlNzhpZW9qNVpJcDBCUjFhNWc0X2t2Qkw5TTc2VTdF0gGcAUFVX3lxTE1SaDN4R0hrN3BINWVnbHRtcm1VbWlVeWl3LUxHLXk4NklQcGpUM0F0VUhLVGlzTFZ2TUVDcnQwSnhNbnl1T0oyQUdKczM4LWlMTEJzcUw5T0F3blZuMDVZS3VSdkJPMHhSRmtOVDExTGFCOUZHbEdDVUhmSFdaTG82d21GMHd2YkRrYmpJRncyb1VUR1hzUjNzY2tKag?oc=5",
-   "fecha": "Mon, 16 Nov 2026 03:16:53 GMT",
+   "titulo": "Dólar hoy: la brecha entre el MEP y el CCL supera el 6% y presiona al Gobierno de Milei - El Destape",
+   "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQakZGRWE1WEdfSlNqam54RmRtNGFUUmRmWW91Z192ckRsZmtoNDFlMXBYRkNhYmhLNWtjQVBWWkhnNndlOFhRU2ljZk1jTzBXOEdTQmYtLXFraThxV200eDJSeXdybUxJdDZxMmFBQnV0eUpOcmdHWEtUNm5OTHhCUkJmOGZnWVU4SThhMGZhdHlyUGdUcEthQ1Bnel9ZQmFNSEdrUmlXZUg4a2RvRklv0gHDAUFVX3lxTE5VQmNwcnZ6a05ld1FZb1AzQk1CTWVqR2tBbjAtLVN5aW5OdUdWOG8xVV9kZkt1N0pVRFpldDQwVWFKeEk2N01jVzc2M25sbXppZUNoRnF5REhhTkdjQy1GSUkyTGJoOTBhNUZDNkpuRkR0Z3JnXzBPczdNT044Uk1zZjNuU1dTdTZIYW5VTDk0RGJPc0JDSDZwaHVLZ1pyaWdIRUc3Z2NDTjQ0b1ZDdUx5ZlJuVXhnaW1sZk1HRlJDZzN5dw?oc=5",
+   "fecha": "Mon, 16 Nov 2026 16:41:15 GMT",
+   "fuente": "",
+   "tema": "dólar MEP CCL brecha hoy"
+  },
+  {
+   "titulo": "La brecha del dólar CCL ronda el 8% mientras el oficial sigue quieto en torno a $1.550 - Dolarhoy.com",
+   "enlace": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYjVDM09raTEwelo2d1ZYQ3EzUTFKcWRsajJld2pUVUhJajVXajJReG8xSThmanBLTWJZLWw5dllWbG9SMU1PdzZkTVJhS3ItWS1sUW9ZcF9jb1BkbFRhUlk2SlVGNE1SME5IQ3p4WkNfVm8tekFaQjRvTjh1YkMwNDFFcXRaTV9ZN2l4UzRCYVF4bEVHSWNoQktObEt0Q09QQzZXWTQ4X3dGV2xtSW50YS1ad2JQZkhRUVNVMzZBNUIycGs?oc=5",
+   "fecha": "Mon, 16 Nov 2026 14:06:30 GMT",
    "fuente": "",
    "tema": "dólar MEP CCL brecha hoy"
   },
@@ -88248,13 +88255,6 @@
    "titulo": "Dólar blue hoy: a cuánto cotiza este domingo 15 de noviembre con el MEP y el CCL - El Cronista",
    "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZXpvaHZzc3NKa1NJNnN6ZS12S3ZCOWlwWDVJbnBxYU1iblBYNG1ySGJXUXNWNGlKOHpjVXQxcEFHV1hzNHk0V0p2QnlIX1I3eTNGaXI3LVdqcGljejZtQjVxcm5Ub2MzNHl6dmV0MkRCVVh4TVVNcUctN3hBVDhTWVNzcm1FMDh5T3duZ1YtQWJtTWNId3pueGdBY0F5V1FMcVQ4S3pKRHFGUll1YkJkSVFvb1oyM1FYOGFCSUdmZW7SAdsBQVVfeXFMTnRuYmRaQ2kzamsxVXNfWU0za3haejFzbi1aVnQteTFLV3pNTGd5TW9IWnV5dFQxcEVtZTVrT09xcHdwTGsxX3hYbGFRazhXb2dhcEJ4dHFSaE5TUkFJU0M0ODlocnFwel9Db09VYV81QkE1NXVoOW0zNVE2NE5uY215Q1BoVDJCYV9oc1BNNkF2ZlVLTV9kTUZ0d2xJUXNJeXA1QlVwR25CenF0SThxdDhEN245SHlQS29rMG1IMEJIX0p1aDM3ZmlXS3lRcDdDcHVPalIzb0ZiVXgw?oc=5",
    "fecha": "Sun, 15 Nov 2026 03:04:25 GMT",
-   "fuente": "",
-   "tema": "dólar MEP CCL brecha hoy"
-  },
-  {
-   "titulo": "La brecha del dólar CCL ronda el 8% mientras el oficial sigue quieto en torno a $1.550 - Dolarhoy.com",
-   "enlace": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYjVDM09raTEwelo2d1ZYQ3EzUTFKcWRsajJld2pUVUhJajVXajJReG8xSThmanBLTWJZLWw5dllWbG9SMU1PdzZkTVJhS3ItWS1sUW9ZcF9jb1BkbFRhUlk2SlVGNE1SME5IQ3p4WkNfVm8tekFaQjRvTjh1YkMwNDFFcXRaTV9ZN2l4UzRCYVF4bEVHSWNoQktObEt0Q09QQzZXWTQ4X3dGV2xtSW50YS1ad2JQZkhRUVNVMzZBNUIycGs?oc=5",
-   "fecha": "Mon, 16 Nov 2026 00:06:30 GMT",
    "fuente": "",
    "tema": "dólar MEP CCL brecha hoy"
   },
@@ -88345,7 +88345,7 @@
   {
    "titulo": "Dólar, riesgo país y acciones: así opera el mercado HOY, 16 de noviembre - TN",
    "enlace": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxObEltSXBMWG95LXFwSm5xbWJTSDhMOE1yQk54UkxCS0pHbHNlbm0zTS1mQ3lscVBfR3pPTXFTMk1WOUZrajZYZXY0RXZLaVQ5ZHRWLU94cXI2dHpNMFB4Z1oxLVBiMUttcFJrQUxMSE5xb2dHUXhMek1tSURIbFIyTS04a0Q0amZhb0lzUlhZWXFPRlNyX0NQMGxtLTNmUk9JUzN3UzhzaHBpcmRkZTBUWTNMZTVnZExRUVE1eVBBZFRhOHhLS0tKUFZYOWR6aEJSZVF0c2puanZjNktmTU1TdDd6SzhsSGZFeGFRZVdJa3LSAYQCQVVfeXFMUHQ0S2pmc3JHS084ekNTY1o4X2x1a1M4WHVSWF9rTGNDWVhHbE5BcnR0YVhFWjdhQ253V0pTbXBUR3lLcklSenU3RVJ5ZUs1dDdkN0RSWmMzcWZndmx5SUZGbEtKSy1lTEJBRzdvbW1PTi1Yc1pCWXV0SXkzb0gtZ2x1MExyb29iQm40azhNMlJzUVFvbFBhLVpDdl8yNmprNUFwTDlXXzhwcnNjV0xNbXNDNUcycFFkQWpWM2hfQklKUTNCVVlEMjRnQXFFNFA3Y1B2V2haTlpMbkJ5TkxVSkpsZlJqUE9LWUxuTEFjVG9BV3k1U1h4OER3dzhPY3RMdzBhMEY?oc=5",
-   "fecha": "Mon, 16 Nov 2026 15:02:20 GMT",
+   "fecha": "Mon, 16 Nov 2026 15:31:06 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
@@ -88364,16 +88364,16 @@
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Resultados de Nvidia esta semana; Warsh habla hoy: 5 claves en Wall Street - Investing.com México - Finanzas, Bolsa y Forex",
-   "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaFVJTW5KQkU4VTd2U3BQUUtGQ29iZExiVE1yTnhleWIwT3NORnBkeDJrd1l3dXl6N3FkNHZjQzN2RFhSbEtLaUNqWE9xeVg0eFI5NW9HT1ZUaDloSUFsWTRxczFoaWlocXpUZWJFbUdjSm1VQTJ2MXdiTjhSem9PbDExQ09Oa1hJNTF3OXF3NjZsZUNTWEtrdDNWUVhBOVJUTlRybjVkdHdHN0dtWXk2OW9GcVE1dw?oc=5",
-   "fecha": "Mon, 16 Nov 2026 10:29:57 GMT",
+   "titulo": "BMV y Wall Street hoy: así cotizan las bolsas este 16 de noviembre de 2026 - EL CEO",
+   "enlace": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNT0o0Tl9RZ0wtZjlfZUR3SElJU1FQMkZCWW9ra25fRnVUQ2JjY0owRTJwYW1oczhzT0J0VE5TY3BIbnVsLU1ZbDFPTlNCenMtSGV1UUNsZDlCMThCV2hCeWdBeENVX0ZPUHl2YjZCTzBWdUNBOF9aaG44c0JHMlQzY2w4UkRvNFhNYzB0MQ?oc=5",
+   "fecha": "Mon, 16 Nov 2026 15:43:30 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
   {
-   "titulo": "Wall Street - Cotización en tiempo real y Trading con CFDs - FOREX.com",
-   "enlace": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB0WFpabGN0Q05kV1pBck14dnRKT1pBX1B2TDRqUkpTVmVJS3VZOWZ6MHZJZkV4TF9tMHE3d2xNOTdKNTBTNEp5dXhJSjlqNXFlSVQtOW01YmM4M0tJQVhuWUxZVQ?oc=5",
-   "fecha": "Wed, 11 Nov 2026 22:59:59 GMT",
+   "titulo": "Resultados de Nvidia esta semana; Warsh habla hoy: 5 claves en Wall Street - Investing.com México - Finanzas, Bolsa y Forex",
+   "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaFVJTW5KQkU4VTd2U3BQUUtGQ29iZExiVE1yTnhleWIwT3NORnBkeDJrd1l3dXl6N3FkNHZjQzN2RFhSbEtLaUNqWE9xeVg0eFI5NW9HT1ZUaDloSUFsWTRxczFoaWlocXpUZWJFbUdjSm1VQTJ2MXdiTjhSem9PbDExQ09Oa1hJNTF3OXF3NjZsZUNTWEtrdDNWUVhBOVJUTlRybjVkdHdHN0dtWXk2OW9GcVE1dw?oc=5",
+   "fecha": "Mon, 16 Nov 2026 10:29:57 GMT",
    "fuente": "",
    "tema": "Wall Street hoy"
   },
