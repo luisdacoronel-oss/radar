@@ -105,8 +105,10 @@ if (dolar) {
   R('Oficial → Blue', 'oficial en el banco', 'en el mercado informal', d.oficial?.venta, d.blue?.compra, 1, 'Mercado informal: no se recomienda por riesgo legal y de seguridad. Se muestra solo como referencia.');
   // USDT entre exchanges: comprar donde está más barato y vender donde pagan más
   if (usdt.length > 1) {
-    const barato = [...usdt].sort((a, b) => a.compra - b.compra)[0], caro = [...usdt].sort((a, b) => b.venta - a.venta)[0];
-    if (barato.exchange !== caro.exchange) R(`USDT: ${barato.exchange} → ${caro.exchange}`, `en USDT en ${barato.exchange}`, `en ${caro.exchange}`, barato.compra, caro.venta, 1,
+    // mejor par de exchanges distintos (comprar en uno y vender en otro)
+    let barato = null, caro = null;
+    for (const x of usdt) for (const y of usdt) if (x.exchange !== y.exchange && (!barato || y.venta / x.compra > caro.venta / barato.compra)) { barato = x; caro = y }
+    if (barato) R(`USDT: ${barato.exchange} → ${caro.exchange}`, `en USDT en ${barato.exchange}`, `en ${caro.exchange}`, barato.compra, caro.venta, 1,
       'Precios con comisiones incluidas (CriptoYa). Requiere cuenta verificada en ambos exchanges y transferir USDT por una red barata (TRC20/BEP20).');
   }
   // MEP y CCL con bonos (AL30): precio real de las puntas, no el promedio
