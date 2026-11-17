@@ -1140,7 +1140,7 @@
    "bajo_m20"
   ],
   "votos": {
-   "gemini": "ESPERAR"
+   "gemini": "VENDER"
   },
   "evaluado": {}
  },
@@ -1202,8 +1202,7 @@
    "fib_soporte"
   ],
   "votos": {
-   "gemini": "COMPRAR",
-   "groq": "COMPRAR"
+   "gemini": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -1318,10 +1317,7 @@
    "tendencia_alcista",
    "sobre_m20"
   ],
-  "votos": {
-   "gemini": "ESPERAR",
-   "groq": "COMPRAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -1395,9 +1391,7 @@
    "tendencia_bajista",
    "bajo_m20"
   ],
-  "votos": {
-   "groq": "VENDER"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -1444,9 +1438,7 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {
-   "groq": "COMPRAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -1511,7 +1503,7 @@
   "fecha": "2026-11-17",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 64982.44140625,
+  "precio": 64833.359375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -1528,7 +1520,7 @@
   "fecha": "2026-11-17",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1831.469970703125,
+  "precio": 1834.4000244140625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -1543,7 +1535,7 @@
   "fecha": "2026-11-17",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 72.93000030517578,
+  "precio": 72.7300033569336,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -1558,7 +1550,7 @@
   "fecha": "2026-11-17",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 594,
+  "precio": 593.3800048828125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -1573,7 +1565,7 @@
   "fecha": "2026-11-17",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.9646000266075134,
+  "precio": 0.9624999761581421,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -1588,7 +1580,7 @@
   "fecha": "2026-11-17",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.15473000705242157,
+  "precio": 0.15410999953746796,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
