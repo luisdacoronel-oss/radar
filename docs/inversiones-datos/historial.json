@@ -2270,7 +2270,9 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "COMPRAR"
+  },
   "evaluado": {}
  },
  {
@@ -2370,7 +2372,9 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -2384,10 +2388,7 @@
    "tendencia_alcista",
    "sobre_m20"
   ],
-  "votos": {
-   "gemini": "COMPRAR",
-   "groq": "COMPRAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -2506,9 +2507,7 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {
-   "groq": "COMPRAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -2573,14 +2572,16 @@
   "fecha": "2026-11-19",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 63671.21875,
+  "precio": 63264.94140625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -2588,7 +2589,7 @@
   "fecha": "2026-11-19",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1803.9000244140625,
+  "precio": 1797.030029296875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2603,7 +2604,7 @@
   "fecha": "2026-11-19",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 74.76000213623047,
+  "precio": 74.44999694824219,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2618,7 +2619,7 @@
   "fecha": "2026-11-19",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 587.72998046875,
+  "precio": 585.8699951171875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2633,7 +2634,7 @@
   "fecha": "2026-11-19",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.9764000177383423,
+  "precio": 0.9718000292778015,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2647,7 +2648,7 @@
   "fecha": "2026-11-19",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.1532900035381317,
+  "precio": 0.15248000621795654,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
