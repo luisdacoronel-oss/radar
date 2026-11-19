@@ -2212,7 +2212,7 @@
   "fecha": "2026-11-19",
   "yahoo": "GGAL.BA",
   "nombre": "Grupo Galicia",
-  "precio": 4760,
+  "precio": 4727.5,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2228,7 +2228,7 @@
   "fecha": "2026-11-19",
   "yahoo": "YPFD.BA",
   "nombre": "YPF",
-  "precio": 6110,
+  "precio": 6080,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2245,7 +2245,7 @@
   "fecha": "2026-11-19",
   "yahoo": "PAMP.BA",
   "nombre": "Pampa Energía",
-  "precio": 4275,
+  "precio": 4315,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -2259,7 +2259,7 @@
   "fecha": "2026-11-19",
   "yahoo": "BMA.BA",
   "nombre": "Banco Macro",
-  "precio": 9270,
+  "precio": 9250,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2273,7 +2273,7 @@
   "fecha": "2026-11-19",
   "yahoo": "TXAR.BA",
   "nombre": "Ternium Argentina",
-  "precio": 709,
+  "precio": 716,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2288,12 +2288,11 @@
   "fecha": "2026-11-19",
   "yahoo": "CEPU.BA",
   "nombre": "Central Puerto",
-  "precio": 1786,
+  "precio": 1762,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
-   "sobre_m20",
-   "fib_resistencia"
+   "bajo_m20"
   ],
   "votos": {},
   "evaluado": {}
@@ -2303,7 +2302,7 @@
   "fecha": "2026-11-19",
   "yahoo": "TGSU2.BA",
   "nombre": "TGS",
-  "precio": 6915,
+  "precio": 6980,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2333,7 +2332,7 @@
   "fecha": "2026-11-19",
   "yahoo": "BBAR.BA",
   "nombre": "BBVA Argentina",
-  "precio": 5550,
+  "precio": 5555,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2347,7 +2346,7 @@
   "fecha": "2026-11-19",
   "yahoo": "LOMA.BA",
   "nombre": "Loma Negra",
-  "precio": 2760,
+  "precio": 2757.5,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2361,7 +2360,7 @@
   "fecha": "2026-11-19",
   "yahoo": "VIST",
   "nombre": "Vista Energy",
-  "precio": 51.92430114746094,
+  "precio": 51.790000915527344,
   "tecnico": "ESPERAR",
   "senales": [
    "cruce_muerte",
@@ -2376,7 +2375,7 @@
   "fecha": "2026-11-19",
   "yahoo": "MELI",
   "nombre": "Mercado Libre",
-  "precio": 1410.89501953125,
+  "precio": 1384.614990234375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2391,7 +2390,7 @@
   "fecha": "2026-11-19",
   "yahoo": "AAPL",
   "nombre": "Apple",
-  "precio": 349.5824890136719,
+  "precio": 349.5000915527344,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2407,11 +2406,12 @@
   "fecha": "2026-11-19",
   "yahoo": "MSFT",
   "nombre": "Microsoft",
-  "precio": 521.9650268554688,
+  "precio": 514.7050170898438,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
-   "bajo_m20"
+   "bajo_m20",
+   "fib_soporte"
   ],
   "votos": {},
   "evaluado": {}
@@ -2421,7 +2421,7 @@
   "fecha": "2026-11-19",
   "yahoo": "NVDA",
   "nombre": "Nvidia",
-  "precio": 155.44000244140625,
+  "precio": 152.85000610351562,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2438,7 +2438,7 @@
   "fecha": "2026-11-19",
   "yahoo": "GOOGL",
   "nombre": "Alphabet (Google)",
-  "precio": 293.0050048828125,
+  "precio": 288.55999755859375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2452,7 +2452,7 @@
   "fecha": "2026-11-19",
   "yahoo": "AMZN",
   "nombre": "Amazon",
-  "precio": 270.9200134277344,
+  "precio": 269.3699951171875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2470,7 +2470,7 @@
   "fecha": "2026-11-19",
   "yahoo": "TSLA",
   "nombre": "Tesla",
-  "precio": 385.4750061035156,
+  "precio": 381.1980895996094,
   "tecnico": "VENDER",
   "senales": [
    "tendencia_bajista",
@@ -2485,7 +2485,7 @@
   "fecha": "2026-11-19",
   "yahoo": "KO",
   "nombre": "Coca-Cola",
-  "precio": 95.27749633789062,
+  "precio": 95.52999877929688,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2502,7 +2502,7 @@
   "fecha": "2026-11-19",
   "yahoo": "ARGT",
   "nombre": "Argentina (ETF ARGT)",
-  "precio": 68.91000366210938,
+  "precio": 68.01000213623047,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2517,7 +2517,7 @@
   "fecha": "2026-11-19",
   "yahoo": "SPY",
   "nombre": "S&P 500 (SPY)",
-  "precio": 735.2050170898438,
+  "precio": 728.7474975585938,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2534,12 +2534,11 @@
   "fecha": "2026-11-19",
   "yahoo": "QQQ",
   "nombre": "Nasdaq 100 (QQQ)",
-  "precio": 669.989990234375,
+  "precio": 661.2100219726562,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
-   "bajo_m20",
-   "fib_resistencia"
+   "bajo_m20"
   ],
   "votos": {},
   "evaluado": {}
@@ -2549,7 +2548,7 @@
   "fecha": "2026-11-19",
   "yahoo": "DIA",
   "nombre": "Dow Jones (DIA)",
-  "precio": 501.1099853515625,
+  "precio": 496.9700012207031,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2563,7 +2562,7 @@
   "fecha": "2026-11-19",
   "yahoo": "EWZ",
   "nombre": "Brasil (EWZ)",
-  "precio": 29.9950008392334,
+  "precio": 29.700000762939453,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2578,7 +2577,7 @@
   "fecha": "2026-11-19",
   "yahoo": "EEM",
   "nombre": "Emergentes (EEM)",
-  "precio": 58.05500030517578,
+  "precio": 57.57500076293945,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2592,7 +2591,7 @@
   "fecha": "2026-11-19",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 63506.55078125,
+  "precio": 63110.3984375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2609,7 +2608,7 @@
   "fecha": "2026-11-19",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1798.3900146484375,
+  "precio": 1778.1500244140625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2624,11 +2623,12 @@
   "fecha": "2026-11-19",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 74.97000122070312,
+  "precio": 73.72000122070312,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
-   "bajo_m20"
+   "bajo_m20",
+   "rsi_sobreventa"
   ],
   "votos": {},
   "evaluado": {}
@@ -2638,7 +2638,7 @@
   "fecha": "2026-11-19",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 590.8099975585938,
+  "precio": 586.3900146484375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2653,7 +2653,7 @@
   "fecha": "2026-11-19",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.986299991607666,
+  "precio": 0.9732999801635742,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2667,11 +2667,12 @@
   "fecha": "2026-11-19",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.15455999970436096,
+  "precio": 0.1527400016784668,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
-   "bajo_m20"
+   "bajo_m20",
+   "rsi_sobreventa"
   ],
   "votos": {},
   "evaluado": {}
@@ -2681,7 +2682,7 @@
   "fecha": "2026-11-19",
   "yahoo": "GLD",
   "nombre": "Oro (GLD)",
-  "precio": 339.19000244140625,
+  "precio": 337.1799011230469,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2696,7 +2697,7 @@
   "fecha": "2026-11-19",
   "yahoo": "SLV",
   "nombre": "Plata (SLV)",
-  "precio": 40.84000015258789,
+  "precio": 40.358699798583984,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -2711,11 +2712,12 @@
   "fecha": "2026-11-19",
   "yahoo": "USO",
   "nombre": "Petróleo (USO)",
-  "precio": 139.32000732421875,
+  "precio": 138.5800018310547,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
-   "bajo_m20"
+   "bajo_m20",
+   "fib_soporte"
   ],
   "votos": {},
   "evaluado": {}
@@ -2725,7 +2727,7 @@
   "fecha": "2026-11-19",
   "yahoo": "CPER",
   "nombre": "Cobre (CPER)",
-  "precio": 34.1150016784668,
+  "precio": 33.994998931884766,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -2740,7 +2742,7 @@
   "fecha": "2026-11-19",
   "yahoo": "DBA",
   "nombre": "Agro: soja, maíz, trigo (DBA)",
-  "precio": 26.309999465942383,
+  "precio": 26.209999084472656,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
