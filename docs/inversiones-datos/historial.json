@@ -27,7 +27,11 @@
    "bajo_m20"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.0904095904095904
+   }
+  }
  },
  {
   "id": "2026-11-13|YPFD.BA",
@@ -44,7 +48,11 @@
   "votos": {
    "gemini": "ESPERAR"
   },
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.08517350157728709
+   }
+  }
  },
  {
   "id": "2026-11-13|PAMP.BA",
@@ -58,7 +66,11 @@
    "bajo_m20"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.01142204454597373
+   }
+  }
  },
  {
   "id": "2026-11-13|BMA.BA",
@@ -72,7 +84,11 @@
    "bajo_m20"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.05845511482254695
+   }
+  }
  },
  {
   "id": "2026-11-13|MELI",
@@ -3136,7 +3152,7 @@
   "fecha": "2026-11-20",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 61511.69921875,
+  "precio": 61782.640625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3151,7 +3167,7 @@
   "fecha": "2026-11-20",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1738.4599609375,
+  "precio": 1751.5799560546875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3166,7 +3182,7 @@
   "fecha": "2026-11-20",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 71.05999755859375,
+  "precio": 71.2300033569336,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3181,7 +3197,7 @@
   "fecha": "2026-11-20",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 567.2999877929688,
+  "precio": 568.7999877929688,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3196,7 +3212,7 @@
   "fecha": "2026-11-20",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.9455999732017517,
+  "precio": 0.9463000297546387,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3211,7 +3227,7 @@
   "fecha": "2026-11-20",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.1467200070619583,
+  "precio": 0.1462000012397766,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",

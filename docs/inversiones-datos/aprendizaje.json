@@ -2,7 +2,7 @@
  "proveedores": {
   "gemini": {
    "aciertos": 1,
-   "total": 3
+   "total": 4
   },
   "groq": {
    "aciertos": 0,
@@ -12,24 +12,28 @@
  "senales": {
   "tendencia_alcista": {
    "aciertos": 1,
-   "total": 6
+   "total": 8
   },
   "bajo_m20": {
-   "aciertos": 5,
-   "total": 6
+   "aciertos": 9,
+   "total": 10
   },
   "rsi_sobreventa": {
    "aciertos": 1,
-   "total": 6
+   "total": 7
   },
   "fib_soporte": {
    "aciertos": 0,
    "total": 1
+  },
+  "tendencia_bajista": {
+   "aciertos": 2,
+   "total": 2
   }
  },
  "tecnico": {
-  "aciertos": 2,
-  "total": 6
+  "aciertos": 3,
+  "total": 10
  },
- "actualizado": "2026-11-20T12:44:53.066Z"
+ "actualizado": "2026-11-20T13:59:20.905Z"
 }
