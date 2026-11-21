@@ -3750,7 +3750,7 @@
   "fecha": "2026-11-21",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 59206.828125,
+  "precio": 60336.48046875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3765,7 +3765,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1669.5400390625,
+  "precio": 1694.469970703125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3780,7 +3780,7 @@
   "fecha": "2026-11-21",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 69.4800033569336,
+  "precio": 70.36000061035156,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3795,7 +3795,7 @@
   "fecha": "2026-11-21",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 537.4500122070312,
+  "precio": 546.6799926757812,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3810,7 +3810,7 @@
   "fecha": "2026-11-21",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.9075999855995178,
+  "precio": 0.9251999855041504,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -3825,7 +3825,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.1411300003528595,
+  "precio": 0.14309999346733093,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
