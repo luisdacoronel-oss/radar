@@ -6,21 +6,21 @@
   },
   "groq": {
    "aciertos": 0,
-   "total": 4
+   "total": 5
   }
  },
  "senales": {
   "tendencia_alcista": {
    "aciertos": 1,
-   "total": 11
+   "total": 17
   },
   "bajo_m20": {
-   "aciertos": 14,
-   "total": 15
+   "aciertos": 20,
+   "total": 21
   },
   "rsi_sobreventa": {
    "aciertos": 1,
-   "total": 9
+   "total": 15
   },
   "fib_soporte": {
    "aciertos": 0,
@@ -41,7 +41,7 @@
  },
  "tecnico": {
   "aciertos": 5,
-  "total": 16
+  "total": 22
  },
- "actualizado": "2026-11-21T06:44:31.900Z"
+ "actualizado": "2026-11-21T07:56:04.525Z"
 }

@@ -818,7 +818,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.10712913595675644
+   }
+  }
  },
  {
   "id": "2026-11-16|ETH-USD",
@@ -833,7 +837,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.10526287538709944
+   }
+  }
  },
  {
   "id": "2026-11-16|TXAR.BA",
@@ -1085,7 +1093,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.05693103673859323
+   }
+  }
  },
  {
   "id": "2026-11-16|BNB-USD",
@@ -1102,7 +1114,11 @@
   "votos": {
    "groq": "ESPERAR"
   },
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.11230037232821943
+   }
+  }
  },
  {
   "id": "2026-11-16|XRP-USD",
@@ -1117,7 +1133,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.06664571374642525
+   }
+  }
  },
  {
   "id": "2026-11-16|ADA-USD",
@@ -1132,7 +1152,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": -0.0936047906107369
+   }
+  }
  },
  {
   "id": "2026-11-16|SLV",
@@ -3734,7 +3758,7 @@
   "fecha": "2026-11-21",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 57160.7890625,
+  "precio": 57909.73828125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3749,7 +3773,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1610.530029296875,
+  "precio": 1627.8399658203125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3764,7 +3788,7 @@
   "fecha": "2026-11-21",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 67.30000305175781,
+  "precio": 67.41999816894531,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3779,7 +3803,7 @@
   "fecha": "2026-11-21",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 519.25,
+  "precio": 524.1599731445312,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3794,10 +3818,10 @@
   "fecha": "2026-11-21",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.8851000070571899,
-  "tecnico": "ESPERAR",
+  "precio": 0.8906999826431274,
+  "tecnico": "VENDER",
   "senales": [
-   "tendencia_alcista",
+   "cruce_muerte",
    "bajo_m20",
    "rsi_sobreventa"
   ],
@@ -3809,7 +3833,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.13860000669956207,
+  "precio": 0.13846999406814575,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
