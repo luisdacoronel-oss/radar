@@ -6,6 +6,7 @@ import { usarConfig, evaluar, rentabWeb, num, ars, pct } from './lib/calc.mjs';
 import { crearIA, usarMock } from './lib/ia.mjs';
 import { encriptar, desencriptar } from './lib/cripto.mjs';
 import { validarEstrategia } from './test/prueba.mjs';
+import { mejorLink, candidatosProducto } from './lib/links.mjs';
 
 const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const R = p => path.join(RAIZ, p);
@@ -57,13 +58,15 @@ const CRITERIOS = () => {
 6) Compará en TODAS las plataformas: Mercado Libre Argentina, Amazon, AliExpress, Temu, Shein, eBay, Alibaba, 1688, DHgate, Made-in-China, CJ Dropshipping, Global Sources y proveedores/mayoristas LOCALES de Argentina.
 Notas del vendedor: ${CFG.perfil.notas || '—'}. Dólar oficial: ${CFG.dolar_oficial}.
 Indicaciones que el vendedor le dio a RADAR (respetarlas siempre): ${(E.notas || []).map(n => n.texto).slice(-30).join(' | ') || '—'}
+${textoPreferencias()}
+${E.plan_busqueda && Date.now() - new Date(E.plan_busqueda.fecha) < 48 * 36e5 ? `PLAN ACTUAL (por diagnóstico propio: ${E.plan_busqueda.diagnostico || ''}): ${(E.plan_busqueda.plan || []).join(' | ')}. Dejar de buscar: ${(E.plan_busqueda.evitar || []).join(', ')}` : ''}
 Ya analizados (no repetir): ${ps.map(p => p.nombre).slice(-150).join(' | ') || 'ninguno'}
 Aprobados hasta ahora: ${ps.filter(p => p.ev.veredicto === 'VENDER').map(p => p.nombre).slice(-30).join(' | ') || '—'}
 Reglas aprendidas: ${conoc('regla').slice(0, 20).map(c => c.titulo).join(' | ') || '—'}`;
 };
 const ESQUEMA = `{"nombre","categoria","descripcion","peso_kg":número,"derecho_importacion_pct":número,
 "imagen_url":"URL DIRECTA de la foto del producto (jpg/png/webp, por ejemplo de http2.mlstatic.com o ae01.alicdn.com) tomada de la publicación encontrada; vacío si no la tenés",
-"fuente_principal":{"plataforma":"dónde lo encontraste","url":"link EXACTO de la publicación"},
+"fuente_principal":{"plataforma":"dónde lo encontraste","url":"link EXACTO de la publicación del producto (por ejemplo https://articulo.mercadolibre.com.ar/MLA-123456789-... o https://www.aliexpress.com/item/123456.html); NUNCA un link de búsqueda, categoría o portada"},
 "costo_proveedor_usd":número,"precio_venta_sugerido_ars":número (precio para Mercado Libre),"precio_venta_web_ars":número (precio para la página web propia),
 "proveedores":[{"proveedor","plataforma","tipo":"internacional|local","precio_usd":número,"precio_ars":número (solo locales),"moq":número,"url":"link exacto"}],
 "precios_mercados":[{"mercado":"Argentina - Mercado Libre","precio":número,"moneda":"ARS","vendidos":"ej. +5mil vendidos","url":"link exacto"},{"mercado":"Amazon","precio","moneda","vendidos","url"},{"mercado":"AliExpress","precio","moneda","vendidos","url"},{"mercado":"Temu","precio","moneda","vendidos","url"}],
@@ -108,6 +111,8 @@ ${ESQUEMA}`, true);
   p.nombre = p.nombre || p.producto || p.name || p.titulo || nombre;
   if (!p.costo_proveedor_usd && !(p.proveedores || []).length) throw new Error('el análisis no trajo precio de proveedor');
   Object.assign(p, { fuentes: [...(p.fuentes || []), ...(fuentes || [])].slice(0, 15), origen, creado: ahora(), busqueda_web: web });
+  // link exacto y verificado de la publicación (o búsqueda en Mercado Libre si no hay uno válido)
+  try { p.link = await mejorLink(p.nombre, candidatosProducto(p)); if (p.link?.imagen) p.imagen_url = p.link.imagen } catch { }
   let k = slug(p.nombre); if (E.productos[k]) k += '-' + id().slice(-4);
   E.productos[k] = p;
   const ev = evaluar(p); contarHoy(ev);
@@ -118,7 +123,8 @@ ${ESQUEMA}`, true);
 async function enParalelo(items, f, n = 3) { const res = []; for (let i = 0; i < items.length; i += n) { if (!cupo()) break; res.push(...await Promise.all(items.slice(i, i + n).map(x => f(x).catch(e => ({ error: e }))))); guardar() } return res }
 // ------------------------------------------------------------ WhatsApp (solo de 10 a 13 y de 17 a 22, hora de Argentina)
 function encolarWhatsApp(k, p, ev) {
-  const link = p.fuente_principal?.url || (p.precios_mercados || []).find(m => m.url)?.url || (p.fuentes || [])[0]?.url || '';
+  if (E.productos[k]?.descartado || afinidad(p) <= -20) return; // no avisar lo que el vendedor no quiere
+  const link = p.link?.url || p.fuente_principal?.url || (p.precios_mercados || []).find(m => m.url)?.url || '';
   const txt = `Producto encontrado: ${p.nombre}\nConviene en: ${(ev.canales || []).join(' y ')}\nMercado Libre: precio ${ars(ev.r.precio)}, ganancia ${ars(ev.r.ganancia)} por unidad\nTu web: precio ${ars(ev.w.precio)}, ganancia ${ars(ev.w.ganancia)} por unidad\nVentas: ${String(p.demanda?.prueba_de_ventas || '').slice(0, 150)}\n${link}${PAGINA ? '\nDetalle: ' + PAGINA : ''}`;
   E.cola_wa.push({ k, txt, creado: ahora() });
 }
@@ -161,7 +167,19 @@ const NUMS = { un: 1, uno: 1, una: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5, seis
 async function procesarPedido(texto) {
   texto = String(texto || '').replace(/^\s*pedido\s*:?\s*/i, '').trim();
   const an = texto.match(/^(?:analiz[aá]|analizame|investig[aá])\s+(?:el |la |los |las |un |una )?(.+)/i);
-  if (an) { const { ev } = await analizar(an[1], 'pedido'); return ev.veredicto === 'VENDER' ? 1 : 0 }
+  // un link de publicación: se lee el título y las ventas de la página y se analiza ese producto
+  const url = texto.match(/https?:\/\/\S+/)?.[0];
+  if (url) {
+    const html = await leerPagina(url);
+    const titulo = (html.match(/<meta[^>]+property="og:title"[^>]+content="([^"]+)"/i) || html.match(/<title>([^<]+)<\/title>/i) || [])[1]?.replace(/\s*\|\s*Mercado\s*Libre.*$/i, '').trim();
+    const vendidos = (textoPagina(html).match(/\+?\s*\d+(?:[.,]\d+)?\s*(?:mil)?\s*vendidos/i) || [])[0] || '';
+    const nombre = titulo || texto.replace(url, '').replace(/^(?:analiz[aá]|analizame|investig[aá])\s*/i, '').trim() || url;
+    const { k, ev } = await analizar(`${nombre} (publicación: ${url}${vendidos ? ', ' + vendidos : ''})`, 'pedido');
+    E.productos[k].superventas = { vendidos, url_ml: url, fecha: ahora() };
+    if (ev.veredicto !== 'VENDER' && (vendidosNum(E.productos[k]) >= MUCHAS_VENTAS || vendidos)) await alternativas(k);
+    return ev.veredicto === 'VENDER' || E.productos[k].alternativas?.some(a => a.cumple) ? 1 : 0;
+  }
+  if (an) { const { k, ev } = await analizar(an[1], 'pedido'); if (ev.veredicto !== 'VENDER' && vendidosNum(E.productos[k]) >= MUCHAS_VENTAS) await alternativas(k); return ev.veredicto === 'VENDER' || E.productos[k].alternativas?.some(a => a.cumple) ? 1 : 0 }
   const m = texto.match(/(\d+|un|uno|una|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|quince|veinte)\s+productos?/i);
   const N = Math.min(15, m ? (parseInt(m[1]) || NUMS[m[1].toLowerCase()] || 5) : 5);
   let buenos = 0, ronda = 0;
@@ -235,6 +253,8 @@ async function autoMejora() {
 ${actual}
 \`\`\`
 Estos son tus resultados (v = veredicto; ml y web = ganancia por unidad en pesos): ${JSON.stringify(resumen)}
+${textoPreferencias()}
+Tené en cuenta las preferencias del vendedor: priorizá lo que le interesa y no busques lo que descartó.
 ${CRITERIOS()}
 Analizá qué categorías, precios y tipos de producto dieron productos aprobados y cuáles fallaron. Reescribí el archivo COMPLETO para encontrar MÁS productos que cumplan. MUY IMPORTANTE: no te encierres en un solo rubro ni en un rango de precio angosto; mantené al menos 8 categorías variadas (podés reordenarlas por resultados) y explorá también rubros nuevos, porque el objetivo es analizar más de 50 productos por día con buena variedad: reordená y cambiá categorías, temas de estudio y de video, y mejorá instruccionesBusqueda(ctx) (ctx tiene: vuelta, mes, aprobados). Reglas obligatorias: mismo formato y mismos nombres exportados (VERSION, categorias, temas, temasVideo, productosPorVuelta, instruccionesBusqueda); VERSION = ${(EST.VERSION || 1) + 1}; productosPorVuelta entre 3 y 6; sin import, fetch, process, eval ni temporizadores; solo texto y lógica simple. En la PRIMERA línea poné un comentario: // CAMBIOS: (resumen en una frase de lo que mejoraste).
 Devolvé SOLO el archivo dentro de un bloque \`\`\`js.`);
@@ -259,12 +279,16 @@ Devolvé SOLO el archivo dentro de un bloque \`\`\`js.`);
 const [OWNER, REPO] = String(env.GITHUB_REPOSITORY || '/').split('/');
 const PAGINA = OWNER && REPO ? `https://${OWNER.toLowerCase()}.github.io/${REPO}/` : '';
 function publicar() {
-  const ps = prods(), vend = ps.filter(p => p.ev.veredicto === 'VENDER').sort((a, b) => b.ev.puntaje - a.ev.puntaje);
+  const ps = prods().filter(p => !p.descartado && afinidad(p) > -40), vend = ps.filter(p => p.ev.veredicto === 'VENDER').map(p => ({ ...p, afinidad: afinidad(p) })).sort((a, b) => (b.favorito - a.favorito) || (b.ev.puntaje + b.afinidad) - (a.ev.puntaje + a.afinidad));
   const salida = {
     generado: ahora(), version_estrategia: EST.VERSION, dolar: CFG.dolar_oficial, ia_hoy: ia.usadas(),
     criterios: { ml_a: CFG.margen_minimo_pct, ml_b: CFG.ml_ganancia_min_pct_costo, web: CFG.web.margen_min_pct_precio, whatsapp: config.whatsapp_horarios },
     totales: { analizados: ps.length, aprobados: vend.length, en_cola_whatsapp: E.cola_wa.length }, hoy: { analizados: analizadosHoy(), aprobados: (E.hoy && E.hoy.dia === hoyAR()) ? E.hoy.aprobados : 0, objetivo: config.objetivo_productos_dia || 60 },
     productos: vend.map(p => { const { ev, ...resto } = p; return { ...resto, ev: { veredicto: ev.veredicto, puntaje: ev.puntaje, canales: ev.canales, ventas: ev.ventas, costo: ev.costo, precio: ev.precio, r: ev.r, w: ev.w, ms: ev.ms } } }),
+    // superventas que no conviene comprar directo (para mostrar sus alternativas en la página)
+    superventas: ps.filter(p => p.ev.veredicto !== 'VENDER' && (p.superventas || p.alternativas?.length || vendidosNum(p) >= MUCHAS_VENTAS)).sort((a, b) => vendidosNum(b) - vendidosNum(a)).slice(0, 80)
+      .map(p => { const { ev, ...resto } = p; return { ...resto, ev: { veredicto: ev.veredicto, puntaje: ev.puntaje, canales: ev.canales, ventas: ev.ventas, costo: ev.costo, precio: ev.precio, r: ev.r, w: ev.w, ms: ev.ms } } }),
+    preferencias: { descartados: Object.values(E.pref?.descartados || {}).slice(-300), favoritos: Object.values(E.pref?.favoritos || {}).slice(-100), aprendido: E.pref?.aprendido || null },
     reglas: conoc('regla').slice(0, 30), lecciones: conoc('leccion').slice(0, 80), mejoras: conoc('mejora').slice(0, 30),
     capital: E.conocimiento.capital || null, informe: E.conocimiento.informe || null, actividad: E.actividad.slice(0, 40),
     tarifas: { ml: CFG.ml, importacion: CFG.importacion, web: CFG.web, perfil: CFG.perfil, margen_minimo_pct: CFG.margen_minimo_pct, ml_ganancia_min_pct_costo: CFG.ml_ganancia_min_pct_costo, dolar_oficial: CFG.dolar_oficial },
@@ -277,13 +301,175 @@ function publicar() {
 function guardar() { fs.mkdirSync(R('data'), { recursive: true }); fs.writeFileSync(ARCH, encriptar(E, CLAVE)); publicar() }
 
 // ------------------------------------------------------------ vuelta de trabajo
+
+// ------------------------------------------------------------ preferencias: lo que el vendedor descarta o marca como favorito, y lo que RADAR aprende de eso
+const normN = t => String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+function claveDe(nombre) {
+  const n = normN(nombre); if (!n) return null;
+  for (const [k, p] of Object.entries(E.productos)) if (normN(p.nombre) === n) return k;
+  const w = n.split(' ').filter(x => x.length > 2); let mejor = null, pm = 0;
+  for (const [k, p] of Object.entries(E.productos)) { const q = normN(p.nombre).split(' ').filter(x => x.length > 2); const sc = q.filter(x => w.includes(x)).length / Math.max(q.length, w.length, 1); if (sc > pm) { pm = sc; mejor = k } }
+  return pm >= 0.7 ? mejor : null;
+}
+function textoPreferencias() {
+  const P = E.pref || {}, d = Object.values(P.descartados || {}), f = Object.values(P.favoritos || {}), a = P.aprendido || {};
+  if (!d.length && !f.length) return '';
+  return `PREFERENCIAS DEL VENDEDOR (aprendidas de sus decisiones; respetarlas siempre):
+- Productos que DESCARTÓ (no proponerlos ni proponer parecidos): ${d.slice(-80).map(x => x.nombre + (x.motivo ? ' [' + x.motivo + ']' : '')).join(' | ')}
+- Productos que le INTERESAN (buscar más como estos): ${f.slice(-40).map(x => x.nombre).join(' | ') || '—'}
+- Lo que aprendí de sus gustos: evitar ${(a.evitar || []).join(', ') || '—'}; preferir ${(a.preferir || []).join(', ') || '—'}. ${a.resumen || ''}`;
+}
+// afinidad: cuánto se parece un producto a lo que le gusta o no le gusta al vendedor (se usa para ordenar y decidir)
+function afinidad(p) {
+  const a = E.pref?.aprendido || {}, txt = normN(`${p.nombre} ${p.categoria || ''}`);
+  let s = 0;
+  for (const x of a.evitar || []) if (normN(x).split(' ').filter(w => w.length > 3).some(w => txt.includes(w))) s -= 20;
+  for (const x of a.preferir || []) if (normN(x).split(' ').filter(w => w.length > 3).some(w => txt.includes(w))) s += 10;
+  return Math.max(-40, Math.min(20, s));
+}
+async function aprenderPreferencias() {
+  const P = E.pref || {}, d = Object.values(P.descartados || {}), f = Object.values(P.favoritos || {});
+  if (d.length + f.length < 2) return;
+  const { datos } = await ia.json(`Sos el cerebro de RADAR. El vendedor descartó estos productos (con su motivo) y marcó estos como favoritos. Deducí sus gustos para no volver a mostrarle lo que no le interesa y buscarle más de lo que sí.
+Descartados: ${JSON.stringify(d.slice(-120).map(x => ({ n: x.nombre, cat: x.categoria, motivo: x.motivo })))}
+Favoritos: ${JSON.stringify(f.slice(-60).map(x => ({ n: x.nombre, cat: x.categoria })))}
+SOLO JSON: {"evitar":["categorías, tipos o características concretas a evitar (máximo 15)"],"preferir":["categorías, tipos o características a priorizar (máximo 15)"],"reglas":["reglas de decisión concretas, ej. 'evitar productos de más de 5 kg'"],"resumen":"2 oraciones sobre sus gustos"}`, false);
+  E.pref.aprendido = { evitar: (datos.evitar || []).slice(0, 15), preferir: (datos.preferir || []).slice(0, 15), reglas: (datos.reglas || []).map(r => typeof r === 'string' ? r : (r?.contenido || r?.titulo || '')).filter(Boolean).slice(0, 10), resumen: datos.resumen || '', fecha: ahora() };
+  for (const r of E.pref.aprendido.reglas) E.conocimiento['pref-' + normN(r).slice(0, 40)] = { tipo: 'regla', titulo: 'Preferencia del vendedor', contenido: r, confianza: 5, fuente: 'Aprendido de tus descartes y favoritos', fecha: ahora() };
+  registrar('aprendizaje', 'Aprendí de tus decisiones: ' + (datos.resumen || ''));
+}
+async function aplicarPreferencias(texto) {
+  let j = null; try { j = JSON.parse(String(texto).match(/\{[\s\S]*\}/)?.[0] || '{}') } catch { }
+  if (!j) return 0;
+  E.pref = E.pref || { descartados: {}, favoritos: {} }; E.pref.descartados ||= {}; E.pref.favoritos ||= {};
+  let n = 0;
+  for (const x of j.descartar || []) {
+    const k = claveDe(x.nombre) || 'x-' + normN(x.nombre).slice(0, 60);
+    const p = E.productos[k];
+    E.pref.descartados[k] = { nombre: x.nombre, categoria: p?.categoria || x.categoria || '', motivo: x.motivo || '', fecha: ahora() };
+    delete E.pref.favoritos[k]; if (p) p.descartado = true;
+    E.cola_wa = (E.cola_wa || []).filter(m => m.k !== k); n++;
+  }
+  for (const x of j.favoritos || []) {
+    const k = claveDe(x.nombre) || 'x-' + normN(x.nombre).slice(0, 60);
+    const p = E.productos[k];
+    E.pref.favoritos[k] = { nombre: x.nombre, categoria: p?.categoria || x.categoria || '', fecha: ahora() };
+    delete E.pref.descartados[k]; if (p) { p.favorito = true; p.descartado = false } n++;
+  }
+  for (const x of j.restaurar || []) { const k = claveDe(x.nombre); if (k) { delete E.pref.descartados[k]; E.productos[k].descartado = false; n++ } }
+  registrar('aprendizaje', `Recibí tus decisiones: ${(j.descartar || []).length} descartados, ${(j.favoritos || []).length} favoritos`);
+  if (cupo()) { try { await aprenderPreferencias() } catch (e) { registrar('error', 'preferencias: ' + e.message) } }
+  return n;
+}
+
+async function resolverEstancamiento() {
+  const ult = prods().filter(p => p.creado && Date.now() - new Date(p.creado) < 3 * 864e5).slice(-60)
+    .map(p => ({ n: p.nombre, cat: p.categoria, v: p.ev.veredicto, costo_usd: p.ev.costo, precio: Math.round(p.ev.precio || 0), ml: p.ev.r ? Math.round(p.ev.r.ganancia) : null, web: p.ev.w ? Math.round(p.ev.w.ganancia) : null, ventas: p.ev.ventas }));
+  const { datos } = await ia.json(`Sos el cerebro de RADAR. En las últimas vueltas analicé estos productos y NINGUNO cumplió las reglas del vendedor: ${JSON.stringify(ult)}
+${CRITERIOS()}
+Diagnosticá la causa principal (por ejemplo: costos de importación altos, precios de venta bajos, poca evidencia de ventas, categorías saturadas) y proponé un plan concreto para las próximas 48 horas: qué categorías, rangos de precio, proveedores y tipos de producto buscar para que SÍ cumplan.
+SOLO JSON: {"diagnostico":"2 oraciones","plan":["5 a 8 instrucciones de búsqueda concretas"],"evitar":["qué dejar de buscar"]}`, false);
+  E.plan_busqueda = { ...datos, fecha: ahora() };
+  registrar('aprendizaje', 'Diagnóstico: ' + (datos.diagnostico || '') + ' Cambio de plan: ' + (datos.plan || []).slice(0, 3).join('; '));
+}
+
+// ------------------------------------------------------------ superventas: lo que más se vende → proveedores con margen o alternativas
+// Si un producto vende mucho y comprándolo a los proveedores encontrados no deja el margen pedido, RADAR busca cómo ganar igual:
+// proveedor más barato (fábrica por volumen, mayoristas argentinos), equivalente genérico o marca blanca, kits, accesorios y versión premium.
+const MUCHAS_VENTAS = 1000;
+function vendidosNum(p) {
+  const d = p.demanda || {}, n = num(d.unidades_vendidas_aprox); if (n) return n;
+  const t = [p.superventas?.vendidos, d.prueba_de_ventas, ...(p.precios_mercados || []).map(m => m.vendidos)].join(' ');
+  const m = t.match(/\+?\s*(\d+(?:[.,]\d+)?)\s*(mil|k)?\s*(?:vendid|ventas)/i);
+  return m ? parseFloat(m[1].replace(',', '.')) * (m[2] ? 1000 : 1) : 0;
+}
+const textoPagina = h => h.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, '\n').replace(/&[a-z#0-9]+;/g, ' ').split('\n').map(x => x.trim()).filter(x => x.length > 2 && x.length < 120).join(' | ');
+async function leerPagina(url) { try { const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131 Safari/537.36', 'Accept-Language': 'es-AR' }, signal: AbortSignal.timeout(20000) }); return r.ok ? await r.text() : '' } catch { return '' } }
+
+async function alternativas(k) {
+  const p = E.productos[k]; if (!p) return;
+  const ev = evaluar(p), vend = vendidosNum(p);
+  const { datos, fuentes } = await ia.json(`El producto "${p.nombre}" se vende muchísimo en Argentina (${vend ? Math.round(vend).toLocaleString('es-AR') + ' vendidos' : p.demanda?.prueba_de_ventas || 'muchas ventas'}) a $${Math.round(ev.precio || 0).toLocaleString('es-AR')} en Mercado Libre, pero comprándolo a los proveedores encontrados (mejor costo: US$${ev.costo ?? '?'}) NO deja el margen pedido.
+${CRITERIOS()}
+Encontrá formas REALES de ganar con esa demanda. Buscá en internet:
+1) proveedores MÁS BARATOS del MISMO producto: fábrica en Alibaba o 1688 con precio por volumen (MOQ), mayoristas e importadores argentinos (Once, Flores, distribuidores oficiales), liquidaciones;
+2) modelos EQUIVALENTES genéricos o de marca blanca con las mismas funciones, que se puedan vender con marca propia;
+3) KITS o combos que aumenten el valor percibido;
+4) ACCESORIOS y complementos que compran los mismos clientes (repuestos, fundas, mallas, cargadores, consumibles);
+5) versión PREMIUM o mejorada para la página web propia.
+Para cada alternativa poné el LINK EXACTO de la publicación del proveedor (nunca una búsqueda) y el precio real. No inventes precios ni proveedores.
+SOLO JSON: {"alternativas":[{"tipo":"proveedor más barato | equivalente genérico | kit | accesorio | premium","nombre","descripcion","proveedor","plataforma","origen":"internacional | local","url","precio_usd":número o null,"precio_ars":número o null (si es local, en pesos),"moq":número,"peso_kg":número,"precio_venta_ars":número (precio realista en Mercado Libre),"precio_venta_web_ars":número,"por_que":"por qué lo comprarían","riesgos":["..."]}]} con hasta 8 alternativas.`, true);
+  let lista = datos?.alternativas || (Array.isArray(datos) ? datos : Object.values(datos || {}).find(Array.isArray)) || [];
+  lista = lista.filter(a => a?.nombre && (num(a.precio_usd) || num(a.precio_ars)) && num(a.precio_venta_ars));
+  const res = [];
+  for (const a of lista.slice(0, 8)) {
+    const local = /local|nacional|argentin/i.test(a.origen || '') || (!num(a.precio_usd) && num(a.precio_ars));
+    const pseudo = { nombre: a.nombre, peso_kg: num(a.peso_kg) || p.peso_kg, derecho_importacion_pct: p.derecho_importacion_pct, demanda: p.demanda, competencia: p.competencia, ventas_estimadas_mes: p.ventas_estimadas_mes,
+      costo_proveedor_usd: local ? (num(a.precio_ars) / (CFG.dolar_oficial || E.dolar || 1450)) : num(a.precio_usd),
+      proveedores: [{ proveedor: a.proveedor, plataforma: a.plataforma, tipo: local ? 'local' : 'internacional', precio_usd: num(a.precio_usd) || null, precio_ars: num(a.precio_ars) || null, moq: num(a.moq) || 1, url: a.url }],
+      precio_venta_sugerido_ars: num(a.precio_venta_ars), precio_venta_web_ars: num(a.precio_venta_web_ars) || num(a.precio_venta_ars) };
+    let e; try { e = evaluar(pseudo) } catch { continue }
+    if (!e?.r) continue;
+    let link = null; try { link = await mejorLink(a.nombre, [{ url: a.url, plataforma: a.plataforma || a.proveedor }]) } catch { }
+    res.push({ tipo: a.tipo, nombre: a.nombre, descripcion: a.descripcion || '', proveedor: a.proveedor || '', plataforma: a.plataforma || '', origen: local ? 'local' : 'internacional',
+      precio_usd: num(a.precio_usd) || null, precio_ars: num(a.precio_ars) || null, moq: num(a.moq) || 1, por_que: a.por_que || '', riesgos: a.riesgos || [], link,
+      cumple: e.canales.length > 0, canales: e.canales,
+      ml: { precio: Math.round(e.r.precio), ganancia: Math.round(e.r.ganancia), cumple: e.r.cumple, costo: Math.round(e.r.cp?.unit || 0) },
+      web: e.w ? { precio: Math.round(e.w.precio), ganancia: Math.round(e.w.ganancia), cumple: e.w.cumple } : null });
+  }
+  res.sort((a, b) => (b.cumple - a.cumple) || (Math.max(b.ml.ganancia, b.web?.ganancia || 0) - Math.max(a.ml.ganancia, a.web?.ganancia || 0)));
+  Object.assign(p, { alternativas: res, alternativas_fecha: ahora(), alternativas_fuentes: (fuentes || []).slice(0, 8) });
+  const buena = res.find(a => a.cumple);
+  registrar('superventas', buena ? `${p.nombre}: encontré cómo ganar → ${buena.tipo}: ${buena.nombre} (gana ${ars(Math.max(buena.ml.ganancia, buena.web?.ganancia || 0))} por unidad)` : `${p.nombre}: analicé ${res.length} alternativas; ninguna cumple tus reglas todavía`);
+  if (buena && !p.aviso_alternativa) {
+    p.aviso_alternativa = ahora();
+    encolarWhatsApp(k, { ...p, nombre: `${buena.nombre} (alternativa a ${p.nombre}, que vende mucho)`, link: buena.link }, { canales: buena.canales, r: { precio: buena.ml.precio, ganancia: buena.ml.ganancia }, w: { precio: buena.web?.precio, ganancia: buena.web?.ganancia } });
+  }
+}
+
+async function superventas() {
+  // 1) los más vendidos de Mercado Libre que todavía no se analizaron
+  const texto = textoPagina(await leerPagina('https://www.mercadolibre.com.ar/mas-vendidos')).slice(0, 7000);
+  const ya = new Set(Object.values(E.productos).map(p => String(p.nombre).toLowerCase()));
+  const { datos } = await ia.json(`Listá los productos MÁS VENDIDOS de Mercado Libre Argentina en este momento: la sección "Más vendidos" y publicaciones con +10mil vendidos de todas las categorías.
+${texto ? 'Texto leído hoy de mercadolibre.com.ar/mas-vendidos (usalo como fuente principal):\n' + texto + '\n' : ''}No incluyas estos, ya analizados: ${[...ya].slice(-120).join(' | ') || 'ninguno'}.
+SOLO JSON: {"productos":[{"producto":"nombre exacto del producto","vendidos":"tal cual figura, ej. +50mil vendidos","precio_ars":número,"url":"link EXACTO de la publicación"}]} con 15 productos.`, true);
+  const lista = (datos?.productos || Object.values(datos || {}).find(Array.isArray) || []).filter(x => x?.producto && !ya.has(String(x.producto).toLowerCase()));
+  for (const x of lista.slice(0, config.superventas_por_vuelta || 2)) {
+    if (!cupo()) break;
+    try {
+      const { k, ev } = await analizar(x.producto, 'superventas');
+      E.productos[k].superventas = { vendidos: x.vendidos || '', precio_ml: num(x.precio_ars) || null, url_ml: x.url || '', fecha: ahora() };
+      if (ev.veredicto !== 'VENDER' && cupo()) await alternativas(k);
+    } catch (e) { registrar('error', x.producto + ': ' + e.message) }
+  }
+  // 2) productos ya guardados que venden mucho y no cumplen: buscar alternativas (se renuevan cada 14 días)
+  // también los que casi cumplen (EVALUAR) con demanda alta: RADAR intenta resolver cómo hacerlos rentables
+  const pend = Object.entries(E.productos).filter(([, p]) => !p.descartado && afinidad(p) > -20 && (vendidosNum(p) >= MUCHAS_VENTAS || (evaluar(p).veredicto === 'EVALUAR' && /alta/i.test(p.demanda?.nivel || ''))) && evaluar(p).veredicto !== 'VENDER' && (!p.alternativas_fecha || Date.now() - new Date(p.alternativas_fecha) > 14 * 864e5))
+    .sort((a, b) => vendidosNum(b[1]) - vendidosNum(a[1])).slice(0, config.alternativas_por_vuelta || 2);
+  for (const [k] of pend) { if (!cupo()) break; try { await alternativas(k) } catch (e) { registrar('error', 'alternativas: ' + e.message) } }
+}
+
+// revisa y corrige los links de productos ya guardados (hasta 25 por vuelta)
+async function repararLinks() {
+  const pend = Object.values(E.productos).filter(p => !p.descartado && (!p.link || !('imagen' in p.link) || (!p.link.verificado && (Date.now() - new Date(p.link.revisado || 0)) > 7 * 864e5))).slice(0, 25);
+  for (const p of pend) { try { p.link = { imagen: null, ...(await mejorLink(p.nombre, candidatosProducto(p))), revisado: ahora() }; if (p.link.imagen) p.imagen_url = p.link.imagen } catch { } }
+  if (pend.length) log(`Links revisados: ${pend.length}`);
+}
 async function vuelta() {
   log(`RADAR v${EST.VERSION} · evento: ${env.EVENTO || 'manual'} · productos guardados: ${Object.keys(E.productos).length}`);
+  try { await repararLinks() } catch (e) { log('links: ' + e.message) }
   for (const k of String(env.FORZAR || '').split(',').filter(Boolean)) delete E.ultimos[k.trim()];
   if (horasDesde('dolar') > 6) { try { const r = await fetch('https://dolarapi.com/v1/dolares/oficial'); const j = await r.json(); if (j.venta) { E.dolar = j.venta; CFG = usarConfig({ ...config, dolar_oficial: j.venta }) } } catch (e) { } marcar('dolar') }
 
   if (env.EVENTO === 'issues' && env.PEDIDO_TITULO) {
     const cuerpo = String(env.PEDIDO_TEXTO || ''), texto = env.PEDIDO_TITULO + (/^Pedido enviado desde/i.test(cuerpo) ? '' : ' ' + cuerpo);
+    if (/^\s*preferencias/i.test(env.PEDIDO_TITULO)) {
+      let n = 0; try { n = await aplicarPreferencias(cuerpo) } catch (e) { registrar('error', 'preferencias: ' + e.message) }
+      await github(`/issues/${env.PEDIDO_NUM}/comments`, 'POST', { body: `✅ Listo. Apliqué ${n} decisiones. Los productos descartados ya no se muestran y RADAR aprendió de tus gustos: ${E.pref?.aprendido?.resumen || ''}` });
+      await github(`/issues/${env.PEDIDO_NUM}`, 'PATCH', { state: 'closed' });
+      await despacharWhatsApp(); guardar(); return;
+    }
     if (/^\s*nota\s*:/i.test(env.PEDIDO_TITULO)) {
       const nota = env.PEDIDO_TITULO.replace(/^\s*nota\s*:\s*/i, '').trim().slice(0, 400);
       E.notas = [...(E.notas || []), { texto: nota, fecha: ahora() }].slice(-60);
@@ -308,9 +494,12 @@ async function vuelta() {
           const rs = await enParalelo(c.slice(0, Math.min(6, meta - n)), async x => { try { return await analizar(x.producto, 'exploracion') } catch (e) { registrar('error', x.producto + ': ' + e.message); return {} } });
           n += rs.filter(r => r?.ev).length; ok += rs.filter(r => r?.ev?.veredicto === 'VENDER').length;
         }
-        if (n) registrar('exploracion', `Analicé ${n} productos nuevos; ${ok} cumplen tus reglas (hoy: ${analizadosHoy()} de ${objetivo})`)
+        if (n) registrar('exploracion', `Analicé ${n} productos nuevos; ${ok} cumplen tus reglas (hoy: ${analizadosHoy()} de ${objetivo})`);
+        // resolución de problemas: si varias vueltas seguidas no aparece nada que cumpla, RADAR diagnostica por qué y cambia de plan
+        E.vueltas_sin_aprobar = n && !ok ? (E.vueltas_sin_aprobar || 0) + 1 : ok ? 0 : (E.vueltas_sin_aprobar || 0);
+        if (E.vueltas_sin_aprobar >= 3 && cupo()) { try { await resolverEstancamiento() } catch (e) { registrar('error', 'diagnóstico: ' + e.message) } E.vueltas_sin_aprobar = 0 }
       }],
-      ['aprender', 4, aprender], ['videos', 12, videos], ['capital', 20, capital], ['informe', 20, informe], ['automejora', 24, autoMejora]
+      ['superventas', 2, superventas], ['aprender', 4, aprender], ['videos', 12, videos], ['capital', 20, capital], ['informe', 20, informe], ['automejora', 24, autoMejora]
     ];
     for (const [k, h, f] of tareas) {
       if (!cupo()) break;
