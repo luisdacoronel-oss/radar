@@ -3383,7 +3383,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "VENDER"
+   "groq": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -3399,9 +3399,7 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {
-   "gemini": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -3594,7 +3592,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR"
+   "groq": "VENDER"
   },
   "evaluado": {}
  },
@@ -3655,7 +3653,6 @@
    "sobre_m20"
   ],
   "votos": {
-   "gemini": "COMPRAR",
    "groq": "COMPRAR"
   },
   "evaluado": {}
@@ -3755,16 +3752,14 @@
   "fecha": "2026-11-21",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 57883.3984375,
+  "precio": 57799.48828125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {
-   "gemini": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -3772,7 +3767,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1635.260009765625,
+  "precio": 1637.4599609375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3787,7 +3782,7 @@
   "fecha": "2026-11-21",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 68.01000213623047,
+  "precio": 68,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3802,7 +3797,7 @@
   "fecha": "2026-11-21",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 524.760009765625,
+  "precio": 524.3200073242188,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3817,7 +3812,7 @@
   "fecha": "2026-11-21",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.892300009727478,
+  "precio": 0.8949000239372253,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -3832,7 +3827,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.1393599957227707,
+  "precio": 0.1390800029039383,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3883,7 +3878,9 @@
    "tendencia_alcista",
    "bajo_m20"
   ],
-  "votos": {},
+  "votos": {
+   "groq": "COMPRAR"
+  },
   "evaluado": {}
  },
  {
