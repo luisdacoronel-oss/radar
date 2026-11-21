@@ -112,7 +112,7 @@ ${ESQUEMA}`, true);
   if (!p.costo_proveedor_usd && !(p.proveedores || []).length) throw new Error('el análisis no trajo precio de proveedor');
   Object.assign(p, { fuentes: [...(p.fuentes || []), ...(fuentes || [])].slice(0, 15), origen, creado: ahora(), busqueda_web: web });
   // link exacto y verificado de la publicación (o búsqueda en Mercado Libre si no hay uno válido)
-  try { p.link = await mejorLink(p.nombre, candidatosProducto(p)); if (p.link?.imagen) p.imagen_url = p.link.imagen } catch { }
+  try { p.link = await mejorLink(p.nombre, candidatosProducto(p)); if (p.link?.imagen) { p.imagen_url = p.link.imagen; p.imagen_ok = true } } catch { }
   let k = slug(p.nombre); if (E.productos[k]) k += '-' + id().slice(-4);
   E.productos[k] = p;
   const ev = evaluar(p); contarHoy(ev);
@@ -240,7 +240,7 @@ SOLO JSON: {"resumen":"2 o 3 frases","inflacion_esperada":"dato y fuente","opcio
 async function informe() {
   const top = prods().filter(p => p.ev.veredicto === 'VENDER').sort((a, b) => b.ev.puntaje - a.ev.puntaje).slice(0, 8)
     .map(p => ({ n: p.nombre, conviene_en: p.ev.canales, ganancia_ml: Math.round(p.ev.r.ganancia), ganancia_web: Math.round(p.ev.w.ganancia) }));
-  const r = await ia.pedir(`Escribí el informe diario (markdown breve) para el vendedor. Hablá SOLO de los productos que conviene vender; NO menciones productos descartados ni problemas técnicos. Si no hay productos todavía, decilo en una frase y explicá qué vas a buscar. Secciones: 1) productos para vender hoy, con ganancia por unidad, 2) qué aprendí del mercado, 3) UNA acción concreta para hoy. Datos: ${JSON.stringify(top)}. Reglas aprendidas: ${conoc('regla').slice(0, 10).map(c => c.titulo).join(' | ')}`);
+  const r = await ia.pedir(`Escribí el informe diario (markdown breve) para el vendedor. Hablá SOLO de los productos que conviene vender; NO menciones productos descartados ni problemas técnicos. Si no hay productos todavía, decilo en una frase y explicá qué vas a buscar. Escribí el nombre de cada producto EXACTAMENTE como figura en los datos (campo n), en negrita, para que el vendedor pueda tocarlo y ver su análisis. Secciones: 1) productos para vender hoy, con ganancia por unidad, 2) qué aprendí del mercado, 3) UNA acción concreta para hoy. Datos: ${JSON.stringify(top)}. Reglas aprendidas: ${conoc('regla').slice(0, 10).map(c => c.titulo).join(' | ')}`);
   E.conocimiento['informe'] = { tipo: 'informe', titulo: 'Informe del ' + new Date().toLocaleDateString('es-AR'), contenido: r.text, fecha: ahora() };
 }
 
@@ -452,8 +452,11 @@ SOLO JSON: {"productos":[{"producto":"nombre exacto del producto","vendidos":"ta
 
 // revisa y corrige los links de productos ya guardados (hasta 25 por vuelta)
 async function repararLinks() {
-  const pend = Object.values(E.productos).filter(p => !p.descartado && (!p.link || !('imagen' in p.link) || (!p.link.verificado && (Date.now() - new Date(p.link.revisado || 0)) > 7 * 864e5))).slice(0, 25);
-  for (const p of pend) { try { p.link = { imagen: null, ...(await mejorLink(p.nombre, candidatosProducto(p))), revisado: ahora() }; if (p.link.imagen) p.imagen_url = p.link.imagen } catch { } }
+  // primero los productos aprobados (los que se muestran), después el resto; se reintenta la foto cada 3 días si falta
+  const viejo = (p, d) => Date.now() - new Date(p.link?.revisado || 0) > d * 864e5;
+  const pend = Object.values(E.productos).filter(p => !p.descartado && (!p.link || !('imagen' in p.link) || (!p.link.imagen && viejo(p, 3)) || (!p.link.verificado && viejo(p, 7))))
+    .sort((a, b) => (evaluar(b).veredicto === 'VENDER') - (evaluar(a).veredicto === 'VENDER')).slice(0, 25);
+  for (const p of pend) { try { p.link = { imagen: null, ...(await mejorLink(p.nombre, candidatosProducto(p))), revisado: ahora() }; if (p.link.imagen) { p.imagen_url = p.link.imagen; p.imagen_ok = true } } catch { } }
   if (pend.length) log(`Links revisados: ${pend.length}`);
 }
 async function vuelta() {
