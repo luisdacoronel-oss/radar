@@ -14,6 +14,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { usarConfig, rentab, rentabWeb, num } from '../lib/calc.mjs';
 import { crearIA, usarMock } from '../lib/ia.mjs';
+import { mejorLink } from '../lib/links.mjs';
 
 const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SAL = path.join(RAIZ, 'docs', 'ofertas-datos');
@@ -178,7 +179,11 @@ function evaluarGanador(x) {
 }
 const limiteG = new Date(Date.now() - (GN.diasVigencia || 30) * 864e5).toISOString();
 const mapaG = new Map(poolPrevio.filter(g => g.encontrado >= limiteG).map(g => [g.id, g]));
-for (const g of candidatos.map(evaluarGanador)) mapaG.set(g.id, g);
+for (const g of candidatos.map(evaluarGanador)) {
+  try { const l = await mejorLink(g.nombre, [{ url: g.url, plataforma: g.proveedor }], !SIM); g.linkExacto = l.exacto; g.linkVerificado = l.verificado; if (l.exacto) g.url = l.url; else g.urlBusqueda = l.busquedas.aliexpress } catch { }
+  try { if (g.urlML) { const m = await mejorLink(g.nombre, [{ url: g.urlML, plataforma: 'Mercado Libre' }], !SIM); g.urlML = m.url } } catch { }
+  mapaG.set(g.id, g);
+}
 const ganadores = [...mapaG.values()].sort((a, b) => b.nota - a.nota || (b.gananciaLote ?? 0) - (a.gananciaLote ?? 0)).slice(0, GN.maximo || 200);
 console.log(`  · Productos ganadores: ${candidatos.length} nuevos (${nichosHoy.join(', ')}) · total ${ganadores.length}`);
 
@@ -268,6 +273,8 @@ function analizar(o) {
 }
 
 const analizadas = nuevas.map(analizar);
+// verificar que cada link lleve exactamente a la publicación; si no, se reemplaza por la búsqueda del producto
+for (const o of analizadas) { try { const l = await mejorLink(o.nombre, [{ url: o.url, plataforma: o.tienda }], !SIM); o.linkExacto = l.exacto; o.linkVerificado = l.verificado; if (l.exacto) o.url = l.url; else { o.urlBusqueda = l.url; o.riesgos.push('No se pudo confirmar el link exacto de la publicación: se muestra la búsqueda del producto.') } } catch { } }
 // unir con las ofertas vigentes de vueltas anteriores (las nuevas reemplazan a las repetidas)
 const limite = new Date(Date.now() - (cfg.diasVigenciaOferta || 3) * 864e5).toISOString();
 const mapa = new Map((previas.ofertas || []).filter(o => o.encontrada >= limite).map(o => [o.id, o]));
