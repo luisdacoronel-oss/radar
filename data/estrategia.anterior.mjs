@@ -1,18 +1,18 @@
-// CAMBIOS: Incrementé la versión a 8, incorporé nuevas categorías técnicas de alta rotación y ajusté las instrucciones para priorizar kits livianos con precios competitivos.
+// CAMBIOS: Incrementé la versión a 9, incorporé nuevas categorías de alta rentabilidad técnica y ajusté las instrucciones para priorizar kits livianos con precios competitivos.
 // ESTRATEGIA DE RADAR — este archivo lo reescribe RADAR solo, una vez por día, según sus resultados.
 // Antes de reemplazarlo lo prueba (test/prueba.mjs). Si la versión nueva falla, se queda con la anterior.
-export const VERSION = 8;
+export const VERSION = 9;
 
 // Categorías donde buscar primero (ordenadas por tasa de aprobación y margen neto comprobado).
 export const categorias = [
-  'herramientas especializadas y diagnóstico automotor avanzado',
   'instrumental de medición eléctrica y laboratorio técnico',
-  'equipamiento de audio, video y transmisión para creadores',
-  'bazar de especialidad, cafetería de alta gama y tecnología gastronómica',
-  'herramientas de carpintería fina, construcción y nivelación láser',
+  'herramientas especializadas y diagnóstico automotor avanzado',
   'energía solar portátil, estaciones de carga y movilidad eléctrica',
   'herramientas de jardinería técnica y mantenimiento a batería',
+  'equipamiento de audio, video y transmisión para creadores',
   'soluciones de seguridad inteligente, cerraduras biométricas y cámaras',
+  'herramientas de carpintería fina, construcción y nivelación láser',
+  'bazar de especialidad, cafetería de alta gama y tecnología gastronómica',
   'artículos de puericultura, higiene infantil y porteo ergonómico',
   'accesorios móviles de alta gama y conectividad rápida'
 ];
