@@ -3382,9 +3382,7 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {
-   "groq": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -3442,7 +3440,9 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -3591,9 +3591,7 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {
-   "groq": "VENDER"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -3653,7 +3651,7 @@
    "sobre_m20"
   ],
   "votos": {
-   "groq": "COMPRAR"
+   "groq": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -3752,7 +3750,7 @@
   "fecha": "2026-11-21",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 58107.7109375,
+  "precio": 59206.828125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3767,7 +3765,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1649.1600341796875,
+  "precio": 1669.5400390625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3782,7 +3780,7 @@
   "fecha": "2026-11-21",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 68.69999694824219,
+  "precio": 69.4800033569336,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3797,7 +3795,7 @@
   "fecha": "2026-11-21",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 528.9500122070312,
+  "precio": 537.4500122070312,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3812,7 +3810,7 @@
   "fecha": "2026-11-21",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.9013000130653381,
+  "precio": 0.9075999855995178,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -3827,7 +3825,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.14008000493049622,
+  "precio": 0.1411300003528595,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3878,9 +3876,7 @@
    "tendencia_alcista",
    "bajo_m20"
   ],
-  "votos": {
-   "groq": "COMPRAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
