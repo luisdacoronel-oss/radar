@@ -3382,7 +3382,9 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -3398,7 +3400,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "VENDER"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -3442,9 +3444,7 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {
-   "gemini": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -3562,7 +3562,7 @@
    "fib_soporte"
   ],
   "votos": {
-   "groq": "ESPERAR"
+   "groq": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -3578,9 +3578,7 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {
-   "groq": "COMPRAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -3757,16 +3755,14 @@
   "fecha": "2026-11-21",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 60280.83984375,
+  "precio": 60286.171875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {
-   "gemini": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -3774,7 +3770,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1682.1099853515625,
+  "precio": 1683.4300537109375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3789,7 +3785,7 @@
   "fecha": "2026-11-21",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 70.30999755859375,
+  "precio": 70.25,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3804,7 +3800,7 @@
   "fecha": "2026-11-21",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 548.280029296875,
+  "precio": 548.4000244140625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3819,7 +3815,7 @@
   "fecha": "2026-11-21",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.932699978351593,
+  "precio": 0.9283000230789185,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -3834,7 +3830,7 @@
   "fecha": "2026-11-21",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.14452999830245972,
+  "precio": 0.14474999904632568,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -3856,7 +3852,9 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "groq": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
