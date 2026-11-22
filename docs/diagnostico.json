@@ -1,47 +1,61 @@
 {
- "fecha": "2026-11-22T02:01:54.115Z",
+ "fecha": "2026-11-22T02:58:01.170Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 47
+   "200": 92
+  },
+  "foto en articulo.mercadolibre.com.ar": {
+   "sin foto": 92
   },
   "api mercadolibre": {
-   "401": 103,
-   "403": 103
+   "401": 165,
+   "403": 165
   },
   "lector jina": {
-   "200": 25
+   "200": 24,
+   "error": 1
+  },
+  "pagina alibaba.com": {
+   "200": 47
+  },
+  "foto en alibaba.com": {
+   "sin foto": 47
+  },
+  "pagina detail.1688.com": {
+   "200": 21
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 21
+  },
+  "listado mercadolibre": {
+   "200": 50
+  },
+  "listado por jina": {
+   "200": 50
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 32,
+   "404": 4
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 32
+  },
+  "pagina es.aliexpress.com": {
+   "200": 7
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 7
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 104,
+   "202": 153,
    "403": 6
   },
   "imagenes bing": {
-   "200": 114
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 25
-  },
-  "pagina alibaba.com": {
-   "200": 29
-  },
-  "pagina amazon.com": {
-   "200": 1
-  },
-  "pagina detail.1688.com": {
-   "200": 12
-  },
-  "pagina aliexpress.com": {
-   "200": 1
-  },
-  "pagina es.aliexpress.com": {
-   "200": 5
-  },
-  "pagina spanish.alibaba.com": {
-   "200": 1
+   "200": 163
   },
   "pagina globalsources.com": {
-   "429": 1
+   "429": 2
   },
   "pagina mestek.en.made-in-china.com": {
    "404": 1
@@ -51,8 +65,23 @@
   },
   "pagina vicamtech.en.made-in-china.com": {
    "404": 1
+  },
+  "pagina aliexpress.com": {
+   "200": 8
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 8
+  },
+  "pagina made-in-china.com": {
+   "404": 1
+  },
+  "pagina amazon.com": {
+   "200": 1
+  },
+  "foto en amazon.com": {
+   "sin foto": 1
   }
  },
- "con_foto": 34,
- "aprobados_sin_foto": 157
+ "con_foto": 28,
+ "aprobados_sin_foto": 163
 }
