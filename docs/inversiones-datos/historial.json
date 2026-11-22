@@ -3959,7 +3959,9 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -4003,7 +4005,8 @@
    "fib_soporte"
   ],
   "votos": {
-   "gemini": "ESPERAR"
+   "gemini": "ESPERAR",
+   "groq": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -4106,7 +4109,9 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "VENDER"
+  },
   "evaluado": {}
  },
  {
@@ -4122,7 +4127,7 @@
    "fib_soporte"
   ],
   "votos": {
-   "groq": "ESPERAR"
+   "groq": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -4313,14 +4318,17 @@
   "fecha": "2026-11-22",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 60833.91015625,
+  "precio": 60799.30859375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR",
+   "groq": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -4328,7 +4336,7 @@
   "fecha": "2026-11-22",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1709.8699951171875,
+  "precio": 1716.280029296875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -4343,7 +4351,7 @@
   "fecha": "2026-11-22",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 70.22000122070312,
+  "precio": 70.26000213623047,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -4358,7 +4366,7 @@
   "fecha": "2026-11-22",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 557.0800170898438,
+  "precio": 556.0999755859375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -4373,7 +4381,7 @@
   "fecha": "2026-11-22",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.9243000149726868,
+  "precio": 0.9240999817848206,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -4388,7 +4396,7 @@
   "fecha": "2026-11-22",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.14435000717639923,
+  "precio": 0.14458000659942627,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
