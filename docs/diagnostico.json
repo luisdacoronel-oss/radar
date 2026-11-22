@@ -1,16 +1,16 @@
 {
- "fecha": "2026-11-22T20:25:35.501Z",
+ "fecha": "2026-11-22T21:29:30.023Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 131,
-   "404": 3
+   "200": 112,
+   "404": 7
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 131
+   "sin foto": 112
   },
   "api mercadolibre": {
-   "401": 206,
-   "403": 206
+   "401": 212,
+   "403": 212
   },
   "lector jina": {
    "200": 25
@@ -21,58 +21,55 @@
   "foto en alibaba.com": {
    "sin foto": 56
   },
-  "pagina made-in-china.com": {
-   "404": 5
-  },
   "listado mercadolibre": {
-   "200": 82
+   "200": 76
   },
   "listado por jina": {
-   "200": 82
+   "200": 76
+  },
+  "pagina detail.1688.com": {
+   "200": 8
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 8
   },
   "pagina mercadolibre.com.ar": {
-   "200": 25,
-   "404": 16
+   "200": 49,
+   "404": 4
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 25
+   "sin foto": 48
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 194,
+   "202": 203,
    "403": 6
   },
   "imagenes bing": {
-   "200": 206
+   "200": 213
   },
-  "pagina wellele.en.made-in-china.com": {
+  "pagina made-in-china.com": {
    "404": 1
+  },
+  "pagina globalsources.com": {
+   "429": 1
   },
   "pagina es.aliexpress.com": {
-   "200": 7
+   "200": 9
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 7
-  },
-  "pagina detail.1688.com": {
-   "200": 10
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 10
-  },
-  "pagina bazarmayorista.com.ar": {
-   "404": 1
-  },
-  "pagina aliexpress.com": {
-   "200": 5
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 5
+   "sin foto": 9
   },
   "pagina mayoristaonce.com.ar": {
-   "404": 1
+   "404": 2
+  },
+  "pagina aliexpress.com": {
+   "200": 2
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 2
   }
  },
- "con_foto": 147,
+ "con_foto": 152,
  "aprobados_sin_foto": 151
 }
