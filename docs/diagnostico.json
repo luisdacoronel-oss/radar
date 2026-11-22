@@ -1,82 +1,78 @@
 {
- "fecha": "2026-11-22T19:33:53.213Z",
+ "fecha": "2026-11-22T20:25:35.501Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 129,
-   "404": 1
+   "200": 131,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 129
+   "sin foto": 131
   },
   "api mercadolibre": {
-   "401": 216,
-   "403": 216
+   "401": 206,
+   "403": 206
   },
   "lector jina": {
-   "200": 22,
-   "error": 3
-  },
-  "pagina amazon.com": {
-   "200": 1
-  },
-  "foto en amazon.com": {
-   "sin foto": 1
+   "200": 25
   },
   "pagina alibaba.com": {
-   "200": 65
+   "200": 56
   },
   "foto en alibaba.com": {
-   "sin foto": 65
+   "sin foto": 56
+  },
+  "pagina made-in-china.com": {
+   "404": 5
   },
   "listado mercadolibre": {
-   "200": 87
+   "200": 82
   },
   "listado por jina": {
-   "200": 87
+   "200": 82
   },
-  "pagina es.aliexpress.com": {
-   "200": 23
+  "pagina mercadolibre.com.ar": {
+   "200": 25,
+   "404": 16
   },
-  "foto en es.aliexpress.com": {
-   "sin foto": 23
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 25
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 213,
+   "202": 194,
    "403": 6
   },
   "imagenes bing": {
-   "200": 224
+   "200": 206
+  },
+  "pagina wellele.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina es.aliexpress.com": {
+   "200": 7
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 7
   },
   "pagina detail.1688.com": {
-   "200": 16
+   "200": 10
   },
   "foto en detail.1688.com": {
-   "sin foto": 16
+   "sin foto": 10
   },
-  "pagina made-in-china.com": {
-   "404": 2
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 32,
-   "404": 8
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 32
-  },
-  "pagina maxiconsumo.com": {
+  "pagina bazarmayorista.com.ar": {
    "404": 1
   },
   "pagina aliexpress.com": {
-   "200": 1
+   "200": 5
   },
   "foto en aliexpress.com": {
-   "sin foto": 1
+   "sin foto": 5
   },
-  "pagina globalsources.com": {
-   "429": 1
+  "pagina mayoristaonce.com.ar": {
+   "404": 1
   }
  },
- "con_foto": 142,
+ "con_foto": 147,
  "aprobados_sin_foto": 151
 }
