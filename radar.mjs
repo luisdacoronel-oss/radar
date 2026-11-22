@@ -6,7 +6,7 @@ import { usarConfig, evaluar, rentabWeb, num, ars, pct } from './lib/calc.mjs';
 import { crearIA, usarMock } from './lib/ia.mjs';
 import { encriptar, desencriptar } from './lib/cripto.mjs';
 import { validarEstrategia } from './test/prueba.mjs';
-import { mejorLink, candidatosProducto, imagenExacta, DIAG } from './lib/links.mjs';
+import { mejorLink, candidatosProducto, imagenExacta, buscarEnML, DIAG } from './lib/links.mjs';
 
 const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const R = p => path.join(RAIZ, p);
@@ -113,7 +113,7 @@ ${ESQUEMA}`, true);
   Object.assign(p, { fuentes: [...(p.fuentes || []), ...(fuentes || [])].slice(0, 15), origen, creado: ahora(), busqueda_web: web });
   // link exacto y verificado de la publicación (o búsqueda en Mercado Libre si no hay uno válido)
   try { p.link = await mejorLink(p.nombre, candidatosProducto(p)) } catch { }
-  try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora() }; p.imagen_url = f.imagen; p.imagen_ok = true } } catch { }
+  try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora(), v: 2 }; p.imagen_url = f.imagen; p.imagen_ok = true } } catch { }
   let k = slug(p.nombre); if (E.productos[k]) k += '-' + id().slice(-4);
   E.productos[k] = p;
   const ev = evaluar(p); contarHoy(ev);
@@ -458,27 +458,24 @@ SOLO JSON: {"productos":[{"producto":"nombre exacto del producto","vendidos":"ta
 // siempre la foto EXACTA de una publicación real del producto. Se guarda de dónde salió.
 async function fotoDe(p) {
   if (p.link?.imagen) return { imagen: p.link.imagen, origen: 'publicación' };
-  if (p.link?.exacto) { const im = await imagenExacta(p.link.url); if (im) return { imagen: im, origen: 'publicación', fuente: p.link.url } }
+  if (p.link?.exacto) { const im = await imagenExacta(p.link.url, p.nombre); if (im) return { imagen: im, origen: 'publicación', fuente: p.link.url } }
   for (const c of candidatosProducto(p).filter(c => c?.url && c.url !== p.link?.url).slice(0, 4)) {
     try { const l = await mejorLink(p.nombre, [c]); if (l?.imagen) return { imagen: l.imagen, origen: c.plataforma || 'proveedor', fuente: l.url } } catch { }
   }
-  return null; // solo fotos exactas de una publicación del producto (nunca fotos aproximadas)
+  const m = await buscarEnML(p.nombre); if (m?.imagen) return { imagen: m.imagen, origen: 'publicación de Mercado Libre', fuente: m.url };
+  return null; // solo fotos de una publicación del mismo producto (nunca fotos aproximadas)
 }
 async function repararLinks() {
-  // primero los productos aprobados (los que se muestran), después el resto; se reintenta la foto cada 3 días si falta
-  const viejo = (p, d) => Date.now() - new Date(p.link?.revisado || 0) > d * 864e5;
-  const pend = Object.values(E.productos).filter(p => !p.descartado && (!p.link || !('imagen' in p.link) || (!p.link.imagen && viejo(p, 3)) || (!p.link.verificado && viejo(p, 7))))
-    .sort((a, b) => (evaluar(b).veredicto === 'VENDER') - (evaluar(a).veredicto === 'VENDER')).slice(0, 25);
+  // revisión v2: se vuelve a comprobar que cada link y cada foto sean del MISMO producto (primero los aprobados)
+  const viejo = (p, h) => Date.now() - new Date(p.foto_intento || 0) > h * 36e5;
+  const pend = Object.values(E.productos).filter(p => !p.descartado && (p.link?.v !== 2 || (!p.foto && viejo(p, 6))))
+    .sort((a, b) => (evaluar(b).veredicto === 'VENDER') - (evaluar(a).veredicto === 'VENDER')).slice(0, 60);
   for (const p of pend) {
-    try { p.link = { imagen: null, ...(await mejorLink(p.nombre, candidatosProducto(p))), revisado: ahora() } } catch { }
-    try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora() }; p.imagen_url = f.imagen; p.imagen_ok = true } } catch { }
-  }
-  // productos aprobados sin foto todavía (aunque su link ya esté revisado)
-  for (const p of Object.values(E.productos).filter(p => !p.descartado && !p.foto && evaluar(p).veredicto === 'VENDER' && Date.now() - new Date(p.foto_intento || 0) > 6 * 36e5).slice(0, 60)) {
     p.foto_intento = ahora();
-    try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora() }; p.imagen_url = f.imagen; p.imagen_ok = true } } catch { }
+    try { p.link = { imagen: null, ...(await mejorLink(p.nombre, candidatosProducto(p))), revisado: ahora(), v: 2 } } catch { }
+    try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora(), v: 2 }; p.imagen_url = f.imagen; p.imagen_ok = true } else { p.foto = null; p.imagen_ok = false } } catch { }
   }
-  if (pend.length) log(`Links revisados: ${pend.length}`);
+  if (pend.length) log(`Links y fotos revisados: ${pend.length}`);
 }
 async function vuelta() {
   log(`RADAR v${EST.VERSION} · evento: ${env.EVENTO || 'manual'} · productos guardados: ${Object.keys(E.productos).length}`);
