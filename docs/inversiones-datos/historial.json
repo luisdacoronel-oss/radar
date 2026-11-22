@@ -3945,7 +3945,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR"
+   "gemini": "VENDER"
   },
   "evaluado": {}
  },
@@ -4004,9 +4004,7 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {
-   "gemini": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -4049,7 +4047,9 @@
    "sobre_m20",
    "fib_resistencia"
   ],
-  "votos": {},
+  "votos": {
+   "groq": "VENDER"
+  },
   "evaluado": {}
  },
  {
@@ -4093,7 +4093,9 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "VENDER"
+  },
   "evaluado": {}
  },
  {
@@ -4124,7 +4126,8 @@
    "fib_soporte"
   ],
   "votos": {
-   "groq": "COMPRAR"
+   "gemini": "ESPERAR",
+   "groq": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -4140,9 +4143,7 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {
-   "groq": "COMPRAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -4204,7 +4205,9 @@
    "bajo_m20",
    "fib_resistencia"
   ],
-  "votos": {},
+  "votos": {
+   "groq": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -4319,14 +4322,17 @@
   "fecha": "2026-11-22",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 60737.1484375,
+  "precio": 60799.16015625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR",
+   "groq": "VENDER"
+  },
   "evaluado": {}
  },
  {
@@ -4334,7 +4340,7 @@
   "fecha": "2026-11-22",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1708.3599853515625,
+  "precio": 1707.6400146484375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -4349,7 +4355,7 @@
   "fecha": "2026-11-22",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 70.36000061035156,
+  "precio": 70.54000091552734,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -4364,7 +4370,7 @@
   "fecha": "2026-11-22",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 552.5999755859375,
+  "precio": 552,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -4394,7 +4400,7 @@
   "fecha": "2026-11-22",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.14535999298095703,
+  "precio": 0.14556999504566193,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
