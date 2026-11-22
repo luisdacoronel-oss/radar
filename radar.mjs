@@ -6,7 +6,7 @@ import { usarConfig, evaluar, rentabWeb, num, ars, pct } from './lib/calc.mjs';
 import { crearIA, usarMock } from './lib/ia.mjs';
 import { encriptar, desencriptar } from './lib/cripto.mjs';
 import { validarEstrategia } from './test/prueba.mjs';
-import { mejorLink, candidatosProducto } from './lib/links.mjs';
+import { mejorLink, candidatosProducto, imagenExacta, DIAG } from './lib/links.mjs';
 
 const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const R = p => path.join(RAIZ, p);
@@ -112,7 +112,8 @@ ${ESQUEMA}`, true);
   if (!p.costo_proveedor_usd && !(p.proveedores || []).length) throw new Error('el análisis no trajo precio de proveedor');
   Object.assign(p, { fuentes: [...(p.fuentes || []), ...(fuentes || [])].slice(0, 15), origen, creado: ahora(), busqueda_web: web });
   // link exacto y verificado de la publicación (o búsqueda en Mercado Libre si no hay uno válido)
-  try { p.link = await mejorLink(p.nombre, candidatosProducto(p)); if (p.link?.imagen) { p.imagen_url = p.link.imagen; p.imagen_ok = true } } catch { }
+  try { p.link = await mejorLink(p.nombre, candidatosProducto(p)) } catch { }
+  try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora() }; p.imagen_url = f.imagen; p.imagen_ok = true } } catch { }
   let k = slug(p.nombre); if (E.productos[k]) k += '-' + id().slice(-4);
   E.productos[k] = p;
   const ev = evaluar(p); contarHoy(ev);
@@ -297,6 +298,7 @@ function publicar() {
   };
   fs.mkdirSync(R('docs'), { recursive: true });
   fs.writeFileSync(R('docs/datos.enc'), encriptar(salida, CLAVE));
+  try { fs.writeFileSync(R('docs/diagnostico.json'), JSON.stringify({ fecha: ahora(), fuentes: DIAG, con_foto: Object.values(E.productos).filter(p => p.foto).length, aprobados_sin_foto: Object.values(E.productos).filter(p => !p.descartado && !p.foto && evaluar(p).veredicto === 'VENDER').length }, null, 1)) } catch { }
 }
 function guardar() { fs.mkdirSync(R('data'), { recursive: true }); fs.writeFileSync(ARCH, encriptar(E, CLAVE)); publicar() }
 
@@ -411,7 +413,7 @@ SOLO JSON: {"alternativas":[{"tipo":"proveedor más barato | equivalente genéri
     let e; try { e = evaluar(pseudo) } catch { continue }
     if (!e?.r) continue;
     let link = null; try { link = await mejorLink(a.nombre, [{ url: a.url, plataforma: a.plataforma || a.proveedor }]) } catch { }
-    res.push({ tipo: a.tipo, nombre: a.nombre, descripcion: a.descripcion || '', proveedor: a.proveedor || '', plataforma: a.plataforma || '', origen: local ? 'local' : 'internacional',
+    res.push({ imagen: link?.imagen || null, tipo: a.tipo, nombre: a.nombre, descripcion: a.descripcion || '', proveedor: a.proveedor || '', plataforma: a.plataforma || '', origen: local ? 'local' : 'internacional',
       precio_usd: num(a.precio_usd) || null, precio_ars: num(a.precio_ars) || null, moq: num(a.moq) || 1, por_que: a.por_que || '', riesgos: a.riesgos || [], link,
       cumple: e.canales.length > 0, canales: e.canales,
       ml: { precio: Math.round(e.r.precio), ganancia: Math.round(e.r.ganancia), cumple: e.r.cumple, costo: Math.round(e.r.cp?.unit || 0) },
@@ -451,12 +453,30 @@ SOLO JSON: {"productos":[{"producto":"nombre exacto del producto","vendidos":"ta
 }
 
 // revisa y corrige los links de productos ya guardados (hasta 25 por vuelta)
+
+// foto del producto: 1) la de la publicación verificada; 2) la de otra publicación del mismo producto (proveedores, otros mercados);
+// siempre la foto EXACTA de una publicación real del producto. Se guarda de dónde salió.
+async function fotoDe(p) {
+  if (p.link?.imagen) return { imagen: p.link.imagen, origen: 'publicación' };
+  if (p.link?.exacto) { const im = await imagenExacta(p.link.url); if (im) return { imagen: im, origen: 'publicación', fuente: p.link.url } }
+  for (const c of candidatosProducto(p).filter(c => c?.url && c.url !== p.link?.url).slice(0, 4)) {
+    try { const l = await mejorLink(p.nombre, [c]); if (l?.imagen) return { imagen: l.imagen, origen: c.plataforma || 'proveedor', fuente: l.url } } catch { }
+  }
+  return null; // solo fotos exactas de una publicación del producto (nunca fotos aproximadas)
+}
 async function repararLinks() {
   // primero los productos aprobados (los que se muestran), después el resto; se reintenta la foto cada 3 días si falta
   const viejo = (p, d) => Date.now() - new Date(p.link?.revisado || 0) > d * 864e5;
   const pend = Object.values(E.productos).filter(p => !p.descartado && (!p.link || !('imagen' in p.link) || (!p.link.imagen && viejo(p, 3)) || (!p.link.verificado && viejo(p, 7))))
     .sort((a, b) => (evaluar(b).veredicto === 'VENDER') - (evaluar(a).veredicto === 'VENDER')).slice(0, 25);
-  for (const p of pend) { try { p.link = { imagen: null, ...(await mejorLink(p.nombre, candidatosProducto(p))), revisado: ahora() }; if (p.link.imagen) { p.imagen_url = p.link.imagen; p.imagen_ok = true } } catch { } }
+  for (const p of pend) {
+    try { p.link = { imagen: null, ...(await mejorLink(p.nombre, candidatosProducto(p))), revisado: ahora() } } catch { }
+    try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora() }; p.imagen_url = f.imagen; p.imagen_ok = true } } catch { }
+  }
+  // productos aprobados sin foto todavía (aunque su link ya esté revisado)
+  for (const p of Object.values(E.productos).filter(p => !p.descartado && !p.foto && evaluar(p).veredicto === 'VENDER').slice(0, 15)) {
+    try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora() }; p.imagen_url = f.imagen; p.imagen_ok = true } } catch { }
+  }
   if (pend.length) log(`Links revisados: ${pend.length}`);
 }
 async function vuelta() {
