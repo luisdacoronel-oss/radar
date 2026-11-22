@@ -1,84 +1,97 @@
 {
- "fecha": "2026-11-22T10:35:16.847Z",
+ "fecha": "2026-11-22T11:29:37.856Z",
  "fuentes": {
-  "pagina articulo.mercadolibre.com.ar": {
-   "200": 95,
-   "404": 3
+  "pagina mercadolibre.com.ar": {
+   "200": 44
   },
-  "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 95
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 44
   },
   "api mercadolibre": {
-   "401": 198,
-   "403": 198
+   "401": 213,
+   "403": 213
   },
   "lector jina": {
-   "200": 22,
-   "error": 3
-  },
-  "pagina amazon.com": {
-   "200": 3
-  },
-  "foto en amazon.com": {
-   "sin foto": 3
+   "200": 19,
+   "403": 5,
+   "error": 1
   },
   "pagina alibaba.com": {
-   "200": 62
+   "200": 72
   },
   "foto en alibaba.com": {
-   "sin foto": 62
+   "sin foto": 72
   },
   "listado mercadolibre": {
-   "200": 80
+   "200": 71
   },
   "listado por jina": {
-   "200": 80
+   "200": 71
+  },
+  "pagina detail.1688.com": {
+   "200": 31
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 31
+  },
+  "pagina articulo.mercadolibre.com.ar": {
+   "200": 108,
+   "429": 2
+  },
+  "foto en articulo.mercadolibre.com.ar": {
+   "sin foto": 108
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 202,
+   "202": 220,
    "403": 6
   },
   "imagenes bing": {
-   "200": 214
+   "200": 231
   },
-  "pagina mileseey.en.made-in-china.com": {
-   "404": 1
+  "pagina amazon.com": {
+   "200": 4
   },
-  "pagina detail.1688.com": {
-   "200": 34
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 34
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 50
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 50
-  },
-  "pagina aliexpress.com": {
-   "200": 9
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 9
+  "foto en amazon.com": {
+   "sin foto": 4
   },
   "pagina es.aliexpress.com": {
-   "200": 12
+   "200": 17
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 12
+   "sin foto": 17
   },
-  "pagina made-in-china.com": {
-   "404": 3
+  "pagina aliexpress.com": {
+   "200": 7
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 7
+  },
+  "pagina dhgate.com": {
+   "403": 1
+  },
+  "pagina liseron.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina globalsources.com": {
+   "429": 1
+  },
+  "pagina distribuidoracentral.com.ar": {
+   "404": 1
   },
   "pagina spanish.alibaba.com": {
    "200": 1
   },
   "foto en spanish.alibaba.com": {
    "sin foto": 1
+  },
+  "pagina sanhetools.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina store.sony.com.ar": {
+   "404": 1
   }
  },
- "con_foto": 70,
- "aprobados_sin_foto": 159
+ "con_foto": 75,
+ "aprobados_sin_foto": 155
 }
