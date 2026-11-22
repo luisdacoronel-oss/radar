@@ -1,34 +1,20 @@
 {
- "fecha": "2026-11-22T06:00:12.026Z",
+ "fecha": "2026-11-22T07:16:05.086Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 129,
-   "404": 1
+   "200": 117,
+   "404": 8
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 129
+   "sin foto": 117
   },
   "api mercadolibre": {
-   "401": 230,
-   "403": 230
+   "401": 227,
+   "403": 227
   },
   "lector jina": {
-   "200": 23,
-   "error": 2
-  },
-  "pagina amazon.com": {
-   "200": 1
-  },
-  "foto en amazon.com": {
-   "sin foto": 1
-  },
-  "imagenes duckduckgo": {
-   "200": 6,
-   "202": 224,
-   "403": 6
-  },
-  "imagenes bing": {
-   "200": 234
+   "200": 24,
+   "error": 1
   },
   "pagina alibaba.com": {
    "200": 60
@@ -36,50 +22,58 @@
   "foto en alibaba.com": {
    "sin foto": 60
   },
+  "pagina made-in-china.com": {
+   "404": 5
+  },
   "listado mercadolibre": {
-   "200": 87
+   "200": 80
   },
   "listado por jina": {
-   "200": 87
-  },
-  "pagina es.aliexpress.com": {
-   "200": 18
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 18
-  },
-  "pagina detail.1688.com": {
-   "200": 13
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 13
-  },
-  "pagina made-in-china.com": {
-   "404": 3
+   "200": 80
   },
   "pagina mercadolibre.com.ar": {
-   "200": 44,
-   "404": 4
+   "200": 57,
+   "404": 12
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 44
+   "sin foto": 56
   },
-  "pagina aliexpress.com": {
-   "200": 4
+  "imagenes duckduckgo": {
+   "200": 6,
+   "202": 216,
+   "403": 6
   },
-  "foto en aliexpress.com": {
-   "sin foto": 4
+  "imagenes bing": {
+   "200": 228
   },
-  "pagina maxiconsumo.com": {
+  "pagina wellele.en.made-in-china.com": {
    "404": 1
   },
   "pagina mayoristaonce.com.ar": {
    "404": 1
   },
-  "pagina huayifitness.en.made-in-china.com": {
-   "404": 1
+  "pagina es.aliexpress.com": {
+   "200": 10
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 10
+  },
+  "pagina detail.1688.com": {
+   "200": 10
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 10
+  },
+  "pagina aliexpress.com": {
+   "200": 2
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 2
+  },
+  "pagina globalsources.com": {
+   "429": 1
   }
  },
- "con_foto": 38,
- "aprobados_sin_foto": 158
+ "con_foto": 51,
+ "aprobados_sin_foto": 161
 }
