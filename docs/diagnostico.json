@@ -1,87 +1,97 @@
 {
- "fecha": "2026-11-22T02:58:01.170Z",
+ "fecha": "2026-11-22T04:06:50.012Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 92
+   "200": 103,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 92
+   "sin foto": 103
   },
   "api mercadolibre": {
-   "401": 165,
-   "403": 165
+   "401": 226,
+   "403": 226
   },
   "lector jina": {
    "200": 24,
    "error": 1
   },
+  "pagina amazon.com": {
+   "200": 3
+  },
+  "foto en amazon.com": {
+   "sin foto": 3
+  },
   "pagina alibaba.com": {
-   "200": 47
+   "200": 78
   },
   "foto en alibaba.com": {
-   "sin foto": 47
-  },
-  "pagina detail.1688.com": {
-   "200": 21
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 21
+   "sin foto": 78
   },
   "listado mercadolibre": {
-   "200": 50
+   "200": 94
   },
   "listado por jina": {
-   "200": 50
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 32,
-   "404": 4
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 32
+   "200": 94
   },
   "pagina es.aliexpress.com": {
-   "200": 7
+   "200": 18
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 7
+   "sin foto": 18
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 153,
+   "202": 231,
    "403": 6
   },
   "imagenes bing": {
-   "200": 163
+   "200": 242
   },
-  "pagina globalsources.com": {
-   "429": 2
-  },
-  "pagina mestek.en.made-in-china.com": {
+  "pagina mileseey.en.made-in-china.com": {
    "404": 1
   },
-  "pagina mayoristaelectronica.com.ar": {
+  "pagina detail.1688.com": {
+   "200": 36
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 36
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 63,
    "404": 1
   },
-  "pagina vicamtech.en.made-in-china.com": {
-   "404": 1
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 63
   },
   "pagina aliexpress.com": {
-   "200": 8
+   "200": 11
   },
   "foto en aliexpress.com": {
-   "sin foto": 8
+   "sin foto": 11
   },
   "pagina made-in-china.com": {
-   "404": 1
+   "404": 3
   },
-  "pagina amazon.com": {
+  "pagina spanish.alibaba.com": {
    "200": 1
   },
-  "foto en amazon.com": {
+  "foto en spanish.alibaba.com": {
    "sin foto": 1
+  },
+  "pagina mayoristaferretero.com.ar": {
+   "404": 1
+  },
+  "pagina papeleradelsur.com.ar": {
+   "404": 1
+  },
+  "pagina samsung.com": {
+   "200": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
   }
  },
- "con_foto": 28,
- "aprobados_sin_foto": 163
+ "con_foto": 22,
+ "aprobados_sin_foto": 170
 }
