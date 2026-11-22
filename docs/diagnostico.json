@@ -1,78 +1,74 @@
 {
- "fecha": "2026-11-22T17:26:29.496Z",
+ "fecha": "2026-11-22T18:16:39.125Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 88,
-   "404": 3
+   "200": 110
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 88
+   "sin foto": 110
   },
   "api mercadolibre": {
-   "401": 197,
-   "403": 197
+   "401": 196,
+   "403": 196
   },
   "lector jina": {
-   "200": 19,
-   "403": 4,
-   "error": 2
-  },
-  "pagina amazon.com": {
-   "200": 1,
-   "404": 3
-  },
-  "pagina de otro producto": {
-   "1": 1
-  },
-  "listado mercadolibre": {
-   "200": 87
-  },
-  "listado por jina": {
-   "200": 87
-  },
-  "pagina alibaba.com": {
-   "200": 80
-  },
-  "foto en alibaba.com": {
-   "sin foto": 80
-  },
-  "pagina mileseey.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina detail.1688.com": {
-   "200": 34
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 34
+   "401": 25
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 196,
+   "202": 213,
    "403": 6
   },
   "imagenes bing": {
-   "200": 208
+   "200": 224
+  },
+  "pagina alibaba.com": {
+   "200": 70
+  },
+  "foto en alibaba.com": {
+   "sin foto": 70
+  },
+  "pagina detail.1688.com": {
+   "200": 32
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 32
+  },
+  "listado mercadolibre": {
+   "200": 70
+  },
+  "listado por jina": {
+   "401": 70
   },
   "pagina mercadolibre.com.ar": {
-   "200": 56
+   "200": 31
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 56
+   "sin foto": 31
   },
   "pagina es.aliexpress.com": {
-   "200": 12
+   "200": 17
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 12
-  },
-  "pagina made-in-china.com": {
-   "404": 4
+   "sin foto": 17
   },
   "pagina aliexpress.com": {
-   "200": 7
+   "200": 11
   },
   "foto en aliexpress.com": {
-   "sin foto": 7
+   "sin foto": 11
+  },
+  "pagina amazon.com": {
+   "404": 2
+  },
+  "pagina dhgate.com": {
+   "403": 1
+  },
+  "pagina liseron.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina globalsources.com": {
+   "429": 1
   },
   "pagina spanish.alibaba.com": {
    "200": 1
@@ -80,10 +76,13 @@
   "foto en spanish.alibaba.com": {
    "sin foto": 1
   },
-  "pagina haoshengtools.en.made-in-china.com": {
+  "pagina sanhetools.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina made-in-china.com": {
    "404": 1
   }
  },
- "con_foto": 139,
- "aprobados_sin_foto": 153
+ "con_foto": 140,
+ "aprobados_sin_foto": 152
 }
