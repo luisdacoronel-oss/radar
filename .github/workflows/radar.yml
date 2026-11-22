@@ -29,6 +29,8 @@ jobs:
           GROQ_KEY: ${{ secrets.GROQ_KEY }}
           WA_TELEFONO: ${{ secrets.WA_TELEFONO }}
           WA_APIKEY: ${{ secrets.WA_APIKEY }}
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
           GITHUB_TOKEN: ${{ github.token }}
           EVENTO: ${{ github.event_name }}
           PEDIDO_TITULO: ${{ github.event.issue.title }}
