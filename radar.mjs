@@ -474,7 +474,8 @@ async function repararLinks() {
     try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora() }; p.imagen_url = f.imagen; p.imagen_ok = true } } catch { }
   }
   // productos aprobados sin foto todavía (aunque su link ya esté revisado)
-  for (const p of Object.values(E.productos).filter(p => !p.descartado && !p.foto && evaluar(p).veredicto === 'VENDER').slice(0, 15)) {
+  for (const p of Object.values(E.productos).filter(p => !p.descartado && !p.foto && evaluar(p).veredicto === 'VENDER' && Date.now() - new Date(p.foto_intento || 0) > 6 * 36e5).slice(0, 60)) {
+    p.foto_intento = ahora();
     try { const f = await fotoDe(p); if (f) { p.foto = { ...f, fecha: ahora() }; p.imagen_url = f.imagen; p.imagen_ok = true } } catch { }
   }
   if (pend.length) log(`Links revisados: ${pend.length}`);
