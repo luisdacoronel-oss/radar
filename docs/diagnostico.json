@@ -1,29 +1,35 @@
 {
- "fecha": "2026-11-22T07:16:05.086Z",
+ "fecha": "2026-11-22T08:23:10.651Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 117,
-   "404": 8
+   "200": 119,
+   "404": 7
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 117
+   "sin foto": 119
   },
   "api mercadolibre": {
-   "401": 227,
-   "403": 227
+   "401": 231,
+   "403": 231
   },
   "lector jina": {
-   "200": 24,
-   "error": 1
+   "200": 22,
+   "422": 1,
+   "error": 2
   },
   "pagina alibaba.com": {
-   "200": 60
+   "200": 56
   },
   "foto en alibaba.com": {
-   "sin foto": 60
+   "sin foto": 56
   },
-  "pagina made-in-china.com": {
-   "404": 5
+  "imagenes duckduckgo": {
+   "200": 6,
+   "202": 221,
+   "403": 6
+  },
+  "imagenes bing": {
+   "200": 233
   },
   "listado mercadolibre": {
    "200": 80
@@ -31,26 +37,24 @@
   "listado por jina": {
    "200": 80
   },
+  "pagina detail.1688.com": {
+   "200": 9
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 9
+  },
   "pagina mercadolibre.com.ar": {
-   "200": 57,
-   "404": 12
+   "200": 56,
+   "404": 5
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 56
+   "sin foto": 55
   },
-  "imagenes duckduckgo": {
-   "200": 6,
-   "202": 216,
-   "403": 6
+  "pagina made-in-china.com": {
+   "404": 2
   },
-  "imagenes bing": {
-   "200": 228
-  },
-  "pagina wellele.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina mayoristaonce.com.ar": {
-   "404": 1
+  "pagina globalsources.com": {
+   "429": 1
   },
   "pagina es.aliexpress.com": {
    "200": 10
@@ -58,22 +62,10 @@
   "foto en es.aliexpress.com": {
    "sin foto": 10
   },
-  "pagina detail.1688.com": {
-   "200": 10
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 10
-  },
-  "pagina aliexpress.com": {
-   "200": 2
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 2
-  },
-  "pagina globalsources.com": {
-   "429": 1
+  "pagina mayoristaonce.com.ar": {
+   "404": 2
   }
  },
- "con_foto": 51,
- "aprobados_sin_foto": 161
+ "con_foto": 58,
+ "aprobados_sin_foto": 162
 }
