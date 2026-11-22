@@ -1,78 +1,82 @@
 {
- "fecha": "2026-11-22T12:28:13.783Z",
+ "fecha": "2026-11-22T13:53:46.394Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 125,
-   "404": 1
+   "200": 118,
+   "404": 4
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 125
+   "sin foto": 118
   },
   "api mercadolibre": {
-   "401": 200,
-   "403": 200
+   "401": 189,
+   "403": 189
   },
   "lector jina": {
-   "200": 17,
-   "403": 5,
-   "error": 3
+   "200": 21,
+   "403": 4
+  },
+  "pagina alibaba.com": {
+   "200": 49
+  },
+  "foto en alibaba.com": {
+   "sin foto": 49
+  },
+  "pagina made-in-china.com": {
+   "404": 5
+  },
+  "listado mercadolibre": {
+   "200": 70
+  },
+  "listado por jina": {
+   "200": 70
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 29,
+   "404": 15
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 29
+  },
+  "pagina es.aliexpress.com": {
+   "200": 15
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 15
+  },
+  "imagenes duckduckgo": {
+   "200": 12,
+   "202": 166,
+   "403": 12
+  },
+  "imagenes bing": {
+   "200": 190
+  },
+  "pagina wellele.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina detail.1688.com": {
+   "200": 7
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 7
+  },
+  "pagina bazarmayorista.com.ar": {
+   "404": 1
+  },
+  "pagina aliexpress.com": {
+   "200": 4
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 4
   },
   "pagina amazon.com": {
    "200": 1
   },
   "foto en amazon.com": {
    "sin foto": 1
-  },
-  "imagenes duckduckgo": {
-   "200": 6,
-   "202": 193,
-   "403": 6
-  },
-  "imagenes bing": {
-   "200": 204
-  },
-  "pagina alibaba.com": {
-   "200": 52
-  },
-  "foto en alibaba.com": {
-   "sin foto": 52
-  },
-  "listado mercadolibre": {
-   "200": 71
-  },
-  "listado por jina": {
-   "200": 71
-  },
-  "pagina detail.1688.com": {
-   "200": 11
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 11
-  },
-  "pagina made-in-china.com": {
-   "404": 2
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 26,
-   "404": 3,
-   "429": 1
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 26
-  },
-  "pagina maxiconsumo.com": {
-   "404": 1
-  },
-  "pagina es.aliexpress.com": {
-   "200": 12
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 12
-  },
-  "pagina once.com.ar": {
-   "404": 1
   }
  },
- "con_foto": 92,
- "aprobados_sin_foto": 153
+ "con_foto": 111,
+ "aprobados_sin_foto": 154
 }
