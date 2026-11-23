@@ -1,91 +1,91 @@
 {
- "fecha": "2026-11-23T20:55:48.971Z",
+ "fecha": "2026-11-23T21:58:26.785Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 120,
-   "404": 3
+   "200": 108
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 120
+   "sin foto": 108
   },
   "api mercadolibre": {
-   "401": 196,
-   "403": 196
+   "401": 203,
+   "403": 203
   },
   "lector jina": {
-   "401": 25
+   "200": 23,
+   "422": 1,
+   "error": 1
+  },
+  "pagina alibaba.com": {
+   "200": 56
+  },
+  "pagina no disponible": {
+   "1": 1
+  },
+  "listado mercadolibre": {
+   "200": 74
+  },
+  "listado por jina": {
+   "200": 74
+  },
+  "foto en alibaba.com": {
+   "sin foto": 55
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 214,
-   "403": 6,
-   "error": 2
+   "202": 183,
+   "403": 6
   },
   "imagenes bing": {
-   "200": 228
-  },
-  "pagina alibaba.com": {
-   "200": 71
-  },
-  "foto en alibaba.com": {
-   "sin foto": 71
-  },
-  "pagina made-in-china.com": {
-   "404": 4
-  },
-  "listado mercadolibre": {
-   "200": 88
-  },
-  "listado por jina": {
-   "401": 88
-  },
-  "pagina aliexpress.com": {
-   "200": 10
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 10
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 22,
-   "404": 6
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 22
+   "200": 194
   },
   "pagina detail.1688.com": {
-   "200": 22
+   "200": 25
   },
   "foto en detail.1688.com": {
-   "sin foto": 22
+   "sin foto": 25
   },
-  "pagina es.aliexpress.com": {
-   "200": 20
+  "pagina mercadolibre.com.ar": {
+   "200": 45,
+   "404": 14
   },
-  "foto en es.aliexpress.com": {
-   "sin foto": 20
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 45
   },
-  "pagina amazon.com": {
+  "pagina mayoristaonce.com.ar": {
    "404": 2
   },
-  "pagina dhgate.com": {
-   "403": 1
+  "pagina cjdropshipping.com": {
+   "200": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
+  },
+  "pagina hsmachinery.en.made-in-china.com": {
+   "404": 1
   },
   "pagina globalsources.com": {
    "429": 1
   },
-  "pagina spanish.alibaba.com": {
+  "pagina es.aliexpress.com": {
    "200": 1
   },
-  "foto en spanish.alibaba.com": {
+  "foto en es.aliexpress.com": {
    "sin foto": 1
   },
-  "pagina sanhetools.en.made-in-china.com": {
+  "pagina made-in-china.com": {
    "404": 1
   },
-  "pagina unitweld.en.made-in-china.com": {
+  "pagina aobang.en.made-in-china.com": {
    "404": 1
+  },
+  "pagina aliexpress.com": {
+   "200": 1
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 1
   }
  },
- "con_foto": 207,
- "aprobados_sin_foto": 148
+ "con_foto": 219,
+ "aprobados_sin_foto": 151
 }
