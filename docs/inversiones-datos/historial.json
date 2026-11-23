@@ -4635,7 +4635,10 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR",
+   "groq": "VENDER"
+  },
   "evaluado": {}
  },
  {
@@ -4809,6 +4812,7 @@
    "sobre_m20"
   ],
   "votos": {
+   "gemini": "COMPRAR",
    "groq": "COMPRAR"
   },
   "evaluado": {}
@@ -4824,9 +4828,7 @@
    "tendencia_alcista",
    "bajo_m20"
   ],
-  "votos": {
-   "groq": "COMPRAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -4884,7 +4886,9 @@
    "sobre_m20",
    "fib_resistencia"
   ],
-  "votos": {},
+  "votos": {
+   "groq": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -4899,7 +4903,9 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "COMPRAR"
+  },
   "evaluado": {}
  },
  {
@@ -4999,14 +5005,16 @@
   "fecha": "2026-11-23",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 61145.6484375,
+  "precio": 61320.921875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -5014,7 +5022,7 @@
   "fecha": "2026-11-23",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1712.3199462890625,
+  "precio": 1711.449951171875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -5029,7 +5037,7 @@
   "fecha": "2026-11-23",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 72.04000091552734,
+  "precio": 71.9000015258789,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -5043,7 +5051,7 @@
   "fecha": "2026-11-23",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 555.9400024414062,
+  "precio": 556.52001953125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -5058,7 +5066,7 @@
   "fecha": "2026-11-23",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.9372000098228455,
+  "precio": 0.9404000043869019,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -5072,12 +5080,11 @@
   "fecha": "2026-11-23",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.14667999744415283,
+  "precio": 0.14790000021457672,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
-   "bajo_m20",
-   "rsi_sobreventa"
+   "bajo_m20"
   ],
   "votos": {},
   "evaluado": {}
