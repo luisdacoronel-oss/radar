@@ -1,16 +1,16 @@
-// CAMBIOS: Incrementé la versión a 10, diversifiqué las categorías priorizando kits técnicos de alto margen y actualicé las instrucciones para enfocar la búsqueda en productos livianos de alta rotación.
+// CAMBIOS: Incrementé la versión a 11, reordené las categorías priorizando kits técnicos y gastronómicos de alta rentabilidad y ajusté las instrucciones para buscar productos con menor peso y mayor margen.
 // ESTRATEGIA DE RADAR — este archivo lo reescribe RADAR solo, una vez por día, según sus resultados.
 // Antes de reemplazarlo lo prueba (test/prueba.mjs). Si la versión nueva falla, se queda con la anterior.
-export const VERSION = 10;
+export const VERSION = 11;
 
 // Categorías donde buscar primero (ordenadas por tasa de aprobación y margen neto comprobado).
 export const categorias = [
-  'herramientas especializadas y diagnóstico automotor avanzado',
   'instrumental de medición eléctrica y laboratorio técnico',
+  'bazar de especialidad, cafetería de alta gama y tecnología gastronómica',
+  'herramientas especializadas y diagnóstico automotor avanzado',
   'energía solar portátil, estaciones de carga y movilidad eléctrica',
   'soluciones de seguridad inteligente, cerraduras biométricas y cámaras',
   'herramientas de carpintería fina, construcción y nivelación láser',
-  'bazar de especialidad, cafetería de alta gama y tecnología gastronómica',
   'herramientas de jardinería técnica y mantenimiento a batería',
   'equipamiento de audio, video y transmisión para creadores',
   'artículos de puericultura, higiene infantil y porteo ergonómico',
@@ -52,9 +52,9 @@ export function instruccionesBusqueda(ctx) {
   return `Concentrate en la categoría "${categoriaObjetivo}".
 Buscá productos que cumplan estrictamente:
 1. Formato kit o combo completo con maletín, estuche o accesorios, evitando artículos individuales fácilmente comparables.
-2. Peso menor a 3 kg y volumen moderado para mantener costos de transporte e importación bajos.
-3. Precio de venta al público en Argentina igual o superior a $80.000.
-4. Costo de proveedor en origen que represente como máximo el 20% al 25% del precio final de venta.
+2. Peso menor a 2.5 kg y volumen moderado para mantener costos de transporte e importación bajos.
+3. Precio de venta al público en Argentina igual o superior a $90.000.
+4. Costo de proveedor en origen que represente como máximo el 20% del precio final de venta.
 5. Ausencia de trámites de homologación complejos (como ANMAT o licencias de marcas registradas).
 6. Ventas comprobables en plataformas de origen o mercado local con datos concretos. Mes de análisis: ${ctx.mes}. Base acumulada de aprobados: ${cantidadAprobados}.`;
 }

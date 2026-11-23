@@ -1,11 +1,12 @@
 {
- "fecha": "2026-11-23T06:49:35.927Z",
+ "fecha": "2026-11-23T08:52:57.759Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 123
+   "200": 105,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 123
+   "sin foto": 105
   },
   "api mercadolibre": {
    "401": 215,
@@ -16,10 +17,39 @@
    "error": 1
   },
   "pagina alibaba.com": {
-   "200": 75
+   "200": 92
   },
   "foto en alibaba.com": {
-   "sin foto": 75
+   "sin foto": 92
+  },
+  "pagina made-in-china.com": {
+   "404": 3
+  },
+  "listado mercadolibre": {
+   "200": 85
+  },
+  "listado por jina": {
+   "200": 85
+  },
+  "pagina aliexpress.com": {
+   "200": 13
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 13
+  },
+  "imagenes duckduckgo": {
+   "200": 10,
+   "202": 220,
+   "403": 6
+  },
+  "imagenes bing": {
+   "200": 235
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 51
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 51
   },
   "pagina detail.1688.com": {
    "200": 33
@@ -27,50 +57,11 @@
   "foto en detail.1688.com": {
    "sin foto": 33
   },
-  "listado mercadolibre": {
-   "200": 88
-  },
-  "listado por jina": {
-   "200": 88
-  },
   "pagina es.aliexpress.com": {
-   "200": 14
+   "200": 20
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 14
-  },
-  "imagenes duckduckgo": {
-   "200": 6,
-   "202": 219,
-   "403": 6
-  },
-  "imagenes bing": {
-   "200": 231
-  },
-  "pagina mestek.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina mayoristaelectronica.com.ar": {
-   "404": 1
-  },
-  "pagina vicamtech.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 32,
-   "404": 5
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 32
-  },
-  "pagina aliexpress.com": {
-   "200": 15
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 15
-  },
-  "pagina made-in-china.com": {
-   "404": 1
+   "sin foto": 20
   },
   "pagina amazon.com": {
    "200": 3
@@ -78,16 +69,31 @@
   "foto en amazon.com": {
    "sin foto": 3
   },
+  "pagina spanish.alibaba.com": {
+   "200": 2
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 2
+  },
+  "pagina dhgate.com": {
+   "403": 1
+  },
+  "pagina liseron.en.made-in-china.com": {
+   "404": 1
+  },
   "pagina globalsources.com": {
    "429": 1
   },
-  "pagina mileseey.en.made-in-china.com": {
+  "pagina sanhetools.en.made-in-china.com": {
    "404": 1
   },
-  "pagina pce-instruments.com": {
-   "403": 1
+  "pagina maxiconsumo.com": {
+   "404": 2
+  },
+  "pagina diarco.com.ar": {
+   "404": 1
   }
  },
- "con_foto": 166,
- "aprobados_sin_foto": 156
+ "con_foto": 169,
+ "aprobados_sin_foto": 157
 }
