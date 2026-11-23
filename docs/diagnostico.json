@@ -1,91 +1,90 @@
 {
- "fecha": "2026-11-23T13:23:41.926Z",
+ "fecha": "2026-11-23T14:48:00.599Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 126,
-   "429": 1
+   "200": 88,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 126
+   "sin foto": 88
   },
   "api mercadolibre": {
-   "401": 217,
-   "403": 217
+   "401": 141,
+   "403": 141
   },
   "lector jina": {
    "200": 24,
    "error": 1
   },
   "pagina alibaba.com": {
-   "200": 84
+   "200": 52
   },
   "foto en alibaba.com": {
-   "sin foto": 84
+   "sin foto": 52
   },
-  "pagina detail.1688.com": {
-   "200": 34
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 34
+  "pagina made-in-china.com": {
+   "404": 3
   },
   "listado mercadolibre": {
-   "200": 86
+   "200": 57
   },
   "listado por jina": {
-   "200": 86
+   "200": 57
   },
-  "pagina mestek.en.made-in-china.com": {
-   "404": 1
+  "pagina aliexpress.com": {
+   "200": 9
   },
-  "pagina mayoristaelectronica.com.ar": {
-   "404": 1
+  "foto en aliexpress.com": {
+   "sin foto": 9
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 223,
+   "202": 142,
    "403": 6
   },
   "imagenes bing": {
-   "200": 235
-  },
-  "pagina vicamtech.en.made-in-china.com": {
-   "404": 1
+   "200": 154
   },
   "pagina mercadolibre.com.ar": {
-   "200": 31,
-   "404": 3
+   "200": 18
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 31
+   "sin foto": 18
   },
-  "pagina made-in-china.com": {
-   "404": 1
+  "pagina detail.1688.com": {
+   "200": 16
   },
-  "pagina aliexpress.com": {
-   "200": 12
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 12
+  "foto en detail.1688.com": {
+   "sin foto": 16
   },
   "pagina es.aliexpress.com": {
-   "200": 10
+   "200": 16
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 10
+   "sin foto": 16
   },
   "pagina amazon.com": {
-   "200": 3
+   "200": 1
   },
   "foto en amazon.com": {
-   "sin foto": 3
+   "sin foto": 1
+  },
+  "pagina dhgate.com": {
+   "403": 1
   },
   "pagina globalsources.com": {
    "429": 1
   },
-  "pagina distribuidoramayorista.com.ar": {
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina sanhetools.en.made-in-china.com": {
    "404": 1
   }
  },
- "con_foto": 177,
- "aprobados_sin_foto": 167
+ "con_foto": 197,
+ "aprobados_sin_foto": 147
 }
