@@ -1,52 +1,37 @@
 {
- "fecha": "2026-11-23T05:29:03.821Z",
+ "fecha": "2026-11-23T06:49:35.927Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 132
+   "200": 123
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 132
+   "sin foto": 123
   },
   "api mercadolibre": {
-   "401": 241,
-   "403": 241
+   "401": 215,
+   "403": 215
   },
   "lector jina": {
    "200": 24,
    "error": 1
   },
   "pagina alibaba.com": {
-   "200": 65
+   "200": 75
   },
   "foto en alibaba.com": {
-   "sin foto": 65
+   "sin foto": 75
   },
   "pagina detail.1688.com": {
-   "200": 26
+   "200": 33
   },
   "foto en detail.1688.com": {
-   "sin foto": 26
+   "sin foto": 33
   },
   "listado mercadolibre": {
-   "200": 72
+   "200": 88
   },
   "listado por jina": {
-   "200": 72
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 48,
-   "404": 1
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 48
-  },
-  "imagenes duckduckgo": {
-   "200": 6,
-   "202": 240,
-   "403": 6
-  },
-  "imagenes bing": {
-   "200": 252
+   "200": 88
   },
   "pagina es.aliexpress.com": {
    "200": 14
@@ -54,28 +39,55 @@
   "foto en es.aliexpress.com": {
    "sin foto": 14
   },
-  "pagina zupper.en.made-in-china.com": {
+  "imagenes duckduckgo": {
+   "200": 6,
+   "202": 219,
+   "403": 6
+  },
+  "imagenes bing": {
+   "200": 231
+  },
+  "pagina mestek.en.made-in-china.com": {
    "404": 1
+  },
+  "pagina mayoristaelectronica.com.ar": {
+   "404": 1
+  },
+  "pagina vicamtech.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 32,
+   "404": 5
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 32
   },
   "pagina aliexpress.com": {
-   "200": 5
+   "200": 15
   },
   "foto en aliexpress.com": {
-   "sin foto": 5
-  },
-  "pagina facebook.com": {
-   "400": 1
-  },
-  "pagina mayoristaonce.com.ar": {
-   "404": 1
+   "sin foto": 15
   },
   "pagina made-in-china.com": {
    "404": 1
   },
+  "pagina amazon.com": {
+   "200": 3
+  },
+  "foto en amazon.com": {
+   "sin foto": 3
+  },
   "pagina globalsources.com": {
    "429": 1
+  },
+  "pagina mileseey.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina pce-instruments.com": {
+   "403": 1
   }
  },
  "con_foto": 166,
- "aprobados_sin_foto": 154
+ "aprobados_sin_foto": 156
 }
