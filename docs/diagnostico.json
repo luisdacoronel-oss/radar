@@ -1,82 +1,67 @@
 {
- "fecha": "2026-11-23T17:08:44.637Z",
+ "fecha": "2026-11-23T18:05:31.880Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 121
-  },
-  "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 121
-  },
-  "api mercadolibre": {
-   "401": 220,
-   "403": 220
-  },
-  "lector jina": {
-   "200": 22,
-   "422": 1,
-   "error": 2
-  },
-  "pagina alibaba.com": {
-   "200": 59
-  },
-  "foto en alibaba.com": {
-   "sin foto": 59
-  },
-  "listado mercadolibre": {
-   "200": 73
-  },
-  "listado por jina": {
-   "200": 73
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 43,
+   "200": 141,
    "404": 6
   },
-  "pagina bazarmayorista.com.ar": {
-   "404": 1
+  "foto en articulo.mercadolibre.com.ar": {
+   "sin foto": 141
+  },
+  "api mercadolibre": {
+   "401": 219,
+   "403": 219
+  },
+  "lector jina": {
+   "200": 24,
+   "error": 1
+  },
+  "pagina alibaba.com": {
+   "200": 58
+  },
+  "foto en alibaba.com": {
+   "sin foto": 58
+  },
+  "pagina detail.1688.com": {
+   "200": 15
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 15
+  },
+  "listado mercadolibre": {
+   "200": 81
+  },
+  "listado por jina": {
+   "200": 81
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 26,
+   "404": 12
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 25
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 220,
+   "202": 210,
    "403": 6
   },
   "imagenes bing": {
-   "200": 232
+   "200": 221
   },
   "pagina made-in-china.com": {
-   "404": 2
+   "404": 5
   },
-  "pagina detail.1688.com": {
-   "200": 14
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 14
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 43
+  "pagina wellele.en.made-in-china.com": {
+   "404": 1
   },
   "pagina es.aliexpress.com": {
-   "200": 15
+   "200": 11
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 15
-  },
-  "pagina aliexpress.com": {
-   "200": 5
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 5
-  },
-  "pagina zupper.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina facebook.com": {
-   "400": 1
-  },
-  "pagina mayoristaonce.com.ar": {
-   "404": 1
+   "sin foto": 11
   }
  },
- "con_foto": 204,
- "aprobados_sin_foto": 147
+ "con_foto": 206,
+ "aprobados_sin_foto": 146
 }
