@@ -4507,9 +4507,7 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {
-   "gemini": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -4567,7 +4565,9 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {},
+  "votos": {
+   "gemini": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
@@ -4685,8 +4685,7 @@
    "fib_soporte"
   ],
   "votos": {
-   "gemini": "ESPERAR",
-   "groq": "ESPERAR"
+   "groq": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -4702,7 +4701,9 @@
    "bajo_m20",
    "fib_soporte"
   ],
-  "votos": {},
+  "votos": {
+   "groq": "COMPRAR"
+  },
   "evaluado": {}
  },
  {
@@ -4717,10 +4718,7 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {
-   "gemini": "ESPERAR",
-   "groq": "VENDER"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -4780,8 +4778,7 @@
    "sobre_m20"
   ],
   "votos": {
-   "gemini": "COMPRAR",
-   "groq": "COMPRAR"
+   "gemini": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -4880,7 +4877,7 @@
   "fecha": "2026-11-23",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 61411.62890625,
+  "precio": 61007.078125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -4895,11 +4892,12 @@
   "fecha": "2026-11-23",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1726.52001953125,
+  "precio": 1711.9000244140625,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
-   "bajo_m20"
+   "bajo_m20",
+   "rsi_sobreventa"
   ],
   "votos": {},
   "evaluado": {}
@@ -4909,7 +4907,7 @@
   "fecha": "2026-11-23",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 72.5999984741211,
+  "precio": 71.80000305175781,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -4923,7 +4921,7 @@
   "fecha": "2026-11-23",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 556.5999755859375,
+  "precio": 553.22998046875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -4938,7 +4936,7 @@
   "fecha": "2026-11-23",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.9402999877929688,
+  "precio": 0.9352999925613403,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -4952,7 +4950,7 @@
   "fecha": "2026-11-23",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.1460999995470047,
+  "precio": 0.14478999376296997,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -4974,7 +4972,9 @@
    "bajo_m20",
    "rsi_sobreventa"
   ],
-  "votos": {},
+  "votos": {
+   "groq": "ESPERAR"
+  },
   "evaluado": {}
  },
  {
