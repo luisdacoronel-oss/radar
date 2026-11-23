@@ -1,20 +1,20 @@
 {
- "fecha": "2026-11-23T18:05:31.880Z",
+ "fecha": "2026-11-23T19:06:39.002Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 141,
-   "404": 6
+   "200": 135,
+   "404": 4
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 141
+   "sin foto": 135
   },
   "api mercadolibre": {
-   "401": 219,
-   "403": 219
+   "401": 223,
+   "403": 223
   },
   "lector jina": {
-   "200": 24,
-   "error": 1
+   "200": 23,
+   "error": 2
   },
   "pagina alibaba.com": {
    "200": 58
@@ -22,46 +22,64 @@
   "foto en alibaba.com": {
    "sin foto": 58
   },
-  "pagina detail.1688.com": {
-   "200": 15
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 15
+  "pagina sinoage.en.made-in-china.com": {
+   "404": 1
   },
   "listado mercadolibre": {
-   "200": 81
+   "200": 77
   },
   "listado por jina": {
-   "200": 81
+   "200": 77
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 26,
-   "404": 12
+  "pagina aliexpress.com": {
+   "200": 3
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 25
+  "foto en aliexpress.com": {
+   "sin foto": 3
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 210,
+   "202": 221,
    "403": 6
   },
   "imagenes bing": {
-   "200": 221
-  },
-  "pagina made-in-china.com": {
-   "404": 5
-  },
-  "pagina wellele.en.made-in-china.com": {
-   "404": 1
+   "200": 232
   },
   "pagina es.aliexpress.com": {
-   "200": 11
+   "200": 25
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 11
+   "sin foto": 25
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 31,
+   "404": 4
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 31
+  },
+  "pagina mayoristaonce.com.ar": {
+   "404": 2
+  },
+  "pagina detail.1688.com": {
+   "200": 8
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 8
+  },
+  "pagina made-in-china.com": {
+   "404": 1
+  },
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina globalsources.com": {
+   "429": 1
   }
  },
- "con_foto": 206,
+ "con_foto": 207,
  "aprobados_sin_foto": 146
 }
