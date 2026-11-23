@@ -1,79 +1,81 @@
 {
- "fecha": "2026-11-23T04:41:23.756Z",
+ "fecha": "2026-11-23T05:29:03.821Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 123,
-   "404": 7
+   "200": 132
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 123
+   "sin foto": 132
   },
   "api mercadolibre": {
-   "401": 217,
-   "403": 217
+   "401": 241,
+   "403": 241
   },
   "lector jina": {
-   "401": 25
+   "200": 24,
+   "error": 1
+  },
+  "pagina alibaba.com": {
+   "200": 65
+  },
+  "foto en alibaba.com": {
+   "sin foto": 65
+  },
+  "pagina detail.1688.com": {
+   "200": 26
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 26
+  },
+  "listado mercadolibre": {
+   "200": 72
+  },
+  "listado por jina": {
+   "200": 72
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 48,
+   "404": 1
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 48
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 7,
-   "403": 6,
-   "error": 222
+   "202": 240,
+   "403": 6
   },
   "imagenes bing": {
-   "200": 240
-  },
-  "pagina aliexpress.com": {
-   "200": 7
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 7
-  },
-  "pagina alibaba.com": {
-   "200": 58
-  },
-  "foto en alibaba.com": {
-   "sin foto": 58
-  },
-  "listado mercadolibre": {
-   "200": 85
-  },
-  "listado por jina": {
-   "401": 85
-  },
-  "pagina detail.1688.com": {
-   "200": 5
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 5
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 41,
-   "404": 8
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 40
+   "200": 252
   },
   "pagina es.aliexpress.com": {
-   "200": 17
+   "200": 14
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 17
+   "sin foto": 14
+  },
+  "pagina zupper.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina aliexpress.com": {
+   "200": 5
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 5
+  },
+  "pagina facebook.com": {
+   "400": 1
+  },
+  "pagina mayoristaonce.com.ar": {
+   "404": 1
   },
   "pagina made-in-china.com": {
-   "404": 2
+   "404": 1
   },
   "pagina globalsources.com": {
    "429": 1
-  },
-  "pagina mayoristaonce.com.ar": {
-   "404": 2
-  },
-  "pagina bazarmayorista.com.ar": {
-   "404": 1
   }
  },
- "con_foto": 163,
- "aprobados_sin_foto": 152
+ "con_foto": 166,
+ "aprobados_sin_foto": 154
 }
