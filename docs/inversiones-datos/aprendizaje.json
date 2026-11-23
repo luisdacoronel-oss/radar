@@ -12,15 +12,15 @@
  "senales": {
   "tendencia_alcista": {
    "aciertos": 1,
-   "total": 23
+   "total": 29
   },
   "bajo_m20": {
-   "aciertos": 26,
-   "total": 27
+   "aciertos": 32,
+   "total": 33
   },
   "rsi_sobreventa": {
    "aciertos": 1,
-   "total": 19
+   "total": 25
   },
   "fib_soporte": {
    "aciertos": 0,
@@ -40,8 +40,8 @@
   }
  },
  "tecnico": {
-  "aciertos": 5,
-  "total": 28
+  "aciertos": 10,
+  "total": 34
  },
- "actualizado": "2026-11-23T06:24:01.714Z"
+ "actualizado": "2026-11-23T08:13:44.099Z"
 }
