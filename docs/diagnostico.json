@@ -1,16 +1,15 @@
 {
- "fecha": "2026-11-23T16:14:24.677Z",
+ "fecha": "2026-11-23T17:08:44.637Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 145,
-   "404": 1
+   "200": 121
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 145
+   "sin foto": 121
   },
   "api mercadolibre": {
-   "401": 213,
-   "403": 213
+   "401": 220,
+   "403": 220
   },
   "lector jina": {
    "200": 22,
@@ -23,58 +22,61 @@
   "foto en alibaba.com": {
    "sin foto": 59
   },
-  "pagina detail.1688.com": {
-   "200": 24
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 24
-  },
   "listado mercadolibre": {
-   "200": 81
+   "200": 73
   },
   "listado por jina": {
-   "200": 81
+   "200": 73
   },
-  "pagina es.aliexpress.com": {
-   "200": 18
+  "pagina mercadolibre.com.ar": {
+   "200": 43,
+   "404": 6
   },
-  "foto en es.aliexpress.com": {
-   "sin foto": 18
+  "pagina bazarmayorista.com.ar": {
+   "404": 1
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 209,
+   "202": 220,
    "403": 6
   },
   "imagenes bing": {
-   "200": 221
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 12,
-   "404": 2
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 12
-  },
-  "pagina amazon.com": {
-   "404": 1
+   "200": 232
   },
   "pagina made-in-china.com": {
    "404": 2
   },
-  "pagina maxiconsumo.com": {
-   "404": 1
+  "pagina detail.1688.com": {
+   "200": 14
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 14
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 43
+  },
+  "pagina es.aliexpress.com": {
+   "200": 15
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 15
   },
   "pagina aliexpress.com": {
-   "200": 7
+   "200": 5
   },
   "foto en aliexpress.com": {
-   "sin foto": 7
+   "sin foto": 5
   },
-  "pagina pce-instruments.com": {
-   "403": 1
+  "pagina zupper.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina facebook.com": {
+   "400": 1
+  },
+  "pagina mayoristaonce.com.ar": {
+   "404": 1
   }
  },
- "con_foto": 202,
+ "con_foto": 204,
  "aprobados_sin_foto": 147
 }
