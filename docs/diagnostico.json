@@ -1,79 +1,80 @@
 {
- "fecha": "2026-11-24T13:21:56.764Z",
+ "fecha": "2026-11-24T14:46:22.829Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 127,
-   "429": 4
+   "200": 143,
+   "404": 6
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 127
+   "sin foto": 143
   },
   "api mercadolibre": {
-   "401": 228,
-   "403": 228
+   "401": 221,
+   "403": 221
   },
   "lector jina": {
    "200": 23,
    "error": 2
   },
   "pagina alibaba.com": {
-   "200": 60
+   "200": 60,
+   "502": 1
   },
   "foto en alibaba.com": {
    "sin foto": 60
   },
+  "pagina detail.1688.com": {
+   "200": 14
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 14
+  },
+  "listado mercadolibre": {
+   "200": 86
+  },
+  "listado por jina": {
+   "200": 86
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 25,
+   "404": 11
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 24
+  },
   "imagenes duckduckgo": {
-   "200": 6,
-   "202": 227,
+   "200": 8,
+   "202": 212,
    "403": 6
   },
   "imagenes bing": {
-   "200": 238
+   "200": 226
   },
-  "listado mercadolibre": {
-   "200": 80
+  "pagina sinoage.en.made-in-china.com": {
+   "404": 1
   },
-  "listado por jina": {
-   "200": 80
+  "pagina aliexpress.com": {
+   "200": 1
   },
-  "pagina made-in-china.com": {
+  "foto en aliexpress.com": {
+   "sin foto": 1
+  },
+  "pagina amazon.com": {
    "404": 2
   },
-  "pagina detail.1688.com": {
-   "200": 15
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 15
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 40,
-   "404": 6
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 40
-  },
-  "pagina bazarmayorista.com.ar": {
+  "pagina visbella.en.made-in-china.com": {
    "404": 1
   },
   "pagina es.aliexpress.com": {
-   "200": 17
+   "200": 13
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 17
+   "sin foto": 13
   },
-  "pagina aliexpress.com": {
-   "200": 3
+  "pagina made-in-china.com": {
+   "404": 5
   },
-  "foto en aliexpress.com": {
-   "sin foto": 3
-  },
-  "pagina zupper.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina facebook.com": {
-   "400": 1
-  },
-  "pagina mayoristaonce.com.ar": {
+  "pagina wellele.en.made-in-china.com": {
    "404": 1
   }
  },
