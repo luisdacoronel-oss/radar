@@ -1,86 +1,91 @@
 {
- "fecha": "2026-11-24T05:41:17.028Z",
+ "fecha": "2026-11-24T06:36:57.443Z",
  "fuentes": {
-  "pagina articulo.mercadolibre.com.ar": {
-   "200": 159,
-   "404": 1
+  "pagina mercadolibre.com.ar": {
+   "200": 42,
+   "404": 6
   },
-  "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 159
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 42
   },
   "api mercadolibre": {
-   "401": 230,
-   "403": 230
+   "401": 242,
+   "403": 242
   },
   "lector jina": {
-   "200": 20,
+   "200": 23,
    "422": 1,
-   "error": 4
+   "error": 1
   },
   "pagina alibaba.com": {
-   "200": 68
+   "200": 65
   },
   "foto en alibaba.com": {
-   "sin foto": 68
+   "sin foto": 65
   },
-  "pagina detail.1688.com": {
-   "200": 26
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 26
+  "pagina made-in-china.com": {
+   "404": 3
   },
   "listado mercadolibre": {
-   "200": 88
+   "200": 84
   },
   "listado por jina": {
-   "200": 88
+   "200": 84
+  },
+  "pagina articulo.mercadolibre.com.ar": {
+   "200": 138
+  },
+  "foto en articulo.mercadolibre.com.ar": {
+   "sin foto": 138
+  },
+  "pagina es.aliexpress.com": {
+   "200": 25
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 25
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 229,
+   "202": 247,
    "403": 6
   },
   "imagenes bing": {
-   "200": 241
+   "200": 259
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 9,
-   "404": 2
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 9
-  },
-  "pagina amazon.com": {
-   "200": 1
-  },
-  "foto en amazon.com": {
-   "sin foto": 1
-  },
-  "pagina es.aliexpress.com": {
-   "200": 10
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 10
-  },
-  "pagina made-in-china.com": {
-   "404": 1
-  },
-  "pagina maxiconsumo.com": {
+  "pagina bazarmayorista.com.ar": {
    "404": 1
   },
   "pagina aliexpress.com": {
-   "200": 7
+   "200": 9
   },
   "foto en aliexpress.com": {
-   "sin foto": 7
+   "sin foto": 9
   },
-  "pagina pce-instruments.com": {
-   "403": 1
+  "pagina detail.1688.com": {
+   "200": 13
   },
-  "pagina ferreteriacentral.com.ar": {
+  "foto en detail.1688.com": {
+   "sin foto": 13
+  },
+  "pagina zupper.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina facebook.com": {
+   "400": 1
+  },
+  "pagina mayoristaonce.com.ar": {
+   "404": 1
+  },
+  "pagina amazon.com": {
+   "404": 2
+  },
+  "pagina visbella.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina mayoristaferretero.com.ar": {
    "404": 1
   }
  },
  "con_foto": 229,
- "aprobados_sin_foto": 154
+ "aprobados_sin_foto": 155
 }
