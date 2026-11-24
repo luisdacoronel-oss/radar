@@ -1,80 +1,79 @@
 {
- "fecha": "2026-11-24T19:06:04.996Z",
+ "fecha": "2026-11-24T20:11:19.902Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 138,
-   "404": 1
+   "200": 138
   },
   "foto en articulo.mercadolibre.com.ar": {
    "sin foto": 138
   },
   "api mercadolibre": {
-   "401": 203,
-   "403": 203
+   "401": 225,
+   "403": 225
   },
   "lector jina": {
-   "200": 21,
-   "422": 1,
-   "error": 3
+   "200": 24,
+   "422": 1
   },
   "pagina alibaba.com": {
-   "200": 61
+   "200": 58,
+   "502": 1
   },
   "foto en alibaba.com": {
-   "sin foto": 61
+   "sin foto": 58
   },
-  "pagina detail.1688.com": {
-   "200": 25
+  "pagina aliexpress.com": {
+   "200": 9
   },
-  "foto en detail.1688.com": {
-   "sin foto": 25
+  "foto en aliexpress.com": {
+   "sin foto": 9
   },
   "listado mercadolibre": {
-   "200": 79
+   "200": 72
   },
   "listado por jina": {
-   "200": 79
+   "200": 72
+  },
+  "pagina made-in-china.com": {
+   "404": 2
+  },
+  "pagina detail.1688.com": {
+   "200": 14
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 14
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 200,
+   "202": 224,
    "403": 6
   },
   "imagenes bing": {
-   "200": 212
+   "200": 235
   },
   "pagina mercadolibre.com.ar": {
-   "200": 10,
+   "200": 30,
+   "404": 6
+  },
+  "pagina es.aliexpress.com": {
+   "200": 20
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 20
+  },
+  "pagina bazarmayorista.com.ar": {
    "404": 1
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 10
+   "sin foto": 30
   },
-  "pagina amazon.com": {
+  "pagina zupper.en.made-in-china.com": {
    "404": 1
   },
-  "pagina es.aliexpress.com": {
-   "200": 8
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 8
-  },
-  "pagina made-in-china.com": {
-   "404": 1
-  },
-  "pagina maxiconsumo.com": {
-   "404": 1
-  },
-  "pagina aliexpress.com": {
-   "200": 8
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 8
-  },
-  "pagina pce-instruments.com": {
-   "403": 1
+  "pagina facebook.com": {
+   "400": 1
   }
  },
- "con_foto": 235,
- "aprobados_sin_foto": 164
+ "con_foto": 243,
+ "aprobados_sin_foto": 166
 }
