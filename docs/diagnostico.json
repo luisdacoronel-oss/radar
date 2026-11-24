@@ -1,73 +1,70 @@
 {
- "fecha": "2026-11-24T22:03:34.462Z",
+ "fecha": "2026-11-24T23:04:19.291Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 131
+   "200": 117
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 131
+   "sin foto": 117
   },
   "api mercadolibre": {
-   "401": 235,
-   "403": 235
+   "401": 198,
+   "403": 198
   },
   "lector jina": {
    "200": 24,
-   "422": 1
+   "error": 1
   },
   "pagina alibaba.com": {
-   "200": 66
+   "200": 70
   },
   "foto en alibaba.com": {
-   "sin foto": 66
+   "sin foto": 70
   },
   "pagina detail.1688.com": {
-   "200": 27
+   "200": 33
   },
   "foto en detail.1688.com": {
-   "sin foto": 27
+   "sin foto": 33
   },
   "listado mercadolibre": {
-   "200": 87
+   "200": 82
   },
   "listado por jina": {
-   "200": 87
+   "200": 82
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 44,
-   "404": 16
+  "pagina mestek.en.made-in-china.com": {
+   "404": 1
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 44
-  },
-  "pagina made-in-china.com": {
-   "404": 2
+  "pagina mayoristaelectronica.com.ar": {
+   "404": 1
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 220,
+   "202": 197,
    "403": 6
   },
   "imagenes bing": {
-   "200": 230
+   "200": 209
+  },
+  "pagina vicamtech.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 26,
+   "404": 3
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 26
+  },
+  "pagina made-in-china.com": {
+   "404": 1
   },
   "pagina aliexpress.com": {
-   "200": 1
+   "200": 11
   },
   "foto en aliexpress.com": {
-   "sin foto": 1
-  },
-  "pagina mayoristaonce.com.ar": {
-   "404": 2
-  },
-  "pagina cjdropshipping.com": {
-   "200": 1
-  },
-  "pagina de otro producto": {
-   "1": 1
-  },
-  "pagina hsmachinery.en.made-in-china.com": {
-   "404": 1
+   "sin foto": 11
   },
   "pagina es.aliexpress.com": {
    "200": 7
@@ -75,11 +72,15 @@
   "foto en es.aliexpress.com": {
    "sin foto": 7
   },
+  "pagina amazon.com": {
+   "200": 1,
+   "404": 2
+  },
   "pagina globalsources.com": {
    "429": 1
   },
-  "pagina aobang.en.made-in-china.com": {
-   "404": 1
+  "pagina de otro producto": {
+   "1": 1
   }
  },
  "con_foto": 245,
