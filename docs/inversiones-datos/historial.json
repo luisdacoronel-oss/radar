@@ -5198,7 +5198,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR"
+   "gemini": "VENDER"
   },
   "evaluado": {}
  },
@@ -5375,8 +5375,7 @@
    "sobre_m20"
   ],
   "votos": {
-   "gemini": "COMPRAR",
-   "groq": "COMPRAR"
+   "gemini": "COMPRAR"
   },
   "evaluado": {}
  },
@@ -5449,9 +5448,7 @@
    "sobre_m20",
    "fib_resistencia"
   ],
-  "votos": {
-   "groq": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -5498,9 +5495,7 @@
    "bajo_m20",
    "fib_resistencia"
   ],
-  "votos": {
-   "groq": "ESPERAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
@@ -5568,7 +5563,7 @@
   "fecha": "2026-11-24",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 59691.16015625,
+  "precio": 59763.01953125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -5576,8 +5571,7 @@
    "rsi_sobreventa"
   ],
   "votos": {
-   "gemini": "ESPERAR",
-   "groq": "VENDER"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -5586,7 +5580,7 @@
   "fecha": "2026-11-24",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1680.52001953125,
+  "precio": 1687.1300048828125,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -5601,7 +5595,7 @@
   "fecha": "2026-11-24",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 70.37000274658203,
+  "precio": 70.16999816894531,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -5616,7 +5610,7 @@
   "fecha": "2026-11-24",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 545.9199829101562,
+  "precio": 546.5599975585938,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -5631,7 +5625,7 @@
   "fecha": "2026-11-24",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.927299976348877,
+  "precio": 0.9273999929428101,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -5645,7 +5639,7 @@
   "fecha": "2026-11-24",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.14560000598430634,
+  "precio": 0.1456499993801117,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
@@ -5666,9 +5660,7 @@
    "tendencia_bajista",
    "bajo_m20"
   ],
-  "votos": {
-   "groq": "COMPRAR"
-  },
+  "votos": {},
   "evaluado": {}
  },
  {
