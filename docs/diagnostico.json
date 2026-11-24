@@ -1,80 +1,63 @@
 {
- "fecha": "2026-11-24T06:36:57.443Z",
+ "fecha": "2026-11-24T08:16:34.927Z",
  "fuentes": {
-  "pagina mercadolibre.com.ar": {
-   "200": 42,
+  "pagina articulo.mercadolibre.com.ar": {
+   "200": 161,
    "404": 6
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 42
+  "foto en articulo.mercadolibre.com.ar": {
+   "sin foto": 161
   },
   "api mercadolibre": {
-   "401": 242,
-   "403": 242
+   "401": 250,
+   "403": 250
   },
   "lector jina": {
    "200": 23,
-   "422": 1,
-   "error": 1
+   "error": 2
   },
   "pagina alibaba.com": {
-   "200": 65
+   "200": 76
   },
   "foto en alibaba.com": {
-   "sin foto": 65
+   "sin foto": 76
   },
-  "pagina made-in-china.com": {
-   "404": 3
+  "pagina detail.1688.com": {
+   "200": 19
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 19
   },
   "listado mercadolibre": {
-   "200": 84
+   "200": 95
   },
   "listado por jina": {
-   "200": 84
+   "200": 95
   },
-  "pagina articulo.mercadolibre.com.ar": {
-   "200": 138
+  "pagina mercadolibre.com.ar": {
+   "200": 29,
+   "404": 11
   },
-  "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 138
-  },
-  "pagina es.aliexpress.com": {
-   "200": 25
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 25
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 28
   },
   "imagenes duckduckgo": {
-   "200": 6,
-   "202": 247,
+   "200": 7,
+   "202": 244,
    "403": 6
   },
   "imagenes bing": {
-   "200": 259
+   "200": 256,
+   "error": 1
   },
-  "pagina bazarmayorista.com.ar": {
+  "pagina sinoage.en.made-in-china.com": {
    "404": 1
   },
   "pagina aliexpress.com": {
-   "200": 9
+   "200": 1
   },
   "foto en aliexpress.com": {
-   "sin foto": 9
-  },
-  "pagina detail.1688.com": {
-   "200": 13
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 13
-  },
-  "pagina zupper.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina facebook.com": {
-   "400": 1
-  },
-  "pagina mayoristaonce.com.ar": {
-   "404": 1
+   "sin foto": 1
   },
   "pagina amazon.com": {
    "404": 2
@@ -82,10 +65,25 @@
   "pagina visbella.en.made-in-china.com": {
    "404": 1
   },
-  "pagina mayoristaferretero.com.ar": {
+  "pagina made-in-china.com": {
+   "404": 7
+  },
+  "pagina es.aliexpress.com": {
+   "200": 14
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 14
+  },
+  "pagina wellele.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina ebay.com": {
+   "403": 1
+  },
+  "pagina shunda-tools.en.made-in-china.com": {
    "404": 1
   }
  },
  "con_foto": 229,
- "aprobados_sin_foto": 155
+ "aprobados_sin_foto": 160
 }
