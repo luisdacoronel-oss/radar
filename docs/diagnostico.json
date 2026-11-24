@@ -1,74 +1,86 @@
 {
- "fecha": "2026-11-24T01:10:58.120Z",
+ "fecha": "2026-11-24T02:25:01.322Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 145,
-   "404": 6
+   "200": 114
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 145
+   "sin foto": 114
   },
   "api mercadolibre": {
-   "401": 224,
-   "403": 224
+   "401": 198,
+   "403": 198
   },
   "lector jina": {
    "200": 23,
    "error": 2
   },
   "pagina alibaba.com": {
-   "200": 61
+   "200": 75
   },
   "foto en alibaba.com": {
-   "sin foto": 61
+   "sin foto": 75
   },
   "pagina detail.1688.com": {
-   "200": 15
+   "200": 32
   },
   "foto en detail.1688.com": {
-   "sin foto": 15
+   "sin foto": 32
   },
   "listado mercadolibre": {
-   "200": 83
+   "200": 84
   },
   "listado por jina": {
-   "200": 83
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 25,
-   "404": 11
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 24
-  },
-  "pagina aliexpress.com": {
-   "200": 7
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 7
+   "200": 84
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 217,
+   "202": 199,
    "403": 6
   },
   "imagenes bing": {
-   "200": 229
+   "200": 211
   },
-  "pagina sinoage.en.made-in-china.com": {
+  "pagina mestek.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina mayoristaelectronica.com.ar": {
+   "404": 1
+  },
+  "pagina vicamtech.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 29,
+   "404": 4
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 29
+  },
+  "pagina aliexpress.com": {
+   "200": 11
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 11
+  },
+  "pagina made-in-china.com": {
    "404": 1
   },
   "pagina es.aliexpress.com": {
-   "200": 14
+   "200": 9
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 14
+   "sin foto": 9
   },
-  "pagina made-in-china.com": {
-   "404": 5
+  "pagina amazon.com": {
+   "200": 1,
+   "404": 2
   },
-  "pagina wellele.en.made-in-china.com": {
-   "404": 1
+  "pagina globalsources.com": {
+   "429": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
   }
  },
  "con_foto": 221,
