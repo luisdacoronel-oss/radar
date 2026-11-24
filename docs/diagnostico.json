@@ -1,69 +1,36 @@
 {
- "fecha": "2026-11-24T14:46:22.829Z",
+ "fecha": "2026-11-24T16:12:45.675Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 143,
-   "404": 6
+   "200": 120
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 143
+   "sin foto": 120
   },
   "api mercadolibre": {
-   "401": 221,
-   "403": 221
+   "401": 203,
+   "403": 203
   },
   "lector jina": {
-   "200": 23,
-   "error": 2
+   "200": 25
   },
   "pagina alibaba.com": {
-   "200": 60,
-   "502": 1
+   "200": 74
   },
   "foto en alibaba.com": {
-   "sin foto": 60
+   "sin foto": 74
   },
   "pagina detail.1688.com": {
-   "200": 14
+   "200": 33
   },
   "foto en detail.1688.com": {
-   "sin foto": 14
+   "sin foto": 33
   },
   "listado mercadolibre": {
-   "200": 86
+   "200": 87
   },
   "listado por jina": {
-   "200": 86
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 25,
-   "404": 11
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 24
-  },
-  "imagenes duckduckgo": {
-   "200": 8,
-   "202": 212,
-   "403": 6
-  },
-  "imagenes bing": {
-   "200": 226
-  },
-  "pagina sinoage.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina aliexpress.com": {
-   "200": 1
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 1
-  },
-  "pagina amazon.com": {
-   "404": 2
-  },
-  "pagina visbella.en.made-in-china.com": {
-   "404": 1
+   "200": 87
   },
   "pagina es.aliexpress.com": {
    "200": 13
@@ -71,13 +38,50 @@
   "foto en es.aliexpress.com": {
    "sin foto": 13
   },
-  "pagina made-in-china.com": {
-   "404": 5
-  },
-  "pagina wellele.en.made-in-china.com": {
+  "pagina mestek.en.made-in-china.com": {
    "404": 1
+  },
+  "pagina mayoristaelectronica.com.ar": {
+   "404": 1
+  },
+  "imagenes duckduckgo": {
+   "200": 6,
+   "202": 201,
+   "403": 6
+  },
+  "imagenes bing": {
+   "200": 213
+  },
+  "pagina vicamtech.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 26,
+   "404": 4
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 26
+  },
+  "pagina aliexpress.com": {
+   "200": 14
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 14
+  },
+  "pagina made-in-china.com": {
+   "404": 2
+  },
+  "pagina amazon.com": {
+   "200": 1,
+   "404": 2
+  },
+  "pagina globalsources.com": {
+   "429": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
   }
  },
  "con_foto": 231,
- "aprobados_sin_foto": 164
+ "aprobados_sin_foto": 166
 }
