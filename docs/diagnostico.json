@@ -1,80 +1,57 @@
 {
- "fecha": "2026-11-24T03:42:31.730Z",
+ "fecha": "2026-11-24T04:52:12.246Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 137,
-   "404": 3
+   "200": 136,
+   "404": 4
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 137
+   "sin foto": 136
   },
   "api mercadolibre": {
-   "401": 215,
-   "403": 215
+   "401": 221,
+   "403": 221
   },
   "lector jina": {
-   "200": 23,
+   "200": 22,
+   "422": 1,
    "error": 2
   },
   "pagina alibaba.com": {
-   "200": 75
+   "200": 64
   },
   "foto en alibaba.com": {
-   "sin foto": 75
+   "sin foto": 64
   },
-  "pagina made-in-china.com": {
-   "404": 4
+  "pagina detail.1688.com": {
+   "200": 21
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 21
   },
   "listado mercadolibre": {
-   "200": 91
+   "200": 71
   },
   "listado por jina": {
-   "200": 91
+   "200": 71
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 225,
+   "202": 216,
    "403": 6
   },
   "imagenes bing": {
-   "200": 237
+   "200": 228
+  },
+  "pagina made-in-china.com": {
+   "404": 1
   },
   "pagina mercadolibre.com.ar": {
-   "200": 20,
-   "404": 3
+   "200": 30,
+   "404": 6
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 20
-  },
-  "pagina detail.1688.com": {
-   "200": 20
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 20
-  },
-  "pagina amazon.com": {
-   "200": 1
-  },
-  "foto en amazon.com": {
-   "sin foto": 1
-  },
-  "pagina aliexpress.com": {
-   "200": 5
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 5
-  },
-  "pagina es.aliexpress.com": {
-   "200": 20
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 20
-  },
-  "pagina dhgate.com": {
-   "403": 1
-  },
-  "pagina globalsources.com": {
-   "429": 1
+   "sin foto": 30
   },
   "pagina spanish.alibaba.com": {
    "200": 1
@@ -82,16 +59,22 @@
   "foto en spanish.alibaba.com": {
    "sin foto": 1
   },
-  "pagina sanhetools.en.made-in-china.com": {
-   "404": 1
+  "pagina es.aliexpress.com": {
+   "200": 12
   },
-  "pagina unitweld.en.made-in-china.com": {
-   "404": 1
+  "foto en es.aliexpress.com": {
+   "sin foto": 12
   },
-  "pagina mayoristaonce.com.ar": {
-   "404": 2
+  "pagina globalsources.com": {
+   "429": 1
+  },
+  "pagina aliexpress.com": {
+   "200": 2
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 2
   }
  },
- "con_foto": 221,
- "aprobados_sin_foto": 153
+ "con_foto": 229,
+ "aprobados_sin_foto": 154
 }
