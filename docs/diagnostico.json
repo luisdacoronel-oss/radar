@@ -1,85 +1,90 @@
 {
- "fecha": "2026-11-25T17:16:09.660Z",
+ "fecha": "2026-11-25T17:58:53.502Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 144,
-   "404": 6
+   "200": 117,
+   "404": 1
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 144
+   "sin foto": 117
   },
   "api mercadolibre": {
-   "401": 216,
-   "403": 216
+   "401": 196,
+   "403": 196
   },
   "lector jina": {
-   "200": 23,
-   "error": 2
+   "200": 24,
+   "error": 1
   },
   "pagina alibaba.com": {
-   "200": 63
-  },
-  "pagina no disponible": {
-   "1": 1
-  },
-  "listado mercadolibre": {
-   "200": 85
-  },
-  "listado por jina": {
-   "200": 85
-  },
-  "pagina detail.1688.com": {
-   "200": 16
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 16
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 19,
-   "404": 11
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 18
+   "200": 68
   },
   "foto en alibaba.com": {
-   "sin foto": 62
+   "sin foto": 68
+  },
+  "pagina detail.1688.com": {
+   "200": 31
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 31
+  },
+  "listado mercadolibre": {
+   "200": 81
+  },
+  "listado por jina": {
+   "200": 81
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 213,
+   "202": 196,
    "403": 6
   },
   "imagenes bing": {
-   "200": 225
+   "200": 207,
+   "error": 1
   },
-  "pagina sinoage.en.made-in-china.com": {
+  "pagina mestek.en.made-in-china.com": {
    "404": 1
   },
-  "pagina amazon.com": {
-   "200": 1
-  },
-  "foto en amazon.com": {
-   "sin foto": 1
-  },
-  "pagina visbella.en.made-in-china.com": {
+  "pagina mayoristaelectronica.com.ar": {
    "404": 1
   },
-  "pagina hongsenmachinery.en.made-in-china.com": {
+  "pagina vicamtech.en.made-in-china.com": {
    "404": 1
   },
-  "pagina es.aliexpress.com": {
-   "200": 13
+  "pagina mercadolibre.com.ar": {
+   "200": 25,
+   "404": 3
   },
-  "foto en es.aliexpress.com": {
-   "sin foto": 13
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 25
   },
   "pagina made-in-china.com": {
-   "404": 4
-  },
-  "pagina wellele.en.made-in-china.com": {
    "404": 1
+  },
+  "pagina aliexpress.com": {
+   "200": 10
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 10
+  },
+  "pagina es.aliexpress.com": {
+   "200": 7
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 7
+  },
+  "pagina amazon.com": {
+   "200": 1,
+   "404": 2
+  },
+  "pagina globalsources.com": {
+   "429": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
   }
  },
- "con_foto": 251,
- "aprobados_sin_foto": 174
+ "con_foto": 253,
+ "aprobados_sin_foto": 173
 }
