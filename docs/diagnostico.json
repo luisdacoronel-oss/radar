@@ -1,88 +1,88 @@
 {
- "fecha": "2026-11-25T17:58:53.502Z",
+ "fecha": "2026-11-25T18:59:59.311Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 117,
-   "404": 1
+   "200": 136,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 117
+   "sin foto": 136
   },
   "api mercadolibre": {
-   "401": 196,
-   "403": 196
+   "401": 204,
+   "403": 204
   },
   "lector jina": {
-   "200": 24,
-   "error": 1
-  },
-  "pagina alibaba.com": {
-   "200": 68
-  },
-  "foto en alibaba.com": {
-   "sin foto": 68
-  },
-  "pagina detail.1688.com": {
-   "200": 31
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 31
-  },
-  "listado mercadolibre": {
-   "200": 81
-  },
-  "listado por jina": {
-   "200": 81
+   "401": 25
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 196,
+   "202": 220,
    "403": 6
   },
   "imagenes bing": {
-   "200": 207,
-   "error": 1
+   "200": 232
   },
-  "pagina mestek.en.made-in-china.com": {
-   "404": 1
+  "pagina alibaba.com": {
+   "200": 74
   },
-  "pagina mayoristaelectronica.com.ar": {
-   "404": 1
-  },
-  "pagina vicamtech.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 25,
-   "404": 3
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 25
+  "foto en alibaba.com": {
+   "sin foto": 74
   },
   "pagina made-in-china.com": {
-   "404": 1
+   "404": 6
+  },
+  "listado mercadolibre": {
+   "200": 85
+  },
+  "listado por jina": {
+   "401": 85
   },
   "pagina aliexpress.com": {
-   "200": 10
+   "200": 9
   },
   "foto en aliexpress.com": {
-   "sin foto": 10
+   "sin foto": 9
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 12,
+   "404": 1
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 12
+  },
+  "pagina detail.1688.com": {
+   "200": 22
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 22
   },
   "pagina es.aliexpress.com": {
-   "200": 7
+   "200": 17
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 7
+   "sin foto": 17
   },
   "pagina amazon.com": {
-   "200": 1,
    "404": 2
   },
-  "pagina globalsources.com": {
-   "429": 1
+  "pagina dhgate.com": {
+   "403": 1
   },
-  "pagina de otro producto": {
-   "1": 1
+  "pagina globalsources.com": {
+   "429": 2
+  },
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina sanhetools.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina unitweld.en.made-in-china.com": {
+   "404": 1
   }
  },
  "con_foto": 253,
