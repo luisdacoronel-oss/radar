@@ -1,86 +1,72 @@
 {
- "fecha": "2026-11-25T14:05:37.321Z",
+ "fecha": "2026-11-25T15:09:01.240Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 155
+   "200": 144,
+   "404": 5
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 155
+   "sin foto": 144
   },
   "api mercadolibre": {
-   "401": 232,
-   "403": 232
+   "401": 216,
+   "403": 216
   },
   "lector jina": {
-   "200": 22,
-   "422": 1,
-   "error": 2
+   "200": 24,
+   "error": 1
   },
   "pagina alibaba.com": {
-   "200": 71
+   "200": 57
   },
   "foto en alibaba.com": {
-   "sin foto": 71
-  },
-  "pagina detail.1688.com": {
-   "200": 29
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 29
+   "sin foto": 57
   },
   "listado mercadolibre": {
-   "200": 77
+   "200": 91
   },
   "listado por jina": {
-   "200": 77
+   "200": 90,
+   "500": 1
+  },
+  "pagina made-in-china.com": {
+   "404": 2
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 236,
+   "202": 206,
    "403": 6
   },
   "imagenes bing": {
-   "200": 248
+   "200": 218
   },
   "pagina mercadolibre.com.ar": {
-   "200": 14,
+   "200": 17,
    "404": 5
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 14
+   "sin foto": 17
   },
-  "pagina amazon.com": {
-   "200": 1
+  "pagina detail.1688.com": {
+   "200": 12
   },
-  "foto en amazon.com": {
-   "sin foto": 1
-  },
-  "pagina made-in-china.com": {
-   "404": 1
-  },
-  "pagina maxiconsumo.com": {
-   "404": 1
+  "foto en detail.1688.com": {
+   "sin foto": 12
   },
   "pagina es.aliexpress.com": {
-   "200": 10
+   "200": 12
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 10
+   "sin foto": 12
   },
-  "pagina aliexpress.com": {
-   "200": 11
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 11
-  },
-  "pagina pce-instruments.com": {
-   "403": 1
-  },
-  "pagina globalsources.com": {
-   "429": 2
-  },
-  "pagina bazarmayorista.com.ar": {
+  "pagina mayoristaonce.com.ar": {
    "404": 1
+  },
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
   }
  },
  "con_foto": 250,
