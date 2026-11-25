@@ -1,88 +1,82 @@
 {
- "fecha": "2026-11-25T07:21:15.154Z",
+ "fecha": "2026-11-25T08:58:08.818Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 166
+   "200": 156,
+   "404": 5
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 166
+   "sin foto": 156
   },
   "api mercadolibre": {
-   "401": 241,
-   "403": 241
+   "401": 233,
+   "403": 233
   },
   "lector jina": {
-   "401": 24,
-   "422": 1
+   "200": 24,
+   "error": 1
+  },
+  "pagina alibaba.com": {
+   "200": 63
+  },
+  "foto en alibaba.com": {
+   "sin foto": 63
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 263,
+   "202": 224,
    "403": 6
   },
   "imagenes bing": {
-   "200": 274
-  },
-  "pagina alibaba.com": {
-   "200": 75
-  },
-  "foto en alibaba.com": {
-   "sin foto": 75
-  },
-  "pagina detail.1688.com": {
-   "200": 34
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 34
+   "200": 236
   },
   "listado mercadolibre": {
-   "200": 80
+   "200": 99
   },
   "listado por jina": {
-   "401": 80
-  },
-  "pagina es.aliexpress.com": {
-   "200": 21,
-   "404": 1
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 21
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 11,
-   "404": 1
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 11
-  },
-  "pagina amazon.com": {
-   "404": 1
+   "200": 99
   },
   "pagina made-in-china.com": {
+   "404": 2
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 17,
+   "404": 5
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 17
+  },
+  "pagina detail.1688.com": {
+   "200": 15
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 15
+  },
+  "pagina es.aliexpress.com": {
+   "200": 12
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 12
+  },
+  "pagina mayoristaonce.com.ar": {
    "404": 1
   },
-  "pagina maxiconsumo.com": {
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina hongsenmachinery.en.made-in-china.com": {
    "404": 1
   },
   "pagina aliexpress.com": {
-   "200": 13
+   "200": 1
   },
   "foto en aliexpress.com": {
-   "sin foto": 13
-  },
-  "pagina pce-instruments.com": {
-   "403": 1
-  },
-  "pagina zupper.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina samsung.com": {
-   "404": 1
-  },
-  "pagina distribuidoramayorista.com.ar": {
-   "404": 1
+   "sin foto": 1
   }
  },
  "con_foto": 248,
- "aprobados_sin_foto": 169
+ "aprobados_sin_foto": 172
 }
