@@ -1,69 +1,43 @@
 {
- "fecha": "2026-11-25T11:38:44.051Z",
+ "fecha": "2026-11-25T12:49:08.319Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 109,
-   "404": 4,
-   "503": 3
+   "200": 152,
+   "404": 3,
+   "429": 1
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 108
+   "sin foto": 152
   },
   "api mercadolibre": {
-   "401": 192,
-   "403": 192
+   "401": 233,
+   "403": 233
   },
   "lector jina": {
-   "200": 24,
-   "error": 1
-  },
-  "pagina alibaba.com": {
-   "200": 69
-  },
-  "foto en alibaba.com": {
-   "sin foto": 69
-  },
-  "pagina detail.1688.com": {
-   "200": 32
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 32
-  },
-  "listado mercadolibre": {
-   "200": 89
-  },
-  "listado por jina": {
-   "200": 89
+   "401": 25
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 193,
+   "202": 250,
    "403": 6
   },
   "imagenes bing": {
-   "200": 205
+   "200": 262
   },
-  "pagina mestek.en.made-in-china.com": {
-   "404": 1
+  "pagina alibaba.com": {
+   "200": 83
   },
-  "pagina mayoristaelectronica.com.ar": {
-   "404": 1
-  },
-  "pagina vicamtech.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 26,
-   "404": 3
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 26
-  },
-  "pagina no disponible": {
-   "1": 1
+  "foto en alibaba.com": {
+   "sin foto": 83
   },
   "pagina made-in-china.com": {
-   "404": 1
+   "404": 6
+  },
+  "listado mercadolibre": {
+   "200": 94
+  },
+  "listado por jina": {
+   "401": 94
   },
   "pagina aliexpress.com": {
    "200": 10
@@ -71,22 +45,53 @@
   "foto en aliexpress.com": {
    "sin foto": 10
   },
+  "pagina mercadolibre.com.ar": {
+   "200": 18,
+   "404": 1
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 18
+  },
+  "pagina detail.1688.com": {
+   "200": 26
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 26
+  },
   "pagina es.aliexpress.com": {
-   "200": 7
+   "200": 17
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 7
+   "sin foto": 17
   },
   "pagina amazon.com": {
-   "200": 3
+   "404": 2
   },
-  "foto en amazon.com": {
-   "sin foto": 3
+  "pagina dhgate.com": {
+   "403": 1
   },
   "pagina globalsources.com": {
-   "429": 1
+   "429": 4
+  },
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina sanhetools.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina unitweld.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina diarco.com.ar": {
+   "404": 1
+  },
+  "pagina maxiconsumo.com": {
+   "404": 1
   }
  },
  "con_foto": 249,
- "aprobados_sin_foto": 172
+ "aprobados_sin_foto": 175
 }
