@@ -1,20 +1,19 @@
 {
- "fecha": "2026-11-25T20:05:36.214Z",
+ "fecha": "2026-11-25T21:01:03.523Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 124
+   "200": 140
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 124
+   "sin foto": 140
   },
   "api mercadolibre": {
-   "401": 222,
-   "403": 222
+   "401": 207,
+   "403": 207
   },
   "lector jina": {
-   "200": 22,
-   "422": 1,
-   "error": 2
+   "200": 24,
+   "error": 1
   },
   "pagina alibaba.com": {
    "200": 65
@@ -23,67 +22,64 @@
    "sin foto": 65
   },
   "pagina detail.1688.com": {
-   "200": 25
+   "200": 21
   },
   "foto en detail.1688.com": {
-   "sin foto": 25
+   "sin foto": 21
   },
   "listado mercadolibre": {
-   "200": 80
+   "200": 71
   },
   "listado por jina": {
-   "200": 79,
-   "error": 1
+   "200": 71
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 41,
-   "404": 14
+  "pagina es.aliexpress.com": {
+   "200": 16,
+   "404": 1
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 41
+  "foto en es.aliexpress.com": {
+   "sin foto": 16
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 209,
+   "202": 205,
    "403": 6
   },
   "imagenes bing": {
-   "200": 221
+   "200": 216
   },
-  "pagina mayoristaonce.com.ar": {
-   "404": 2
-  },
-  "pagina cjdropshipping.com": {
-   "200": 1
-  },
-  "pagina de otro producto": {
-   "1": 1
-  },
-  "pagina es.aliexpress.com": {
-   "200": 7
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 7
-  },
-  "pagina hsmachinery.en.made-in-china.com": {
+  "pagina amazon.com": {
    "404": 1
-  },
-  "pagina globalsources.com": {
-   "429": 2
   },
   "pagina made-in-china.com": {
    "404": 1
   },
-  "pagina aobang.en.made-in-china.com": {
+  "pagina maxiconsumo.com": {
    "404": 1
   },
   "pagina aliexpress.com": {
-   "200": 1
+   "200": 10
   },
   "foto en aliexpress.com": {
-   "sin foto": 1
+   "sin foto": 10
+  },
+  "pagina pce-instruments.com": {
+   "403": 1
+  },
+  "pagina globalsources.com": {
+   "429": 3
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 13,
+   "404": 4
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 13
+  },
+  "pagina bazarmayorista.com.ar": {
+   "404": 1
   }
  },
- "con_foto": 257,
- "aprobados_sin_foto": 169
+ "con_foto": 266,
+ "aprobados_sin_foto": 163
 }
