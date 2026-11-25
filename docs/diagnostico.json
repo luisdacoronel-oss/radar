@@ -1,85 +1,88 @@
 {
- "fecha": "2026-11-25T02:42:09.890Z",
+ "fecha": "2026-11-25T04:07:15.840Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 143,
-   "404": 4
+   "200": 158,
+   "404": 6
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 143
+   "sin foto": 158
   },
   "api mercadolibre": {
-   "401": 217,
-   "403": 217
+   "401": 238,
+   "403": 238
   },
   "lector jina": {
-   "401": 24,
-   "422": 1
+   "200": 22,
+   "error": 3
+  },
+  "pagina alibaba.com": {
+   "200": 69
+  },
+  "foto en alibaba.com": {
+   "sin foto": 69
+  },
+  "pagina detail.1688.com": {
+   "200": 16
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 16
+  },
+  "listado mercadolibre": {
+   "200": 89
+  },
+  "listado por jina": {
+   "200": 89
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 22,
+   "404": 11
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 21
+  },
+  "pagina aliexpress.com": {
+   "200": 9
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 9
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 231,
+   "202": 234,
    "403": 6
   },
   "imagenes bing": {
-   "200": 243
+   "200": 246
   },
-  "pagina alibaba.com": {
-   "200": 71
-  },
-  "foto en alibaba.com": {
-   "sin foto": 71
-  },
-  "pagina aliexpress.com": {
-   "200": 6
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 6
-  },
-  "listado mercadolibre": {
-   "200": 81
-  },
-  "listado por jina": {
-   "401": 81
-  },
-  "pagina made-in-china.com": {
-   "404": 3
-  },
-  "pagina detail.1688.com": {
-   "200": 14
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 14
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 18,
-   "404": 7
-  },
-  "pagina es.aliexpress.com": {
-   "200": 20
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 20
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 18
-  },
-  "pagina mayoristaonce.com.ar": {
+  "pagina sinoage.en.made-in-china.com": {
    "404": 1
   },
-  "pagina spanish.alibaba.com": {
+  "pagina amazon.com": {
    "200": 1
   },
-  "foto en spanish.alibaba.com": {
+  "foto en amazon.com": {
    "sin foto": 1
+  },
+  "pagina visbella.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina es.aliexpress.com": {
+   "200": 13
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 13
+  },
+  "pagina made-in-china.com": {
+   "404": 4
+  },
+  "pagina wellele.en.made-in-china.com": {
+   "404": 1
   },
   "pagina globalsources.com": {
    "429": 1
-  },
-  "pagina bazarmayorista.com.ar": {
-   "404": 1
   }
  },
  "con_foto": 245,
- "aprobados_sin_foto": 167
+ "aprobados_sin_foto": 171
 }
