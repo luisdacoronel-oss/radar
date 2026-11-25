@@ -1,85 +1,76 @@
 {
- "fecha": "2026-11-25T21:01:03.523Z",
+ "fecha": "2026-11-25T22:07:20.909Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 140
+   "200": 154,
+   "404": 5
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 140
+   "sin foto": 154
   },
   "api mercadolibre": {
-   "401": 207,
-   "403": 207
+   "401": 232,
+   "403": 232
   },
   "lector jina": {
    "200": 24,
    "error": 1
   },
   "pagina alibaba.com": {
-   "200": 65
+   "200": 63
   },
   "foto en alibaba.com": {
-   "sin foto": 65
-  },
-  "pagina detail.1688.com": {
-   "200": 21
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 21
-  },
-  "listado mercadolibre": {
-   "200": 71
-  },
-  "listado por jina": {
-   "200": 71
-  },
-  "pagina es.aliexpress.com": {
-   "200": 16,
-   "404": 1
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 16
+   "sin foto": 63
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 205,
+   "202": 222,
    "403": 6
   },
   "imagenes bing": {
-   "200": 216
+   "200": 234
   },
-  "pagina amazon.com": {
-   "404": 1
+  "listado mercadolibre": {
+   "200": 94
+  },
+  "listado por jina": {
+   "200": 94
   },
   "pagina made-in-china.com": {
-   "404": 1
-  },
-  "pagina maxiconsumo.com": {
-   "404": 1
-  },
-  "pagina aliexpress.com": {
-   "200": 10
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 10
-  },
-  "pagina pce-instruments.com": {
-   "403": 1
-  },
-  "pagina globalsources.com": {
-   "429": 3
+   "404": 2
   },
   "pagina mercadolibre.com.ar": {
-   "200": 13,
-   "404": 4
+   "200": 19,
+   "404": 5
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 13
+   "sin foto": 19
   },
-  "pagina bazarmayorista.com.ar": {
+  "pagina detail.1688.com": {
+   "200": 15
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 15
+  },
+  "pagina es.aliexpress.com": {
+   "200": 12
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 12
+  },
+  "pagina mayoristaonce.com.ar": {
    "404": 1
+  },
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina globalsources.com": {
+   "429": 1
   }
  },
- "con_foto": 266,
- "aprobados_sin_foto": 163
+ "con_foto": 268,
+ "aprobados_sin_foto": 165
 }
