@@ -1,72 +1,52 @@
 {
- "fecha": "2026-11-26T21:00:09.860Z",
+ "fecha": "2026-11-26T22:04:11.483Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 101
+   "200": 131,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 101
+   "sin foto": 131
   },
   "api mercadolibre": {
-   "401": 220,
-   "403": 220
+   "401": 192,
+   "403": 192
   },
   "lector jina": {
    "200": 24,
    "error": 1
   },
   "pagina alibaba.com": {
-   "200": 61
+   "200": 76
   },
   "foto en alibaba.com": {
-   "sin foto": 61
+   "sin foto": 76
+  },
+  "listado mercadolibre": {
+   "200": 85
+  },
+  "listado por jina": {
+   "200": 85
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 208,
+   "202": 198,
    "403": 6
   },
   "imagenes bing": {
-   "200": 220
-  },
-  "listado mercadolibre": {
-   "200": 72
-  },
-  "listado por jina": {
-   "200": 72
-  },
-  "pagina detail.1688.com": {
-   "200": 32
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 32
+   "200": 210
   },
   "pagina mercadolibre.com.ar": {
-   "200": 62
+   "200": 7
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 62
+   "sin foto": 7
   },
-  "pagina made-in-china.com": {
-   "404": 1
+  "pagina detail.1688.com": {
+   "200": 31
   },
-  "pagina aobang.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina globalsources.com": {
-   "429": 1
-  },
-  "pagina aliexpress.com": {
-   "200": 1
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 1
-  },
-  "pagina amazon.es": {
-   "200": 1
-  },
-  "foto en amazon.es": {
-   "sin foto": 1
+  "foto en detail.1688.com": {
+   "sin foto": 31
   },
   "pagina amazon.com": {
    "200": 2
@@ -74,19 +54,40 @@
   "foto en amazon.com": {
    "sin foto": 2
   },
+  "pagina made-in-china.com": {
+   "404": 5
+  },
+  "pagina aliexpress.com": {
+   "200": 6
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 6
+  },
   "pagina es.aliexpress.com": {
-   "200": 7
+   "200": 15
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 7
-  },
-  "pagina mayoristas.com.ar": {
-   "404": 1
+   "sin foto": 15
   },
   "pagina dhgate.com": {
    "403": 1
   },
-  "pagina mayoristaferretero.com.ar": {
+  "pagina globalsources.com": {
+   "429": 2
+  },
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina sanhetools.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina unitweld.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina mayoristaonce.com.ar": {
    "404": 1
   }
  },
