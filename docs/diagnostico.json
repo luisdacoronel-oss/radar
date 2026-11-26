@@ -1,86 +1,93 @@
 {
- "fecha": "2026-11-26T20:14:42.223Z",
+ "fecha": "2026-11-26T21:00:09.860Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 134
+   "200": 101
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 134
+   "sin foto": 101
   },
   "api mercadolibre": {
-   "401": 208,
-   "403": 208
+   "401": 220,
+   "403": 220
   },
   "lector jina": {
    "200": 24,
    "error": 1
   },
   "pagina alibaba.com": {
-   "200": 67
+   "200": 61
   },
   "foto en alibaba.com": {
-   "sin foto": 67
-  },
-  "pagina detail.1688.com": {
-   "200": 21
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 21
-  },
-  "listado mercadolibre": {
-   "200": 74
-  },
-  "listado por jina": {
-   "200": 74
-  },
-  "pagina es.aliexpress.com": {
-   "200": 21
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 21
-  },
-  "pagina mestek.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina mayoristaelectronica.com.ar": {
-   "404": 1
+   "sin foto": 61
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 215,
+   "202": 208,
    "403": 6
   },
   "imagenes bing": {
-   "200": 227
+   "200": 220
   },
-  "pagina vicamtech.en.made-in-china.com": {
-   "404": 1
+  "listado mercadolibre": {
+   "200": 72
+  },
+  "listado por jina": {
+   "200": 72
+  },
+  "pagina detail.1688.com": {
+   "200": 32
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 32
   },
   "pagina mercadolibre.com.ar": {
-   "200": 18,
-   "404": 4
+   "200": 62
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 18
-  },
-  "pagina aliexpress.com": {
-   "200": 13
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 13
+   "sin foto": 62
   },
   "pagina made-in-china.com": {
    "404": 1
   },
-  "pagina amazon.com": {
-   "200": 1,
+  "pagina aobang.en.made-in-china.com": {
    "404": 1
   },
   "pagina globalsources.com": {
    "429": 1
   },
-  "foto en amazon.com": {
+  "pagina aliexpress.com": {
+   "200": 1
+  },
+  "foto en aliexpress.com": {
    "sin foto": 1
+  },
+  "pagina amazon.es": {
+   "200": 1
+  },
+  "foto en amazon.es": {
+   "sin foto": 1
+  },
+  "pagina amazon.com": {
+   "200": 2
+  },
+  "foto en amazon.com": {
+   "sin foto": 2
+  },
+  "pagina es.aliexpress.com": {
+   "200": 7
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 7
+  },
+  "pagina mayoristas.com.ar": {
+   "404": 1
+  },
+  "pagina dhgate.com": {
+   "403": 1
+  },
+  "pagina mayoristaferretero.com.ar": {
+   "404": 1
   }
  },
  "con_foto": 305,
