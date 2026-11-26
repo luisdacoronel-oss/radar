@@ -1,39 +1,51 @@
 {
- "fecha": "2026-11-26T02:44:19.960Z",
+ "fecha": "2026-11-26T04:06:27.622Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 136
+   "200": 166
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 136
+   "sin foto": 166
   },
   "api mercadolibre": {
-   "401": 201,
-   "403": 201
+   "401": 231,
+   "403": 231
   },
   "lector jina": {
    "200": 22,
    "error": 3
   },
   "pagina alibaba.com": {
-   "200": 71
+   "200": 78
   },
   "foto en alibaba.com": {
-   "sin foto": 71
+   "sin foto": 78
+  },
+  "pagina detail.1688.com": {
+   "200": 24
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 24
+  },
+  "listado mercadolibre": {
+   "200": 81
+  },
+  "listado por jina": {
+   "200": 81
+  },
+  "pagina es.aliexpress.com": {
+   "200": 18
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 18
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 201,
+   "202": 237,
    "403": 6
   },
   "imagenes bing": {
-   "200": 213
-  },
-  "listado mercadolibre": {
-   "200": 76
-  },
-  "listado por jina": {
-   "200": 76
+   "200": 249
   },
   "pagina amazon.com": {
    "200": 1
@@ -41,53 +53,50 @@
   "foto en amazon.com": {
    "sin foto": 1
   },
-  "pagina detail.1688.com": {
-   "200": 23
+  "pagina made-in-china.com": {
+   "404": 2
   },
-  "foto en detail.1688.com": {
-   "sin foto": 23
-  },
-  "pagina es.aliexpress.com": {
-   "200": 12
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 12
+  "pagina maxiconsumo.com": {
+   "404": 1
   },
   "pagina aliexpress.com": {
-   "200": 4
+   "200": 14
   },
   "foto en aliexpress.com": {
-   "sin foto": 4
+   "sin foto": 14
   },
-  "pagina dhgate.com": {
+  "pagina pce-instruments.com": {
    "403": 1
   },
   "pagina globalsources.com": {
    "429": 2
   },
-  "pagina spanish.alibaba.com": {
-   "200": 1
-  },
-  "foto en spanish.alibaba.com": {
-   "sin foto": 1
-  },
-  "pagina sanhetools.en.made-in-china.com": {
-   "404": 1
-  },
   "pagina mercadolibre.com.ar": {
-   "200": 10,
-   "404": 2
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 10
-  },
-  "pagina made-in-china.com": {
+   "200": 3,
    "404": 4
   },
-  "pagina unitweld.en.made-in-china.com": {
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 3
+  },
+  "pagina bazarmayorista.com.ar": {
+   "404": 1
+  },
+  "pagina mayoristaonce.com.ar": {
+   "404": 1
+  },
+  "pagina mayoristaferretero.com.ar": {
+   "404": 1
+  },
+  "pagina mayoristabazar.com.ar": {
+   "200": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
+  },
+  "pagina distribuidoramayorista.com.ar": {
    "404": 1
   }
  },
- "con_foto": 292,
- "aprobados_sin_foto": 160
+ "con_foto": 293,
+ "aprobados_sin_foto": 159
 }
