@@ -1,20 +1,18 @@
-// CAMBIOS: Incrementé la versión a 13, prioricé mecatrónica e instrumental de medición industrial, y reordené categorías para aumentar la tasa de productos aprobados con alto margen neto.
-// ESTRATEGIA DE RADAR — este archivo lo reescribe RADAR solo, una vez por día, según sus resultados.
-// Antes de reemplazarlo lo prueba (test/prueba.mjs). Si la versión nueva falla, se queda con la anterior.
-export const VERSION = 13;
+// CAMBIOS: Reordené las categorías según su tasa histórica de conversión, incorporé redes de telecomunicaciones y ajusté los filtros de búsqueda a combos de alto margen.
+export const VERSION = 14;
 
 // Categorías donde buscar primero (ordenadas por tasa de aprobación y margen neto comprobado).
 export const categorias = [
+  'herramientas de refrigeración, climatización y detección de fugas',
   'instrumental de medición industrial, metrología y diagnóstico eléctrico',
   'herramientas especializadas de diagnóstico automotor, taller y detailing',
-  'herramientas de refrigeración, climatización y detección de fugas',
-  'herramientas industriales metalúrgicas, roscado, corte y soldadura',
-  'herramientas para construcción, nivelación y colocación de porcelanato',
   'equipamiento de audio profesional, streaming, microfonía y podcasting',
-  'bazar de especialidad, equipamiento para barista y tecnología gastronómica',
-  'energía solar portátil, baterías de litio e iluminación autónoma',
   'combos de consumo masivo, mantenimiento e higiene de alta rotación',
-  'sistemas de automatización, control de accesos y seguridad electrónica'
+  'sistemas de fibra óptica, redes y herramientas de telecomunicaciones',
+  'accesorios para vehículos eléctricos, carga y electrónica automotriz técnica',
+  'bazar de especialidad, equipamiento para barista y tecnología gastronómica',
+  'herramientas industriales metalúrgicas, roscado, corte y soldadura',
+  'herramientas para construcción, nivelación y carpintería'
 ];
 
 // Temas que RADAR estudia por su cuenta para optimizar la toma de decisiones comerciales.
@@ -37,7 +35,7 @@ export const temasVideo = [
   'productos ganadores de alto margen para Mercado Libre Argentina',
   'estrategias de armado de combos rentables para e-commerce',
   'campañas publicitarias de conversión directa para productos técnicos',
-  'novedades en herramientas e instrumentos de medición con alto margen'
+  'selección de productos de alta rotación y excelente margen neto'
 ];
 
 // Cuántos productos nuevos explora en cada vuelta automática (cada hora).
@@ -51,10 +49,10 @@ export function instruccionesBusqueda(ctx) {
 
   return `Concentrate en la categoría "${categoriaObjetivo}".
 Buscá productos que cumplan estrictamente:
-1. Formato kit o combo completo con maletín, estuche o accesorios indispensables, evitando artículos unitarios genéricos.
-2. Peso menor a 2.5 kg y volumen moderado para mantener costos logísticos e impositivos reducidos.
-3. Precio de venta al público en Argentina igual o superior a $90.000 (o packs cerrados de alta rotación).
-4. Costo de proveedor en origen que represente como máximo el 20% del precio final de venta.
+1. Formato kit o combo completo con maletín, estuche organizador o packs cerrados de alta rotación, evitando unidades sueltas de bajo valor.
+2. Peso menor a 2.5 kg y volumen moderado para optimizar costos de envío e importación.
+3. Precio de venta al público en Argentina superior a $45.000 ARS.
+4. Costo de proveedor en origen que represente como máximo el 25% del precio final de venta.
 5. Libre de trámites de homologación complejos (como ANMAT o ENACOM) y sin marcas registradas sensibles.
 6. Ventas comprobables en plataformas de origen o mercado local con datos concretos. Mes de análisis: ${ctx.mes}. Base acumulada de aprobados: ${cantidadAprobados}.`;
 }
