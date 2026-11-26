@@ -1,65 +1,56 @@
 {
- "fecha": "2026-11-26T17:12:01.504Z",
+ "fecha": "2026-11-26T18:02:20.914Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 165
+   "200": 145,
+   "404": 5
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 165
+   "sin foto": 145
   },
   "api mercadolibre": {
-   "401": 238,
-   "403": 238
+   "401": 217,
+   "403": 217
   },
   "lector jina": {
-   "200": 25
+   "200": 22,
+   "422": 3
   },
   "pagina alibaba.com": {
-   "200": 72
+   "200": 54
   },
   "foto en alibaba.com": {
-   "sin foto": 72
-  },
-  "pagina detail.1688.com": {
-   "200": 26
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 26
+   "sin foto": 54
   },
   "listado mercadolibre": {
-   "200": 80
+   "200": 90
   },
   "listado por jina": {
-   "200": 80
+   "200": 90
+  },
+  "pagina detail.1688.com": {
+   "200": 15
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 15
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 234,
+   "202": 205,
    "403": 6
   },
   "imagenes bing": {
-   "200": 246
+   "200": 217
   },
-  "pagina amazon.com": {
-   "200": 1
+  "pagina mercadolibre.com.ar": {
+   "200": 17,
+   "404": 5
   },
-  "foto en amazon.com": {
-   "sin foto": 1
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 17
   },
-  "pagina made-in-china.com": {
-   "404": 3
-  },
-  "pagina maxiconsumo.com": {
-   "404": 2
-  },
-  "pagina aliexpress.com": {
-   "200": 6
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 6
-  },
-  "pagina pce-instruments.com": {
-   "403": 1
+  "pagina mayoristaonce.com.ar": {
+   "404": 1
   },
   "pagina es.aliexpress.com": {
    "200": 9
@@ -67,15 +58,14 @@
   "foto en es.aliexpress.com": {
    "sin foto": 9
   },
-  "pagina globalsources.com": {
-   "429": 3
+  "pagina made-in-china.com": {
+   "404": 1
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 9,
-   "404": 2
+  "pagina spanish.alibaba.com": {
+   "200": 1
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 9
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
   }
  },
  "con_foto": 305,
