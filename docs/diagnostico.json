@@ -1,87 +1,85 @@
 {
- "fecha": "2026-11-25T23:55:34.897Z",
+ "fecha": "2026-11-26T01:16:06.290Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 133,
-   "404": 6
+   "200": 116,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 133
+   "sin foto": 116
   },
   "api mercadolibre": {
-   "401": 186,
-   "403": 186
+   "401": 194,
+   "403": 194
   },
   "lector jina": {
-   "200": 23,
-   "error": 2
+   "200": 25
   },
   "pagina alibaba.com": {
-   "200": 52
+   "200": 76
   },
   "foto en alibaba.com": {
-   "sin foto": 52
+   "sin foto": 76
   },
   "pagina detail.1688.com": {
-   "200": 12
+   "200": 36
   },
   "foto en detail.1688.com": {
-   "sin foto": 12
+   "sin foto": 36
   },
   "listado mercadolibre": {
-   "200": 73
+   "200": 84
   },
   "listado por jina": {
-   "200": 73
+   "200": 84
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 9,
-   "404": 11
+  "pagina mestek.en.made-in-china.com": {
+   "404": 1
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 8
-  },
-  "pagina aliexpress.com": {
-   "200": 6
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 6
+  "pagina mayoristaelectronica.com.ar": {
+   "404": 1
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 178,
+   "202": 198,
    "403": 6
   },
   "imagenes bing": {
-   "200": 190
+   "200": 210
   },
-  "pagina sinoage.en.made-in-china.com": {
+  "pagina vicamtech.en.made-in-china.com": {
    "404": 1
   },
-  "pagina amazon.com": {
-   "200": 1,
-   "404": 1
+  "pagina mercadolibre.com.ar": {
+   "200": 24,
+   "404": 3
   },
-  "foto en amazon.com": {
-   "sin foto": 1
-  },
-  "pagina visbella.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina hongsenmachinery.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina es.aliexpress.com": {
-   "200": 13
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 13
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 24
   },
   "pagina made-in-china.com": {
    "404": 3
   },
-  "pagina wellele.en.made-in-china.com": {
-   "404": 1
+  "pagina aliexpress.com": {
+   "200": 13
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 13
+  },
+  "pagina es.aliexpress.com": {
+   "200": 8
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 8
+  },
+  "pagina amazon.com": {
+   "200": 3
+  },
+  "foto en amazon.com": {
+   "sin foto": 3
+  },
+  "pagina globalsources.com": {
+   "429": 1
   }
  },
  "con_foto": 291,
