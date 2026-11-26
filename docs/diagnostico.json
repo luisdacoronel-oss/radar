@@ -1,102 +1,85 @@
 {
- "fecha": "2026-11-26T04:06:27.622Z",
+ "fecha": "2026-11-26T05:10:40.569Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 166
+   "200": 158,
+   "404": 5
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 166
+   "sin foto": 158
   },
   "api mercadolibre": {
-   "401": 231,
-   "403": 231
+   "401": 234,
+   "403": 234
   },
   "lector jina": {
-   "200": 22,
-   "error": 3
+   "200": 20,
+   "422": 5
   },
   "pagina alibaba.com": {
-   "200": 78
+   "200": 58
   },
   "foto en alibaba.com": {
-   "sin foto": 78
-  },
-  "pagina detail.1688.com": {
-   "200": 24
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 24
+   "sin foto": 58
   },
   "listado mercadolibre": {
-   "200": 81
+   "200": 95
   },
   "listado por jina": {
-   "200": 81
+   "200": 95
   },
-  "pagina es.aliexpress.com": {
-   "200": 18
+  "pagina mercadolibre.com.ar": {
+   "200": 17,
+   "404": 5
   },
-  "foto en es.aliexpress.com": {
-   "sin foto": 18
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 17
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 237,
+   "202": 224,
    "403": 6
   },
   "imagenes bing": {
-   "200": 249
+   "200": 236
   },
-  "pagina amazon.com": {
-   "200": 1
+  "pagina detail.1688.com": {
+   "200": 13
   },
-  "foto en amazon.com": {
-   "sin foto": 1
-  },
-  "pagina made-in-china.com": {
-   "404": 2
-  },
-  "pagina maxiconsumo.com": {
-   "404": 1
-  },
-  "pagina aliexpress.com": {
-   "200": 14
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 14
-  },
-  "pagina pce-instruments.com": {
-   "403": 1
-  },
-  "pagina globalsources.com": {
-   "429": 2
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 3,
-   "404": 4
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 3
-  },
-  "pagina bazarmayorista.com.ar": {
-   "404": 1
+  "foto en detail.1688.com": {
+   "sin foto": 13
   },
   "pagina mayoristaonce.com.ar": {
    "404": 1
   },
-  "pagina mayoristaferretero.com.ar": {
-   "404": 1
+  "pagina es.aliexpress.com": {
+   "200": 10
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 10
+  },
+  "pagina made-in-china.com": {
+   "404": 2
+  },
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina aliexpress.com": {
+   "200": 1
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 1
   },
   "pagina mayoristabazar.com.ar": {
    "200": 1
   },
   "pagina de otro producto": {
    "1": 1
-  },
-  "pagina distribuidoramayorista.com.ar": {
-   "404": 1
   }
  },
- "con_foto": 293,
- "aprobados_sin_foto": 159
+ "con_foto": 294,
+ "aprobados_sin_foto": 160
 }
