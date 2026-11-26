@@ -1,32 +1,32 @@
 {
- "fecha": "2026-11-26T18:02:20.914Z",
+ "fecha": "2026-11-26T19:03:27.646Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 145,
-   "404": 5
+   "200": 149,
+   "404": 6
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 145
+   "sin foto": 149
   },
   "api mercadolibre": {
-   "401": 217,
-   "403": 217
+   "401": 210,
+   "403": 210
   },
   "lector jina": {
-   "200": 22,
-   "422": 3
+   "200": 23,
+   "error": 2
   },
   "pagina alibaba.com": {
-   "200": 54
+   "200": 71
   },
-  "foto en alibaba.com": {
-   "sin foto": 54
+  "pagina no disponible": {
+   "1": 1
   },
   "listado mercadolibre": {
-   "200": 90
+   "200": 91
   },
   "listado por jina": {
-   "200": 90
+   "200": 91
   },
   "pagina detail.1688.com": {
    "200": 15
@@ -34,38 +34,62 @@
   "foto en detail.1688.com": {
    "sin foto": 15
   },
+  "pagina mercadolibre.com.ar": {
+   "200": 9,
+   "404": 15
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 8
+  },
+  "foto en alibaba.com": {
+   "sin foto": 70
+  },
+  "pagina aliexpress.com": {
+   "200": 11
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 11
+  },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 205,
+   "202": 211,
    "403": 6
   },
   "imagenes bing": {
-   "200": 217
+   "200": 223
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 17,
-   "404": 5
+  "pagina sinoage.en.made-in-china.com": {
+   "404": 1
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 17
+  "pagina amazon.com": {
+   "200": 1
   },
-  "pagina mayoristaonce.com.ar": {
+  "foto en amazon.com": {
+   "sin foto": 1
+  },
+  "pagina visbella.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina hongsenmachinery.en.made-in-china.com": {
    "404": 1
   },
   "pagina es.aliexpress.com": {
-   "200": 9
+   "200": 16
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 9
+   "sin foto": 16
   },
   "pagina made-in-china.com": {
+   "404": 4
+  },
+  "pagina wellele.en.made-in-china.com": {
    "404": 1
   },
-  "pagina spanish.alibaba.com": {
+  "pagina bazarmayorista.com.ar": {
    "200": 1
   },
-  "foto en spanish.alibaba.com": {
-   "sin foto": 1
+  "pagina de otro producto": {
+   "1": 1
   }
  },
  "con_foto": 305,
