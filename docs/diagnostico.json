@@ -1,77 +1,90 @@
 {
- "fecha": "2026-11-27T21:36:21.980Z",
+ "fecha": "2026-11-27T22:34:47.085Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 142,
-   "404": 3
+   "200": 124
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 142
+   "sin foto": 124
   },
   "api mercadolibre": {
-   "401": 211,
-   "403": 211
+   "401": 196,
+   "403": 196
   },
   "lector jina": {
-   "200": 24,
-   "error": 1
+   "200": 25
   },
   "pagina alibaba.com": {
-   "200": 62
+   "200": 76
   },
   "foto en alibaba.com": {
-   "sin foto": 62
+   "sin foto": 76
   },
   "pagina detail.1688.com": {
-   "200": 24
+   "200": 31
   },
   "foto en detail.1688.com": {
-   "sin foto": 24
+   "sin foto": 31
   },
   "listado mercadolibre": {
-   "200": 79
+   "200": 81
   },
   "listado por jina": {
-   "200": 79
+   "200": 81
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 16,
-   "404": 10
+  "pagina mestek.en.made-in-china.com": {
+   "404": 1
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 15
-  },
-  "pagina aliexpress.com": {
-   "200": 11
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 11
+  "pagina mayoristaelectronica.com.ar": {
+   "404": 1
   },
   "imagenes duckduckgo": {
-   "200": 6,
-   "202": 206,
+   "200": 10,
+   "202": 194,
    "403": 6
   },
   "imagenes bing": {
-   "200": 218
+   "200": 210
   },
-  "pagina sinoage.en.made-in-china.com": {
+  "pagina vicamtech.en.made-in-china.com": {
    "404": 1
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 18,
+   "404": 3
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 18
+  },
+  "pagina made-in-china.com": {
+   "404": 1
+  },
+  "pagina aliexpress.com": {
+   "200": 13
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 13
   },
   "pagina es.aliexpress.com": {
-   "200": 12
+   "200": 5
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 12
+   "sin foto": 5
   },
-  "pagina mayoristaonce.com.ar": {
+  "pagina amazon.com": {
+   "200": 3
+  },
+  "foto en amazon.com": {
+   "sin foto": 3
+  },
+  "pagina globalsources.com": {
+   "429": 1
+  },
+  "pagina visbella.en.made-in-china.com": {
    "404": 1
   },
-  "pagina cjdropshipping.com": {
-   "200": 1
-  },
-  "pagina de otro producto": {
-   "1": 1
+  "pagina hongsenmachinery.en.made-in-china.com": {
+   "404": 1
   }
  },
  "con_foto": 332,
