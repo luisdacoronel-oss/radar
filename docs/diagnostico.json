@@ -1,84 +1,80 @@
 {
- "fecha": "2026-11-27T13:25:23.360Z",
+ "fecha": "2026-11-27T14:41:47.750Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 163,
-   "404": 1,
-   "429": 2
+   "200": 157,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 162
+   "sin foto": 157
   },
   "api mercadolibre": {
-   "401": 240,
-   "403": 240
+   "401": 234,
+   "403": 234
   },
   "lector jina": {
-   "200": 24,
-   "error": 1
+   "200": 23,
+   "error": 2
   },
   "pagina alibaba.com": {
-   "200": 85
+   "200": 67
   },
   "foto en alibaba.com": {
-   "sin foto": 85
+   "sin foto": 67
   },
   "pagina detail.1688.com": {
-   "200": 35
+   "200": 29
   },
   "foto en detail.1688.com": {
-   "sin foto": 35
+   "sin foto": 29
   },
   "listado mercadolibre": {
-   "200": 81
+   "200": 86
   },
   "listado por jina": {
-   "200": 81
+   "200": 86
   },
-  "pagina es.aliexpress.com": {
-   "200": 16
+  "pagina mercadolibre.com.ar": {
+   "200": 18,
+   "404": 10
   },
-  "foto en es.aliexpress.com": {
-   "sin foto": 16
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 17
+  },
+  "pagina aliexpress.com": {
+   "200": 12
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 12
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 238,
+   "202": 229,
    "403": 6
   },
   "imagenes bing": {
-   "200": 250
+   "200": 241
   },
-  "pagina amazon.com": {
-   "200": 1
-  },
-  "foto en amazon.com": {
-   "sin foto": 1
-  },
-  "pagina made-in-china.com": {
-   "404": 3
-  },
-  "pagina maxiconsumo.com": {
-   "404": 2
-  },
-  "pagina aliexpress.com": {
-   "200": 9
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 9
-  },
-  "pagina globalsources.com": {
-   "429": 4
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 12,
+  "pagina sinoage.en.made-in-china.com": {
    "404": 1
   },
-  "foto en mercadolibre.com.ar": {
+  "pagina es.aliexpress.com": {
+   "200": 12
+  },
+  "foto en es.aliexpress.com": {
    "sin foto": 12
   },
-  "pagina no disponible": {
+  "pagina mayoristaonce.com.ar": {
+   "404": 1
+  },
+  "pagina cjdropshipping.com": {
+   "200": 1
+  },
+  "pagina de otro producto": {
    "1": 1
+  },
+  "pagina made-in-china.com": {
+   "404": 1
   }
  },
  "con_foto": 317,
