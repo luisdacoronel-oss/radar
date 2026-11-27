@@ -1,79 +1,75 @@
 {
- "fecha": "2026-11-27T18:24:34.210Z",
+ "fecha": "2026-11-27T19:40:43.471Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 144,
-   "404": 4
+   "200": 152
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 144
+   "sin foto": 152
   },
   "api mercadolibre": {
-   "401": 213,
-   "403": 213
+   "401": 220,
+   "403": 220
   },
   "lector jina": {
-   "200": 25
-  },
-  "pagina alibaba.com": {
-   "200": 59
-  },
-  "foto en alibaba.com": {
-   "sin foto": 59
-  },
-  "pagina detail.1688.com": {
-   "200": 11
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 11
-  },
-  "listado mercadolibre": {
-   "200": 83
-  },
-  "listado por jina": {
-   "200": 83
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 14,
-   "404": 11
+   "401": 25
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 216,
+   "202": 230,
    "403": 6
   },
   "imagenes bing": {
-   "200": 228
+   "200": 242
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 14
+  "pagina alibaba.com": {
+   "200": 68
   },
-  "pagina mayoristaonce.com.ar": {
+  "foto en alibaba.com": {
+   "sin foto": 68
+  },
+  "pagina detail.1688.com": {
+   "200": 21
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 21
+  },
+  "listado mercadolibre": {
+   "200": 75
+  },
+  "listado por jina": {
+   "401": 75
+  },
+  "pagina es.aliexpress.com": {
+   "200": 15
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 15
+  },
+  "pagina amazon.com": {
    "404": 1
   },
   "pagina made-in-china.com": {
+   "404": 3
+  },
+  "pagina maxiconsumo.com": {
    "404": 2
   },
-  "pagina es.aliexpress.com": {
-   "200": 16
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 16
-  },
-  "pagina spanish.alibaba.com": {
-   "200": 1
-  },
-  "foto en spanish.alibaba.com": {
-   "sin foto": 1
-  },
   "pagina aliexpress.com": {
-   "200": 5
+   "200": 7
   },
   "foto en aliexpress.com": {
-   "sin foto": 5
+   "sin foto": 7
   },
-  "pagina bazarmayorista.com.ar": {
+  "pagina globalsources.com": {
+   "429": 4
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 9,
    "404": 1
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 9
   }
  },
  "con_foto": 317,
