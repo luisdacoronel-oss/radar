@@ -1,19 +1,20 @@
 {
- "fecha": "2026-11-27T06:09:40.436Z",
+ "fecha": "2026-11-27T07:34:29.924Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 163
+   "200": 152,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 163
+   "sin foto": 152
   },
   "api mercadolibre": {
-   "401": 235,
-   "403": 235
+   "401": 234,
+   "403": 234
   },
   "lector jina": {
    "200": 24,
-   "error": 1
+   "503": 1
   },
   "pagina alibaba.com": {
    "200": 74
@@ -22,48 +23,34 @@
    "sin foto": 74
   },
   "pagina detail.1688.com": {
-   "200": 26
+   "200": 30
   },
   "foto en detail.1688.com": {
-   "sin foto": 26
+   "sin foto": 30
   },
   "listado mercadolibre": {
-   "200": 82
+   "200": 89
   },
   "listado por jina": {
-   "200": 82
+   "200": 89
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 23,
+   "404": 16
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 22
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 232,
+   "202": 228,
    "403": 6
   },
   "imagenes bing": {
-   "200": 244
+   "200": 240
   },
-  "pagina amazon.com": {
-   "200": 1
-  },
-  "foto en amazon.com": {
-   "sin foto": 1
-  },
-  "pagina made-in-china.com": {
-   "404": 3
-  },
-  "pagina maxiconsumo.com": {
-   "404": 2
-  },
-  "pagina aliexpress.com": {
-   "200": 6
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 6
-  },
-  "pagina pce-instruments.com": {
-   "403": 1
-  },
-  "pagina globalsources.com": {
-   "429": 3
+  "pagina sinoage.en.made-in-china.com": {
+   "404": 1
   },
   "pagina es.aliexpress.com": {
    "200": 9
@@ -71,12 +58,23 @@
   "foto en es.aliexpress.com": {
    "sin foto": 9
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 9,
+  "pagina aliexpress.com": {
+   "200": 4
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 4
+  },
+  "pagina mayoristaonce.com.ar": {
    "404": 1
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 9
+  "pagina cjdropshipping.com": {
+   "200": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
+  },
+  "pagina hsmachinery.en.made-in-china.com": {
+   "404": 1
   }
  },
  "con_foto": 307,
