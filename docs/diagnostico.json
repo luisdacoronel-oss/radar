@@ -1,77 +1,78 @@
 {
- "fecha": "2026-11-27T17:53:22.488Z",
+ "fecha": "2026-11-27T18:24:34.210Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 158,
+   "200": 144,
    "404": 4
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 158
+   "sin foto": 144
   },
   "api mercadolibre": {
-   "401": 217,
-   "403": 217
+   "401": 213,
+   "403": 213
   },
   "lector jina": {
-   "200": 24,
-   "422": 1
+   "200": 25
   },
   "pagina alibaba.com": {
-   "200": 65
+   "200": 59
   },
   "foto en alibaba.com": {
-   "sin foto": 65
+   "sin foto": 59
   },
   "pagina detail.1688.com": {
-   "200": 16
+   "200": 11
   },
   "foto en detail.1688.com": {
-   "sin foto": 16
+   "sin foto": 11
   },
   "listado mercadolibre": {
-   "200": 93
+   "200": 83
   },
   "listado por jina": {
-   "200": 93
+   "200": 83
   },
-  "pagina aliexpress.com": {
-   "200": 2
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 2
+  "pagina mercadolibre.com.ar": {
+   "200": 14,
+   "404": 11
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 117,
-   "403": 6,
-   "error": 90
+   "202": 216,
+   "403": 6
   },
   "imagenes bing": {
-   "200": 219
-  },
-  "pagina es.aliexpress.com": {
-   "200": 18
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 18
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 5,
-   "404": 17
-  },
-  "pagina made-in-china.com": {
-   "404": 3
+   "200": 228
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 5
-  },
-  "pagina wellele.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina hsmachinery.en.made-in-china.com": {
-   "404": 1
+   "sin foto": 14
   },
   "pagina mayoristaonce.com.ar": {
+   "404": 1
+  },
+  "pagina made-in-china.com": {
+   "404": 2
+  },
+  "pagina es.aliexpress.com": {
+   "200": 16
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 16
+  },
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina aliexpress.com": {
+   "200": 5
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 5
+  },
+  "pagina bazarmayorista.com.ar": {
    "404": 1
   }
  },
