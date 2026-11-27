@@ -1,79 +1,79 @@
 {
- "fecha": "2026-11-27T20:33:02.284Z",
+ "fecha": "2026-11-27T21:36:21.980Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 94,
-   "404": 1
+   "200": 142,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 94
+   "sin foto": 142
   },
   "api mercadolibre": {
-   "401": 184,
-   "403": 184
+   "401": 211,
+   "403": 211
   },
   "lector jina": {
    "200": 24,
-   "422": 1
+   "error": 1
   },
   "pagina alibaba.com": {
-   "200": 53
+   "200": 62
   },
   "foto en alibaba.com": {
-   "sin foto": 53
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 45,
-   "404": 1
-  },
-  "listado mercadolibre": {
-   "200": 57
-  },
-  "listado por jina": {
-   "200": 57
-  },
-  "pagina es.aliexpress.com": {
-   "200": 9
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 9
+   "sin foto": 62
   },
   "pagina detail.1688.com": {
-   "200": 29
+   "200": 24
   },
   "foto en detail.1688.com": {
-   "sin foto": 29
+   "sin foto": 24
+  },
+  "listado mercadolibre": {
+   "200": 79
+  },
+  "listado por jina": {
+   "200": 79
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 16,
+   "404": 10
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 15
+  },
+  "pagina aliexpress.com": {
+   "200": 11
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 11
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 164,
+   "202": 206,
    "403": 6
   },
   "imagenes bing": {
-   "200": 175
+   "200": 218
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 45
-  },
-  "pagina aobang.en.made-in-china.com": {
+  "pagina sinoage.en.made-in-china.com": {
    "404": 1
   },
-  "pagina globalsources.com": {
-   "429": 2
+  "pagina es.aliexpress.com": {
+   "200": 12
   },
-  "pagina aliexpress.com": {
-   "200": 2
+  "foto en es.aliexpress.com": {
+   "sin foto": 12
   },
-  "foto en aliexpress.com": {
-   "sin foto": 2
-  },
-  "pagina mayoristas.com.ar": {
+  "pagina mayoristaonce.com.ar": {
    "404": 1
   },
-  "pagina dhgate.com": {
-   "403": 1
+  "pagina cjdropshipping.com": {
+   "200": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
   }
  },
- "con_foto": 331,
+ "con_foto": 332,
  "aprobados_sin_foto": 179
 }
