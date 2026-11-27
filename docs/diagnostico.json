@@ -1,82 +1,93 @@
 {
- "fecha": "2026-11-27T07:34:29.924Z",
+ "fecha": "2026-11-27T09:01:40.918Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 152,
-   "404": 3
+   "200": 131,
+   "404": 2
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 152
+   "sin foto": 131
   },
   "api mercadolibre": {
-   "401": 234,
-   "403": 234
+   "401": 210,
+   "403": 210
   },
   "lector jina": {
-   "200": 24,
-   "503": 1
+   "200": 25
   },
   "pagina alibaba.com": {
-   "200": 74
+   "200": 76
   },
   "foto en alibaba.com": {
-   "sin foto": 74
+   "sin foto": 76
   },
   "pagina detail.1688.com": {
-   "200": 30
+   "200": 33
   },
   "foto en detail.1688.com": {
-   "sin foto": 30
+   "sin foto": 33
   },
   "listado mercadolibre": {
-   "200": 89
+   "200": 90
   },
   "listado por jina": {
-   "200": 89
+   "200": 90
   },
-  "pagina mercadolibre.com.ar": {
-   "200": 23,
-   "404": 16
+  "pagina mestek.en.made-in-china.com": {
+   "404": 1
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 22
+  "pagina mayoristaelectronica.com.ar": {
+   "404": 1
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 228,
+   "202": 213,
    "403": 6
   },
   "imagenes bing": {
-   "200": 240
+   "200": 225
   },
-  "pagina sinoage.en.made-in-china.com": {
+  "pagina vicamtech.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 18,
+   "404": 3
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 18
+  },
+  "pagina made-in-china.com": {
    "404": 1
   },
   "pagina es.aliexpress.com": {
-   "200": 9
+   "200": 7
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 9
+   "sin foto": 7
   },
   "pagina aliexpress.com": {
-   "200": 4
+   "200": 14
   },
   "foto en aliexpress.com": {
-   "sin foto": 4
+   "sin foto": 14
   },
-  "pagina mayoristaonce.com.ar": {
+  "pagina amazon.com": {
+   "200": 3
+  },
+  "foto en amazon.com": {
+   "sin foto": 3
+  },
+  "pagina globalsources.com": {
+   "429": 1
+  },
+  "pagina visbella.en.made-in-china.com": {
    "404": 1
   },
-  "pagina cjdropshipping.com": {
-   "200": 1
-  },
-  "pagina de otro producto": {
-   "1": 1
-  },
-  "pagina hsmachinery.en.made-in-china.com": {
+  "pagina hongsenmachinery.en.made-in-china.com": {
    "404": 1
   }
  },
  "con_foto": 307,
- "aprobados_sin_foto": 167
+ "aprobados_sin_foto": 170
 }
