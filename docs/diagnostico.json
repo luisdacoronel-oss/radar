@@ -1,72 +1,57 @@
 {
- "fecha": "2026-11-27T05:10:54.590Z",
+ "fecha": "2026-11-27T06:09:40.436Z",
  "fuentes": {
-  "pagina mercadolibre.com.ar": {
-   "200": 17,
-   "404": 11
-  },
-  "pagina alibaba.com": {
-   "200": 60
-  },
-  "foto en alibaba.com": {
-   "sin foto": 60
-  },
-  "lector jina": {
-   "200": 22,
-   "422": 1,
-   "error": 2
-  },
-  "listado mercadolibre": {
-   "200": 89
-  },
-  "listado por jina": {
-   "200": 89
-  },
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 159,
-   "404": 4
+   "200": 163
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 159
+   "sin foto": 163
   },
   "api mercadolibre": {
-   "401": 236,
-   "403": 236
+   "401": 235,
+   "403": 235
+  },
+  "lector jina": {
+   "200": 24,
+   "error": 1
+  },
+  "pagina alibaba.com": {
+   "200": 74
+  },
+  "foto en alibaba.com": {
+   "sin foto": 74
+  },
+  "pagina detail.1688.com": {
+   "200": 26
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 26
+  },
+  "listado mercadolibre": {
+   "200": 82
+  },
+  "listado por jina": {
+   "200": 82
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 240,
+   "202": 232,
    "403": 6
   },
   "imagenes bing": {
-   "200": 252
+   "200": 244
   },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 17
-  },
-  "pagina mayoristaonce.com.ar": {
-   "404": 1
-  },
-  "pagina detail.1688.com": {
-   "200": 11
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 11
-  },
-  "pagina made-in-china.com": {
-   "404": 2
-  },
-  "pagina es.aliexpress.com": {
-   "200": 18
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 18
-  },
-  "pagina spanish.alibaba.com": {
+  "pagina amazon.com": {
    "200": 1
   },
-  "foto en spanish.alibaba.com": {
+  "foto en amazon.com": {
    "sin foto": 1
+  },
+  "pagina made-in-china.com": {
+   "404": 3
+  },
+  "pagina maxiconsumo.com": {
+   "404": 2
   },
   "pagina aliexpress.com": {
    "200": 6
@@ -74,11 +59,24 @@
   "foto en aliexpress.com": {
    "sin foto": 6
   },
-  "pagina bazarmayorista.com.ar": {
+  "pagina pce-instruments.com": {
+   "403": 1
+  },
+  "pagina globalsources.com": {
+   "429": 3
+  },
+  "pagina es.aliexpress.com": {
+   "200": 9
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 9
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 9,
    "404": 1
   },
-  "pagina mayoristaferretero.com.ar": {
-   "404": 1
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 9
   }
  },
  "con_foto": 307,
