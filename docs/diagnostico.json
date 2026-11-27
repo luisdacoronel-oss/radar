@@ -1,92 +1,93 @@
 {
- "fecha": "2026-11-27T22:34:47.085Z",
+ "fecha": "2026-11-27T23:32:12.983Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 124
+   "200": 129,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 124
+   "sin foto": 129
   },
   "api mercadolibre": {
-   "401": 196,
-   "403": 196
+   "401": 193,
+   "403": 193
   },
   "lector jina": {
-   "200": 25
+   "200": 23,
+   "error": 2
   },
   "pagina alibaba.com": {
-   "200": 76
+   "200": 72
   },
   "foto en alibaba.com": {
-   "sin foto": 76
-  },
-  "pagina detail.1688.com": {
-   "200": 31
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 31
-  },
-  "listado mercadolibre": {
-   "200": 81
-  },
-  "listado por jina": {
-   "200": 81
-  },
-  "pagina mestek.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina mayoristaelectronica.com.ar": {
-   "404": 1
+   "sin foto": 72
   },
   "imagenes duckduckgo": {
-   "200": 10,
-   "202": 194,
+   "200": 6,
+   "202": 197,
    "403": 6
   },
   "imagenes bing": {
-   "200": 210
+   "200": 209
   },
-  "pagina vicamtech.en.made-in-china.com": {
-   "404": 1
+  "listado mercadolibre": {
+   "200": 83
+  },
+  "listado por jina": {
+   "200": 83
   },
   "pagina mercadolibre.com.ar": {
-   "200": 18,
-   "404": 3
+   "200": 10
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 18
+   "sin foto": 10
   },
-  "pagina made-in-china.com": {
-   "404": 1
+  "pagina detail.1688.com": {
+   "200": 30
   },
-  "pagina aliexpress.com": {
-   "200": 13
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 13
-  },
-  "pagina es.aliexpress.com": {
-   "200": 5
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 5
+  "foto en detail.1688.com": {
+   "sin foto": 30
   },
   "pagina amazon.com": {
-   "200": 3
+   "200": 2
   },
   "foto en amazon.com": {
-   "sin foto": 3
+   "sin foto": 2
+  },
+  "pagina made-in-china.com": {
+   "404": 5
+  },
+  "pagina aliexpress.com": {
+   "200": 4
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 4
+  },
+  "pagina es.aliexpress.com": {
+   "200": 15
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 15
+  },
+  "pagina dhgate.com": {
+   "403": 1
   },
   "pagina globalsources.com": {
    "429": 1
   },
-  "pagina visbella.en.made-in-china.com": {
+  "pagina spanish.alibaba.com": {
+   "200": 1
+  },
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina sanhetools.en.made-in-china.com": {
    "404": 1
   },
-  "pagina hongsenmachinery.en.made-in-china.com": {
+  "pagina unitweld.en.made-in-china.com": {
    "404": 1
   }
  },
  "con_foto": 332,
- "aprobados_sin_foto": 179
+ "aprobados_sin_foto": 178
 }
