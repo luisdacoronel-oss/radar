@@ -11,16 +11,16 @@
  },
  "senales": {
   "tendencia_alcista": {
-   "aciertos": 18,
-   "total": 103
+   "aciertos": 23,
+   "total": 108
   },
   "bajo_m20": {
    "aciertos": 113,
-   "total": 149
+   "total": 155
   },
   "rsi_sobreventa": {
-   "aciertos": 18,
-   "total": 73
+   "aciertos": 23,
+   "total": 78
   },
   "fib_soporte": {
    "aciertos": 3,
@@ -32,7 +32,7 @@
   },
   "cruce_muerte": {
    "aciertos": 5,
-   "total": 9
+   "total": 10
   },
   "sobre_m20": {
    "aciertos": 2,
@@ -48,8 +48,8 @@
   }
  },
  "tecnico": {
-  "aciertos": 71,
-  "total": 162
+  "aciertos": 74,
+  "total": 168
  },
- "actualizado": "2026-11-27T06:46:18.788Z"
+ "actualizado": "2026-11-27T08:11:10.833Z"
 }

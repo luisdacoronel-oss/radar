@@ -4858,7 +4858,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": 0.009491021777074948
+   }
+  }
  },
  {
   "id": "2026-11-22|ETH-USD",
@@ -4872,7 +4876,11 @@
    "bajo_m20"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": 0.00690308655558991
+   }
+  }
  },
  {
   "id": "2026-11-22|SOL-USD",
@@ -4887,7 +4895,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": 0.036963611213578274
+   }
+  }
  },
  {
   "id": "2026-11-22|BNB-USD",
@@ -4902,7 +4914,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": 0.01158794765253135
+   }
+  }
  },
  {
   "id": "2026-11-22|XRP-USD",
@@ -4917,7 +4933,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": 0.053017241157830464
+   }
+  }
  },
  {
   "id": "2026-11-22|ADA-USD",
@@ -4932,7 +4952,11 @@
    "rsi_sobreventa"
   ],
   "votos": {},
-  "evaluado": {}
+  "evaluado": {
+   "5": {
+    "rendimiento": 0.055901079026502876
+   }
+  }
  },
  {
   "id": "2026-11-22|GLD",
@@ -7150,7 +7174,7 @@
    "bajo_m20"
   ],
   "votos": {
-   "gemini": "VENDER"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -7417,6 +7441,7 @@
    "sobre_m20"
   ],
   "votos": {
+   "gemini": "COMPRAR",
    "groq": "COMPRAR"
   },
   "evaluado": {}
@@ -7513,14 +7538,14 @@
   "fecha": "2026-11-27",
   "yahoo": "BTC-USD",
   "nombre": "Bitcoin",
-  "precio": 61611.33984375,
+  "precio": 61802.98046875,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
    "bajo_m20"
   ],
   "votos": {
-   "groq": "ESPERAR"
+   "gemini": "ESPERAR"
   },
   "evaluado": {}
  },
@@ -7529,7 +7554,7 @@
   "fecha": "2026-11-27",
   "yahoo": "ETH-USD",
   "nombre": "Ethereum",
-  "precio": 1730.9300537109375,
+  "precio": 1734.31005859375,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -7543,7 +7568,7 @@
   "fecha": "2026-11-27",
   "yahoo": "SOL-USD",
   "nombre": "Solana",
-  "precio": 72.77999877929688,
+  "precio": 73.22000122070312,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -7557,7 +7582,7 @@
   "fecha": "2026-11-27",
   "yahoo": "BNB-USD",
   "nombre": "BNB",
-  "precio": 564.9500122070312,
+  "precio": 565.6799926757812,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_alcista",
@@ -7571,7 +7596,7 @@
   "fecha": "2026-11-27",
   "yahoo": "XRP-USD",
   "nombre": "XRP",
-  "precio": 0.9692000150680542,
+  "precio": 0.9771999716758728,
   "tecnico": "ESPERAR",
   "senales": [
    "tendencia_bajista",
@@ -7585,7 +7610,7 @@
   "fecha": "2026-11-27",
   "yahoo": "ADA-USD",
   "nombre": "Cardano",
-  "precio": 0.1529799997806549,
+  "precio": 0.1528100073337555,
   "tecnico": "VENDER",
   "senales": [
    "cruce_muerte",
