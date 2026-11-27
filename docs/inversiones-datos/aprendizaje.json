@@ -1,42 +1,42 @@
 {
  "proveedores": {
   "gemini": {
-   "aciertos": 9,
-   "total": 28
+   "aciertos": 12,
+   "total": 32
   },
   "groq": {
-   "aciertos": 2,
-   "total": 23
+   "aciertos": 4,
+   "total": 26
   }
  },
  "senales": {
   "tendencia_alcista": {
-   "aciertos": 23,
-   "total": 108
+   "aciertos": 33,
+   "total": 123
   },
   "bajo_m20": {
-   "aciertos": 113,
-   "total": 155
+   "aciertos": 120,
+   "total": 181
   },
   "rsi_sobreventa": {
-   "aciertos": 23,
-   "total": 78
+   "aciertos": 31,
+   "total": 89
   },
   "fib_soporte": {
-   "aciertos": 3,
-   "total": 17
+   "aciertos": 5,
+   "total": 21
   },
   "tendencia_bajista": {
-   "aciertos": 34,
-   "total": 50
+   "aciertos": 37,
+   "total": 63
   },
   "cruce_muerte": {
    "aciertos": 5,
-   "total": 10
+   "total": 12
   },
   "sobre_m20": {
-   "aciertos": 2,
-   "total": 13
+   "aciertos": 5,
+   "total": 17
   },
   "rsi_sobrecompra": {
    "aciertos": 1,
@@ -44,12 +44,12 @@
   },
   "fib_resistencia": {
    "aciertos": 2,
-   "total": 3
+   "total": 4
   }
  },
  "tecnico": {
-  "aciertos": 74,
-  "total": 168
+  "aciertos": 93,
+  "total": 198
  },
- "actualizado": "2026-11-27T14:02:08.533Z"
+ "actualizado": "2026-11-27T15:15:36.503Z"
 }
