@@ -1,77 +1,79 @@
 {
- "fecha": "2026-11-27T19:40:43.471Z",
+ "fecha": "2026-11-27T20:33:02.284Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 152
+   "200": 94,
+   "404": 1
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 152
+   "sin foto": 94
   },
   "api mercadolibre": {
-   "401": 220,
-   "403": 220
+   "401": 184,
+   "403": 184
   },
   "lector jina": {
-   "401": 25
+   "200": 24,
+   "422": 1
+  },
+  "pagina alibaba.com": {
+   "200": 53
+  },
+  "foto en alibaba.com": {
+   "sin foto": 53
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 45,
+   "404": 1
+  },
+  "listado mercadolibre": {
+   "200": 57
+  },
+  "listado por jina": {
+   "200": 57
+  },
+  "pagina es.aliexpress.com": {
+   "200": 9
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 9
+  },
+  "pagina detail.1688.com": {
+   "200": 29
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 29
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 230,
+   "202": 164,
    "403": 6
   },
   "imagenes bing": {
-   "200": 242
-  },
-  "pagina alibaba.com": {
-   "200": 68
-  },
-  "foto en alibaba.com": {
-   "sin foto": 68
-  },
-  "pagina detail.1688.com": {
-   "200": 21
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 21
-  },
-  "listado mercadolibre": {
-   "200": 75
-  },
-  "listado por jina": {
-   "401": 75
-  },
-  "pagina es.aliexpress.com": {
-   "200": 15
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 15
-  },
-  "pagina amazon.com": {
-   "404": 1
-  },
-  "pagina made-in-china.com": {
-   "404": 3
-  },
-  "pagina maxiconsumo.com": {
-   "404": 2
-  },
-  "pagina aliexpress.com": {
-   "200": 7
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 7
-  },
-  "pagina globalsources.com": {
-   "429": 4
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 9,
-   "404": 1
+   "200": 175
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 9
+   "sin foto": 45
+  },
+  "pagina aobang.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina globalsources.com": {
+   "429": 2
+  },
+  "pagina aliexpress.com": {
+   "200": 2
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 2
+  },
+  "pagina mayoristas.com.ar": {
+   "404": 1
+  },
+  "pagina dhgate.com": {
+   "403": 1
   }
  },
- "con_foto": 317,
+ "con_foto": 331,
  "aprobados_sin_foto": 179
 }
