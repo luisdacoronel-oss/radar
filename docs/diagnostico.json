@@ -1,93 +1,73 @@
 {
- "fecha": "2026-11-27T23:32:12.983Z",
+ "fecha": "2026-11-28T00:25:54.313Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 129,
-   "404": 3
+   "200": 156,
+   "404": 4
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 129
+   "sin foto": 156
   },
   "api mercadolibre": {
-   "401": 193,
-   "403": 193
+   "401": 216,
+   "403": 216
   },
   "lector jina": {
-   "200": 23,
-   "error": 2
-  },
-  "pagina alibaba.com": {
-   "200": 72
-  },
-  "foto en alibaba.com": {
-   "sin foto": 72
+   "401": 24,
+   "422": 1
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 197,
+   "202": 224,
    "403": 6
   },
   "imagenes bing": {
-   "200": 209
+   "200": 235
   },
-  "listado mercadolibre": {
-   "200": 83
+  "pagina alibaba.com": {
+   "200": 61
   },
-  "listado por jina": {
-   "200": 83
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 10
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 10
-  },
-  "pagina detail.1688.com": {
-   "200": 30
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 30
-  },
-  "pagina amazon.com": {
-   "200": 2
-  },
-  "foto en amazon.com": {
-   "sin foto": 2
-  },
-  "pagina made-in-china.com": {
-   "404": 5
+  "foto en alibaba.com": {
+   "sin foto": 61
   },
   "pagina aliexpress.com": {
-   "200": 4
+   "200": 2
   },
   "foto en aliexpress.com": {
-   "sin foto": 4
+   "sin foto": 2
+  },
+  "listado mercadolibre": {
+   "200": 87
+  },
+  "listado por jina": {
+   "401": 87
+  },
+  "pagina detail.1688.com": {
+   "200": 13
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 13
   },
   "pagina es.aliexpress.com": {
-   "200": 15
+   "200": 18
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 15
+   "sin foto": 18
   },
-  "pagina dhgate.com": {
-   "403": 1
+  "pagina mercadolibre.com.ar": {
+   "200": 6,
+   "404": 14
   },
-  "pagina globalsources.com": {
-   "429": 1
+  "pagina made-in-china.com": {
+   "404": 3
   },
-  "pagina spanish.alibaba.com": {
-   "200": 1
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 6
   },
-  "foto en spanish.alibaba.com": {
-   "sin foto": 1
-  },
-  "pagina sanhetools.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina unitweld.en.made-in-china.com": {
+  "pagina wellele.en.made-in-china.com": {
    "404": 1
   }
  },
- "con_foto": 332,
- "aprobados_sin_foto": 178
+ "con_foto": 333,
+ "aprobados_sin_foto": 177
 }
