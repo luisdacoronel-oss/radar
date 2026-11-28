@@ -7815,5 +7815,539 @@
   ],
   "votos": {},
   "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|GGAL.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "GGAL.BA",
+  "nombre": "Grupo Galicia",
+  "precio": 4982.5,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "sobre_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|YPFD.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "YPFD.BA",
+  "nombre": "YPF",
+  "precio": 5850,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20"
+  ],
+  "votos": {
+   "gemini": "ESPERAR"
+  },
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|PAMP.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "PAMP.BA",
+  "nombre": "Pampa Energía",
+  "precio": 4500,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "sobre_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|BMA.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "BMA.BA",
+  "nombre": "Banco Macro",
+  "precio": 9225,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|TXAR.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "TXAR.BA",
+  "nombre": "Ternium Argentina",
+  "precio": 705.5,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "fib_soporte"
+  ],
+  "votos": {
+   "gemini": "COMPRAR",
+   "groq": "COMPRAR"
+  },
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|CEPU.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "CEPU.BA",
+  "nombre": "Central Puerto",
+  "precio": 1876,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "sobre_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|TGSU2.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "TGSU2.BA",
+  "nombre": "TGS",
+  "precio": 7385,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "sobre_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|ALUA.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "ALUA.BA",
+  "nombre": "Aluar",
+  "precio": 852,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "sobre_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|BBAR.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "BBAR.BA",
+  "nombre": "BBVA Argentina",
+  "precio": 5385,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|LOMA.BA",
+  "fecha": "2026-11-28",
+  "yahoo": "LOMA.BA",
+  "nombre": "Loma Negra",
+  "precio": 3070,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "sobre_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|VIST",
+  "fecha": "2026-11-28",
+  "yahoo": "VIST",
+  "nombre": "Vista Energy",
+  "precio": 51.75,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|MELI",
+  "fecha": "2026-11-28",
+  "yahoo": "MELI",
+  "nombre": "Mercado Libre",
+  "precio": 1532.9200439453125,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "sobre_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|AAPL",
+  "fecha": "2026-11-28",
+  "yahoo": "AAPL",
+  "nombre": "Apple",
+  "precio": 358.5400085449219,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "sobre_m20"
+  ],
+  "votos": {
+   "gemini": "COMPRAR",
+   "groq": "COMPRAR"
+  },
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|MSFT",
+  "fecha": "2026-11-28",
+  "yahoo": "MSFT",
+  "nombre": "Microsoft",
+  "precio": 492.8500061035156,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|NVDA",
+  "fecha": "2026-11-28",
+  "yahoo": "NVDA",
+  "nombre": "Nvidia",
+  "precio": 150.49000549316406,
+  "tecnico": "VENDER",
+  "senales": [
+   "cruce_muerte",
+   "bajo_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|GOOGL",
+  "fecha": "2026-11-28",
+  "yahoo": "GOOGL",
+  "nombre": "Alphabet (Google)",
+  "precio": 274.9599914550781,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|AMZN",
+  "fecha": "2026-11-28",
+  "yahoo": "AMZN",
+  "nombre": "Amazon",
+  "precio": 254.1199951171875,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "fib_soporte"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|TSLA",
+  "fecha": "2026-11-28",
+  "yahoo": "TSLA",
+  "nombre": "Tesla",
+  "precio": 400,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "sobre_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|KO",
+  "fecha": "2026-11-28",
+  "yahoo": "KO",
+  "nombre": "Coca-Cola",
+  "precio": 97.4000015258789,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "sobre_m20"
+  ],
+  "votos": {
+   "gemini": "COMPRAR",
+   "groq": "COMPRAR"
+  },
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|ARGT",
+  "fecha": "2026-11-28",
+  "yahoo": "ARGT",
+  "nombre": "Argentina (ETF ARGT)",
+  "precio": 69.83000183105469,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|SPY",
+  "fecha": "2026-11-28",
+  "yahoo": "SPY",
+  "nombre": "S&P 500 (SPY)",
+  "precio": 728.3200073242188,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|QQQ",
+  "fecha": "2026-11-28",
+  "yahoo": "QQQ",
+  "nombre": "Nasdaq 100 (QQQ)",
+  "precio": 650.989990234375,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|DIA",
+  "fecha": "2026-11-28",
+  "yahoo": "DIA",
+  "nombre": "Dow Jones (DIA)",
+  "precio": 507.6000061035156,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|EWZ",
+  "fecha": "2026-11-28",
+  "yahoo": "EWZ",
+  "nombre": "Brasil (EWZ)",
+  "precio": 33.119998931884766,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "cruce_muerte",
+   "sobre_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|EEM",
+  "fecha": "2026-11-28",
+  "yahoo": "EEM",
+  "nombre": "Emergentes (EEM)",
+  "precio": 58.099998474121094,
+  "tecnico": "VENDER",
+  "senales": [
+   "cruce_muerte",
+   "bajo_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|BTC-USD",
+  "fecha": "2026-11-28",
+  "yahoo": "BTC-USD",
+  "nombre": "Bitcoin",
+  "precio": 59894.7890625,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {
+   "gemini": "ESPERAR"
+  },
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|ETH-USD",
+  "fecha": "2026-11-28",
+  "yahoo": "ETH-USD",
+  "nombre": "Ethereum",
+  "precio": 1662.989990234375,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|SOL-USD",
+  "fecha": "2026-11-28",
+  "yahoo": "SOL-USD",
+  "nombre": "Solana",
+  "precio": 71.69000244140625,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|BNB-USD",
+  "fecha": "2026-11-28",
+  "yahoo": "BNB-USD",
+  "nombre": "BNB",
+  "precio": 554.8800048828125,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "rsi_sobreventa"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|XRP-USD",
+  "fecha": "2026-11-28",
+  "yahoo": "XRP-USD",
+  "nombre": "XRP",
+  "precio": 0.9487000107765198,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|ADA-USD",
+  "fecha": "2026-11-28",
+  "yahoo": "ADA-USD",
+  "nombre": "Cardano",
+  "precio": 0.14821000397205353,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "cruce_muerte",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|GLD",
+  "fecha": "2026-11-28",
+  "yahoo": "GLD",
+  "nombre": "Oro (GLD)",
+  "precio": 334.3999938964844,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|SLV",
+  "fecha": "2026-11-28",
+  "yahoo": "SLV",
+  "nombre": "Plata (SLV)",
+  "precio": 39.400001525878906,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_bajista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|USO",
+  "fecha": "2026-11-28",
+  "yahoo": "USO",
+  "nombre": "Petróleo (USO)",
+  "precio": 137.77000427246094,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20",
+   "fib_soporte"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|CPER",
+  "fecha": "2026-11-28",
+  "yahoo": "CPER",
+  "nombre": "Cobre (CPER)",
+  "precio": 33.2599983215332,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "bajo_m20"
+  ],
+  "votos": {},
+  "evaluado": {}
+ },
+ {
+  "id": "2026-11-28|DBA",
+  "fecha": "2026-11-28",
+  "yahoo": "DBA",
+  "nombre": "Agro: soja, maíz, trigo (DBA)",
+  "precio": 26.75,
+  "tecnico": "ESPERAR",
+  "senales": [
+   "tendencia_alcista",
+   "sobre_m20",
+   "fib_resistencia"
+  ],
+  "votos": {},
+  "evaluado": {}
  }
 ]
