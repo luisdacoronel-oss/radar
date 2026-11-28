@@ -1,38 +1,38 @@
-// CAMBIOS: Incrementé la versión a 15, reordené las categorías para priorizar kits de ferretería liviana y consumo masivo, y ajusté las instrucciones de búsqueda a un costo de proveedor menor a 10 USD.
-export const VERSION = 15;
+// CAMBIOS: Incrementé la versión a 16, prioricé bazar de especialidad y kits de mecánica liviana de alto margen, y ajusté el límite de costo a 12 USD para maximizar rentabilidad.
+export const VERSION = 16;
 
 export const categorias = [
-  'herramientas manuales de ferretería liviana, kits de precisión y maletines organizadores',
-  'combos de consumo masivo, mantenimiento e higiene de alta rotación',
-  'accesorios para vehículos, kits de reparación y herramientas de taller liviano',
-  'equipamiento de audio profesional, streaming, microfonía y podcasting',
+  'bazar de especialidad, tecnología gastronómica y equipamiento para barista',
+  'accesorios para vehículos, herramientas de taller liviano y kits de reparación de carrocería',
+  'herramientas manuales de ferretería liviana, extractores y kits de fijación',
+  'instrumental de medición digital, nivelación y diagnóstico técnico no regulado',
+  'combos de consumo masivo, organización del hogar y accesorios de cocina',
+  'equipamiento de audio pasivo, accesorios de microfonía y soporte para streaming',
   'herramientas de refrigeración, climatización y detección de fugas',
-  'sistemas de fibra óptica, redes y herramientas de telecomunicaciones',
-  'bazar de especialidad, equipamiento para barista y tecnología gastronómica',
-  'instrumental de medición industrial, metrología y diagnóstico eléctrico',
-  'herramientas industriales metalúrgicas, roscado, corte y soldadura',
-  'herramientas para construcción, nivelación y carpintería'
+  'herramientas para carpintería, perforación limpia y encastre de precisión',
+  'equipamiento y herramientas de mantenimiento eléctrico de baja tensión',
+  'productos de cuidado personal no cosméticos y kits de orden de equipaje'
 ];
 
 export const temas = [
-  'análisis de landed cost y tributación de importación por courier en Argentina',
-  'cálculo de margen neto real en Mercado Libre considerando comisiones y retenciones',
-  'detección de nichos técnicos con alta relación precio sobre peso',
-  'estrategias de pricing para tiendas Shopify y Tiendanube con pasarelas locales',
-  'armado de combos y kits de herramientas para elevar el ticket promedio',
-  'optimización de costo por adquisición en Meta Ads para productos especializados',
-  'validación de demanda histórica y volumen de búsqueda en marketplaces',
-  'negociación de condiciones con proveedores en origen y control de calidad',
-  'gestión de stock crítico y velocidad de rotación del capital de trabajo',
-  'estrategias de fidelización y venta recurrente mediante WhatsApp Business'
+  'cálculo exacto del landed cost por courier privado en Argentina',
+  'optimización del margen neto en Mercado Libre ajustando comisiones e impuestos localizados',
+  'estrategias de armado de combos de alto valor percibido para elevar el ticket promedio',
+  'filtrado de productos por relación precio y peso para reducción de flete internacional',
+  'validación de rotación con volumen de ventas reales en AliExpress, Amazon y Mercado Libre',
+  'negociación de compras al por mayor en 1688 y Alibaba con bajo costo unitario',
+  'reducción de costos publicitarios en Meta Ads enfocado en productos de especialidad',
+  'estrategias de pricing en Tiendanube y Shopify para ventas directas sin comisiones de marketplace',
+  'gestión de stock de rotación rápida y control de capital de trabajo',
+  'retención de clientes y venta cruzada a través de canales directos como WhatsApp Business'
 ];
 
 export const temasVideo = [
-  'cómo calcular costos reales de importación por courier en Argentina',
-  'productos ganadores de alto margen para Mercado Libre Argentina',
-  'estrategias de armado de combos rentables para e-commerce',
-  'campañas publicitarias de conversión directa para productos técnicos',
-  'selección de productos de alta rotación y excelente margen neto'
+  'cómo calcular la rentabilidad real de importaciones courier en Argentina',
+  'productos ganadores de alto margen en bazar y herramientas para e-commerce',
+  'estrategias de pricing para duplicar la ganancia neta en Mercado Libre',
+  'técnicas para armar kits comerciales con costo de origen inferior a 10 dólares',
+  'validación de demanda comprobada antes de realizar la primera compra'
 ];
 
 export const productosPorVuelta = 5;
@@ -43,11 +43,11 @@ export function instruccionesBusqueda(ctx) {
   const cantidadAprobados = (ctx.aprobados && ctx.aprobados.length) || 0;
 
   return `Concentrate en la categoría "${categoriaObjetivo}".
-Buscá productos que cumplan estrictamente:
-1. Formato kit o combo completo con maletín, estuche organizador o packs cerrados de alta rotación, evitando unidades sueltas de bajo valor.
-2. Peso menor a 2.0 kg y volumen moderado para optimizar costos de envío e importación.
-3. Precio de venta al público en Argentina superior a $40.000 ARS.
-4. Costo de proveedor en origen inferior a 10 USD que represente como máximo el 20% del precio final de venta.
-5. Libre de trámites de homologación complejos (como ANMAT o ENACOM) y sin marcas registradas sensibles.
-6. Ventas comprobables en plataformas de origen o mercado local con datos concretos. Mes de análisis: ${ctx.mes}. Base acumulada de aprobados: ${cantidadAprobados}.`;
+Buscá productos que cumplan estrictamente los siguientes requisitos:
+1. Presentación en formato de kit completo, combo organizador o pack de varias unidades que eleve el valor percibido, evitando productos individuales de bajo valor.
+2. Peso físico menor a 1.5 kg y tamaño compacto para optimizar el flete por courier.
+3. Precio de venta al público en Argentina comprendido entre $40.000 ARS y $180.000 ARS.
+4. Costo de compra con proveedor en origen menor a 12 USD, que represente como máximo el 20% del precio de venta final.
+5. Libres de homologaciones complejas (sin certificaciones ENACOM ni registros ANMAT) y sin infracción de marcas registradas.
+6. Demanda comprobada en plataformas de origen o mercado local con ventas reales verificables. Mes de análisis: ${ctx.mes}. Cantidad acumulada de productos aprobados: ${cantidadAprobados}.`;
 }
