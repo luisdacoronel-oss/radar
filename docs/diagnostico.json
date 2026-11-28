@@ -1,88 +1,80 @@
 {
- "fecha": "2026-11-28T02:56:55.450Z",
+ "fecha": "2026-11-28T04:02:27.302Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 147,
-   "404": 4
+   "200": 156,
+   "404": 3
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 147
+   "sin foto": 156
   },
   "api mercadolibre": {
-   "401": 207,
-   "403": 207
+   "401": 233,
+   "403": 233
   },
   "lector jina": {
    "200": 22,
-   "422": 3
+   "403": 1,
+   "error": 2
   },
   "pagina alibaba.com": {
-   "200": 56
+   "200": 74
   },
   "foto en alibaba.com": {
-   "sin foto": 56
+   "sin foto": 74
   },
   "pagina detail.1688.com": {
-   "200": 8
+   "200": 33
   },
   "foto en detail.1688.com": {
-   "sin foto": 8
+   "sin foto": 33
   },
   "listado mercadolibre": {
-   "200": 84
+   "200": 89
   },
   "listado por jina": {
-   "200": 84
+   "200": 89
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 18,
+   "404": 12
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 17
+  },
+  "pagina aliexpress.com": {
+   "200": 12
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 12
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 210,
+   "202": 229,
    "403": 6
   },
   "imagenes bing": {
-   "200": 221
+   "200": 241
   },
-  "pagina made-in-china.com": {
-   "404": 2
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 7,
-   "404": 14
-  },
-  "pagina spanish.alibaba.com": {
-   "200": 1
-  },
-  "foto en spanish.alibaba.com": {
-   "sin foto": 1
+  "pagina sinoage.en.made-in-china.com": {
+   "404": 1
   },
   "pagina es.aliexpress.com": {
-   "200": 17
+   "200": 12
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 17
-  },
-  "pagina globalsources.com": {
-   "429": 2
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 7
-  },
-  "pagina bazarmayorista.com.ar": {
-   "404": 1
-  },
-  "pagina aliexpress.com": {
-   "200": 5
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 5
-  },
-  "pagina hsmachinery.en.made-in-china.com": {
-   "404": 1
+   "sin foto": 12
   },
   "pagina mayoristaonce.com.ar": {
-   "404": 1
+   "404": 2
+  },
+  "pagina cjdropshipping.com": {
+   "200": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
   }
  },
  "con_foto": 334,
- "aprobados_sin_foto": 177
+ "aprobados_sin_foto": 178
 }
