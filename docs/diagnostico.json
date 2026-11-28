@@ -1,27 +1,26 @@
 {
- "fecha": "2026-11-28T04:02:27.302Z",
+ "fecha": "2026-11-28T05:04:53.223Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 156,
-   "404": 3
+   "200": 141
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 156
+   "sin foto": 141
   },
   "api mercadolibre": {
-   "401": 233,
-   "403": 233
+   "401": 219,
+   "403": 219
   },
   "lector jina": {
-   "200": 22,
-   "403": 1,
-   "error": 2
+   "200": 17,
+   "403": 5,
+   "error": 3
   },
   "pagina alibaba.com": {
-   "200": 74
+   "200": 76
   },
   "foto en alibaba.com": {
-   "sin foto": 74
+   "sin foto": 76
   },
   "pagina detail.1688.com": {
    "200": 33
@@ -30,49 +29,67 @@
    "sin foto": 33
   },
   "listado mercadolibre": {
-   "200": 89
+   "200": 83
   },
   "listado por jina": {
-   "200": 89
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 18,
-   "404": 12
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 17
-  },
-  "pagina aliexpress.com": {
-   "200": 12
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 12
+   "200": 83
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 229,
+   "202": 222,
    "403": 6
   },
   "imagenes bing": {
-   "200": 241
+   "200": 234
   },
-  "pagina sinoage.en.made-in-china.com": {
+  "pagina mestek.en.made-in-china.com": {
    "404": 1
   },
-  "pagina es.aliexpress.com": {
-   "200": 12
-  },
-  "foto en es.aliexpress.com": {
-   "sin foto": 12
-  },
-  "pagina mayoristaonce.com.ar": {
-   "404": 2
-  },
-  "pagina cjdropshipping.com": {
+  "pagina mayoristaelectronica.com.ar": {
    "200": 1
   },
   "pagina de otro producto": {
-   "1": 1
+   "1": 2
+  },
+  "pagina vicamtech.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 18,
+   "404": 3
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 18
+  },
+  "pagina made-in-china.com": {
+   "404": 1
+  },
+  "pagina es.aliexpress.com": {
+   "200": 6
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 6
+  },
+  "pagina aliexpress.com": {
+   "200": 13
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 13
+  },
+  "pagina amazon.com": {
+   "200": 3
+  },
+  "foto en amazon.com": {
+   "sin foto": 2
+  },
+  "pagina globalsources.com": {
+   "429": 1
+  },
+  "pagina visbella.en.made-in-china.com": {
+   "404": 1
+  },
+  "pagina hongsenmachinery.en.made-in-china.com": {
+   "404": 1
   }
  },
  "con_foto": 334,
