@@ -1,95 +1,68 @@
 {
- "fecha": "2026-11-28T06:08:52.495Z",
+ "fecha": "2026-11-28T07:18:35.885Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 146,
-   "404": 3
+   "200": 168,
+   "404": 4
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 146
+   "sin foto": 168
   },
   "api mercadolibre": {
-   "401": 215,
-   "403": 215
+   "401": 232,
+   "403": 232
   },
   "lector jina": {
-   "200": 18,
-   "403": 5,
-   "error": 2
+   "200": 23,
+   "422": 1,
+   "error": 1
   },
   "pagina alibaba.com": {
-   "200": 81
+   "200": 65
   },
   "foto en alibaba.com": {
-   "sin foto": 81
+   "sin foto": 65
   },
   "imagenes duckduckgo": {
    "200": 6,
-   "202": 219,
+   "202": 224,
    "403": 6
   },
   "imagenes bing": {
-   "200": 231
+   "200": 236
   },
   "listado mercadolibre": {
-   "200": 89
+   "200": 97
   },
   "listado por jina": {
-   "200": 89
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 10
-  },
-  "foto en mercadolibre.com.ar": {
-   "sin foto": 10
+   "200": 97
   },
   "pagina detail.1688.com": {
-   "200": 38
+   "200": 17
   },
   "foto en detail.1688.com": {
-   "sin foto": 38
+   "sin foto": 17
   },
-  "pagina amazon.com": {
-   "200": 1,
-   "404": 2
-  },
-  "foto en amazon.com": {
-   "sin foto": 1
+  "pagina mercadolibre.com.ar": {
+   "200": 6,
+   "404": 14
   },
   "pagina made-in-china.com": {
-   "404": 5
+   "404": 3
+  },
+  "foto en mercadolibre.com.ar": {
+   "sin foto": 6
+  },
+  "pagina wellele.en.made-in-china.com": {
+   "404": 1
   },
   "pagina es.aliexpress.com": {
-   "200": 15
+   "200": 12
   },
   "foto en es.aliexpress.com": {
-   "sin foto": 15
-  },
-  "pagina aliexpress.com": {
-   "200": 5
-  },
-  "foto en aliexpress.com": {
-   "sin foto": 5
-  },
-  "pagina dhgate.com": {
-   "403": 1
-  },
-  "pagina globalsources.com": {
-   "429": 5
-  },
-  "pagina spanish.alibaba.com": {
-   "200": 1
-  },
-  "foto en spanish.alibaba.com": {
-   "sin foto": 1
-  },
-  "pagina sanhetools.en.made-in-china.com": {
-   "404": 1
-  },
-  "pagina unitweld.en.made-in-china.com": {
-   "404": 1
+   "sin foto": 12
   }
  },
- "con_foto": 336,
- "aprobados_sin_foto": 178
+ "con_foto": 337,
+ "aprobados_sin_foto": 179
 }
