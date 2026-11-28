@@ -1,68 +1,96 @@
 {
- "fecha": "2026-11-28T07:18:35.885Z",
+ "fecha": "2026-11-28T08:37:13.733Z",
  "fuentes": {
   "pagina articulo.mercadolibre.com.ar": {
-   "200": 168,
-   "404": 4
+   "200": 166
   },
   "foto en articulo.mercadolibre.com.ar": {
-   "sin foto": 168
+   "sin foto": 166
   },
   "api mercadolibre": {
-   "401": 232,
-   "403": 232
+   "401": 247,
+   "403": 247
   },
   "lector jina": {
    "200": 23,
-   "422": 1,
-   "error": 1
+   "error": 2
   },
   "pagina alibaba.com": {
-   "200": 65
+   "200": 85
   },
   "foto en alibaba.com": {
-   "sin foto": 65
+   "sin foto": 85
+  },
+  "pagina detail.1688.com": {
+   "200": 26
+  },
+  "foto en detail.1688.com": {
+   "sin foto": 26
+  },
+  "listado mercadolibre": {
+   "200": 85
+  },
+  "listado por jina": {
+   "200": 85
+  },
+  "pagina es.aliexpress.com": {
+   "200": 13
+  },
+  "foto en es.aliexpress.com": {
+   "sin foto": 13
   },
   "imagenes duckduckgo": {
-   "200": 6,
-   "202": 224,
+   "200": 10,
+   "202": 237,
    "403": 6
   },
   "imagenes bing": {
-   "200": 236
+   "200": 253
   },
-  "listado mercadolibre": {
-   "200": 97
+  "pagina amazon.com": {
+   "200": 1
   },
-  "listado por jina": {
-   "200": 97
-  },
-  "pagina detail.1688.com": {
-   "200": 17
-  },
-  "foto en detail.1688.com": {
-   "sin foto": 17
-  },
-  "pagina mercadolibre.com.ar": {
-   "200": 6,
-   "404": 14
+  "foto en amazon.com": {
+   "sin foto": 1
   },
   "pagina made-in-china.com": {
-   "404": 3
+   "404": 4
+  },
+  "pagina maxiconsumo.com": {
+   "404": 2
+  },
+  "pagina aliexpress.com": {
+   "200": 7
+  },
+  "foto en aliexpress.com": {
+   "sin foto": 7
+  },
+  "pagina globalsources.com": {
+   "429": 2
+  },
+  "pagina mercadolibre.com.ar": {
+   "200": 16,
+   "404": 2
   },
   "foto en mercadolibre.com.ar": {
-   "sin foto": 6
+   "sin foto": 16
   },
-  "pagina wellele.en.made-in-china.com": {
+  "pagina mayoristaonce.com.ar": {
    "404": 1
   },
-  "pagina es.aliexpress.com": {
-   "200": 12
+  "pagina spanish.alibaba.com": {
+   "200": 1
   },
-  "foto en es.aliexpress.com": {
-   "sin foto": 12
+  "foto en spanish.alibaba.com": {
+   "sin foto": 1
+  },
+  "pagina mayoristabazar.com.ar": {
+   "200": 1
+  },
+  "pagina de otro producto": {
+   "1": 1
   }
  },
- "con_foto": 337,
- "aprobados_sin_foto": 179
+ "con_foto": 338,
+ "aprobados_sin_foto": 182
 }
